@@ -1,3 +1,114 @@
 /*--------------------ui----------------------*/
+.btn{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  max-width: 270px;
+  min-width: 270px;
+  color: #fff;
+  text-decoration: none;
+  background-color: $accent;
+  padding: 5px 15px;
+  font-size: 12px;
+  line-height: 17px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  outline: none;
+  transition: background-color .1s ease;
+	
+  &:hover{
+     background-color: #fff;
+     border-color: $accent;
+     color: $accent;
+  }
+		
+  &:active{
+    background-color: #fff;
+    border-color: $accent;
+    color: $accent;
+  }
+  
+  &-empty{
+  	border-color: $accent;
+  	color: $accent;
+  	background-color: #fff;
 
+  	&:hover, &:active{
+  		background-color: $accent;
+  		border-color: transparent;
+  		color: #fff;
+  	}
+  }
+  &-gray{
+  	color: #fff;
+  	background-color: $gray;
+
+  	&:hover, &:active{
+  		border-color: $gray;
+  		background-color: #fff;
+  		border-color:  $gray;
+  		color:  $gray;
+  	}
+  }
+  &-red{
+  	color: #fff;
+  	background-color: $red;
+
+  	&:hover, &:active{
+  		border-color: $red;
+  		background-color: #fff;
+  		color: $red;
+  	}
+  }
+  &-yellow{
+  	color: #fff;
+  	background-color: $yellow;
+
+  	&:hover, &:active{
+  		border-color: $yellow;
+  		background-color: #fff;
+  		color: $yellow;
+  	}
+  }
+  &-sm{
+   min-height: 25px;
+   min-width: 125px;
+  }
+  &-fw{
+   width: 100%;
+  }
+
+  @media (any-hover: hover) { //только для устройств с ховером
+  	&:hover{
+  		cursor: pointer;
+  	}
+  }
+   
+}
+// шильдие на товар
+.billet{
+	height: 24px;
+	display: inline-block;
+	padding: 5px 9px 5px 6px;
+	border-radius: 0 20px 20px 0;
+	font-size: 10px;
+	line-height: 14px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+
+	&--new{
+		background-color: #13B3EB;
+	}
+	&--markdown{
+		background-color: $yellow;
+	}
+	&--action{
+		background-color: $red;
+	}
+}
 /*--------------------END ui----------------------*/ 

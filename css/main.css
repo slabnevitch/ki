@@ -153,6 +153,112 @@ textarea.input {
 
 /*--------------------END adjustment----------------------*/
 /*--------------------ui----------------------*/
+.btn {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 40px;
+  max-width: 270px;
+  min-width: 270px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #003D9E;
+  padding: 5px 15px;
+  font-size: 12px;
+  line-height: 17px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  outline: none;
+  transition: background-color 0.1s ease;
+}
+.btn:hover {
+  background-color: #fff;
+  border-color: #003D9E;
+  color: #003D9E;
+}
+.btn:active {
+  background-color: #fff;
+  border-color: #003D9E;
+  color: #003D9E;
+}
+.btn-empty {
+  border-color: #003D9E;
+  color: #003D9E;
+  background-color: #fff;
+}
+.btn-empty:hover, .btn-empty:active {
+  background-color: #003D9E;
+  border-color: transparent;
+  color: #fff;
+}
+.btn-gray {
+  color: #fff;
+  background-color: #B7B7B7;
+}
+.btn-gray:hover, .btn-gray:active {
+  border-color: #B7B7B7;
+  background-color: #fff;
+  border-color: #B7B7B7;
+  color: #B7B7B7;
+}
+.btn-red {
+  color: #fff;
+  background-color: #E63600;
+}
+.btn-red:hover, .btn-red:active {
+  border-color: #E63600;
+  background-color: #fff;
+  color: #E63600;
+}
+.btn-yellow {
+  color: #fff;
+  background-color: #FCC200;
+}
+.btn-yellow:hover, .btn-yellow:active {
+  border-color: #FCC200;
+  background-color: #fff;
+  color: #FCC200;
+}
+.btn-sm {
+  min-height: 25px;
+  min-width: 125px;
+}
+.btn-fw {
+  width: 100%;
+}
+@media (any-hover: hover) {
+  .btn:hover {
+    cursor: pointer;
+  }
+}
+
+.billet {
+  height: 24px;
+  display: inline-block;
+  padding: 5px 9px 5px 6px;
+  border-radius: 0 20px 20px 0;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.billet--new {
+  background-color: #13B3EB;
+}
+.billet--markdown {
+  background-color: #FCC200;
+}
+.billet--action {
+  background-color: #E63600;
+}
+
 /*--------------------END ui----------------------*/
 /*--------------------cart-page__left----------------------*/
 .praongallery {
