@@ -1,0 +1,37 @@
+.counter {
+	display: inline-flex;
+	flex-shrink: 0;
+	width: 100px;
+	height: 60px;
+	border: 1px solid #EFEFEF;
+}
+.counter__button,
+.counter__count{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	text-align: center;
+	// outline: 1px solid;
+	font-size: em(30);
+}
+.counter__button {
+	flex: 1 0 30%;
+	max-width: 30%;
+	cursor: pointer;
+	color: gray;
+	outline: none;
+	border: none;
+	user-select: none;
+	
+	@include min-screen($md){
+		cursor: pointer;
+		
+	}
+}
+
+.counter__count {
+	flex: 0 1 auto;
+	outline: none;
+	border: none;
+}
