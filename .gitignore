@@ -1,3 +1,7 @@
 node_modules
 dist
 .idea
+libs
+libs-vanilla
+.bowerrc
+mail.php

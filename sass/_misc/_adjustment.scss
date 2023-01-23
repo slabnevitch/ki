@@ -7,12 +7,12 @@ html, body{
 	padding: 0;
 }
 body{
-	font-family: $reg;
+	font-family: 'Inter', sans-serif;
 	font-weight: normal;
 	font-size: 15px;
 	min-width: 320px;
 	position: relative;
-	line-height: 1.6;
+	// line-height: 1.6;
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
 	color: $text;
@@ -102,18 +102,20 @@ textarea.input{
 	max-width: $maxContainerWidth + px;
 	// @include row-flex();
 	// @include wrapper();
+	outline: 1px solid;
 }
 // classes for smartgrid(c) structure
-// .wrapper-smart{
-// 	@include wrapper();
-// }
-// .wrapper-flex{
-// 	@include row-flex();
-// }
-// .column{
-// 	@include col();
-// 	@include size(1);	
-// }
+.wrapper-smart{
+	@include wrapper();
+	outline: 1px solid;
+}
+.wrapper-flex{
+	@include row-flex();
+}
+.column{
+	@include col();
+	@include size(3);	
+}
 
 .hidden{
 	display: none;

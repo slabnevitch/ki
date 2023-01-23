@@ -1,48 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 @font-face {
-  font-family: "RobotoRegular";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/RobotoRegular/RobotoRegular.woff2") format("woff2"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "raleway-v22-latin_cyrillic-600";
-  font-display: swap;
-  src: url("../fonts/raleway-v22-latin_cyrillic-600.woff2") format("woff2"), url("../fonts/raleway-v22-latin_cyrillic-600.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "raleway-v22-latin_cyrillic-900";
-  font-display: swap;
-  src: url("../fonts/raleway-v22-latin_cyrillic-900.woff2") format("woff2"), url("../fonts/raleway-v22-latin_cyrillic-900.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "raleway-v22-latin_cyrillic-regular";
-  font-display: swap;
-  src: url("../fonts/raleway-v22-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/raleway-v22-latin_cyrillic-regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'icomoon';
+  font-family: "icomoon";
   src: url("../fonts/icomoon/fonts/icomoon.eot?za5w69");
   src: url("../fonts/icomoon/fonts/icomoon.eot?za5w69#iefix") format("embedded-opentype"), url("../fonts/icomoon/fonts/icomoon.ttf?za5w69") format("truetype"), url("../fonts/icomoon/fonts/icomoon.woff?za5w69") format("woff"), url("../fonts/icomoon/fonts/icomoon.svg?za5w69#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
-
-/*--slideout--*/
-/*--end slideout--*/
 /*--------------------adjustment----------------------*/
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -52,17 +18,15 @@ html, body {
 }
 
 body {
-  font-family: "raleway-v22-latin_cyrillic-regular", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: normal;
   font-size: 15px;
   min-width: 320px;
   position: relative;
-  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  color: #000;
+  color: rgba(0, 0, 0, 0.8);
 }
-
 .lock body {
   overflow: hidden;
   -ms-touch-action: none;
@@ -75,13 +39,11 @@ ul, li {
   padding: 0;
 }
 
-input
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+input input[type=text],
+input[type=email],
+input[type=tel],
 textarea {
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -99,9 +61,35 @@ textarea.input {
 
 .wrapper {
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  max-width: 1200px;
+  padding-left: 24px;
+  padding-right: 24px;
+  max-width: 1440px;
+  outline: 1px solid;
+}
+
+.wrapper-smart {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  outline: 1px solid;
+}
+
+.wrapper-flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.column {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: calc(25% - 16px);
 }
 
 .hidden {
@@ -129,7 +117,6 @@ textarea.input {
   position: relative;
   padding-bottom: 80%;
 }
-
 ._prod-img img {
   display: block;
   max-width: 100%;
@@ -137,7 +124,6 @@ textarea.input {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -153,9 +139,7 @@ textarea.input {
   position: absolute;
   left: 0;
   right: 0;
-  -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: center center;
   object-position: center center;
 }
 
@@ -172,36 +156,29 @@ textarea.input {
 /*--------------------END ui----------------------*/
 /*--------------------cart-page__left----------------------*/
 .praongallery {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 .praongallery * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .praongallery__slider.slick-dotted {
   margin-bottom: -7px;
 }
-
 .praongallery__slider .slick-prev,
 .praongallery__slider .slick-next {
   width: 32px;
   height: 32px;
   top: 190px;
 }
-
 .praongallery__slider .slick-prev {
   left: -30px;
 }
-
 .praongallery__slider .slick-next {
   right: -30px;
 }
-
 .praongallery__slider .slick-prev:before, .praongallery__slider .slick-next:before {
-  content: '';
+  content: "";
   width: 32px;
   height: 32px;
   display: block;
@@ -209,26 +186,20 @@ textarea.input {
   background-repeat: no-repeat;
   background-size: contain;
 }
-
 .praongallery__slider .slick-next:before {
   background-image: url(../img/static/knportal_base/img/a-next.png);
 }
-
 .praongallery__slider .slick-prev:before {
   background-image: url(../img/static/knportal_base/img/a-prev.png);
 }
-
 .praongallery__slider .slick-dots {
   margin-top: 14px;
   position: static;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-left: -3.5px;
   margin-right: -3.5px;
 }
-
 .praongallery__slider .slick-dots li {
   width: auto;
   height: auto;
@@ -238,22 +209,17 @@ textarea.input {
   margin-right: 3.4px;
   margin-bottom: 7px;
 }
-
 .praongallery__slider .slick-dots li a {
   width: 98px;
   height: 80px;
   display: block;
 }
-
 .praongallery__slider .slick-dots li a img {
   width: 100%;
   cursor: pointer;
-  -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: center;
   object-position: center;
   height: 100%;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
 }
 
@@ -261,7 +227,6 @@ textarea.input {
   height: 379px;
   text-align: center;
 }
-
 .praongallery__slide img {
   max-height: 100%;
   max-width: 100%;
@@ -271,12 +236,9 @@ textarea.input {
 
 /*--------------------END cart-page__left----------------------*/
 .header .sidebar-menu {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
-
 .header .sidebar-menu .dl-submenu {
   opacity: 0;
   visibility: hidden;
@@ -286,11 +248,9 @@ textarea.input {
 .right-info .author div {
   font-size: 12px;
 }
-
 .right-info .num-short .btn {
   font-size: 14px;
   text-align: center;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   min-width: 180px;
   background-color: rgba(0, 42, 147, 0.7);
@@ -301,11 +261,9 @@ textarea.input {
 .wrap-new-main__second-box ul li {
   margin-top: 0;
 }
-
 .wrap-new-main__second-box ul li:not(:last-child) {
   margin-bottom: 10px;
 }
-
 .wrap-new-main__second-box ul li a {
   color: #3E3E3E;
 }
@@ -321,5 +279,4 @@ textarea.input {
 }
 
 /*--------------------END _right-sidebar----------------------*/
-
 /*# sourceMappingURL=maps/main.css.map */
