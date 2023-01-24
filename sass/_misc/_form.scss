@@ -1,6 +1,20 @@
 /*--------------------form----------------------*/
 .form{
 	&__row{
+		&:not(:last-child){
+			margin-bottom: 20px;
+		}
+	}
+	&__row-content{
+		padding: 22px;
+		background-color: $inpbg;
+
+		.form__custom-policy{
+			&:not(:last-child){
+				margin-bottom: 22px;
+			}
+		}
+
 	}
 	&__row-title{
 		flex: 0 0 auto;

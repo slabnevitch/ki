@@ -32,21 +32,17 @@ block content
 				label.form__label
 					textarea.form__area(type='text' name='question' placeholder="Ваши впечатления")
 			
-			.form__custom-policy
-				label.form__custom
-					input.form__check(type='checkbox' name='checkbox' value='chekbox1' checked='checked' required='required')
-					span.form__custom-chek
-					span.form__policy
-						| Я согласен с 
-						a(href='#') Политикой конфидициальности
+			.form__row
+				.form__row-title Оплата*
+				.form__row-content
+					- var kinds = ['Оплата картой на сайте', 'СберСпасибо - оплата на сайте', 'Оплата при получении', 'Выставить счет для предоплаты безналичным платежом', 'Оплата СБП (сервис быстрых платежей)', 'В кредит'];
+					each item, ind in kinds
+						.form__custom-policy
+							label.form__custom
+								input.form__check(type='checkbox' name='checkbox' value='chekbox1' checked=ind==0 ? true : false required='required')
+								span.form__custom-chek
+								span.form__policy= item
 
-			.form__custom-policy
-				label.form__custom
-					input.form__check(type='checkbox' name='checkbox' value='chekbox1' checked='checked' required='required')
-					span.form__custom-chek
-					span.form__policy
-						| Я согласен с 
-						a(href='#') Политикой конфидициальности
 			button.btn.btn-fw(type='submit') Получить консультацию
 	
 	.wrapper

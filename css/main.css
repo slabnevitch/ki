@@ -153,6 +153,16 @@ textarea.input {
 }
 
 /*--------------------form----------------------*/
+.form__row:not(:last-child) {
+  margin-bottom: 20px;
+}
+.form__row-content {
+  padding: 22px;
+  background-color: #F1F1F1;
+}
+.form__row-content .form__custom-policy:not(:last-child) {
+  margin-bottom: 22px;
+}
 .form__row-title {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
