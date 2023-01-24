@@ -7,12 +7,12 @@ html, body{
 	padding: 0;
 }
 body{
-	font-family: 'Inter', sans-serif;
+	font-family: $inter;
 	font-weight: normal;
-	font-size: 15px;
+	font-size: 14px;
 	min-width: 320px;
 	position: relative;
-	// line-height: 1.6;
+	line-height: 17px;
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
 	color: $text;
@@ -194,7 +194,7 @@ padding-bottom: 52.25%;
 
 // service ui elements styles
 // @import "_misc/_tabs-accordion";
-// @import "_misc/_form";
+@import "_misc/_form";
 // @import "_misc/font-rating";//подключить, если для звез рейтинга исп-я. icomoon
 // @import "_misc/_rating";
 // @import "_misc/_noUiSlider-base";

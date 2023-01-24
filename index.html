@@ -26,6 +26,41 @@
         <div class="column">Коллеги, еще раз добрый день!</div>
         <div class="column">Коллеги, еще раз добрый день!</div>
       </div>
+      <form action="#" class="form">
+        <div class="form__row">
+          <div class="form__row-title">Покупатель*</div>
+          <label class="form__label">
+            <input type="text" name="name" placeholder="Фамилия*" class="form__input">
+          </label>
+          <label class="form__label">
+            <input type="text" name="phone" placeholder="Имя*" class="form__input form__input--bg">
+          </label>
+          <label class="form__label">
+            <input type="text" name="phone" placeholder="Отчество*" class="form__input">
+          </label>
+          <label class="form__label form__label--error">
+            <input type="text" name="phone" placeholder="Отчество*" value="Ива8нович55" class="form__input form__input--bg">
+          </label>
+          <label class="form__label">
+            <!-- textarea.form__area(type='text' name='question')-->
+            <input type="text" name="email" placeholder="Email*" class="form__input">
+          </label>
+          <label class="form__label">
+            <textarea type="text" name="question" placeholder="Ваши впечатления" class="form__area"></textarea>
+          </label>
+        </div>
+        <div class="form__custom-policy">
+          <label class="form__custom">
+            <input type="checkbox" name="checkbox" value="chekbox1" checked="checked" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Я согласен с <a href="#">Политикой конфидициальности</a></span>
+          </label>
+        </div>
+        <div class="form__custom-policy">
+          <label class="form__custom">
+            <input type="checkbox" name="checkbox" value="chekbox1" checked="checked" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Я согласен с <a href="#">Политикой конфидициальности</a></span>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-fw">Получить консультацию</button>
+      </form>
     </div>
     <div class="wrapper">
       <div class="btn">Suka</div>

@@ -9,6 +9,46 @@ block content
 			- for (var i=0; i < 12; i++)
 				.column
 					| Коллеги, еще раз добрый день!
+
+		form.form(action='#')
+			.form__row
+				.form__row-title Покупатель*
+				label.form__label
+					input.form__input(type='text' name='name' placeholder='Фамилия*')
+				
+				label.form__label
+					input.form__input.form__input--bg(type='text' name='phone' placeholder='Имя*')
+				
+				label.form__label
+					input.form__input(type='text' name='phone' placeholder='Отчество*')
+
+				label.form__label.form__label--error
+					input.form__input.form__input--bg(type='text' name='phone' placeholder='Отчество*' value="Ива8нович55")
+				
+				label.form__label
+					// textarea.form__area(type='text' name='question')
+					input.form__input(type='text' name='email' placeholder='Email*')
+
+				label.form__label
+					textarea.form__area(type='text' name='question' placeholder="Ваши впечатления")
+			
+			.form__custom-policy
+				label.form__custom
+					input.form__check(type='checkbox' name='checkbox' value='chekbox1' checked='checked' required='required')
+					span.form__custom-chek
+					span.form__policy
+						| Я согласен с 
+						a(href='#') Политикой конфидициальности
+
+			.form__custom-policy
+				label.form__custom
+					input.form__check(type='checkbox' name='checkbox' value='chekbox1' checked='checked' required='required')
+					span.form__custom-chek
+					span.form__policy
+						| Я согласен с 
+						a(href='#') Политикой конфидициальности
+			button.btn.btn-fw(type='submit') Получить консультацию
+	
 	.wrapper
 		.btn Suka
 		.btn.btn-empty Padla
