@@ -97,13 +97,25 @@
 			gutter: 30 //добавляет padding, а не margin! Нужна обертка вокруг содержимого каждого слайда!
 
 			});
+
+			var navSlider = tns({
+			container: '#customize-thumbnails',
+			mode: 'carousel', //'gallery' - для фэйд-анимации отдельных слайдов
+			items: 1,
+			mouseDrag: true,
+			loop: false,
+			controls: false,
+			nav: false,
+			gutter: 30 //добавляет padding, а не margin! Нужна обертка вокруг содержимого каждого слайда!
+
+			});
 		}
 
 		const gallery = new Viewer(document.getElementById('gallery'), {
 			title: false,
 			toolbar: {
-			    prev: 4,
-			    next: 4
+			    prev: 1,
+			    next: 1
 			},
 			// fullscreen: false,
 			movable: false,

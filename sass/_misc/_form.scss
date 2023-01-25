@@ -44,6 +44,7 @@
 	}
 }
 .form__input {
+	box-sizing: border-box;
 	height: 40px;
 	padding: 12px;
 	border: 1px solid #000;
@@ -67,10 +68,17 @@
 
 }
 .form__custom {
+	width: 100%;
 	position: relative;
 	flex-shrink: 0;
 	display: flex;
 	align-items: center;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+		&:hover{
+			cursor: pointer;
+		}
+	}
 }
 .form__check {
 	@include checkbox;
@@ -87,6 +95,7 @@
 	} 
 }
 .form__custom-chek {
+	flex-shrink: 0;
 	margin-right: 13px;
 	display: block;
 	position: relative;
