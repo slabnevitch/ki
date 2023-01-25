@@ -265,3 +265,19 @@ padding-bottom: 52.25%;
 // 	}
 // }
 /*--------------------END adjustment----------------------*/ 
+
+.my-slide{
+	padding-bottom: 5%;
+	img{
+		max-width: 100%;
+	}
+}
+.thumbnails{
+	display: flex;
+}
+.my-thumb{
+	flex:  0 0 50px;
+	img{
+		max-width: 100%;
+	}
+}

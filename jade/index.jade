@@ -54,7 +54,21 @@ block content
 		| Коллеги, еще раз добрый день!В групп добавился Максим он будет верстать наш проект.Максим здесь у нас два специалиста, которые помогут мне отвечать на все ваши вопросы:1) Анастасия дизайнер проект @asya_avilova 2) Максим наш разработчик @mbhdm 
 		.billet.billet--new pizda
 
-Знакомитесь, пишите все ваши вопросы, уточнения.
+	.wrapper
+		.my-slider#gallery
+			- var imgs = ['https://upload.wikimedia.org/wikipedia/commons/2/23/%D0%90%D0%B2%D0%B0%D0%B4%D1%85%D0%B0%D1%80%D0%B0._%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D1%81%D0%B5%D0%B2%D0%B5%D1%80.JPG', 'https://cdnn21.img.ria.ru/images/103766/29/1037662948_0:73:1200:753_600x0_80_0_0_47ddadf192368680c6bda4fadeb34c62.jpg', 'https://media-cdn.tripadvisor.com/media/photo-s/09/be/57/af/caption.jpg'];
+			each img in imgs
+				.my-slide
+					._fit
+						img(src= img alt="alt" class="_fit-img") 
+
+		#customize-thumbnails.thumbnails
+			.my-thumb
+				img(src="https://upload.wikimedia.org/wikipedia/commons/2/23/%D0%90%D0%B2%D0%B0%D0%B4%D1%85%D0%B0%D1%80%D0%B0._%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D1%81%D0%B5%D0%B2%D0%B5%D1%80.JPG")
+			.my-thumb
+				img(src="https://cdnn21.img.ria.ru/images/103766/29/1037662948_0:73:1200:753_600x0_80_0_0_47ddadf192368680c6bda4fadeb34c62.jpg")
+			.my-thumb
+				img(src="https://media-cdn.tripadvisor.com/media/photo-s/09/be/57/af/caption.jpg")
 		
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
@@ -132,7 +146,10 @@ block page-scripts
 	//- script(src="js/libs/swiper/swiper-bundle.min.js")
 
 	//- tiny-slider--------------------------
-	//- script(src="js/libs/tiny-slider/dist/tiny-slider.min.js")
+	script(src="js/libs/tiny-slider/dist/min/tiny-slider.js")
+
+	//-viewerjs --------------------------
+	script(src="js/libs/viewerjs/viewer.js")
 
 	//- noUiSlider--------------------------
 	//- script(src="js/libs/noUiSlider/nouislider.min.js")

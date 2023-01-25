@@ -81,6 +81,41 @@
 
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
-		
+		// usage: http://ganlanyuan.github.io/tiny-slider/#usage
+		if(document.querySelector('.my-slider') !== null){
+			var slider = tns({
+			container: '.my-slider',
+			mode: 'carousel', //'gallery' - для фэйд-анимации отдельных слайдов
+			items: 1,
+			// slideBy: 1, // кол-во слайдов, перематывающихся за 1 клик. Не работает с mode: 'gallery'
+			// autoplay: true,
+			// controlsContainer: '.hits.carouseled .block-header__nav', // внутри .block-header__nav должны быть 2 заранее отстилизованные кнопки
+			navContainer: "#customize-thumbnails",//конткйнер для навигации миниатюрами
+			navAsThumbnails: true, //включение навигации миниатюрами
+			mouseDrag: true,
+			loop: false,
+			gutter: 30 //добавляет padding, а не margin! Нужна обертка вокруг содержимого каждого слайда!
+
+			});
+		}
+
+		const gallery = new Viewer(document.getElementById('gallery'), {
+			title: false,
+			toolbar: {
+			    prev: 4,
+			    next: 4
+			},
+			// fullscreen: false,
+			movable: false,
+			rotatable: false,
+			 filter(image) {
+			 	console.log(image.parentElement.parentElement.classList.contains('tns-slide-cloned'));
+			    return !image.parentElement.parentElement.classList.contains('tns-slide-cloned');
+			    // return image.complete;
+			  },
+
 		});
+
+		
+	});
 })();
