@@ -977,6 +977,10 @@ textarea.input {
   transform: translateY(-50%);
 }
 
+.viewer-toolbar > ul {
+  overflow: visible;
+}
+
 .viewer-prev,
 .viewer-next {
   position: absolute;
@@ -1040,6 +1044,10 @@ textarea.input {
   left: 50%;
   -ms-transform: translate(-50%, -50%) !important;
   transform: translate(-50%, -50%) !important;
+}
+
+.viewer-toolbar > ul > li:focus {
+  position: absolute;
 }
 
 /*--------------------END viewerjs-custom----------------------*/

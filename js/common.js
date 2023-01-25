@@ -79,6 +79,10 @@
 	// }
 	// End ibg class
 
+	document.addEventListener('click', function(e){
+		console.log(e.target)
+	});
+
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
 		// usage: http://ganlanyuan.github.io/tiny-slider/#usage
@@ -114,8 +118,8 @@
 		const gallery = new Viewer(document.getElementById('gallery'), {
 			title: false,
 			toolbar: {
-			    prev: 1,
-			    next: 1
+			    prev: 4,
+			    next: 4
 			},
 			// fullscreen: false,
 			movable: false,
