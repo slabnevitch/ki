@@ -192,14 +192,6 @@ padding-bottom: 52.25%;
 // 	}
 // }
 
-// service ui elements styles
-// @import "_misc/_tabs-accordion";
-@import "_misc/_form";
-// @import "_misc/font-rating";//подключить, если для звез рейтинга исп-я. icomoon
-// @import "_misc/_rating";
-// @import "_misc/_noUiSlider-base";
-// @import "_misc/_counter";
-// @import "_misc/multilevel-dropdown.scss";
 
 // .toggle-mnu{
 // 	position: fixed;
@@ -264,8 +256,26 @@ padding-bottom: 52.25%;
 // 		transition: opacity .5s !important;
 // 	}
 // }
-/*--------------------END adjustment----------------------*/ 
 
+// service ui elements styles
+// @import "_misc/_tabs-accordion";
+@import "_misc/_form";
+@import "_misc/font-rating";//подключить, если для звез рейтинга исп-я. icomoon
+@import "_misc/_rating";
+// @import "_misc/_noUiSlider-base";
+// @import "_misc/_counter";
+// @import "_misc/multilevel-dropdown.scss";
+/*--------------------END adjustment----------------------*/ 
+.wrapper.rating{
+	// rating на странице написания отзва от товаре
+	.simple-rating{
+		@include simple-rating(rgba($text, .2), $yellow, 35px, 25px, '\e901');
+	}
+	// rating на в карточке товара
+	.crystal-rating{
+		@include crystal-rating($gray-l, $yellow, 12, 4, '\e901');
+	}
+}
 .my-slide{
 	padding-bottom: 5%;
 	img{

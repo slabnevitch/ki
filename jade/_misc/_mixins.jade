@@ -68,8 +68,8 @@ mixin simpleRating(value)
 //- звезный рейтинг с возможностью выбора пользователем по клику с демонстрацией значения рейтинга, может прнимать целые и дробные числа
 //- value - велиичина рейтинга, целое или дробное число
 //- для работы нужен js-скрипт ratings.js
-mixin crystalRating(rating)
-	.crystal-rating
+mixin crystalRating(rating, handler = false)
+	.crystal-rating(data-handler=handler ? true : false)
 		.crystal-rating__body
 			.crystal-rating__active
 			.crystal-rating__items

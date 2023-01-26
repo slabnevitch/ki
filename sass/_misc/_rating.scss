@@ -139,7 +139,7 @@
 	  position: relative;
 	  font-size: $fontSize + px;
 	  @if $icomoon != false { 
-	  	line-height: 0.8;
+	  	line-height: 1;
 
   	}@else{
 	  	line-height: 0.75;
@@ -232,10 +232,10 @@
 }
 .simple-rating{
 	// @include simple-rating(#000, gold, 50px, 30px, false);
-	@include simple-rating(red, gold, 35px, 25px, false);
+	// @include simple-rating(red, gold, 35px, 25px, false);
 }
 .crystal-rating{
-	@include crystal-rating(gray, gold, 50, 8, false);
+	// @include crystal-rating(gray, gold, 50, 8, false);
 }
 // для кастомизации иконки звездочек можно использовать шрифт Icomoon (https://icomoon.io/app/#/select)
 // 1. экспортировать иконку в .svg

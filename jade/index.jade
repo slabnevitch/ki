@@ -54,6 +54,14 @@ block content
 		| Коллеги, еще раз добрый день!В групп добавился Максим он будет верстать наш проект.Максим здесь у нас два специалиста, которые помогут мне отвечать на все ваши вопросы:1) Анастасия дизайнер проект @asya_avilova 2) Максим наш разработчик @mbhdm 
 		.billet.billet--new pizda
 
+	.wrapper.rating
+		h2 Rating in reviews
+		+simpleRating(3)
+
+		h2 Rating in product card
+		+crystalRating(4.5)
+		+crystalRating(1.5)
+		+crystalRating(5)
 	.wrapper
 		.my-slider#gallery
 			- var imgs = ['https://upload.wikimedia.org/wikipedia/commons/2/23/%D0%90%D0%B2%D0%B0%D0%B4%D1%85%D0%B0%D1%80%D0%B0._%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D1%81%D0%B5%D0%B2%D0%B5%D1%80.JPG', 'https://cdnn21.img.ria.ru/images/103766/29/1037662948_0:73:1200:753_600x0_80_0_0_47ddadf192368680c6bda4fadeb34c62.jpg', 'https://media-cdn.tripadvisor.com/media/photo-s/09/be/57/af/caption.jpg'];
@@ -161,7 +169,7 @@ block page-scripts
 	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
 
 	//- ratings--------------------------
-	//- script(src="js/libs/rating/ratings.js")
+	script(src="js/libs/rating/ratings.js")
 
 	//- scroll-to-sects--------------------------
 	//- script(src="js/libs/scroll-to-sects/scrolltosect.js")
