@@ -68,7 +68,7 @@ mixin simpleRating(value)
 //- звезный рейтинг с возможностью выбора пользователем по клику с демонстрацией значения рейтинга, может прнимать целые и дробные числа
 //- value - велиичина рейтинга, целое или дробное число
 //- для работы нужен js-скрипт ratings.js
-mixin crystalRating(rating, handler = false)
+mixin crystalRating(rating, handler = false) 
 	.crystal-rating(data-handler=handler ? true : false)
 		.crystal-rating__body
 			.crystal-rating__active
@@ -79,3 +79,6 @@ mixin crystalRating(rating, handler = false)
 				input(value='4' type='radio' name='crystal')
 				input(value='5' type='radio' name='crystal')
 		.crystal-rating__value= rating
+//- rating -- значение рейтинга. Если требуется выводить в хтмл значение с запятой (3,5), то передавать 
+//- так: +crystalRating('3,5'), а если нет то +crystalRating('3,5').  
+//- handler -- включение/выключение возможности установки рйтинга пользователем

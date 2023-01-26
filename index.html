@@ -10,165 +10,191 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <header class="header"></header>
-    <div class="wrapper-smart">
-      <div class="wrapper-flex">
-        <div class="column">Коллеги, еще раз добрый день!</div>
-        <div class="column">Коллеги, еще раз добрый день!</div>
-        <div class="column">Коллеги, еще раз добрый день!</div>
-        <div class="column">Коллеги, еще раз добрый день!</div>
-        <div class="column">Коллеги, еще раз добрый день!</div>
-        <div class="column">Коллеги, еще раз добрый день!</div>
-        <div class="column">Коллеги, еще раз добрый день!</div>
-        <div class="column">Коллеги, еще раз добрый день!</div>
-        <div class="column">Коллеги, еще раз добрый день!</div>
-        <div class="column">Коллеги, еще раз добрый день!</div>
-        <div class="column">Коллеги, еще раз добрый день!</div>
-        <div class="column">Коллеги, еще раз добрый день!</div>
-      </div>
-      <form action="#" class="form">
-        <div class="form__row">
-          <div class="form__row-title">Покупатель*</div>
-          <label class="form__label">
-            <input type="text" name="name" placeholder="Фамилия*" class="form__input">
-          </label>
-          <label class="form__label">
-            <input type="text" name="phone" placeholder="Имя*" class="form__input form__input--bg">
-          </label>
-          <label class="form__label">
-            <input type="text" name="phone" placeholder="Отчество*" class="form__input">
-          </label>
-          <label class="form__label form__label--error">
-            <input type="text" name="phone" placeholder="Отчество*" value="Ива8нович55" class="form__input form__input--bg">
-          </label>
-          <label class="form__label">
-            <!-- textarea.form__area(type='text' name='question')-->
-            <input type="text" name="email" placeholder="Email*" class="form__input">
-          </label>
-          <label class="form__label">
-            <textarea type="text" name="question" placeholder="Ваши впечатления" class="form__area"></textarea>
-          </label>
-        </div>
-        <div class="form__row">
-          <div class="form__row-title">Оплата*</div>
-          <div class="form__row-content">
-            <div class="form__custom-policy">
-              <label class="form__custom">
-                <input type="checkbox" name="checkbox" value="chekbox1" checked required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Оплата картой на сайте</span>
-              </label>
-            </div>
-            <div class="form__custom-policy">
-              <label class="form__custom">
-                <input type="checkbox" name="checkbox" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">СберСпасибо - оплата на сайте</span>
-              </label>
-            </div>
-            <div class="form__custom-policy">
-              <label class="form__custom">
-                <input type="checkbox" name="checkbox" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Оплата при получении</span>
-              </label>
-            </div>
-            <div class="form__custom-policy">
-              <label class="form__custom">
-                <input type="checkbox" name="checkbox" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Выставить счет для предоплаты безналичным платежом</span>
-              </label>
-            </div>
-            <div class="form__custom-policy">
-              <label class="form__custom">
-                <input type="checkbox" name="checkbox" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Оплата СБП (сервис быстрых платежей)</span>
-              </label>
-            </div>
-            <div class="form__custom-policy">
-              <label class="form__custom">
-                <input type="checkbox" name="checkbox" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">В кредит</span>
-              </label>
+    <main class="main">
+      <header class="header">
+        <div class="header__top">
+          <div class="wrapper"><a href="#" class="header__logo">
+              <picture>
+                <source srcset="img/ki_logo.svg" media="(max-width: 940px)"><img src="img/logo.svg" alt="alt">
+              </picture></a>
+            <div class="header__loc loc-header"></div><a href="tel:88002502123" class="header__phone phone-header">8 800 250-21-23</a>
+            <div class="header__menu menu-header">
+              <button class="toggle-mnu"><span></span></button>
+              <nav class="menu-header__body">
+                <ul class="menu-header__list">
+                  <li class="menu-header__item"><a href="#" class="menu-header__link">Подарочные карты</a></li>
+                  <li class="menu-header__item"><a href="#" class="menu-header__link">Юр. лицам</a></li>
+                  <li class="menu-header__item"><a href="#" class="menu-header__link">Магазины</a></li>
+                  <li data-single-dropdown class="menu-header__item"><a href="#" class="menu-header__link">Покупателям</a>
+                    <button type="button" class="menu__arrow">></button>
+                    <ul class="single-dropdown">
+                      <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Product №1</a></li>
+                      <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Product №2</a></li>
+                      <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Product №3</a></li>
+                      <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Product №4</a></li>
+                    </ul>
+                  </li>
+                  <li data-single-dropdown class="menu-header__item"><a href="#" class="menu-header__link">Покупателям</a>
+                    <button type="button" class="menu__arrow">></button>
+                    <ul class="single-dropdown">
+                      <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Product №1</a></li>
+                      <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Product №2</a></li>
+                      <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Product №3</a></li>
+                      <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Product №4</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-fw">Получить консультацию</button>
-      </form>
-    </div>
-    <div class="wrapper">
-      <div class="btn">Suka</div>
-      <div class="btn btn-empty">Padla</div>
-      <div class="btn btn-gray btn-sm">Padla</div>
-      <div class="btn btn-red">Pisdiyk</div>
-      <div class="btn btn-yellow">Pisdiyk</div>Коллеги, еще раз добрый день!В групп добавился Максим он будет верстать наш проект.Максим здесь у нас два специалиста, которые помогут мне отвечать на все ваши вопросы:1) Анастасия дизайнер проект @asya_avilova 2) Максим наш разработчик @mbhdm 
-      <div class="billet billet--new">pizda</div>
-    </div>
-    <div class="wrapper rating">
-      <h2>Rating in reviews</h2>
-          <div class="simple-rating">
-            <input id="inp5" type="radio" name="rating" value="5">
-            <label for="inp5"></label>
-            <input id="inp4" type="radio" name="rating" value="4">
-            <label for="inp4"></label>
-            <input id="inp3" type="radio" checked name="rating" value="3">
-            <label for="inp3"></label>
-            <input id="inp2" type="radio" name="rating" value="2">
-            <label for="inp2"></label>
-            <input id="inp1" type="radio" name="rating" value="1">
-            <label for="inp1"></label>
+      </header>
+      <div class="main-content">
+        <div class="wrapper-smart">
+          <div class="wrapper-flex">
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
           </div>
-      <h2>Rating in product card</h2>
-          <div class="crystal-rating">
-            <div class="crystal-rating__body">
-              <div class="crystal-rating__active"></div>
-              <div class="crystal-rating__items">
-                <input value="1" type="radio" name="crystal">
-                <input value="2" type="radio" name="crystal">
-                <input value="3" type="radio" name="crystal">
-                <input value="4" type="radio" name="crystal">
-                <input value="5" type="radio" name="crystal">
+          <form action="#" class="form">
+            <div class="form__row">
+              <div class="form__row-title">Покупатель*</div>
+              <label class="form__label">
+                <input type="text" name="name" placeholder="Фамилия*" class="form__input">
+              </label>
+              <label class="form__label">
+                <input type="text" name="phone" placeholder="Имя*" class="form__input form__input--bg">
+              </label>
+              <label class="form__label">
+                <input type="text" name="phone" placeholder="Отчество*" class="form__input">
+              </label>
+              <label class="form__label form__label--error">
+                <input type="text" name="phone" placeholder="Отчество*" value="Ива8нович55" class="form__input form__input--bg">
+              </label>
+              <label class="form__label">
+                <!-- textarea.form__area(type='text' name='question')-->
+                <input type="text" name="email" placeholder="Email*" class="form__input">
+              </label>
+              <label class="form__label">
+                <textarea type="text" name="question" placeholder="Ваши впечатления" class="form__area"></textarea>
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title">Оплата*</div>
+              <div class="form__row-content">
+                <div class="form__custom-policy">
+                  <label class="form__custom">
+                    <input type="checkbox" name="checkbox" value="chekbox1" checked required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Оплата картой на сайте</span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <label class="form__custom">
+                    <input type="checkbox" name="checkbox" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">СберСпасибо - оплата на сайте</span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <label class="form__custom">
+                    <input type="checkbox" name="checkbox" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Оплата при получении</span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <label class="form__custom">
+                    <input type="checkbox" name="checkbox" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Выставить счет для предоплаты безналичным платежом</span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <label class="form__custom">
+                    <input type="checkbox" name="checkbox" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Оплата СБП (сервис быстрых платежей)</span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <label class="form__custom">
+                    <input type="checkbox" name="checkbox" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">В кредит</span>
+                  </label>
+                </div>
               </div>
             </div>
-            <div class="crystal-rating__value">4.5</div>
-          </div>
-          <div class="crystal-rating">
-            <div class="crystal-rating__body">
-              <div class="crystal-rating__active"></div>
-              <div class="crystal-rating__items">
-                <input value="1" type="radio" name="crystal">
-                <input value="2" type="radio" name="crystal">
-                <input value="3" type="radio" name="crystal">
-                <input value="4" type="radio" name="crystal">
-                <input value="5" type="radio" name="crystal">
-              </div>
-            </div>
-            <div class="crystal-rating__value">1.5</div>
-          </div>
-          <div class="crystal-rating">
-            <div class="crystal-rating__body">
-              <div class="crystal-rating__active"></div>
-              <div class="crystal-rating__items">
-                <input value="1" type="radio" name="crystal">
-                <input value="2" type="radio" name="crystal">
-                <input value="3" type="radio" name="crystal">
-                <input value="4" type="radio" name="crystal">
-                <input value="5" type="radio" name="crystal">
-              </div>
-            </div>
-            <div class="crystal-rating__value">5</div>
-          </div>
-    </div>
-    <div class="wrapper">
-      <div id="gallery" class="my-slider">
-        <div class="my-slide">
-          <div class="_fit"><img src="https://upload.wikimedia.org/wikipedia/commons/2/23/%D0%90%D0%B2%D0%B0%D0%B4%D1%85%D0%B0%D1%80%D0%B0._%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D1%81%D0%B5%D0%B2%D0%B5%D1%80.JPG" alt="alt" class="_fit-img"></div>
+            <button type="submit" class="btn btn-fw">Получить консультацию</button>
+          </form>
         </div>
-        <div class="my-slide">
-          <div class="_fit"><img src="https://cdnn21.img.ria.ru/images/103766/29/1037662948_0:73:1200:753_600x0_80_0_0_47ddadf192368680c6bda4fadeb34c62.jpg" alt="alt" class="_fit-img"></div>
+        <div class="wrapper">
+          <div class="btn">Suka</div>
+          <div class="btn btn-empty">Padla</div>
+          <div class="btn btn-gray btn-sm">Padla</div>
+          <div class="btn btn-red">Pisdiyk</div>
+          <div class="btn btn-yellow">Pisdiyk</div>Коллеги, еще раз добрый день!В групп добавился Максим он будет верстать наш проект.Максим здесь у нас два специалиста, которые помогут мне отвечать на все ваши вопросы:1) Анастасия дизайнер проект @asya_avilova 2) Максим наш разработчик @mbhdm 
+          <div class="billet billet--new">pizda</div>
         </div>
-        <div class="my-slide">
-          <div class="_fit"><img src="https://media-cdn.tripadvisor.com/media/photo-s/09/be/57/af/caption.jpg" alt="alt" class="_fit-img"></div>
+        <div class="wrapper rating">
+          <h2>Rating in reviews</h2>
+              <div class="simple-rating">
+                <input id="inp5" type="radio" name="rating" value="5">
+                <label for="inp5"></label>
+                <input id="inp4" type="radio" name="rating" value="4">
+                <label for="inp4"></label>
+                <input id="inp3" type="radio" checked name="rating" value="3">
+                <label for="inp3"></label>
+                <input id="inp2" type="radio" name="rating" value="2">
+                <label for="inp2"></label>
+                <input id="inp1" type="radio" name="rating" value="1">
+                <label for="inp1"></label>
+              </div>
+          <h2>Rating in product card</h2>
+              <div class="crystal-rating">
+                <div class="crystal-rating__body">
+                  <div class="crystal-rating__active"></div>
+                  <div class="crystal-rating__items">
+                    <input value="1" type="radio" name="crystal">
+                    <input value="2" type="radio" name="crystal">
+                    <input value="3" type="radio" name="crystal">
+                    <input value="4" type="radio" name="crystal">
+                    <input value="5" type="radio" name="crystal">
+                  </div>
+                </div>
+                <div class="crystal-rating__value">4.5</div>
+              </div>
+              <div class="crystal-rating">
+                <div class="crystal-rating__body">
+                  <div class="crystal-rating__active"></div>
+                  <div class="crystal-rating__items">
+                    <input value="1" type="radio" name="crystal">
+                    <input value="2" type="radio" name="crystal">
+                    <input value="3" type="radio" name="crystal">
+                    <input value="4" type="radio" name="crystal">
+                    <input value="5" type="radio" name="crystal">
+                  </div>
+                </div>
+                <div class="crystal-rating__value">1,5</div>
+              </div>
+              <div class="crystal-rating">
+                <div class="crystal-rating__body">
+                  <div class="crystal-rating__active"></div>
+                  <div class="crystal-rating__items">
+                    <input value="1" type="radio" name="crystal">
+                    <input value="2" type="radio" name="crystal">
+                    <input value="3" type="radio" name="crystal">
+                    <input value="4" type="radio" name="crystal">
+                    <input value="5" type="radio" name="crystal">
+                  </div>
+                </div>
+                <div class="crystal-rating__value">5</div>
+              </div>
         </div>
       </div>
-      <div id="customize-thumbnails" class="thumbnails">
-        <div class="my-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/2/23/%D0%90%D0%B2%D0%B0%D0%B4%D1%85%D0%B0%D1%80%D0%B0._%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D1%81%D0%B5%D0%B2%D0%B5%D1%80.JPG"></div>
-        <div class="my-thumb"><img src="https://cdnn21.img.ria.ru/images/103766/29/1037662948_0:73:1200:753_600x0_80_0_0_47ddadf192368680c6bda4fadeb34c62.jpg"></div>
-        <div class="my-thumb"><img src="https://media-cdn.tripadvisor.com/media/photo-s/09/be/57/af/caption.jpg"></div>
-      </div>
-    </div>
-    <footer class="footer"></footer>
+      <footer class="footer">
+        <h1>Footer</h1>
+      </footer>
+    </main>
+    <script src="js/libs/service-functions/dropdown-toggle.js"></script>
     
     
     

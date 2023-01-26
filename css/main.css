@@ -11,7 +11,7 @@
   font-family: "NavigoBlack";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/navigo-medium/Navigo-Black-Web.woff2") format("woff2"), url("../fonts/navigo-medium/Navigo-Black-Web.woff") format("woff");
+  src: url("../fonts/navigo-black/Navigo-Black-Web.woff2") format("woff2"), url("../fonts/navigo-black/Navigo-Black-Web.woff") format("woff");
 }
 
 @font-face {
@@ -695,6 +695,44 @@ body {
   overflow-behavior: none;
 }
 
+html, body {
+  height: 100%;
+}
+
+.main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main .header {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.main .main-content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.main .footer {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 ul, li {
   margin: 0;
   padding: 0;
@@ -1097,6 +1135,10 @@ textarea.input {
 }
 
 /*--------------------END adjustment----------------------*/
+.wrapper.rating {
+  font-family: "NavigoBlack", sans-serif;
+}
+
 .wrapper.rating .simple-rating {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1424,6 +1466,7 @@ textarea.input {
   text-decoration: none;
   background-color: #003D9E;
   padding: 5px 15px;
+  font-family: "NavigoBlack", sans-serif;
   font-size: 12px;
   line-height: 17px;
   text-transform: uppercase;

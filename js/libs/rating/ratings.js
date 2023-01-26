@@ -13,7 +13,16 @@
     }
     
     getValues = function(rating){
-      var value = +rating.querySelector('.crystal-rating__value').innerText;
+        console.log(rating.querySelector('.crystal-rating__value').innerText)
+      var ratingStr = rating.querySelector('.crystal-rating__value').innerText,  
+          value = '';
+      
+      if(ratingStr.indexOf(',') != -1){
+        value = +ratingStr.replace(/,/gi, '.');
+
+      }else{
+        value = ratingStr;
+      }
       setGraphicValue(rating, +value)    
     }
     

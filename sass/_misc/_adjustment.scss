@@ -52,24 +52,24 @@ body{
 
 // Прижать футер к низу
 
-// html, body{
-// 	height: 100%;
-// }
-// .main{
-// 	display: flex;
-// 	flex-direction: column;
-// 	height: 100%;
-// 	.header{
-// 		flex: 0 0 auto;
-// 	}
-// 	.main-content{
-// 		flex: 1 1 auto;
-// 	}
-// 	.footer{
-// 		flex: 0 0 auto;
-// 		// margin-top: auto;
-// 	}
-// }
+html, body{
+	height: 100%;
+}
+.main{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	.header{
+		flex: 0 0 auto;
+	}
+	.main-content{
+		flex: 1 1 auto;
+	}
+	.footer{
+		flex: 0 0 auto;
+		// margin-top: auto;
+	}
+}
 
 // END Прижать футер к низу
 
@@ -267,6 +267,7 @@ padding-bottom: 52.25%;
 // @import "_misc/multilevel-dropdown.scss";
 /*--------------------END adjustment----------------------*/ 
 .wrapper.rating{
+	font-family: $navbl;
 	// rating на странице написания отзва от товаре
 	.simple-rating{
 		@include simple-rating(rgba($text, .2), $yellow, 35px, 25px, '\e901');
