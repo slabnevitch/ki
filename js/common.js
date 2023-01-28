@@ -84,6 +84,21 @@
 		var targ = e.target;
 
 		// location panel toggle
+			if(targ.classList.contains('loc-header__selected') || targ.closest('.loc-header__selected') !== null || targ.classList.contains('loc-header__panel') || targ.closest('.loc-header__panel')){
+				document.getElementById('header-location')
+					.classList.add('opened');
+				}else{
+				document.getElementById('header-location').classList.remove('opened');
+			}
+			if(targ.getAttribute('id') == 'city-list-opener'){
+				document.querySelector('.header').classList.add('cities-opened');
+				document.querySelector('.header__loc').classList.remove('opened');
+			}else{
+				document.querySelector('.header').classList.remove('cities-opened');
+			}
+			if(targ.getAttribute('id') == '#location-search-closer'){
+				document.querySelector('.header').classList.remove('cities-opened');			
+			}
 		// END location panel toggle
 	});
 
