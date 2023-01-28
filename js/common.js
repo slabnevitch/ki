@@ -114,24 +114,24 @@
 
 			});
 		}
-		console.log(Viewer)
-		const gallery = new Viewer(document.getElementById('gallery'), {
-			title: false,
-			toolbar: {
-			    prev: 4,
-			    next: 4
-			},
-			// fullscreen: false,
-			movable: false,
-			rotatable: false,
-			 filter(image) {
-			 	console.log(image.parentElement.parentElement.classList.contains('tns-slide-cloned'));
-			    // return !image.parentElement.parentElement.classList.contains('swiper-slide-duplicate');//для свайпера
-			    return !image.parentElement.parentElement.classList.contains('tns-slide-cloned');
-			    // return image.complete;
-			  },
+		// console.log(Viewer)
+		// const gallery = new Viewer(document.getElementById('gallery'), {
+		// 	title: false,
+		// 	toolbar: {
+		// 	    prev: 4,
+		// 	    next: 4
+		// 	},
+		// 	// fullscreen: false,
+		// 	movable: false,
+		// 	rotatable: false,
+		// 	 filter(image) {
+		// 	 	console.log(image.parentElement.parentElement.classList.contains('tns-slide-cloned'));
+		// 	    // return !image.parentElement.parentElement.classList.contains('swiper-slide-duplicate');//для свайпера
+		// 	    return !image.parentElement.parentElement.classList.contains('tns-slide-cloned');
+		// 	    // return image.complete;
+		// 	  },
 
-		});
+		// });
 
 		
 	});
