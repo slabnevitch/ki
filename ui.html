@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Главная страница</title>
+    <meta name="description" content="">
+    <link rel="icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <main class="main">
+      <header class="header">
+        <div class="header__top">
+          <div class="wrapper">
+            <div class="header__top-inner"><a href="#" class="header__logo">
+                <picture>
+                  <source srcset="img/ki_logo.svg" media="(max-width: 940px)"><img src="img/logo.svg" alt="alt">
+                </picture></a>
+              <div class="header__loc loc-header">
+                <button class="loc-header__selected">Краснодар</button>
+                <div class="loc-header__pandel">
+                  <div class="loc-header__city">Ваш город<a href="#" class="loc-header__city-value">Краснодар</a></div>
+                  <div class="loc-header__city-buttons">
+                    <button class="loc-header__no">Нет</button>
+                    <button class="loc-header__yes">Да</button>
+                  </div>
+                </div>
+              </div><a href="tel:88002502123" class="header__phone phone-header">8 800 250-21-23</a>
+              <div class="header__menu menu-header">
+                <button class="toggle-mnu"><span></span></button>
+                <nav class="menu-header__body">
+                  <ul class="menu-header__list">
+                    <li class="menu-header__item"><a href="#" class="menu-header__link">Подарочные карты</a></li>
+                    <li class="menu-header__item"><a href="#" class="menu-header__link">Юр. лицам</a></li>
+                    <li class="menu-header__item"><a href="#" class="menu-header__link">Магазины</a></li>
+                    <li data-single-dropdown class="menu-header__item"><a href="#" class="menu-header__link">Покупателям</a>
+                      <button type="button" class="menu-header__arrow"></button>
+                      <ul class="single-dropdown">
+                        <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Подарочные карты</a></li>
+                        <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Сотрудничество</a></li>
+                        <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Магазины</a></li>
+                        <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Доставка</a></li>
+                        <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Оплата</a></li>
+                        <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Сервис</a></li>
+                        <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Возврат и гарантия</a></li>
+                      </ul>
+                    </li>
+                    <li data-single-dropdown class="menu-header__item"><a href="#" class="menu-header__link">О компании</a>
+                      <button type="button" class="menu-header__arrow"></button>
+                      <ul class="single-dropdown">
+                        <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Подарочные карты</a></li>
+                        <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Сотрудничество</a></li>
+                        <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Магазины</a></li>
+                        <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Доставка</a></li>
+                        <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Оплата</a></li>
+                        <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Сервис</a></li>
+                        <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Возврат и гарантия</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main-content">
+        <div class="wrapper-smart">
+          <div class="wrapper-flex">
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+            <div class="column">Коллеги, еще раз добрый день!</div>
+          </div>
+          <form action="#" class="form">
+            <div class="form__row">
+              <div class="form__row-title">Покупатель*</div>
+              <label class="form__label">
+                <input type="text" name="name" placeholder="Фамилия*" class="form__input">
+              </label>
+              <label class="form__label">
+                <input type="text" name="phone" placeholder="Имя*" class="form__input form__input--bg">
+              </label>
+              <label class="form__label">
+                <input type="text" name="phone" placeholder="Отчество*" class="form__input">
+              </label>
+              <label class="form__label form__label--error">
+                <input type="text" name="phone" placeholder="Отчество*" value="Ива8нович55" class="form__input form__input--bg">
+              </label>
+              <label class="form__label">
+                <!-- textarea.form__area(type='text' name='question')-->
+                <input type="text" name="email" placeholder="Email*" class="form__input">
+              </label>
+              <label class="form__label">
+                <textarea type="text" name="question" placeholder="Ваши впечатления" class="form__area"></textarea>
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title">Оплата*</div>
+              <div class="form__row-content">
+                <div class="form__custom-policy">
+                  <label class="form__custom">
+                    <input type="checkbox" name="checkbox" value="chekbox1" checked required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Оплата картой на сайте</span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <label class="form__custom">
+                    <input type="checkbox" name="checkbox" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">СберСпасибо - оплата на сайте</span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <label class="form__custom">
+                    <input type="checkbox" name="checkbox" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Оплата при получении</span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <label class="form__custom">
+                    <input type="checkbox" name="checkbox" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Выставить счет для предоплаты безналичным платежом</span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <label class="form__custom">
+                    <input type="checkbox" name="checkbox" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Оплата СБП (сервис быстрых платежей)</span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <label class="form__custom">
+                    <input type="checkbox" name="checkbox" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">В кредит</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-fw">Получить консультацию</button>
+          </form>
+        </div>
+        <div class="wrapper">
+          <div class="btn">Suka</div>
+          <div class="btn btn-empty">Padla</div>
+          <div class="btn btn-gray btn-sm">Padla</div>
+          <div class="btn btn-red">Pisdiyk</div>
+          <div class="btn btn-yellow">Pisdiyk</div>Коллеги, еще раз добрый день!В групп добавился Максим он будет верстать наш проект.Максим здесь у нас два специалиста, которые помогут мне отвечать на все ваши вопросы:1) Анастасия дизайнер проект @asya_avilova 2) Максим наш разработчик @mbhdm 
+          <div class="billet billet--new">pizda</div>
+        </div>
+        <div class="wrapper rating">
+          <h2>Rating in reviews</h2>
+              <div class="simple-rating">
+                <input id="inp5" type="radio" name="rating" value="5">
+                <label for="inp5"></label>
+                <input id="inp4" type="radio" name="rating" value="4">
+                <label for="inp4"></label>
+                <input id="inp3" type="radio" checked name="rating" value="3">
+                <label for="inp3"></label>
+                <input id="inp2" type="radio" name="rating" value="2">
+                <label for="inp2"></label>
+                <input id="inp1" type="radio" name="rating" value="1">
+                <label for="inp1"></label>
+              </div>
+          <h2>Rating in product card</h2>
+              <div class="crystal-rating">
+                <div class="crystal-rating__body">
+                  <div class="crystal-rating__active"></div>
+                  <div class="crystal-rating__items">
+                    <input value="1" type="radio" name="crystal">
+                    <input value="2" type="radio" name="crystal">
+                    <input value="3" type="radio" name="crystal">
+                    <input value="4" type="radio" name="crystal">
+                    <input value="5" type="radio" name="crystal">
+                  </div>
+                </div>
+                <div class="crystal-rating__value">4.5</div>
+              </div>
+              <div class="crystal-rating">
+                <div class="crystal-rating__body">
+                  <div class="crystal-rating__active"></div>
+                  <div class="crystal-rating__items">
+                    <input value="1" type="radio" name="crystal">
+                    <input value="2" type="radio" name="crystal">
+                    <input value="3" type="radio" name="crystal">
+                    <input value="4" type="radio" name="crystal">
+                    <input value="5" type="radio" name="crystal">
+                  </div>
+                </div>
+                <div class="crystal-rating__value">1,5</div>
+              </div>
+              <div class="crystal-rating">
+                <div class="crystal-rating__body">
+                  <div class="crystal-rating__active"></div>
+                  <div class="crystal-rating__items">
+                    <input value="1" type="radio" name="crystal">
+                    <input value="2" type="radio" name="crystal">
+                    <input value="3" type="radio" name="crystal">
+                    <input value="4" type="radio" name="crystal">
+                    <input value="5" type="radio" name="crystal">
+                  </div>
+                </div>
+                <div class="crystal-rating__value">5</div>
+              </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <h1>Footer</h1>
+      </footer>
+    </main>
+    <script src="js/libs/service-functions/remove-class.js"></script>
+    <script src="js/libs/service-functions/siblings.js"></script>
+    <script src="js/libs/service-functions/mobileDetect.js"></script>
+    <script src="js/libs/service-functions/dropdown-toggle.js"></script>
+    
+    
+    
+    <script src="js/libs/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="js/libs/viewerjs/viewer.js"></script>
+    <script src="js/libs/rating/ratings.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

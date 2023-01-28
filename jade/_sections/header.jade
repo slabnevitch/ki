@@ -1,47 +1,47 @@
 header.header
 	.header__top
 		.wrapper
-			a(href="#").header__logo
-				picture
-					source(srcset='img/ki_logo.svg' media='(max-width: 940px)')
-					img(src='img/logo.svg' alt='alt')
+			.header__top-inner
+				a(href="#").header__logo
+					picture
+						source(srcset='img/ki_logo.svg' media='(max-width: 940px)')
+						img(src='img/logo.svg' alt='alt')
 
-			.header__loc.loc-header
-			a(href="tel:88002502123").header__phone.phone-header 8 800 250-21-23
+				.header__loc.loc-header
+					button.loc-header__selected Краснодар
+					.loc-header__pandel
+						.loc-header__city Ваш город
+							a(href="#").loc-header__city-value Краснодар
+						.loc-header__city-buttons
+							button.loc-header__no Нет
+							button.loc-header__yes Да
+				
+				a(href="tel:88002502123").header__phone.phone-header 8 800 250-21-23
 
-			
-			.header__menu.menu-header
-				button.toggle-mnu
-					span
-				nav.menu-header__body
-					ul.menu-header__list
-						li.menu-header__item
-							a(href="#").menu-header__link Подарочные карты
-						li.menu-header__item
-							a(href="#").menu-header__link Юр. лицам
-						li.menu-header__item
-							a(href="#").menu-header__link Магазины
-						li.menu-header__item(data-single-dropdown)
-							a(href="#").menu-header__link Покупателям
-							button.menu__arrow(type='button') >
-							ul.single-dropdown
-								li.single-dropdown__item
-									a.single-dropdown__link(href='#') Product №1
-								li.single-dropdown__item
-									a.single-dropdown__link(href='#') Product №2
-								li.single-dropdown__item
-									a.single-dropdown__link(href='#') Product №3
-								li.single-dropdown__item
-									a.single-dropdown__link(href='#') Product №4
-						li.menu-header__item(data-single-dropdown)
-							a(href="#").menu-header__link Покупателям
-							button.menu__arrow(type='button') >
-							ul.single-dropdown
-								li.single-dropdown__item
-									a.single-dropdown__link(href='#') Product №1
-								li.single-dropdown__item
-									a.single-dropdown__link(href='#') Product №2
-								li.single-dropdown__item
-									a.single-dropdown__link(href='#') Product №3
-								li.single-dropdown__item
-									a.single-dropdown__link(href='#') Product №4
+				
+				.header__menu.menu-header
+					button.toggle-mnu
+						span
+					nav.menu-header__body
+						ul.menu-header__list
+							li.menu-header__item
+								a(href="#").menu-header__link Подарочные карты
+							li.menu-header__item
+								a(href="#").menu-header__link Юр. лицам
+							li.menu-header__item
+								a(href="#").menu-header__link Магазины
+							li.menu-header__item(data-single-dropdown)
+								a(href="#").menu-header__link Покупателям
+								button.menu-header__arrow(type='button')
+								ul.single-dropdown
+									- var list2 = ['Подарочные карты','Сотрудничество', 'Магазины', 'Доставка', 'Оплата', 'Сервис', 'Возврат и гарантия'];
+									each li in list2
+										li.single-dropdown__item
+											a.single-dropdown__link(href='#')= li
+							li.menu-header__item(data-single-dropdown)
+								a(href="#").menu-header__link О компании
+								button.menu-header__arrow(type='button')
+								ul.single-dropdown
+									each li in list2
+										li.single-dropdown__item
+											a.single-dropdown__link(href='#')= li
