@@ -84,20 +84,22 @@
 		var targ = e.target;
 
 		// location panel toggle
-			if(targ.classList.contains('loc-header__selected') || targ.closest('.loc-header__selected') !== null || targ.classList.contains('loc-header__panel') || targ.closest('.loc-header__panel')){
-				document.getElementById('header-location')
-					.classList.add('opened');
-				}else{
-				document.getElementById('header-location').classList.remove('opened');
-			}
-			if(targ.getAttribute('id') == 'city-list-opener'){
-				document.querySelector('.header').classList.add('cities-opened');
-				document.querySelector('.header__loc').classList.remove('opened');
-			}else if(targ.closest('.header__city-list') === null){
-				document.querySelector('.header').classList.remove('cities-opened');
-			}
-			if(targ.getAttribute('id') == 'location-search-closer' || targ.closest('#location-search-closer') !== null){
-				document.querySelector('.header').classList.remove('cities-opened');			
+			if(document.querySelector('.header') !== null){
+				if(targ.classList.contains('loc-header__selected') || targ.closest('.loc-header__selected') !== null || targ.classList.contains('loc-header__panel') || targ.closest('.loc-header__panel')){
+					document.getElementById('header-location')
+						.classList.add('opened');
+					}else{
+					document.getElementById('header-location').classList.remove('opened');
+				}
+				if(targ.getAttribute('id') == 'city-list-opener'){
+					document.querySelector('.header').classList.add('cities-opened');
+					document.querySelector('.header__loc').classList.remove('opened');
+				}else if(targ.closest('.header__city-list') === null){
+					document.querySelector('.header').classList.remove('cities-opened');
+				}
+				if(targ.getAttribute('id') == 'location-search-closer' || targ.closest('#location-search-closer') !== null){
+					document.querySelector('.header').classList.remove('cities-opened');			
+				}
 			}
 		// END location panel toggle
 	});
@@ -106,19 +108,21 @@
 		console.log('DOMContentLoaded!');
 
 		// header fixed on doc. scroll
-			var headerElem = document.querySelector('.header'),
-			observerCallback = function(entries, observer) {
-				console.log(entries);
-				if(entries[0].isIntersecting){
-					headerElem.classList.remove('_scroll');
-				}else{
-					headerElem.classList.add('_scroll');
-				}
-			};
+			if(document.querySelector('.header') !== null){
+				var headerElem = document.querySelector('.header'),
+				observerCallback = function(entries, observer) {
+					console.log(entries);
+					if(entries[0].isIntersecting){
+						headerElem.classList.remove('_scroll');
+					}else{
+						headerElem.classList.add('_scroll');
+					}
+				};
+				var headerObserver = new IntersectionObserver(observerCallback);
+				headerObserver.observe(headerElem);			
+			}
 		// END header fixed on doc. scroll
 
-		var headerObserver = new IntersectionObserver(observerCallback);
-		headerObserver.observe(headerElem);
 		
 
 		// usage: http://ganlanyuan.github.io/tiny-slider/#usage

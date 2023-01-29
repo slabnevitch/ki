@@ -157,6 +157,7 @@
 		}
 }
 .header__bottom {
+	padding-bottom: 16px;
 	transition: all 0.3s;
 	background-color: #fff;
 	._scroll &{
@@ -166,6 +167,7 @@
 		width: 100%;
 		padding-top: 20px;
 		padding-bottom: 20px;
+		z-index: 10;
 	}
 
 }

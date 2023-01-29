@@ -91,7 +91,7 @@
   }
    
 }
-// шильдие на товар
+// шильдиk на товар
 .billet{
 	height: 24px;
 	display: inline-block;
@@ -112,5 +112,59 @@
 	&--action{
 		background-color: $red;
 	}
+}
+.socials{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.socials__item{
+  list-style-type: none;
+    margin-bottom: 10px;
+
+
+  &:not(:last-child){
+    margin-right: 13px;
+  }
+}
+.socials__link{
+  position: relative;
+  display: block;
+  width: 33.94px;
+  height: 33.94px;
+  color: #fff;
+  background-color: $yellow;
+  border-radius: 4px;
+  
+  .icon{
+    @include absolute-center;
+    font-size: 11.88px;
+  }
+
+  &--soc-twi{
+    .icon{
+      font-size: 13.24px;
+    }  
+  }
+  &--soc-youtb{
+    .icon{
+      font-size: 12.73px;
+    }  
+  }
+  &--soc-ok{
+    .icon{
+      font-size: 19.02px;
+    }  
+  }
+  &--soc-tg{
+    .icon{
+      font-size: 14.42px;
+    }  
+  }
+  &--soc-pint{
+    .icon{
+      font-size: 18.51px;
+    }  
+  }
 }
 /*--------------------END ui----------------------*/ 

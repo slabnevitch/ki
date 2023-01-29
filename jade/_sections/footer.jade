@@ -9,41 +9,40 @@ footer.footer
 						.subscribe-footer__formblock
 							input(autocomplete="off" type="text" name="" class="form__input" placeholder="E-mail")
 							p.subscribe-footer__caption Нажимая кнопку "Подписаться" я соглашаюсь с политикой конфиденциальности #[a(href="#") политикой конфиденциальности]
-						button.btn(type="submit") ПОДПИСАТЬСЯ
+						
+						.subscribe-footer__submit
+							button.btn(type="submit" data-da="subscribe-footer__formblock,576,1") ПОДПИСАТЬСЯ
 	.footer__bottom
 		.wrapper-smart
 			.wrapper-flex
 				.footer__col
-					ul.accordion.footer__accordion.accordion-footer(data-accordion data-breakpoint="")
-						// "data-accordion" добавляет поведение акордеона, т.е. при разворачивании одного эл-та. все остальные эл-ты. сворачиваются
-						// data-breakpoint="767.98" ширина экрана, меньше которой включается поведение аккордеона 
+					ul.accordion.footer__accordion.accordion-footer(data-breakpoint="480")
 						li.accordion__item.accordion-footer__item
 							.accordion__link.accordion-footer__link Покупателям
-							.accordion__content
+								.accordion-footer__arrow ^
+							.accordion__content.hidden
 								- var footerList1 = ['Подарочные карты','Сотрудничество', 'Магазины', 'Доставка', 'Оплата', 'Сервис', 'Возврат и гарантия'];
 								ul.footer__menu.menu-footer
 									each li in footerList1
 										li.menu-footer__item
 											a(href="#").menu-footer__link= li
 				.footer__col
-					ul.accordion.footer__accordion.accordion-footer(data-accordion data-breakpoint="")
-						// "data-accordion" добавляет поведение акордеона, т.е. при разворачивании одного эл-та. все остальные эл-ты. сворачиваются
-						// data-breakpoint="767.98" ширина экрана, меньше которой включается поведение аккордеона 
+					ul.accordion.footer__accordion.accordion-footer(data-breakpoint="480")
 						li.accordion__item.accordion-footer__item
 							.accordion__link.accordion-footer__link О компании
-							.accordion__content
+								.accordion-footer__arrow ^
+							.accordion__content.hidden
 								- var footerList2 = ['О нас','Новости','Вакансии','Сертификаты','Наши партнеры','Арендодателям','Контакты'];
 								ul.footer__menu.menu-footer
 									each li in footerList2
 										li.menu-footer__item
 											a(href="#").menu-footer__link= li
-				.footer__col
-					ul.accordion.footer__accordion.accordion-footer(data-accordion data-breakpoint="")
-						// "data-accordion" добавляет поведение акордеона, т.е. при разворачивании одного эл-та. все остальные эл-ты. сворачиваются
-						// data-breakpoint="767.98" ширина экрана, меньше которой включается поведение аккордеона 
+				.footer__col.footer-rules
+					ul.accordion.footer__accordion.accordion-footer(data-breakpoint="480")
 						li.accordion__item.accordion-footer__item
 							.accordion__link.accordion-footer__link Правовая информация
-							.accordion__content
+								.accordion-footer__arrow ^
+							.accordion__content.hidden
 								- var footerList3 = ['Публичная оферта','Политика конфиденциальности'];
 								ul.footer__menu.menu-footer
 									each li in footerList3
@@ -60,21 +59,25 @@ footer.footer
 							a(href="tel:88612128214").footer-contacts__phone 8 861 212-82-14
 						.footer-contacts__caption Пн-Пт 7:00-21:00
 						.footer-contacts__caption Сб-Вс 9:00-18:00
-
-					.footer-contacts__block
+						
+						- var socs = ['soc-vk', 'soc-pint', 'soc-ok', 'soc-tg', 'soc-youtb'];
 						ul.socials
-							li.socials__item
-								a(href="#").socials__link
+							each soc in socs
+								li.socials__item
+									a(href="#" class="socials__link socials__link--" + soc)
+										+icon(soc)
 
-					.footer-contacts__block
-						.footer__ya
-							img(src="img/yandex.png" alt="alt")
+					.footer__ya
+						img(src="img/market-logo_v.svg" alt="alt")
 
-					.footer-contacts__block
-						.footer__cards
-							img(src="img/cards.png" alt="alt")
+					.footer__pays
+						- for (var i=0; i < 5; i++)
+							.footer__pay
+								img(src="img/payments-logos/"+(i+1)+".svg" alt="alt")
 
 				.footer__col.footer-policy
-					| Вы соглашаетесь с #[a(href="#") политикой конфиденциальности], оставляя свои персональные данные на сайте kubaninstrument.ru.
+					.footer-policy__wrap
+						| Вы соглашаетесь с #[a(href="#") политикой конфиденциальности], оставляя свои персональные данные на сайте kubaninstrument.ru.
 
-				.footer__col.footer-copyright ©2008-2022. кубань инструмент
+				.footer__col.footer-copyright ©2008-2022. Кубань инструмент
+
