@@ -93,10 +93,10 @@
 			if(targ.getAttribute('id') == 'city-list-opener'){
 				document.querySelector('.header').classList.add('cities-opened');
 				document.querySelector('.header__loc').classList.remove('opened');
-			}else{
+			}else if(targ.closest('.header__city-list') === null){
 				document.querySelector('.header').classList.remove('cities-opened');
 			}
-			if(targ.getAttribute('id') == '#location-search-closer'){
+			if(targ.getAttribute('id') == 'location-search-closer' || targ.closest('#location-search-closer') !== null){
 				document.querySelector('.header').classList.remove('cities-opened');			
 			}
 		// END location panel toggle
@@ -104,6 +104,23 @@
 
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
+
+		// header fixed on doc. scroll
+			var headerElem = document.querySelector('.header'),
+			observerCallback = function(entries, observer) {
+				console.log(entries);
+				if(entries[0].isIntersecting){
+					headerElem.classList.remove('_scroll');
+				}else{
+					headerElem.classList.add('_scroll');
+				}
+			};
+		// END header fixed on doc. scroll
+
+		var headerObserver = new IntersectionObserver(observerCallback);
+		headerObserver.observe(headerElem);
+		
+
 		// usage: http://ganlanyuan.github.io/tiny-slider/#usage
 		if(document.querySelector('.my-slider') !== null){
 			var slider = tns({

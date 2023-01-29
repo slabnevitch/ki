@@ -67,7 +67,7 @@
         </div>
         <div class="header__bottom">
           <div class="wrapper-smart">
-            <div class="wrapper-flex">
+            <div class="wrapper-flex"><a href="#" class="header__logo-fixed"><img src="img/logo-fixed.svg" alt="alt"></a>
               <button class="header__catalog-toggle catalog-toggle-header">
                 <div class="catalog-toggle__name">Каталог</div>
               </button>
@@ -114,9 +114,111 @@
         <div class="wrapper-smart">
           <div class="wrapper-flex"></div>
         </div>
+        <section></section>
+        <section></section>
+        <section></section>
       </div>
       <footer class="footer">
-        <h1>Footer</h1>
+        <div class="footer__top">
+          <div class="wrapper-smart footer__top-line">
+            <form action="#" class="wrapper-flex form subscribe-footer__form">
+              <div class="subscribe-footer__slogan">
+                <div class="subscribe-footer__title">ПОДПИСЫВАЙСЯ</div>
+                <div class="subscribe-footer__text">Узнавай о скидках первым</div>
+              </div>
+              <div class="subscribe-footer__formblock">
+                <input autocomplete="off" type="text" name="" placeholder="E-mail" class="form__input">
+                <p class="subscribe-footer__caption">Нажимая кнопку "Подписаться" я соглашаюсь с политикой конфиденциальности <a href="#">политикой конфиденциальности</a></p>
+              </div>
+              <button type="submit" class="btn">ПОДПИСАТЬСЯ</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="wrapper-smart">
+            <div class="wrapper-flex">
+              <div class="footer__col">
+                <ul data-accordion data-breakpoint="" class="accordion footer__accordion accordion-footer">
+                  <!-- "data-accordion" добавляет поведение акордеона, т.е. при разворачивании одного эл-та. все остальные эл-ты. сворачиваются-->
+                  <!-- data-breakpoint="767.98" ширина экрана, меньше которой включается поведение аккордеона -->
+                  <li class="accordion__item accordion-footer__item">
+                    <div class="accordion__link accordion-footer__link">Покупателям</div>
+                    <div class="accordion__content">
+                      <ul class="footer__menu menu-footer">
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">Подарочные карты</a></li>
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">Сотрудничество</a></li>
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">Магазины</a></li>
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">Доставка</a></li>
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">Оплата</a></li>
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">Сервис</a></li>
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">Возврат и гарантия</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__col">
+                <ul data-accordion data-breakpoint="" class="accordion footer__accordion accordion-footer">
+                  <!-- "data-accordion" добавляет поведение акордеона, т.е. при разворачивании одного эл-та. все остальные эл-ты. сворачиваются-->
+                  <!-- data-breakpoint="767.98" ширина экрана, меньше которой включается поведение аккордеона -->
+                  <li class="accordion__item accordion-footer__item">
+                    <div class="accordion__link accordion-footer__link">О компании</div>
+                    <div class="accordion__content">
+                      <ul class="footer__menu menu-footer">
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">О нас</a></li>
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">Новости</a></li>
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">Вакансии</a></li>
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">Сертификаты</a></li>
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">Наши партнеры</a></li>
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">Арендодателям</a></li>
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">Контакты</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__col">
+                <ul data-accordion data-breakpoint="" class="accordion footer__accordion accordion-footer">
+                  <!-- "data-accordion" добавляет поведение акордеона, т.е. при разворачивании одного эл-та. все остальные эл-ты. сворачиваются-->
+                  <!-- data-breakpoint="767.98" ширина экрана, меньше которой включается поведение аккордеона -->
+                  <li class="accordion__item accordion-footer__item">
+                    <div class="accordion__link accordion-footer__link">Правовая информация</div>
+                    <div class="accordion__content">
+                      <ul class="footer__menu menu-footer">
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">Публичная оферта</a></li>
+                        <li class="menu-footer__item"><a href="#" class="menu-footer__link">Политика конфиденциальности</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__col footer-contacts">
+                <div class="footer-contacts__block">
+                  <div class="footer-contacts__row"><a href="tel:88002502123" class="footer-contacts__phone">8 800 250-21-23</a></div>
+                  <div class="footer-contacts__caption">Бесплатно по РФ</div>
+                </div>
+                <div class="footer-contacts__block">
+                  <div class="footer-contacts__row"><a href="tel:88612128214" class="footer-contacts__phone">8 861 212-82-14</a></div>
+                  <div class="footer-contacts__caption">Пн-Пт 7:00-21:00</div>
+                  <div class="footer-contacts__caption">Сб-Вс 9:00-18:00</div>
+                </div>
+                <div class="footer-contacts__block">
+                  <ul class="socials">
+                    <li class="socials__item"><a href="#" class="socials__link"></a></li>
+                  </ul>
+                </div>
+                <div class="footer-contacts__block">
+                  <div class="footer__ya"><img src="img/yandex.png" alt="alt"></div>
+                </div>
+                <div class="footer-contacts__block">
+                  <div class="footer__cards"><img src="img/cards.png" alt="alt"></div>
+                </div>
+              </div>
+              <div class="footer__col footer-policy">Вы соглашаетесь с <a href="#">политикой конфиденциальности</a>, оставляя свои персональные данные на сайте kubaninstrument.ru.</div>
+              <div class="footer__col footer-copyright">©2008-2022. кубань инструмент</div>
+            </div>
+          </div>
+        </div>
       </footer>
     </main>
     <script src="js/libs/service-functions/remove-class.js"></script>

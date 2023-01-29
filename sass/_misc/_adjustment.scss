@@ -5,6 +5,7 @@
 html, body{
 	margin: 0;
 	padding: 0;
+	height: 100%;
 }
 body{
 	font-family: $inter;
@@ -24,7 +25,10 @@ body{
 	}
 }
 
-
+section{
+	height: 100%;
+	background: gray;
+}
 // компенсация ширины скроллбара при появлении ванильных поапов
 // все содержимое страницы оборачивается в #wrapper-for-scroll-fix
 // использовать совместно с libs-vanilla/service-functions/scrollWidth.js 

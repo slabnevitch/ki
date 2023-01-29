@@ -1,2 +1,80 @@
 footer.footer
-	h1 Footer
+	.footer__top
+		.wrapper-smart.footer__top-line
+			form(action="#").wrapper-flex.form.subscribe-footer__form
+						.subscribe-footer__slogan
+							.subscribe-footer__title ПОДПИСЫВАЙСЯ
+							.subscribe-footer__text Узнавай о скидках первым
+						
+						.subscribe-footer__formblock
+							input(autocomplete="off" type="text" name="" class="form__input" placeholder="E-mail")
+							p.subscribe-footer__caption Нажимая кнопку "Подписаться" я соглашаюсь с политикой конфиденциальности #[a(href="#") политикой конфиденциальности]
+						button.btn(type="submit") ПОДПИСАТЬСЯ
+	.footer__bottom
+		.wrapper-smart
+			.wrapper-flex
+				.footer__col
+					ul.accordion.footer__accordion.accordion-footer(data-accordion data-breakpoint="")
+						// "data-accordion" добавляет поведение акордеона, т.е. при разворачивании одного эл-та. все остальные эл-ты. сворачиваются
+						// data-breakpoint="767.98" ширина экрана, меньше которой включается поведение аккордеона 
+						li.accordion__item.accordion-footer__item
+							.accordion__link.accordion-footer__link Покупателям
+							.accordion__content
+								- var footerList1 = ['Подарочные карты','Сотрудничество', 'Магазины', 'Доставка', 'Оплата', 'Сервис', 'Возврат и гарантия'];
+								ul.footer__menu.menu-footer
+									each li in footerList1
+										li.menu-footer__item
+											a(href="#").menu-footer__link= li
+				.footer__col
+					ul.accordion.footer__accordion.accordion-footer(data-accordion data-breakpoint="")
+						// "data-accordion" добавляет поведение акордеона, т.е. при разворачивании одного эл-та. все остальные эл-ты. сворачиваются
+						// data-breakpoint="767.98" ширина экрана, меньше которой включается поведение аккордеона 
+						li.accordion__item.accordion-footer__item
+							.accordion__link.accordion-footer__link О компании
+							.accordion__content
+								- var footerList2 = ['О нас','Новости','Вакансии','Сертификаты','Наши партнеры','Арендодателям','Контакты'];
+								ul.footer__menu.menu-footer
+									each li in footerList2
+										li.menu-footer__item
+											a(href="#").menu-footer__link= li
+				.footer__col
+					ul.accordion.footer__accordion.accordion-footer(data-accordion data-breakpoint="")
+						// "data-accordion" добавляет поведение акордеона, т.е. при разворачивании одного эл-та. все остальные эл-ты. сворачиваются
+						// data-breakpoint="767.98" ширина экрана, меньше которой включается поведение аккордеона 
+						li.accordion__item.accordion-footer__item
+							.accordion__link.accordion-footer__link Правовая информация
+							.accordion__content
+								- var footerList3 = ['Публичная оферта','Политика конфиденциальности'];
+								ul.footer__menu.menu-footer
+									each li in footerList3
+										li.menu-footer__item
+											a(href="#").menu-footer__link= li
+				.footer__col.footer-contacts
+					.footer-contacts__block
+						.footer-contacts__row
+							a(href="tel:88002502123").footer-contacts__phone 8 800 250-21-23
+						.footer-contacts__caption Бесплатно по РФ
+
+					.footer-contacts__block
+						.footer-contacts__row
+							a(href="tel:88612128214").footer-contacts__phone 8 861 212-82-14
+						.footer-contacts__caption Пн-Пт 7:00-21:00
+						.footer-contacts__caption Сб-Вс 9:00-18:00
+
+					.footer-contacts__block
+						ul.socials
+							li.socials__item
+								a(href="#").socials__link
+
+					.footer-contacts__block
+						.footer__ya
+							img(src="img/yandex.png" alt="alt")
+
+					.footer-contacts__block
+						.footer__cards
+							img(src="img/cards.png" alt="alt")
+
+				.footer__col.footer-policy
+					| Вы соглашаетесь с #[a(href="#") политикой конфиденциальности], оставляя свои персональные данные на сайте kubaninstrument.ru.
+
+				.footer__col.footer-copyright ©2008-2022. кубань инструмент

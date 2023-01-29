@@ -157,10 +157,40 @@
 		}
 }
 .header__bottom {
+	transition: all 0.3s;
+	background-color: #fff;
+	._scroll &{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 
 }
 .wrapper-smart {}
 .wrapper-flex {}
+.header__logo-fixed{
+	display: block;
+	opacity: 0;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	transition: all .3s;
+	img{
+		display: block;
+		max-width: 100%;
+	}
+
+	._scroll &{
+		margin-right: 40px;
+		width: 40px;
+		height: 40px;
+		opacity: 1;
+		visibility: visible;
+	}
+}
 .header__catalog-toggle {
 	@include but-null;
 	display: flex;
