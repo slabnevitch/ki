@@ -7,21 +7,22 @@ header.header
 						source(srcset='img/ki_logo.svg' media='(max-width: 940px)')
 						img(src='img/logo.svg' alt='alt')
 
-				.header__loc.loc-header#header-location
-					button.loc-header__selected
-						| Краснодар
-						+icon('loc')
-						+icon('chev-down')
-					.loc-header__panel
-						.loc-header__city Ваш город
-							a(href="#").loc-header__city-value Краснодар
-						.loc-header__city-buttons
-							button#city-list-opener.loc-header__no Нет
-							button.loc-header__yes Да
-				
-				a(href="tel:88002502123").header__phone.phone-header
-					+icon('phone')
-					span.phone-header__val 8 800 250-21-23
+				.header__contacts
+					.header__loc.loc-header#header-location
+						button.loc-header__selected
+							| Краснодар
+							+icon('chev-down')
+							+icon('loc')
+						.loc-header__panel
+							.loc-header__city Ваш город
+								a(href="#").loc-header__city-value Краснодар
+							.loc-header__city-buttons
+								button#city-list-opener.loc-header__no Нет
+								button.loc-header__yes Да
+					
+					a(href="tel:88002502123").header__phone.phone-header
+						+icon('phone')
+						span.phone-header__val 8 800 250-21-23
 
 				
 				.header__menu.menu-header
@@ -55,11 +56,11 @@ header.header
 											a.single-dropdown__link(href='#')= li
 
 	.header__bottom
-		.wrapper-smart
-			.wrapper-flex
+		.wrapper
+			.header__bottom-wrapper
 				a(href="#").header__logo-fixed
 					img(src="img/logo-fixed.svg" alt="alt")
-				button.header__catalog-toggle.catalog-toggle-header
+				button.header__catalog-toggle.catalog-toggle-header#catalog-switcher
 					.catalog-toggle__burger
 						+icon('ctlg-burger')
 						+icon('ctlg-close')
@@ -74,12 +75,15 @@ header.header
 						+icon('user')
 
 				.header__actions
-					a(href="#").header__action.header__favourites
-						+icon('favourites')
-					a(href="#").header__action.header__compare
+					a(href="#").header__action.header__compare.active
 						+icon('compare')
+						.header__action-count 2
+					a(href="#").header__action.header__favourites.active
+						+icon('favourites')
+						.header__action-count 10
 					a(href="#").header__action.header__basket
 						+icon('basket')
+						.header__action-count 10
 
 	.header__city-list.location-search
 		.wrapper.location-search__wrapper

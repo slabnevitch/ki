@@ -102,6 +102,12 @@
 				}
 			}
 		// END location panel toggle
+		// header catalog toggle
+			if(targ.getAttribute('id') === 'catalog-switcher' || targ.closest('#catalog-switcher') !== null){
+				document.querySelector('.header').classList.toggle('header-catalog-opened');
+			}
+			
+		// END header catalog toggle
 	});
 
 	document.addEventListener('DOMContentLoaded', function() {
