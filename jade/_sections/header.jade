@@ -8,7 +8,10 @@ header.header
 						img(src='img/logo.svg' alt='alt')
 
 				.header__loc.loc-header#header-location
-					button.loc-header__selected Краснодар
+					button.loc-header__selected
+						| Краснодар
+						+icon('loc')
+						+icon('chev-down')
 					.loc-header__panel
 						.loc-header__city Ваш город
 							a(href="#").loc-header__city-value Краснодар
@@ -16,7 +19,9 @@ header.header
 							button#city-list-opener.loc-header__no Нет
 							button.loc-header__yes Да
 				
-				a(href="tel:88002502123").header__phone.phone-header 8 800 250-21-23
+				a(href="tel:88002502123").header__phone.phone-header
+					+icon('phone')
+					span.phone-header__val 8 800 250-21-23
 
 				
 				.header__menu.menu-header
@@ -30,9 +35,10 @@ header.header
 								a(href="#").menu-header__link Юр. лицам
 							li.menu-header__item
 								a(href="#").menu-header__link Магазины
-							li.menu-header__item(data-single-dropdown)
+							li.menu-header__item.menu-header__item--for-buyer(data-single-dropdown)
 								a(href="#").menu-header__link Покупателям
 								button.menu-header__arrow(type='button')
+										+icon('chev-down')
 								ul.single-dropdown
 									- var list1 = ['Подарочные карты','Сотрудничество', 'Магазины', 'Доставка', 'Оплата', 'Сервис', 'Возврат и гарантия'];
 									each li in list1
@@ -41,6 +47,7 @@ header.header
 							li.menu-header__item(data-single-dropdown)
 								a(href="#").menu-header__link О компании
 								button.menu-header__arrow(type='button')
+									+icon('chev-down')
 								ul.single-dropdown
 									- var list2 = ['О нас','Новости','Вакансии','Сертификаты','Наши партнеры','Арендодателям','Контакты'];
 									each li in list2
@@ -53,31 +60,38 @@ header.header
 				a(href="#").header__logo-fixed
 					img(src="img/logo-fixed.svg" alt="alt")
 				button.header__catalog-toggle.catalog-toggle-header
-					//- .toggle-mnu
-					//- 	span
+					.catalog-toggle__burger
+						+icon('ctlg-burger')
+						+icon('ctlg-close')
 					.catalog-toggle__name Каталог
 
 				header__search.search-header
 					form(action="#" class="form").search-header__form
 						input(autocomplete="off" type="text" name="search" class="form__input search-header__input form__input--bg" placeholder="Поиск")
 						button.search-header__send(type="submit")
+							+icon('magnifier')
 					a(href="#").header__account
+						+icon('user')
 
 				.header__actions
-					a(href="#").header__favourites
-					a(href="#").header__compare
-					a(href="#").header__tools
+					a(href="#").header__action.header__favourites
+						+icon('favourites')
+					a(href="#").header__action.header__compare
+						+icon('compare')
+					a(href="#").header__action.header__basket
+						+icon('basket')
 
 	.header__city-list.location-search
 		.wrapper.location-search__wrapper
-			button#location-search-closer.toggle-mnu.on
-				span
+			.location-search__close#location-search-closer
+				+icon('ctlg-close')
 			.location-search__header
 				.location-search__key Ваш город
 				.header__search.search-header
 					form(action="#" class="form").search-header__form
 						input(autocomplete="off" type="text" name="search" class="form__input search-header__input form__input--bg" placeholder="Поиск")
 						button.search-header__send(type="submit")
+							+icon('magnifier')
 
 			ul.location-search__list
 				- var cities = ['Краснодар', 'Москва', 'Самара', 'Нижний Новгород', 'Казань', 'Ставрополь', 'Ростов-на-Дону', 'Волгоград', 'Саратов', 'Воронеж', 'Санкт-Петербург', 'Екатеринбург'];

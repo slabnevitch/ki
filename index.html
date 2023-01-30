@@ -19,7 +19,14 @@
                   <source srcset="img/ki_logo.svg" media="(max-width: 940px)"><img src="img/logo.svg" alt="alt">
                 </picture></a>
               <div id="header-location" class="header__loc loc-header">
-                <button class="loc-header__selected">Краснодар</button>
+                <button class="loc-header__selected">Краснодар
+                      <svg class="icon icon-loc ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#loc"></use>
+                      </svg>
+                      <svg class="icon icon-chev-down ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                      </svg>
+                </button>
                 <div class="loc-header__panel">
                   <div class="loc-header__city">Ваш город<a href="#" class="loc-header__city-value">Краснодар</a></div>
                   <div class="loc-header__city-buttons">
@@ -27,7 +34,10 @@
                     <button class="loc-header__yes">Да</button>
                   </div>
                 </div>
-              </div><a href="tel:88002502123" class="header__phone phone-header">8 800 250-21-23</a>
+              </div><a href="tel:88002502123" class="header__phone phone-header">
+                    <svg class="icon icon-phone ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#phone"></use>
+                    </svg><span class="phone-header__val">8 800 250-21-23</span></a>
               <div class="header__menu menu-header">
                 <button class="toggle-mnu on"><span></span></button>
                 <nav class="menu-header__body">
@@ -35,8 +45,12 @@
                     <li class="menu-header__item"><a href="#" class="menu-header__link">Подарочные карты</a></li>
                     <li class="menu-header__item"><a href="#" class="menu-header__link">Юр. лицам</a></li>
                     <li class="menu-header__item"><a href="#" class="menu-header__link">Магазины</a></li>
-                    <li data-single-dropdown class="menu-header__item"><a href="#" class="menu-header__link">Покупателям</a>
-                      <button type="button" class="menu-header__arrow"></button>
+                    <li data-single-dropdown class="menu-header__item menu-header__item--for-buyer"><a href="#" class="menu-header__link">Покупателям</a>
+                      <button type="button" class="menu-header__arrow">
+                            <svg class="icon icon-chev-down ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                            </svg>
+                      </button>
                       <ul class="single-dropdown">
                         <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Подарочные карты</a></li>
                         <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Сотрудничество</a></li>
@@ -48,7 +62,11 @@
                       </ul>
                     </li>
                     <li data-single-dropdown class="menu-header__item"><a href="#" class="menu-header__link">О компании</a>
-                      <button type="button" class="menu-header__arrow"></button>
+                      <button type="button" class="menu-header__arrow">
+                            <svg class="icon icon-chev-down ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                            </svg>
+                      </button>
                       <ul class="single-dropdown">
                         <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">О нас</a></li>
                         <li class="single-dropdown__item"><a href="#" class="single-dropdown__link">Новости</a></li>
@@ -69,27 +87,59 @@
           <div class="wrapper-smart">
             <div class="wrapper-flex"><a href="#" class="header__logo-fixed"><img src="img/logo-fixed.svg" alt="alt"></a>
               <button class="header__catalog-toggle catalog-toggle-header">
+                <div class="catalog-toggle__burger">
+                      <svg class="icon icon-ctlg-burger ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-burger"></use>
+                      </svg>
+                      <svg class="icon icon-ctlg-close ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+                      </svg>
+                </div>
                 <div class="catalog-toggle__name">Каталог</div>
               </button>
               <header__search class="search-header">
                 <form action="#" class="form search-header__form">
                   <input autocomplete="off" type="text" name="search" placeholder="Поиск" class="form__input search-header__input form__input--bg">
-                  <button type="submit" class="search-header__send"></button>
-                </form><a href="#" class="header__account"></a>
+                  <button type="submit" class="search-header__send">
+                        <svg class="icon icon-magnifier ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#magnifier"></use>
+                        </svg>
+                  </button>
+                </form><a href="#" class="header__account">
+                      <svg class="icon icon-user ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#user"></use>
+                      </svg></a>
               </header__search>
-              <div class="header__actions"><a href="#" class="header__favourites"></a><a href="#" class="header__compare"></a><a href="#" class="header__tools"></a></div>
+              <div class="header__actions"><a href="#" class="header__action header__favourites">
+                      <svg class="icon icon-favourites ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#favourites"></use>
+                      </svg></a><a href="#" class="header__action header__compare">
+                      <svg class="icon icon-compare ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
+                      </svg></a><a href="#" class="header__action header__basket">
+                      <svg class="icon icon-basket ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#basket"></use>
+                      </svg></a></div>
             </div>
           </div>
         </div>
         <div class="header__city-list location-search">
           <div class="wrapper location-search__wrapper">
-            <button id="location-search-closer" class="toggle-mnu on"><span></span></button>
+            <div id="location-search-closer" class="location-search__close">
+                  <svg class="icon icon-ctlg-close ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+                  </svg>
+            </div>
             <div class="location-search__header">
               <div class="location-search__key">Ваш город</div>
               <div class="header__search search-header">
                 <form action="#" class="form search-header__form">
                   <input autocomplete="off" type="text" name="search" placeholder="Поиск" class="form__input search-header__input form__input--bg">
-                  <button type="submit" class="search-header__send"></button>
+                  <button type="submit" class="search-header__send">
+                        <svg class="icon icon-magnifier ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#magnifier"></use>
+                        </svg>
+                  </button>
                 </form>
               </div>
             </div>
