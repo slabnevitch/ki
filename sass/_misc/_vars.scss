@@ -1,6 +1,6 @@
 $maxWidth: 1920;//ширина макета в граф. редакторе
 $maxWidthContainer: 1392;//ширина ограничивающего контейнера без паддингов
-$containerPaddings: 48;//сумма левого и правого паддингов ограничивающего контейнера
+$containerPaddings: 24;//сумма левого и правого паддингов ограничивающего контейнера
 $maxContainerWidth: $maxWidthContainer + $containerPaddings;// итоговая ширина ограничивающего контейнера
 
 // colors
@@ -29,7 +29,7 @@ $svg: '../img/icons-svg/';
 $max: 1392px;
 $lg: 1199px;
 $md: 991px;
-$mob: 947.98px;
+$mob: 963.98px;
 $sm: 767.98px;
 $xs: 576px;
 $xss: 479.98px;

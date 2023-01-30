@@ -4,9 +4,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-height: 40px;
-  max-width: 270px;
-  min-width: 270px;
+  width: 100%;
   color: #fff;
   text-decoration: none;
   background-color: $accent;
@@ -34,17 +32,17 @@
     color: $accent;
   }
   
-  &-empty{
-  	border-color: $accent;
-  	color: $accent;
-  	background-color: #fff;
+  // &-empty{
+  // 	border-color: $accent;
+  // 	color: $accent;
+  // 	background-color: #fff;
 
-  	&:hover, &:active{
-  		background-color: $accent;
-  		border-color: transparent;
-  		color: #fff;
-  	}
-  }
+  // 	&:hover, &:active{
+  // 		background-color: $accent;
+  // 		border-color: transparent;
+  // 		color: #fff;
+  // 	}
+  // }
   &-gray{
   	color: #fff;
   	background-color: $gray;
@@ -76,12 +74,44 @@
   		color: $yellow;
   	}
   }
+  &-blue{
+    color: #fff;
+    background-color: $blue;
+
+    &:hover, &:active{
+      border-color: $blue;
+      background-color: #fff;
+      color: $blue;
+    }
+  }
+  &-lg{
+    padding-top: 8px;
+    min-height: 40px;
+  }
   &-sm{
+    padding-bottom: 2px;
+    max-width: 125px;
    min-height: 25px;
-   min-width: 125px;
   }
   &-fw{
    width: 100%;
+  }
+
+  &-order{
+    max-width: 270px;
+  }
+  &-order-check{
+    max-width: 225px;
+  }
+  &-bonus{
+     max-width: 540px;
+  }
+  &-select{
+    max-width: 144px;
+  }
+  &-loc{
+    font-size: 10px;
+    line-height: 14px;
   }
 
   @media (any-hover: hover) { //только для устройств с ховером
@@ -94,6 +124,7 @@
 // шильдиk на товар
 .billet{
 	height: 24px;
+  min-width: 68px;
 	display: inline-block;
 	padding: 5px 9px 5px 6px;
 	border-radius: 0 20px 20px 0;
@@ -167,4 +198,16 @@
     }  
   }
 }
+
+/*--------------------ui-page----------------------*/
+.ui-buttons{
+  div{
+    margin-bottom: 15px;  
+  }
+  .btn{
+    margin-right: 15px; 
+  }
+}
+/*--------------------END ui-page----------------------*/ 
+
 /*--------------------END ui----------------------*/ 
