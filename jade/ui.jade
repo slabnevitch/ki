@@ -10,39 +10,75 @@ block content
 				.column
 					| Коллеги, еще раз добрый день!
 
-		form.form(action='#')
-			.form__row
-				.form__row-title Покупатель*
-				label.form__label
-					input.form__input(type='text' name='name' placeholder='Фамилия*')
-				
-				label.form__label
-					input.form__input.form__input--bg(type='text' name='phone' placeholder='Имя*')
-				
-				label.form__label
-					input.form__input(type='text' name='phone' placeholder='Отчество*')
+		.form__example
+			form.form(action='#')
+				.form__row
+					.form__row-title Тип плательщика*
+					- var types = ['Физическое лицо', 'Юридическое лицо'];
+						.wrapper-flex
+							each item, ind in types
+								.form__type
+									form__custom-policy
+										label.form__custom
+											input.form__check(type='radio' name='type' value='chekbox1' checked=ind==0 ? true : false required='required')
+											span.form__custom-chek
+											span.form__policy= item
 
-				label.form__label.form__label--error
-					input.form__input.form__input--bg(type='text' name='phone' placeholder='Отчество*' value="Ива8нович55")
-				
-				label.form__label
-					// textarea.form__area(type='text' name='question')
-					input.form__input(type='text' name='email' placeholder='Email*')
+				.form__row
+					.form__row-title Покупатель*
+					label.form__label
+						input.form__input(type='text' name='name' placeholder='Фамилия*')
+					
+					label.form__label
+						input.form__input.form__input--bg(type='text' name='phone' placeholder='Имя*')
+					
+					label.form__label
+						input.form__input(type='text' name='phone' placeholder='Отчество*')
 
-				label.form__label
-					textarea.form__area(type='text' name='question' placeholder="Ваши впечатления")
-			
-			.form__row
-				.form__row-title Оплата*
-				.form__row-content
-					- var kinds = ['Оплата картой на сайте', 'СберСпасибо - оплата на сайте', 'Оплата при получении', 'Выставить счет для предоплаты безналичным платежом', 'Оплата СБП (сервис быстрых платежей)', 'В кредит'];
-					each item, ind in kinds
-						.form__custom-policy
-							label.form__custom
-								input.form__check(type='checkbox' name='checkbox' value='chekbox1' checked=ind==0 ? true : false required='required')
-								span.form__custom-chek
-								span.form__policy= item
-	
+					label.form__label.form__label--error
+						input.form__input.form__input--bg(type='text' name='phone' placeholder='Отчество*' value="Ива8нович55")
+					
+					label.form__label
+						// textarea.form__area(type='text' name='question')
+						input.form__input(type='text' name='email' placeholder='Email*')
+
+				
+				.form__row
+					.form__row-title Способ получения*
+					.form__deliveries.deliveries-form
+						.wrapper-flex
+							- var delivs = ['Самовывоз из пункта выдачи', 'Доставка курьером'];
+							each item, ind in delivs
+								.form__custom-policy.delivery-form
+									label.form__custom
+										input.form__check(type='radio' name='delivery-type' value='value' checked=ind==1 ? true : false required='required')
+										span.delivery-form__btn= item
+											+icon('chev-down')
+						.deliveries-form__text
+							| Курьерская служба магазина с 12:00 до 18:00.
+							br
+							| Курьер уточнит удобную для вас дату доставки.
+						.deliveries-form__note Обращаем Ваше внимание, что подъем и выгрузка товара на этаж не осуществляется.
+
+				.form__row
+					.form__row-title Оплата*
+					.form__row-content
+						- var kinds = ['Оплата картой на сайте', 'СберСпасибо - оплата на сайте', 'Оплата при получении', 'Выставить счет для предоплаты безналичным платежом', 'Оплата СБП (сервис быстрых платежей)', 'В кредит'];
+						each item, ind in kinds
+							.form__custom-policy
+								label.form__custom
+									input.form__check(type='radio' name='payment' value='chekbox1' checked=ind==0 ? true : false required='required')
+									span.form__custom-chek
+									span.form__policy= item
+
+									span.form__hidden-text Оплата наличными или банковской картой при получении заказа.
+										span.form__hidden-note Обратите внимание ! 
+											br
+											| При этом способе расчёта недоступно использование бонусов "Спасибо" от Сбербанка.
+				.form__row
+					.form__row-title Комментарии к заказу
+					label.form__label
+						textarea.form__area(type='text' name='question' placeholder="Есть что добавить?")
 	.wrapper.ui-buttons
 		div
 			button.btn.btn-lg.btn-order Отправить заявку
@@ -105,7 +141,7 @@ block content
 		+crystalRating(5)
 
 	.wrapper.ics
-		- var icons = ['attention', 'basket', 'cart', 'catalog-mob', 'chat', 'chats', 'compare', 'ctlg-burger', 'ctlg-close', 'favourites', 'flame', 'home', 'like', 'loc', 'magnifier', 'percents', 'phone', 'remove', 'soc-ok', 'soc-pint', 'soc-tg', 'soc-twi', 'soc-vk', 'soc-youtb', 'unlike', 'user'];
+		- var icons = ['attention', 'basket', 'cart', 'catalog-mob', 'catalog', 'chat', 'chats', 'compare', 'ctlg-burger', 'ctlg-close', 'favourites', 'flame', 'home', 'like', 'loc', 'magnifier', 'percents', 'phone', 'remove', 'soc-ok', 'soc-pint', 'soc-tg', 'soc-twi', 'soc-vk', 'soc-youtb', 'unlike', 'user', 'm-menu'];
 		each ic in icons
 			+icon(ic)
 	//- .wrapper

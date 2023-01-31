@@ -1,7 +1,13 @@
 /*--------------------header----------------------*/
 
-.header {}
+.header {
+	position: relative;
+	.covered &{
+		z-index: 11;	
+	}
+}
 .header__top {
+	background-color: #fff;
 	.wrapper {
 	}
 
@@ -473,6 +479,7 @@
 	visibility: hidden;
 	opacity: 0;
 	transition: all .4s;
+	z-index: 10;
 
 	.cities-opened &{
 		opacity: 1;
@@ -488,6 +495,22 @@
 .location-search {
 	&__wrapper{
 		padding-top: 68px;
+	}
+}
+.location-search__close{
+	position: absolute;
+	top: 16px;
+	right: 12px;
+	width: 24px;
+	height: 24px;
+	@media (any-hover: hover) { //только для устройств с ховером
+			cursor: pointer;
+			&:hover{
+			}
+		}
+	.icon{
+		font-size: 12px;	
+		@include absolute-center-old;
 	}
 }
 .location-search__header {

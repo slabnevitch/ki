@@ -65,12 +65,12 @@
 .form__custom-policy {
 	display: flex;
 	align-items: flex-start;
-
 }
 .form__custom {
 	width: 100%;
 	position: relative;
 	flex-shrink: 0;
+	flex-wrap: wrap;
 	display: flex;
 	align-items: center;
 
@@ -91,6 +91,16 @@
 		}
 		& ~ .form__policy {
 			color: $text;
+		}
+		& ~ .form__hidden-text{
+			display: block;
+		}
+		& ~ .delivery-form__btn{
+			color: $text;
+
+			&:after{
+				width: 100%;
+			}
 		}
 	} 
 }
@@ -123,7 +133,7 @@
 	width: 100%;
 	height: 72px;
 	padding: 12px 9px;
-    // resize: none;
+    resize: none;
 	border: none;
 	background: #F1F1F1;
 	padding-left: 20px;
@@ -131,13 +141,13 @@
 	font-family: $inter;
 	@include placecolor(rgba($text, .3));
 
-	&::-webkit-resizer{
-	  	width: 28px;
-		height: 28px;
-		border-style: solid;
-		border-width: 4px 0 4px 8px;
-		border-color: transparent transparent transparent #C4C4C4;
-	}
+	// &::-webkit-resizer{
+	//   	width: 28px;
+	// 	height: 28px;
+	// 	border-style: solid;
+	// 	border-width: 4px 0 4px 8px;
+	// 	border-color: transparent transparent transparent #C4C4C4;
+	// }
 	&:hover, &:active, &:focus{
 		outline: none;
 	}
@@ -146,5 +156,67 @@
 }
 .form__policy {
 	color: rgba(#000, .4);
+}
+.form__hidden-text{
+	display: block;
+	margin-top: 8px;
+	display: none;
+	flex: 0 0 100%;
+	padding-left: 33px;
+	color: $text-l;
+	font-size: 12px;
+}
+.form__hidden-note{
+	display: block;
+	margin-top: 8px;
+	color: $accent-l;
+}
+.form__type{
+	@include col();
+	@include size(6);
+	padding: 22px;
+	background-color: $gray-l;
+	border-radius: 4px;
+}
+.delivery-form{
+	@include col();
+	@include size(6);
+}
+.delivery-form__btn{
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 23px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 4px;
+	background-color: $gray-l;
+	color: rgba(#000, .4);
+
+	&:after{
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 2px;
+		left: 0;
+		bottom: 0;
+		background-color: $accent;
+		transition: width .3s;
+	}
+
+	.icon{
+		font-size: 7px;
+		color: $text;
+		transform: rotate(-90deg);
+	}
+}
+.deliveries-form__text{
+	margin-top: 20px;
+	margin-bottom: 12px;
+}
+.deliveries-form__note{
+	max-width: 384px;
+	color: $text-l;
 }
 /*--------------------END form----------------------*/ 
