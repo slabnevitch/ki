@@ -2,8 +2,8 @@
 
 .header {
 	position: relative;
+	z-index: 11;	
 	.covered &{
-		z-index: 11;	
 	}
 }
 .header__top {
@@ -288,11 +288,14 @@
 	background-color: $accent;
 	border-radius: 4px;
 	transition: all .3s;
+	cursor: pointer;
 
 	.header-catalog-opened &{
 		background-color: #fff;
 		color: $accent;
 		border-color: $accent;
+		position: relative;
+		z-index: 2;
 	}
 
 	@include max-screen($sm){
@@ -372,6 +375,10 @@
 	position: relative;
 	flex: 1 1 auto;
 	// max-width: 539px;
+
+	.header-catalog-opened &{
+		z-index: 3;
+	}
 }
 .form__input {}
 .search-header__input {
@@ -396,6 +403,7 @@
 	top: 0;
 	height: 100%;
 	width: 40px;
+	cursor: pointer;
 	@include but-null;
 	.icon{
 		color: #A9A9A9;

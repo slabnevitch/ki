@@ -2231,14 +2231,93 @@ textarea.input {
 }
 
 /*--------------------END footer----------------------*/
+/*--------------------header-catalog----------------------*/
+.header__catalog {
+  transition: all 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+.header-catalog-opened .header__catalog {
+  visibility: visible;
+  opacity: 1;
+}
+
+.catalog-header {
+  position: absolute;
+  left: 0;
+  top: 68px;
+  padding-top: 68px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.catalog-header__wrap {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  outline: 1px solid;
+}
+
+.catalog-header__nav {
+  -ms-flex: 0 0 276px;
+  flex: 0 0 276px;
+  position: relative;
+  z-index: 2;
+}
+
+.mega-catalog-header {
+  background-color: #fff;
+  position: fixed;
+  top: 68px;
+  left: 0;
+  width: 100%;
+}
+
+.mega-catalog-header__wrapper {
+  padding-left: 323px;
+}
+
+.content-catalog-header__body {
+  column-count: 2;
+}
+
+.screen-catalog-header {
+  background-color: #fff;
+  position: fixed;
+  top: 68px;
+  left: 0;
+  width: 100%;
+}
+
+.screen-catalog-header__wrapper {
+  padding-left: 323px;
+}
+
+.screen-catalog-header__row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin: 0 -8px;
+}
+.screen-catalog-header__row:first-child {
+  margin-top: -15px;
+}
+
+.catalog-header__card {
+  width: 100%;
+  max-width: 244px;
+  margin: 15px 8px;
+}
+
+/*--------------------END header-catalog----------------------*/
 /*--------------------header----------------------*/
 .header {
   position: relative;
-}
-.covered .header {
   z-index: 11;
 }
-
 .header__top {
   background-color: #fff;
 }
@@ -2552,11 +2631,14 @@ textarea.input {
   background-color: #003D9E;
   border-radius: 4px;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .header-catalog-opened .header__catalog-toggle {
   background-color: #fff;
   color: #003D9E;
   border-color: #003D9E;
+  position: relative;
+  z-index: 2;
 }
 @media only screen and (max-width: 767.98px) {
   .header__catalog-toggle {
@@ -2616,6 +2698,9 @@ textarea.input {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
+.header-catalog-opened .search-header__form {
+  z-index: 3;
+}
 
 .search-header__input {
   padding-right: 50px;
@@ -2635,6 +2720,7 @@ textarea.input {
   top: 0;
   height: 100%;
   width: 40px;
+  cursor: pointer;
   padding: 0;
   background-color: transparent;
   border: none;
