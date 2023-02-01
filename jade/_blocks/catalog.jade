@@ -11,9 +11,9 @@
 						a(href="#").catalog-header__link= cat
 
 						.catalog-header__mega.mega-catalog-header
-							.wrapper.mega-catalog-header__wrapper
+							.mega-catalog-header__wrapper
 								.catalog-header__content.content-catalog-header
-									.content-catalog-header__title Станки
+									.content-catalog-header__title= cat
 									.content-catalog-header__body
 										each item in mega
 											ul.content-catalog-header__list
@@ -22,7 +22,7 @@
 														a(href="#").content-catalog-header__link= val
 		
 	.catalog-header__screen.screen-catalog-header
-		.wrapper.screen-catalog-header__wrapper
+		//- .wrapper.screen-catalog-header__wrapper
 			- for (var i=0; i < 3; i++)
 				.screen-catalog-header__row
 					.catalog-header__card.card-catalog-header

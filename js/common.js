@@ -87,7 +87,9 @@
 			if(document.querySelector('.header') !== null){
 				if(targ.classList.contains('loc-header__selected') || targ.closest('.loc-header__selected') !== null || targ.classList.contains('loc-header__panel') || targ.closest('.loc-header__panel')){
 					document.getElementById('header-location')
-						.classList.add('opened');
+						.classList.toggle('opened');
+						document.querySelector('.header').classList.remove('header-catalog-opened');
+						coverHide();			
 					}else{
 					document.getElementById('header-location').classList.remove('opened');
 				}
@@ -113,7 +115,23 @@
 			if(targ.getAttribute('id') === 'catalog-switcher' || targ.closest('#catalog-switcher') !== null){
 					console.log('catalog-switcher')
 				document.querySelector('.header').classList.toggle('header-catalog-opened');
+				// document.body.classList.toggle('lock');
+				// document.documentElement.classList.toggle('lock');
 				coverToggle();
+			}
+
+			if(window.innerWidth > 940 && isMobile.any()){// определяем, что клик с тач-скрина
+				if(targ.classList.contains('.catalog-header__link') || targ.closest('.catalog-header__link') !== null){// убежаемся, что кликнкнули по стрелке рядом со ссылкой
+					e.preventDefault();
+					targ.closest('.catalog-header__item').classList.toggle('touch-hover');// родительскому пункту меню вешаем класс, который делает подменю открытым
+					var sibls = siblings(targ.closest('.catalog-header__item'));
+					for(var i=0; i < sibls.length; i++){
+						removeClass(sibls[i], 'touch-hover');// вызов ф-ции. для удаления такого класса у соседних пунктов меню
+					}			
+				}
+				if(!targ.closest('.catalog-header__item') && document.querySelector('.catalog-header__item.touch-hover') !== null){//провереряем клик вне выпадающего меню
+					removeClass('.catalog-header__item', 'touch-hover');//удаляем у всех пунктов меню активный класс
+				}
 			}
 			
 		// END header catalog toggle

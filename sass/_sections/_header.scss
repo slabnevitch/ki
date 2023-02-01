@@ -237,6 +237,7 @@
 		}
 }
 .header__bottom {
+	position: relative;
 	padding-bottom: 16px;
 	transition: all 0.3s;
 	background-color: #fff;
@@ -256,6 +257,8 @@
 	align-items: center;
 }
 .header__logo-fixed{
+	position: relative;
+	z-index: 2;
 	display: block;
 	opacity: 0;
 	width: 0;
@@ -358,7 +361,7 @@
 	line-height:10px;
 	font-family: $navm;
 	text-transform: uppercase;
-	// transform: translateY(1px);
+	transform: translateY(1px);
 }
 .search-header {
 	flex: 1 1 auto;
@@ -502,6 +505,7 @@
 }
 .location-search {
 	&__wrapper{
+		position: relative;
 		padding-top: 68px;
 	}
 }

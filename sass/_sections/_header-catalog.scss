@@ -11,18 +11,23 @@
 }
 
 .catalog-header {
+	// position: fixed;
 	position: absolute;
 	left: 0;
-	top: 68px;
-	padding-top: 68px;
+	top: 0;
 	width: 100%;
+	padding-top: 68px;
 	background-color: #fff;
 }
 .wrapper {}
 .catalog-header__wrap {
-	position: relative;
+	max-height: calc(100vh - 68px);
+	overflow-y: auto;
+	overflow-x: hidden;
+	// position: relative;
 	display: flex;
 	outline: 1px solid;
+	// max-height: 100%;
 }
 .catalog-header__nav {
 	flex: 0 0 276px;
@@ -30,19 +35,53 @@
 	z-index: 2;
 }
 .catalog-header__list {}
-.catalog-header__item {}
+.catalog-header__item {
+	@media (any-hover: hover) { //только для устройств с ховером
+		&:hover{
+			.mega-catalog-header {
+				display: block;
+			}
+		}
+	}
+	&.touch-hover{
+		.mega-catalog-header {
+			display: block;
+		}
+	}
+}
 .catalog-header__link {}
 .catalog-header__mega {}
 .mega-catalog-header {
+	display: none;
 	background-color: #fff;
-	position: fixed;
-	top: 68px;
-	left: 0;
-	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	// width: calc(#{$maxWidthContainer  + 'px'} - 276px);
+	// height: 100%;
+	@include min-screen(#{$maxWidthContainer  + 'px'}){
+		width: calc(#{$maxWidthContainer  + 'px'} - 276px );
+			
+	}
+
+	&:before{
+		// content: '';
+		position: absolute;
+		right: -100%;
+		height: 100%;
+			// width: calc(276px  + 47px);
+		background-color: red;
+
+		@include min-screen(#{$maxWidthContainer  + 'px'}){
+				width: calc((100% - (#{$maxWidthContainer  + 'px'})/2 + 276px );
+			
+		}
+	}
+	
 }
 .mega-catalog-header__wrapper {
 	
-	padding-left: 323px;	
+	padding-left: 47px;	
 }
 .catalog-header__content {
 	// display: none;
@@ -64,10 +103,10 @@
 	top: 68px;
 	left: 0;
 	width: 100%;
-
+	display: none;
 }
 .screen-catalog-header__wrapper{
-	padding-left: 323px;	
+	padding-left: 47px;	
 }
 .screen-catalog-header__row {
 	display: flex;
