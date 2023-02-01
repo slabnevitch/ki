@@ -115,8 +115,7 @@
 			if(targ.getAttribute('id') === 'catalog-switcher' || targ.closest('#catalog-switcher') !== null){
 					console.log('catalog-switcher')
 				document.querySelector('.header').classList.toggle('header-catalog-opened');
-				// document.body.classList.toggle('lock');
-				// document.documentElement.classList.toggle('lock');
+				document.documentElement.classList.toggle('lock');
 				coverToggle();
 			}
 
@@ -155,6 +154,8 @@
 
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
+
+		// new SimpleBar(document.querySelector('.catalog-header__nav'), { autoHide: false });
 
 		// header fixed on doc. scroll
 			if(document.querySelector('.header') !== null){

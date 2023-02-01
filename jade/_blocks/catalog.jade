@@ -1,43 +1,50 @@
 .header__catalog.catalog-header
 	.wrapper.catalog-header__wrap
 		nav.catalog-header__nav
-			- var catalog = ['Электроинструмент','Ручной Инструмент','Хранение и транспортировка инструмента','Измерительные приборы','Пневмоинструмент','Все для сада','Строительное оборудование и инвентарь','Автотовары и оборудование','Станки','Грузоподъемное оборудование','Лестницы, стремянки и вышки','Масла и смазки','Генераторы (электростанции)','Стабилизаторы напряжения','сварочные аппараты','Компрессоры','Клининговое оборудование','Климатическое оборудование','Крепеж','Электрика и освещение','Спецодежда и сиз','Расходные материалы и оснастка','Осенняя распродажа','Все категории'];
+			- var catalog = ['Электроинструмент','Ручной Инструмент','Хранение и транспортировка инструмента','Измерительные приборы','Пневмоинструмент','Все для сада','Строительное оборудование и инвентарь','Автотовары и оборудование','Станки','Грузоподъемное оборудование','Лестницы, стремянки и вышки','Масла и смазки','Генераторы (электростанции)','Стабилизаторы напряжения','Сварочные аппараты','Компрессоры','Клининговое оборудование','Климатическое оборудование','Крепеж','Электрика и освещение','Спецодежда и СИЗ','Расходные материалы и оснастка','Осенняя распродажа','Все категории'];
 
 			- var mega = [['Плиткорезы и плиткорезные станки','Плиткорезы электрические','Плиткорезы ручные','Плиткорезы электрические настольные'], ['Камнерезные станки электрические'], ['Металлообрабатывающие станки','Заточные станки (точило)','Сверлильные станки','Токарные станки по металлу','Сверлильные станки на магнитной подошве','Гибочные станк','Пильные станки','Для резки','Ножницы металлообрабатывающие','Гильотины','Прессы','Приспособления для станков'], ['Деревообрабатывающие станки','Пильные станки (древообрабатывающие)','Шлифовальные станки','Строгальные станки','Фрезерные станки по дереву','Токарные станки','Стружкоотсосы сетевые','Стружкоотсосы','Станки деревообрабатывающие специальные'], ['Тиски'], ['Производственная мебель','Столы и верстаки','Приспособления для столов и верстаков'], ['Для станков','Для плиткорезов и плиткорезных станков','Для шлифовальных и заточных станков','Для фрезерных станков','Для гибочных станков','Для сверлильных станков','Для ленточных пил','Для точильных станков','Для токарных станков','Для шлифовальных (затирочных машин) по бетону','Для рейсмусов и станков','Для сверлильных станков на магнитной подушке','Для пильных станков','К строгальным станкам']];
 			
 			ul.catalog-header__list
-				each cat in catalog
+				each cat, index in catalog
 					li.catalog-header__item
-						a(href="#").catalog-header__link= cat
+						if index === catalog.length - 1
+							a(href="#" data-nosubmenu).catalog-header__link= cat
+								+icon('chev-down')
+						
+						else
+							a(href="#").catalog-header__link= cat
+								+icon('chev-down')
 
-						.catalog-header__mega.mega-catalog-header
-							.mega-catalog-header__wrapper
-								.catalog-header__content.content-catalog-header
-									.content-catalog-header__title= cat
-									.content-catalog-header__body
-										each item in mega
-											ul.content-catalog-header__list
-												each val in item
-													li.content-catalog-header__item
-														a(href="#").content-catalog-header__link= val
+
+							.catalog-header__mega.mega-catalog-header
+								.mega-catalog-header__wrapper
+									.catalog-header__content.content-catalog-header
+										.content-catalog-header__title= cat
+										.content-catalog-header__body
+											each item in mega
+												ul.content-catalog-header__list
+													each val in item
+														li.content-catalog-header__item
+															a(href="#").content-catalog-header__link= val
 		
-	.catalog-header__screen.screen-catalog-header
-		//- .wrapper.screen-catalog-header__wrapper
-			- for (var i=0; i < 3; i++)
-				.screen-catalog-header__row
-					.catalog-header__card.card-catalog-header
-						.card-catalog-header__title Акции
-						.catalog-header__tags
-							- for (var n=0; n < 3; n++)
-								.catalog-header__tag Акции 1
-						.card-catalog-header__img
-							img(src="img/header-catalog/1.png" alt="alt")
+		.catalog-header__screen.screen-catalog-header
+			.screen-catalog-header__wrapper
+				- for (var i=0; i < 3; i++)
+					.screen-catalog-header__row
+						.catalog-header__card.card-catalog-header
+							.card-catalog-header__title Акции
+							.catalog-header__tags
+								- for (var n=0; n < 3; n++)
+									.catalog-header__tag Акции 1
+							.card-catalog-header__img
+								img(src="img/header-catalog/1.png" alt="alt")
 
-					.catalog-header__card.card-catalog-header
-						.card-catalog-header__title РАСПРОДАЖА
-						.catalog-header__tags
-						- var tags = ['Электроинструменты', 'Автотовары', 'Дом и сад'];
-							each tag in tags
-								.catalog-header__tag= tag
-						.card-catalog-header__img
-							img(src="img/header-catalog/1.png" alt="alt")
+						.catalog-header__card.card-catalog-header
+							.card-catalog-header__title РАСПРОДАЖА
+							.catalog-header__tags
+							- var tags = ['Электроинструменты', 'Автотовары', 'Дом и сад'];
+								each tag in tags
+									.catalog-header__tag= tag
+							.card-catalog-header__img
+								img(src="img/header-catalog/1.png" alt="alt")

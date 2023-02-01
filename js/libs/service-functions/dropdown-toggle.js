@@ -1,7 +1,7 @@
 // Открытие и закрытие выпадающих меню на тач-устройствах
 document.addEventListener('click', function(e) {
 	var targetEl = e.target;
-	if(window.innerWidth > 940 && isMobile.any()){// определяем, что клик с тач-скрина
+	if(window.innerWidth > 960 && isMobile.any()){// определяем, что клик с тач-скрина
 		if(targetEl.classList.contains('menu-header__arrow') || targetEl.closest('.menu-header__arrow') !== null){// убежаемся, что кликнкнули по стрелке рядом со ссылкой
 			targetEl.closest('[data-single-dropdown]').classList.toggle('touch-hover');// родительскому пункту меню вешаем класс, который делает подменю открытым
 			var sibls = siblings(targetEl.closest('[data-single-dropdown]'));

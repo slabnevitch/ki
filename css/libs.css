@@ -12,12 +12,10 @@
 }
 
 .tns-slider {
-  -webkit-transition: all 0s;
   transition: all 0s;
 }
 
 .tns-slider > .tns-item {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -32,7 +30,7 @@
 }
 
 .tns-horizontal.tns-no-subpixel:after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -59,11 +57,7 @@
 .tns-gallery > .tns-item {
   position: absolute;
   left: -100%;
-  -webkit-transition: transform 0s, opacity 0s;
-  -webkit-transition: opacity 0s, -webkit-transform 0s;
-  transition: opacity 0s, -webkit-transform 0s;
   transition: transform 0s, opacity 0s;
-  transition: transform 0s, opacity 0s, -webkit-transform 0s;
 }
 
 .tns-gallery > .tns-slide-active {
@@ -72,7 +66,6 @@
 }
 
 .tns-gallery > .tns-moving {
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
 
@@ -81,7 +74,6 @@
 }
 
 .tns-lazy-img {
-  -webkit-transition: opacity 0.6s;
   transition: opacity 0.6s;
   opacity: 0.6;
 }
@@ -91,7 +83,6 @@
 }
 
 .tns-ah {
-  -webkit-transition: height 0s;
   transition: height 0s;
 }
 
@@ -139,22 +130,22 @@
 
 .tns-t-ct {
   width: 2333.3333333%;
-  width: -webkit-calc(100% * 70 / 3);
-  width: calc(100% * 70 / 3);
+  width: -moz-calc(100% * 70 / 3);
+  width: 2333.3333333333%;
   position: absolute;
   right: 0;
 }
 
 .tns-t-ct:after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
 
 .tns-t-ct > div {
   width: 1.4285714%;
-  width: -webkit-calc(100% / 70);
-  width: calc(100% / 70);
+  width: -moz-calc(100% / 70);
+  width: 1.4285714286%;
   height: 10px;
   float: left;
 }
@@ -268,18 +259,8 @@
   touch-action: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.viewer-container::-moz-selection, .viewer-container *::-moz-selection {
-  background-color: transparent;
-}
-
-.viewer-container::-moz-selection,
-.viewer-container *::-moz-selection {
-  background-color: transparent;
 }
 
 .viewer-container::selection,
@@ -327,12 +308,11 @@
 }
 
 .viewer-navbar {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 50%);
   overflow: hidden;
 }
 
 .viewer-list {
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 50px;
   margin: 0;
@@ -349,7 +329,6 @@
   line-height: 0;
   opacity: 0.5;
   overflow: hidden;
-  -webkit-transition: opacity 0.15s;
   transition: opacity 0.15s;
   width: 30px;
 }
@@ -411,25 +390,22 @@
 }
 
 .viewer-toolbar > ul > li {
-  background-color: black;
-  -webkit-border-radius: 50%;
+  background-color: rgba(0, 0, 0, 50%);
   border-radius: 50%;
   cursor: pointer;
   float: left;
   height: 24px;
   overflow: hidden;
-  -webkit-transition: background-color 0.15s;
   transition: background-color 0.15s;
   width: 24px;
 }
 
 .viewer-toolbar > ul > li:focus,
 .viewer-toolbar > ul > li:hover {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 80%);
 }
 
 .viewer-toolbar > ul > li:focus {
-  -webkit-box-shadow: 0 0 3px #fff;
   box-shadow: 0 0 3px #fff;
   outline: 0;
   position: relative;
@@ -467,8 +443,7 @@
 }
 
 .viewer-tooltip {
-  background-color: black;
-  -webkit-border-radius: 10px;
+  background-color: rgba(0, 0, 0, 80%);
   border-radius: 10px;
   color: #fff;
   display: none;
@@ -495,7 +470,6 @@
   opacity: 0.8;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-transition: opacity 0.15s;
   transition: opacity 0.15s;
   white-space: nowrap;
 }
@@ -506,8 +480,7 @@
 
 .viewer-button {
   -webkit-app-region: no-drag;
-  background-color: black;
-  -webkit-border-radius: 50%;
+  background-color: rgba(0, 0, 0, 50%);
   border-radius: 50%;
   cursor: pointer;
   height: 80px;
@@ -515,18 +488,16 @@
   position: absolute;
   right: -40px;
   top: -40px;
-  -webkit-transition: background-color 0.15s;
   transition: background-color 0.15s;
   width: 80px;
 }
 
 .viewer-button:focus,
 .viewer-button:hover {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 80%);
 }
 
 .viewer-button:focus {
-  -webkit-box-shadow: 0 0 3px #fff;
   box-shadow: 0 0 3px #fff;
   outline: 0;
 }
@@ -554,7 +525,7 @@
 }
 
 .viewer-backdrop {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 50%);
 }
 
 .viewer-invisible {
@@ -563,7 +534,6 @@
 
 .viewer-move {
   cursor: move;
-  cursor: -webkit-grab;
   cursor: grab;
 }
 
@@ -576,38 +546,21 @@
 }
 
 .viewer-transition {
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
-}
-
-@-webkit-keyframes viewer-spinner {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes viewer-spinner {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
-
 .viewer-loading::after {
-  -webkit-animation: viewer-spinner 1s linear infinite;
   animation: viewer-spinner 1s linear infinite;
-  border: 4px solid white;
-  border-left-color: white;
-  -webkit-border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 10%);
+  border-left-color: rgba(255, 255, 255, 50%);
   border-radius: 50%;
   content: "";
   display: inline-block;
@@ -626,19 +579,238 @@
     display: none;
   }
 }
-
 @media (max-width: 991px) {
   .viewer-hide-sm-down {
     display: none;
   }
 }
-
 @media (max-width: 1199px) {
   .viewer-hide-md-down {
     display: none;
   }
 }
-
 /*--end viewerjs--*/
+/*--simplebar-*/
+[data-simplebar] {
+  position: relative;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
 
+.simplebar-wrapper {
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+  max-width: inherit;
+  max-height: inherit;
+}
+
+.simplebar-mask {
+  direction: inherit;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: auto !important;
+  height: auto !important;
+  z-index: 0;
+}
+
+.simplebar-offset {
+  direction: inherit !important;
+  box-sizing: inherit !important;
+  resize: none !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.simplebar-content-wrapper {
+  direction: inherit;
+  box-sizing: border-box !important;
+  position: relative;
+  display: block;
+  height: 100%; /* Required for horizontal native scrollbar to not appear if parent is taller than natural height */
+  width: auto;
+  max-width: 100%; /* Not required for horizontal scroll to trigger */
+  max-height: 100%; /* Needed for vertical scroll to trigger */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.simplebar-content-wrapper::-webkit-scrollbar,
+.simplebar-hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.simplebar-content:before,
+.simplebar-content:after {
+  content: " ";
+  display: table;
+}
+
+.simplebar-placeholder {
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.simplebar-height-auto-observer-wrapper {
+  box-sizing: inherit !important;
+  height: 100%;
+  width: 100%;
+  max-width: 1px;
+  position: relative;
+  float: left;
+  max-height: 1px;
+  overflow: hidden;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+  -ms-flex-positive: inherit;
+  flex-grow: inherit;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+}
+
+.simplebar-height-auto-observer {
+  box-sizing: inherit;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1000%;
+  width: 1000%;
+  min-height: 1px;
+  min-width: 1px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.simplebar-track {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+[data-simplebar].simplebar-dragging .simplebar-content {
+  pointer-events: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+[data-simplebar].simplebar-dragging .simplebar-track {
+  pointer-events: all;
+}
+
+.simplebar-scrollbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-height: 10px;
+}
+
+.simplebar-scrollbar:before {
+  position: absolute;
+  content: "";
+  background: black;
+  border-radius: 7px;
+  left: 2px;
+  right: 2px;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  /* When hovered, remove all transitions from drag handle */
+  opacity: 0.5;
+  transition: opacity 0s linear;
+}
+
+.simplebar-track.simplebar-vertical {
+  top: 0;
+  width: 11px;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 2px;
+  bottom: 2px;
+}
+
+.simplebar-track.simplebar-horizontal {
+  left: 0;
+  height: 11px;
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+  height: 100%;
+  left: 2px;
+  right: 2px;
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+  right: auto;
+  left: 0;
+  top: 2px;
+  height: 7px;
+  min-height: 0;
+  min-width: 10px;
+  width: auto;
+}
+
+/* Rtl support */
+[data-simplebar-direction=rtl] .simplebar-track.simplebar-vertical {
+  right: auto;
+  left: 0;
+}
+
+.hs-dummy-scrollbar-size {
+  direction: rtl;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  height: 500px;
+  width: 500px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.simplebar-hide-scrollbar {
+  position: fixed;
+  left: 0;
+  visibility: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/*--end simplebar--*/
 /*# sourceMappingURL=maps/libs.css.map */
