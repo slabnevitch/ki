@@ -11,6 +11,7 @@
 	// @include size(3);
 	word-wrap: normal;
 
+	// карточка горизонтальная
 	&--horisontal{
 		max-width: none;
 		flex-direction: row;
@@ -115,6 +116,113 @@
 			}
 		}
 	}
+	// END карточка горизонтальная
+
+	&--mini{
+		flex-direction: row;
+		width: 270px;
+		max-width: none;	
+
+		.product-card__border{
+			width: 88px;
+			height: 88px;
+			padding: 8px;
+		}
+		.product-card__img-wrap{
+				margin-bottom: 0;	
+		}
+		.product-card__img{
+			width: 72px;
+			height: 72px;
+		}
+		.product-card__price{
+			padding-right: 0;	
+			align-items: flex-end;
+			margin-bottom: 7px;
+		}
+		.product-card__price-block{
+			display: flex;
+			align-items: flex-end;
+			flex-wrap: wrap;
+			text-decoration: none;
+
+		}
+		.product-price{
+			margin-right: 20px;
+			line-height: 19px;
+			font-size: 16px;	
+		}
+		.product-card__actions{
+			position: static;
+		}
+		.product-card__name{
+			height: 42px;
+			overflow: hidden;
+			margin-bottom: 10px;
+			font-size: 12px;
+			line-height: 15px;
+			color: $text;
+		}
+		.product-card__rating-wrap{
+			margin-bottom: 6px;
+		}
+		.product-card__footer{
+			display: flex;
+			align-items: center;
+			.counter{
+				width: 85px;
+				height: auto;
+				border: none;
+				margin-right: 16px;
+			}
+			.counter__button{
+				@include but-null;
+				width: 20px;
+				height: 20px;
+				text-align: center;
+			}
+			.counter__button, .counter__count{
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 17px;
+				.icon{
+					color: #000;
+
+					&-plus{
+						font-size: 10.47px;
+					}
+					&-minus{
+						font-size: 2px;
+					}
+				}
+			}
+			.counter__block{
+				flex: 1 1 auto;
+				display: flex;
+				// align-items: flex-end;
+			}
+			.counter__measures{
+				margin-top: 1px;
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+
+		.product-card__actions{
+			flex-direction: row;
+			align-items: flex-end;
+			justify-content: flex-end;
+			flex: 1 1 auto;
+		}
+		.product-card__action{
+
+			&:not(:last-child){
+				margin-bottom: 0;
+				margin-right: 9px;
+			}
+		}
+	}
 
 
 }
@@ -176,7 +284,8 @@
 	.icon {
 		color: #A9A9A9;
 	}
-	.icon-favourites {		font-size: 26px;
+	.icon-favourites {		
+		font-size: 26px;
 	}
 	.icon-compare {
 		font-size: 22px;

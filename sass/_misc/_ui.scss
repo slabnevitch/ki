@@ -143,6 +143,13 @@
 	&--action{
 		background-color: $red;
 	}
+
+  &--mini{
+    width: 14px;
+    min-width: 0;
+    padding: 0;
+    height: 24px;
+  }
 }
 .socials{
   display: flex;

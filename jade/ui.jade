@@ -96,7 +96,48 @@ block content
 								a(href="#").info-product-card__avalvalue 6 магазинах
 					.info-product-card__row
 						a(href="#").info-product-card__oneclick Купить в 1 клик
+		
 
+		.product-card.product-card--mini
+			.product-card__img-wrap
+				.billet.billet--action.billet--mini
+				a(href="#").product-card__border
+					span.product-card__img
+						img(src="img/product-card/prod-sm.jpg" alt="alt")
+			
+			
+			.product-card__chars
+				.product-card__price
+					a(href="#").product-card__price-block
+						.product-price 14 729 ₽
+						.product-price-sale 18 411₽
+					
+					a(href="#").product-bonus
+						.product-bonus__val 99
+						+icon('bonus')
+			
+				a(href="#").product-card__name Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
+				.product-card__rating-wrap
+					.product-card__rating
+						+crystalRating('4,0')
+
+				.product-card__footer
+					.counter(data-min="0" data-max="100")
+						button.counter__button.counter-minus
+							+icon('minus')
+						.counter__block
+							input(autocomplete="off" type="text" name="name" value="1" ).counter__count
+							.counter__measures шт
+						button.counter__button.counter-plus
+							+icon('plus')
+
+					.product-card__actions
+						a(href="#").product-card__action
+							+icon('favourites')
+						a(href="#").product-card__action
+							+icon('compare')
+
+	
 
 
 	.wrapper-smart
@@ -366,6 +407,6 @@ block page-scripts
 	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
 
 	//- counter--------------------------
-	//- script(src="js/libs/counter/counter.js")
+	script(src="js/libs/counter/counter.js")
 
 //- end VANILLA JS===================================
