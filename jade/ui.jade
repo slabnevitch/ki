@@ -6,9 +6,54 @@ block title
 block content
 	.wrapper-smart
 		.wrapper-flex
-			- for (var i=0; i < 12; i++)
-				.column
-					| Коллеги, еще раз добрый день!
+			- for (var i=0; i < 8; i++)
+				.product-card
+					.product-card__img-wrap
+						.billet.billet--new Новинка 
+						a(href="#").product-card__img
+							img(src="img/product-card/prod-lg.jpg" alt="alt")
+					
+					
+					.product-card__price
+						.product-card__actions
+							a(href="#").product-card__action.active
+								+icon('favourites')
+							a(href="#").product-card__action
+								+icon('compare')
+						a(href="#").product-price 8 390 ₽
+							.product-price-sale 18 411₽
+						a(href="#").product-bonus
+							.product-bonus__val 99
+							+icon('bonus')
+					
+					a(href="#").product-card__name Вентилятор аккумуляторный Makita DCF 102 Z
+					
+					a(href="#").product-card__description 
+						.product-card__description-row Напряжение акк.: 12 В
+						.product-card__description-row Крутящий момент: 30 Н·м
+						.product-card__description-row Емкость аккумулятора: 2 А·ч
+						.product-card__description-row Тип аккумулятора Li-Ion
+						.product-card__description-row Кол-во аккумуляторов: 2 шт.
+						.product-card__description-row Вес 1.2 кг
+
+					.product-card__bottom
+						.product-card__rating-wrap
+							.product-card__rating
+								+crystalRating('4,5')
+						a(href="#").btn.btn-sm.product-card__buy Купить
+						
+						.product-card__info.info-product-card
+							.info-product-card__row Артикул: 002266
+							.info-product-card__row
+								.info-product-card__aval
+									.info-product-card__avalkey В наличии
+										a(href="#").info-product-card__avalvalue 6 магазинах
+							.info-product-card__row
+								a(href="#").info-product-card__oneclick Купить в 1 клик
+
+
+
+	.wrapper-smart
 
 		.form__example
 			form.form(action='#')
@@ -136,7 +181,7 @@ block content
 		+simpleRating(3)
 
 		h2 Rating in product card
-		+crystalRating(4.5)
+		+crystalRating('4,5')
 		+crystalRating('1,5')
 		+crystalRating(5)
 
