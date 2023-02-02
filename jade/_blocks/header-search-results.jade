@@ -1,32 +1,30 @@
 .header__search-results.search-results-header
-	.wrapper
-		//- if pageIndex = '013'
-		.search-results-header__wrap
+	.wrapper-smart
+		.wrapper-flex
+			//- if pageIndex = '013'
 			.search-column.search-column--block
-				.search-results-header__row.result-row
-					.result-row
+				.search-results-header__row
+					.wrapper-flex.result-row
 						.result-row__cat Популярные категории
 						- var vals = ['Электроинструменты', 'Ручной инструмент', 'Строительство и ремонт', 'Гайковерты'];
 						.result-row__values
 							each val in vals
-								a(href="#").result-row__value
-					
-					.result-row
-						.result-row__cat Хиты продаж
-						.result-row__values
-							- for (var i=0; i < 4; i++)
-								a(href="#").result-row__value Гайковерт Milwaukee M18 BRAIW-0 4933447899
+								a(href="#").result-row__value= val
+						
+					.wrapper-flex.result-row
+							.result-row__cat Хиты продаж
+							.result-row__values
+								- for (var i=0; i < 4; i++)
+									a(href="#").result-row__value Гайковерт Milwaukee M18 BRAIW-0 4933447899
 			
-			// .search-column.search-column--main
 			.search-column.search-column--products
+				| ffjjrprpernojvosdfpsf
+		//- .search-results-header__wrap
+		//- 	.search-column.search-column--main
+		//- 		.result-row
+		//- 			- var vals2 = ['Гайковерты пневматические', 'Ударные гайковерты', 'Гайковерты пневматические BERGER', 'Гайковерты пневматические ELITECH', 'Гайковерты пневматические Patriot', 'Гайковерты пневматические Fubag', 'Гайковерты пневматические Jonnesway', 'Гайковерты пневматические Ombra'];
+		//- 			.result-row__values
+		//- 				each val in vals2
+		//- 					a(href="#").result-row__value
 
-		.search-results-header__wrap
-			.search-column.search-column--main
-				.result-row
-					- var vals2 = ['Гайковерты пневматические', 'Ударные гайковерты', 'Гайковерты пневматические BERGER', 'Гайковерты пневматические ELITECH', 'Гайковерты пневматические Patriot', 'Гайковерты пневматические Fubag', 'Гайковерты пневматические Jonnesway', 'Гайковерты пневматические Ombra'
-						];
-					.result-row__values
-						each val in vals2
-							a(href="#").result-row__value
-
-			.search-column.search-column--products
+		//- 	.search-column.search-column--products

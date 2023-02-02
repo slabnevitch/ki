@@ -1,3 +1,43 @@
 /*--------------------header-search-dropdown----------------------*/
-
+.header__search-results {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+}
+.search-results-header {}
+.wrapper {}
+.search-results-header__wrap {
+	display: flex;
+	margin-left: -8px;
+	margin-right: -8px;
+}
+.search-column {
+	@include col();
+}
+.search-column--block {
+	display: flex;
+	flex: 1 1 calc(100% - 270px - 16px);
+}
+.search-results-header__row {}
+.result-row {
+}
+.result-row__cat {
+	flex: 0 0 144px;
+	@include col();
+}
+.result-row__values {
+	flex: 1 1 calc(100% - 144px - 32px);
+	@include col();
+}
+.result-row__value {
+	display: block;
+}
+.search-column--products {
+	flex: 0 0 calc(270px - 16px);
+}
+.search-column--main {
+	flex: 1 1 auto;
+}
 /*--------------------END header-search-dropdown----------------------*/ 

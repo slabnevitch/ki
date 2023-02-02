@@ -12,10 +12,12 @@
 }
 
 .tns-slider {
+  -webkit-transition: all 0s;
   transition: all 0s;
 }
 
 .tns-slider > .tns-item {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -30,7 +32,7 @@
 }
 
 .tns-horizontal.tns-no-subpixel:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -57,7 +59,11 @@
 .tns-gallery > .tns-item {
   position: absolute;
   left: -100%;
+  -webkit-transition: transform 0s, opacity 0s;
+  -webkit-transition: opacity 0s, -webkit-transform 0s;
+  transition: opacity 0s, -webkit-transform 0s;
   transition: transform 0s, opacity 0s;
+  transition: transform 0s, opacity 0s, -webkit-transform 0s;
 }
 
 .tns-gallery > .tns-slide-active {
@@ -66,6 +72,7 @@
 }
 
 .tns-gallery > .tns-moving {
+  -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
 
@@ -74,6 +81,7 @@
 }
 
 .tns-lazy-img {
+  -webkit-transition: opacity 0.6s;
   transition: opacity 0.6s;
   opacity: 0.6;
 }
@@ -83,6 +91,7 @@
 }
 
 .tns-ah {
+  -webkit-transition: height 0s;
   transition: height 0s;
 }
 
@@ -130,22 +139,22 @@
 
 .tns-t-ct {
   width: 2333.3333333%;
-  width: -moz-calc(100% * 70 / 3);
-  width: 2333.3333333333%;
+  width: -webkit-calc(100% * 70 / 3);
+  width: calc(100% * 70 / 3);
   position: absolute;
   right: 0;
 }
 
 .tns-t-ct:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
 
 .tns-t-ct > div {
   width: 1.4285714%;
-  width: -moz-calc(100% / 70);
-  width: 1.4285714286%;
+  width: -webkit-calc(100% / 70);
+  width: calc(100% / 70);
   height: 10px;
   float: left;
 }
@@ -259,8 +268,18 @@
   touch-action: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.viewer-container::-moz-selection, .viewer-container *::-moz-selection {
+  background-color: transparent;
+}
+
+.viewer-container::-moz-selection,
+.viewer-container *::-moz-selection {
+  background-color: transparent;
 }
 
 .viewer-container::selection,
@@ -308,11 +327,12 @@
 }
 
 .viewer-navbar {
-  background-color: rgba(0, 0, 0, 50%);
+  background-color: black;
   overflow: hidden;
 }
 
 .viewer-list {
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 50px;
   margin: 0;
@@ -329,6 +349,7 @@
   line-height: 0;
   opacity: 0.5;
   overflow: hidden;
+  -webkit-transition: opacity 0.15s;
   transition: opacity 0.15s;
   width: 30px;
 }
@@ -390,22 +411,25 @@
 }
 
 .viewer-toolbar > ul > li {
-  background-color: rgba(0, 0, 0, 50%);
+  background-color: black;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
   cursor: pointer;
   float: left;
   height: 24px;
   overflow: hidden;
+  -webkit-transition: background-color 0.15s;
   transition: background-color 0.15s;
   width: 24px;
 }
 
 .viewer-toolbar > ul > li:focus,
 .viewer-toolbar > ul > li:hover {
-  background-color: rgba(0, 0, 0, 80%);
+  background-color: black;
 }
 
 .viewer-toolbar > ul > li:focus {
+  -webkit-box-shadow: 0 0 3px #fff;
   box-shadow: 0 0 3px #fff;
   outline: 0;
   position: relative;
@@ -443,7 +467,8 @@
 }
 
 .viewer-tooltip {
-  background-color: rgba(0, 0, 0, 80%);
+  background-color: black;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
   color: #fff;
   display: none;
@@ -470,6 +495,7 @@
   opacity: 0.8;
   overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-transition: opacity 0.15s;
   transition: opacity 0.15s;
   white-space: nowrap;
 }
@@ -480,7 +506,8 @@
 
 .viewer-button {
   -webkit-app-region: no-drag;
-  background-color: rgba(0, 0, 0, 50%);
+  background-color: black;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
   cursor: pointer;
   height: 80px;
@@ -488,16 +515,18 @@
   position: absolute;
   right: -40px;
   top: -40px;
+  -webkit-transition: background-color 0.15s;
   transition: background-color 0.15s;
   width: 80px;
 }
 
 .viewer-button:focus,
 .viewer-button:hover {
-  background-color: rgba(0, 0, 0, 80%);
+  background-color: black;
 }
 
 .viewer-button:focus {
+  -webkit-box-shadow: 0 0 3px #fff;
   box-shadow: 0 0 3px #fff;
   outline: 0;
 }
@@ -525,7 +554,7 @@
 }
 
 .viewer-backdrop {
-  background-color: rgba(0, 0, 0, 50%);
+  background-color: black;
 }
 
 .viewer-invisible {
@@ -534,6 +563,7 @@
 
 .viewer-move {
   cursor: move;
+  cursor: -webkit-grab;
   cursor: grab;
 }
 
@@ -546,21 +576,38 @@
 }
 
 .viewer-transition {
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+@-webkit-keyframes viewer-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes viewer-spinner {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
+
 .viewer-loading::after {
+  -webkit-animation: viewer-spinner 1s linear infinite;
   animation: viewer-spinner 1s linear infinite;
-  border: 4px solid rgba(255, 255, 255, 10%);
-  border-left-color: rgba(255, 255, 255, 50%);
+  border: 4px solid white;
+  border-left-color: white;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
   content: "";
   display: inline-block;
@@ -579,15 +626,19 @@
     display: none;
   }
 }
+
 @media (max-width: 991px) {
   .viewer-hide-sm-down {
     display: none;
   }
 }
+
 @media (max-width: 1199px) {
   .viewer-hide-md-down {
     display: none;
   }
 }
+
 /*--end viewerjs--*/
+
 /*# sourceMappingURL=maps/libs.css.map */
