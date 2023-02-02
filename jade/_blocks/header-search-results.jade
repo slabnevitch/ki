@@ -1,0 +1,20 @@
+.header__search-results.search-results-header
+	.wrapper
+		.search-results-header__wrap
+			.search-column.search-column--block
+				.search-results-header__row.result-row
+					.result-row
+						.result-row__cat Популярные категории
+						- var vals = ['Электроинструменты', 'Ручной инструмент', 'Строительство и ремонт', 'Гайковерты'];
+						.result-row__values
+							each val in vals
+								a(href="#").result-row__value
+					
+					.result-row
+						.result-row__cat Хиты продаж
+						.result-row__values
+							- for (var i=0; i < 4; i++)
+								a(href="#").result-row__value Гайковерт Milwaukee M18 BRAIW-0 4933447899 Гайковерт Milwaukee M18 BRAIW-0 4933447899 Гайковерт Milwaukee M18 BRAIW-0 4933447899 Гайковерт Milwaukee M18 BRAIW-0 4933447899
+			
+			// .search-column.search-column--main
+			.search-column.search-column--products

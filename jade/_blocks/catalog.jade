@@ -36,15 +36,15 @@
 							.card-catalog-header__title Акции
 							.catalog-header__tags
 								- for (var n=0; n < 3; n++)
-									.catalog-header__tag Акции 1
+									a(href="#").catalog-header__tag Акции 1
 							.card-catalog-header__img
 								img(src="img/header-catalog/1.png" alt="alt")
 
 						.catalog-header__card.card-catalog-header
 							.card-catalog-header__title РАСПРОДАЖА
 							.catalog-header__tags
-							- var tags = ['Электроинструменты', 'Автотовары', 'Дом и сад'];
-								each tag in tags
-									.catalog-header__tag= tag
+								- var tags = ['Электроинструменты', 'Автотовары', 'Дом и сад'];
+									each tag in tags
+										a(href="#").catalog-header__tag= tag
 							.card-catalog-header__img
-								img(src="img/header-catalog/1.png" alt="alt")
+								img(src="img/header-catalog/2.png" alt="alt")
