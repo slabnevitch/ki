@@ -1,4 +1,4 @@
-header(class=pageIndex=='013'||pageIndex == '014'||pageIndex == '015'?"header search-results-opened" : "header")
+header(class=pageIndex=='013'||pageIndex == '014'||pageIndex == '015'?"header search-results-opened covered" : "header")
 	.header__top
 		.wrapper
 			.header__top-inner
@@ -71,6 +71,9 @@ header(class=pageIndex=='013'||pageIndex == '014'||pageIndex == '015'?"header se
 						input(autocomplete="off" type="text" name="search" class="form__input search-header__input form__input--bg" placeholder="Поиск")
 						button.search-header__send(type="submit")
 							+icon('magnifier')
+						button.search-header__back(type="button")
+							+icon('arrow-left')
+					
 					a(href="#").header__account
 						+icon('user')
 
@@ -87,7 +90,7 @@ header(class=pageIndex=='013'||pageIndex == '014'||pageIndex == '015'?"header se
 
 		include ../_blocks/catalog
 	
-	include ../_blocks/header-search-results
+		include ../_blocks/header-search-results
 	
 	.header__city-list.location-search
 		.wrapper.location-search__wrapper

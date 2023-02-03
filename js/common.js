@@ -115,6 +115,7 @@
 			if(targ.getAttribute('id') === 'catalog-switcher' || targ.closest('#catalog-switcher') !== null){
 					console.log('catalog-switcher')
 				document.querySelector('.header').classList.toggle('header-catalog-opened');
+				document.querySelector('.header').classList.remove('search-results-opened');
 				document.documentElement.classList.toggle('lock');
 				coverToggle();
 			}

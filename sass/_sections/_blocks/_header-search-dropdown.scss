@@ -2,10 +2,15 @@
 .header__search-results {
 	position: absolute;
 	padding-top: 9px;
+	
 	top: 100%;
 	left: 0;
+	bottom: 0;	
+	right: 0;	
+	
 	width: 100%;
-	max-height: 345px;
+	height: 345px;
+
 	overflow-y: auto;
 	overflow-x: hidden;
 	background-color: #fff;
@@ -14,15 +19,20 @@
 	opacity: 0;
 
 	@include max-screen($md){
-		padding-left: 46px;
+		padding-left: 40px;
 		padding-right: 46px;
+		height: 300px;
 	}
 
 	._scroll &{
-		position: fixed;
-		top: 80px;
+		// position: fixed;
+		// top: 80px;
 		padding-top: 25px;
 		padding-left: 80px;
+
+		@include max-screen($md){
+			padding-left: 56px;
+		}
 	}
 
 	.search-results-opened &{
@@ -34,6 +44,7 @@
 .search-column--block {
 	display: flex;
 	@include col();
+	padding-bottom: 20px;
 	flex: 1 1 calc(100% - 270px - 16px);
 
 	@include max-screen($md){
@@ -70,7 +81,37 @@
 	}
 }
 .result-row-value {
+		position: relative;
+		&:not(:last-child){
+			@include max-screen($md){
+				margin-bottom: 21px;	
+				
+			}
+		}
+		&:hover, &:active, &:focus, &.active{
 
+			@include max-screen($md){
+				font-weight: 700;
+				position: relative;
+				&:before{
+					content: '';
+					display: block;
+					position: absolute;
+					top: 50%;
+					margin-top: -6px;	
+					left: -24px;	
+					width: 12px;
+					height: 12px;
+					border-radius: 50%;
+					background-color: yellow;
+
+				}
+			}
+
+
+		}
+
+	a{
 		display: block;
 		font-size: 13px;
 		line-height: 22px;
@@ -78,34 +119,14 @@
 		text-decoration: none;
 		@include dots-family;
 
-	@include max-screen($md){
-		padding-left: 22px;
-		max-width: calc(100% - 92px);
-
-
-	}
-	&:hover, &:active, &:focus{
-
 		@include max-screen($md){
-			font-weight: 700;
-			position: relative;
-			&:before{
-				content: '';
-				display: inline-block;
-				vertical-align: middle;
-				width: 12px;
-				height: 12px;
-				border-radius: 50%;
-				background-color: yellow;
-			
+			max-width: calc(100% - 38px);		
 		}
 	}
-
-	
-}
 }
 .search-column--cards {
 	flex: 0 0 calc(254px + 16px);
+	padding-bottom: 20px;
 
 	@include max-screen($md){
 		display: none;
