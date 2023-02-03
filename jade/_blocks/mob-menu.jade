@@ -1,0 +1,9 @@
+- var navs = [{name:'Главная', icon:'home'}, {name:'Каталог', icon:'catalog'}, {name:'Корзина', icon:'basket'}, {name:'Профиль', icon:'user'}, {name:'Меню', icon:'m-menu'}];
+nav.mob-nav 
+	ul.mob-nav__list
+		each nav, i in navs
+			li(class=i==0 ? "mob-nav__item active" : "mob-nav__item")
+				a(href="#").mob-nav__link
+					.mob-nav__icon
+						+icon(nav.icon)
+					.mob-nav__name= nav.name
