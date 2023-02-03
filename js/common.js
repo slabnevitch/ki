@@ -134,6 +134,22 @@
 			}
 			
 		// END header catalog toggle
+
+		// header search results toggle
+			// var headerSearchInputs = document.querySelectorAll('.search-header__input');
+			// for(var i=0; i < headerSearchInputs.length; i++){
+			// 	headerSearchInputs[i].addEventListener('input', function(e) {
+			// 		console.log('FOCUS')
+			// 		document.querySelector('.header').classList.add('search-results-opened');
+			// 		coverShow();
+			// 	});
+			// 	headerSearchInputs[i].addEventListener('blur', function(e) {
+			// 		console.log('BLUR')
+			// 		document.querySelector('.header').classList.remove('search-results-opened');
+			// 		coverHide();
+			// 	});
+			// }
+		// END header search results toggle
 	});
 
 	// body cover show/hide

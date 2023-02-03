@@ -121,6 +121,8 @@
 	&--mini{
 		flex-direction: row;
 		width: 270px;
+		padding-bottom: 0;
+		margin-bottom: 0;
 		max-width: none;	
 
 		.product-card__border{
@@ -324,19 +326,20 @@
 }
 .product-bonus {
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	margin-left: 16px;
 	text-decoration: none;
 	.icon-bonus {
 		margin-left: 3px;
 		color: #A9A9A9;
-		font-size: 9px;
+		font-size: 10px;
+	line-height: 11px;
 	}	
 }
 .product-bonus__val {
 	font-weight: 700;
 	font-size: 12px;
-	line-height: 15px;
+	line-height: 11px;
 	color: #A9A9A9;
 }
 

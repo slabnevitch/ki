@@ -1,43 +1,115 @@
 /*--------------------header-search-dropdown----------------------*/
 .header__search-results {
 	position: absolute;
+	padding-top: 9px;
 	top: 100%;
 	left: 0;
 	width: 100%;
+	max-height: 345px;
+	overflow-y: auto;
+	overflow-x: hidden;
 	background-color: #fff;
+	transition: all .4s;
+	visibility: hidden;
+	opacity: 0;
+
+	@include max-screen($md){
+		padding-left: 46px;
+		padding-right: 46px;
+	}
+
+	._scroll &{
+		position: fixed;
+		top: 80px;
+		padding-top: 25px;
+		padding-left: 80px;
+	}
+
+	.search-results-opened &{
+		visibility: visible;
+		opacity: 1;
+	}
 }
 .search-results-header {}
-.wrapper {}
-.search-results-header__wrap {
-	display: flex;
-	margin-left: -8px;
-	margin-right: -8px;
-}
-.search-column {
-	@include col();
-}
 .search-column--block {
 	display: flex;
+	@include col();
 	flex: 1 1 calc(100% - 270px - 16px);
+
+	@include max-screen($md){
+		flex-basis: 100%;
+		
+	}
 }
-.search-results-header__row {}
-.result-row {
+.search-results-header__row {
+	width: 100%;
 }
-.result-row__cat {
+.search-results-header__category{
+	&:not(:last-child){
+		margin-bottom: 25px;
+		
+	}
+}
+
+.result-row-chapter {
 	flex: 0 0 144px;
 	@include col();
+	padding-left: 15px;
+	font-weight: 700;
+
+	@include max-screen($md){
+		display: none;
+	}
 }
-.result-row__values {
+.result-row-values {
 	flex: 1 1 calc(100% - 144px - 32px);
 	@include col();
+	@include max-screen($md){
+		flex-basis: 100%;
+		
+	}
 }
-.result-row__value {
-	display: block;
+.result-row-value {
+
+		display: block;
+		font-size: 13px;
+		line-height: 22px;
+		color: #000;
+		text-decoration: none;
+		@include dots-family;
+
+	@include max-screen($md){
+		padding-left: 22px;
+		max-width: calc(100% - 92px);
+
+
+	}
+	&:hover, &:active, &:focus{
+
+		@include max-screen($md){
+			font-weight: 700;
+			position: relative;
+			&:before{
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: yellow;
+			
+		}
+	}
+
+	
 }
-.search-column--products {
-	flex: 0 0 calc(270px - 16px);
 }
-.search-column--main {
-	flex: 1 1 auto;
+.search-column--cards {
+	flex: 0 0 calc(254px + 16px);
+
+	@include max-screen($md){
+		display: none;
+	}
 }
+
 /*--------------------END header-search-dropdown----------------------*/ 
