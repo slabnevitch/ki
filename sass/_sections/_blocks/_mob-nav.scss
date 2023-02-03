@@ -1,0 +1,84 @@
+/*--------------------mob-nav----------------------*/
+.mob-nav {
+	padding: 8px 8px;
+	position: fixed;
+	height: 56px;
+	display: flex;	
+	// align-items: center;	
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #E4E4E4;
+	border-radius: 1px;
+}
+.mob-nav__list {
+	width: 100%;	
+	display: flex;
+	justify-content: space-between;	
+	align-items: flex-end;
+}
+.mob-nav__item {
+	list-style-type: none;
+	margin: 0 8px;
+	&.active{
+		.mob-nav__name {
+			color: 	$accent-l;
+		}
+	}
+}
+.mob-nav__link {
+	display: flex;
+	flex-direction: column;	
+	justify-content: center;	
+	align-items: center;	
+	height: 100%;	
+		text-decoration: none;	
+	text-align: center;
+	
+	.icon {
+		color: #003D9E;
+	}
+	.icon-home {
+		font-size: 18px;
+	}
+	.icon-catalog {
+		font-size: 25px;
+		bottom: -3px;
+	}
+	.icon-basket {
+		font-size: 24px;
+	}
+	.icon-user {
+		font-size: 21px;
+	}
+	.icon-m-menu {
+		font-size: 19px;
+	}
+
+
+}
+.mob-nav__name {
+	font-size: 10px;
+	line-height: 12px;
+	color: #A9A9A9;
+}
+.mob-nav__icon{
+	width: 25px;
+	height: 25px;
+	margin-bottom: 3px;		
+	position: relative;	
+
+	.icon{
+		@include absolute-center-old;
+		top: auto;
+	}
+	.icon-catalog {
+		
+		bottom: -3px;
+	}
+	.icon-basket {
+		bottom: -2px;	
+	}
+}
+/*--------------------END mob-nav----------------------*/ 
