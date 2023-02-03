@@ -15,9 +15,10 @@ if pageIndex == '013'
 						.wrapper-flex.search-results-header__category
 							.result-row-chapter Хиты продаж
 							.result-row-values
-								- for (var i=0; i < 4; i++)
+								- for (var i=0; i < 15; i++)
 									.result-row-value
 										a(href="#") Гайковерт Milwaukee M18 BRAIW-0 4933447899
+
 				
 				.search-column.search-column--cards
 					- var cards = [{name: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', price: '6 159 ₽'}, {name: 'Гайковерт Messer IW-500 05-40-500', price: '8 380 ₽'}, {name: 'Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140', price: '8 400 ₽'}];
@@ -44,6 +45,7 @@ if pageIndex == '013'
 									.product-card__rating-wrap
 										.product-card__rating
 											+crystalRating('4,0')
+			a(href="#").search-results-header__all Посмотреть все результаты
 
 if pageIndex == '014'
 	.header__search-results.search-results-header

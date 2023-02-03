@@ -1819,6 +1819,30 @@ textarea.input {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+.socials--colored .socials__link--soc-youtb {
+  background-color: #FC0000;
+}
+.socials--colored .socials__link--soc-youtb .icon {
+  font-size: 12.73px;
+}
+.socials--colored .socials__link--soc-ok {
+  background-color: #FC8800;
+}
+.socials--colored .socials__link--soc-ok .icon {
+  font-size: 19.02px;
+}
+.socials--colored .socials__link--soc-tg {
+  background-color: #00C0FC;
+}
+.socials--colored .socials__link--soc-tg .icon {
+  font-size: 14.42px;
+}
+.socials--colored .socials__link--soc-pint {
+  background-color: #E72A00;
+}
+.socials--colored .socials__link--soc-pint .icon {
+  font-size: 18.51px;
+}
 
 .socials__item {
   list-style-type: none;
@@ -1864,6 +1888,60 @@ textarea.input {
   font-size: 18.51px;
 }
 
+.pagination {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  column-gap: 0px;
+}
+.pagination .pagination__arrow {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+.pagination .pagination__arrow[disabled] {
+  color: rgba(0, 0, 0, 0.12);
+}
+.pagination .pagination__arrow--prev {
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.pagination .pagination__arrow--next {
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.pagination .pagination__list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  column-gap: 0px;
+}
+.pagination .pagination__item {
+  list-style-type: none;
+}
+.pagination .pagination__link {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #000;
+}
+.pagination .pagination__link.active {
+  color: #000;
+  background-color: #F1F1F1;
+}
+
 /*--------------------ui-page----------------------*/
 .form__example {
   max-width: 624px;
@@ -1886,14 +1964,13 @@ textarea.input {
   left: 0;
   bottom: 0;
   right: 0;
-  width: 100%;
   height: 345px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  width: 100%;
   background-color: #fff;
   transition: all 0.4s;
   visibility: hidden;
   opacity: 0;
+  overflow-y: hidden;
 }
 @media only screen and (max-width: 959.98px) {
   .header__search-results {
@@ -1905,6 +1982,7 @@ textarea.input {
 ._scroll .header__search-results {
   padding-top: 25px;
   padding-left: 80px;
+  height: 370px;
 }
 @media only screen and (max-width: 959.98px) {
   ._scroll .header__search-results {
@@ -1915,15 +1993,21 @@ textarea.input {
   visibility: visible;
   opacity: 1;
 }
+.header__search-results > .wrapper-smart {
+  position: relative;
+  max-height: 334px;
+}
 
 .search-column--block {
+  height: 345px;
+  overflow-y: auto;
+  overflow-x: hidden;
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 8px;
   margin-right: 8px;
-  padding-bottom: 20px;
   -ms-flex: 1 1 calc(100% - 270px - 16px);
   flex: 1 1 calc(100% - 270px - 16px);
 }
@@ -1931,6 +2015,25 @@ textarea.input {
   .search-column--block {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
+  }
+}
+
+.search-results-header__all {
+  position: absolute;
+  bottom: 18px;
+  right: 390px;
+  color: #A9A9A9;
+  font-size: 12px;
+  line-height: 15px;
+}
+@media only screen and (max-width: 1392px) {
+  .search-results-header__all {
+    right: 270px;
+  }
+}
+@media only screen and (max-width: 959.98px) {
+  .search-results-header__all {
+    display: none;
   }
 }
 
@@ -1961,6 +2064,7 @@ textarea.input {
 .result-row-values {
   -ms-flex: 1 1 calc(100% - 144px - 32px);
   flex: 1 1 calc(100% - 144px - 32px);
+  padding-bottom: 25px;
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 8px;
@@ -2031,6 +2135,7 @@ textarea.input {
 .mob-nav {
   padding: 8px 8px;
   position: fixed;
+  z-index: 12;
   height: 56px;
   display: -ms-flexbox;
   display: flex;
@@ -2041,6 +2146,11 @@ textarea.input {
   border: 1px solid #E4E4E4;
   border-radius: 1px;
 }
+@media only screen and (min-width: 959.98px) {
+  .mob-nav {
+    display: none;
+  }
+}
 
 .mob-nav__list {
   width: 100%;
@@ -2050,6 +2160,12 @@ textarea.input {
   justify-content: space-between;
   -ms-flex-align: end;
   align-items: flex-end;
+}
+@media only screen and (min-width: 576px) {
+  .mob-nav__list {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
 }
 
 .mob-nav__item {

@@ -8,15 +8,14 @@
 	bottom: 0;	
 	right: 0;	
 	
-	width: 100%;
 	height: 345px;
+	width: 100%;
 
-	overflow-y: auto;
-	overflow-x: hidden;
 	background-color: #fff;
 	transition: all .4s;
 	visibility: hidden;
 	opacity: 0;
+	overflow-y: hidden;
 
 	@include max-screen($md){
 		padding-left: 40px;
@@ -29,6 +28,7 @@
 		// top: 80px;
 		padding-top: 25px;
 		padding-left: 80px;
+		height: 370px;
 
 		@include max-screen($md){
 			padding-left: 56px;
@@ -39,17 +39,41 @@
 		visibility: visible;
 		opacity: 1;
 	}
+
+	& > .wrapper-smart{
+		position: relative;
+		max-height: 334px;
+	}
 }
 .search-results-header {}
 .search-column--block {
+	// position: relative;	
+	height: 345px;
+	overflow-y: auto;
+	overflow-x: hidden;
 	display: flex;
 	@include col();
-	padding-bottom: 20px;
+	// padding-bottom: 20px;
 	flex: 1 1 calc(100% - 270px - 16px);
 
 	@include max-screen($md){
 		flex-basis: 100%;
 		
+	}
+}
+.search-results-header__all{
+	position: absolute;
+	bottom: 18px;
+	right: 390px;
+	color: #A9A9A9;
+	font-size: 12px;
+	line-height: 15px;
+
+	@include max-screen($max){
+		right: 270px;
+	}
+	@include max-screen($md){
+		display: none;
 	}
 }
 .search-results-header__row {
@@ -74,6 +98,7 @@
 }
 .result-row-values {
 	flex: 1 1 calc(100% - 144px - 32px);
+	padding-bottom: 25px;
 	@include col();
 	@include max-screen($md){
 		flex-basis: 100%;

@@ -263,6 +263,23 @@ block content
 		.billet.billet--markdown уценка
 		.billet.billet--action Акция
 
+	.wrapper
+		- var socs = ['soc-vk', 'soc-pint', 'soc-ok', 'soc-tg', 'soc-youtb'];
+			ul.socials.socials--colored
+				each soc in socs
+					li.socials__item
+						a(href="#" class="socials__link socials__link--" + soc)
+							+icon(soc)
+
+			ul.socials
+				each soc in socs
+					li.socials__item
+						a(href="#" class="socials__link socials__link--" + soc)
+							+icon(soc)
+	
+	.wrapper
+		+pagination([1, '...', 14, 15, 16, '...', 189], '')
+
 	.wrapper.rating
 		h2 Rating in reviews
 		+simpleRating(3)

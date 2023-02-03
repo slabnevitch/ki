@@ -33,11 +33,13 @@ mixin swiper(classname, pagination, scrollbar, navigation)
 mixin pagination(items = [1, 2, 3, '...', 15], arrowClass = '')
 	.pagination
 		button(class=arrowClass ? "pagination__arrow pagination__arrow--prev" + ' ' + arrowClass : "pagination__arrow pagination__arrow--prev" disabled='')
+				+icon('chev-down')
 		ul.pagination__list
-			each item in items
+			each item, i in items
 				li.pagination__item
-					a.pagination__link.active(href='#')= item
+					a(class=i==3 ? "pagination__link active" : "pagination__link" href='#')= item
 		button(class=arrowClass ? "pagination__arrow pagination__arrow--prev" + ' ' + arrowClass : "pagination__arrow pagination__arrow--prev")
+				+icon('chev-down')
 
 //- статичный звезный рейтинг без возможности выбора полтзователем
 //- rate - кол-во "золотых" звезд в строке

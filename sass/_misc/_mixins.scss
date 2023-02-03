@@ -99,14 +99,14 @@
 		transform: translateX(0);
 	}
 }
-@mixin pagination($width: 34, 
-	$gap: 10, 
-	$fontSize: 18, 
+@mixin pagination($width: 32, 
+	$gap: 0, 
+	$fontSize: 14, 
 	$round: true, 
-	$color: $text, 
+	$color: #000, 
 	$bg: transparent, 
-	$activeColor: #fff, 
-	$activeBg: $accent,
+	$activeColor: #000, 
+	$activeBg: $inpbg,
 	$arrowColor: $text){
 	
 	display: flex;
@@ -146,8 +146,10 @@
 		width: #{$width} + 'px';
 		height: #{$width} + 'px';
 		font-size:#{$fontSize} + 'px';
+		text-decoration: none;
 		@if $round == true { 
-			border-radius: 50%;
+			// border-radius: 50%;
+			border-radius: 4px;
 	  }
 		background-color: $bg;
 		color: $color;

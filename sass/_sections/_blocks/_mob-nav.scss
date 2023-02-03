@@ -2,6 +2,7 @@
 .mob-nav {
 	padding: 8px 8px;
 	position: fixed;
+	z-index: 12;
 	height: 56px;
 	display: flex;	
 	// align-items: center;	
@@ -11,12 +12,22 @@
 	background-color: #fff;
 	border: 1px solid #E4E4E4;
 	border-radius: 1px;
+	
+	@include min-screen($md){
+		display: none;
+	}
 }
 .mob-nav__list {
 	width: 100%;	
 	display: flex;
 	justify-content: space-between;	
 	align-items: flex-end;
+
+	@include min-screen($xs){
+		justify-content: space-around;
+
+
+	}
 }
 .mob-nav__item {
 	list-style-type: none;
