@@ -1053,9 +1053,21 @@ textarea.input {
 .form__label:not(:last-child) {
   margin-bottom: 8px;
 }
+.form__label .icon-attention {
+  display: none;
+  font-size: 20px;
+  color: #E63600;
+  position: absolute;
+  top: 50%;
+  right: 22px;
+  margin-top: -10px;
+}
 .form__label--error .form__input {
   color: #E63600;
   border-color: #E63600;
+}
+.form__label--error .icon-attention {
+  display: block;
 }
 
 .form__input {
@@ -1088,7 +1100,6 @@ textarea.input {
 .form__input--bg {
   background-color: #F1F1F1;
   border-color: transparent;
-  border-radius: 0;
 }
 
 .form__policy a {
@@ -1136,7 +1147,8 @@ textarea.input {
   border-color: #003D9E;
 }
 .form__check:checked + .form__custom-chek:before {
-  display: block;
+  width: 11px;
+  height: 11px;
 }
 .form__check:checked ~ .form__policy {
   color: rgba(0, 0, 0, 0.8);
@@ -1176,12 +1188,12 @@ textarea.input {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  display: none;
-  width: 11px;
-  height: 11px;
+  width: 0;
+  height: 0;
   border-radius: 50%;
   background-color: #003D9E;
   content: "";
+  transition: all 0.3s;
 }
 
 .form__area {
@@ -1798,6 +1810,108 @@ textarea.input {
   font-size: 10px;
   line-height: 14px;
 }
+.btn-buy.clicked {
+  padding-top: 3px;
+  background-color: #fff;
+  border-color: #003D9E;
+  color: #003D9E;
+}
+.btn-buy.clicked.btn-yellow {
+  background-color: #fff;
+  border-color: #FCC200;
+  color: #FCC200;
+}
+.btn-buy.clicked.btn-yellow .counter__button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  -ms-flex: 0 0 20px;
+  flex: 0 0 20px;
+  color: #FCC200;
+}
+.btn-buy.clicked.btn-yellow .counter__button .icon {
+  color: #FCC200;
+}
+.btn-buy.clicked.btn-yellow .counter__count,
+.btn-buy.clicked.btn-yellow .counter__measures {
+  color: #FCC200;
+}
+.btn-buy.clicked .btn__val {
+  display: none;
+}
+.btn-buy.clicked .counter {
+  display: -ms-flexbox;
+  display: flex;
+}
+.btn-buy .counter {
+  display: none;
+  width: 100%;
+  height: auto;
+  border: none;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: #003D9E;
+}
+.btn-buy .counter__button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  -ms-flex: 0 0 20px;
+  flex: 0 0 20px;
+  color: #003D9E;
+}
+.btn-buy .counter__button, .btn-buy .counter__count {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+.btn-buy .counter__button .icon, .btn-buy .counter__count .icon {
+  color: #003D9E;
+}
+.btn-buy .counter__button .icon-plus, .btn-buy .counter__count .icon-plus {
+  font-size: 10.47px;
+}
+.btn-buy .counter__button .icon-minus, .btn-buy .counter__count .icon-minus {
+  font-size: 2px;
+}
+.btn-buy .counter__count {
+  font-family: "NavigoMedium", sans-serif;
+  margin-left: -3px;
+  margin-right: -3px;
+  -ms-flex: 0 0 32px;
+  flex: 0 0 32px;
+  padding: 0;
+  text-align: right;
+  padding-right: 6px;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 12px;
+  color: #003D9E;
+}
+.btn-buy .counter__block {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+}
+.btn-buy .counter__measures {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  font-family: "NavigoMedium", sans-serif;
+  text-transform: none;
+}
 @media (any-hover: hover) {
   .btn:hover {
     cursor: pointer;
@@ -2048,7 +2162,7 @@ textarea.input {
   max-width: 624px;
 }
 
-.ui-buttons div {
+.ui-buttons > div {
   margin-bottom: 15px;
 }
 .ui-buttons .btn {
@@ -2868,6 +2982,11 @@ textarea.input {
   margin-top: 14px;
   margin-bottom: 12px;
 }
+.side-modal .form .form__policy {
+  font-size: 10px;
+  line-height: 12px;
+  color: #A9A9A9;
+}
 .side-modal .form__row {
   margin-bottom: 10px;
 }
@@ -2908,12 +3027,6 @@ textarea.input {
 
 .side-modal__text {
   margin-bottom: 32px;
-}
-
-.form__policy {
-  font-size: 10px;
-  line-height: 12px;
-  color: #A9A9A9;
 }
 
 .form__error-message {

@@ -39,10 +39,22 @@
 		&:not(:last-child){
 			margin-bottom: 8px;
 		}
+		.icon-attention{
+			display: none;
+			font-size: 20px;
+			color: $red;
+			position: absolute;
+			top: 50%;
+			right: 22px;
+			margin-top: -10px;
+		}
 		&--error{
 			.form__input {
 				color: $red;
 				border-color: $red;
+			}
+			.icon-attention{
+				display: block;
 			}
 		}
 	}
@@ -62,7 +74,6 @@
 	&--bg{
 		background-color: $inpbg;
 		border-color: transparent;
-		border-radius: 0;
 	}
 
 }
@@ -95,7 +106,9 @@
 		& + .form__custom-chek {
 			border-color: $accent;
 			&:before{
-				display: block;
+				// display: block;
+				width: 11px;
+				height: 11px;
 			}
 		}
 		& ~ .form__policy {
@@ -130,12 +143,13 @@
 		}
 	&:before{
 		@include absolute-center;
-		display: none;
-		width: 11px;
-		height: 11px;
+		// display: none;
+		width: 0;
+		height: 0;
 		border-radius: 50%;
 		background-color: $accent;
 		content: '';
+		transition: all .3s;
 	}
 }
 .form__area{

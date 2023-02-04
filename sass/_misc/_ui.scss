@@ -113,6 +113,106 @@
     font-size: 10px;
     line-height: 14px;
   }
+  &-buy{
+    &.clicked{
+      padding-top: 3px;
+      background-color: #fff;
+      border-color: $accent;
+      color: $accent;
+
+      &.btn-yellow{
+        background-color: #fff;
+        border-color: $yellow;
+        color: $yellow;
+
+        .counter__button{
+          @include but-null;
+          width: 20px;
+          height: 20px;
+          text-align: center;
+          flex: 0 0 20px;
+          color:  $yellow;
+
+          .icon{
+            color:  $yellow;
+          }
+        }
+        .counter__count,
+        .counter__measures{
+            color:  $yellow;
+        }
+      }
+
+      .btn__val{
+        display: none;
+      }
+      .counter{
+        display: flex;
+      
+      }
+    }
+    .counter{
+      display: none;
+      width: 100%;
+      height: auto;
+      border: none;
+      align-items: center;
+      justify-content: space-between;
+      color: $accent;
+    }
+    .counter__button{
+      @include but-null;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      flex: 0 0 20px;
+      color: $accent;
+    }
+    .counter__button, .counter__count{
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      .icon{
+        color: $accent;
+
+        &-plus{
+          font-size: 10.47px;
+        }
+        &-minus{
+          font-size: 2px;
+        }
+      }
+    }
+    .counter__count{
+       font-family: $navm;
+        // flex-shrink: 0;
+        margin-left: -3px;
+        margin-right: -3px;
+        flex: 0 0 32px;
+        padding: 0;
+        // outline: 1px solid;
+        text-align: right;
+        padding-right: 6px;
+        background-color: transparent;
+        font-size: 12px;
+        line-height: 12px;
+         color: $accent;
+      }
+      .counter__block{
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+      }
+      .counter__measures{
+        // margin-top: 1px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 12px;
+         font-family: $navm;
+         text-transform: none;
+      }
+    }
 
   @media (any-hover: hover) { //только для устройств с ховером
   	&:hover{
@@ -321,7 +421,7 @@
   max-width: 624px;
 }
 .ui-buttons{
-  div{
+ & > div{
     margin-bottom: 15px;  
   }
   .btn{
