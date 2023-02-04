@@ -238,7 +238,34 @@
 }
 .pagination{
   @include pagination;
+
+  &__arrow{
+    .icon{
+      font-size: 14px;
+      color: #A9A9A9;
+      vertical-align: middle;
+    }
+    &--prev{
+      margin-right: 12px;
+    }
+    &--next{
+      margin-left: 12px;
+    }
+  }
+  .pagination__item{
+    width: 0 0 auto;
+  }
+  .pagination__link{
+   width: 20px;
+   max-width: 24px;
+    &.active{
+      margin: 0 8px;
+      width: 32px;
+      max-width: 32px;
+    }
+  }
 }
+
 /*--------------------ui-page----------------------*/
 .form__example{
   max-width: 624px;

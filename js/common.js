@@ -89,7 +89,11 @@
 					document.getElementById('header-location')
 						.classList.toggle('opened');
 						document.querySelector('.header').classList.remove('header-catalog-opened');
-						coverHide();			
+						if(screen.width > 959.98){
+							coverHide();			
+						}else{
+							coverShow();			
+						}
 					}else{
 					document.getElementById('header-location').classList.remove('opened');
 				}
