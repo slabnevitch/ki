@@ -1,0 +1,120 @@
+/*--------------------review----------------------*/
+.review {
+	max-width: 704px;
+	padding: 40px 40px 33px 40px;
+	background: #F9F9F9;
+	border-radius: 4px;
+}
+.review__header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+.person {}
+.person__top {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 20px;
+}
+.person__portrait {
+	flex-shrink: 0;
+	margin-right: 8px;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	background: #A9A9A9;
+
+	img{
+		@include absolute-center;
+		max-width: 105%;
+		max-height: 105%;
+	}
+}
+.person__info {}
+.person__name {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+}
+.person__date {
+	font-size: 12px;
+	line-height: 15px;
+	color: #A9A9A9;
+}
+.person__rating {
+	display: flex;
+	align-items: center;
+	.simple-rating {
+		flex-shrink: 0;
+		margin-right: 8px;
+		@include simple-rating(#D1D1D1, $yellow, 14px, 8px, '\e901');
+	}
+
+}
+
+.person__rating-mark {
+	font-size: 12px;
+	line-height: 15px;
+}
+.review__context {
+	position: relative;
+	margin-left: 16px;
+	cursor: pointer;
+	.icon{
+		font-size: 22px;
+		color: #A9A9A9;
+	}
+
+	&:hover, &:active, &:focus{
+		.context-review__drop {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	
+}
+.context-review__drop {
+	position: absolute;
+	right: 10px;
+	top: 14px;
+	display: block;
+	padding: 24px 28px 16px 28px;
+	font-size: 14px;
+	line-height: 16px;
+	color: #A9A9A9;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .3s;
+
+	// background-color: #fff;
+	background-image: url(../img/review/context_bg.svg);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.review__body {}
+.review__div {}
+.review__title {}
+.review__text {}
+.review__footer {}
+.review__photos {}
+.review__photo {}
+._fit {}
+._fit-img {}
+.review__actions {}
+.review__collapse {}
+.review__options {}
+.review__answer {}
+.review__comments {}
+.icon-chat {}
+.review__comments-count {}
+.review__like {}
+.icon-like {}
+.review__like-count {}
+.review__dislike {}
+.icon-unlike {}
+.review__dislike-count {}
+/*--------------------END review----------------------*/ 

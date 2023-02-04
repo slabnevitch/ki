@@ -6,6 +6,58 @@ block title
 block content
 
 	.wrapper
+		article.review
+			header.review__header
+				.person
+					.person__top
+						.person__portrait
+							//- img(src="img/person.jpg" alt="alt")
+						.person__info
+							.person__name Иванов Иван
+							.person__date 12 декабря 2021
+					form.person__rating
+						+simpleRating(5)
+						.person__rating-mark Плохой товар
+				
+				.review__context.context-review
+					+icon('context')
+					a(href="#").context-review__drop Пожаловаться
+
+			.review__body
+				.review__div
+					.review__title Опыт использования
+					p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+				.review__div
+					.review__title Достоинства
+					p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+
+				.review__div
+					.review__title Недостатки
+					p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+					p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+
+			footer.review__footer
+				.review__photos
+					- for (var i=0; i < 2; i++)
+						.review__photo._fit
+							img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
+
+				.review__actions
+					button(type="button").review__collapse Свернуть
+					.review__options
+						a(href="#").review__answer Ответить
+						a(href="#").review__comments
+							+icon('chat')
+							.review__comments-count 1
+						a(href="#").review__like
+							+icon('like')
+							.review__like-count 1
+						a(href="#").review__dislike
+							+icon('unlike')
+							.review__dislike-count 1
+
+	.wrapper
 		- var tags = ['СКИДКИ', 'АКЦИИ', 'МОИ ЗАКАЗЫ', '23 ФЕВРАЛЯ', 'лендинг', 'Новинки'];
 		.tags
 			each tag, i in tags

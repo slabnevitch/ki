@@ -369,7 +369,7 @@
 .product-card__rating {
 	padding-bottom: 7px;
 	.crystal-rating{
-		@include crystal-rating($gray-l, $yellow, 12, 4, '\e901');
+		@include simple-rating($gray-l, $yellow, 12, 4, '\e901');
 		.crystal-rating__value {
 			margin-left: 3px;
 			font-size: 10px;
