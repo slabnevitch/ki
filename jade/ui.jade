@@ -4,6 +4,11 @@ block title
 	| Главная страница
 
 block content
+	.wrapper
+		- var tags = ['СКИДКИ', 'АКЦИИ', 'МОИ ЗАКАЗЫ', '23 ФЕВРАЛЯ', 'лендинг', 'Новинки'];
+		.tags
+			each tag, i in tags
+				div(class=i<=2 ? "tag active": 'tag')= tag
 	.wrapper-smart
 		.wrapper-flex
 			- for (var i=0; i < 8; i++)
@@ -98,44 +103,7 @@ block content
 						a(href="#").info-product-card__oneclick Купить в 1 клик
 		
 
-		.product-card.product-card--mini
-			.product-card__img-wrap
-				.billet.billet--action.billet--mini
-				a(href="#").product-card__border
-					span.product-card__img
-						img(src="img/product-card/prod-sm.jpg" alt="alt")
-			
-			
-			.product-card__chars
-				.product-card__price
-					a(href="#").product-card__price-block
-						.product-price 14 729 ₽
-						.product-price-sale 18 411₽
-					
-					a(href="#").product-bonus
-						.product-bonus__val 99
-						+icon('bonus')
-			
-				a(href="#").product-card__name Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
-				.product-card__rating-wrap
-					.product-card__rating
-						+crystalRating('4,0')
-
-				.product-card__footer
-					.counter(data-min="0" data-max="100")
-						button.counter__button.counter-minus
-							+icon('minus')
-						.counter__block
-							input(autocomplete="off" type="text" name="name" value="1" ).counter__count
-							.counter__measures шт
-						button.counter__button.counter-plus
-							+icon('plus')
-
-					.product-card__actions
-						a(href="#").product-card__action
-							+icon('favourites')
-						a(href="#").product-card__action
-							+icon('compare')
+		include _blocks/product-card-mini
 
 	
 
@@ -145,7 +113,7 @@ block content
 		.form__example
 			form.form(action='#')
 				.form__row
-					.form__row-title Тип плательщика*
+					.form__row-title.form__row-title--required Тип плательщика*
 					- var types = ['Физическое лицо', 'Юридическое лицо'];
 						.wrapper-flex
 							each item, ind in types
@@ -157,7 +125,7 @@ block content
 											span.form__policy= item
 
 				.form__row
-					.form__row-title Покупатель*
+					.form__row-title.form__row-title--required Покупатель*
 					label.form__label
 						input.form__input(type='text' name='name' placeholder='Фамилия*')
 					
@@ -176,7 +144,7 @@ block content
 
 				
 				.form__row
-					.form__row-title Способ получения*
+					.form__row-title.form__row-title--required Способ получения*
 					.form__deliveries.deliveries-form
 						.wrapper-flex
 							- var delivs = ['Самовывоз из пункта выдачи', 'Доставка курьером'];
@@ -193,7 +161,7 @@ block content
 						.deliveries-form__note Обращаем Ваше внимание, что подъем и выгрузка товара на этаж не осуществляется.
 
 				.form__row
-					.form__row-title Оплата*
+					.form__row-title.form__row-title--required Оплата*
 					.form__row-content
 						- var kinds = ['Оплата картой на сайте', 'СберСпасибо - оплата на сайте', 'Оплата при получении', 'Выставить счет для предоплаты безналичным платежом', 'Оплата СБП (сервис быстрых платежей)', 'В кредит'];
 						each item, ind in kinds
@@ -208,7 +176,7 @@ block content
 											br
 											| При этом способе расчёта недоступно использование бонусов "Спасибо" от Сбербанка.
 				.form__row
-					.form__row-title Комментарии к заказу
+					.form__row-title.form__row-title--required Комментарии к заказу
 					label.form__label
 						textarea.form__area(type='text' name='question' placeholder="Есть что добавить?")
 	.wrapper.ui-buttons
@@ -280,6 +248,9 @@ block content
 	.wrapper
 		+pagination([1, '...', 14, 15, 16, '...', 189], '')
 
+	.wrapper
+		include _blocks/side-modals	
+	
 	.wrapper.rating
 		h2 Rating in reviews
 		+simpleRating(3)

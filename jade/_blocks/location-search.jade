@@ -1,0 +1,17 @@
+.location-search
+	.wrapper.location-search__wrapper
+		.location-search__close#location-search-closer
+			+icon('ctlg-close')
+		.location-search__header
+			.location-search__key Ваш город
+			.header__search.search-header
+				form(action="#" class="form").search-header__form
+					input(autocomplete="off" type="text" name="search" class="form__input search-header__input form__input--bg" placeholder="Поиск")
+					button.search-header__send(type="submit")
+						+icon('magnifier')
+
+		ul.location-search__list
+			- var cities = ['Краснодар', 'Москва', 'Самара', 'Нижний Новгород', 'Казань', 'Ставрополь', 'Ростов-на-Дону', 'Волгоград', 'Саратов', 'Воронеж', 'Санкт-Петербург', 'Екатеринбург'];
+			each item, i in cities
+				li(class=i == 0 ? "location-search__item active" : "location-search__item")
+					a(href="#").location-search__link= item

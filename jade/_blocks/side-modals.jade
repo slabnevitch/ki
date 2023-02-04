@@ -1,0 +1,92 @@
+.side-modal.for-order-modal#modal-for-order
+	button(type="button").side-modal__close.button-close
+		+icon('ctlg-close')
+	
+	.side-modal__inner
+		.side-modal__title Под заказ
+
+		include product-card-mini
+
+		.side-modal__text Оставьте ваш номер телефона и наш менеджер свяжется с вами для оформления заказа
+
+		form.form(action='#')
+			.form__row
+				.form__row-title.form__row-title--required ИМЯ
+				label.form__label
+					input.form__input(type='text' name='name')
+			.form__row
+				.form__row-title.form__row-title--required Телефон*
+				label.form__label
+					input.form__input(type='text' name='name')
+			.form__row
+				.form__row-title E-mail
+				label.form__label
+					input.form__input(type='text' name='name')
+
+			button(type="submit").btn.btn-lg.btn-order Отправить заявку
+
+			.form__policy *При входе и регистрации вы соглашаетесь с #[a(href="#") Политикой обработки персональных данных]
+
+.side-modal#modal-to-credit
+	button(type="button").side-modal__close.button-close
+		+icon('ctlg-close')
+	
+	.side-modal__inner
+		.side-modal__title Купить в кредит
+
+		form.form(action='#')
+			.form__row
+				.form__row-title.form__row-title--required ФАМИЛИЯ*
+				label.form__label
+					input.form__input(type='text' name='name')
+			.form__row
+				.form__row-title.form__row-title--required Имя*
+				label.form__label
+					input.form__input(type='text' name='name')
+			.form__row
+				.form__row-title.form__row-title--required Отчество*
+				label.form__label
+					input.form__input(type='text' name='name')
+			.form__row
+				.form__row-title.form__row-title--required Телефон*
+				label.form__label
+					input.form__input(type='text' name='name')
+			.form__row
+				.form__row-title E-mail
+				label.form__label
+					input.form__input(type='text' name='name')
+			.form__row
+				.form__row-title Город
+				label.form__label
+					input.form__input(type='text' name='name')
+
+			button(type="submit").btn.btn-lg.btn-order Отправить заявку
+
+			.form__policy *При входе и регистрации вы соглашаетесь с #[a(href="#") Политикой обработки персональных данных]
+
+.side-modal.confirm-side-modal#modal-confirm
+	button(type="button").side-modal__back.button-back
+		+icon('arrow-left')
+	button(type="button").side-modal__close.button-close
+		+icon('ctlg-close')
+	
+	.side-modal__inner
+		.side-modal__title Подтвердите номер
+
+		.side-modal__text Мы отправили вам код на номер #[div 8 961 123-45-67]
+
+		form.form(action='#')
+			.form__row
+				.form__row-title.form__row-title--required Код
+				label.form__label.form__label--error
+					input.form__input(type='text' name='name')
+					.form__error-message Введён неверный код
+
+			.confirm-side-modal__return
+				.form__row-title.form__row-title--required Код
+				.form__policy Код отправлен, запросить повторный можно #[div через 24 секунд]
+
+
+			button(type="submit").btn.btn-lg.btn-order подтвердить телефон
+
+			.form__policy *При входе и регистрации вы соглашаетесь с #[a(href="#") Политикой обработки персональных данных]

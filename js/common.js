@@ -86,8 +86,7 @@
 		// location panel toggle
 			if(document.querySelector('.header') !== null){
 				if(targ.classList.contains('loc-header__selected') || targ.closest('.loc-header__selected') !== null || targ.classList.contains('loc-header__panel') || targ.closest('.loc-header__panel')){
-					document.getElementById('header-location')
-						.classList.toggle('opened');
+					document.body.classList.toggle('loc-header-opened');
 						document.querySelector('.header').classList.remove('header-catalog-opened');
 						if(screen.width > 959.98){
 							coverHide();			
@@ -99,8 +98,8 @@
 				}
 				if(targ.getAttribute('id') == 'city-list-opener'){
 					console.log('city-list-opener')
-					document.querySelector('.header').classList.add('cities-opened');
-					document.querySelector('.header__loc').classList.remove('opened');
+					document.body.classList.add('cities-opened');
+					document.body.classList.remove('loc-header-opened');
 					coverShow();
 				}
 				// else if(targ.closest('.header__city-list') === null && targ.getAttribute('id') !== 'catalog-switcher' && targ.closest('#catalog-switcher') == null){
@@ -109,7 +108,7 @@
 				// 	coverHide();			
 				// }
 				if(targ.getAttribute('id') == 'location-search-closer' || targ.closest('#location-search-closer') !== null){
-					document.querySelector('.header').classList.remove('cities-opened');
+					document.body.classList.remove('cities-opened');
 					coverHide();			
 				}
 			}

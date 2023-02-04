@@ -256,16 +256,66 @@
     width: 0 0 auto;
   }
   .pagination__link{
-   width: 20px;
-   max-width: 24px;
+   width: auto;
+   // max-width: 24px;
+      margin: 0 4px;
     &.active{
-      margin: 0 8px;
       width: 32px;
       max-width: 32px;
     }
   }
 }
+.button-close,
+.button-back {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  @include but-null;
 
+  @media (any-hover: hover) { //только для устройств с ховером
+    cursor: pointer;
+  }
+  .icon{
+    font-size: 12px;
+    color: $text;
+    @include absolute-center-old;
+  }
+}
+// Tags
+.tags{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.tag{
+  padding-top: 7px; 
+  padding-bottom: 5px; 
+  padding-left: 13px;
+  padding-right: 13px;  
+  display: flex;  
+  align-items: center;
+  justify-content: center; 
+  min-height: 25px;
+  margin-bottom: 5px; 
+  text-transform: uppercase;
+  border: 1px solid #A9A9A9;
+  border-radius: 20px ;
+  font-family:  $navm;
+  font-size: 10px;
+  line-height: 14px;
+  text-decoration: none;
+  outline: none;
+
+  &:not(:last-child){
+    margin-right: 5px; 
+  }
+
+  &.active{
+    color:  $blue;
+    border-color: $blue;
+  }
+}
+// END Tags
 /*--------------------ui-page----------------------*/
 .form__example{
   max-width: 624px;

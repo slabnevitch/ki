@@ -1,0 +1,92 @@
+/*--------------------side-modals----------------------*/
+.side-modal {
+	width: 100%;
+	max-width: 432px;
+	padding-bottom: 25px;
+	padding-top: 30px;
+	position: relative;
+	.product-card--mini {
+		padding-bottom: 20px;
+		margin-bottom: 10px;
+		border-bottom: 1px solid $border;
+	}
+	.form{
+		.btn-order{
+			margin-top: 14px;
+			margin-bottom: 12px;
+		}
+	}
+	.form__row {
+		margin-bottom: 10px;
+	}
+	.form__input {
+		border-radius: 0;
+	}
+}
+.for-order-modal{
+	.side-modal__text {
+		margin-bottom: 37px;
+		color: #A9A9A9;
+	}
+}
+.side-modal__close {
+	position: absolute;
+	top: 24px;
+	right: 24px;
+}
+.side-modal__back {
+	position: absolute;
+	top: 24px;
+	left: 24px;
+}
+
+.side-modal__inner {
+	max-width: 272px;
+	margin: 0 auto;
+}
+.side-modal__title {
+	padding-bottom: 5px;
+	margin-bottom: 24px;
+	font-family: $navm;
+	font-size: 22px;
+	line-height: 26px;
+	border-bottom: 1px solid $border;
+}
+.side-modal__text {
+	margin-bottom: 32px;
+}
+.form__policy {
+	font-size: 10px;
+	line-height: 12px;
+	color: #A9A9A9;
+}
+.form__error-message {
+
+	font-size: 10px;
+	line-height: 12px;
+	color: $red;
+}
+.confirm-side-modal {
+	padding-top: 95px;
+
+	.side-modal__title{
+		margin-bottom: 39px;
+		line-height: 18px;
+	}
+	.side-modal__text{
+		margin-bottom: 48px;
+	}
+	.form__row{
+		margin-bottom: 18px;
+	}
+}
+.confirm-side-modal__return{
+	margin-bottom: 10px;
+	.form__row-title{
+		margin-bottom: 3px;
+		font-size: 12px;
+		line-height: 15px;
+		letter-spacing: -0.02em;
+	}
+}
+/*--------------------END side-modals----------------------*/ 

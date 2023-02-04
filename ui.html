@@ -28,16 +28,6 @@
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#loc"></use>
                         </svg>
                   </button>
-                  <div class="loc-header__panel">
-                    <div class="loc-header__city">Ваш город<a href="#" class="loc-header__city-value">Краснодар
-                            <svg class="icon icon-chev-down ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
-                            </svg></a></div>
-                    <div class="loc-header__city-buttons">
-                      <button id="city-list-opener" class="loc-header__no">Нет</button>
-                      <button class="loc-header__yes">Да</button>
-                    </div>
-                  </div>
                 </div><a href="tel:88002502123" class="header__phone phone-header">
                       <svg class="icon icon-phone ">
                         <use xlink:href="img/icons-svg/symbol/sprite.svg#phone"></use>
@@ -1851,44 +1841,18 @@
             </div>
           </div>
         </div>
-        <div class="header__city-list location-search">
-          <div class="wrapper location-search__wrapper">
-            <div id="location-search-closer" class="location-search__close">
-                  <svg class="icon icon-ctlg-close ">
-                    <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
-                  </svg>
-            </div>
-            <div class="location-search__header">
-              <div class="location-search__key">Ваш город</div>
-              <div class="header__search search-header">
-                <form action="#" class="form search-header__form">
-                  <input autocomplete="off" type="text" name="search" placeholder="Поиск" class="form__input search-header__input form__input--bg">
-                  <button type="submit" class="search-header__send">
-                        <svg class="icon icon-magnifier ">
-                          <use xlink:href="img/icons-svg/symbol/sprite.svg#magnifier"></use>
-                        </svg>
-                  </button>
-                </form>
-              </div>
-            </div>
-            <ul class="location-search__list">
-              <li class="location-search__item active"><a href="#" class="location-search__link">Краснодар</a></li>
-              <li class="location-search__item"><a href="#" class="location-search__link">Москва</a></li>
-              <li class="location-search__item"><a href="#" class="location-search__link">Самара</a></li>
-              <li class="location-search__item"><a href="#" class="location-search__link">Нижний Новгород</a></li>
-              <li class="location-search__item"><a href="#" class="location-search__link">Казань</a></li>
-              <li class="location-search__item"><a href="#" class="location-search__link">Ставрополь</a></li>
-              <li class="location-search__item"><a href="#" class="location-search__link">Ростов-на-Дону</a></li>
-              <li class="location-search__item"><a href="#" class="location-search__link">Волгоград</a></li>
-              <li class="location-search__item"><a href="#" class="location-search__link">Саратов</a></li>
-              <li class="location-search__item"><a href="#" class="location-search__link">Воронеж</a></li>
-              <li class="location-search__item"><a href="#" class="location-search__link">Санкт-Петербург</a></li>
-              <li class="location-search__item"><a href="#" class="location-search__link">Екатеринбург</a></li>
-            </ul>
-          </div>
-        </div>
       </header>
       <div class="main-content">
+        <div class="wrapper">
+          <div class="tags">
+            <div class="tag active">СКИДКИ</div>
+            <div class="tag active">АКЦИИ</div>
+            <div class="tag active">МОИ ЗАКАЗЫ</div>
+            <div class="tag">23 ФЕВРАЛЯ</div>
+            <div class="tag">лендинг</div>
+            <div class="tag">Новинки</div>
+          </div>
+        </div>
         <div class="wrapper-smart">
           <div class="wrapper-flex">
             <div class="product-card">
@@ -2061,7 +2025,7 @@
           <div class="form__example">
             <form action="#" class="form">
               <div class="form__row">
-                <div class="form__row-title">Тип плательщика*</div>
+                <div class="form__row-title form__row-title--required">Тип плательщика*</div>
                 <div class="wrapper-flex">
                   <div class="form__type">
                     <form__custom-policy>
@@ -2080,7 +2044,7 @@
                 </div>
               </div>
               <div class="form__row">
-                <div class="form__row-title">Покупатель*</div>
+                <div class="form__row-title form__row-title--required">Покупатель*</div>
                 <label class="form__label">
                   <input type="text" name="name" placeholder="Фамилия*" class="form__input">
                 </label>
@@ -2099,7 +2063,7 @@
                 </label>
               </div>
               <div class="form__row">
-                <div class="form__row-title">Способ получения*</div>
+                <div class="form__row-title form__row-title--required">Способ получения*</div>
                 <div class="form__deliveries deliveries-form">
                   <div class="wrapper-flex">
                     <div class="form__custom-policy delivery-form">
@@ -2124,7 +2088,7 @@
                 </div>
               </div>
               <div class="form__row">
-                <div class="form__row-title">Оплата*</div>
+                <div class="form__row-title form__row-title--required">Оплата*</div>
                 <div class="form__row-content">
                   <div class="form__custom-policy">
                     <label class="form__custom">
@@ -2159,7 +2123,7 @@
                 </div>
               </div>
               <div class="form__row">
-                <div class="form__row-title">Комментарии к заказу</div>
+                <div class="form__row-title form__row-title--required">Комментарии к заказу</div>
                 <label class="form__label">
                   <textarea type="text" name="question" placeholder="Есть что добавить?" class="form__area"></textarea>
                 </label>
@@ -2300,6 +2264,182 @@
                       </svg>
                 </button>
               </div>
+        </div>
+        <div class="wrapper">
+          <div id="modal-for-order" class="side-modal for-order-modal">
+            <button type="button" class="side-modal__close button-close">
+                  <svg class="icon icon-ctlg-close ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+                  </svg>
+            </button>
+            <div class="side-modal__inner">
+              <div class="side-modal__title">Под заказ</div>
+              <div class="product-card product-card--mini">
+                <div class="product-card__img-wrap">
+                  <div class="billet billet--action billet--mini"></div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
+                </div>
+                <div class="product-card__chars">
+                  <div class="product-card__price"><a href="#" class="product-card__price-block">
+                      <div class="product-price">14 729 ₽</div>
+                      <div class="product-price-sale">18 411₽</div></a><a href="#" class="product-bonus">
+                      <div class="product-bonus__val">99</div>
+                          <svg class="icon icon-bonus ">
+                            <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
+                          </svg></a></div><a href="#" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</a>
+                  <div class="product-card__rating-wrap">
+                    <div class="product-card__rating">
+                          <div class="crystal-rating">
+                            <div class="crystal-rating__body">
+                              <div class="crystal-rating__active"></div>
+                              <div class="crystal-rating__items">
+                                <input value="1" type="radio" name="crystal">
+                                <input value="2" type="radio" name="crystal">
+                                <input value="3" type="radio" name="crystal">
+                                <input value="4" type="radio" name="crystal">
+                                <input value="5" type="radio" name="crystal">
+                              </div>
+                            </div>
+                            <div class="crystal-rating__value">4,0</div>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="product-card__footer">
+                    <div data-min="0" data-max="100" class="counter">
+                      <button class="counter__button counter-minus">
+                            <svg class="icon icon-minus ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#minus"></use>
+                            </svg>
+                      </button>
+                      <div class="counter__block">
+                        <input autocomplete="off" type="text" name="name" value="1" class="counter__count">
+                        <div class="counter__measures">шт</div>
+                      </div>
+                      <button class="counter__button counter-plus">
+                            <svg class="icon icon-plus ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#plus"></use>
+                            </svg>
+                      </button>
+                    </div>
+                    <div class="product-card__actions"><a href="#" class="product-card__action">
+                            <svg class="icon icon-favourites ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#favourites"></use>
+                            </svg></a><a href="#" class="product-card__action">
+                            <svg class="icon icon-compare ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
+                            </svg></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="side-modal__text">Оставьте ваш номер телефона и наш менеджер свяжется с вами для оформления заказа</div>
+              <form action="#" class="form">
+                <div class="form__row">
+                  <div class="form__row-title form__row-title--required">ИМЯ</div>
+                  <label class="form__label">
+                    <input type="text" name="name" class="form__input">
+                  </label>
+                </div>
+                <div class="form__row">
+                  <div class="form__row-title form__row-title--required">Телефон*</div>
+                  <label class="form__label">
+                    <input type="text" name="name" class="form__input">
+                  </label>
+                </div>
+                <div class="form__row">
+                  <div class="form__row-title">E-mail</div>
+                  <label class="form__label">
+                    <input type="text" name="name" class="form__input">
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-lg btn-order">Отправить заявку</button>
+                <div class="form__policy">*При входе и регистрации вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+              </form>
+            </div>
+          </div>
+          <div id="modal-to-credit" class="side-modal">
+            <button type="button" class="side-modal__close button-close">
+                  <svg class="icon icon-ctlg-close ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+                  </svg>
+            </button>
+            <div class="side-modal__inner">
+              <div class="side-modal__title">Купить в кредит</div>
+              <form action="#" class="form">
+                <div class="form__row">
+                  <div class="form__row-title form__row-title--required">ФАМИЛИЯ*</div>
+                  <label class="form__label">
+                    <input type="text" name="name" class="form__input">
+                  </label>
+                </div>
+                <div class="form__row">
+                  <div class="form__row-title form__row-title--required">Имя*</div>
+                  <label class="form__label">
+                    <input type="text" name="name" class="form__input">
+                  </label>
+                </div>
+                <div class="form__row">
+                  <div class="form__row-title form__row-title--required">Отчество*</div>
+                  <label class="form__label">
+                    <input type="text" name="name" class="form__input">
+                  </label>
+                </div>
+                <div class="form__row">
+                  <div class="form__row-title form__row-title--required">Телефон*</div>
+                  <label class="form__label">
+                    <input type="text" name="name" class="form__input">
+                  </label>
+                </div>
+                <div class="form__row">
+                  <div class="form__row-title">E-mail</div>
+                  <label class="form__label">
+                    <input type="text" name="name" class="form__input">
+                  </label>
+                </div>
+                <div class="form__row">
+                  <div class="form__row-title">Город</div>
+                  <label class="form__label">
+                    <input type="text" name="name" class="form__input">
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-lg btn-order">Отправить заявку</button>
+                <div class="form__policy">*При входе и регистрации вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+              </form>
+            </div>
+          </div>
+          <div id="modal-confirm" class="side-modal confirm-side-modal">
+            <button type="button" class="side-modal__back button-back">
+                  <svg class="icon icon-arrow-left ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
+                  </svg>
+            </button>
+            <button type="button" class="side-modal__close button-close">
+                  <svg class="icon icon-ctlg-close ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+                  </svg>
+            </button>
+            <div class="side-modal__inner">
+              <div class="side-modal__title">Подтвердите номер</div>
+              <div class="side-modal__text">Мы отправили вам код на номер 
+                <div>8 961 123-45-67</div>
+              </div>
+              <form action="#" class="form">
+                <div class="form__row">
+                  <div class="form__row-title form__row-title--required">Код</div>
+                  <label class="form__label form__label--error">
+                    <input type="text" name="name" class="form__input">
+                    <div class="form__error-message">Введён неверный код</div>
+                  </label>
+                </div>
+                <div class="confirm-side-modal__return">
+                  <div class="form__row-title form__row-title--required">Код</div>
+                  <div class="form__policy">Код отправлен, запросить повторный можно 
+                    <div>через 24 секунд</div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-lg btn-order">подтвердить телефон</button>
+                <div class="form__policy">*При входе и регистрации вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+              </form>
+            </div>
+          </div>
         </div>
         <div class="wrapper rating">
           <h2>Rating in reviews</h2>
@@ -2609,6 +2749,52 @@
       </ul>
     </nav>
     <div class="body-cover"></div>
+    <div class="loc-header__panel">
+      <div class="loc-header__city">Ваш город<a href="#" class="loc-header__city-value">Краснодар
+              <svg class="icon icon-chev-down ">
+                <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+              </svg></a></div>
+      <div class="loc-header__city-buttons">
+        <button id="city-list-opener" class="loc-header__no">Нет</button>
+        <button class="loc-header__yes">Да</button>
+      </div>
+    </div>
+    <div class="location-search">
+      <div class="wrapper location-search__wrapper">
+        <div id="location-search-closer" class="location-search__close">
+              <svg class="icon icon-ctlg-close ">
+                <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+              </svg>
+        </div>
+        <div class="location-search__header">
+          <div class="location-search__key">Ваш город</div>
+          <div class="header__search search-header">
+            <form action="#" class="form search-header__form">
+              <input autocomplete="off" type="text" name="search" placeholder="Поиск" class="form__input search-header__input form__input--bg">
+              <button type="submit" class="search-header__send">
+                    <svg class="icon icon-magnifier ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#magnifier"></use>
+                    </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+        <ul class="location-search__list">
+          <li class="location-search__item active"><a href="#" class="location-search__link">Краснодар</a></li>
+          <li class="location-search__item"><a href="#" class="location-search__link">Москва</a></li>
+          <li class="location-search__item"><a href="#" class="location-search__link">Самара</a></li>
+          <li class="location-search__item"><a href="#" class="location-search__link">Нижний Новгород</a></li>
+          <li class="location-search__item"><a href="#" class="location-search__link">Казань</a></li>
+          <li class="location-search__item"><a href="#" class="location-search__link">Ставрополь</a></li>
+          <li class="location-search__item"><a href="#" class="location-search__link">Ростов-на-Дону</a></li>
+          <li class="location-search__item"><a href="#" class="location-search__link">Волгоград</a></li>
+          <li class="location-search__item"><a href="#" class="location-search__link">Саратов</a></li>
+          <li class="location-search__item"><a href="#" class="location-search__link">Воронеж</a></li>
+          <li class="location-search__item"><a href="#" class="location-search__link">Санкт-Петербург</a></li>
+          <li class="location-search__item"><a href="#" class="location-search__link">Екатеринбург</a></li>
+        </ul>
+      </div>
+    </div>
     <script src="js/libs/service-functions/remove-class.js"></script>
     <script src="js/libs/service-functions/siblings.js"></script>
     <script src="js/libs/service-functions/mobileDetect.js"></script>
