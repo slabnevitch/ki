@@ -47,10 +47,13 @@
 .person__rating {
 	display: flex;
 	align-items: center;
-	.simple-rating {
+	&-wrap{
+		margin-right: 10px;
+
+	}
+	.star-rating {
 		flex-shrink: 0;
-		margin-right: 8px;
-		@include simple-rating(#D1D1D1, $yellow, 14px, 8px, '\e901');
+		@include star-rating(#D1D1D1, $yellow, 14px, 4px, '\e901');
 	}
 
 }
@@ -95,26 +98,95 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 }
-.review__body {}
-.review__div {}
-.review__title {}
-.review__text {}
+.review__body {
+	margin-bottom: 25px;	
+}
+.review__div {
+
+	&:not(:last-child){
+		margin-bottom: 18px;	
+	}
+}
+.review__title {
+	margin-bottom: 7px;	
+}
+.review__text {
+	margin: 0;	
+	color: 	$text-l;
+	font-size: 12px;
+	line-height: 14px;
+}
 .review__footer {}
-.review__photos {}
-.review__photo {}
-._fit {}
-._fit-img {}
-.review__actions {}
-.review__collapse {}
-.review__options {}
-.review__answer {}
-.review__comments {}
+.review__photos {
+	display: flex;
+	margin-bottom: 18px;			
+.review__photo {
+	width: 100%;	
+	width: 132px;	
+	height: 132px;	
+	padding-bottom: 0;	
+	
+	&:not(:last-child){
+		margin-right: 12px;	
+	}
+
+}
+}
+.review__actions {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	font-size: 14px;
+		color: #A9A9A9;	
+		a{
+			color: #A9A9A9;	
+
+		}
+}
+.review__option{
+	display: flex;
+	align-items: flex-end;
+	text-decoration: none;
+
+	&.active{
+		color: $accent-l;
+	}
+	.icon{
+		margin-right: 6px;
+		font-size: 13.33px;
+	}
+}
+.review__collapse {
+	@include 	but-null;
+	text-decoration-line: underline;
+	color: #A9A9A9;	
+	cursor: pointer;	
+	line-height: 18px;
+}
+.review__options {
+	display: flex;
+	align-items: flex-end;	
+}
+.review__answer {
+	margin-right: 18px;
+	line-height: 14px;
+}
+.review__comments {
+	margin-right: 20px;
+}
 .icon-chat {}
-.review__comments-count {}
-.review__like {}
+.review__like-count,
+.review__comments-count,
+.review__dislike-count {
+	font-size: 12px;
+	line-height: 12px;
+}
+.review__like {
+	margin-right: 13px;
+}
 .icon-like {}
-.review__like-count {}
-.review__dislike {}
+.review__dislike {
+	align-items: center;
+}
 .icon-unlike {}
-.review__dislike-count {}
 /*--------------------END review----------------------*/ 

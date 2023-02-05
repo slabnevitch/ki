@@ -10,7 +10,7 @@
   width: ($ratingStarWidth + $ratingStarGap) * 5;
   margin-left: -$ratingStarGap / 2 ;
   margin-right: -$ratingStarGap / 2  ;
-  font-size: $ratingStarWidth * $kef;
+  font-size: $ratingStarWidth;
   
   &__star{
     flex: 0 0 calc(20% - #{$ratingStarGap});

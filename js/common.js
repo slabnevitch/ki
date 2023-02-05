@@ -175,6 +175,70 @@
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
 
+		// noUiSlider
+		if(document.querySelector('.ctlg-filter__range') !== null){
+			// for many Sliders
+			var readySlidersArr = [];//массив всех слайдеров для доступа программно
+
+			Array.prototype.slice.call(document.querySelectorAll('.range')).forEach(function(rangeBlock) {
+				var slider = rangeBlock.querySelector('.range-slider'),
+				inputMin = rangeBlock.querySelector('#minval'),
+				inputMax = rangeBlock.querySelector('#maxval');
+								//var widthKeff = 10; //если нужно динамически менять ширину инпутов 
+				console.log(inputMax.value)
+				var noUi = noUiSlider.create(slider, {
+					connect: true,
+					behaviour: 'tap',
+					start: [0, +inputMax.value],
+					tooltips: slider.dataset.units ? true : false, //добавление туллтипов в случае наличия в хтмл соответствующих аттрибутов
+					range: {
+						min: 0,
+						max: +slider.dataset.maxval
+					},
+					format: wNumb({//закомментировать, если используется встроеное форматирование с исп-ем. единиц измерения (например, "руб.")
+						decimals: 0,
+						thousand: ' '
+					}),
+					format: {//закомментировать, если используется форматирование wNumb
+					//исп-ть. для форматирования инпутов и туллтипов с едииницами измерения (например, "руб.")
+						// 'to' the formatted value. Receives a number.
+						to: function (value) {
+							return slider.dataset.units ? Math.ceil(Number(value)) + ' ' + slider.dataset.units : Math.ceil(Number(value));
+						},
+						// 'from' the formatted value.
+						// Receives a string, should return a number.
+						from: function (value) {
+							return Math.ceil(Number(value.replace(',-', '')));
+						}
+					}
+				});
+
+				slider.noUiSlider.on('update', getValues);
+				slider.noUiSlider.on('set', getValues);
+
+				function getValues() {
+					console.log(slider.noUiSlider.get()[0])
+					inputMin.value = (slider.noUiSlider.get()[0]);
+					inputMax.value = (slider.noUiSlider.get()[1]);			
+								// inputMin.style.width = ((inputMin.value.length + 1) * widthKeff) + 'px';//для динамической ширины инпутов
+								// inputMax.style.width = ((inputMax.value.length + 1) * widthKeff) + 'px';//для динамической ширины инпутов
+							}
+
+							inputMax.addEventListener('change', function() {
+								slider.noUiSlider.set([null, +inputMax.value]);
+								// this.style.width = ((this.value.length + 1) * widthKeff) + 'px';//для динамической ширины инпутов
+							});
+							inputMin.addEventListener('change', function() {
+								console.log('min change!')
+								slider.noUiSlider.set([+inputMin.value, null]);
+								// this.style.width = ((this.value.length + 1) * widthKeff) + 'px';//для динамической ширины инпутов
+							});
+							readySlidersArr.push(noUi);
+						});
+
+		}
+		// END noUiSlider
+
 		// new SimpleBar(document.querySelector('.catalog-header__nav'), { autoHide: false });
 
 		// header fixed on doc. scroll

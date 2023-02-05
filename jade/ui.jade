@@ -6,6 +6,10 @@ block title
 block content
 
 	.wrapper
+		include _blocks/catalog-filter
+
+
+	.wrapper
 		article.review
 			header.review__header
 				.person
@@ -15,8 +19,9 @@ block content
 						.person__info
 							.person__name Иванов Иван
 							.person__date 12 декабря 2021
-					form.person__rating
-						+simpleRating(5)
+					.person__rating
+						.person__rating-wrap
+								+starRating(2)
 						.person__rating-mark Плохой товар
 				
 				.review__context.context-review
@@ -47,15 +52,15 @@ block content
 					button(type="button").review__collapse Свернуть
 					.review__options
 						a(href="#").review__answer Ответить
-						a(href="#").review__comments
+						a(href="#").review__comments.review__option
 							+icon('chat')
 							.review__comments-count 1
-						a(href="#").review__like
+						a(href="#").review__like.review__option.active
 							+icon('like')
 							.review__like-count 1
-						a(href="#").review__dislike
+						a(href="#").review__dislike.review__option
 							+icon('unlike')
-							.review__dislike-count 1
+							.review__dislike-count 0
 
 	.wrapper
 		- var tags = ['СКИДКИ', 'АКЦИИ', 'МОИ ЗАКАЗЫ', '23 ФЕВРАЛЯ', 'лендинг', 'Новинки'];
@@ -419,7 +424,7 @@ block page-scripts
 	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
 		
 	//- accordion--------------------------
-	//- script(src="js/libs/accordion/vanilla-accordion.js")
+	script(src="js/libs/accordion/vanilla-accordion.js")
 		
 	//- tabs--------------------------
 	//- script(src="js/libs/tabs/tabs-pure.js")
@@ -435,9 +440,13 @@ block page-scripts
 
 	//-viewerjs --------------------------
 	script(src="js/libs/viewerjs/viewer.js")
+	
+	//- wNumb--------------------------
+	script(src="js/libs/wnumb/wNumb.js")
 
 	//- noUiSlider--------------------------
-	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+	script(src="js/libs/noUiSlider/nouislider.min.js")
+
 
 	//- iMask--------------------------
 	//- script(src="js/libs/imask/imask.js")
@@ -461,7 +470,7 @@ block page-scripts
 	//- script(src="js/libs/simplebar/simplebar.min.js")
 		
 	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
-	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+	script(src="js/libs/fstdropdown/fstdropdown.min.js")
 
 	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
 	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")

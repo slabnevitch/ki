@@ -1,0 +1,104 @@
+//- фильтр каталога
+.ctlg-filter
+	form(action="#").accordion.ctlg-filter__list
+		.accordion__item.ctlg-filter__item
+			.accordion__link.ctlg-filter__link Шуруповерты
+				+icon('chev-down')
+			.accordion__content.ctlg-filter__content
+				.ctlg-filter__labels
+					- for (var i=0; i <5 ; i++)
+						label.ctlg-filter__label
+							input(type="checkbox" name="product" class="ctlg-filter__checkbox")
+							span.ctlg-filter__false-checkbox
+							span.ctlg-filter__value Шуруповерты + (i+1)
+
+		.accordion__item.ctlg-filter__item
+			.accordion__link.ctlg-filter__link Наличие
+				+icon('chev-down')
+			.accordion__content.ctlg-filter__content
+				- var tags = ['в наличии', 'под заказ'];
+					.tags.ctlg-filter__tags
+						each tag in tags
+							label.ctlg-filter__label
+								input(type="checkbox" name="availability" class="ctlg-filter__checkbox")
+								span.ctlg-filter__tag-value= tag
+
+					.ctlg-filter__select
+						select(data-searchdisable="true" class="fstdropdown-select")
+							option(value="1") В любом из магазинов
+							option(value="2") В ином из магазине
+				
+					.ctlg-filter__labels
+						- var labels = ['ул. Северная, 320', 'ул. Ростовское шоссе, 30/3', 'ул. Октябрьская, 170', 'ул. Ростовское шоссе, 30/3', 'ул. Октябрьская, 170', 'ул. Северная, 320', 'ул. Ростовское шоссе, 14/6', 'ул. Ростовское шоссе, 14/6', 'ул. Октябрьская, 170', 'ул. Ростовское шоссе, 30/3', 'ул. Октябрьская, 170', 'ул. Северная, 320', 'ул. Ростовское шоссе, 14/6', 'ул. Ростовское шоссе, 30/3', 'ул. Октябрьская, 170'];
+
+						each lab, ind in labels
+							label.ctlg-filter__label
+								input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")
+								span.ctlg-filter__false-checkbox
+								span.ctlg-filter__value= lab
+
+		.accordion__item.ctlg-filter__item
+			.accordion__link.ctlg-filter__link Цена, руб
+				+icon('chev-down')
+			.accordion__content.ctlg-filter__content
+				.ctlg-filter__range
+					.range
+						.range-top
+							input(autocomplete="off" type="text" name="minval" value="0" class="range__input" id="minval")
+							input(autocomplete="off" type="text" name="maxval" value="150000" class="range__input" id="maxval")
+						.range-slider(data-maxval="150000")
+						//-data-units - указывать только для вывода в инпут единиц измерения
+
+		.accordion__item.ctlg-filter__item
+			.accordion__link.ctlg-filter__link Скидки
+				+icon('chev-down')
+			.accordion__content.ctlg-filter__content
+				- var tags = ['товары со скидкой', 'уцененные товары'];
+				.tags.ctlg-filter__tags
+					each tag in tags
+						label.ctlg-filter__label
+							input(type="checkbox" name="sales" class="ctlg-filter__checkbox")
+							span.ctlg-filter__tag-value= tag
+
+		.accordion__item.ctlg-filter__item
+			.accordion__link.ctlg-filter__link Класс товара
+				+icon('chev-down')
+			.accordion__content.ctlg-filter__content
+				- var tags = ['бытовой', 'профессиональный', 'полупрофессиональный'];
+				.tags.ctlg-filter__tags
+					each tag in tags
+						label.ctlg-filter__label
+							input(type="checkbox" name="product-class" class="ctlg-filter__checkbox")
+							span.ctlg-filter__tag-value= tag
+
+		.accordion__item.ctlg-filter__item
+			.accordion__link.ctlg-filter__link Тип питания
+				+icon('chev-down')
+			.accordion__content.ctlg-filter__content
+				- var tags = ['От электросети', 'от Аккумулятора'];
+				.tags.ctlg-filter__tags
+					each tag in tags
+						label.ctlg-filter__label
+							input(type="checkbox" name="power-supply" class="ctlg-filter__checkbox")
+							span.ctlg-filter__tag-value= tag
+
+		.accordion__item.ctlg-filter__item
+			.accordion__link.ctlg-filter__link Бренды
+				+icon('chev-down')
+			.accordion__content.ctlg-filter__content
+
+				label.ctlg-filter__label
+					input(autocomplete="off" type="text" name="" class="ctlg-filter__input" placeholder="Поиск")
+					+icon('magnifier')
+				
+				.ctlg-filter__labels
+					- var labels = [{name:'AEG', count: '12'},{name:'AL-KO', count: '5'},{name:'BLACK+DECKER', count: '30'},{name:'Bosch', count: '6'},{name:'Bosch Professional', count: '11'},{name:'Champion', count: '2'},{name:'DeWALT', count: '28'},{name:'Elitech', count: '41'},{name:'FIT', count: ''},{name:'Gardena', count: '5'},{name:'Gesipa', count: '8'},{name:'GreenWorks', count: '8'}, {name:'HIKOKI', count: '7'},{name:'Hitachi', count: '13'}];
+
+					each lab, ind in labels
+						label.ctlg-filter__label
+							input(type="checkbox" name="brand" checked=ind==0 ? true: false class="ctlg-filter__checkbox")
+							span.ctlg-filter__false-checkbox
+							span.ctlg-filter__value= lab.name
+								span.ctlg-filter__count= lab.count 
+
+//- END фильр каталога
