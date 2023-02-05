@@ -10,7 +10,7 @@
 						label.ctlg-filter__label
 							input(type="checkbox" name="product" class="ctlg-filter__checkbox")
 							span.ctlg-filter__false-checkbox
-							span.ctlg-filter__value Шуруповерты + (i+1)
+							span.ctlg-filter__value= "Шуруповерты" + (i+1)
 
 		.accordion__item.ctlg-filter__item
 			.accordion__link.ctlg-filter__link Наличие
@@ -19,9 +19,9 @@
 				- var tags = ['в наличии', 'под заказ'];
 					.tags.ctlg-filter__tags
 						each tag in tags
-							label.ctlg-filter__label.tag
+							label.ctlg-filter__row-label
 								input(type="checkbox" name="availability" class="ctlg-filter__checkbox")
-								span.ctlg-filter__tag-value= tag
+								span.ctlg-filter__tag-value.tag= tag
 
 					.ctlg-filter__select
 						select(data-searchdisable="true" class="fstdropdown-select")
@@ -44,8 +44,12 @@
 				.ctlg-filter__range
 					.range
 						.range-top
-							input(autocomplete="off" type="text" name="minval" value="0" class="range__input" data-minval)
-							input(autocomplete="off" type="text" name="maxval" value="150000" class="range__input" data-maxval)
+							.range__col
+								.range__label от
+								input(autocomplete="off" type="text" name="minval" value="0" class="range__input" data-minval)
+							.range__col
+								.range__label до
+								input(autocomplete="off" type="text" name="maxval" value="150000" class="range__input" data-maxval)
 						.range-slider(data-maxval="150000")
 						//-data-units - указывать только для вывода в инпут единиц измерения
 
@@ -56,9 +60,9 @@
 				- var tags = ['товары со скидкой', 'уцененные товары'];
 				.tags.ctlg-filter__tags
 					each tag in tags
-						label.ctlg-filter__label.tag
+						label.ctlg-filter__row-label
 							input(type="checkbox" name="sales" class="ctlg-filter__checkbox")
-							span.ctlg-filter__tag-value= tag
+							span.ctlg-filter__tag-value.tag= tag
 
 		.accordion__item.ctlg-filter__item
 			.accordion__link.ctlg-filter__link Класс товара
@@ -67,9 +71,9 @@
 				- var tags = ['бытовой', 'профессиональный', 'полупрофессиональный'];
 				.tags.ctlg-filter__tags
 					each tag in tags
-						label.ctlg-filter__label.tag
+						label.ctlg-filter__row-label
 							input(type="checkbox" name="product-class" class="ctlg-filter__checkbox")
-							span.ctlg-filter__tag-value= tag
+							span.ctlg-filter__tag-value.tag= tag
 
 		.accordion__item.ctlg-filter__item
 			.accordion__link.ctlg-filter__link Тип питания
@@ -78,9 +82,9 @@
 				- var tags = ['От электросети', 'от Аккумулятора'];
 				.tags.ctlg-filter__tags
 					each tag in tags
-						label.ctlg-filter__label.tag
+						label.ctlg-filter__row-label
 							input(type="checkbox" name="power-supply" class="ctlg-filter__checkbox")
-							span.ctlg-filter__tag-value= tag
+							span.ctlg-filter__tag-value.tag= tag
 
 		.accordion__item.ctlg-filter__item
 			.accordion__link.ctlg-filter__link Бренды
@@ -110,9 +114,9 @@
 				- var tags = ['10.8 в', '18 в', '20 в','12 в','14.4 в','24 в'];
 				.tags.ctlg-filter__tags
 					each tag in tags
-						label.ctlg-filter__label.tag
+						label.ctlg-filter__row-label
 							input(type="checkbox" name="voltage" class="ctlg-filter__checkbox")
-							span.ctlg-filter__tag-value= tag
+							span.ctlg-filter__tag-value.tag= tag
 
 		.accordion__item.ctlg-filter__item
 			.accordion__link.ctlg-filter__link Тип аккумулятора
@@ -121,9 +125,9 @@
 				- var tags = ['Li-Lon', 'Ni-Cd'];
 				.tags.ctlg-filter__tags
 					each tag in tags
-						label.ctlg-filter__label.tag
+						label.ctlg-filter__row-label
 							input(type="checkbox" name="battery" class="ctlg-filter__checkbox")
-							span.ctlg-filter__tag-value= tag
+							span.ctlg-filter__tag-value.tag= tag
 
 		.accordion__item.ctlg-filter__item
 			.accordion__link.ctlg-filter__link Мах мощность, Вт
@@ -146,8 +150,8 @@
 				.accordion__content.ctlg-filter__content
 					.tags.ctlg-filter__tags
 						each tag in item.tags
-							label.ctlg-filter__label.tag
+							label.ctlg-filter__row-label
 								input(type="checkbox" name=item.name class="ctlg-filter__checkbox")
-								span.ctlg-filter__tag-value= tag
+								span.ctlg-filter__tag-value.tag= tag
 
 //- END фильр каталога
