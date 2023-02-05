@@ -325,3 +325,7 @@ padding-bottom: 52.25%;
 		color: $text;
 	}
 }
+.catalog-test{
+	@include 	col();
+	flex: 0 0 224px;
+}

@@ -1881,10 +1881,10 @@
                   </div>
                   <div class="accordion__content ctlg-filter__content">
                     <div class="tags ctlg-filter__tags">
-                      <label class="ctlg-filter__label">
+                      <label class="ctlg-filter__label tag">
                         <input type="checkbox" name="availability" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">в наличии</span>
                       </label>
-                      <label class="ctlg-filter__label">
+                      <label class="ctlg-filter__label tag">
                         <input type="checkbox" name="availability" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">под заказ</span>
                       </label>
                     </div>
@@ -1953,8 +1953,8 @@
                     <div class="ctlg-filter__range">
                       <div class="range">
                         <div class="range-top">
-                          <input autocomplete="off" type="text" name="minval" value="0" id="minval" class="range__input">
-                          <input autocomplete="off" type="text" name="maxval" value="150000" id="maxval" class="range__input">
+                          <input autocomplete="off" type="text" name="minval" value="0" data-minval class="range__input">
+                          <input autocomplete="off" type="text" name="maxval" value="150000" data-maxval class="range__input">
                         </div>
                         <div data-maxval="150000" class="range-slider"></div>
                       </div>
@@ -1969,10 +1969,10 @@
                   </div>
                   <div class="accordion__content ctlg-filter__content">
                     <div class="tags ctlg-filter__tags">
-                      <label class="ctlg-filter__label">
+                      <label class="ctlg-filter__label tag">
                         <input type="checkbox" name="sales" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">товары со скидкой</span>
                       </label>
-                      <label class="ctlg-filter__label">
+                      <label class="ctlg-filter__label tag">
                         <input type="checkbox" name="sales" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">уцененные товары</span>
                       </label>
                     </div>
@@ -1986,13 +1986,13 @@
                   </div>
                   <div class="accordion__content ctlg-filter__content">
                     <div class="tags ctlg-filter__tags">
-                      <label class="ctlg-filter__label">
+                      <label class="ctlg-filter__label tag">
                         <input type="checkbox" name="product-class" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">бытовой</span>
                       </label>
-                      <label class="ctlg-filter__label">
+                      <label class="ctlg-filter__label tag">
                         <input type="checkbox" name="product-class" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">профессиональный</span>
                       </label>
-                      <label class="ctlg-filter__label">
+                      <label class="ctlg-filter__label tag">
                         <input type="checkbox" name="product-class" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">полупрофессиональный</span>
                       </label>
                     </div>
@@ -2006,10 +2006,10 @@
                   </div>
                   <div class="accordion__content ctlg-filter__content">
                     <div class="tags ctlg-filter__tags">
-                      <label class="ctlg-filter__label">
+                      <label class="ctlg-filter__label tag">
                         <input type="checkbox" name="power-supply" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">От электросети</span>
                       </label>
-                      <label class="ctlg-filter__label">
+                      <label class="ctlg-filter__label tag">
                         <input type="checkbox" name="power-supply" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">от Аккумулятора</span>
                       </label>
                     </div>
@@ -2028,7 +2028,7 @@
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#magnifier"></use>
                           </svg>
                     </label>
-                    <div class="ctlg-filter__labels">
+                    <div class="ctlg-filter__labels ctlg-filter__labels--brands">
                       <label class="ctlg-filter__label">
                         <input type="checkbox" name="brand" checked class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">AEG<span class="ctlg-filter__count">12</span></span>
                       </label>
@@ -2070,6 +2070,209 @@
                       </label>
                       <label class="ctlg-filter__label">
                         <input type="checkbox" name="brand" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">Hitachi<span class="ctlg-filter__count">13</span></span>
+                      </label>
+                    </div>
+                    <button class="ctlg-filter__show-all">Показать все</button>
+                  </div>
+                </div>
+                <div class="accordion__item ctlg-filter__item">
+                  <div class="accordion__link ctlg-filter__link">Напряжение аккумулятора
+                        <svg class="icon icon-chev-down ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                        </svg>
+                  </div>
+                  <div class="accordion__content ctlg-filter__content">
+                    <div class="tags ctlg-filter__tags">
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="voltage" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">10.8 в</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="voltage" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">18 в</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="voltage" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">20 в</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="voltage" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">12 в</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="voltage" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">14.4 в</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="voltage" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">24 в</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__item ctlg-filter__item">
+                  <div class="accordion__link ctlg-filter__link">Тип аккумулятора
+                        <svg class="icon icon-chev-down ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                        </svg>
+                  </div>
+                  <div class="accordion__content ctlg-filter__content">
+                    <div class="tags ctlg-filter__tags">
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="battery" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">Li-Lon</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="battery" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">Ni-Cd</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__item ctlg-filter__item">
+                  <div class="accordion__link ctlg-filter__link">Мах мощность, Вт
+                        <svg class="icon icon-chev-down ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                        </svg>
+                  </div>
+                  <div class="accordion__content ctlg-filter__content">
+                    <div class="ctlg-filter__range">
+                      <div class="range">
+                        <div class="range-top">
+                          <input autocomplete="off" type="text" name="minval" value="25" data-minval class="range__input">
+                          <input autocomplete="off" type="text" name="maxval" value="2300" data-maxval class="range__input">
+                        </div>
+                        <div data-maxval="2300" class="range-slider"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__item ctlg-filter__item">
+                  <div class="accordion__link ctlg-filter__link">Комплектация
+                        <svg class="icon icon-chev-down ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                        </svg></div>
+                  <div class="accordion__content ctlg-filter__content">
+                    <div class="tags ctlg-filter__tags">
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="complect" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">Блистер</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="complect" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">Кейс</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="complect" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">Коробка</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="complect" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">Сумка</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="complect" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">Держатель для бит</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__item ctlg-filter__item">
+                  <div class="accordion__link ctlg-filter__link">Особенности
+                        <svg class="icon icon-chev-down ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                        </svg></div>
+                  <div class="accordion__content ctlg-filter__content">
+                    <div class="tags ctlg-filter__tags">
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="features" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">Функция ”сверление” </span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="features" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">Встроенный фонарик</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__item ctlg-filter__item">
+                  <div class="accordion__link ctlg-filter__link">Тип патрона
+                        <svg class="icon icon-chev-down ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                        </svg></div>
+                  <div class="accordion__content ctlg-filter__content">
+                    <div class="tags ctlg-filter__tags">
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="patron" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">Быстрозажимной </span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="patron" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">Квадрат 1/2</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="patron" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">Держатель бит</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="patron" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">Держатель бит 1/4</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__item ctlg-filter__item">
+                  <div class="accordion__link ctlg-filter__link">Емкость аккумулятора
+                        <svg class="icon icon-chev-down ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                        </svg></div>
+                  <div class="accordion__content ctlg-filter__content">
+                    <div class="tags ctlg-filter__tags">
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="battery-volume" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">1.2 Ач</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="battery-volume" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">1.5 Ач</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="battery-volume" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">1.3 Ач</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="battery-volume" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">2 Ач</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="battery-volume" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">2.2 Ач</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="battery-volume" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">4 Ач</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__item ctlg-filter__item">
+                  <div class="accordion__link ctlg-filter__link">Вес инструмента
+                        <svg class="icon icon-chev-down ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                        </svg></div>
+                  <div class="accordion__content ctlg-filter__content">
+                    <div class="tags ctlg-filter__tags">
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="weight" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">Менeе 1 кг</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="weight" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">Более 2 кг</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="weight" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">от 1 до 2 кг</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__item ctlg-filter__item">
+                  <div class="accordion__link ctlg-filter__link">Гарантия производителя
+                        <svg class="icon icon-chev-down ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                        </svg></div>
+                  <div class="accordion__content ctlg-filter__content">
+                    <div class="tags ctlg-filter__tags">
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="warranty" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">1 год</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="warranty" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">2 года</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="warranty" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">5 лет</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="warranty" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">1 год, 2 месяца</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="warranty" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">3 года</span>
+                      </label>
+                      <label class="ctlg-filter__label tag">
+                        <input type="checkbox" name="warranty" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value">2 года, 1 месяц</span>
                       </label>
                     </div>
                   </div>

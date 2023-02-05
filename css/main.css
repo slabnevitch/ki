@@ -2053,6 +2053,15 @@ textarea.input {
   color: rgba(0, 0, 0, 0.8);
 }
 
+.catalog-test {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 8px;
+  margin-right: 8px;
+  -ms-flex: 0 0 224px;
+  flex: 0 0 224px;
+}
+
 /*--------------------ui----------------------*/ /*--------------------viewerjs-custom----------------------*/
 .viewer-backdrop {
   background-color: #fff;

@@ -182,14 +182,14 @@
 
 			Array.prototype.slice.call(document.querySelectorAll('.range')).forEach(function(rangeBlock) {
 				var slider = rangeBlock.querySelector('.range-slider'),
-				inputMin = rangeBlock.querySelector('#minval'),
-				inputMax = rangeBlock.querySelector('#maxval');
+				inputMin = rangeBlock.querySelector('[data-minval]'),
+				inputMax = rangeBlock.querySelector('[data-maxval]');
 								//var widthKeff = 10; //если нужно динамически менять ширину инпутов 
 				console.log(inputMax.value)
 				var noUi = noUiSlider.create(slider, {
 					connect: true,
 					behaviour: 'tap',
-					start: [0, +inputMax.value],
+					start: [+inputMin.value, +inputMax.value],
 					tooltips: slider.dataset.units ? true : false, //добавление туллтипов в случае наличия в хтмл соответствующих аттрибутов
 					range: {
 						min: 0,
