@@ -5,8 +5,7 @@
     <title>Главная страница</title>
     <meta name="description" content="">
     <link rel="icon" href="img/favicon.png">
-    <meta name="viewport" content="width=device-width">
-    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -2029,11 +2028,13 @@
                           </svg>
                     </div>
                     <div class="accordion__content ctlg-filter__content">
-                      <label class="ctlg-filter__label">
+                      <label class="ctlg-filter__inplabel">
                         <input autocomplete="off" type="text" name="" placeholder="Поиск" class="ctlg-filter__input">
-                            <svg class="icon icon-magnifier ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#magnifier"></use>
-                            </svg>
+                        <button type="send" class="ctlg-filter__send">
+                              <svg class="icon icon-magnifier ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#magnifier"></use>
+                              </svg>
+                        </button>
                       </label>
                       <div class="ctlg-filter__labels ctlg-filter__labels--brands">
                         <label class="ctlg-filter__label">
@@ -2138,8 +2139,14 @@
                       <div class="ctlg-filter__range">
                         <div class="range">
                           <div class="range-top">
-                            <input autocomplete="off" type="text" name="minval" value="25" data-minval class="range__input">
-                            <input autocomplete="off" type="text" name="maxval" value="2300" data-maxval class="range__input">
+                            <div class="range__col">
+                              <div class="range__label">от</div>
+                              <input autocomplete="off" type="text" name="minval" value="25" data-minval class="range__input">
+                            </div>
+                            <div class="range__col">
+                              <div class="range__label">до</div>
+                              <input autocomplete="off" type="text" name="maxval" value="2300" data-maxval class="range__input">
+                            </div>
                           </div>
                           <div data-maxval="2300" class="range-slider"></div>
                         </div>

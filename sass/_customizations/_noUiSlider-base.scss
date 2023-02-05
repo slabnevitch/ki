@@ -3,9 +3,9 @@
 	height: 2px;
 }
 .noUi-connect{
-	background-color: orange;
+	background-color: $border;
 	box-shadow: none;
-	height: 2px;
+	height: 4px;
 	top: -1px;
 	margin-right: 5px;
 	margin-left: -5px;
@@ -16,15 +16,15 @@
 }
 
 .noUi-horizontal .noUi-handle{
-	width: 14px;
-	height: 14px;
-	background-color: orange;
+	width:28px;
+	height: 28px;
+	background-color: #fff;
 	border: none;
 	box-shadow: none;
 	border-radius: 50em;
 	top: 50%;
-	margin-top: -7px;
-	border: 2px solid #fff;
+	margin-top: -14px;
+	border: 1px solid $border;
 
 	&.noUi-handle-upper{
 		
@@ -40,8 +40,8 @@
 .noUi-target {
     // padding: 0 17px;
     padding-left: 15px;
-    padding-right: 0;
-    border-color: #7F7F7F;
+    padding-right: 14px;
+    // border-color: transparent;
 }
 .range-top{
 	display: flex;

@@ -91,9 +91,10 @@
 				+icon('chev-down')
 			.accordion__content.ctlg-filter__content
 
-				label.ctlg-filter__label
+				label.ctlg-filter__inplabel
 					input(autocomplete="off" type="text" name="" class="ctlg-filter__input" placeholder="Поиск")
-					+icon('magnifier')
+					button(type="send" class="ctlg-filter__send")
+						+icon('magnifier')
 				
 				.ctlg-filter__labels.ctlg-filter__labels--brands
 					- var labels = [{name:'AEG', count: '12'},{name:'AL-KO', count: '5'},{name:'BLACK+DECKER', count: '30'},{name:'Bosch', count: '6'},{name:'Bosch Professional', count: '11'},{name:'Champion', count: '2'},{name:'DeWALT', count: '28'},{name:'Elitech', count: '41'},{name:'FIT', count: ''},{name:'Gardena', count: '5'},{name:'Gesipa', count: '8'},{name:'GreenWorks', count: '8'}, {name:'HIKOKI', count: '7'},{name:'Hitachi', count: '13'}];
@@ -136,8 +137,12 @@
 				.ctlg-filter__range
 					.range
 						.range-top
-							input(autocomplete="off" type="text" name="minval" value="25" class="range__input" data-minval)
-							input(autocomplete="off" type="text" name="maxval" value="2300" class="range__input" data-maxval)
+							.range__col
+								.range__label от
+								input(autocomplete="off" type="text" name="minval" value="25" class="range__input" data-minval)
+							.range__col
+								.range__label до
+								input(autocomplete="off" type="text" name="maxval" value="2300" class="range__input" data-maxval)
 						.range-slider(data-maxval="2300")
 						//-data-units - указывать только для вывода в инпут единиц измерения
 

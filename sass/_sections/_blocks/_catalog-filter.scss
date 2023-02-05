@@ -5,7 +5,11 @@
 .ctlg-filter__item {
 	list-style-type: none;	
 	padding-bottom: 12px;	
-	border-bottom: 	1px solid $border;
+
+	&:not(:last-child){
+		border-bottom: 	1px solid $border;
+		
+	}
 
 
 	&.active{
@@ -55,6 +59,14 @@
 			margin-bottom: 3px;	
 	}
 }
+.ctlg-filter__inplabel {
+	position: relative;
+	display: block;
+	margin-bottom: 13px;
+
+	
+}
+
 .ctlg-filter__row-label {
 	position: relative;	
 	margin-bottom: 8px;	
@@ -135,17 +147,58 @@
 }
 .fstdropdown-select {}
 .ctlg-filter__range {}
-.range {}
+.range {
+	margin-bottom: 16px;
+}
 .range-top {
 	@include row-flex();
 	margin-bottom: 20px;
+
 }
 .range-slider {}
-.ctlg-filter__input {}
-.icon-magnifier {}
+.ctlg-filter__input {
+	height: 32px;
+	padding: 8px 32px 7px 8px;
+	background: #FFFFFF;
+	border: 1px solid #C4C4C4;
+	border-radius: 4px;
+	font-size: 14px;
+	line-height: 17px;
+	font-family: $inter;
+
+	@include placecolor($text-l);
+}
+.ctlg-filter__send{
+	@include but-null;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+	right: 9px;
+	cursor: pointer;
+
+	.icon-magnifier {
+		font-size: 20px;
+		color: $border;
+	}
+
+}
 .ctlg-filter__labels--brands {}
 .ctlg-filter__count {}
-.ctlg-filter__show-all {}
+.ctlg-filter__show-all {
+	@include but-null;
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding-top: 8px;
+	padding-bottom: 4px;
+	color: $border;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+		cursor: pointer;
+	}
+}
 
 .range__col{
 	display: flex;
