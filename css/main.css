@@ -1875,6 +1875,7 @@ textarea.input {
 
 input.range__input {
   width: auto;
+  font-family: "Inter", sans-serif;
 }
 
 .counter {
