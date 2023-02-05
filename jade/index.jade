@@ -4,12 +4,8 @@ block title
 	| Главная страница
 
 block content
-	.wrapper-smart
-		.wrapper-flex
-			include _blocks/catalog-filter
-		
-	- for (var i=0; i < 3; i++)
-		section
+	.page.page-main
+		include _sections/categories-tiles
 		
 block page-scripts
 	//- SERVIVE FUNCTIONS==================

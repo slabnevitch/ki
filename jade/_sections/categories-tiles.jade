@@ -1,0 +1,20 @@
+section.categories-tiles
+	.wrapper
+		h2.sect-title Категории
+	.wrapper-smart
+		.wrapper-flex
+			- var content = [{title: 'Электро-инструменты', tags: ['Гайковерты', 'Шуруповерты', 'Перфораторы', 'Дрели', 'УШМ (болгарки)'], sm: 'Запчасти'}, {title: 'Ручной инструмент', tags: ['Наборы инструментов', 'Ударный и рычажный', 'Отвёртки', 'Ключи'], sm: 'Автотовары'},{title: 'Строительство и ремонт', tags: ['Пневмоинструмент', 'Малярное оборудование', 'Спецодежда'], sm: 'Стабилизаторы напряжения'},{title: 'Дом и сад', tags: ['Триммеры', 'Лестницы', 'Газонокосилки', 'Грили', 'Генераторы '], sm: 'Электро-станции'}];
+			each item, ind in content
+				.categories-tiles__column
+					.categories-tile.categories-tile--lg
+						.categories-tile__title= item.title
+						.tags
+							each tag in item.tags
+								.categories-tile__tag.tag= tag
+						.categories-tile__img
+							img(src="img/categories-tiles/bitmaps/"+(ind+1)+".png" alt="alt")
+
+					.categories-tile.categories-tile--sm
+						.categories-tile__title= item.sm
+						.categories-tile__img
+							img(src="img/categories-tiles/svgs/"+(ind+1)+".svg" alt="alt")
