@@ -11,7 +11,7 @@ mixin menu(className, items)
 
 //- вызов, например: +swiper('my-swiper', true, false, true)
 mixin swiper(classname, pagination, scrollbar, navigation)
-	div(class="swiper" + " " + classname)
+	div(class="swiper-container swiper" + " " + classname)
 		.swiper-wrapper
 			if block
 				block

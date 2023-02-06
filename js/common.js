@@ -177,6 +177,68 @@
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
 
+
+		if(document.querySelector('.ctlg-filter__list') !== null){
+			document.querySelector('.ctlg-filter__list').addEventListener('submit', function() {event.preventDefault()})
+
+		}
+
+		//---------------Swiper
+		if(document.querySelector('.categories-tiles__slider') !== null){
+			const swiper = new Swiper('.categories-tiles__slider', {
+			  /*
+				effect: 'fade',
+				fadeEffect: {//при отсутствии плавного перехода - расскомментировать соотв-ю. строку в adjustment.scss
+				    crossFade: true
+				  },
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+				*/
+				
+				observer: true,
+				observeParents: true,
+				// mousewheel:  {
+				// 	invert: true,
+				// 	eventsTarget: '.works__cards'
+		   		 // releaseOnEdges: true
+				// },
+				//freeMode: true,// в сочетании с mousewheel дает возможность прокручивать стр-цу. после докручивания слайдера до начала или конца колесом мыши
+				slidesPerView: 4,
+				// spaceBetween: 15,
+				//autoHeight: true,
+				//speed: 800,
+				//touchRatio: 0,
+				//simulateTouch: false,
+				//loop: true,
+				//preloadImages: false,
+				//lazy: true,
+			  // direction: 'vertical',
+				// loop: true,
+				 pagination: false,
+				navigation: false,
+				breakpoints: {
+    				// when window width is >= 320px
+					320: {
+						slidesPerView: 1.25,
+						spaceBetween: 16
+					},
+    				// when window width is >= 480px
+					576: {
+						slidesPerView: 2.2,
+						spaceBetween: 16
+					},
+   					 // when window width is >= 640px
+					767.98: {
+						slidesPerView: 4,
+						spaceBetween: 0
+					}
+				}
+			});
+		}
+//---------------END Swiper
+
 		// catalog-filter address list toggle
 			if(document.querySelector('.ctlg-filter-location__selected') !== null){
 				var addressToggler = (function() {
@@ -264,19 +326,7 @@
 					format: wNumb({//закомментировать, если используется встроеное форматирование с исп-ем. единиц измерения (например, "руб.")
 						decimals: 0,
 						thousand: ' '
-					}),
-					format: {//закомментировать, если используется форматирование wNumb
-					//исп-ть. для форматирования инпутов и туллтипов с едииницами измерения (например, "руб.")
-						// 'to' the formatted value. Receives a number.
-						to: function (value) {
-							return slider.dataset.units ? Math.ceil(Number(value)) + ' ' + slider.dataset.units : Math.ceil(Number(value));
-						},
-						// 'from' the formatted value.
-						// Receives a string, should return a number.
-						from: function (value) {
-							return Math.ceil(Number(value.replace(',-', '')));
-						}
-					}
+					})
 				});
 
 				slider.noUiSlider.on('update', getValues);
