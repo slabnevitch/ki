@@ -11,6 +11,13 @@
 	// @include size(3);
 	word-wrap: normal;
 
+	.billet {
+		position: absolute;
+		top: 12px;
+		left: 0;
+		z-index: 2;
+	}
+
 	// карточка горизонтальная
 	&--horisontal{
 		max-width: none;
@@ -252,12 +259,7 @@
 	width: 224px;
 	height: 224px;
 }
-.billet {
-	position: absolute;
-	top: 12px;
-	left: 0;
-	z-index: 2;
-}
+
 .product-card__img {
 	display: block;	
 	width: 180px;
@@ -369,7 +371,7 @@
 .product-card__rating {
 	padding-bottom: 7px;
 	.crystal-rating{
-		@include simple-rating($gray-l, $yellow, 12, 4, '\e901');
+		@include crystal-rating($gray-l, $yellow, 12, 4, '\e901');
 		.crystal-rating__value {
 			margin-left: 3px;
 			font-size: 10px;

@@ -10,328 +10,437 @@ block content
 			.catalog-test
 					include _blocks/catalog-filter
 
+			.ui-elems
+				//- шапки
+				.header__bottom
+					.wrapper
+						.header__bottom-wrapper
+							a(href="#").header__logo-fixed
+								img(src="img/logo-fixed.svg" alt="alt")
+							button.header__catalog-toggle.catalog-toggle-header
+								.catalog-toggle__burger
+									+icon('ctlg-burger')
+									+icon('ctlg-close')
+								.catalog-toggle__name Каталог
 
-	.wrapper
-		article.review
-			header.review__header
-				.person
-					.person__top
-						.person__portrait
-							//- img(src="img/person.jpg" alt="alt")
-						.person__info
-							.person__name Иванов Иван
-							.person__date 12 декабря 2021
-					.person__rating
-						.person__rating-wrap
-								+starRating(2)
-						.person__rating-mark Плохой товар
-				
-				.review__context.context-review
-					+icon('context')
-					a(href="#").context-review__drop Пожаловаться
+							.header__search.search-header
+								form(action="#" class="form").search-header__form
+									input(autocomplete="off" type="text" name="search" class="form__input search-header__input form__input--bg" placeholder="Поиск")
+									button.search-header__send(type="submit")
+										+icon('magnifier')
+									button.search-header__back(type="button")
+										+icon('arrow-left')
 
-			.review__body
-				.review__div
-					.review__title Опыт использования
-					p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+						.header__bottom-wrapper.header-catalog-opened
+							a(href="#").header__logo-fixed
+								img(src="img/logo-fixed.svg" alt="alt")
+							button.header__catalog-toggle.catalog-toggle-header.header-catalog-opened
+								.catalog-toggle__burger
+									+icon('ctlg-burger')
+									+icon('ctlg-close')
+								.catalog-toggle__name Каталог
 
-				.review__div
-					.review__title Достоинства
-					p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-
-				.review__div
-					.review__title Недостатки
-					p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
-					p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
-
-			footer.review__footer
-				.review__photos
-					- for (var i=0; i < 2; i++)
-						.review__photo._fit
-							img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
-
-				.review__actions
-					button(type="button").review__collapse Свернуть
-					.review__options
-						a(href="#").review__answer Ответить
-						a(href="#").review__comments.review__option
-							+icon('chat')
-							.review__comments-count 1
-						a(href="#").review__like.review__option.active
-							+icon('like')
-							.review__like-count 1
-						a(href="#").review__dislike.review__option
-							+icon('unlike')
-							.review__dislike-count 0
-
-	.wrapper
-		- var tags = ['СКИДКИ', 'АКЦИИ', 'МОИ ЗАКАЗЫ', '23 ФЕВРАЛЯ', 'лендинг', 'Новинки'];
-		.tags
-			each tag, i in tags
-				div(class=i<=2 ? "tag active": 'tag')= tag
-	.wrapper-smart
-		.wrapper-flex
-			- for (var i=0; i < 8; i++)
-			.product-card
-				.product-card__img-wrap
-					.billet.billet--new Новинка 
-					a(href="#").product-card__border
-						span.product-card__img
-							img(src="img/product-card/prod-lg.jpg" alt="alt")
-				
-				
-				.product-card__price
-					.product-card__actions
-						a(href="#").product-card__action.active
-							+icon('favourites')
-						a(href="#").product-card__action
-							+icon('compare')
-					a(href="#").product-price 8 390 ₽
-						.product-price-sale 18 411₽
-					a(href="#").product-bonus
-						.product-bonus__val 99
-						+icon('bonus')
-				
-				a(href="#").product-card__name Вентилятор аккумуляторный Makita DCF 102 Z
-				
-				a(href="#").product-card__description 
-					.product-card__description-row Напряжение акк.: 12 В
-					.product-card__description-row Крутящий момент: 30 Н·м
-					.product-card__description-row Емкость аккумулятора: 2 А·ч
-					.product-card__description-row Тип аккумулятора Li-Ion
-					.product-card__description-row Кол-во аккумуляторов: 2 шт.
-					.product-card__description-row Вес 1.2 кг
-
-				.product-card__bottom
-					.product-card__rating-wrap
-						.product-card__rating
-							+crystalRating('4,5')
-					a(href="#").btn.btn-sm.product-card__buy Купить
+							.header__search.search-header
+								form(action="#" class="form").search-header__form
+									input(autocomplete="off" type="text" name="search" class="form__input search-header__input form__input--bg" placeholder="Поиск" autofocus)
+									button.search-header__send(type="submit")
+										+icon('magnifier')
+									button.search-header__back(type="button")
+										+icon('arrow-left')
 					
-					.product-card__info.info-product-card
-						.info-product-card__row Артикул: 002266
-						.info-product-card__row
-							.info-product-card__aval
-								.info-product-card__avalkey В наличии
-									a(href="#").info-product-card__avalvalue 6 магазинах
-						.info-product-card__row
-							a(href="#").info-product-card__oneclick Купить в 1 клик
-	.wrapper
-		.product-card.product-card--horisontal
-			.product-card__img-wrap
-				.billet.billet--action скидка 
-				a(href="#").product-card__border
-					span.product-card__img
-						img(src="img/product-card/prod-md.jpg" alt="alt")
-			
-			
-			.product-card__price
-				.product-card__actions
-					a(href="#").product-card__action.active
-						+icon('favourites')
-					a(href="#").product-card__action
-						+icon('compare')
-				a(href="#").product-price 8 390 ₽
-					.product-price-sale 18 411₽
-				a(href="#").product-bonus
-					.product-bonus__val 99
-					+icon('bonus')
-			
-			a(href="#").product-card__name Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140
-			
-			a(href="#").product-card__description 
-				.product-card__description-row Напряжение акк.: 12 В
-				.product-card__description-row Крутящий момент: 30 Н·м
-				.product-card__description-row Емкость аккумулятора: 2 А·ч
-				.product-card__description-row Тип аккумулятора Li-Ion
-				.product-card__description-row Кол-во аккумуляторов: 2 шт.
-				.product-card__description-row Вес 1.2 кг
 
-			.product-card__bottom
-				.product-card__rating-wrap
-					.product-card__rating
-						+crystalRating('4,5')
-				a(href="#").btn.btn-sm.product-card__buy Купить
+						//- иконки
+						.header__actions.icons-row
+							a(href="#").header__account.header__action
+								+icon('user')
+							a(href="#").header__action.header__compare
+								+icon('compare')
+								.header__action-count 2
+							a(href="#").header__action.header__favourites
+								+icon('favourites')
+								.header__action-count 10
+							a(href="#").header__action.header__basket
+								+icon('basket')
+								.header__action-count 10
+
+						.header__actions.icons-row
+							a(href="#").header__account.header__action.active
+								+icon('user')
+							a(href="#").header__action.header__compare.active
+								+icon('compare')
+								.header__action-count 2
+							a(href="#").header__action.header__favourites.active
+								+icon('favourites')
+								.header__action-count 10
+							a(href="#").header__action.header__basket.active
+								+icon('basket')
+								.header__action-count 10
+
+						.icons-row
+							a(href="#").header__action.header__compare.gray
+								+icon('compare')
+								.header__action-count 2
+							a(href="#").header__action.header__favourites.gray
+								+icon('favourites')
+								.header__action-count 10
+
+				//- цвета
+				.ui-colors
+					.icons-row
+						.ui-colors__item.bg_gray-l
+					.icons-row
+						- var colorsL = ['yellow-l', 'red-l', 'blue-l', 'accent-l', 'text-l'];
+							each color in colorsL
+								div(class="ui-colors__item bg_" + color)
+
+					.icons-row
+						- var colors = ['yellow', 'red', 'blue', 'accent', 'text'];
+							each color in colors
+								div(class="ui-colors__item bg_" + color)
+
+				//- отзыв
+				article.review
+					header.review__header
+						.person
+							.person__top
+								.person__portrait
+									//- img(src="img/person.jpg" alt="alt")
+								.person__info
+									.person__name Иванов Иван
+									.person__date 12 декабря 2021
+							.person__rating
+								.person__rating-wrap
+										+starRating(2)
+								.person__rating-mark Плохой товар
+						
+						.review__context.context-review
+							+icon('context')
+							a(href="#").context-review__drop Пожаловаться
+
+					.review__body
+						.review__div
+							.review__title Опыт использования
+							p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+						.review__div
+							.review__title Достоинства
+							p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+
+						.review__div
+							.review__title Недостатки
+							p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+							p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+
+					footer.review__footer
+						.review__photos
+							- for (var i=0; i < 2; i++)
+								.review__photo._fit
+									img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
+
+						.review__actions
+							button(type="button").review__collapse Свернуть
+							.review__options
+								a(href="#").review__answer Ответить
+								a(href="#").review__comments.review__option
+									+icon('chat')
+									.review__comments-count 1
+								a(href="#").review__like.review__option.active
+									+icon('like')
+									.review__like-count 1
+								a(href="#").review__dislike.review__option
+									+icon('unlike')
+									.review__dislike-count 0
+
+				- var tags = ['СКИДКИ', 'АКЦИИ', 'МОИ ЗАКАЗЫ', '23 ФЕВРАЛЯ', 'лендинг', 'Новинки'];
+				.tags
+					each tag, i in tags
+						div(class=i<=2 ? "tag active": 'tag')= tag
+
+			
+				//- карточка товара вертик.
+				.product-card
+					.product-card__img-wrap
+						.billet.billet--new Новинка 
+						a(href="#").product-card__border
+							span.product-card__img
+								img(src="img/product-card/prod-lg.jpg" alt="alt")
+					
+					
+					.product-card__price
+						.product-card__actions
+							a(href="#").product-card__action.active
+								+icon('favourites')
+							a(href="#").product-card__action
+								+icon('compare')
+						a(href="#").product-price 8 390 ₽
+							.product-price-sale 18 411₽
+						a(href="#").product-bonus
+							.product-bonus__val 99
+							+icon('bonus')
+					
+					a(href="#").product-card__name Вентилятор аккумуляторный Makita DCF 102 Z
+					
+					a(href="#").product-card__description 
+						.product-card__description-row Напряжение акк.: 12 В
+						.product-card__description-row Крутящий момент: 30 Н·м
+						.product-card__description-row Емкость аккумулятора: 2 А·ч
+						.product-card__description-row Тип аккумулятора Li-Ion
+						.product-card__description-row Кол-во аккумуляторов: 2 шт.
+						.product-card__description-row Вес 1.2 кг
+
+					.product-card__bottom
+						.product-card__rating-wrap
+							.product-card__rating
+								+crystalRating('4,5')
+						a(href="#").btn.btn-sm.product-card__buy Купить
+						
+						.product-card__info.info-product-card
+							.info-product-card__row Артикул: 002266
+							.info-product-card__row
+								.info-product-card__aval
+									.info-product-card__avalkey В наличии
+										a(href="#").info-product-card__avalvalue 6 магазинах
+							.info-product-card__row
+								a(href="#").info-product-card__oneclick Купить в 1 клик
 				
-				.product-card__info.info-product-card
-					.info-product-card__row Артикул: 002266
-					.info-product-card__row
-						.info-product-card__aval
-							.info-product-card__avalkey В наличии
-								a(href="#").info-product-card__avalvalue 6 магазинах
-					.info-product-card__row
-						a(href="#").info-product-card__oneclick Купить в 1 клик
+				//- карточка товара гориз.
+				.product-card.product-card--horisontal
+					.product-card__img-wrap
+						.billet.billet--action скидка 
+						a(href="#").product-card__border
+							span.product-card__img
+								img(src="img/product-card/prod-md.jpg" alt="alt")
+					
+					
+					.product-card__price
+						.product-card__actions
+							a(href="#").product-card__action.active
+								+icon('favourites')
+							a(href="#").product-card__action
+								+icon('compare')
+						a(href="#").product-price 8 390 ₽
+							.product-price-sale 18 411₽
+						a(href="#").product-bonus
+							.product-bonus__val 99
+							+icon('bonus')
+					
+					a(href="#").product-card__name Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140
+					
+					a(href="#").product-card__description 
+						.product-card__description-row Напряжение акк.: 12 В
+						.product-card__description-row Крутящий момент: 30 Н·м
+						.product-card__description-row Емкость аккумулятора: 2 А·ч
+						.product-card__description-row Тип аккумулятора Li-Ion
+						.product-card__description-row Кол-во аккумуляторов: 2 шт.
+						.product-card__description-row Вес 1.2 кг
+
+					.product-card__bottom
+						.product-card__rating-wrap
+							.product-card__rating
+								+crystalRating('4,5')
+						a(href="#").btn.btn-sm.product-card__buy Купить
+						
+						.product-card__info.info-product-card
+							.info-product-card__row Артикул: 002266
+							.info-product-card__row
+								.info-product-card__aval
+									.info-product-card__avalkey В наличии
+										a(href="#").info-product-card__avalvalue 6 магазинах
+							.info-product-card__row
+								a(href="#").info-product-card__oneclick Купить в 1 клик
 		
+				//- карточка товара мини.
+				include _blocks/product-card-mini
 
-		include _blocks/product-card-mini
+				//- эл-ты. формы
+				.form__example
+					form.form(action='#')
+						.form__row
+							.form__row-title.form__row-title--required Тип плательщика*
+							- var types = ['Физическое лицо', 'Юридическое лицо'];
+								.wrapper-flex
+									each item, ind in types
+										.form__type
+											form__custom-policy
+												label.form__custom
+													input.form__check(type='radio' name='type' value='chekbox1' checked=ind==0 ? true : false required='required')
+													span.form__custom-chek
+													span.form__policy= item
 
-	
+						.form__row
+							.form__row-title.form__row-title--required Покупатель*
+							label.form__label
+								input.form__input(autocomplete="off" type='text' name='name' placeholder='Фамилия*')
+							
+							label.form__label
+								input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Имя*')
+							
+							label.form__label
+								input.form__input(autocomplete="off" type='text' name='phone' placeholder='Отчество*')
 
+							label.form__label.form__label--error
+								input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Отчество*' value="Ива8нович55")
+								+icon('attention')
+							
+							label.form__label
+								// textarea.form__area(type='text' name='question')
+								input.form__input(autocomplete="off" type='text' name='email' placeholder='Email*')
 
-	.wrapper-smart
+						.form__row
+							.form__row-title.form__row-title--required Способ получения*
+							.form__deliveries.deliveries-form
+								.wrapper-flex
+									- var delivs = ['Самовывоз из пункта выдачи', 'Доставка курьером'];
+									each item, ind in delivs
+										.form__custom-policy.delivery-form
+											label.form__custom
+												input.form__check(type='radio' name='delivery-type' value='value' checked=ind==1 ? true : false required='required')
+												span.delivery-form__btn= item
+													+icon('chev-down')
+								.deliveries-form__text
+									| Курьерская служба магазина с 12:00 до 18:00.
+									br
+									| Курьер уточнит удобную для вас дату доставки.
+								.deliveries-form__note Обращаем Ваше внимание, что подъем и выгрузка товара на этаж не осуществляется.
 
-		.form__example
-			form.form(action='#')
-				.form__row
-					.form__row-title.form__row-title--required Тип плательщика*
-					- var types = ['Физическое лицо', 'Юридическое лицо'];
-						.wrapper-flex
-							each item, ind in types
-								.form__type
-									form__custom-policy
+						.form__row
+							.form__row-title.form__row-title--required Оплата*
+							.form__row-content
+								- var kinds = ['Оплата картой на сайте', 'СберСпасибо - оплата на сайте', 'Оплата при получении', 'Выставить счет для предоплаты безналичным платежом', 'Оплата СБП (сервис быстрых платежей)', 'В кредит'];
+								each item, ind in kinds
+									.form__custom-policy
 										label.form__custom
-											input.form__check(type='radio' name='type' value='chekbox1' checked=ind==0 ? true : false required='required')
+											input.form__check(type='radio' name='payment' value='chekbox1' checked=ind==0 ? true : false required='required')
 											span.form__custom-chek
 											span.form__policy= item
 
-				.form__row
-					.form__row-title.form__row-title--required Покупатель*
-					label.form__label
-						input.form__input(autocomplete="off" type='text' name='name' placeholder='Фамилия*')
-					
-					label.form__label
-						input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Имя*')
-					
-					label.form__label
-						input.form__input(autocomplete="off" type='text' name='phone' placeholder='Отчество*')
+											span.form__hidden-text Оплата наличными или банковской картой при получении заказа.
+												span.form__hidden-note Обратите внимание ! 
+													br
+													| При этом способе расчёта недоступно использование бонусов "Спасибо" от Сбербанка.
+						.form__row
+							.form__row-title.form__row-title--required Комментарии к заказу
+							label.form__label
+								textarea.form__area(type='text' name='question' placeholder="Есть что добавить?")
+				
+				//- кнопки
+				.ui-buttons
+					div
+						button.btn.btn-lg.btn-order Отправить заявку
+						// button.btn.btn-lg.btn-order.btn-empty Отправить заявку
+					div
+						button.btn.btn-lg.btn-order.btn-red оставить заявку
+						// button.btn.btn-lg.btn-order.btn-red.btn-empty оставить заявку
+					div
+						button.btn.btn-lg.btn-order подтвердить телефон
+						// button.btn.btn-lg.btn-order.btn-empty подтвердить телефон
+					div
+						button.btn.btn-lg.btn-bonus ОФОРМИТЬ БОНУСНУЮ КАРТУ
+					div
+						// button.btn.btn-lg.btn-bonus.btn-empty ОФОРМИТЬ БОНУСНУЮ КАРТУ
 
-					label.form__label.form__label--error
-						input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Отчество*' value="Ива8нович55")
-						+icon('attention')
-					
-					label.form__label
-						// textarea.form__area(type='text' name='question')
-						input.form__input(autocomplete="off" type='text' name='email' placeholder='Email*')
+					div
+						button.btn.btn-lg.btn-order-check перейти к оформлению
+						// button.btn.btn-lg.btn-order-check.btn-empty перейти к оформлению
+					div
+						button.btn.btn-lg.btn-order-check оформить заказ
+						// button.btn.btn-lg.btn-order-check.btn-empty оформить заказ
+					div
+						button.btn.btn-lg.btn-select Выбрать
+						// button.btn.btn-lg.btn-select.btn-empty Выбрать
+					div
+						button.btn.btn-lg.btn-select Выбрать
+						// button.btn.btn-lg.btn-select.btn-empty Выбрать
 
-				.form__row
-					.form__row-title.form__row-title--required Способ получения*
-					.form__deliveries.deliveries-form
-						.wrapper-flex
-							- var delivs = ['Самовывоз из пункта выдачи', 'Доставка курьером'];
-							each item, ind in delivs
-								.form__custom-policy.delivery-form
-									label.form__custom
-										input.form__check(type='radio' name='delivery-type' value='value' checked=ind==1 ? true : false required='required')
-										span.delivery-form__btn= item
-											+icon('chev-down')
-						.deliveries-form__text
-							| Курьерская служба магазина с 12:00 до 18:00.
-							br
-							| Курьер уточнит удобную для вас дату доставки.
-						.deliveries-form__note Обращаем Ваше внимание, что подъем и выгрузка товара на этаж не осуществляется.
+					div
+						button.btn.btn-sm.btn-loc Как добраться
+						// button.btn.btn-sm.btn-loc.btn-empty Как добраться
+					div
+						button.btn.btn-sm в каталог
+						button.btn.btn-sm.btn-empty в каталог
+					div
+						button.btn.btn-sm.btn-gray на главную
 
-				.form__row
-					.form__row-title.form__row-title--required Оплата*
-					.form__row-content
-						- var kinds = ['Оплата картой на сайте', 'СберСпасибо - оплата на сайте', 'Оплата при получении', 'Выставить счет для предоплаты безналичным платежом', 'Оплата СБП (сервис быстрых платежей)', 'В кредит'];
-						each item, ind in kinds
-							.form__custom-policy
-								label.form__custom
-									input.form__check(type='radio' name='payment' value='chekbox1' checked=ind==0 ? true : false required='required')
-									span.form__custom-chek
-									span.form__policy= item
+					div
+						button.btn.btn-sm Купить
+					div
+						button.btn.btn-sm.btn-yellow Купить
+					div
+						button.btn.btn-sm.btn-sm.btn-buy.clicked
+							span.btn__val Купить
+							.counter(data-min="0" data-max="100")
+								span.counter__button.counter-minus
+									+icon('minus')
+								span.counter__block
+									input(autocomplete="off" type="text" name="name" value="1" ).counter__count
+									span.counter__measures шт
+								span.counter__button.counter-plus
+									+icon('plus')
+					div
+						button.btn.btn-yellow.btn-sm.btn-buy.clicked
+							span.btn__val Купить
+							.counter(data-min="0" data-max="100")
+								span.counter__button.counter-minus
+									+icon('minus')
+								span.counter__block
+									input(autocomplete="off" type="text" name="name" value="1" ).counter__count
+									span.counter__measures шт
+								span.counter__button.counter-plus
+									+icon('plus')
+					div
+						button.btn.btn-sm.btn-blue заказать
+					div
+						button.btn.btn-sm.btn-gray аналог
+					div
+						button.btn.btn-sm.btn-red подарок
 
-									span.form__hidden-text Оплата наличными или банковской картой при получении заказа.
-										span.form__hidden-note Обратите внимание ! 
-											br
-											| При этом способе расчёта недоступно использование бонусов "Спасибо" от Сбербанка.
-				.form__row
-					.form__row-title.form__row-title--required Комментарии к заказу
-					label.form__label
-						textarea.form__area(type='text' name='question' placeholder="Есть что добавить?")
-	.wrapper.ui-buttons
-		div
-			button.btn.btn-lg.btn-order Отправить заявку
-			// button.btn.btn-lg.btn-order.btn-empty Отправить заявку
-		div
-			button.btn.btn-lg.btn-order.btn-red оставить заявку
-			// button.btn.btn-lg.btn-order.btn-red.btn-empty оставить заявку
-		div
-			button.btn.btn-lg.btn-order подтвердить телефон
-			// button.btn.btn-lg.btn-order.btn-empty подтвердить телефон
-		div
-			button.btn.btn-lg.btn-bonus ОФОРМИТЬ БОНУСНУЮ КАРТУ
-		div
-			// button.btn.btn-lg.btn-bonus.btn-empty ОФОРМИТЬ БОНУСНУЮ КАРТУ
+				//- плашки
+				.billet.billet--new новинка
+				.billet.billet--markdown уценка
+				.billet.billet--action Акция
 
-		div
-			button.btn.btn-lg.btn-order-check перейти к оформлению
-			// button.btn.btn-lg.btn-order-check.btn-empty перейти к оформлению
-		div
-			button.btn.btn-lg.btn-order-check оформить заказ
-			// button.btn.btn-lg.btn-order-check.btn-empty оформить заказ
-		div
-			button.btn.btn-lg.btn-select Выбрать
-			// button.btn.btn-lg.btn-select.btn-empty Выбрать
-		div
-			button.btn.btn-lg.btn-select Выбрать
-			// button.btn.btn-lg.btn-select.btn-empty Выбрать
+				div
+					.billet.billet--mini.billet--new
+					.billet.billet--mini.billet--markdown
+					.billet.billet--mini.billet--action
 
-		div
-			button.btn.btn-sm.btn-loc Как добраться
-			// button.btn.btn-sm.btn-loc.btn-empty Как добраться
-		div
-			button.btn.btn-sm в каталог
-			button.btn.btn-sm.btn-empty в каталог
-		div
-			button.btn.btn-sm.btn-gray на главную
-
-		div
-			button.btn.btn-sm Купить
-		div
-			button.btn.btn-sm.btn-yellow Купить
-		div
-			button.btn.btn-sm.btn-sm.btn-buy.clicked
-				span.btn__val Купить
-				.counter(data-min="0" data-max="100")
-					span.counter__button.counter-minus
-						+icon('minus')
-					span.counter__block
-						input(autocomplete="off" type="text" name="name" value="1" ).counter__count
-						span.counter__measures шт
-					span.counter__button.counter-plus
-						+icon('plus')
-		div
-			button.btn.btn-yellow.btn-sm.btn-buy.clicked
-				span.btn__val Купить
-				.counter(data-min="0" data-max="100")
-					span.counter__button.counter-minus
-						+icon('minus')
-					span.counter__block
-						input(autocomplete="off" type="text" name="name" value="1" ).counter__count
-						span.counter__measures шт
-					span.counter__button.counter-plus
-						+icon('plus')
-		div
-			button.btn.btn-sm.btn-blue заказать
-		div
-			button.btn.btn-sm.btn-gray аналог
-		div
-			button.btn.btn-sm.btn-red подарок
-
-		.billet.billet--new новинка
-		.billet.billet--markdown уценка
-		.billet.billet--action Акция
-
-	.wrapper
-		- var socs = ['soc-vk', 'soc-pint', 'soc-ok', 'soc-tg', 'soc-youtb'];
-			ul.socials.socials--colored
-				each soc in socs
-					li.socials__item
-						a(href="#" class="socials__link socials__link--" + soc)
-							+icon(soc)
-
-			ul.socials
-				each soc in socs
-					li.socials__item
-						a(href="#" class="socials__link socials__link--" + soc)
-							+icon(soc)
 	
-	.wrapper
-		+pagination([1, '...', 14, 15, 16, '...', 189], '')
+				//- соцсети
+				- var socs = ['soc-vk', 'soc-pint', 'soc-ok', 'soc-tg', 'soc-youtb'];
+					ul.socials.socials--colored
+						each soc in socs
+							li.socials__item
+								a(href="#" class="socials__link socials__link--" + soc)
+									+icon(soc)
+				ul.socials
+					each soc in socs
+						li.socials__item
+							a(href="#" class="socials__link socials__link--" + soc)
+								+icon(soc)
+	
+				//- пагинация
+				
+				+pagination([1, '...', 14, 15, 16, '...', 189], '')
 
-	.wrapper
-		include _blocks/side-modals	
+				//- категории
+				- var content = [{title: 'Электро-инструменты', tags: ['Гайковерты', 'Шуруповерты', 'Перфораторы', 'Дрели', 'УШМ (болгарки)'], sm: 'Электро-станции'}];
+				each item, ind in content
+					.categories-tiles__column
+						.categories-tile.categories-tile--lg
+							.categories-tile__title= item.title
+							.tags
+								each tag in item.tags
+									a(href="").categories-tile__tag.tag= tag
+							.categories-tile__img
+								img(src="img/categories-tiles/bitmaps/"+(ind+1)+".png" alt="alt")
+
+						.categories-tile.categories-tile--sm
+							.categories-tile__title= item.sm
+							.categories-tile__img
+								img(src="img/categories-tiles/svgs/4.svg" alt="alt")
+
+				//- модальные окна
+				include _blocks/side-modals	
 	
 	.wrapper.rating
 		h2 Rating in reviews
@@ -342,10 +451,11 @@ block content
 		+crystalRating('1,5')
 		+crystalRating(5)
 
-	.wrapper.ics
-		- var icons = ['attention', 'basket', 'cart', 'catalog-mob', 'catalog', 'chat', 'chats', 'compare', 'ctlg-burger', 'ctlg-close', 'favourites', 'flame', 'home', 'like', 'loc', 'magnifier', 'percents', 'phone', 'remove', 'soc-ok', 'soc-pint', 'soc-tg', 'soc-twi', 'soc-vk', 'soc-youtb', 'unlike', 'user', 'm-menu'];
-		each ic in icons
-			+icon(ic)
+	//- .wrapper.ics
+	//- 	- var icons = ['attention', 'basket', 'cart', 'catalog-mob', 'catalog', 'chat', 'chats', 'compare', 'ctlg-burger', 'ctlg-close', 'favourites', 'flame', 'home', 'like', 'loc', 'magnifier', 'percents', 'phone', 'remove', 'soc-ok', 'soc-pint', 'soc-tg', 'soc-twi', 'soc-vk', 'soc-youtb', 'unlike', 'user', 'm-menu'];
+	//- 	each ic in icons
+	//- 		+icon(ic)
+	
 	//- .wrapper
 	//- 	.my-slider#gallery
 	//- 		- var imgs = ['https://upload.wikimedia.org/wikipedia/commons/2/23/%D0%90%D0%B2%D0%B0%D0%B4%D1%85%D0%B0%D1%80%D0%B0._%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D1%81%D0%B5%D0%B2%D0%B5%D1%80.JPG', 'https://cdnn21.img.ria.ru/images/103766/29/1037662948_0:73:1200:753_600x0_80_0_0_47ddadf192368680c6bda4fadeb34c62.jpg', 'https://media-cdn.tripadvisor.com/media/photo-s/09/be/57/af/caption.jpg'];

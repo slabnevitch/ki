@@ -10,7 +10,7 @@ section.categories-tiles
 						.categories-tile__title= item.title
 						.tags
 							each tag in item.tags
-								.categories-tile__tag.tag= tag
+								a(href="").categories-tile__tag.tag= tag
 						.categories-tile__img
 							img(src="img/categories-tiles/bitmaps/"+(ind+1)+".png" alt="alt")
 

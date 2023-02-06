@@ -25,12 +25,19 @@
 	padding-bottom: 100px;
 
 	.categories-tile__title {
+		margin-top: 3px;
 		margin-bottom: 16px;
 
 	}
 	.categories-tile__img {
 		width: 100px;
 		height: 100px;
+
+		img{
+			@include absolute-center-old;
+			top: auto;
+			bottom: 0;
+		}
 	}
 }
 .categories-tile__title {
@@ -40,7 +47,27 @@
 line-height: 14px;
 }
 .tags {}
-.categories-tile__tag {}
+.categories-tile__tag {
+	letter-spacing: -0.025em;
+	padding-left: 11px;
+	padding-right: 11px;
+	color: 	$accent;
+	border-color: $accent;
+	transition: all .3s;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+		&:hover{
+
+			background-color: $accent;
+			color: #fff;
+		}
+	}
+
+	&:not(:last-child){
+		margin-right: 4px;
+		
+	}
+}
 .tag {}
 .categories-tile__img {
 	position: absolute;
@@ -58,10 +85,16 @@ line-height: 14px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	overflow: hidden;
 	
 	.categories-tile__img {
 		width: 90px;
 		height: 90px;
+
+		img{
+			@include absolute-center;
+
+		}
 	}
 }
 /*--------------------END categories-tiles----------------------*/ 
