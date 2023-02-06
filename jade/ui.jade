@@ -260,12 +260,10 @@ block content
 							- var types = ['Физическое лицо', 'Юридическое лицо'];
 								.wrapper-flex
 									each item, ind in types
-										.form__type
-											form__custom-policy
-												label.form__custom
-													input.form__check(type='radio' name='type' value='chekbox1' checked=ind==0 ? true : false required='required')
-													span.form__custom-chek
-													span.form__policy= item
+										label.form__custom.form__type
+											input.form__check(type='radio' name='type' value='chekbox1' checked=ind==0 ? true : false required='required')
+											span.form__custom-chek
+											span.form__policy= item
 
 						.form__row
 							.form__row-title.form__row-title--required Покупатель*
@@ -417,6 +415,9 @@ block content
 						li.socials__item
 							a(href="#" class="socials__link socials__link--" + soc)
 								+icon(soc)
+
+				.cart-round-icon
+					+icon('cart')
 	
 				//- пагинация
 				

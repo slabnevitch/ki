@@ -22,7 +22,7 @@
 }
 .categories-tile--lg {
 	flex: 1 1 220px;
-	padding-bottom: 100px;
+	padding-bottom: 50px;
 
 	.categories-tile__title {
 		margin-top: 3px;
@@ -51,6 +51,7 @@ line-height: 14px;
 	letter-spacing: -0.025em;
 	padding-left: 11px;
 	padding-right: 11px;
+	margin-bottom: 6px;
 	color: 	$accent;
 	border-color: $accent;
 	transition: all .3s;

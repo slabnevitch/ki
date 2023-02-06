@@ -23,19 +23,21 @@
 								input(type="checkbox" name="availability" class="ctlg-filter__checkbox")
 								span.ctlg-filter__tag-value.tag= tag
 
-					.ctlg-filter__select
-						select(data-searchdisable="true" class="fstdropdown-select")
-							option(value="1") В любом из магазинов
-							option(value="2") В ином из магазине
-				
-					.ctlg-filter__labels
-						- var labels = ['ул. Северная, 320', 'ул. Ростовское шоссе, 30/3', 'ул. Октябрьская, 170', 'ул. Ростовское шоссе, 30/3', 'ул. Октябрьская, 170', 'ул. Северная, 320', 'ул. Ростовское шоссе, 14/6', 'ул. Ростовское шоссе, 14/6', 'ул. Октябрьская, 170', 'ул. Ростовское шоссе, 30/3', 'ул. Октябрьская, 170', 'ул. Северная, 320', 'ул. Ростовское шоссе, 14/6', 'ул. Ростовское шоссе, 30/3', 'ул. Октябрьская, 170'];
+					.ctlg-filter__select.ctlg-filter-location
+						button(type="button").ctlg-filter-location__selected
+							.ctlg-filter-location__value В любом из магазинов
+							+icon('chev-down')
+						
+						.ctlg-filter-location__dropdown
+							.ctlg-filter__labels
+								- var labels = ['ул. Северная, 320', 'ул. Ростовское шоссе, 30/3', 'ул. Октябрьская, 170', 'ул. Ростовское шоссе, 30/3', 'ул. Октябрьская, 170', 'ул. Северная, 320', 'ул. Ростовское шоссе, 14/6', 'ул. Ростовское шоссе, 14/6', 'ул. Октябрьская, 170', 'ул. Ростовское шоссе, 30/3', 'ул. Октябрьская, 170', 'ул. Северная, 320', 'ул. Ростовское шоссе, 14/6', 'ул. Ростовское шоссе, 30/3', 'ул. Октябрьская, 170'];
 
-						each lab, ind in labels
-							label.ctlg-filter__label
-								input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")
-								span.ctlg-filter__false-checkbox
-								span.ctlg-filter__value= lab
+								each lab, ind in labels
+									label.ctlg-filter__label
+										input(type="checkbox" name="product" class="ctlg-filter__checkbox")
+										// input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")
+										span.ctlg-filter__false-checkbox
+										span.ctlg-filter__value= lab
 
 		.accordion__item.ctlg-filter__item
 			.accordion__link.ctlg-filter__link Цена, руб

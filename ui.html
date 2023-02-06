@@ -1888,58 +1888,77 @@
                           <input type="checkbox" name="availability" class="ctlg-filter__checkbox"><span class="ctlg-filter__tag-value tag">под заказ</span>
                         </label>
                       </div>
-                      <div class="ctlg-filter__select">
-                        <select data-searchdisable="true" class="fstdropdown-select">
-                          <option value="1">В любом из магазинов</option>
-                          <option value="2">В ином из магазине</option>
-                        </select>
-                      </div>
-                      <div class="ctlg-filter__labels">
-                        <label class="ctlg-filter__label">
-                          <input type="checkbox" name="product" checked class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Северная, 320</span>
-                        </label>
-                        <label class="ctlg-filter__label">
-                          <input type="checkbox" name="product" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Ростовское шоссе, 30/3</span>
-                        </label>
-                        <label class="ctlg-filter__label">
-                          <input type="checkbox" name="product" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Октябрьская, 170</span>
-                        </label>
-                        <label class="ctlg-filter__label">
-                          <input type="checkbox" name="product" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Ростовское шоссе, 30/3</span>
-                        </label>
-                        <label class="ctlg-filter__label">
-                          <input type="checkbox" name="product" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Октябрьская, 170</span>
-                        </label>
-                        <label class="ctlg-filter__label">
-                          <input type="checkbox" name="product" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Северная, 320</span>
-                        </label>
-                        <label class="ctlg-filter__label">
-                          <input type="checkbox" name="product" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Ростовское шоссе, 14/6</span>
-                        </label>
-                        <label class="ctlg-filter__label">
-                          <input type="checkbox" name="product" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Ростовское шоссе, 14/6</span>
-                        </label>
-                        <label class="ctlg-filter__label">
-                          <input type="checkbox" name="product" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Октябрьская, 170</span>
-                        </label>
-                        <label class="ctlg-filter__label">
-                          <input type="checkbox" name="product" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Ростовское шоссе, 30/3</span>
-                        </label>
-                        <label class="ctlg-filter__label">
-                          <input type="checkbox" name="product" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Октябрьская, 170</span>
-                        </label>
-                        <label class="ctlg-filter__label">
-                          <input type="checkbox" name="product" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Северная, 320</span>
-                        </label>
-                        <label class="ctlg-filter__label">
-                          <input type="checkbox" name="product" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Ростовское шоссе, 14/6</span>
-                        </label>
-                        <label class="ctlg-filter__label">
-                          <input type="checkbox" name="product" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Ростовское шоссе, 30/3</span>
-                        </label>
-                        <label class="ctlg-filter__label">
-                          <input type="checkbox" name="product" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Октябрьская, 170</span>
-                        </label>
+                      <div class="ctlg-filter__select ctlg-filter-location">
+                        <button type="button" class="ctlg-filter-location__selected">
+                          <div class="ctlg-filter-location__value">В любом из магазинов</div>
+                              <svg class="icon icon-chev-down ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                              </svg>
+                        </button>
+                        <div class="ctlg-filter-location__dropdown">
+                          <div class="ctlg-filter__labels">
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="product" class="ctlg-filter__checkbox">
+                              <!-- input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")--><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Северная, 320</span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="product" class="ctlg-filter__checkbox">
+                              <!-- input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")--><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Ростовское шоссе, 30/3</span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="product" class="ctlg-filter__checkbox">
+                              <!-- input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")--><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Октябрьская, 170</span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="product" class="ctlg-filter__checkbox">
+                              <!-- input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")--><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Ростовское шоссе, 30/3</span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="product" class="ctlg-filter__checkbox">
+                              <!-- input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")--><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Октябрьская, 170</span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="product" class="ctlg-filter__checkbox">
+                              <!-- input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")--><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Северная, 320</span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="product" class="ctlg-filter__checkbox">
+                              <!-- input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")--><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Ростовское шоссе, 14/6</span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="product" class="ctlg-filter__checkbox">
+                              <!-- input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")--><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Ростовское шоссе, 14/6</span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="product" class="ctlg-filter__checkbox">
+                              <!-- input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")--><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Октябрьская, 170</span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="product" class="ctlg-filter__checkbox">
+                              <!-- input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")--><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Ростовское шоссе, 30/3</span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="product" class="ctlg-filter__checkbox">
+                              <!-- input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")--><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Октябрьская, 170</span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="product" class="ctlg-filter__checkbox">
+                              <!-- input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")--><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Северная, 320</span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="product" class="ctlg-filter__checkbox">
+                              <!-- input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")--><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Ростовское шоссе, 14/6</span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="product" class="ctlg-filter__checkbox">
+                              <!-- input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")--><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Ростовское шоссе, 30/3</span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="product" class="ctlg-filter__checkbox">
+                              <!-- input(type="checkbox" name="product" checked=ind==0 ? true: false class="ctlg-filter__checkbox")--><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">ул. Октябрьская, 170</span>
+                            </label>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2658,20 +2677,12 @@
                   <div class="form__row">
                     <div class="form__row-title form__row-title--required">Тип плательщика*</div>
                     <div class="wrapper-flex">
-                      <div class="form__type">
-                        <form__custom-policy>
-                          <label class="form__custom">
-                            <input type="radio" name="type" value="chekbox1" checked required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Физическое лицо</span>
-                          </label>
-                        </form__custom-policy>
-                      </div>
-                      <div class="form__type">
-                        <form__custom-policy>
-                          <label class="form__custom">
-                            <input type="radio" name="type" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Юридическое лицо</span>
-                          </label>
-                        </form__custom-policy>
-                      </div>
+                      <label class="form__custom form__type">
+                        <input type="radio" name="type" value="chekbox1" checked required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Физическое лицо</span>
+                      </label>
+                      <label class="form__custom form__type">
+                        <input type="radio" name="type" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Юридическое лицо</span>
+                      </label>
                     </div>
                   </div>
                   <div class="form__row">
@@ -2902,6 +2913,11 @@
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#soc-youtb"></use>
                         </svg></a></li>
               </ul>
+              <div class="cart-round-icon">
+                    <svg class="icon icon-cart ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#cart"></use>
+                    </svg>
+              </div>
                   <div class="pagination">
                     <button disabled="" class="pagination__arrow pagination__arrow--prev">
                           <svg class="icon icon-chev-left ">

@@ -154,6 +154,8 @@
 			// 	});
 			// }
 		// END header search results toggle
+
+		
 	});
 
 	// body cover show/hide
@@ -174,6 +176,70 @@
 
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
+
+		// catalog-filter address list toggle
+			if(document.querySelector('.ctlg-filter-location__selected') !== null){
+				var addressToggler = (function() {
+					var addressSelect = document.querySelector('.ctlg-filter-location__selected'),
+						addressDropdown = addressSelect.nextElementSibling,
+						addressInputs = addressDropdown.querySelectorAll('input.ctlg-filter__checkbox'),
+						resultContainer = addressSelect.querySelector('.ctlg-filter-location__value'),
+						checkedInputs = [];
+
+					init = function() {
+						checkedDetect();
+						events();
+					}
+					checkedDetect = function() {
+						for (var i = addressInputs.length - 1; i >= 0; i--) {
+								console.log(addressInputs[i].checked)
+							if(addressInputs[i].checked){
+								console.log(addressInputs[i].closest('.ctlg-filter__label').querySelector('.ctlg-filter__value').textContent)
+								checkedInputs.push(addressInputs[i].closest('.ctlg-filter__label').querySelector('.ctlg-filter__value').textContent);
+							}
+						}
+						textContentFormater();
+					}
+					textContentFormater = function() {
+						if(checkedInputs.length === 1){
+							textContentRender(checkedInputs[0]);
+						}else if(checkedInputs.length > 1){
+							textContentRender('в ' + checkedInputs.length + ' ' + 'магазинах' );
+						}else{
+							textContentRender('В любом из магазинов');
+						}
+					}
+					textContentRender = function(text) {
+						resultContainer.textContent = text;
+
+					}
+					events = function() {
+						addressSelect.addEventListener('click', dropdownToggle);
+						document.addEventListener('click', function(e) {
+								if(e.target.closest('.ctlg-filter-location') == null){
+								document.querySelector('.ctlg-filter-location')
+									.classList.remove('ctlg-filter-location--opened');
+							}
+						});
+						for (var i = addressInputs.length - 1; i >= 0; i--) {
+							addressInputs[i].addEventListener('change', this.inputCheck)
+						}
+					}
+					inputCheck = function(e) {
+						checkedInputs = [];
+						checkedDetect();
+					}
+					dropdownToggle = function(e) {
+						e.target.closest('.ctlg-filter-location')
+							.classList.toggle('ctlg-filter-location--opened');
+					}
+
+					init();
+
+				})();
+
+			}
+		// END catalog-filter address list toggle
 
 		// noUiSlider
 		if(document.querySelector('.ctlg-filter__range') !== null){

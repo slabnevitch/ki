@@ -100,6 +100,7 @@
 }
 .review__body {
 	margin-bottom: 25px;	
+	@include adaptive-value('padding-right', 60, 0, 1);
 }
 .review__div {
 
