@@ -3941,7 +3941,6 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------END mob-nav----------------------*/
 /*--------------------product-card----------------------*/
 .product-card {
-  max-width: 224px;
   padding-bottom: 26px;
   position: relative;
   display: -ms-flexbox;
@@ -3950,6 +3949,27 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   margin-bottom: 15px;
   word-wrap: normal;
+}
+.ui-elems .product-card {
+  max-width: 224px;
+}
+.product-cards .product-card {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: calc(25% - 16px);
+  word-wrap: normal;
+}
+@media screen and (max-width: 991px) {
+  .product-cards .product-card {
+    width: calc(33.3333333333% - 16px);
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .product-cards .product-card {
+    width: calc(50% - 16px);
+  }
 }
 .product-card .billet {
   position: absolute;
@@ -4191,7 +4211,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .product-card__img-wrap {
   position: relative;
-  margin-bottom: 34px;
 }
 
 .product-card__border {

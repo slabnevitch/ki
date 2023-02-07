@@ -1,6 +1,5 @@
 /*--------------------product-card----------------------*/
 .product-card {
-	max-width: 224px;
 	padding-bottom: 26px;
 	position: relative;
 	display: flex;
@@ -10,6 +9,19 @@
 	// @include col();
 	// @include size(3);
 	word-wrap: normal;
+
+	.ui-elems &{
+		max-width: 224px;
+
+	}
+	.product-cards &{
+		@include col();
+		@include size(3);
+		@include size-md(4);
+		@include size-sm(6);
+
+	    word-wrap: normal;
+	}
 
 	.billet {
 		position: absolute;
@@ -249,7 +261,7 @@
 }
 .product-card__img-wrap {
 	position: relative;	
-	margin-bottom: 34px;
+	// margin-bottom: 34px;
 }
 .product-card__border{
 	padding: 22px;
