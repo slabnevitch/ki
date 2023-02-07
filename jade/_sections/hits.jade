@@ -22,12 +22,12 @@ section.page-main-sect.hits
 									+icon('favourites')
 								a(href="#").product-card__action
 									+icon('compare')
-							if item.iconActive === '1'
+							else if item.iconActive === '1'
 								a(href="#").product-card__action
 									+icon('favourites')
 								a(href="#").product-card__action.active
 									+icon('compare')
-							if item.iconActive == false
+							else if item.iconActive == false
 								a(href="#").product-card__action
 									+icon('favourites')
 								a(href="#").product-card__action
