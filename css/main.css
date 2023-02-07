@@ -2740,14 +2740,20 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "NavigoMedium", sans-serif;
 }
 
+.page-main-sect {
+  padding-top: 37px;
+}
+
 .sect-title {
   margin-bottom: 20px;
   font-size: 22px;
   line-height: 20px;
 }
-
-.page-main-sect {
-  padding-top: 37px;
+@media only screen and (max-width: 767.98px) {
+  .sect-title {
+    margin-bottom: 7px;
+    font-size: 16px;
+  }
 }
 
 .link {
@@ -4797,6 +4803,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------END side-modals----------------------*/
 /*--------------------categories-tiles----------------------*/
+@media only screen and (max-width: 767.98px) {
+  .categories-tiles {
+    padding-top: 17px;
+  }
+}
 @media only screen and (max-width: 959.98px) {
   .categories-tiles .swiper-container {
     width: calc(100% + 24px);
@@ -6394,6 +6405,11 @@ h1, h2, h3, h4, h5, h6 {
   position: static;
   margin-top: 12px;
 }
+@media only screen and (max-width: 767.98px) {
+  .main-slider .swiper-pagination {
+    display: none;
+  }
+}
 .main-slider .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
@@ -6407,10 +6423,9 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 40.9574468085%;
   border-radius: 4px;
 }
-@media only screen and (max-width: 479.98px) {
+@media only screen and (max-width: 767.98px) {
   .main-slider__slide {
-    padding-bottom: 0;
-    height: 148px;
+    padding-bottom: 46.5625%;
   }
 }
 

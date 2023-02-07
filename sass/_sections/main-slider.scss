@@ -18,6 +18,10 @@
 	.swiper-pagination{
 		position: static;
 		margin-top: 12px;
+
+		@include max-screen($sm){
+			display: none;
+		}
 	}
 	.swiper-pagination-bullet{
 		width: 8px;
@@ -39,9 +43,9 @@
 	padding-bottom: prc(385, 940);
 	border-radius: 4px;	
 
-	@include max-screen($xss){
-		padding-bottom: 0;
-		height: 148px;
+	@include max-screen($sm){
+		padding-bottom: prc(149, 320);
+		// height: 148px;
 	}
 }
 ._fit {}

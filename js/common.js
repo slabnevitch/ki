@@ -224,12 +224,7 @@
 			  pagination: {
 			  	el: '.swiper-pagination',
 			  	type: 'bullets',
-			  	clickable: true,
-				//custom pagination
-				//type: 'custom',
-				//renderCustom: (swiper, current, total) => {
-					//return current.toString().length > 1 ? current : '0'+current;
-				//}
+			  	clickable: true
 			  },
 
 			  // Navigation arrows

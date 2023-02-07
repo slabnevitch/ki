@@ -1,5 +1,9 @@
 /*--------------------categories-tiles----------------------*/
 .categories-tiles {
+
+	@include max-screen($sm){
+		padding-top: 17px;
+	}
 	
 	.swiper-container{
 		@include max-screen($md){
