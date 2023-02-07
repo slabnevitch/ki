@@ -13,6 +13,26 @@
 	._scroll &{
 		top: -68px;
 	}
+	&.search-results-opened{
+		position: relative;
+		z-index: 12;
+
+		.header__bottom{
+			@include max-screen($md){
+				top: -44px;
+				z-index: 3;				
+			}
+		}
+
+		&._scroll{
+			.header__bottom{
+				@include max-screen($md){
+					top: 0;
+					
+				}
+			}
+		}
+	}
 
 }
 .header__top {
@@ -326,6 +346,14 @@
 
 	}
 
+	// .search-results-opened &{
+	// 	@include max-screen($md){
+	// 		z-index: 3;
+	// 		top: -40px;
+				
+	// 	}
+	// }
+
 }
 .header__bottom-wrapper{
 	display: flex;
@@ -359,7 +387,8 @@
 	.search-results-opened &{
 		@include max-screen($md){
 			width: 0;
-			height: 0
+			height: 0;
+			margin-right: 0;
 		}
 	}
 }

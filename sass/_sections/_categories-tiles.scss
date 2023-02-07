@@ -2,8 +2,8 @@
 .categories-tiles {
 	
 	.swiper-container{
-		@include max-screen($sm){
-			width: 	calc(100% + 12px);
+		@include max-screen($md){
+			width: 	calc(100% + 24px);
 		}
 
 		.swiper-button-prev,
@@ -13,13 +13,16 @@
 
 	}
 	.swiper-wrapper{
-		@include min-screen($sm){
+		@include min-screen($md){
 			flex-wrap: wrap;
 			margin-left: -8px;
 			margin-right: -8px;	
 			width: auto;
 				
 		}
+	}
+	.show-all-link{
+		margin-top: -20px;
 	}
 }
 .wrapper {}
@@ -28,16 +31,17 @@
 .wrapper-flex {}
 .categories-tiles__column {
 	// @include col();
-	@include size(3);
+	// @include size(3);
 
-	@include min-screen($sm){
-		width: calc((100% / 3) - 16px) !important;
-		margin-left: 8px;
-		margin-right: 8px;	
-	}
+	// @include min-screen($sm){
+	// 	width: calc((100% / 3) - 16px) !important;
+	// 	margin-left: 8px;
+	// 	margin-right: 8px;	
+	// }
 	@include min-screen($md){
 		width: calc(25% - 16px) !important;
-		
+		margin-left: 8px;
+		margin-right: 8px;
 	}
 
 

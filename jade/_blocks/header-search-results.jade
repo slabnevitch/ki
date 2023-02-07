@@ -8,8 +8,8 @@ if pageIndex == '013'
 							.result-row-chapter Популярные категории
 							- var vals = ['Электроинструменты', 'Ручной инструмент', 'Строительство и ремонт', 'Гайковерты'];
 							.result-row-values
-								each val in vals
-									.result-row-value
+								each val, i in vals
+									div(class=i==2?"result-row-value active":"result-row-value")
 										a(href="#")= val
 							
 						.wrapper-flex.search-results-header__category

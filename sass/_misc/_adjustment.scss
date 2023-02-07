@@ -24,10 +24,6 @@ body{
 	}
 }
 
-section{
-	height: 100vh;
-	// background: gray;
-}
 // компенсация ширины скроллбара при появлении ванильных поапов
 // все содержимое страницы оборачивается в #wrapper-for-scroll-fix
 // использовать совместно с libs-vanilla/service-functions/scrollWidth.js 
@@ -106,6 +102,12 @@ textarea.input{
 	// @include row-flex();
 	// @include wrapper();
 	// outline: 1px solid;
+	&.p-12{
+		@include max-screen($max){
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+	}
 }
 // classes for smartgrid(c) structure
 .wrapper-smart{
@@ -297,6 +299,10 @@ padding-bottom: 52.25%;
 		color: $text-l;
 
 	}	
+}
+.show-all-link{
+	padding-top: 10px;
+	text-align: right;
 }
 /*--------------------END adjustment----------------------*/ 
 .wrapper.rating{

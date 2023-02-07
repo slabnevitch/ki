@@ -1,0 +1,11 @@
+sect.main-slider
+	.wrapper
+		.slider-navs
+			.slider-nav.slider-nav--prev
+				+icon('chev-down')
+			.slider-nav.slider-nav--next
+				+icon('chev-down')
+		+swiper('main-slider__slider', true, false, true)
+			- for (var i=0; i < 3; i++)
+				a(href="#").swiper-slide.main-slider__slide._fit
+					img._fit-img(src="img/main-slider-banner.jpg" alt="alt")

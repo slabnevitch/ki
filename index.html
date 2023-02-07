@@ -12,7 +12,7 @@
     <main class="main">
       <header class="header">
         <div class="header__top">
-          <div class="wrapper">
+          <div class="wrapper p-12">
             <div class="header__top-inner"><a href="index.html" class="header__logo">
                 <picture>
                   <source srcset="img/ki_logo.svg" media="(max-width: 959.98px)"><img src="img/logo.svg" alt="alt">
@@ -78,7 +78,7 @@
           </div>
         </div>
         <div class="header__bottom">
-          <div class="wrapper">
+          <div class="wrapper p-12">
             <div class="header__bottom-wrapper"><a href="#" class="header__logo-fixed"><img src="img/logo-fixed.svg" alt="alt"></a>
               <button id="catalog-switcher" class="header__catalog-toggle catalog-toggle-header">
                 <div class="catalog-toggle__burger">
@@ -1843,7 +1843,36 @@
       </header>
       <div class="main-content">
         <div class="page page-main">
-          <section class="categories-tiles">
+          <div class="wrapper p-12">
+            <div class="page-main__tagswrap">
+              <div class="tags page-main__tags"><a href="#" class="tag active">СКИДКИ</a><a href="#" class="tag active">АКЦИИ</a><a href="#" class="tag active">МОИ ЗАКАЗЫ</a><a href="#" class="tag">23 ФЕВРАЛЯ</a><a href="#" class="tag">лендинг</a><a href="#" class="tag">Новинки</a>
+              </div>
+            </div>
+          </div>
+          <sect class="main-slider">
+            <div class="wrapper">
+              <div class="slider-navs">
+                <div class="slider-nav slider-nav--prev">
+                      <svg class="icon icon-chev-down ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                      </svg>
+                </div>
+                <div class="slider-nav slider-nav--next">
+                      <svg class="icon icon-chev-down ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                      </svg>
+                </div>
+              </div>
+                  <div class="swiper-container swiper main-slider__slider">
+                    <div class="swiper-wrapper"><a href="#" class="swiper-slide main-slider__slide _fit"><img src="img/main-slider-banner.jpg" alt="alt" class="_fit-img"></a><a href="#" class="swiper-slide main-slider__slide _fit"><img src="img/main-slider-banner.jpg" alt="alt" class="_fit-img"></a><a href="#" class="swiper-slide main-slider__slide _fit"><img src="img/main-slider-banner.jpg" alt="alt" class="_fit-img"></a>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+            </div>
+          </sect>
+          <section class="page-main-sect categories-tiles">
             <div class="wrapper">
               <h2 class="sect-title">Категории</h2>
             </div>
@@ -1905,6 +1934,7 @@
                     <div class="swiper-button-next"></div>
                   </div>
             </div>
+            <div class="show-all-link"><a href="#" class="link">Смотреть все</a></div>
           </section>
         </div>
       </div>

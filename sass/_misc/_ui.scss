@@ -1,4 +1,31 @@
 /*--------------------ui----------------------*/
+// заголовки
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  font-weight: normal;
+  font-family: $navm;
+}
+.sect-title{
+  margin-bottom: 20px;
+  font-size: 22px;
+  line-height: 20px;
+}
+
+// секции Главной стр-цы.
+.page-main-sect{
+  padding-top: 37px;
+}
+.link{
+  font-size: 12px;
+  line-height: 15px;
+  color: $text-l;
+  text-decoration: none;
+
+  &:hover, &:active, &:focus{
+    text-decoration: underline;
+  }
+  
+}
 @import "../_customizations/viewerjs-custom.scss";
 .btn{
   display: inline-flex;
@@ -406,6 +433,7 @@
   line-height: 10px;
   text-decoration: none;
   outline: none;
+  color: $text-l;
 
   &:not(:last-child){
     margin-right: 5px; 

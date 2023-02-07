@@ -1,0 +1,21 @@
+/*=====================page-main=========================*/
+.page-main__tagswrap{
+	margin-bottom: 20px;
+
+}
+.page-main__tags{
+	// margin-right: -24px;
+	width: calc(100% + 24px);
+	flex-wrap: nowrap;
+    overflow-x: auto;
+
+    .tag{
+    	flex: 0 0 auto;
+
+    	&:last-child{
+    		margin-right: 12px;
+    	}
+ 
+    }
+}
+/*===================== end page-main======================*/ 

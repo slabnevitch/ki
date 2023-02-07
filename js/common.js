@@ -185,38 +185,10 @@
 
 		//---------------Swiper
 		if(document.querySelector('.categories-tiles__slider') !== null){
-			const swiper = new Swiper('.categories-tiles__slider', {
-			  /*
-				effect: 'fade',
-				fadeEffect: {//при отсутствии плавного перехода - расскомментировать соотв-ю. строку в adjustment.scss
-				    crossFade: true
-				  },
-				autoplay: {
-					delay: 3000,
-					disableOnInteraction: false,
-				},
-				*/
-				
+			const categoriesTilesSlider = new Swiper('.categories-tiles__slider', {			
 				observer: true,
 				observeParents: true,
-				// mousewheel:  {
-				// 	invert: true,
-				// 	eventsTarget: '.works__cards'
-		   		 // releaseOnEdges: true
-				// },
-				//freeMode: true,// в сочетании с mousewheel дает возможность прокручивать стр-цу. после докручивания слайдера до начала или конца колесом мыши
-				slidesPerView: 4,
-				// spaceBetween: 15,
-				//autoHeight: true,
-				//speed: 800,
-				//touchRatio: 0,
-				//simulateTouch: false,
-				//loop: true,
-				//preloadImages: false,
-				//lazy: true,
-			  // direction: 'vertical',
-				// loop: true,
-				 pagination: false,
+				pagination: false,
 				navigation: false,
 				breakpoints: {
     				// when window width is >= 320px
@@ -231,13 +203,44 @@
 					},
    					 // when window width is >= 640px
 					767.98: {
+						slidesPerView: 3.2,
+						spaceBetween: 16
+					},
+					959.98: {
 						slidesPerView: 4,
 						spaceBetween: 0
 					}
 				}
 			});
 		}
-//---------------END Swiper
+
+		if(document.querySelector('.main-slider__slider') !== null){
+		  const mainSlider = new Swiper('.main-slider__slider', {
+			observer: true,
+			slidesPerView: 1,
+		  	loop: true,
+
+			  // If we need pagination
+			  pagination: {
+			  	el: '.swiper-pagination',
+			  	type: 'bullets',
+			  	clickable: true,
+				//custom pagination
+				//type: 'custom',
+				//renderCustom: (swiper, current, total) => {
+					//return current.toString().length > 1 ? current : '0'+current;
+				//}
+			  },
+
+			  // Navigation arrows
+			  navigation: {
+			  	nextEl: '.main-slider .slider-nav--prev',
+			    prevEl: '.main-slider .slider-nav--next'
+			  }
+			});
+		}
+		//---------------END Swiper
+
 
 		// catalog-filter address list toggle
 			if(document.querySelector('.ctlg-filter-location__selected') !== null){
