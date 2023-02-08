@@ -1,0 +1,10 @@
+section.features
+	.wrapper-smart
+		.wrapper-flex
+			- var features = ['Мы доставляем товары по всей России', 'Более<br> 50 000 товаров в наличии', 'Нашли дешевле — снизим цену'];
+			.features__box
+				each item, i in features
+					.features__item
+						.features__icon
+							img(src="img/main-page-features/"+(i+1)+".svg" alt="alt")
+						.features__content!= item

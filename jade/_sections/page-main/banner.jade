@@ -6,13 +6,13 @@ section.banner
 					source(srcset='img/main-page-banner/banner-xs.jpg' media='(max-width: 959.98px)')
 					img._fit-img(src="img/main-page-banner/banner.jpg" alt="alt")
 
-			a(href="#").banner-card
-				.banner-card__img
-					img(src="img/main-page-banner/electro.png" alt="alt")
-				.banner-card__text
+			.banner-card
+				a(href="#").banner-card__inner
+					.banner-card__img
+						img(src="img/main-page-banner/electro.png" alt="alt")
+					.banner-card__text
 					.banner-card__name Аккумуляторная дрель-шуруповерт Elitech ДА 12СЛ2 ...
-					button(type="btn").cart-round-icon
-						+icon('cart')
+				button(type="button" class="btn btn-sm btn-red") Купить
 
 		.show-all-link
 			a(href="#").link Смотреть все

@@ -234,6 +234,45 @@
 			  }
 			});
 		}
+
+
+		if(document.querySelector('.popular__slider') !== null){
+			const popularSlider = new Swiper('.popular__slider', {			
+				observer: true,
+				observeParents: true,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+					clickable: true
+				},
+				// Navigation arrows
+				navigation: {
+					nextEl: '.popular .slider-nav--prev',
+					prevEl: '.popular .slider-nav--next'
+				},
+				breakpoints: {
+    				// when window width is >= 320px
+					320: {
+						slidesPerView: 3,
+						spaceBetween: 9
+					},
+    				// when window width is >= 480px
+					576: {
+						slidesPerView: 4,
+						spaceBetween: 16
+					},
+   					 // when window width is >= 640px
+					767.98: {
+						slidesPerView: 5,
+						spaceBetween: 16
+					},
+					959.98: {
+						slidesPerView: 6,
+						spaceBetween: 15
+					}
+				}
+			});
+		}
 		//---------------END Swiper
 
 

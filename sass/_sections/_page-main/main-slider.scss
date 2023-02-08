@@ -51,7 +51,6 @@
 ._fit {}
 ._fit-img {}
 .swiper-pagination {}
-.swiper-button-prev,
 .slider-nav {
 	position: absolute;
 	top: 50%;
@@ -60,6 +59,17 @@
 	margin-top: -12px;
 	cursor: pointer;
 	z-index: 2;
+	transition: transform .4s;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				transform: scale(2);
+			}
+		}
+
+	&.swiper-button-disabled{
+		opacity: .5;
+	}
 	.icon{
 		@include absolute-center-old;
 		font-size: 6.5px;
@@ -68,9 +78,13 @@
 }
 .slider-nav--prev{
 	display: none;
+	left: 0;
+	@include min-screen($sm){
+		display: block;
+		
+	}
 	@include min-screen($max){
 		left: -32px;
-		display: block;
 		
 	}
 	.icon{
@@ -79,9 +93,13 @@
 }
 .slider-nav--next {
 	display: none;
+	right: 0;
+	@include min-screen($sm){
+		display: block;
+		
+	}
 	@include min-screen($max){
 		right: -32px;
-		display: block;
 		
 	}
 	.icon{

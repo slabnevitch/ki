@@ -1,0 +1,19 @@
+section.page-main-sect.popular
+	.wrapper
+		h2.sect-title Популярные бренды
+
+	.wrapper.popular__wrap
+		.slider-navs
+			.slider-nav.slider-nav--prev
+				+icon('chev-down')
+			.slider-nav.slider-nav--next
+				+icon('chev-down')
+		+swiper('popular__slider', true, false, true)
+			- for (var n=0; n < 2; n++)
+				- for (var i=0; i < 6; i++)
+					.swiper-slide.popular__slide
+						.popular__brand
+							img(src="img/brands/"+(i+1)+".svg" alt="alt")
+
+		.show-all-link
+			a(href="#").link Смотреть все

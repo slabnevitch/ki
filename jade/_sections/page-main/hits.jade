@@ -9,7 +9,7 @@ section.page-main-sect.hits
 				.product-card
 					.product-card__img-wrap
 						if item.billet != ''
-							div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : "billet billet--markdown")= item.billet
+							div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : "billet billet--markdown")
 								.billet__value= item.billet
 								
 								if item.billet == "акция" || item.billet == "скидка"
