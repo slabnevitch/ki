@@ -1,0 +1,72 @@
+/*--------------------banner----------------------*/
+.banner {
+	padding-top: 32px;
+}
+.banner__wrap{
+	margin-left: 0;
+	margin-right: 0;
+	flex-wrap: nowrap;
+
+	@include max-screen($md){
+		margin-left: -24px;
+		margin-right: -24px;
+	}
+}
+
+
+.banner-visual,
+.banner-card {
+
+}
+.banner-visual{
+	flex: 1 1 calc(100% - 225px - 30px);
+	padding-bottom: 23.83%;
+	margin-right: 30px;
+	border-radius: 4px;
+
+	@include max-screen($md){
+		flex: 0 0 100%;
+		margin-right: 0;
+		padding-bottom: prc(150, 320);
+	}
+}
+.banner-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex: 0 0 225px;
+	padding: 21px 15px 17px 17px;
+	background-color: $gray-l;
+	text-decoration: none;
+
+	@include max-screen($md){
+		display: none;
+	}
+}
+.banner-card__img {
+	width: 123px;
+	height: 123px;
+	position: relative;
+	margin-bottom: 15px;
+
+	img{
+		@include absolute-center;
+	}
+}
+.banner-card__text {
+	display: flex;
+	align-items: center;
+	
+	.cart-round-icon {
+		flex-shrink: 0;
+	}
+}
+.banner-card__name {
+	@include dots-family-multi(3);
+	margin-right: 16px;
+	font-size: 14px;
+	line-height: 16px;
+	color: $text;
+}
+/*--------------------END banner----------------------*/ 

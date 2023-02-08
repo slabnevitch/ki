@@ -9,6 +9,16 @@ h1, h2, h3, h4, h5, h6{
 .page-main-sect{
   padding-top: 37px;
 
+  &.hits:not(.recomendations){
+    @include max-screen($xs){
+     padding-top: 17px;
+      
+    }
+  }
+  @include max-screen($xs){
+    padding-top: 32px;
+  }
+
 }
 
 // некоторые повторяющиеся эл-ты.
@@ -268,14 +278,47 @@ h1, h2, h3, h4, h5, h6{
 	text-transform: uppercase;
 	color: #FFFFFF;
 
+  &__value{
+    @include max-screen($xs){
+      display: none;
+    }
+  }
+
+  &:not(.billet--mini){
+
+    @include max-screen($xs){
+      width: auto;
+        height: auto;
+        padding: 0;
+        background-color: transparent;
+
+    }
+    .icon{
+      @include max-screen($xs){
+        display: block;
+        
+      }
+    }
+  }
+
 	&--new{
 		background-color: #13B3EB;
+
+    .icon{
+      color: $blue;
+    }
 	}
 	&--markdown{
 		background-color: $yellow;
+    .icon{
+      color: yellow;
+    }
 	}
 	&--action{
 		background-color: $red;
+    .icon{
+      color: $red
+    }
 	}
 
   &--mini{
@@ -283,6 +326,11 @@ h1, h2, h3, h4, h5, h6{
     min-width: 0;
     padding: 0;
     height: 24px;
+  }
+
+  .icon{
+    display: none;
+    font-size: 19px;
   }
 }
 .socials{

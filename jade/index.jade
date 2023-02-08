@@ -12,10 +12,11 @@ block content
 					each tag, i in tags
 						a(href="#" class=i<=2 ? "tag active": 'tag')= tag
 		
-		include _sections/main-slider
-		include _sections/categories-tiles
-		include _sections/hits
-		include _sections/recomendations
+		include _sections/page-main/main-slider
+		include _sections/page-main/categories-tiles
+		include _sections/page-main/hits
+		include _sections/page-main/banner
+		include _sections/page-main/recomendations
 		
 block page-scripts
 	//- SERVIVE FUNCTIONS==================

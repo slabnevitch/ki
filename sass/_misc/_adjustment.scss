@@ -153,6 +153,7 @@ padding-bottom: 52.25%;
 ._fit{
 	padding-bottom: 80%;
 	position: relative;
+	overflow: hidden;
 }
 ._fit ._fit-img{//_fit - class for object-fit
 	width: 100%;
@@ -303,6 +304,10 @@ padding-bottom: 52.25%;
 .show-all-link{
 	padding-top: 10px;
 	text-align: right;
+
+	@include max-screen($xs){
+		display: none;
+	}
 }
 /*--------------------END adjustment----------------------*/ 
 .wrapper.rating{
@@ -408,11 +413,16 @@ padding-bottom: 52.25%;
 
 }
 .cart-round-icon{
+	@include but-null;
 	width: 40px;
 height: 40px;
 	border-radius: 50%;
 	background-color: $red;
 	position: relative;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+		cursor: pointer;
+	}
 
 	.icon{
 		@include absolute-center-old;

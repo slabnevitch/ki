@@ -1,4 +1,4 @@
-section.page-main-sect.hits
+section.page-main-sect.hits.recomendations
 	.wrapper
 		h2.sect-title Мы рекомендуем
 
@@ -10,7 +10,16 @@ section.page-main-sect.hits
 				div(class=item.analog ? "product-card product-card--analog" : "product-card")
 					.product-card__img-wrap
 						if item.billet != ''
-							div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : item.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")= item.billet
+							div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : item.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
+								.billet__value= item.billet
+
+								if item.billet == "акция" || item.billet == "скидка"
+									+icon('percents')
+								if item.billet == "уценка"
+									+icon('attention')
+								if item.billet == "Новинка"
+									+icon('flame')
+						
 						a(href="#").product-card__border
 							span.product-card__img
 								img(src="img/recomended/"+(i+1)+".jpg" alt="alt")
@@ -75,12 +84,16 @@ section.page-main-sect.hits
 									a(href="#").info-product-card__oneclick Купить в 1 клик
 							
 							else if item.analog
-								.info-product-card__avalkey Нет в наличии, товар снят с производства 
+								.info-product-card__row Нет в наличии, товар снят с производства 
 							
 							else
 								.info-product-card__row
 										.info-product-card__aval
 											.info-product-card__avalkey В наличии
-												a(href="#").info-product-card__avalvalue= item.aval
+											a(href="#").info-product-card__avalvalue= item.aval
 								.info-product-card__row
 									a(href="#").info-product-card__oneclick Купить в 1 клик
+
+		.wrapper
+			.cards-more
+				a(href="#").cards-more__link Показать еще +8
