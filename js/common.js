@@ -273,6 +273,44 @@
 				}
 			});
 		}
+
+		if(document.querySelector('.news__slider') !== null){
+			const newsSlider = new Swiper('.news__slider', {			
+				observer: true,
+				observeParents: true,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+					clickable: true
+				},
+				// Navigation arrows
+				navigation: {
+					nextEl: '.news .slider-nav--prev',
+					prevEl: '.news .slider-nav--next'
+				},
+				breakpoints: {
+    				// when window width is >= 320px
+					320: {
+						slidesPerView: 2,
+						spaceBetween: 10
+					},
+    				// when window width is >= 480px
+					576: {
+						slidesPerView: 3,
+						spaceBetween: 16
+					},
+   					 // when window width is >= 640px
+					// 767.98: {
+					// 	slidesPerView: 5,
+					// 	spaceBetween: 16
+					// },
+					959.98: {
+						slidesPerView: 4,
+						spaceBetween: 16
+					}
+				}
+			});
+		}
 		//---------------END Swiper
 
 

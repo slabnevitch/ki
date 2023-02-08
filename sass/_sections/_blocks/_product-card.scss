@@ -362,6 +362,9 @@
 	@media screen and (max-width: 576px) {
 		@include dots-family;
 	}
+	@include max-screen($xss){
+		font-size: 16px;	
+	}
 }
 .product-price-sale {
 	font-size: 10px;
@@ -403,7 +406,7 @@
 	line-height: 17px;
 	text-decoration: none;
 	color: $text;
-	@include dots-family-multi(2);
+	@include dots-family-multi(3);
 }
 .product-card__description {
 	display: none;

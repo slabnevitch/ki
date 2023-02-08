@@ -19,7 +19,8 @@ footer.footer
 					ul.accordion.footer__accordion.accordion-footer(data-breakpoint="480")
 						li.accordion__item.accordion-footer__item
 							.accordion__link.accordion-footer__link Покупателям
-								.accordion-footer__arrow ^
+								.accordion-footer__arrow
+											+icon('chev-down')
 							.accordion__content.hidden
 								- var footerList1 = ['Подарочные карты','Сотрудничество', 'Магазины', 'Доставка', 'Оплата', 'Сервис', 'Возврат и гарантия'];
 								ul.footer__menu.menu-footer
@@ -30,7 +31,8 @@ footer.footer
 					ul.accordion.footer__accordion.accordion-footer(data-breakpoint="480")
 						li.accordion__item.accordion-footer__item
 							.accordion__link.accordion-footer__link О компании
-								.accordion-footer__arrow ^
+								.accordion-footer__arrow
+										+icon('chev-down')
 							.accordion__content.hidden
 								- var footerList2 = ['О нас','Новости','Вакансии','Сертификаты','Наши партнеры','Арендодателям','Контакты'];
 								ul.footer__menu.menu-footer
@@ -41,7 +43,8 @@ footer.footer
 					ul.accordion.footer__accordion.accordion-footer(data-breakpoint="480")
 						li.accordion__item.accordion-footer__item
 							.accordion__link.accordion-footer__link Правовая информация
-								.accordion-footer__arrow ^
+								.accordion-footer__arrow
+										+icon('chev-down')
 							.accordion__content.hidden
 								- var footerList3 = ['Публичная оферта','Политика конфиденциальности'];
 								ul.footer__menu.menu-footer

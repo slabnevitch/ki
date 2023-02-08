@@ -1,0 +1,21 @@
+section.news.page-main-sect
+	.wrapper
+		h2.sect-title Новости
+
+	.wrapper.news__wrapper
+		.slider-navs
+			.slider-nav.slider-nav--prev
+				+icon('chev-down')
+			.slider-nav.slider-nav--next
+				+icon('chev-down')
+		
+		- var news = [{title: '«Кубань Инструмент» поздравляет Вас с Днем Строителя!', date: '28.08.2022'}, {title: 'В ассортименте наших магазинов появилась продукция холдинга Henkel', date: '22.06.2022'}, {title: 'Дорогие дамы, от всей души поздравляем Вас с этим прекрасным праздником!', date: '06.03.2022'}, {title: 'Поздравляем Вас с Днем Защитника Отечества!', date: '22.02.2022'}];
+				+swiper('news__slider', true, false, true)
+					- for (var i=0; i < 2; i++)
+						each item, i in news
+							.swiper-slide
+								a(href="#").news__item.item-news._fit
+									.item-news__text
+										.item-news__title= item.title
+										.item-news__date= item.date
+									img.item-news__img._fit-img(src="img/main-page-news/"+(i+1)+".jpg" alt="alt")
