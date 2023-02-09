@@ -163,10 +163,12 @@
 		function coverShow() {
 					console.log('coverShow')
 			body.classList.add('covered');
+			document.documentElement.classList.add('lock');
 		}
 
 		function coverHide() {
 			body.classList.remove('covered');
+			document.documentElement.classList.remove('lock');
 		}
 
 		function coverToggle() {

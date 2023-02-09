@@ -8,6 +8,7 @@
 	// @include col();
 	// @include size(3);
 	word-wrap: normal;
+	transition: transform .3s;
 
 	.ui-elems &{
 		max-width: 224px;
@@ -20,6 +21,17 @@
 		@include size-sm(6);
 
 	    word-wrap: normal;
+
+	    @include max-screen($mins){
+	    	margin-left: 5.5px;
+	    	margin-right: 5.5px;
+	    }
+
+	    @media (any-hover: hover) { //только для устройств с ховером
+	    		&:hover{
+	    			transform: translateY(-20px);
+	    		}
+	    	}
 	}
 
 	.billet {
@@ -160,6 +172,7 @@
 			height: 72px;
 		}
 		.product-card__price{
+			height: auto;
 			padding-right: 0;	
 			align-items: flex-end;
 			margin-bottom: 7px;
@@ -174,7 +187,8 @@
 		.product-price{
 			margin-right: 20px;
 			line-height: 19px;
-			font-size: 16px;	
+			font-size: 16px;
+			height: auto;	
 		}
 		.product-card__actions{
 			position: static;
@@ -189,6 +203,9 @@
 		}
 		.product-card__rating-wrap{
 			margin-bottom: 6px;
+		}
+		.product-card__rating{
+			padding-bottom: 0;
 		}
 		.product-card__footer{
 			display: flex;
@@ -401,9 +418,9 @@
 	display: block;
 	margin-bottom: 8px;
 	height: 51px;
-	overflow: hidden;
-	font-size: 14px;
-	line-height: 17px;
+	// overflow: hidden;
+	// font-size: 14px;
+	// line-height: calc(17 / 14);
 	text-decoration: none;
 	color: $text;
 	@include dots-family-multi(3);
@@ -479,5 +496,12 @@
 .cards-more__link{
 	color: $text-l;
 	text-decoration: none;
+	transition: color .3s;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				color: $text;
+		}
+	}
 }
 /*--------------------END product-card----------------------*/ 

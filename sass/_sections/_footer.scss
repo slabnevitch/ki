@@ -294,10 +294,6 @@
 	font-size: 10px;
 	line-height: 12px;
 	color: #A9A9A9;
-
-	@include max-screen($xss){
-		text-align: center;
-	}
 }
 .footer-policy{
 	&__wrap{

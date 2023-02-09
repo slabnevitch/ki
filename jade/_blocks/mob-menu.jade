@@ -2,8 +2,11 @@
 nav.mob-nav 
 	ul.mob-nav__list
 		each nav, i in navs
-			li(class=i==0 ? "mob-nav__item active" : "mob-nav__item")
+			li(class=i > 1 && i < 4 ? "mob-nav__item active" : "mob-nav__item")
 				a(href="#").mob-nav__link
 					.mob-nav__icon
 						+icon(nav.icon)
 					.mob-nav__name= nav.name
+
+					if i == 2
+						.mob-nav__count 10

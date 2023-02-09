@@ -129,10 +129,28 @@ line-height: 14px;
 	flex-direction: column;
 	justify-content: flex-end;
 	overflow: hidden;
+	color: $text;
+	text-decoration: none;
+	transition: all .4s;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				background-color: $blue-l;
+				transform: translateX(5px);
+				
+				.categories-tile__img {
+					transform: translateX(110%);
+				}
+				.categories-tile__title {
+					color: #fff;
+				}
+			}
+		}
 	
 	.categories-tile__img {
 		width: 90px;
 		height: 90px;
+		transition: all .4s;
 
 		img{
 			@include absolute-center;

@@ -2,15 +2,12 @@ extends _misc/main
 
 
 block title
-	| Главная страница
-	- var pageIndex = '013'
+	| Main__013
+	- var pageIndex = '013';
 
 block content
-	.wrapper-smart
-		.wrapper-flex
-		
-	- for (var i=0; i < 3; i++)
-		section
+	.page.page-main
+		include _includes/main-page-sections
 		
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
@@ -61,7 +58,7 @@ block page-scripts
 
 	//- VANILLA JS===================================
 	//- dynamic-adaptive--------------------------
-	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+	script(src="js/libs/dynamic-adaptive/da.min.js")
 		
 	//- slideout--------------------------
 	//- script(src="js/libs/slideout/slideout.js")
@@ -85,10 +82,10 @@ block page-scripts
 	//- script(src="js/libs/micromodal/micromodal.js")	
 		
 	//- swiper--------------------------
-	//- script(src="js/libs/swiper/swiper-bundle.min.js")
+	script(src="js/libs/swiper/swiper-bundle.min.js")
 
 	//- tiny-slider--------------------------
-	script(src="js/libs/tiny-slider/dist/min/tiny-slider.js")
+	//- script(src="js/libs/tiny-slider/dist/min/tiny-slider.js")
 
 	//-viewerjs --------------------------
 	script(src="js/libs/viewerjs/viewer.js")

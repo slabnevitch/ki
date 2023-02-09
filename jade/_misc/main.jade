@@ -12,6 +12,9 @@ html(lang='ru')
 		//- убрать "зуммирование" на safari ios:
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no")
 		
+		link(rel="preconnect" href="https://fonts.googleapis.com")
+		link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+		link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet")
 		//- фикс подсветки телефонов на safari ios:
 		//- meta(content="telephone=no" name="format-detection")
 
@@ -34,11 +37,12 @@ html(lang='ru')
 
 		include ../_blocks/mob-menu
 		.body-cover
+		.chat-round-icon.animated.tada.infinite
+			+icon('chats')
 		
 		include ../_blocks/loc-header-panel
 		include ../_blocks/location-search
 		//- include ../_blocks/side-modals
-		
 
 		include _scripts
 

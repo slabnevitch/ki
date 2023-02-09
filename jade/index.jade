@@ -5,22 +5,7 @@ block title
 
 block content
 	.page.page-main
-		.wrapper.p-12
-			- var tags = ['СКИДКИ', 'АКЦИИ', 'МОИ ЗАКАЗЫ', '23 ФЕВРАЛЯ', 'лендинг', 'Новинки'];
-			.page-main__tagswrap
-				.tags.page-main__tags
-					each tag, i in tags
-						a(href="#" class=i<=2 ? "tag active": 'tag')= tag
-		
-		include _sections/page-main/main-slider
-		include _sections/page-main/categories-tiles
-		include _sections/page-main/hits
-		include _sections/page-main/banner
-		include _sections/page-main/recomendations
-		include _sections/page-main/popular
-		include _sections/page-main/features
-		include _sections/page-main/cooperation
-		include _sections/page-main/news
+		include _includes/main-page-sections
 		
 block page-scripts
 	//- SERVIVE FUNCTIONS==================

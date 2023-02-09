@@ -39,11 +39,20 @@
 	padding-bottom: prc(350,224);
 	// height: 0;	
 	color: 	$text;
+	transition: all 0.3s;
 
 	@include max-screen($xss){
 		padding-bottom: prc(208,131);
 		
 	}
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			justify-content: center;
+			&:hover{
+				transform: translateY(-20px);
+				opacity: .5;
+			}
+		}
 }
 ._fit {}
 .item-news__text {

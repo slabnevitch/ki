@@ -51,12 +51,14 @@
 .swiper-slide {
 }
 .popular__brand {
+	display: block;
 	position: relative;
 	height: 0;
 	padding-bottom: 100%;
 	background: #FFFFFF;
 	border: 2px solid $gray-l;
 	border-radius: 4px;
+	transition: border-color .5s;
 
 	@include max-screen($xs){
 		border-width: 1px;
@@ -65,6 +67,13 @@
 		@include absolute-center;
 		max-width: calc(100% - 20px);
 	}
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				border-color: $accent;
+			}
+		}
+
 }
 .swiper-pagination {}
 .swiper-button-prev {}
