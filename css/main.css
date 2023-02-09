@@ -10508,11 +10508,17 @@ h6 {
   -ms-flex-pack: end;
   justify-content: flex-end;
   overflow: hidden;
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
 .categories-tile--sm .categories-tile__img {
   width: 90px;
   height: 90px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
 .categories-tile--sm .categories-tile__img img {
@@ -11828,6 +11834,23 @@ h6 {
 
   .categories-tile__tag:hover {
     background-color: #003D9E;
+    color: #fff;
+  }
+
+  .categories-tile--sm:hover {
+    background-color: #42C2EF;
+    -webkit-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+
+  .categories-tile--sm:hover .categories-tile__img {
+    -webkit-transform: translateX(110%);
+    -ms-transform: translateX(110%);
+    transform: translateX(110%);
+  }
+
+  .categories-tile--sm:hover .categories-tile__title {
     color: #fff;
   }
 
