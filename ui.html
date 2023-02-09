@@ -6,6 +6,9 @@
     <meta name="description" content="">
     <link rel="icon" href="img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -3324,7 +3327,7 @@
     </main>
     <nav class="mob-nav"> 
       <ul class="mob-nav__list">
-        <li class="mob-nav__item active"><a href="#" class="mob-nav__link">
+        <li class="mob-nav__item"><a href="#" class="mob-nav__link">
             <div class="mob-nav__icon">
                   <svg class="icon icon-home ">
                     <use xlink:href="img/icons-svg/symbol/sprite.svg#home"></use>
@@ -3338,14 +3341,15 @@
                   </svg>
             </div>
             <div class="mob-nav__name">Каталог</div></a></li>
-        <li class="mob-nav__item"><a href="#" class="mob-nav__link">
+        <li class="mob-nav__item active"><a href="#" class="mob-nav__link">
             <div class="mob-nav__icon">
                   <svg class="icon icon-basket ">
                     <use xlink:href="img/icons-svg/symbol/sprite.svg#basket"></use>
                   </svg>
             </div>
-            <div class="mob-nav__name">Корзина</div></a></li>
-        <li class="mob-nav__item"><a href="#" class="mob-nav__link">
+            <div class="mob-nav__name">Корзина</div>
+            <div class="mob-nav__count">10</div></a></li>
+        <li class="mob-nav__item active"><a href="#" class="mob-nav__link">
             <div class="mob-nav__icon">
                   <svg class="icon icon-user ">
                     <use xlink:href="img/icons-svg/symbol/sprite.svg#user"></use>
@@ -3362,6 +3366,11 @@
       </ul>
     </nav>
     <div class="body-cover"></div>
+    <div class="chat-round-icon animate__tada aniimate__infinite infinite">
+          <svg class="icon icon-chats ">
+            <use xlink:href="img/icons-svg/symbol/sprite.svg#chats"></use>
+          </svg>
+    </div>
     <div class="loc-header__panel">
       <div class="loc-header__city">Ваш город<a href="#" class="loc-header__city-value">Краснодар
               <svg class="icon icon-chev-down ">
@@ -3413,11 +3422,7 @@
     <script src="js/libs/service-functions/mobileDetect.js"></script>
     <script src="js/libs/service-functions/dropdown-toggle.js"></script>
     
-    <!-- script(src="js/libs/dynamic-adaptive/da.min.js")
-    -->
     <script src="js/libs/accordion/vanilla-accordion.js"></script>
-    <!-- script(src="js/libs/simplebar/simplebar.min.js")
-    -->
     <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
     
     
