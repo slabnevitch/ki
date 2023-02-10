@@ -154,7 +154,7 @@
 
 	&--mini{
 		flex-direction: row;
-		width: 270px;
+		max-width: 270px;
 		padding-bottom: 0;
 		margin-bottom: 0;
 		max-width: none;	
@@ -274,6 +274,10 @@
 				margin-bottom: 0;
 				margin-right: 9px;
 			}
+		}
+		.product-bonus{
+			margin-top: 0;
+			margin-bottom: 3px;
 		}
 	}
 

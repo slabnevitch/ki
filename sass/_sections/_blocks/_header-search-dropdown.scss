@@ -30,7 +30,7 @@
 		// top: 80px;
 		padding-top: 25px;
 		padding-left: 80px;
-		// height: 370px;
+		height: 557px;
 
 		@include max-screen($md){
 			padding-left: 29px;
@@ -195,6 +195,10 @@
 
 	@include max-screen($md){
 		display: none;
+	}
+
+	._scroll &{
+		height: 557px;
 	}
 
 	.product-card--mini{
