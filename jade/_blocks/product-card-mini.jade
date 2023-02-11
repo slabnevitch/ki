@@ -26,7 +26,8 @@
 				button.counter__button.counter-minus
 					+icon('minus')
 				.counter__block
-					input(autocomplete="off" type="text" name="name" value="1" ).counter__count
+					input(autocomplete="off" type="hidden" name="name" value="1" )
+					.counter__count 1
 					.counter__measures шт
 				button.counter__button.counter-plus
 					+icon('plus')

@@ -12,10 +12,11 @@
 			buttonType = this.classList.contains('counter-minus') ? 'minus' : 'plus',
 			minValue = +parent.dataset.min,
 			maxValue = +parent.dataset.max,
-			countInp = parent.querySelector('.counter__count'),
+			countInp = parent.querySelector('input[type="hidden"]'),
+			countField = parent.querySelector('.counter__count'),
 			startValue = +countInp.value;
 
-		_self.render(_self.counter(buttonType, {min: minValue, max: maxValue, start: startValue }), countInp);
+		_self.render(_self.counter(buttonType, {min: minValue, max: maxValue, start: startValue }), countInp, countField);
 	},
 	this.counter = function(type, vals) {
 		if(type === 'minus'){
@@ -33,8 +34,9 @@
 		}
 		return vals.start;
 	}
-	this.render = function(val, input) {
+	this.render = function(val, input, field) {
 		input.value = val;
+		field.textContent = val;
 	}
 
 	if(buttons.length > 0){

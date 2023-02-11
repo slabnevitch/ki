@@ -117,11 +117,13 @@
 		// header catalog toggle
 			if(targ.getAttribute('id') === 'catalog-switcher' || targ.closest('#catalog-switcher') !== null){
 					console.log('catalog-switcher')
-				var catMenuItems = document.querySelectorAll('.catalog-header__item');
+				var catMenuItems = document.querySelectorAll('.catalog-header__item'),
+					kiHeader = document.querySelector('.header');
+				
 				for (var i = catMenuItems.length - 1; i >= 0; i--) {
 					catMenuItems[i].classList.remove('visible');
 				}
-				if(!document.querySelector('.header').classList.contains('header-catalog-opened')){
+				if(!kiHeader.classList.contains('header-catalog-opened')){
 					// scrollTo is the same
 					window.scroll({
 					  top: 0, 
@@ -130,11 +132,16 @@
 					});
 
 				}
-				document.querySelector('.header').classList.toggle('header-catalog-opened');
-				document.querySelector('.header').classList.remove('search-results-opened');
-				// document.documentElement.classList.toggle('lock');
+				if(kiHeader.classList.contains('header-catalog-opened')){
+					coverHide();
+				}else{
 
-				coverToggle();
+					coverShow();
+				}
+				kiHeader.classList.toggle('header-catalog-opened');
+				kiHeader.classList.remove('search-results-opened');
+
+	
 			}
 
 			if(window.innerWidth > 940 && isMobile.any()){// определяем, что клик с тач-скрина
@@ -209,12 +216,12 @@
 		function coverShow() {
 					console.log('coverShow')
 			body.classList.add('covered');
-			document.documentElement.classList.add('lock');
+			// document.documentElement.classList.add('lock');
 		}
 
 		function coverHide() {
 			body.classList.remove('covered');
-			document.documentElement.classList.remove('lock');
+			// document.documentElement.classList.remove('lock');
 		}
 
 		function coverToggle() {
@@ -277,8 +284,8 @@
 
 			  // Navigation arrows
 			  navigation: {
-			  	nextEl: '.main-slider .slider-nav--prev',
-			    prevEl: '.main-slider .slider-nav--next'
+			  	prevEl: '.main-slider .slider-nav--prev',
+	     		nextEl: '.main-slider .slider-nav--next'
 			  }
 			});
 		}
@@ -295,8 +302,8 @@
 				},
 				// Navigation arrows
 				navigation: {
-					nextEl: '.popular .slider-nav--prev',
-					prevEl: '.popular .slider-nav--next'
+					nextEl: '.popular .slider-nav--next',
+					prevEl: '.popular .slider-nav--prev'
 				},
 				breakpoints: {
     				// when window width is >= 320px
@@ -333,8 +340,8 @@
 				},
 				// Navigation arrows
 				navigation: {
-					nextEl: '.news .slider-nav--prev',
-					prevEl: '.news .slider-nav--next'
+					prevEl: '.news .slider-nav--prev',
+					nextEl: '.news .slider-nav--next'
 				},
 				breakpoints: {
     				// when window width is >= 320px

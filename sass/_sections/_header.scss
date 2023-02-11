@@ -140,7 +140,7 @@
 		left: 12px;
 	}
 	@include min-screen($max){
-		left: calc((100% - $max)/2);
+		left: calc((100% - #{$max})/2);
 	}
 
 	@include max-screen($md){
@@ -261,7 +261,7 @@
 	list-style-type: none;
 
 	&:not(:last-child){
-		margin-right: 16px;
+		margin-right: 26px;
 	}
 
 	.single-dropdown{
@@ -585,10 +585,6 @@
 	align-items: flex-end;
 	padding-right: 13px;
 
-	.header-catalog-opened &{
-		visibility: hidden;
-	}
-
 	@include max-screen($md){
 		display: none;
 	}
@@ -631,10 +627,6 @@
 .header__account {
 	margin-left: 25px;
 	flex-shrink: 0;
-
-	.header-catalog-opened &{
-		visibility: hidden;
-	}
 
 	@include max-screen($md){
 		display: none;
@@ -784,17 +776,19 @@
 			display: none;
 			border-radius: 50%;
 			vertical-align: middle;
-			background-color: $yellow;
-
-			@include max-screen($md){
+			background-color: $accent;
 				display: inline-block;
 				margin-left: 16px;
-			}
-			@include max-screen($xs){
 				position: absolute;
-				right: 0;
+				right: 20px;
 				top: 50%;
 				margin-top: -4px;			
+
+			@include max-screen($md){
+			}
+			@include max-screen($xs){
+				right: 16px;
+				background-color: $yellow;
 			}
 		}
 	}

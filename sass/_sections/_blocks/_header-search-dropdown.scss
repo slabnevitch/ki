@@ -79,17 +79,21 @@
 .search-results-header__all{
 	position: absolute;
 	bottom: 18px;
-	right: 390px;
 	color: #A9A9A9;
 	font-size: 12px;
 	line-height: 15px;
+	left: 50%;
+	transform: translateX(-50%);
 
-	@include max-screen($max){
-		right: 270px;
-	}
+
 	@include max-screen($md){
 		display: none;
 	}
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				color: $text;
+			}
+		}
 }
 .search-results-header__row {
 	width: 100%;
