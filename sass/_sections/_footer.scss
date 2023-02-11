@@ -194,6 +194,7 @@
 }
 .footer-contacts {
 	@include max-screen($xss){
+		padding-left: 22px;
 		padding-top: 14px;
 		border-top: 1px solid $border;
 		// border-bottom: 1px solid $border;
@@ -210,7 +211,7 @@
 		
 		@include max-screen($xss){
 			padding-top: 16px;
-			justify-content: center;
+			// justify-content: center;
 			margin-top: 14px;
 			margin-bottom: 0;
 			padding-bottom: 6px;
@@ -226,11 +227,11 @@
 			}
 		}
 		&__link{
-			@include max-screen($xss){
-				width: 40px;
-				height: 40px;
+			// @include max-screen($xss){
+			// 	width: 40px;
+			// 	height: 40px;
 				
-			}
+			// }
 		}
 	}
 
@@ -239,6 +240,7 @@
 
 	&:not(:last-child){
 		margin-bottom: 13px;
+
 	}
 }
 .footer-contacts__row {
@@ -260,7 +262,7 @@
 .footer__ya {
 	margin-bottom: 13px;
 	@include max-screen($xss){
-		order: 4;
+		margin-top: 9px;
 		margin-bottom: 20px;
 	}
 	img{
@@ -271,7 +273,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	@include max-screen($xss){
-		order: 3;
 		margin-bottom: 20px;
 	}
 

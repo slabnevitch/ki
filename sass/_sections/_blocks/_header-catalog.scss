@@ -16,7 +16,7 @@
 	left: 0;
 	top: 100%;
 	width: 100%;
-	padding-top: 24px;
+	padding-top: 8px;
 	background-color: #fff;
 }
 .wrapper {}
@@ -104,6 +104,7 @@
 	left: 276px;
 	width: calc(100% - 276px - 35px);
 	height: 100%;
+	padding-top: 7px;
 	// overflow-y: auto;
 	// overflow-x: hidden;
 	@include min-screen(#{$maxWidthContainer  + 'px'}){
@@ -114,12 +115,14 @@
 	
 	
 }
+.mega-catalog-header{
+}
 .screen-catalog-header {
 	padding-bottom: 53px;
 }
 .mega-catalog-header__wrapper,
 .screen-catalog-header__wrapper{
-	padding-left: 35px;	
+	padding-left: 71px;	
 }
 .mega-catalog-header__wrapper{
 	position: relative;
@@ -206,6 +209,7 @@
 	min-height: 224px;
 	padding: 12px 40px 20px 20px;
 	background-color: $gray-l;
+	overflow: hidden;
 }
 .card-catalog-header {
 
@@ -233,6 +237,16 @@
 	border-radius: 23px;
 	color: $accent;
 	text-decoration: none;
+	transition: all .3s;
+
+
+	@media (any-hover: hover) { //только для устройств с ховером
+		&:hover{
+
+			background-color: $accent;
+			color: #fff;
+		}
+	}
 
 	&:not(:last-child){
 		margin-right: 8px;

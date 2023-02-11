@@ -274,6 +274,16 @@
 			observer: true,
 			slidesPerView: 1,
 		  	loop: true,
+		  	spaceBetween: 16,
+		  	breakpoints: {
+				// when window width is >= 320px
+				
+				 // when window width is >= 640px
+				767.98: {
+					slidesPerView: 1.325,
+					spaceBetween: 16
+				}
+			},
 
 			  // If we need pagination
 			  pagination: {

@@ -1,14 +1,16 @@
 /*=====================page-main=========================*/
 .page-main__tagswrap{
-	margin-bottom: 20px;
+	margin-bottom: 25px;
+	width: calc(100% + 12px);
+	height: 25px;
+	overflow: hidden;
 
 }
 .page-main__tags{
 	// margin-right: -24px;
-	width: calc(100% + 12px);
 	flex-wrap: nowrap;
     overflow-x: auto;
-
+    padding-bottom: 5px;
     .tag{
     	flex: 0 0 auto;
 

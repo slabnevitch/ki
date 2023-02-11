@@ -106,7 +106,7 @@ textarea.input{
 	// @include wrapper();
 	// outline: 1px solid;
 	&.p-12{
-		@include max-screen($max){
+		@include max-screen($md){
 			padding-left: 12px;
 			padding-right: 12px;
 		}

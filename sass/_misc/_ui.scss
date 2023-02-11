@@ -337,6 +337,9 @@ h1, h2, h3, h4, h5, h6{
 
   &--colored{
     .socials__link{
+      &--soc-vk{
+        background-color: #4D7DF7;
+      }
       &--soc-youtb{
         background-color: #FC0000;
         .icon{
@@ -508,6 +511,19 @@ h1, h2, h3, h4, h5, h6{
   }
 }
 // END Tags
+// swiper bullet custom
+.swiper-pagination-bullet{
+    width: 8px;
+    height: 8px;
+    // background-color: $gray-l;
+
+    &-active{
+      background-color: $accent;
+    }
+  }
+// END swiper bullet custom
+
+
 /*--------------------ui-page----------------------*/
 .form__example{
   max-width: 624px;
