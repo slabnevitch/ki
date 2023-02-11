@@ -55,6 +55,7 @@ header(class=pageIndex=='013'||pageIndex == '014'||pageIndex == '015'?"header se
 									each li in list2
 										li.single-dropdown__item
 											a.single-dropdown__link(href='#')= li
+		include ../_blocks/catalog
 
 	.header__bottom
 		.wrapper.p-12
@@ -89,6 +90,5 @@ header(class=pageIndex=='013'||pageIndex == '014'||pageIndex == '015'?"header se
 						+icon('basket')
 						.header__action-count 10
 
-		include ../_blocks/catalog
 	
 		include ../_blocks/header-search-results

@@ -117,9 +117,23 @@
 		// header catalog toggle
 			if(targ.getAttribute('id') === 'catalog-switcher' || targ.closest('#catalog-switcher') !== null){
 					console.log('catalog-switcher')
+				var catMenuItems = document.querySelectorAll('.catalog-header__item');
+				for (var i = catMenuItems.length - 1; i >= 0; i--) {
+					catMenuItems[i].classList.remove('visible');
+				}
+				if(!document.querySelector('.header').classList.contains('header-catalog-opened')){
+					// scrollTo is the same
+					window.scroll({
+					  top: 0, 
+					  left: 0, 
+					  behavior: 'smooth'
+					});
+
+				}
 				document.querySelector('.header').classList.toggle('header-catalog-opened');
 				document.querySelector('.header').classList.remove('search-results-opened');
-				document.documentElement.classList.toggle('lock');
+				// document.documentElement.classList.toggle('lock');
+
 				coverToggle();
 			}
 
@@ -136,6 +150,38 @@
 					removeClass('.catalog-header__item', 'touch-hover');//удаляем у всех пунктов меню активный класс
 				}
 			}
+
+			if(document.querySelectorAll('.catalog-header__item') !== null){
+
+				var catalogLinks = document.querySelectorAll('.catalog-header__item');
+
+				var hi = new SV.HoverIntent(catalogLinks, {
+					// required parameters
+					onEnter: function(targetItem, related) {
+						// console.log(targetItem)
+						// console.log(related)
+						targetItem.classList.add('visible');
+						siblings(targetItem).forEach(function(sible) {
+							sible.classList.remove('visible');
+						}); 
+					},
+					onExit: function(targetItem, related) {
+						// console.log(targetItem)
+						// console.log(related)
+						if(related){
+							return;
+						}
+						targetItem.classList.remove('visible');
+						// related.closest('.catalog-header__item').classList.remove('visible');
+					},
+
+					// default options'target ' + 
+					exitDelay: 400,
+					interval: 100,
+					sensitivity: 7,
+				});
+			}
+
 			
 		// END header catalog toggle
 
