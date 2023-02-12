@@ -4725,6 +4725,8 @@ h6 {
   text-align: center;
   position: relative;
   outline: none;
+  overflow: hidden;
+  white-space: nowrap;
   transition: background-color 0.1s ease;
 }
 
@@ -4800,6 +4802,11 @@ h6 {
 .btn-sm {
   max-width: 125px;
   height: 25px;
+}
+
+.webkit .btn-sm,
+.gecko .btn-sm {
+  padding-top: 2px;
 }
 
 .btn-sm span {
@@ -5210,7 +5217,7 @@ h6 {
 
 .tag {
   padding-top: 7px;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
   padding-left: 13px;
   padding-right: 13px;
   min-height: 25px;
@@ -5231,6 +5238,7 @@ h6 {
   text-decoration: none;
   outline: none;
   color: #A9A9A9;
+  overflow: hidden;
 }
 
 .tag:not(:last-child) {
@@ -5240,6 +5248,11 @@ h6 {
 .tag.active {
   color: rgba(19, 179, 235, 0.8);
   border-color: rgba(19, 179, 235, 0.8);
+}
+
+.webkit .tag,
+.gecko .tag {
+  padding-top: 5px;
 }
 
 .swiper-pagination-bullet {
