@@ -4716,10 +4716,9 @@ h6 {
   color: #fff;
   text-decoration: none;
   background-color: #003D9E;
-  padding: 5px 15px;
+  padding: 0 15px;
   font-family: "NavigoBlack", sans-serif;
   font-size: 12px;
-  line-height: 17px;
   text-transform: uppercase;
   border: 1px solid transparent;
   border-radius: 20px;
@@ -4739,6 +4738,10 @@ h6 {
   background-color: #fff;
   border-color: #003D9E;
   color: #003D9E;
+}
+
+.btn span {
+  height: 12px;
 }
 
 .btn-gray {
@@ -4791,12 +4794,10 @@ h6 {
 }
 
 .btn-lg {
-  padding-top: 8px;
   min-height: 40px;
 }
 
 .btn-sm {
-  padding-bottom: 2px;
   max-width: 125px;
   min-height: 25px;
 }
