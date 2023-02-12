@@ -4716,7 +4716,7 @@ h6 {
   color: #fff;
   text-decoration: none;
   background-color: #003D9E;
-  padding: 0 15px 0 15px;
+  padding: 0 15px;
   font-family: "NavigoBlack", sans-serif;
   font-size: 12px;
   text-transform: uppercase;
@@ -4804,7 +4804,6 @@ h6 {
   height: 25px;
 }
 
-.webkit .btn-sm,
 .gecko .btn-sm {
   padding-top: 2px;
 }
@@ -5250,7 +5249,6 @@ h6 {
   border-color: rgba(19, 179, 235, 0.8);
 }
 
-.webkit .tag,
 .gecko .tag {
   padding-top: 5px;
 }
