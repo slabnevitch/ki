@@ -79,54 +79,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="header__bottom">
-          <div class="wrapper p-12">
-            <div class="header__bottom-wrapper"><a href="#" class="header__logo-fixed"><img src="img/logo-fixed.svg" alt="alt"></a>
-              <button id="catalog-switcher" class="header__catalog-toggle catalog-toggle-header">
-                <div class="catalog-toggle__burger">
-                      <svg class="icon icon-ctlg-burger ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-burger"></use>
-                      </svg>
-                      <svg class="icon icon-ctlg-close ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
-                      </svg>
-                </div>
-                <div class="catalog-toggle__name">Каталог</div>
-              </button>
-              <header__search class="search-header">
-                <form action="#" class="form search-header__form">
-                  <input autocomplete="off" type="text" name="search" placeholder="Поиск" class="form__input search-header__input form__input--bg">
-                  <button type="submit" class="search-header__send">
-                        <svg class="icon icon-magnifier ">
-                          <use xlink:href="img/icons-svg/symbol/sprite.svg#magnifier"></use>
-                        </svg>
-                  </button>
-                  <button type="button" class="search-header__back">
-                        <svg class="icon icon-arrow-left ">
-                          <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
-                        </svg>
-                  </button>
-                </form><a href="#" class="header__account">
-                      <svg class="icon icon-user ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#user"></use>
-                      </svg></a>
-              </header__search>
-              <div class="header__actions"><a href="#" class="header__action header__compare active">
-                      <svg class="icon icon-compare ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
-                      </svg>
-                  <div class="header__action-count">2</div></a><a href="#" class="header__action header__favourites active">
-                      <svg class="icon icon-favourites ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#favourites"></use>
-                      </svg>
-                  <div class="header__action-count">10</div></a><a href="#" class="header__action header__basket">
-                      <svg class="icon icon-basket ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#basket"></use>
-                      </svg>
-                  <div class="header__action-count">10</div></a></div>
-            </div>
-          </div>
           <div class="header__catalog catalog-header">
             <div class="wrapper catalog-header__wrap">
               <nav class="catalog-header__nav">
@@ -1843,6 +1795,54 @@
             </div>
           </div>
         </div>
+        <div class="header__bottom">
+          <div class="wrapper p-12">
+            <div class="header__bottom-wrapper"><a href="#" class="header__logo-fixed"><img src="img/logo-fixed.svg" alt="alt"></a>
+              <button id="catalog-switcher" class="header__catalog-toggle catalog-toggle-header">
+                <div class="catalog-toggle__burger">
+                      <svg class="icon icon-ctlg-burger ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-burger"></use>
+                      </svg>
+                      <svg class="icon icon-ctlg-close ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+                      </svg>
+                </div>
+                <div class="catalog-toggle__name">Каталог</div>
+              </button>
+              <header__search class="search-header">
+                <form action="#" class="form search-header__form">
+                  <input autocomplete="off" type="text" name="search" placeholder="Поиск" class="form__input search-header__input form__input--bg">
+                  <button type="submit" class="search-header__send">
+                        <svg class="icon icon-magnifier ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#magnifier"></use>
+                        </svg>
+                  </button>
+                  <button type="button" class="search-header__back">
+                        <svg class="icon icon-arrow-left ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
+                        </svg>
+                  </button>
+                </form><a href="#" class="header__account">
+                      <svg class="icon icon-user ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#user"></use>
+                      </svg></a>
+              </header__search>
+              <div class="header__actions"><a href="#" class="header__action header__compare active">
+                      <svg class="icon icon-compare ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
+                      </svg>
+                  <div class="header__action-count">2</div></a><a href="#" class="header__action header__favourites active">
+                      <svg class="icon icon-favourites ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#favourites"></use>
+                      </svg>
+                  <div class="header__action-count">10</div></a><a href="#" class="header__action header__basket">
+                      <svg class="icon icon-basket ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#basket"></use>
+                      </svg>
+                  <div class="header__action-count">10</div></a></div>
+            </div>
+          </div>
+        </div>
       </header>
       <div class="main-content">
         <div class="wrapper-smart">
@@ -2656,7 +2656,8 @@
                             </svg>
                       </button>
                       <div class="counter__block">
-                        <input autocomplete="off" type="text" name="name" value="1" class="counter__count">
+                        <input autocomplete="off" type="hidden" name="name" value="1">
+                        <div class="counter__count">1</div>
                         <div class="counter__measures">шт</div>
                       </div>
                       <button class="counter__button counter-plus">
@@ -2835,11 +2836,16 @@
                     <div data-min="0" data-max="100" class="counter"><span class="counter__button counter-minus">
                             <svg class="icon icon-minus ">
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#minus"></use>
-                            </svg></span><span class="counter__block">
-                        <input autocomplete="off" type="text" name="name" value="1" class="counter__count"><span class="counter__measures">шт</span></span><span class="counter__button counter-plus">
+                            </svg></span>
+                      <div class="counter__block">
+                        <input autocomplete="off" type="hidden" name="name" value="1">
+                        <div class="counter__count">1</div>
+                        <div class="counter__measures">шт</div>
+                      </div><span class="counter__button counter-plus">
                             <svg class="icon icon-plus ">
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#plus"></use>
-                            </svg></span></div>
+                            </svg></span>
+                    </div>
                   </button>
                 </div>
                 <div>
@@ -2847,11 +2853,16 @@
                     <div data-min="0" data-max="100" class="counter"><span class="counter__button counter-minus">
                             <svg class="icon icon-minus ">
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#minus"></use>
-                            </svg></span><span class="counter__block">
-                        <input autocomplete="off" type="text" name="name" value="1" class="counter__count"><span class="counter__measures">шт</span></span><span class="counter__button counter-plus">
+                            </svg></span>
+                      <div class="counter__block">
+                        <input autocomplete="off" type="hidden" name="name" value="1">
+                        <div class="counter__count">1</div>
+                        <div class="counter__measures">шт</div>
+                      </div><span class="counter__button counter-plus">
                             <svg class="icon icon-plus ">
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#plus"></use>
-                            </svg></span></div>
+                            </svg></span>
+                    </div>
                   </button>
                 </div>
                 <div>
@@ -2916,11 +2927,8 @@
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#soc-youtb"></use>
                         </svg></a></li>
               </ul>
-              <div class="cart-round-icon">
-                    <svg class="icon icon-cart ">
-                      <use xlink:href="img/icons-svg/symbol/sprite.svg#cart"></use>
-                    </svg>
-              </div>
+              <!-- .cart-round-icon-->
+              <!-- 	+icon('cart')-->
                   <div class="pagination">
                     <button disabled="" class="pagination__arrow pagination__arrow--prev">
                           <svg class="icon icon-chev-left ">
@@ -2997,7 +3005,8 @@
                                 </svg>
                           </button>
                           <div class="counter__block">
-                            <input autocomplete="off" type="text" name="name" value="1" class="counter__count">
+                            <input autocomplete="off" type="hidden" name="name" value="1">
+                            <div class="counter__count">1</div>
                             <div class="counter__measures">шт</div>
                           </div>
                           <button class="counter__button counter-plus">
@@ -3019,7 +3028,7 @@
                   <div class="side-modal__text">Оставьте ваш номер телефона и наш менеджер свяжется с вами для оформления заказа</div>
                   <form action="#" class="form">
                     <div class="form__row">
-                      <div class="form__row-title form__row-title--required">ИМЯ</div>
+                      <div class="form__row-title form__row-title--required">Имя</div>
                       <label class="form__label">
                         <input type="text" name="name" class="form__input">
                       </label>
@@ -3051,7 +3060,7 @@
                   <div class="side-modal__title">Купить в кредит</div>
                   <form action="#" class="form">
                     <div class="form__row">
-                      <div class="form__row-title form__row-title--required">ФАМИЛИЯ*</div>
+                      <div class="form__row-title form__row-title--required">Фамилия*</div>
                       <label class="form__label">
                         <input type="text" name="name" class="form__input">
                       </label>
@@ -3365,6 +3374,8 @@
     <script src="js/libs/service-functions/mobileDetect.js"></script>
     <script src="js/libs/service-functions/dropdown-toggle.js"></script>
     
+    <script src="js/libs/dynamic-adaptive/da.min.js"></script>
+    <script src="js/libs/sv-hover-intent.js"></script>
     <script src="js/libs/accordion/vanilla-accordion.js"></script>
     <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
     
