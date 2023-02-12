@@ -4804,6 +4804,7 @@ h6 {
   height: 25px;
 }
 
+.chrome .btn-sm,
 .gecko .btn-sm {
   padding-top: 2px;
 }
@@ -5215,8 +5216,6 @@ h6 {
 }
 
 .tag {
-  padding-top: 7px;
-  padding-bottom: 3px;
   padding-left: 13px;
   padding-right: 13px;
   min-height: 25px;
@@ -5249,6 +5248,7 @@ h6 {
   border-color: rgba(19, 179, 235, 0.8);
 }
 
+.chrome .tag,
 .gecko .tag {
   padding-top: 5px;
 }
