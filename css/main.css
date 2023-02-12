@@ -5417,10 +5417,14 @@ h6 {
 }
 
 .ctlg-filter__tag-value {
-  padding-top: 6px;
-  padding-bottom: 4px;
   margin-bottom: 0;
   color: #767676;
+}
+
+.chrome .ctlg-filter__tag-value,
+.gecko .ctlg-filter__tag-value {
+  padding-top: 6px;
+  padding-bottom: 4px;
 }
 
 .ctlg-filter__select {
