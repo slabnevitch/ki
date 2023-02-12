@@ -52,16 +52,18 @@ h1, h2, h3, h4, h5, h6{
   color: #fff;
   text-decoration: none;
   background-color: $accent;
-  padding: 5px 15px;
+  padding: 0 15px;
   font-family: $navbl;
   font-size: 12px;
-  line-height: 17px;
+  // line-height: 17px;
   text-transform: uppercase;
   border: 1px solid transparent;
   border-radius: 20px;
   text-align: center;
   position: relative;
   outline: none;
+  overflow: hidden;
+  white-space: nowrap;
   transition: background-color .1s ease;
 	
   &:hover{
@@ -75,6 +77,8 @@ h1, h2, h3, h4, h5, h6{
     border-color: $accent;
     color: $accent;
   }
+
+  
   
   // &-empty{
   // 	border-color: $accent;
@@ -129,13 +133,29 @@ h1, h2, h3, h4, h5, h6{
     }
   }
   &-lg{
-    padding-top: 8px;
-    min-height: 40px;
+    // padding-top: 8px;
+    // min-height: 40px;
+    height: 40px;
+
+    span{
+      line-height: 40px;
+    // height: 12px;
+   }
   }
   &-sm{
-    padding-bottom: 2px;
+    // padding-bottom: 2px;
     max-width: 125px;
-   min-height: 25px;
+   height: 25px;
+   // pizdyk
+   .chrome &,
+   .gecko &{
+    padding-top: 2px;
+   }
+   span{
+    line-height: 25px;
+    // height: 12px;
+   }
+
   }
   &-fw{
    width: 100%;
@@ -481,8 +501,8 @@ h1, h2, h3, h4, h5, h6{
     flex-wrap: wrap;
 }
 .tag{
-  padding-top: 7px; 
-  padding-bottom: 5px; 
+  // padding-top: 7px; 
+  // padding-bottom: 3px; 
   padding-left: 13px;
   padding-right: 13px; 
   min-height: 25px;
@@ -500,6 +520,7 @@ h1, h2, h3, h4, h5, h6{
   text-decoration: none;
   outline: none;
   color: $text-l;
+  overflow: hidden;
 
   &:not(:last-child){
     margin-right: 5px; 
@@ -509,6 +530,11 @@ h1, h2, h3, h4, h5, h6{
     color:  $blue;
     border-color: $blue;
   }
+
+  .chrome &,
+   .gecko &{
+    padding-top: 5px;
+   }
 }
 // END Tags
 // swiper bullet custom

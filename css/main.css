@@ -3,13 +3,13 @@
   font-family: "NavigoMedium";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/navigo-medium/Navigo-Medium-Web.woff2") format("woff2"), url("../fonts/navigo-medium/Navigo-Medium-Web.woff") format("woff");
+  src: url("../fonts/font/Navigo-Medium.woff2") format("woff2"), url("../fonts/font/Navigo-Medium.woff") format("woff");
 }
 @font-face {
   font-family: "NavigoBlack";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/navigo-black/Navigo-Black-Web.woff2") format("woff2"), url("../fonts/navigo-black/Navigo-Black-Web.woff") format("woff");
+  src: url("../fonts/font/Navigo-Black.woff2") format("woff2"), url("../fonts/font/Navigo-Black.woff") format("woff");
 }
 @font-face {
   font-family: "icomoon";
@@ -4319,16 +4319,17 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   text-decoration: none;
   background-color: #003D9E;
-  padding: 5px 15px;
+  padding: 0 15px;
   font-family: "NavigoBlack", sans-serif;
   font-size: 12px;
-  line-height: 17px;
   text-transform: uppercase;
   border: 1px solid transparent;
   border-radius: 20px;
   text-align: center;
   position: relative;
   outline: none;
+  overflow: hidden;
+  white-space: nowrap;
   transition: background-color 0.1s ease;
 }
 .btn:hover {
@@ -4379,13 +4380,20 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(19, 179, 235, 0.8);
 }
 .btn-lg {
-  padding-top: 8px;
-  min-height: 40px;
+  height: 40px;
+}
+.btn-lg span {
+  line-height: 40px;
 }
 .btn-sm {
-  padding-bottom: 2px;
   max-width: 125px;
-  min-height: 25px;
+  height: 25px;
+}
+.chrome .btn-sm, .gecko .btn-sm {
+  padding-top: 2px;
+}
+.btn-sm span {
+  line-height: 25px;
 }
 .btn-fw {
   width: 100%;
@@ -4767,8 +4775,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tag {
-  padding-top: 7px;
-  padding-bottom: 5px;
   padding-left: 13px;
   padding-right: 13px;
   min-height: 25px;
@@ -4789,6 +4795,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   outline: none;
   color: #A9A9A9;
+  overflow: hidden;
 }
 .tag:not(:last-child) {
   margin-right: 5px;
@@ -4796,6 +4803,9 @@ h1, h2, h3, h4, h5, h6 {
 .tag.active {
   color: rgba(19, 179, 235, 0.8);
   border-color: rgba(19, 179, 235, 0.8);
+}
+.chrome .tag, .gecko .tag {
+  padding-top: 5px;
 }
 
 .swiper-pagination-bullet {
@@ -4961,10 +4971,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ctlg-filter__tag-value {
-  padding-top: 6px;
-  padding-bottom: 4px;
   margin-bottom: 0;
   color: #767676;
+}
+.chrome .ctlg-filter__tag-value, .gecko .ctlg-filter__tag-value {
+  padding-top: 6px;
+  padding-bottom: 4px;
 }
 
 .ctlg-filter__select {
@@ -5079,6 +5091,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 4px;
   color: #A9A9A9;
   font-size: 14px;
+  line-height: 18px;
 }
 
 .ctlg-filter-location {
@@ -5361,7 +5374,8 @@ h1, h2, h3, h4, h5, h6 {
 .catalog-header__tag {
   overflow: hidden;
   display: block;
-  padding: 6px 13px;
+  padding: 5px 13px;
+  height: 25px;
   margin-bottom: 14px;
   font-size: 10px;
   line-height: 12px;

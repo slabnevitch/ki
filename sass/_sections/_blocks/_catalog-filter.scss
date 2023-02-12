@@ -137,10 +137,14 @@
 .ctlg-filter__tags {}
 .tag {}
 .ctlg-filter__tag-value {
-	padding-top: 6px;
-	padding-bottom: 4px;
 	margin-bottom: 0;
-	color: #767676;		
+	color: #767676;	
+
+	.chrome &,
+	.gecko &{
+		padding-top: 6px;
+		padding-bottom: 4px;
+	}	
 }
 .ctlg-filter__select {
 	margin-top: 8px;	
@@ -226,6 +230,7 @@
 	margin-right: 4px;
 	color: $text-l;
 	font-size: 14px;
+	line-height: 18px;
 }
 .ctlg-filter-location{
 	position: relative;
