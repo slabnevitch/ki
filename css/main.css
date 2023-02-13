@@ -4806,7 +4806,7 @@ h6 {
 
 .chrome .btn-sm,
 .gecko .btn-sm {
-  padding-top: 2px;
+  padding-top: 4px;
 }
 
 .btn-sm span {
@@ -5250,7 +5250,7 @@ h6 {
 
 .chrome .tag,
 .gecko .tag {
-  padding-top: 4px;
+  padding-top: 2px;
 }
 
 .swiper-pagination-bullet {
