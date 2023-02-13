@@ -59,6 +59,11 @@
 	}
 
 }
+.search-results-header__wrapper{
+	._scroll  &{
+		padding-right: 40px;
+	}
+}
 .search-column--block {
 	// position: relative;	
 	height: 298px;
@@ -188,6 +193,13 @@
 		@include max-screen($md){
 			max-width: calc(100% - 38px);		
 		}
+
+		@media (any-hover: hover) { //только для устройств с ховером
+
+				&:hover{
+					font-weight: 700;
+				}
+			}
 	}
 }
 .search-column--cards {
@@ -203,6 +215,7 @@
 
 	._scroll &{
 		height: 557px;
+		// flex-basis: calc(254px + 16px + 80px);
 	}
 
 	.product-card--mini{

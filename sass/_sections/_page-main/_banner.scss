@@ -58,13 +58,14 @@
 	}
 }
 .banner-card__img {
-	width: 123px;
-	height: 123px;
+	width:100%;
+	height: prc(123, 224);
 	position: relative;
 	margin-bottom: 15px;
 
 	img{
 		@include absolute-center;
+		height: 100%;
 	}
 }
 .banner-card__text {

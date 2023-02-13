@@ -477,6 +477,17 @@
 	text-transform: uppercase;
 	transform: translateY(1px);
 }
+.catalog-toggle__type {
+	svg{
+		fill: #fff;
+	}
+
+	.header-catalog-opened &{
+		svg{
+			fill: $accent;
+		}
+	}
+}
 .search-header {
 	flex: 1 1 auto;
 	display: flex;

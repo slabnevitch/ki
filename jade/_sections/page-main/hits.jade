@@ -64,9 +64,11 @@ section.page-main-sect.hits
 							.product-card__rating
 								+crystalRating('4,5')
 						if item.billet != ''
-							a(href="#" class=item.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy") Купить
+							a(href="#" class=item.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy")
+								span Купить
 						else
-							a(href="#").btn.btn-sm.product-card__buy Купить
+							a(href="#").btn.btn-sm.product-card__buy
+								span Купить
 
 						.product-card__info.info-product-card
 							.info-product-card__row
