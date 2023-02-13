@@ -5250,7 +5250,7 @@ h6 {
 
 .chrome .tag,
 .gecko .tag {
-  padding-top: 5px;
+  padding-top: 4px;
 }
 
 .swiper-pagination-bullet {
@@ -7650,6 +7650,14 @@ h6 {
   text-transform: uppercase;
   -ms-transform: translateY(1px);
   transform: translateY(1px);
+}
+
+.catalog-toggle__type svg {
+  fill: #fff;
+}
+
+.header-catalog-opened .catalog-toggle__type svg {
+  fill: #003D9E;
 }
 
 .search-header {
