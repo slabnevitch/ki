@@ -8771,10 +8771,6 @@ h6 {
     margin-right: 0;
   }
 
-  .header__catalog-toggle {
-    display: none;
-  }
-
   .search-results-opened .search-header__form {
     margin-left: 7px;
   }
