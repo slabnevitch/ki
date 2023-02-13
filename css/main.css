@@ -4,14 +4,14 @@
   font-family: "NavigoMedium";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/font/Navigo-Medium.woff2") format("woff2"), url("../fonts/font/Navigo-Medium.woff") format("woff");
+  src: url("../fonts/navigo-medium/Navigo-Medium-Web.woff2") format("woff2"), url("../fonts/navigo-medium/Navigo-Medium-Web.woff") format("woff");
 }
 
 @font-face {
   font-family: "NavigoBlack";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/font/Navigo-Black.woff2") format("woff2"), url("../fonts/font/Navigo-Black.woff") format("woff");
+  src: url("../fonts/navigo-black/Navigo-Black-Web.woff2") format("woff2"), url("../fonts/navigo-black/Navigo-Black-Web.woff") format("woff");
 }
 
 @font-face {
