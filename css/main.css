@@ -4828,7 +4828,6 @@ h6 {
 }
 
 .btn-buy.clicked {
-  padding-top: 3px;
   background-color: #fff;
   border-color: #003D9E;
   color: #003D9E;
@@ -4871,7 +4870,6 @@ h6 {
 }
 
 .btn-buy .counter {
-  top: 2px;
   display: none;
   width: 100%;
   height: auto;
@@ -4921,13 +4919,11 @@ h6 {
   margin-right: 3px;
   font-family: "NavigoMedium", sans-serif;
   font-size: 12px;
-  line-height: 25px;
+  line-height: 23px;
   color: #003D9E;
 }
 
 .btn-buy .counter__block {
-  position: relative;
-  top: 1px;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   display: -ms-flexbox;
@@ -4943,7 +4939,7 @@ h6 {
 .btn-buy .counter__measures {
   font-weight: 700;
   font-size: 12px;
-  line-height: 25px;
+  line-height: 22px;
   font-family: "NavigoMedium", sans-serif;
   text-transform: none;
 }
