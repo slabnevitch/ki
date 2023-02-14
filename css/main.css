@@ -9,7 +9,7 @@
   font-family: "NavigoBlack";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/navigo-black/Navigo-Black-Web.woff2") format("woff2"), url("../fonts/navigo-black/Navigo-Black-Web.woff") format("woff"), url("../fonts/navigo-black/Navigo-Black-Web.ttf") format("truetype");
+  src: url("../fonts/Navigo-Black.woff2") format("woff2");
 }
 @font-face {
   font-family: "icomoon";
@@ -5456,8 +5456,10 @@ h1, h2, h3, h4, h5, h6 {
   height: calc(100vh - 124px - 50px);
 }
 
-._scroll .search-results-header__wrapper {
-  padding-right: 40px;
+@media only screen and (min-width: 1392px) {
+  ._scroll .search-results-header__wrapper {
+    padding-right: 40px;
+  }
 }
 
 .search-column--block {
@@ -8068,6 +8070,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
   padding: 12px;
   background-color: #F1F1F1;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .categories-tile--lg {
@@ -8427,6 +8431,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 156.25%;
   color: rgba(0, 0, 0, 0.8);
   transition: all 0.3s;
+  border-radius: 4px;
 }
 @media only screen and (max-width: 479.98px) {
   .item-news {

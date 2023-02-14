@@ -61,7 +61,10 @@
 }
 .search-results-header__wrapper{
 	._scroll  &{
-		padding-right: 40px;
+		@include min-screen($max){
+			padding-right: 40px;
+			
+		}
 	}
 }
 .search-column--block {
