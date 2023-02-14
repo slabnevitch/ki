@@ -11,6 +11,23 @@ html(lang='ru')
 		
 		//- убрать "зуммирование" на safari ios:
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no")
+		div(style='display:none' itemscope='' itemtype='http://schema.org/Store')
+			span(itemprop='name') Кубань Инструмент
+			span(itemprop='description') Интернет-магазин инструмента, строительной и садовой техники
+			span(itemprop='priceRange') от 3 руб до 1 000 000 руб
+			img(src='/assets/img/og_image.png' itemprop='image' alt='www.kubaninstrument.ru')
+			span(itemprop='address' itemscope='' itemtype='http://schema.org/PostalAddress')
+				span(itemprop='streetAddress') г. Краснодар, ул. Северная, 320
+				span(itemprop='postalCode') 350000
+				span(itemprop='addressCountry') Россия
+				span(itemprop='telephone') 8 (800) 511-47-24
+			div(itemprop='paymentAccepted' style='display: none') Оплата наличными, картой, безналичная
+			meta(itemprop='openingHours' style='display: none' datetime='Mo,Tu,We,Th,Fr,Sa,Su 08:00-20:00')
+			div(itemtype='http://schema.org/GeoCoordinates' itemscope='' itemprop='geo')
+				meta(itemprop='latitude' content='45° 2′ 27″ N')
+				meta(itemprop='longitude' content='38° 58′ 7″ E')
+
+
 		
 		link(rel="preconnect" href="https://fonts.googleapis.com")
 		link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
