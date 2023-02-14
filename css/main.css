@@ -4793,11 +4793,13 @@ h6 {
 
 .btn-lg {
   height: 40px;
+  line-height: 40px;
 }
 
 .btn-sm {
   max-width: 125px;
   height: 25px;
+  line-height: 25px;
 }
 
 .btn-fw {
@@ -4919,7 +4921,7 @@ h6 {
   margin-right: 3px;
   font-family: "NavigoMedium", sans-serif;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 25px;
   color: #003D9E;
 }
 
@@ -4941,7 +4943,7 @@ h6 {
 .btn-buy .counter__measures {
   font-weight: 700;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 25px;
   font-family: "NavigoMedium", sans-serif;
   text-transform: none;
 }
