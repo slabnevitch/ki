@@ -79,7 +79,7 @@ section.page-main-sect.hits.recomendations
 						.product-card__info.info-product-card
 							if item.order
 								.info-product-card__row
-									.info-product-card__avalkey Товар временно отсутствует
+									.info-product-card__missing #[span Товар] временно отсутствует
 								.info-product-card__row
 									a(href="#").info-product-card__oneclick Купить в 1 клик
 							
@@ -90,7 +90,9 @@ section.page-main-sect.hits.recomendations
 								.info-product-card__row
 										.info-product-card__aval
 											.info-product-card__avalkey В наличии
-											a(href="#").info-product-card__avalvalue= item.aval
+											a(href="#").info-product-card__avalvalue
+												span.info-product-card__in= "В "
+												| #{item.aval}
 								.info-product-card__row
 									a(href="#").info-product-card__oneclick Купить в 1 клик
 

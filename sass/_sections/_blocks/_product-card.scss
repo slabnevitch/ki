@@ -485,16 +485,36 @@
 .info-product-card__aval {
 	display: inline-block;
 }
-.info-product-card__avalkey {
+.info-product-card__avalkey,
+.info-product-card__missing {
 	margin-right: 3px;
 	display: inline-block;
+
+	span{
+		@include max-screen($xs){
+			display: none;
+		}
+	}
+}
+.info-product-card__missing {
+	&::first-letter {
+	  text-transform: uppercase;
+	}
+}
+.info-product-card__avalkey{
 	@include max-screen($xs){
 		display: none;
 	}
+
 }
 .info-product-card__avalvalue {
 	display: inline-block;
 	color: $accent-l;
+}
+.info-product-card__in{
+	@include min-screen($md){
+		display: none;
+	}
 }
 .info-product-card__oneclick {
 	color: #A9A9A9;
