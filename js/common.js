@@ -200,6 +200,28 @@
 			}		
 		// END popups close
 
+		// product-cards alignment
+			if(targ.classList.contains('catalog-sort__action') || targ.closest('.catalog-sort__action') !== null){
+				targ.closest('.catalog-sort__action').classList.add('active');
+				siblings(targ.closest('.catalog-sort__action'))[0].classList.remove('active');
+
+				console.log(targ.closest('.catalog-chapter'))
+				var pordictCardsContainers = targ.closest('.catalog-chapter')
+					.querySelectorAll('.product-cards');
+				
+				if(targ.getAttribute('id') === 'cars-row-switcher' || targ.closest('#cars-row-switcher') !== null){
+					for (var i = pordictCardsContainers.length - 1; i >= 0; i--) {
+						pordictCardsContainers[i].classList.add('product-cards--horisontal');
+					}
+				}else{
+					for (var i = pordictCardsContainers.length - 1; i >= 0; i--) {
+						pordictCardsContainers[i].classList.remove('product-cards--horisontal');
+					}
+				}
+
+			}
+		// END product-cards alignment
+
 		// header search results toggle
 			// var headerSearchInputs = document.querySelectorAll('.search-header__input');
 			// for(var i=0; i < headerSearchInputs.length; i++){

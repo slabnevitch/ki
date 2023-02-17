@@ -14,8 +14,91 @@ block content
 					+icon('arrow-left') 
 		
 		include _sections/page-brands/hits-tiles
-		include _blocks/catalog-sort
 
+		//- 	.catlog-capter__title Гайковерты 6
+
+		.catalog-chapter
+			include _blocks/catalog-sort
+			.hits
+				.wrapper
+					h2.sect-title Гайковерты 6
+
+				.wrapper-smart
+					- cards = [{billet: 'акция', price: '14 729 ₽', sale: '18 411 ₽', sbers: '29', tilte: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', aval: '12 магазинах', iconActive: '1'}, {billet: 'скидка', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Лобзик Elitech ПЛ 0885 МЭ', aval: '7 магазинах', iconActive: false}, {billet: '', price: '7 850 ₽', sale: '', sbers: '79', tilte: 'Пневмогайковерт ударный Fubag IW 900 1/2" 100194', aval: '6 магазинах', iconActive: '1'}, {billet: '', price: '12 590 ₽', sale: '', sbers: '129', tilte: 'Угловая шлифовальная машина Makita GA 5041 R', aval: '2 магазинах', iconActive: false}, {billet: '', price: '22 899 ₽', sale: '', sbers: '229', tilte: 'Аккумуляторный перфоратор Bosch GBH 180-LI 0611911122', aval: '14 магазинах', iconActive: false}, {billet: '', price: '9 990 ₽', sale: '', sbers: '100', tilte: 'Компрессор Patriot Euro 24-240 525306365', aval: '8 магазинах', iconActive: false}, {billet: 'уценка', price: '10 990 ₽', sale: '11 990 ₽', sbers: '120', tilte: 'Нивелир лазерный Condtrol XLiner 360 G 1-2-134', aval: '1 магазине', iconActive: false}, {billet: 'уценка', price: '20 729 ₽', sale: '24 940 ₽', sbers: '249', tilte: 'Бетоносмеситель Сибртех БСЛ-200 95475', aval: '1 магазине', iconActive: '0'}];
+					.wrapper-flex.product-cards
+						each item, i in cards
+							.product-card
+								.product-card__img-wrap
+									if item.billet != ''
+										div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : "billet billet--markdown")
+											.billet__value= item.billet
+											
+											if item.billet == "акция" || item.billet == "скидка"
+												+icon('percents')
+											if item.billet == "уценка"
+												+icon('attention')
+											if item.billet == "Новинка"
+												+icon('flame')
+									
+									a(href="#").product-card__border
+										span.product-card__img
+											img(src="img/hits-section/"+(i+1)+".jpg" alt="alt")
+								
+								
+								.product-card__price
+									.product-card__actions
+										if item.iconActive === '0'
+											a(href="#").product-card__action.active
+												+icon('favourites')
+											a(href="#").product-card__action
+												+icon('compare')
+										else if item.iconActive === '1'
+											a(href="#").product-card__action
+												+icon('favourites')
+											a(href="#").product-card__action.active
+												+icon('compare')
+										else if item.iconActive == false
+											a(href="#").product-card__action
+												+icon('favourites')
+											a(href="#").product-card__action
+												+icon('compare')
+
+									a(href="#").product-price= item.price
+										if item.sale != ''
+											.product-price-sale= item.sale
+									a(href="#").product-bonus
+										.product-bonus__val= item.sbers
+										+icon('bonus')
+								
+								a(href="#").product-card__name= item.tilte
+								
+								a(href="#").product-card__description 
+									.product-card__description-row Напряжение акк.: 12 В
+									.product-card__description-row Крутящий момент: 30 Н·м
+									.product-card__description-row Емкость аккумулятора: 2 А·ч
+									.product-card__description-row Тип аккумулятора Li-Ion
+									.product-card__description-row Кол-во аккумуляторов: 2 шт.
+									.product-card__description-row Вес 1.2 кг
+
+								.product-card__bottom
+									.product-card__rating-wrap
+										.product-card__rating
+											+crystalRating('4,5')
+									if item.billet != ''
+										a(href="#" class=item.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy") Купить
+									else
+										a(href="#").btn.btn-sm.product-card__buy Купить
+
+									.product-card__info.info-product-card
+										.info-product-card__row Артикул: 002266
+										.info-product-card__row
+											.info-product-card__aval
+												.info-product-card__avalkey В наличии
+												a(href="#").info-product-card__avalvalue
+													span.info-product-card__in= "В "
+													| #{item.aval}
+										.info-product-card__row
+											a(href="#").info-product-card__oneclick Купить в 1 клик
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 
