@@ -21,7 +21,8 @@
 	transition: background-color .4s;
 
 
-	&:nth-child(3){
+	&:nth-child(3),
+	&:nth-child(4){
 		.hits-tile__name {
 			br{
 				@include min-screen($xsss){
@@ -59,8 +60,8 @@
 	top: 0;
 	right: 0;	// position: relative;
 	position: absolute;
-	width: 60px;
-	height: 60px;
+	width: 55px;
+	height: 55px;
 	transition: all 0.3s;
 
 	@include min-screen($xsss){

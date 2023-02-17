@@ -4212,6 +4212,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 16px;
   }
 }
+.catalog-chapter .sect-title {
+  font-size: 18px;
+  line-height: 20px;
+}
 
 .link {
   font-size: 12px;
@@ -6084,6 +6088,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------END popups----------------------*/
 /*--------------------product-card----------------------*/
+@media (any-hover: hover) {
+  .product-cards.product-cards--horisontal .product-card:hover {
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
 .product-card {
   position: relative;
   display: -ms-flexbox;
@@ -9222,7 +9233,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media only screen and (min-width: 375px) {
-  .hits-tile:nth-child(3) .hits-tile__name br {
+  .hits-tile:nth-child(3) .hits-tile__name br, .hits-tile:nth-child(4) .hits-tile__name br {
     display: none;
   }
 }
@@ -9255,8 +9266,8 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   right: 0;
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   transition: all 0.3s;
 }
 @media only screen and (min-width: 375px) {

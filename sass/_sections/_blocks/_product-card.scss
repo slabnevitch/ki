@@ -1,4 +1,16 @@
 /*--------------------product-card----------------------*/
+.product-cards{
+	&.product-cards--horisontal{
+		.product-card{
+			@media (any-hover: hover) { //только для устройств с ховером
+				&:hover{
+					transform: none;
+				}
+			}
+
+		}
+	}
+}
 .product-card {
 	position: relative;
 	display: flex;
@@ -14,6 +26,7 @@
 		max-width: 224px;
 
 	}
+
 	.product-cards &{
 		@include col();
 		@include size(3);
