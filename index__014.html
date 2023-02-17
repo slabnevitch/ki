@@ -3312,7 +3312,48 @@
         </ul>
       </div>
     </div>
-    <script src="js/libs/css_browser_selector.js"></script>
+    <div class="popup popup-action">
+      <button type="button" class="popup__close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="popup__title">Вы упускаете<br>много акций!</div>
+      <div class="popup__body">
+        <p class="popup__text">Подпишитесь на уведомления,<br>чтобы не пропускать их!</p>
+      </div>
+      <footer class="popup__footer"><a href="/" class="popup__button">Подписаться</a></footer>
+    </div>
+    <div class="popup popup-review">
+      <button type="button" class="popup__close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="popup__title">Как вам товар?</div>
+      <div class="popup__body">
+        <p class="popup__text">Оставьте отзыв или оцените товаре</p>
+        <div class="popup__rating"> 
+              <div class="simple-rating">
+                <input id="inp5" type="radio" name="rating" value="5">
+                <label for="inp5"></label>
+                <input id="inp4" type="radio" name="rating" value="4">
+                <label for="inp4"></label>
+                <input id="inp3" type="radio" checked name="rating" value="3">
+                <label for="inp3"></label>
+                <input id="inp2" type="radio" name="rating" value="2">
+                <label for="inp2"></label>
+                <input id="inp1" type="radio" name="rating" value="1">
+                <label for="inp1"></label>
+              </div>
+        </div>
+        <div class="product-card product-card--mini">
+          <div class="product-card__img-wrap"><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a></div>
+          <div class="product-card__chars"><a href="#" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</a></div>
+        </div>
+      </div>
+      <footer class="popup__footer"><a href="/" class="popup__button">Написать отзыв</a></footer>
+    </div>
     <script src="js/libs/service-functions/remove-class.js"></script>
     <script src="js/libs/service-functions/siblings.js"></script>
     <script src="js/libs/service-functions/mobileDetect.js"></script>

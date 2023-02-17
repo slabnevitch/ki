@@ -1,0 +1,92 @@
+/*--------------------popups----------------------*/
+.popup {
+	position: fixed;
+	top: 17px;
+	right: 20px;
+	padding: 23px 20px 19px 20px;
+	max-width: 344px;
+	width: 100%;
+	background: #FFFFFF;
+	border: 1px solid #E4E4E4;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	z-index: 12;
+	display: none;
+
+	@include max-screen($xsss){
+		right: 0px;
+		top: 0px;
+	}
+}
+.popup-action {
+	.popup-action-visible & {
+		display: block;
+	}
+
+}
+.popup__close {
+	position: absolute;
+	top: 23px;
+	right: 20px;
+	@include but-null;
+	width: 24px;
+	height: 24px;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+		cursor: pointer;
+		}
+
+	.icon{
+		font-size: 12px;
+		color: #A9A9A9;
+	}
+}
+.icon {}
+.icon-ctlg-close {}
+.popup__title {
+	margin-bottom: 16px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+}
+.popup__body {}
+.popup__text {
+	margin-top: 0;
+}
+.popup__footer {
+	text-align: right;
+}	
+.popup__button {
+	@include but-null;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 15px;
+	text-transform: uppercase;
+	font-family: $inter;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+		cursor: pointer;
+		}
+}
+.popup-review{
+	.popup__title {
+		margin-bottom: 8px;
+	}
+	.product-card--mini{
+		margin-bottom: 32px;
+		align-items: center;
+	}
+
+	.popup-review-visible & {
+		display: block;
+	}
+}
+.popup__rating {
+	margin-top: 18px;
+	margin-bottom: 19px;
+	.simple-rating{
+	@include simple-rating($gray-l, $yellow, 30px, 23px, '\e901');
+	// @include simple-rating(red, gold, 35px, 25px, false);
+	}
+}
+/*--------------------END popups----------------------*/ 

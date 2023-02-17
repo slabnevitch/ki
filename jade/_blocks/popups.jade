@@ -1,0 +1,32 @@
+.popup.popup-action
+	button(type="button").popup__close
+		+icon('ctlg-close')
+	.popup__title Вы упускаете
+		br
+		| много акций!
+	.popup__body
+		p.popup__text Подпишитесь на уведомления,
+			br
+			| чтобы не пропускать их!
+	footer.popup__footer
+		a(href="/").popup__button Подписаться
+
+.popup.popup-review
+	button(type="button").popup__close
+		+icon('ctlg-close')
+	.popup__title Как вам товар?
+	.popup__body
+		p.popup__text Оставьте отзыв или оцените товаре
+		.popup__rating 
+			+simpleRating(3)
+
+		.product-card.product-card--mini
+			.product-card__img-wrap
+				a(href="#").product-card__border
+					span.product-card__img
+						img(src="img/product-card/prod-sm.jpg" alt="alt")
+			.product-card__chars
+				a(href="#").product-card__name Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
+
+	footer.popup__footer
+		a(href="/").popup__button Написать отзыв

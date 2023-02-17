@@ -1,0 +1,99 @@
+/*--------------------hits-tiles----------------------*/
+.hits-tiles {
+	.wrapper-flex {
+		// padding-bottom: prc(392,940);
+	}
+}
+.wrapper-smart {}
+.hits-tile {
+	position: relative;
+	@include col();
+	@include size(3);
+	@include size-sm(4);
+	padding-bottom: 29.17%;
+	margin-bottom: 16px;
+	background-color: $gray-l;
+	border-radius: 4px;
+	overflow: hidden;
+
+
+	&:nth-child(3){
+		.hits-tile__name {
+			br{
+				@include min-screen($xsss){
+					display: none;	
+				}
+
+			}
+		}
+	}
+
+
+	@include max-screen($xss){
+		margin-left: 5px;
+		margin-right: 5px;
+		width: calc(33.3333333333% - 10px)
+	}
+
+	@include min-screen($xss){
+		padding-bottom: 12.5525%;
+	}
+}
+.hits-tile__img {
+	top: 0;
+	right: 0;	// position: relative;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+
+	@include min-screen($xsss){
+		width: 70px;
+		height: 70px;
+	}
+	@include min-screen($xs){
+		bottom: 0;
+		top: auto;
+	}
+	@include min-screen($sm){
+		width: 90px;
+		height: 90px;
+
+	}
+	@include min-screen($md){
+		width: prc(90,224);
+		height: 0; 
+		padding-bottom: prc(90,224);
+	}
+
+	img{
+		@include absolute-center;
+		@include min-screen($md){
+			width: 100%;
+		}
+	}
+}
+.hits-tile__name {
+	overflow: hidden;
+	color: #A9A9A9;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	font-size: 10px;
+	line-height: 12px;
+
+		position: absolute;
+
+
+	@include min-screen($xss){
+		bottom: 12px;
+		left: 12px;
+		right: 12px;
+
+	}
+	@include min-screen($md){
+		font-size: 14px;
+		line-height: 14px;
+		
+	}
+}
+/*--------------------END hits-tiles----------------------*/ 

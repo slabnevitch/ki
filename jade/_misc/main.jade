@@ -1,5 +1,5 @@
 doctype html
-html(lang='ru')
+html(lang='ru' class=pageIndex=='008'? "popup-action-visible" : pageIndex=='009' ? "popup-review-visible" : "")
 	head
 		meta(charset='utf-8')
 		title
@@ -37,7 +37,7 @@ html(lang='ru')
 
 		link(rel="stylesheet" href="css/main.css")
 	
-	body(class=pageIndex=='013'||pageIndex == '014'||pageIndex == '015'?"covered" : "")
+	body(class=pageIndex=='013'||pageIndex == '014'||pageIndex == '015'?"covered" : pageIndex=='008'? "popup-action-visible" : pageIndex=='009' ? "popup-review-visible" : "")
 		include _mixins
 		include _vars
 
@@ -60,6 +60,7 @@ html(lang='ru')
 		include ../_blocks/loc-header-panel
 		include ../_blocks/location-search
 		//- include ../_blocks/side-modals
+		include ../_blocks/popups
 
 		include _scripts
 

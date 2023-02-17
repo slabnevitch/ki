@@ -549,6 +549,74 @@ h1, h2, h3, h4, h5, h6{
   }
 // END swiper bullet custom
 
+/*---------------------breadcrumbs---------------------*/
+.breadcrumbs {
+  display: flex;
+  text-transform: uppercase;
+  padding-bottom: 19px;
+}
+.breadcrumbs__item {
+  list-style-type: none;
+
+
+  &:last-child{
+    .breadcrumbs__link {
+      color: $accent;
+    }
+    
+  }
+
+  &:not(:last-child){
+    &:after{
+      content: '/';
+      display: inline-block;
+      margin: 0 5px;
+      font-size: 10px;
+      line-height: 14px;
+      color: $border;
+    }
+    
+  }
+
+}
+.breadcrumbs__link {
+    color: $border;
+    text-decoration: none;
+    font-size: 10px;
+    line-height: 12px;
+    color: $border;
+}
+
+/*--------------------END breadcrumbs----------------------*/
+.back-block{
+  margin-bottom: 26px;  
+  
+}
+.back-link{
+  padding-left: 33px;
+  position: relative;
+  font-size: 28px;
+  line-height: 20px;
+  font-family: $navm;
+  text-decoration: none;
+  color: $text;
+  transition: color .2s;
+
+  @media (any-hover: hover) { //только для устройств с ховером
+
+      &:hover{
+        color: #A9A9A9;
+      }
+    } 
+
+  .icon{
+    position: absolute;
+    left: 5px;
+    top: 0;
+    font-size: 14px;
+    color:#A9A9A9;
+  }
+}
 
 /*--------------------ui-page----------------------*/
 .form__example{
