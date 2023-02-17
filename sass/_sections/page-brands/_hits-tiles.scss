@@ -1,11 +1,14 @@
 /*--------------------hits-tiles----------------------*/
 .hits-tiles {
-	.wrapper-flex {
-		// padding-bottom: prc(392,940);
+	padding-bottom: 42px;
+
+	@include max-screen($sm){
+		padding-bottom: 16px;
 	}
 }
 .wrapper-smart {}
 .hits-tile {
+	display: block;
 	position: relative;
 	@include col();
 	@include size(3);
@@ -15,6 +18,7 @@
 	background-color: $gray-l;
 	border-radius: 4px;
 	overflow: hidden;
+	transition: background-color .4s;
 
 
 	&:nth-child(3){
@@ -38,6 +42,18 @@
 	@include min-screen($xss){
 		padding-bottom: 12.5525%;
 	}
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				background-color: $blue-l;
+				.hits-tile__name {
+					color: #fff;
+				}
+				.hits-tile__img {
+					transform: 	translateX(110%);
+				}
+			}
+		}
 }
 .hits-tile__img {
 	top: 0;
@@ -45,6 +61,7 @@
 	position: absolute;
 	width: 60px;
 	height: 60px;
+	transition: all 0.3s;
 
 	@include min-screen($xsss){
 		width: 70px;

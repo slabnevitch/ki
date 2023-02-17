@@ -3,7 +3,7 @@ section.hits-tiles
 		.wrapper-flex
 			- var tiles = ['Шуруповерты', 'Отвертки', 'Бетоно<br>мешалки', 'Газонокосилки', 'Перфораторы', 'Генераторы', 'Бензопилы', 'Шлифмашины', 'Культиваторы', 'Пассатижи', 'Мойки', 'Все<br>категории'];	
 			each tile, i in tiles
-				.hits-tile
+				a(href="#").hits-tile
 					if i < 11
 						.hits-tile__img
 							img(src="img/hits-tiles/"+(i+1)+".png" alt="alt")

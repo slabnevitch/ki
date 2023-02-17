@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Главная страница</title>
+    <title>Хиты продаж</title>
     <meta name="description" content="">
     <link rel="icon" href="img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
@@ -1878,57 +1878,60 @@
           </div>
           <section class="hits-tiles">
             <div class="wrapper-smart">
-              <div class="wrapper-flex">
-                <div class="hits-tile">
+              <div class="wrapper-flex"><a href="#" class="hits-tile">
                   <div class="hits-tile__img"><img src="img/hits-tiles/1.png" alt="alt"></div>
-                  <div class="hits-tile__name">Шуруповерты</div>
-                </div>
-                <div class="hits-tile">
+                  <div class="hits-tile__name">Шуруповерты</div></a><a href="#" class="hits-tile">
                   <div class="hits-tile__img"><img src="img/hits-tiles/2.png" alt="alt"></div>
-                  <div class="hits-tile__name">Отвертки</div>
-                </div>
-                <div class="hits-tile">
+                  <div class="hits-tile__name">Отвертки</div></a><a href="#" class="hits-tile">
                   <div class="hits-tile__img"><img src="img/hits-tiles/3.png" alt="alt"></div>
-                  <div class="hits-tile__name">Бетоно<br>мешалки</div>
-                </div>
-                <div class="hits-tile">
+                  <div class="hits-tile__name">Бетоно<br>мешалки</div></a><a href="#" class="hits-tile">
                   <div class="hits-tile__img"><img src="img/hits-tiles/4.png" alt="alt"></div>
-                  <div class="hits-tile__name">Газонокосилки</div>
-                </div>
-                <div class="hits-tile">
+                  <div class="hits-tile__name">Газонокосилки</div></a><a href="#" class="hits-tile">
                   <div class="hits-tile__img"><img src="img/hits-tiles/5.png" alt="alt"></div>
-                  <div class="hits-tile__name">Перфораторы</div>
-                </div>
-                <div class="hits-tile">
+                  <div class="hits-tile__name">Перфораторы</div></a><a href="#" class="hits-tile">
                   <div class="hits-tile__img"><img src="img/hits-tiles/6.png" alt="alt"></div>
-                  <div class="hits-tile__name">Генераторы</div>
-                </div>
-                <div class="hits-tile">
+                  <div class="hits-tile__name">Генераторы</div></a><a href="#" class="hits-tile">
                   <div class="hits-tile__img"><img src="img/hits-tiles/7.png" alt="alt"></div>
-                  <div class="hits-tile__name">Бензопилы</div>
-                </div>
-                <div class="hits-tile">
+                  <div class="hits-tile__name">Бензопилы</div></a><a href="#" class="hits-tile">
                   <div class="hits-tile__img"><img src="img/hits-tiles/8.png" alt="alt"></div>
-                  <div class="hits-tile__name">Шлифмашины</div>
-                </div>
-                <div class="hits-tile">
+                  <div class="hits-tile__name">Шлифмашины</div></a><a href="#" class="hits-tile">
                   <div class="hits-tile__img"><img src="img/hits-tiles/9.png" alt="alt"></div>
-                  <div class="hits-tile__name">Культиваторы</div>
-                </div>
-                <div class="hits-tile">
+                  <div class="hits-tile__name">Культиваторы</div></a><a href="#" class="hits-tile">
                   <div class="hits-tile__img"><img src="img/hits-tiles/10.png" alt="alt"></div>
-                  <div class="hits-tile__name">Пассатижи</div>
-                </div>
-                <div class="hits-tile">
+                  <div class="hits-tile__name">Пассатижи</div></a><a href="#" class="hits-tile">
                   <div class="hits-tile__img"><img src="img/hits-tiles/11.png" alt="alt"></div>
-                  <div class="hits-tile__name">Мойки</div>
-                </div>
-                <div class="hits-tile">
-                  <div class="hits-tile__name">Все<br>категории</div>
-                </div>
+                  <div class="hits-tile__name">Мойки</div></a><a href="#" class="hits-tile">
+                  <div class="hits-tile__name">Все<br>категории</div></a>
               </div>
             </div>
           </section>
+          <div class="wrapper">
+            <div class="catalog-sort">
+              <div class="catalog-sort__select">
+                <select name="catalog-sort" data-searchdisable="true" class="fstdropdown-select">
+                  <option value="1" selected>Популярные</option>
+                  <option value="2">Сначала дешевле</option>
+                  <option value="3">Сначала дороже</option>
+                  <option value="4">Высокий рейтинг</option>
+                  <option value="5">Много отзывов</option>
+                  <option value="6">Новинки</option>
+                  <option value="7">Снижена цена</option>
+                </select>
+              </div>
+              <div class="catalog-sort__actions">
+                <button type="button" id="cars-row-switcher" class="catalog-sort__action">
+                      <svg class="icon icon-cards-row ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#cards-row"></use>
+                      </svg>
+                </button>
+                <button type="button" id="cars-tiles-switcher" class="catalog-sort__action active">
+                      <svg class="icon icon-cards-tiles ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#cards-tiles"></use>
+                      </svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <footer class="footer">
@@ -2217,6 +2220,7 @@
     <script src="js/libs/swiper/swiper-bundle.min.js"></script>
     <script src="js/libs/viewerjs/viewer.js"></script>
     <script src="js/libs/rating/ratings.js"></script>
+    <script src="js/libs/fstdropdown/fstdropdown.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
