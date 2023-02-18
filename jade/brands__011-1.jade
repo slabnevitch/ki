@@ -4,7 +4,7 @@ block title
 	| Бренды - все бренды
 
 block content
-	.page.page-brands.page-brands-all
+	.page.page-brands
 		.wrapper
 			+menu('breadcrumbs', ['главная',  'Хиты продаж', 'Популярные бренды', 'все бренды'])
 
@@ -15,17 +15,15 @@ block content
 		
 		include _sections/page-brands/brands-nav
 
-		section.brands-logos
-			.wrapper
-				h2.sect-title Популярные бренды
-			
+		.brand-filtered
+			.wrapper d
+		
+		section.brands-logos		
 			.wrapper-smart
 				.wrapper-flex
-					- for (var i=0; i < 30; i++)
+					- for (var i=0; i < 8; i++)
 						a(href="#").brands-logo
 							img(src="img/brands/"+(i+1)+".svg" alt="alt")
-		.pagination-wrapper
-			+pagination([1, '...', 14, 15, 16, '...', 189], '')
 
 block page-scripts
 	//- SERVIVE FUNCTIONS==================

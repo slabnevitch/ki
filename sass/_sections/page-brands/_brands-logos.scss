@@ -4,6 +4,10 @@
 	@include max-screen($xs){
 			margin-bottom: 24px;	
 	}
+
+	.page-brands-all &{
+		margin-bottom: 10px;
+	}
 }
 .brands-logo{
 	@include col();

@@ -9233,6 +9233,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 24px;
   }
 }
+.page-brands-all .brands-logos {
+  margin-bottom: 10px;
+}
 
 .brands-logo {
   box-sizing: border-box;
@@ -9378,6 +9381,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .brands-alpabet__link:hover {
   color: rgba(0, 0, 0, 0.8);
+}
+
+.brand-filtered {
+  margin-bottom: 23px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 
 /*--------------------END brands-nav----------------------*/
