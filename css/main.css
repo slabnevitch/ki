@@ -4879,6 +4879,12 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------END breadcrumbs----------------------*/
 .back-block {
   margin-bottom: 26px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 959.98px) {
   .back-block {
@@ -6127,7 +6133,7 @@ h1, h2, h3, h4, h5, h6 {
 .ui-elems .product-card {
   max-width: 224px;
 }
-.product-card--analog .product-price {
+.product-card--pullout .product-price {
   color: #A9A9A9;
 }
 .product-cards .product-card {
@@ -6807,7 +6813,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .info-product-card {
-  height: 48px;
+  height: 50px;
   overflow: hidden;
   display: -ms-flexbox;
   display: flex;
@@ -9224,6 +9230,116 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------END main-slider----------------------*/
+/*--------------------brand-tiles----------------------*/
+.brands-tiles {
+  padding-bottom: 42px;
+}
+@media only screen and (max-width: 959.98px) {
+  .brands-tiles {
+    padding-bottom: 27px;
+  }
+}
+.brands-tiles__top {
+  text-align: right;
+  padding-top: 10px;
+}
+@media only screen and (min-width: 959.98px) {
+  .brands-tiles__top {
+    margin-top: 0;
+  }
+}
+.brands-tiles__top .link {
+  position: relative;
+  top: -25px;
+  text-decoration: underline;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: #A9A9A9;
+  opacity: 0.8;
+  font-size: 10px;
+  line-height: 12px;
+}
+.brands-tiles__top .link:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+@media only screen and (min-width: 959.98px) {
+  .brands-tiles__top .link {
+    font-size: 14px;
+    line-height: 17px;
+    top: -45px;
+  }
+}
+.brands-tiles .categories-tiles__column {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 8px;
+  margin-right: 8px;
+  word-wrap: normal;
+}
+@media screen and (max-width: 959.98px) {
+  .brands-tiles .categories-tiles__column {
+    width: calc(33.3333333333% - 16px);
+  }
+}
+@media only screen and (max-width: 479.98px) {
+  .brands-tiles .categories-tiles__column {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: calc(33.3333333333% - 10px);
+  }
+}
+.brands-tiles .cards-more {
+  font-size: 10px;
+  line-height: 12px;
+}
+@media only screen and (min-width: 959.98px) {
+  .brands-tiles .cards-more {
+    display: none;
+  }
+}
+
+.brands-tile .categories-tile__title {
+  color: #A9A9A9;
+}
+@media only screen and (max-width: 576px) {
+  .brands-tile .categories-tile__title {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+@media (any-hover: hover) {
+  .brands-tile:hover .categories-tile__title {
+    color: #fff;
+  }
+}
+
+@media only screen and (max-width: 479.98px) {
+  .brands-tile.categories-tile--sm {
+    padding: 6px 5px;
+    -ms-flex: 0 0 84px;
+    flex: 0 0 84px;
+  }
+}
+.brands-tile.categories-tile--sm .categories-tile__img {
+  bottom: 0;
+}
+@media only screen and (max-width: 767.98px) {
+  .brands-tile.categories-tile--sm .categories-tile__img {
+    width: 60px;
+    height: 60px;
+    top: 5px;
+    right: 5px;
+    bottom: auto;
+  }
+}
+@media only screen and (max-width: 479.98px) {
+  .brands-tile.categories-tile--sm .categories-tile__img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/*--------------------END brand-tiles----------------------*/
 /*--------------------brands-logos----------------------*/
 .brands-logos {
   margin-bottom: 44px;

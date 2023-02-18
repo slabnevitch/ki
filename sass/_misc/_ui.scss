@@ -608,12 +608,14 @@ h1, h2, h3, h4, h5, h6{
 /*--------------------END breadcrumbs----------------------*/
 .back-block{
   margin-bottom: 26px;  
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 
   @include max-screen($md){
     padding-bottom: 8px;
     border-bottom: 1px solid $border;
   }
-
 }
 .back-link{
   padding-left: 33px;

@@ -27,7 +27,7 @@
 
 	}
 
-	&--analog{
+	&--pullout{
 		.product-price{
 			color: #A9A9A9;
 		}
@@ -571,7 +571,7 @@
 	color: #A9A9A9;
 }
 .info-product-card {
-	height: 48px;
+	height: 50px;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;

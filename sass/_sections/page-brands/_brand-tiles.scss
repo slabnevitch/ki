@@ -1,0 +1,103 @@
+/*--------------------brand-tiles----------------------*/
+.brands-tiles{
+	padding-bottom: 42px;
+
+	@include max-screen($md){
+		padding-bottom: 27px;
+	}
+	&__top{
+		    	text-align: right;
+		  padding-top: 10px;	
+		@include min-screen($md){
+			// height: 0;	
+			margin-top: 0;	
+		}
+		.link{
+				position: relative;
+				top: 	-25px;	
+			text-decoration: underline;
+			text-decoration-line: underline;
+			color: #A9A9A9;
+			opacity: 0.8;
+			font-size: 10px;
+			line-height: 12px;
+
+		    &:hover{
+		    	color: 	$text;
+		    }
+		    @include min-screen($md){
+				font-size: 14px;
+			    line-height: 17px;
+				top: -45px;	
+
+		    }
+		    
+		}
+	}
+	.categories-tiles__column{
+		@include col();
+		@include size-md(4);
+		word-wrap: normal;
+
+		@include max-screen($xss){
+			margin-left: 5px;
+			margin-right: 5px;
+			width: calc(100% / 3 - 10px);
+		}
+	}
+	.cards-more{
+		font-size: 10px;
+		line-height: 12px;
+		@include min-screen($md){
+			display: none;
+		}
+	}
+}
+
+.brands-tile{
+		.categories-tile__title{
+			color: #A9A9A9;
+
+			@include max-screen($xs){
+				font-size: 10px;
+				line-height: 12px;
+			}	
+			@include max-screen($xss){
+				// position: absolute;
+				// left: 5px;
+				// bottom: 6px;
+			}
+		}
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				.categories-tile__title{
+					color: #fff;
+				}
+			}
+		}
+}
+.brands-tile.categories-tile--sm{
+
+		@include max-screen($xss){
+			padding: 6px 5px;
+			flex: 0 0 84px;
+		}
+
+
+		.categories-tile__img{
+			bottom: 0;
+			@include max-screen($sm){
+				width: 60px;
+				height: 60px;
+				top: 5px;
+				right: 5px;
+				bottom: auto;
+			}
+
+			@include max-screen($xss){
+				width: 36px;
+				height: 36px;
+			}
+		}
+}
+/*--------------------END brand-tiles----------------------*/ 

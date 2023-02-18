@@ -1,0 +1,18 @@
+- var tiles = ['Станки', 'Автотовары', 'Расходники<br>и оснастка', 'Электростанции', 'Запчасти', 'Стабилизаторы<br>напряжения', 'Измерительный<br>инструмент', 'Все категории'];
+section.brands-tiles
+	.wrapper.brands-tiles__top
+		a(href="#").link Читать о бренде
+	
+	.wrapper-smart
+		.wrapper-flex
+			each item, i in tiles
+				.categories-tiles__column
+					a(href="#").categories-tile.categories-tile--sm.brands-tile
+						.categories-tile__title!= item
+						if i < 7
+							.categories-tile__img
+								img(src="img/page-brands/tiles/"+(i+1)+".svg" alt="alt")
+
+		.wrapper.cards-more
+				a(href="#").cards-more__link Показать еще +8
+				
