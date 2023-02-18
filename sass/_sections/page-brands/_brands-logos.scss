@@ -1,0 +1,62 @@
+/*--------------------brands-logos----------------------*/
+.brands-logos{
+	margin-bottom: 44px;
+	@include max-screen($xs){
+			margin-bottom: 24px;	
+	}
+}
+.brands-logo{
+	@include col();
+	@include size(2);
+	@include size-md(4);
+	display: block;	
+	padding-bottom: 12.553%;
+	margin-bottom: 16px;	
+	position: relative;
+	background: #FFFFFF;
+	border: 2px solid #F1F1F1;
+	border-radius: 4px;
+	transition: border-color 0.5s;
+
+	@include max-screen($sm){
+		padding-bottom: 29.75%;
+	}
+	@include max-screen($xss){
+			margin-left: 5px;
+			margin-right: 5px;
+			width: 	calc(100% / 3 - 10px);	
+			padding-bottom: 28.4%;	
+	}
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+    			border-color: #003D9E;
+			}
+		}	
+
+	img{
+		@include absolute-center;
+		max-width: 	calc(100% - 14px);
+		max-height: calc(100% - 14px);
+	}
+
+
+}
+.brands-logo__title{
+	position: absolute;	
+	bottom: 18px;
+	left: 19px;	
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 16px;
+	color: 	$text-l;
+
+	@include max-screen($xss){
+		left: 10px;
+		bottom: 12px;
+		padding-right: 12px;			
+		font-size: 10px;
+		line-height: 12px;
+	}	
+}
+/*--------------------END brands-logos----------------------*/ 

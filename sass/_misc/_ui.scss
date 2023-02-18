@@ -569,6 +569,7 @@ h1, h2, h3, h4, h5, h6{
 /*---------------------breadcrumbs---------------------*/
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   text-transform: uppercase;
   padding-bottom: 19px;
 }

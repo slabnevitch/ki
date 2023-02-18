@@ -1,0 +1,10 @@
+section.brands-logos
+	.wrapper-smart
+		.wrapper-flex
+			- for (var i=0; i < 18; i++)
+				if i < 17
+					a(href="#").brands-logo
+						img(src="img/brands/"+(i+1)+".svg" alt="alt")
+				else
+					a(href="#").brands-logo
+						.brands-logo__title Все бренды
