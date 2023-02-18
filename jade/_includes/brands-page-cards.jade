@@ -1,0 +1,254 @@
+.catalog-block
+	.wrapper
+		h2.sect-title Гайковерты 6
+	.wrapper-smart
+		- cards = [{billet: 'Новинка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Аккумуляторный гайковерт Makita TD 110 DZ', aval: '8 магазинах', iconActive: '0'}, {billet: 'скидка', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000', aval: '4 магазинах', iconActive: false}, {billet: '', price: '7 850 ₽', sale: '', sbers: '79', tilte: 'Гайковерт Messer IW-500 05-40-500', aval: '2 магазинах', iconActive: '0'}, {billet: '', price: '12 590 ₽', sale: '', sbers: '129', tilte: 'Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140', aval: '17 магазинах', iconActive: false}];
+		.wrapper-flex.product-cards
+			each item, i in cards
+				.product-card
+					.product-card__img-wrap
+						if item.billet != ''
+							div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : "billet billet--markdown")
+								.billet__value= item.billet
+								
+								if item.billet == "акция" || item.billet == "скидка"
+									+icon('percents')
+								if item.billet == "уценка"
+									+icon('attention')
+								if item.billet == "Новинка"
+									+icon('flame')
+						
+						a(href="#").product-card__border
+							span.product-card__img
+								img(src="img/page-brands/gaik/"+(i+1)+".jpg" alt="alt")
+					
+					
+					.product-card__price
+						.product-card__actions
+							if item.iconActive === '0'
+								a(href="#").product-card__action.active
+									+icon('favourites')
+								a(href="#").product-card__action
+									+icon('compare')
+							else if item.iconActive === '1'
+								a(href="#").product-card__action
+									+icon('favourites')
+								a(href="#").product-card__action.active
+									+icon('compare')
+							else if item.iconActive == false
+								a(href="#").product-card__action
+									+icon('favourites')
+								a(href="#").product-card__action
+									+icon('compare')
+
+						a(href="#").product-price= item.price
+							if item.sale != ''
+								.product-price-sale= item.sale
+						a(href="#").product-bonus
+							.product-bonus__val= item.sbers
+							+icon('bonus')
+					
+					a(href="#").product-card__name= item.tilte
+					
+					a(href="#").product-card__description 
+						.product-card__description-row Напряжение акк.: 12 В
+						.product-card__description-row Крутящий момент: 30 Н·м
+						.product-card__description-row Емкость аккумулятора: 2 А·ч
+						.product-card__description-row Тип аккумулятора Li-Ion
+						.product-card__description-row Кол-во аккумуляторов: 2 шт.
+						.product-card__description-row Вес 1.2 кг
+
+					.product-card__bottom
+						.product-card__rating-wrap
+							.product-card__rating
+								+crystalRating('4,5')
+						if item.billet != ''
+							a(href="#" class=item.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy") Купить
+						else
+							a(href="#").btn.btn-sm.product-card__buy Купить
+
+						.product-card__info.info-product-card
+							.info-product-card__row Артикул: 002266
+							.info-product-card__row
+								.info-product-card__aval
+									.info-product-card__avalkey В наличии
+									a(href="#").info-product-card__avalvalue
+										span.info-product-card__in= "В "
+										| #{item.aval}
+							.info-product-card__row
+								a(href="#").info-product-card__oneclick Купить в 1 клик
+.catalog-block
+	.wrapper
+		h2.sect-title Шуруповерты 8
+	.wrapper-smart
+		- cards = [{billet: 'Новинка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'скидка', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}, {billet: '', price: '7 850 ₽', sale: '', sbers: '79', tilte: 'Шуруповерт Elitech ДШ 0110 РЭ', aval: '2 магазинах', iconActive: '0'}, {billet: '', price: '12 590 ₽', sale: '', sbers: '129', tilte: 'Аккумуляторная дрель-шуруповерт Ресанта ДА-14-2Л 75/14/3', aval: '6 магазинах', iconActive: false}, {billet: '', price: '22 899 ₽', sale: '', sbers: '229', tilte: 'Аккумуляторная дрель-шуруповерт WorkMaster АШ-12М', aval: '6 магазинах', iconActive: false}, {billet: '', price: '9 990 ₽', sale: '', sbers: '100', tilte: 'Аккумуляторная дрель-шуруповерт Metabo PowerMaxx BS (кейс)', aval: '6 магазинах', iconActive: false}, {billet: 'уценка', price: '10 990 ₽', sale: '11 990 ₽', sbers: '120', tilte: 'Аккумуляторная дрель-шуруповерт DeWalt DCD996NT (без акб и зу)', aval: '6 магазинах', iconActive: false}, {billet: 'уценка', price: '20 729 ₽', sale: '24 940 ₽', sbers: '249', tilte: 'Аккумуляторная дрель-шуруповерт Bosch GSR 12 V-15 FC 06019F6000', aval: '6 магазинах', iconActive: '0'}];
+		.wrapper-flex.product-cards
+			each item, i in cards
+				.product-card
+					.product-card__img-wrap
+						if item.billet != ''
+							div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : "billet billet--markdown")
+								.billet__value= item.billet
+								
+								if item.billet == "акция" || item.billet == "скидка"
+									+icon('percents')
+								if item.billet == "уценка"
+									+icon('attention')
+								if item.billet == "Новинка"
+									+icon('flame')
+						
+						a(href="#").product-card__border
+							span.product-card__img
+								img(src="img/page-brands/shur/"+(i+1)+".jpg" alt="alt")
+					
+					
+					.product-card__price
+						.product-card__actions
+							if item.iconActive === '0'
+								a(href="#").product-card__action.active
+									+icon('favourites')
+								a(href="#").product-card__action
+									+icon('compare')
+							else if item.iconActive === '1'
+								a(href="#").product-card__action
+									+icon('favourites')
+								a(href="#").product-card__action.active
+									+icon('compare')
+							else if item.iconActive == false
+								a(href="#").product-card__action
+									+icon('favourites')
+								a(href="#").product-card__action
+									+icon('compare')
+
+						a(href="#").product-price= item.price
+							if item.sale != ''
+								.product-price-sale= item.sale
+						a(href="#").product-bonus
+							.product-bonus__val= item.sbers
+							+icon('bonus')
+					
+					a(href="#").product-card__name= item.tilte
+					
+					a(href="#").product-card__description 
+						.product-card__description-row Напряжение акк.: 12 В
+						.product-card__description-row Крутящий момент: 30 Н·м
+						.product-card__description-row Емкость аккумулятора: 2 А·ч
+						.product-card__description-row Тип аккумулятора Li-Ion
+						.product-card__description-row Кол-во аккумуляторов: 2 шт.
+						.product-card__description-row Вес 1.2 кг
+
+					.product-card__bottom
+						.product-card__rating-wrap
+							.product-card__rating
+								+crystalRating('4,5')
+						if item.billet != ''
+							a(href="#" class=item.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy") Купить
+						else
+							a(href="#").btn.btn-sm.product-card__buy Купить
+
+						.product-card__info.info-product-card
+							.info-product-card__row Артикул: 002266
+							.info-product-card__row
+								.info-product-card__aval
+									.info-product-card__avalkey В наличии
+									a(href="#").info-product-card__avalvalue
+										span.info-product-card__in= "В "
+										| #{item.aval}
+							.info-product-card__row
+								a(href="#").info-product-card__oneclick Купить в 1 клик
+
+.catalog-block
+	.wrapper
+		h2.sect-title Перфораторы 6
+	.wrapper-smart
+		- cards = [{billet: 'Новинка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'скидка', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}, {billet: '', price: '7 850 ₽', sale: '', sbers: '79', tilte: 'Шуруповерт Elitech ДШ 0110 РЭ', aval: '2 магазинах', iconActive: '0'}, {billet: '', price: '12 590 ₽', sale: '', sbers: '129', tilte: 'Аккумуляторная дрель-шуруповерт Ресанта ДА-14-2Л 75/14/3', aval: '6 магазинах', iconActive: false}, {billet: '', price: '22 899 ₽', sale: '', sbers: '229', tilte: 'Аккумуляторная дрель-шуруповерт WorkMaster АШ-12М', aval: '6 магазинах', iconActive: false}, {billet: '', price: '9 990 ₽', sale: '', sbers: '100', tilte: 'Аккумуляторная дрель-шуруповерт Metabo PowerMaxx BS (кейс)', aval: '6 магазинах', iconActive: false}, {billet: '', price: '10 990 ₽', sale: '', sbers: '', tilte: 'Перфоратор Felisatti П-24/700ЭР 160.5.0.00', aval: false, analog: true, iconActive: false}, {billet: '', price: '20 729 ₽', sale: '', sbers: '', tilte: 'Перфоратор Felisatti П-24/700ЭР 160.5.0.00', aval: false, analog: true, iconActive: false}];
+		.wrapper-flex.product-cards
+			each item, i in cards
+				div(class=item.analog ? "product-card product-card--analog" : "product-card")
+					.product-card__img-wrap
+						if item.billet != ''
+							div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : item.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
+								.billet__value= item.billet
+
+								if item.billet == "акция" || item.billet == "скидка"
+									+icon('percents')
+								if item.billet == "уценка"
+									+icon('attention')
+								if item.billet == "Новинка"
+									+icon('flame')
+						
+						a(href="#").product-card__border
+							span.product-card__img
+								img(src="img/page-brands/perf/"+(i+1)+".jpg" alt="alt")
+					
+					
+					.product-card__price
+						.product-card__actions
+							if item.iconActive === '0'
+								a(href="#").product-card__action.active
+									+icon('favourites')
+								a(href="#").product-card__action
+									+icon('compare')
+							if item.iconActive === '1'
+								a(href="#").product-card__action
+									+icon('favourites')
+								a(href="#").product-card__action.active
+									+icon('compare')
+							if item.iconActive === false
+								a(href="#").product-card__action
+									+icon('favourites')
+								a(href="#").product-card__action
+									+icon('compare')
+
+						a(href="#").product-price= item.price
+							if item.sale != ''
+								.product-price-sale= item.sale
+						if item.sbers != ""
+							a(href="#").product-bonus
+								.product-bonus__val= item.sbers
+								+icon('bonus')
+					
+					a(href="#").product-card__name= item.tilte
+					
+					a(href="#").product-card__description 
+						.product-card__description-row Напряжение акк.: 12 В
+						.product-card__description-row Крутящий момент: 30 Н·м
+						.product-card__description-row Емкость аккумулятора: 2 А·ч
+						.product-card__description-row Тип аккумулятора Li-Ion
+						.product-card__description-row Кол-во аккумуляторов: 2 шт.
+						.product-card__description-row Вес 1.2 кг
+
+					.product-card__bottom
+						.product-card__rating-wrap
+							.product-card__rating
+								+crystalRating('4,5')
+						if item.billet != ''
+							a(href="#" class=item.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy") Купить
+						else if item.order
+							a(href="#").btn.btn-sm.btn-blue.product-card__buy заказать
+						
+						else if item.analog
+							a(href="#").btn.btn-sm.btn-gray.product-card__buy аналог
+
+						else
+							a(href="#").btn.btn-sm.product-card__buy Купить
+
+						.product-card__info.info-product-card
+							if item.order
+								.info-product-card__row
+									.info-product-card__missing #[span Товар] временно отсутствует
+								.info-product-card__row
+									a(href="#").info-product-card__oneclick Купить в 1 клик
+							
+							else if item.analog
+								.info-product-card__row Нет в наличии, товар снят с производства 
+							
+							else
+								.info-product-card__row
+										.info-product-card__aval
+											.info-product-card__avalkey В наличии
+											a(href="#").info-product-card__avalvalue
+												span.info-product-card__in= "В "
+												| #{item.aval}
+								.info-product-card__row
+									a(href="#").info-product-card__oneclick Купить в 1 клик

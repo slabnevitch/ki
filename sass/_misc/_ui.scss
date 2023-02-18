@@ -32,10 +32,17 @@ h1, h2, h3, h4, h5, h6{
     font-size: 16px;
   }
 
-  .catalog-chapter &{
+  .catalog-block &{
     font-size: 18px;
     line-height: 20px;
+
+    @include max-screen($sm){
+      font-size: 14px;
+    }
   }
+}
+.catalog-block{
+    margin-top: 42px;
 }
 .link{
   font-size: 12px;
@@ -442,6 +449,11 @@ h1, h2, h3, h4, h5, h6{
       font-size: 18.51px;
     }  
   }
+}
+.pagination-wrapper{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 31px;
 }
 .pagination{
   @include pagination;

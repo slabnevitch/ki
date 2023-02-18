@@ -27,6 +27,12 @@
 
 	}
 
+	&--analog{
+		.product-price{
+			color: #A9A9A9;
+		}
+	}
+
 	.product-cards &{
 		@include col();
 		@include size(3);
@@ -442,7 +448,7 @@
 .product-card__actions {
 	position: absolute;
 	top: 11px;
-	right: 9px;
+	right: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
