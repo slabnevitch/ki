@@ -4225,6 +4225,11 @@ h1, h2, h3, h4, h5, h6 {
 .catalog-block {
   margin-top: 42px;
 }
+@media only screen and (max-width: 576px) {
+  .catalog-block {
+    margin-top: 28px;
+  }
+}
 
 .link {
   font-size: 12px;
@@ -9241,11 +9246,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .brands-tiles__top {
   text-align: right;
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  height: 0;
 }
 @media only screen and (min-width: 959.98px) {
   .brands-tiles__top {
-    margin-top: 0;
+    padding-top: 0;
   }
 }
 .brands-tiles__top .link {

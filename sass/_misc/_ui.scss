@@ -39,10 +39,14 @@ h1, h2, h3, h4, h5, h6{
     @include max-screen($sm){
       font-size: 14px;
     }
+
   }
 }
 .catalog-block{
     margin-top: 42px;
+    @include max-screen($xs){
+      margin-top: 28px;
+    }
 }
 .link{
   font-size: 12px;
