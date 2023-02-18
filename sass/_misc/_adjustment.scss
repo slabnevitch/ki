@@ -297,6 +297,13 @@ padding-bottom: 52.25%;
 		visibility: visible;
 		opacity: 1;
 	}
+	.popup-action-visible &,
+	.popup-review-visible &{
+		@include max-screen($md){
+			visibility: visible;
+			opacity: 1;
+		}
+	}
 }
 .icon{
 	.gray &{

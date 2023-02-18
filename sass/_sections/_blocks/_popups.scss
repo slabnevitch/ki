@@ -13,9 +13,13 @@
 	z-index: 12;
 	display: none;
 
+	@include max-screen($md){
+		bottom: 0;
+		right: 0;
+		max-width: none;
+		top: auto;
+	}
 	@include max-screen($xsss){
-		right: 0px;
-		top: 0px;
 	}
 }
 .popup-action {

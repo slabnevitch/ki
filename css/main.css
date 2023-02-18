@@ -3889,6 +3889,12 @@ input.range__input {
   visibility: visible;
   opacity: 1;
 }
+@media only screen and (max-width: 959.98px) {
+  .popup-action-visible .body-cover, .popup-review-visible .body-cover {
+    visibility: visible;
+    opacity: 1;
+  }
+}
 
 .gray .icon {
   color: rgba(0, 0, 0, 0.6);
@@ -5985,13 +5991,14 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 12;
   display: none;
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 959.98px) {
   .popup {
-    right: 0px;
-    top: 0px;
+    bottom: 0;
+    right: 0;
+    max-width: none;
+    top: auto;
   }
 }
-
 .popup-action-visible .popup-action {
   display: block;
 }
