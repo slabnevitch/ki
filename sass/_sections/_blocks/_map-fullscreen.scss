@@ -9,6 +9,74 @@
 	transition: all .5s;
 	// transform: translateX(110%);
 }
+.map-marker{
+	position: absolute;
+	height: 24px;
+	min-width: 53px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $accent;
+	color: #fff;
+	border-radius: 23px;
+	font-weight: 700;
+	font-size: 10px;
+	line-height: 12px;
+	z-index: 2;
+
+	
+
+	&:after{
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -5.5px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 11px;
+		height: 11px;
+		background-color: inherit;
+		transform: rotate(-45deg);
+	}
+
+	&:first-child{
+		left: prc(182,768);
+		top: prc(152,660);
+	}
+	&:last-child{
+		
+	}
+	&:nth-child(2){
+		left: prc(353,768);
+		top: prc(255,660);
+	}
+	&:nth-child(3){
+		left: prc(327,768);
+		top: prc(455,660);
+	}
+	&:nth-child(4){
+		left: prc(532,768);
+		top: prc(116,660);
+	}
+	&:nth-child(5){
+		left: prc(639,768);
+		top: prc(323,660);
+	}
+
+	&--lg{
+		min-width: 54px;
+		height: 54px;
+
+		background-color: $blue;
+		border-radius: 50%;
+
+		&:after{
+			display: none;
+		}
+	}
+
+}
 .map-fullscreen__map{
 	position: absolute;
 	left: 0;

@@ -358,9 +358,13 @@ padding-bottom: 52.25%;
 	max-width: 224px;
 }
 .ui-elems{
+
 	@include 	col();
 	flex: 1 1 calc(100% - 224px - 32px);
-
+		.side-modal{
+			position: relative;
+			height: auto;
+		}
 		.billet{
 			margin-bottom: 10px;
 		}
