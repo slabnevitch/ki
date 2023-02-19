@@ -90,3 +90,57 @@
 			button(type="submit").btn.btn-lg.btn-order подтвердить телефон
 
 			.form__policy *При входе и регистрации вы соглашаетесь с #[a(href="#") Политикой обработки персональных данных]
+
+.side-modal.address-side-modal#modal-address
+	button(type="button").side-modal__close.button-close
+		+icon('ctlg-close')
+	.side-modal__inner
+		.side-modal__title В наличии
+			br
+			| в 6 магазинах
+		form(action="#" class="form").address-side-modal__form
+			select(name="locations" data-searchdisable="true" class=".address-side-modal__select fstdropdown-select")
+				- for (var i=0; i < 5; i++)
+					option(value=i+1) Краснодар
+
+		.address-list
+			- var address = [{loc: 'ул. Северная, 320', aval: 18}, {loc: 'ул. Ростовское шоссе, 14/6', aval: 11}, {loc: 'ул. Ростовское шоссе, 30/3', aval: 8}]
+			.address-list__items
+				each item, i in address
+					.address-list__item
+						.address-list__img._fit
+							.billet.billet--new= item.aval + " шт"
+							img._fit-img(src="img/addresses/"+(i+1)+".jpg" alt="alt")
+						.address-list__content
+							.address-list__loc= item.loc
+							.address-list__phones
+								a(href="tel:88612128253").address-list__phone 8 (861) 212-8-253
+								a(href="tel:89885942025").address-list__phone 8 (988) 594-20-25
+							.address-list__shedule Пн-Вс: 8.00-20.00
+
+							a(href="#").btn.btn-sm.btn-loc Как добраться
+
+.side-modal.address-side-modal.address-side-modal--single#modal-address
+	button(type="button").side-modal__back.button-back
+		+icon('arrow-left')
+	button(type="button").side-modal__close.button-close
+		+icon('ctlg-close')
+	.side-modal__inner
+		.side-modal__title Магазин 
+			br
+			| ул. Северная, 320
+	
+		.address-list
+			.address-list__items
+				.address-list__item
+					.address-list__img._fit
+						.billet.billet--new 18 шт
+						img._fit-img(src="img/addresses/single.jpg" alt="alt")
+					.address-list__content
+						.address-list__loc ул. Западный Обход, 34
+						.address-list__phones
+							a(href="tel:88612128253").address-list__phone 8 (861) 212-8-253
+							a(href="tel:89885942025").address-list__phone 8 (988) 594-20-25
+						.address-list__shedule Пн-Вс: 8.00-20.00
+
+						a(href="#").btn.btn-sm.btn-loc Как добраться

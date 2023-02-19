@@ -1,0 +1,19 @@
+/*--------------------map-fullscreen----------------------*/
+.map-fullscreen{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 12;
+	transition: all .5s;
+	// transform: translateX(110%);
+}
+.map-fullscreen__map{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+/*--------------------END map-fullscreen----------------------*/ 
