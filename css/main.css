@@ -3898,6 +3898,9 @@ input.range__input {
   visibility: visible;
   opacity: 1;
 }
+.side-modal-visible .body-cover {
+  z-index: 11;
+}
 @media only screen and (max-width: 959.98px) {
   .popup-action-visible .body-cover, .popup-review-visible .body-cover {
     visibility: visible;
@@ -5894,7 +5897,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(calc(-110% - 432px));
 }
 @media only screen and (min-width: 959.98px) {
-  .map-fullscreen {
+  .map-with-modal .map-fullscreen {
     width: calc(100% - 432px);
   }
 }
@@ -7330,7 +7333,6 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------side-modals----------------------*/
 .side-modal {
   width: 100%;
-  padding-bottom: 25px;
   padding-top: 23px;
   position: fixed;
   top: 0;
@@ -7344,15 +7346,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media only screen and (min-width: 959.98px) {
   .side-modal {
+    padding-bottom: 25px;
     padding-top: 76px;
     max-width: 432px;
+  }
+}
+@media only screen and (max-width: 959.98px) {
+  .side-modal.sale-modal .side-modal__title {
+    padding-right: 40px;
   }
 }
 .sale-modal-visible .side-modal.sale-modal {
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
-.sale-modal-availability-visible .side-modal.sale-modal--availability {
+@media only screen and (max-width: 959.98px) {
+  .side-modal.availability-modal .side-modal__title {
+    padding-right: 60px;
+  }
+}
+.availability-modal-visible .side-modal.availability-modal {
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
@@ -7362,8 +7375,12 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #C4C4C4;
 }
 .side-modal .form .btn-order {
-  margin-top: 14px;
   margin-bottom: 27px;
+}
+@media only screen and (max-width: 959.98px) {
+  .side-modal .form .btn-order {
+    margin-bottom: 22px;
+  }
 }
 .side-modal .form .form__note {
   font-size: 10px;
@@ -7376,6 +7393,11 @@ h1, h2, h3, h4, h5, h6 {
 .side-modal .form .form__custom-policy {
   margin-top: 42px;
   margin-bottom: 55px;
+}
+@media only screen and (max-width: 959.98px) {
+  .side-modal .form .form__custom-policy {
+    margin-bottom: 40px;
+  }
 }
 .side-modal .form .form__custom-chek {
   border-width: 2px;
@@ -7414,6 +7436,10 @@ h1, h2, h3, h4, h5, h6 {
 .side-modal .form__input {
   border-radius: 0;
 }
+.side-modal .side-modal__close,
+.side-modal .side-modal__back {
+  z-index: 2;
+}
 .side-modal .side-modal__close .icon,
 .side-modal .side-modal__back .icon {
   color: #A9A9A9;
@@ -7445,6 +7471,11 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 24px;
   left: calc((100% - 282px) / 2);
+}
+@media only screen and (min-width: 959.98px) {
+  .side-modal__back {
+    top: 35px;
+  }
 }
 
 .side-modal__inner {

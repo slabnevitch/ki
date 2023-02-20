@@ -9,9 +9,12 @@
 	transition: all .5s;
 	transform: translateX(calc(-110% - 432px));
 
-	@include min-screen($md){
-		width: calc(100% - 432px);
-		
+	.map-with-modal &{
+		@include min-screen($md){
+			width: calc(100% - 432px);
+			
+		}
+
 	}
 
 	.fullscreen-map-visible &{

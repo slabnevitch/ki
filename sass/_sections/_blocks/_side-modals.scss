@@ -1,7 +1,6 @@
 /*--------------------side-modals----------------------*/
 .side-modal {
 	width: 100%;
-	padding-bottom: 25px;
 	// padding-top: 30px;
 	padding-top: 23px;
 	position: fixed;
@@ -15,17 +14,30 @@
 	transform: translateX(105%);
 
 	@include min-screen($md){
+		padding-bottom: 25px;
 		padding-top: 76px;	
 		max-width: 432px;
 	}
 
 	&.sale-modal{
+		.side-modal__title{
+			@include max-screen($md){
+				padding-right: 40px;
+			}
+
+		}
 		.sale-modal-visible &{
 			transform: translateX(0);
 		}
 	}
-	&.sale-modal--availability{
-		.sale-modal-availability-visible &{
+	&.availability-modal{
+		.side-modal__title{
+			@include max-screen($md){
+				padding-right: 60px;
+			}
+
+		}
+		.availability-modal-visible &{
 			transform: translateX(0);
 		}
 	}
@@ -37,8 +49,12 @@
 	}
 	.form{
 		.btn-order{
-			margin-top: 14px;
+			// margin-top: 14px;
 			margin-bottom: 27px;
+
+			@include max-screen($md){
+				margin-bottom: 22px;
+			}
 		}
 		.form__note {
 			font-size: 10px;
@@ -52,7 +68,11 @@
 		}
 		.form__custom-policy{
 			margin-top: 42px;
-			margin-bottom: 55px;	
+			margin-bottom: 55px;
+
+			@include max-screen($md){
+				margin-bottom: 40px;
+			}	
 		}
 		.form__custom-chek{
 			border-width: 2px;
@@ -91,6 +111,7 @@
 	}
 	.side-modal__close,
 	.side-modal__back {
+		z-index: 2;
 		.icon{
 			color: #A9A9A9;
 		}
@@ -122,6 +143,10 @@
 	position: absolute;
 	top: 24px;
 	left: calc((100% - 282px)/2);
+
+	@include min-screen($md){
+		top: 35px;
+	}
 }
 
 .side-modal__inner {
