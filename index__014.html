@@ -3624,13 +3624,23 @@
       <div class="side-modal__inner">
         <div class="side-modal__title">В наличии <span>в 6 магазинах</span></div>
         <form action="#" class="form address-side-modal__form">
-          <select name="locations" data-searchdisable="true" class=".address-side-modal__select fstdropdown-select">
-            <option value="1">Краснодар</option>
-            <option value="2">Краснодар</option>
-            <option value="3">Краснодар</option>
-            <option value="4">Краснодар</option>
-            <option value="5">Краснодар</option>
-          </select>
+          <div class="address-side-modal__select"> 
+            <select name="locations" data-searchdisable="true" class="fstdropdown-select">
+              <option value="1">Краснодар</option>
+              <option value="2">Армавир</option>
+              <option value="3">Кропоткин</option>
+              <option value="4">Тихорецк</option>
+              <option value="5">Славянск-на-Кубани</option>
+              <option value="6">Тимашевск</option>
+              <option value="7">Белореченск</option>
+            </select>
+          </div>
+          <button type="button" id="full-map-open" class="side-modal__to-map to-map-side-modal">
+            <div class="to-map-side-moda__title">На карте</div>
+                <svg class="icon icon-loc ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#loc"></use>
+                </svg>
+          </button>
         </form>
         <div class="side-modal__content">
           <div class="address-list__items">

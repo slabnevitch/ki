@@ -199,9 +199,17 @@
 	.side-modal__inner
 		.side-modal__title В наличии #[span в 6 магазинах]
 		form(action="#" class="form").address-side-modal__form
-			select(name="locations" data-searchdisable="true" class=".address-side-modal__select fstdropdown-select")
-				- for (var i=0; i < 5; i++)
-					option(value=i+1) Краснодар
+			.address-side-modal__select 
+				select(name="locations" data-searchdisable="true" class="fstdropdown-select")
+					- var opts = ['Краснодар','Армавир','Кропоткин','Тихорецк','Славянск-на-Кубани','Тимашевск','Белореченск'];
+					each opt, i in opts
+						option(value=i+1)= opt
+
+			button(type="button")#full-map-open.side-modal__to-map.to-map-side-modal
+				.to-map-side-moda__title На карте
+				+icon('loc')
+
+
 
 		.side-modal__content
 			- var address = [{loc: 'ул. Северная, 320', aval: 18}, {loc: 'ул. Ростовское шоссе, 14/6', aval: 11}, {loc: 'ул. Ростовское шоссе, 30/3', aval: 8}]

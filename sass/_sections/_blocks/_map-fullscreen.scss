@@ -7,10 +7,53 @@
 	height: 100%;
 	z-index: 12;
 	transition: all .5s;
-	// transform: translateX(110%);
+	transform: translateX(calc(-110% - 432px));
+
 	@include min-screen($md){
 		width: calc(100% - 432px);
 		
+	}
+
+	.fullscreen-map-visible &{
+		transform: translateX(0);
+
+	}
+
+	&__select{
+		display: flex;
+		margin-top: 12px;
+		margin-left: 12px;
+		margin-right: 12px;
+		background-color: $gray-l;
+		z-index: 1;
+		position: relative;
+
+		.address-side-modal__form{
+			margin-bottom: 0;
+			flex: 1 1 auto;
+			max-width: none;
+		}
+		.address-side-modal__select{
+			max-width: none;
+			flex: 1 1 auto;
+		}
+
+		@include min-screen($md){
+			display: none;
+		}
+	}
+	&__back{
+		flex: 0 0 32px;
+		position: relative;
+		z-index: 1;
+		@include but-null;
+		cursor: pointer;
+		.icon{
+			@include absolute-center-old;
+			left: auto;
+			font-size: 13.37px;
+			color: #A9A9A9;
+		}
 	}
 }
 .map-fullscreen__close{
