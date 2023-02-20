@@ -7,10 +7,10 @@ block title
 
 block content
 	.page.page-main
-		include _includes/main-page-sections
-		
-	include _blocks/map
-	//- include _blocks/side-modals
+		.wrapper
+			+menu('breadcrumbs', ['главная',  'результат поиска'])
+		include _blocks/finded
+
 		
 block page-scripts
 	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

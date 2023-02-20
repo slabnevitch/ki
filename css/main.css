@@ -10065,6 +10065,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------END brands-nav----------------------*/
+/*--------------------finded----------------------*/
+.finded {
+  padding-top: 5px;
+  margin-bottom: 25px;
+}
+
+.finded__title {
+  margin-bottom: 17px;
+  font-size: 28px;
+  line-height: 20px;
+  font-family: "NavigoMedium", sans-serif;
+}
+
+/*--------------------END finded----------------------*/
 /*--------------------hits-tiles----------------------*/
 .hits-tiles {
   padding-bottom: 42px;
