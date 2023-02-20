@@ -293,7 +293,8 @@ padding-bottom: 52.25%;
 		
 	}
 
-	.covered &{
+	.covered &,
+	.side-modal-visible &{
 		visibility: visible;
 		opacity: 1;
 	}

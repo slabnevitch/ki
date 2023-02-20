@@ -33,45 +33,101 @@
 	
 	.side-modal__inner
 		.side-modal__title Следите за снижением цены на товар
+		.side-modal__content
+			.product-card.product-card--mini
+				.product-card__img-wrap
+					.billet.billet--action.billet--mini
+					a(href="#").product-card__border
+						span.product-card__img
+							img(src="img/product-card/prod-sm.jpg" alt="alt")
+				
+				
+				.product-card__chars
+					.product-card__price
+						a(href="#").product-card__price-block
+							.product-price 14 729 ₽
+							.product-price-sale 18 411₽
+						
+						a(href="#").product-bonus
+							.product-bonus__val 99
+							+icon('bonus')
+				
+					a(href="#").product-card__name Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
 
-		.product-card.product-card--mini
-			.product-card__img-wrap
-				.billet.billet--action.billet--mini
-				a(href="#").product-card__border
-					span.product-card__img
-						img(src="img/product-card/prod-sm.jpg" alt="alt")
-			
-			
-			.product-card__chars
-				.product-card__price
-					a(href="#").product-card__price-block
-						.product-price 14 729 ₽
-						.product-price-sale 18 411₽
-					
-					a(href="#").product-bonus
-						.product-bonus__val 99
-						+icon('bonus')
-			
-				a(href="#").product-card__name Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
+					.product-card__rating-wrap
+						.product-card__rating
+							+crystalRating('4,0')
 
 
-		.side-modal__text Оставьте свой адрес — как только цена на товар снизится, вы сразу об этом узнаете
+			.side-modal__text Оставьте свой адрес — как только цена на товар снизится, вы сразу об этом узнаете
 
-		form.form(action='#')
-			.form__row
-				.form__row-title.form__row-title--required E-mail
-				label.form__label
-					input.form__input(type='text' name='name')
-			.form__row
-				.form__custom-policy
-					label.form__custom
-						input.form__check(type='radio' name='payment' value='chekbox1' checked)
-						span.form__custom-chek
-						span.form__policy Узнавать о других скидках и акциях
+			form.form(action='#')
+				.form__row
+					.form__row-title.form__row-title--required E-mail
+					label.form__label
+						input.form__input(type='text' name='name')
+				.form__row
+					.form__custom-policy
+						label.form__custom
+							input.form__check(type='checkbox' name='actions' value='chekbox1' checked)
+							span.form__custom-chek
+								+icon('check')
+							span.form__policy Узнавать о других скидках и акциях
 
-			button(type="submit").btn.btn-lg.btn-order Отправить заявку
+				button(type="submit").btn.btn-lg.btn-order Отправить заявку
 
-			.form__note *При входе и регистрации вы соглашаетесь с #[a(href="#") Политикой обработки персональных данных]
+				.form__note *При входе и регистрации вы соглашаетесь с #[a(href="#") Политикой обработки персональных данных]
+
+.side-modal.sale-modal.sale-modal--availability#modal-sale-availability(data-visible-class="sale-modal-availability-visible")
+	button(type="button").side-modal__close.button-close
+		+icon('ctlg-close')
+	
+	.side-modal__inner
+		.side-modal__title Сообщить о наличии товара
+		.side-modal__content
+			.product-card.product-card--mini
+				.product-card__img-wrap
+					.billet.billet--action.billet--mini
+					a(href="#").product-card__border
+						span.product-card__img
+							img(src="img/product-card/prod-sm.jpg" alt="alt")
+				
+				
+				.product-card__chars
+					.product-card__price
+						a(href="#").product-card__price-block
+							.product-price 14 729 ₽
+							.product-price-sale 18 411₽
+						
+						a(href="#").product-bonus
+							.product-bonus__val 99
+							+icon('bonus')
+				
+					a(href="#").product-card__name Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
+
+					.product-card__rating-wrap
+						.product-card__rating
+							+crystalRating('4,0')
+
+
+			.side-modal__text Оставьте свой адрес — как только цена на товар снизится, вы сразу об этом узнаете
+
+			form.form(action='#')
+				.form__row
+					.form__row-title.form__row-title--required E-mail
+					label.form__label
+						input.form__input(type='text' name='name')
+				.form__row
+					.form__custom-policy
+						label.form__custom
+							input.form__check(type='checkbox' name='actions' value='chekbox1' checked)
+							span.form__custom-chek
+								+icon('check')
+							span.form__policy Узнавать о других скидках и акциях
+
+				button(type="submit").btn.btn-lg.btn-order Отправить заявку
+
+				.form__note *При входе и регистрации вы соглашаетесь с #[a(href="#") Политикой обработки персональных данных]
 
 .side-modal#modal-to-credit
 	button(type="button").side-modal__close.button-close
@@ -141,9 +197,7 @@
 	button(type="button").side-modal__close.button-close
 		+icon('ctlg-close')
 	.side-modal__inner
-		.side-modal__title В наличии
-			br
-			| в 6 магазинах
+		.side-modal__title В наличии #[span в 6 магазинах]
 		form(action="#" class="form").address-side-modal__form
 			select(name="locations" data-searchdisable="true" class=".address-side-modal__select fstdropdown-select")
 				- for (var i=0; i < 5; i++)
@@ -174,9 +228,7 @@
 	button(type="button").side-modal__close.button-close
 		+icon('ctlg-close')
 	.side-modal__inner
-		.side-modal__title Магазин
-			br
-			| ул. Северная, 320
+		.side-modal__title Магазин #[span ул. Северная, 320]
 	
 		.side-modal__content
 			.address-list

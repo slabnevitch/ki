@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body class="sale-modal-visible">
+  <body class="side-modal-visible sale-modal-visible">
     <main class="main">
       <header class="header">
         <div class="header__top">
@@ -2972,6 +2972,11 @@
           </section>
         </div>
         <div class="map-fullscreen">
+          <button type="button" class="map-fullscreen__close button-close">
+                <svg class="icon icon-ctlg-close ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+                </svg>
+          </button>
           <div class="map-marker">11 шт</div>
           <div class="map-marker">48 шт</div>
           <div class="map-marker">103 шт</div>
@@ -3308,38 +3313,124 @@
       </button>
       <div class="side-modal__inner">
         <div class="side-modal__title">Следите за снижением цены на товар</div>
-        <div class="product-card product-card--mini">
-          <div class="product-card__img-wrap">
-            <div class="billet billet--action billet--mini"></div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
-          </div>
-          <div class="product-card__chars">
-            <div class="product-card__price"><a href="#" class="product-card__price-block">
-                <div class="product-price">14 729 ₽</div>
-                <div class="product-price-sale">18 411₽</div></a><a href="#" class="product-bonus">
-                <div class="product-bonus__val">99</div>
-                    <svg class="icon icon-bonus ">
-                      <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
-                    </svg></a></div><a href="#" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</a>
-          </div>
-        </div>
-        <div class="side-modal__text">Оставьте свой адрес — как только цена на товар снизится, вы сразу об этом узнаете</div>
-        <form action="#" class="form">
-          <div class="form__row">
-            <div class="form__row-title form__row-title--required">E-mail</div>
-            <label class="form__label">
-              <input type="text" name="name" class="form__input">
-            </label>
-          </div>
-          <div class="form__row">
-            <div class="form__custom-policy">
-              <label class="form__custom">
-                <input type="radio" name="payment" value="chekbox1" checked class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Узнавать о других скидках и акциях</span>
-              </label>
+        <div class="side-modal__content">
+          <div class="product-card product-card--mini">
+            <div class="product-card__img-wrap">
+              <div class="billet billet--action billet--mini"></div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
+            </div>
+            <div class="product-card__chars">
+              <div class="product-card__price"><a href="#" class="product-card__price-block">
+                  <div class="product-price">14 729 ₽</div>
+                  <div class="product-price-sale">18 411₽</div></a><a href="#" class="product-bonus">
+                  <div class="product-bonus__val">99</div>
+                      <svg class="icon icon-bonus ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
+                      </svg></a></div><a href="#" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</a>
+              <div class="product-card__rating-wrap">
+                <div class="product-card__rating">
+                      <div class="crystal-rating">
+                        <div class="crystal-rating__body">
+                          <div class="crystal-rating__active"></div>
+                          <div class="crystal-rating__items">
+                            <input value="1" type="radio" name="crystal">
+                            <input value="2" type="radio" name="crystal">
+                            <input value="3" type="radio" name="crystal">
+                            <input value="4" type="radio" name="crystal">
+                            <input value="5" type="radio" name="crystal">
+                          </div>
+                        </div>
+                        <div class="crystal-rating__value">4,0</div>
+                      </div>
+                </div>
+              </div>
             </div>
           </div>
-          <button type="submit" class="btn btn-lg btn-order">Отправить заявку</button>
-          <div class="form__note">*При входе и регистрации вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
-        </form>
+          <div class="side-modal__text">Оставьте свой адрес — как только цена на товар снизится, вы сразу об этом узнаете</div>
+          <form action="#" class="form">
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">E-mail</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__custom-policy">
+                <label class="form__custom">
+                  <input type="checkbox" name="actions" value="chekbox1" checked class="form__check"><span class="form__custom-chek">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                        </svg></span><span class="form__policy">Узнавать о других скидках и акциях</span>
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-lg btn-order">Отправить заявку</button>
+            <div class="form__note">*При входе и регистрации вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="modal-sale-availability" data-visible-class="sale-modal-availability-visible" class="side-modal sale-modal sale-modal--availability">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Сообщить о наличии товара</div>
+        <div class="side-modal__content">
+          <div class="product-card product-card--mini">
+            <div class="product-card__img-wrap">
+              <div class="billet billet--action billet--mini"></div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
+            </div>
+            <div class="product-card__chars">
+              <div class="product-card__price"><a href="#" class="product-card__price-block">
+                  <div class="product-price">14 729 ₽</div>
+                  <div class="product-price-sale">18 411₽</div></a><a href="#" class="product-bonus">
+                  <div class="product-bonus__val">99</div>
+                      <svg class="icon icon-bonus ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
+                      </svg></a></div><a href="#" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</a>
+              <div class="product-card__rating-wrap">
+                <div class="product-card__rating">
+                      <div class="crystal-rating">
+                        <div class="crystal-rating__body">
+                          <div class="crystal-rating__active"></div>
+                          <div class="crystal-rating__items">
+                            <input value="1" type="radio" name="crystal">
+                            <input value="2" type="radio" name="crystal">
+                            <input value="3" type="radio" name="crystal">
+                            <input value="4" type="radio" name="crystal">
+                            <input value="5" type="radio" name="crystal">
+                          </div>
+                        </div>
+                        <div class="crystal-rating__value">4,0</div>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="side-modal__text">Оставьте свой адрес — как только цена на товар снизится, вы сразу об этом узнаете</div>
+          <form action="#" class="form">
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">E-mail</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__custom-policy">
+                <label class="form__custom">
+                  <input type="checkbox" name="actions" value="chekbox1" checked class="form__check"><span class="form__custom-chek">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                        </svg></span><span class="form__policy">Узнавать о других скидках и акциях</span>
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-lg btn-order">Отправить заявку</button>
+            <div class="form__note">*При входе и регистрации вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+          </form>
+        </div>
       </div>
     </div>
     <div id="modal-to-credit" class="side-modal">
@@ -3434,7 +3525,7 @@
             </svg>
       </button>
       <div class="side-modal__inner">
-        <div class="side-modal__title">В наличии<br>в 6 магазинах</div>
+        <div class="side-modal__title">В наличии <span>в 6 магазинах</span></div>
         <form action="#" class="form address-side-modal__form">
           <select name="locations" data-searchdisable="true" class=".address-side-modal__select fstdropdown-select">
             <option value="1">Краснодар</option>
@@ -3501,7 +3592,7 @@
             </svg>
       </button>
       <div class="side-modal__inner">
-        <div class="side-modal__title">Магазин<br>ул. Северная, 320</div>
+        <div class="side-modal__title">Магазин <span>ул. Северная, 320</span></div>
         <div class="side-modal__content">
           <div class="address-list">
             <div class="address-list__items">

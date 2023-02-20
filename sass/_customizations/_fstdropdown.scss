@@ -1,0 +1,72 @@
+	
+.fstdiv{
+	min-height: 24px;	
+}
+.fstdropdown{
+	border: none;
+
+}
+.fstdropdown > .fstselected{
+	// height: 24px;
+	padding: 0;
+	padding-top: 3px;
+	box-shadow:none;
+	font-size: 22px;
+	line-height: calc(20/22);
+	font-family: $navm;
+	color: $text;
+
+	@include max-screen($md){
+		font-size: 14px;
+		padding-top: 6px;	
+	}
+}
+.fstdropdown > .fstselected::after {
+	border: none;
+	width: 11px;
+	height: 7px;
+	background-image: url(../img/icons-svg/chev-down.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: contain;
+	opacity: 0.4;
+}
+.fstdropdown > .fstlist{
+	width: 100%;
+	padding: 11px 0;
+	top: calc(100% + 5px);
+	max-height: 262px;
+	font-size: 14px;
+	line-height: 16px;
+	color: $text;
+
+	border: 1px solid #E4E4E4;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+
+}
+.fstlist > div{
+	padding: 9px 13px 9px 20px;
+	color: $text;
+	border-bottom: none;
+}
+.fstlist > div.selected{
+	background-color: transparent;
+	position: relative;
+
+	&:after{
+		content: '';
+		width: 8px;
+		height: 8px;
+		display: block;
+		position: absolute;
+		background-color: #13B3EB;
+		border-radius: 50%;
+		top: 50%;
+		right: 13px;
+		transform: translateY(-50%);
+	}
+}
+.fstlist > div:hover{
+	background-color: $gray-l;
+	color: $text;
+}

@@ -30,6 +30,7 @@ They might well be outsourced to an external stylesheet of course.
 	.svg-catalog-mob-dims { width: 25px; height: 25px; }
 	.svg-chat-dims { width: 14px; height: 14px; }
 	.svg-chats-dims { width: 21px; height: 21px; }
+	.svg-check-dims { width: 20px; height: 20px; }
 	.svg-chev-down-dims { width: 6px; height: 4px; }
 	.svg-chev-left-dims { width: 9px; height: 14px; }
 	.svg-chev-right-dims { width: 9px; height: 14px; }
@@ -92,6 +93,7 @@ for further details on how to create this embeddable sprite variant.
 		<symbol viewBox="0 0 25 25" id="catalog-mob" xmlns="http://www.w3.org/2000/svg"><g opacity=".6"><path d="M19.5 20h-14a.5.5 0 010-1h14a.5.5 0 010 1z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 19.15a.35.35 0 100 .7h14a.35.35 0 100-.7h-14zm-.65.35a.65.65 0 01.65-.65h14a.65.65 0 110 1.3h-14a.65.65 0 01-.65-.65z"/><path d="M19.5 15h-14a.5.5 0 010-1h14a.5.5 0 010 1z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 14.15a.35.35 0 100 .7h14a.35.35 0 100-.7h-14zm-.65.35a.65.65 0 01.65-.65h14a.65.65 0 110 1.3h-14a.65.65 0 01-.65-.65z"/><path d="M19.5 10h-14a.5.5 0 010-1h14a.5.5 0 010 1z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 9.15a.35.35 0 100 .7h14a.35.35 0 100-.7h-14zm-.65.35a.65.65 0 01.65-.65h14a.65.65 0 110 1.3h-14a.65.65 0 01-.65-.65z"/><path d="M19.5 5h-14a.5.5 0 010-1h14a.5.5 0 010 1z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 4.15a.35.35 0 100 .7h14a.35.35 0 100-.7h-14zm-.65.35a.65.65 0 01.65-.65h14a.65.65 0 110 1.3h-14a.65.65 0 01-.65-.65z"/></g></symbol>
 		<symbol viewBox="0 0 14 14" id="chat" xmlns="http://www.w3.org/2000/svg"><path d="M7 .333A6.667 6.667 0 00.333 7a6.593 6.593 0 001.507 4.22L.507 12.553a.667.667 0 00-.14.727.666.666 0 00.633.387h6A6.667 6.667 0 007 .333zm0 12H2.607l.62-.62a.667.667 0 000-.94A5.333 5.333 0 117 12.333z"/></symbol>
 		<symbol viewBox="0 0 21 21" id="chats" xmlns="http://www.w3.org/2000/svg"><path d="M19.61 18.19a7 7 0 00-2.74-10.57 8 8 0 10-14.19 6.29l-1.39 1.38a1 1 0 00-.21 1.09A1 1 0 002 17h5.69A7 7 0 0014 21h6a1 1 0 00.92-.62 1 1 0 00-.21-1.09l-1.1-1.1zM7 14c.001.335.028.67.08 1H4.41l.35-.34a1 1 0 000-1.42A5.93 5.93 0 013 9a6 6 0 016-6 5.94 5.94 0 015.65 4H14a7 7 0 00-7 7zm10.54 5l.05.05H14a5 5 0 113.54-1.46 1 1 0 00-.3.7 1 1 0 00.3.71z"/></symbol>
+		<symbol viewBox="0 0 20 20" id="check" xmlns="http://www.w3.org/2000/svg"><path d="M8.21 12.75a1 1 0 001.42 0l4.08-4.08a1.004 1.004 0 10-1.42-1.42l-3.37 3.38-1.21-1.22a1.004 1.004 0 00-1.42 1.42l1.92 1.92zM19 0H1a1 1 0 00-1 1v18a1 1 0 001 1h18a1 1 0 001-1V1a1 1 0 00-1-1zm-1 18H2V2h16v16z"/></symbol>
 		<symbol viewBox="0 0 6 4" id="chev-down" xmlns="http://www.w3.org/2000/svg"><path d="M.5 1.295l2.145 2.12a.5.5 0 00.71 0l2.12-2.12a.5.5 0 10-.705-.71L3 2.355 1.23.585a.5.5 0 00-.705 0 .5.5 0 00-.025.71z"/></symbol>
 		<symbol viewBox="0 0 9 14" id="chev-left" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.414 6.569l4.846 5.05-1.443 1.386L.587 6.51 7.08.28l1.385 1.442L3.414 6.57z"/></symbol>
 		<symbol viewBox="0 0 9 14" id="chev-right" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.9 6.656L.95 1.706 2.364.293l6.364 6.364-6.364 6.364L.95 11.606l4.95-4.95z"/></symbol>
@@ -270,6 +272,17 @@ embedded above. They may be styled via CSS.
 
 					</div>
 					<h2>chats</h2>
+				</li>
+				<li title="check">
+					<div class="icon-box">
+
+						<!-- check -->
+						<svg class="svg-check-dims">
+							<use xlink:href="#check"></use>
+						</svg>
+
+					</div>
+					<h2>check</h2>
 				</li>
 				<li title="chev-down">
 					<div class="icon-box">
@@ -732,6 +745,17 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					</div>
 					<h2>chats</h2>
 				</li>
+				<li title="check">
+					<div class="icon-box">
+
+						<!-- check -->
+						<svg class="svg-check-dims">
+							<use xlink:href="sprite.svg#check"></use>
+						</svg>
+
+					</div>
+					<h2>check</h2>
+				</li>
 				<li title="chev-down">
 					<div class="icon-box">
 
@@ -1059,7 +1083,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Fri, 17 Feb 2023 11:01:46 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+			<p>Generated at Mon, 20 Feb 2023 08:12:11 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>

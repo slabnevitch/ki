@@ -1,9 +1,9 @@
 /*--------------------side-modals----------------------*/
 .side-modal {
 	width: 100%;
-	max-width: 432px;
 	padding-bottom: 25px;
-	padding-top: 30px;
+	// padding-top: 30px;
+	padding-top: 23px;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -15,11 +15,17 @@
 	transform: translateX(105%);
 
 	@include min-screen($md){
-		padding-top: 76px;		
+		padding-top: 76px;	
+		max-width: 432px;
 	}
 
 	&.sale-modal{
 		.sale-modal-visible &{
+			transform: translateX(0);
+		}
+	}
+	&.sale-modal--availability{
+		.sale-modal-availability-visible &{
 			transform: translateX(0);
 		}
 	}
@@ -32,12 +38,49 @@
 	.form{
 		.btn-order{
 			margin-top: 14px;
-			margin-bottom: 12px;
+			margin-bottom: 27px;
 		}
 		.form__note {
 			font-size: 10px;
 			line-height: 12px;
 			color: #A9A9A9;
+
+			a{
+
+				color: #A9A9A9;
+			}
+		}
+		.form__custom-policy{
+			margin-top: 42px;
+			margin-bottom: 55px;	
+		}
+		.form__custom-chek{
+			border-width: 2px;
+			border-color: $text;
+			border-radius: 2px;
+
+			&:before{
+				display: none;
+			}
+
+			.icon{
+				@include absolute-center;
+				display: none;
+				font-size: 20px;
+			}	
+		}
+		.form__check:checked{
+			& + .form__custom-chek{
+				border-width: 0;
+				.icon{
+					display: block;
+				}	
+			}
+		}
+		.form__policy{
+			font-size: 12px;
+			line-height: 15px;
+			color: $text-l;
 		}
 	}
 	.form__row {
@@ -61,8 +104,13 @@
 }
 .side-modal__close {
 	position: absolute;
-	top: 24px;
+	top: 20px;
 	right: 24px;
+
+	@include min-screen($md){
+		top: 40px;
+		right: 40px;
+	}
 }
 .side-modal__back {
 	position: absolute;
@@ -71,7 +119,8 @@
 }
 
 .side-modal__inner {
-	max-width: 272px;
+	padding-left: 24px;
+	padding-right: 24px;
 	margin: 0 auto;
 	width: 100%;	
 	position: relative;
@@ -79,6 +128,12 @@
 	flex-direction: column;
 	height: 100%;
 	overflow-y: hidden;
+
+	@include min-screen($md){
+		max-width: 272px;
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 .side-modal__content{
 	flex: 1 1 auto;
@@ -87,10 +142,23 @@
 .side-modal__title {
 	padding-bottom: 5px;
 	margin-bottom: 24px;
+	font-weight: 700;
 	font-family: $navm;
 	font-size: 22px;
 	line-height: 26px;
 	border-bottom: 1px solid $border;
+
+	@include max-screen($md){
+		font-size: 16px;
+		line-height: 19px;
+	}	
+
+	span{
+		color: $accent;
+		@include min-screen($md){
+			display: block;
+		}
+	}
 }
 .side-modal__text {
 	margin-bottom: 32px;
