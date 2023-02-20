@@ -157,7 +157,91 @@
 					removeClass('.catalog-header__item', 'touch-hover');//удаляем у всех пунктов меню активный класс
 				}
 			}
+			
+		// END header catalog toggle
+		
+		// popups close
+			if(targ.classList.contains('popup__close') || targ.closest('.popup__close') !== null){
+				console.log(targ.closest('.popup__close').parentElement.classList[1] + '-viseble')
+				console.log(document.body);
+				document.body.classList.remove(targ.closest('.popup__close').parentElement.classList[1] + '-visible');
+			}		
+		// END popups close
 
+		// product-cards alignment
+			if(targ.classList.contains('catalog-sort__action') || targ.closest('.catalog-sort__action') !== null){
+				targ.closest('.catalog-sort__action').classList.add('active');
+				siblings(targ.closest('.catalog-sort__action'))[0].classList.remove('active');
+
+				var pordictCardsContainers = targ.closest('.catalog-chapter')
+					.querySelectorAll('.product-cards');
+				
+				if(targ.getAttribute('id') === 'cars-row-switcher' || targ.closest('#cars-row-switcher') !== null){
+					for (var i = pordictCardsContainers.length - 1; i >= 0; i--) {
+						pordictCardsContainers[i].classList.add('product-cards--horisontal');
+					}
+				}else{
+					for (var i = pordictCardsContainers.length - 1; i >= 0; i--) {
+						pordictCardsContainers[i].classList.remove('product-cards--horisontal');
+					}
+				}
+
+			}
+		// END product-cards alignment
+
+
+		// map modals toggle
+		if(targ.classList.contains('side-modal__close') || targ.closest('.side-modal__close') !== null){
+			var visibleClass = e.target.closest('.side-modal').dataset.visibleClass;
+			console.log( visibleClass)
+			document.body.classList.remove(visibleClass, 'side-modal-visible', 'map-with-modal', 'covered');
+		}
+		if(targ.classList.contains('map-fullscreen__close') || targ.closest('.map-fullscreen__close') !== null){
+			document.body.classList.remove('fullscreen-map-visible');
+		}
+		// END map modals toggle
+
+		// header search results toggle
+			// var headerSearchInputs = document.querySelectorAll('.search-header__input');
+			// for(var i=0; i < headerSearchInputs.length; i++){
+			// 	headerSearchInputs[i].addEventListener('input', function(e) {
+			// 		console.log('FOCUS')
+			// 		document.querySelector('.header').classList.add('search-results-opened');
+			// 		coverShow();
+			// 	});
+			// 	headerSearchInputs[i].addEventListener('blur', function(e) {
+			// 		console.log('BLUR')
+			// 		document.querySelector('.header').classList.remove('search-results-opened');
+			// 		coverHide();
+			// 	});
+			// }
+		// END header search results toggle
+
+		
+	});//document click
+
+	// body cover show/hide
+		var body = document.body || document.getElementsByTagName('body')[0];
+		function coverShow() {
+					console.log('coverShow')
+			body.classList.add('covered');
+			// document.documentElement.classList.add('lock');
+		}
+
+		function coverHide() {
+			body.classList.remove('covered');
+			// document.documentElement.classList.remove('lock');
+		}
+
+		function coverToggle() {
+			body.classList.toggle('covered');
+		}
+	// END body cover show/hide
+
+	document.addEventListener('DOMContentLoaded', function() {
+		console.log('DOMContentLoaded!');
+
+		// catalog hover
 			if(document.querySelectorAll('.catalog-header__item') !== null){
 
 				var catalogLinks = document.querySelectorAll('.catalog-header__item');
@@ -188,50 +272,7 @@
 					sensitivity: 7,
 				});
 			}
-
-			
-		// END header catalog toggle
-
-		// header search results toggle
-			// var headerSearchInputs = document.querySelectorAll('.search-header__input');
-			// for(var i=0; i < headerSearchInputs.length; i++){
-			// 	headerSearchInputs[i].addEventListener('input', function(e) {
-			// 		console.log('FOCUS')
-			// 		document.querySelector('.header').classList.add('search-results-opened');
-			// 		coverShow();
-			// 	});
-			// 	headerSearchInputs[i].addEventListener('blur', function(e) {
-			// 		console.log('BLUR')
-			// 		document.querySelector('.header').classList.remove('search-results-opened');
-			// 		coverHide();
-			// 	});
-			// }
-		// END header search results toggle
-
-		
-	});
-
-	// body cover show/hide
-		var body = document.body || document.getElementsByTagName('body')[0];
-		function coverShow() {
-					console.log('coverShow')
-			body.classList.add('covered');
-			// document.documentElement.classList.add('lock');
-		}
-
-		function coverHide() {
-			body.classList.remove('covered');
-			// document.documentElement.classList.remove('lock');
-		}
-
-		function coverToggle() {
-			body.classList.toggle('covered');
-		}
-	// END body cover show/hide
-
-	document.addEventListener('DOMContentLoaded', function() {
-		console.log('DOMContentLoaded!');
-
+		// END catalog hover
 
 		if(document.querySelector('.ctlg-filter__list') !== null){
 			document.querySelector('.ctlg-filter__list').addEventListener('submit', function() {event.preventDefault()})
@@ -564,5 +605,5 @@
 		// });
 
 		
-	});
+	});//DOMContentLoaded
 })();

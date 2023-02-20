@@ -2194,7 +2194,7 @@
               <div class="show-all-link"><a href="#" class="link">Смотреть все</a></div>
             </div>
           </section>
-          <section class="page-main-sect hits">
+          <section class="hits">
             <div class="wrapper">
               <h2 class="sect-title">Хиты продаж</h2>
             </div>
@@ -3446,7 +3446,457 @@
         </ul>
       </div>
     </div>
-    <script src="js/libs/css_browser_selector.js"></script>
+    <div id="modal-for-order" class="side-modal for-order-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Под заказ</div>
+        <div class="product-card product-card--mini">
+          <div class="product-card__img-wrap">
+            <div class="billet billet--action billet--mini"></div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
+          </div>
+          <div class="product-card__chars">
+            <div class="product-card__price"><a href="#" class="product-card__price-block">
+                <div class="product-price">14 729 ₽</div>
+                <div class="product-price-sale">18 411₽</div></a><a href="#" class="product-bonus">
+                <div class="product-bonus__val">99</div>
+                    <svg class="icon icon-bonus ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
+                    </svg></a></div><a href="#" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</a>
+            <div class="product-card__rating-wrap">
+              <div class="product-card__rating">
+                    <div class="crystal-rating">
+                      <div class="crystal-rating__body">
+                        <div class="crystal-rating__active"></div>
+                        <div class="crystal-rating__items">
+                          <input value="1" type="radio" name="crystal">
+                          <input value="2" type="radio" name="crystal">
+                          <input value="3" type="radio" name="crystal">
+                          <input value="4" type="radio" name="crystal">
+                          <input value="5" type="radio" name="crystal">
+                        </div>
+                      </div>
+                      <div class="crystal-rating__value">4,0</div>
+                    </div>
+              </div>
+            </div>
+            <div class="product-card__footer">
+              <div data-min="0" data-max="100" class="counter">
+                <button class="counter__button counter-minus">
+                      <svg class="icon icon-minus ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#minus"></use>
+                      </svg>
+                </button>
+                <div class="counter__block">
+                  <input autocomplete="off" type="hidden" name="name" value="1">
+                  <div class="counter__count">1</div>
+                  <div class="counter__measures">шт</div>
+                </div>
+                <button class="counter__button counter-plus">
+                      <svg class="icon icon-plus ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#plus"></use>
+                      </svg>
+                </button>
+              </div>
+              <div class="product-card__actions"><a href="#" class="product-card__action">
+                      <svg class="icon icon-favourites ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#favourites"></use>
+                      </svg></a><a href="#" class="product-card__action">
+                      <svg class="icon icon-compare ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
+                      </svg></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="side-modal__text">Оставьте ваш номер телефона и наш менеджер свяжется с вами для оформления заказа</div>
+        <form action="#" class="form">
+          <div class="form__row">
+            <div class="form__row-title form__row-title--required">Имя</div>
+            <label class="form__label">
+              <input type="text" name="name" class="form__input">
+            </label>
+          </div>
+          <div class="form__row">
+            <div class="form__row-title form__row-title--required">Телефон*</div>
+            <label class="form__label">
+              <input type="text" name="name" class="form__input">
+            </label>
+          </div>
+          <div class="form__row">
+            <div class="form__row-title">E-mail</div>
+            <label class="form__label">
+              <input type="text" name="name" class="form__input">
+            </label>
+          </div>
+          <button type="submit" class="btn btn-lg btn-order">Отправить заявку</button>
+          <div class="form__note">*При входе и регистрации вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+        </form>
+      </div>
+    </div>
+    <div id="modal-sale" data-visible-class="sale-modal-visible" class="side-modal sale-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Следите за снижением цены на товар</div>
+        <div class="side-modal__content">
+          <div class="product-card product-card--mini">
+            <div class="product-card__img-wrap">
+              <div class="billet billet--action billet--mini"></div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
+            </div>
+            <div class="product-card__chars">
+              <div class="product-card__price"><a href="#" class="product-card__price-block">
+                  <div class="product-price">14 729 ₽</div>
+                  <div class="product-price-sale">18 411₽</div></a><a href="#" class="product-bonus">
+                  <div class="product-bonus__val">99</div>
+                      <svg class="icon icon-bonus ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
+                      </svg></a></div><a href="#" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</a>
+              <div class="product-card__rating-wrap">
+                <div class="product-card__rating">
+                      <div class="crystal-rating">
+                        <div class="crystal-rating__body">
+                          <div class="crystal-rating__active"></div>
+                          <div class="crystal-rating__items">
+                            <input value="1" type="radio" name="crystal">
+                            <input value="2" type="radio" name="crystal">
+                            <input value="3" type="radio" name="crystal">
+                            <input value="4" type="radio" name="crystal">
+                            <input value="5" type="radio" name="crystal">
+                          </div>
+                        </div>
+                        <div class="crystal-rating__value">4,0</div>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="side-modal__text">Оставьте свой адрес — как только цена на товар снизится, вы сразу об этом узнаете</div>
+          <form action="#" class="form">
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">E-mail</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__custom-policy">
+                <label class="form__custom">
+                  <input type="checkbox" name="actions" value="chekbox1" checked class="form__check"><span class="form__custom-chek">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                        </svg></span><span class="form__policy">Узнавать о других скидках и акциях</span>
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-lg btn-order">Отправить заявку</button>
+            <div class="form__note">*При входе и регистрации вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="modal-availability" data-visible-class="availability-modal-visible" class="side-modal availability-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Сообщить о наличии товара</div>
+        <div class="side-modal__content">
+          <div class="product-card product-card--mini">
+            <div class="product-card__img-wrap">
+              <div class="billet billet--action billet--mini"></div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
+            </div>
+            <div class="product-card__chars">
+              <div class="product-card__price"><a href="#" class="product-card__price-block">
+                  <div class="product-price">14 729 ₽</div>
+                  <div class="product-price-sale">18 411₽</div></a><a href="#" class="product-bonus">
+                  <div class="product-bonus__val">99</div>
+                      <svg class="icon icon-bonus ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
+                      </svg></a></div><a href="#" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</a>
+              <div class="product-card__rating-wrap">
+                <div class="product-card__rating">
+                      <div class="crystal-rating">
+                        <div class="crystal-rating__body">
+                          <div class="crystal-rating__active"></div>
+                          <div class="crystal-rating__items">
+                            <input value="1" type="radio" name="crystal">
+                            <input value="2" type="radio" name="crystal">
+                            <input value="3" type="radio" name="crystal">
+                            <input value="4" type="radio" name="crystal">
+                            <input value="5" type="radio" name="crystal">
+                          </div>
+                        </div>
+                        <div class="crystal-rating__value">4,0</div>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="side-modal__text">Оставьте свой адрес — как только цена на товар снизится, вы сразу об этом узнаете</div>
+          <form action="#" class="form">
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">E-mail</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__custom-policy">
+                <label class="form__custom">
+                  <input type="checkbox" name="actions" value="chekbox1" checked class="form__check"><span class="form__custom-chek">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                        </svg></span><span class="form__policy">Узнавать о других скидках и акциях</span>
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-lg btn-order">Отправить заявку</button>
+            <div class="form__note">*При входе и регистрации вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="modal-to-credit" class="side-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Купить в кредит</div>
+        <form action="#" class="form">
+          <div class="form__row">
+            <div class="form__row-title form__row-title--required">Фамилия*</div>
+            <label class="form__label">
+              <input type="text" name="name" class="form__input">
+            </label>
+          </div>
+          <div class="form__row">
+            <div class="form__row-title form__row-title--required">Имя*</div>
+            <label class="form__label">
+              <input type="text" name="name" class="form__input">
+            </label>
+          </div>
+          <div class="form__row">
+            <div class="form__row-title form__row-title--required">Отчество*</div>
+            <label class="form__label">
+              <input type="text" name="name" class="form__input">
+            </label>
+          </div>
+          <div class="form__row">
+            <div class="form__row-title form__row-title--required">Телефон*</div>
+            <label class="form__label">
+              <input type="text" name="name" class="form__input">
+            </label>
+          </div>
+          <div class="form__row">
+            <div class="form__row-title">E-mail</div>
+            <label class="form__label">
+              <input type="text" name="name" class="form__input">
+            </label>
+          </div>
+          <div class="form__row">
+            <div class="form__row-title">Город</div>
+            <label class="form__label">
+              <input type="text" name="name" class="form__input">
+            </label>
+          </div>
+          <button type="submit" class="btn btn-lg btn-order">Отправить заявку</button>
+          <div class="form__note">*При входе и регистрации вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+        </form>
+      </div>
+    </div>
+    <div id="modal-confirm" class="side-modal confirm-side-modal">
+      <button type="button" class="side-modal__back button-back">
+            <svg class="icon icon-arrow-left ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
+            </svg>
+      </button>
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Подтвердите номер</div>
+        <div class="side-modal__text">Мы отправили вам код на номер 
+          <div>8 961 123-45-67</div>
+        </div>
+        <form action="#" class="form">
+          <div class="form__row">
+            <div class="form__row-title form__row-title--required">Код</div>
+            <label class="form__label form__label--error">
+              <input type="text" name="name" class="form__input">
+              <div class="form__error-message">Введён неверный код</div>
+            </label>
+          </div>
+          <div class="confirm-side-modal__return">
+            <div class="form__row-title form__row-title--required">Код</div>
+            <div class="form__note">Код отправлен, запросить повторный можно 
+              <div>через 24 секунд</div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-lg btn-order">подтвердить телефон</button>
+          <div class="form__note">*При входе и регистрации вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+        </form>
+      </div>
+    </div>
+    <div id="modal-address" data-visible-class="address-modal-visible" class="side-modal address-side-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">В наличии <span>в 6 магазинах</span></div>
+        <form action="#" class="form address-side-modal__form">
+          <div class="address-side-modal__select"> 
+            <select name="locations" data-searchdisable="true" class="fstdropdown-select">
+              <option value="1">Краснодар</option>
+              <option value="2">Армавир</option>
+              <option value="3">Кропоткин</option>
+              <option value="4">Тихорецк</option>
+              <option value="5">Славянск-на-Кубани</option>
+              <option value="6">Тимашевск</option>
+              <option value="7">Белореченск</option>
+            </select>
+          </div>
+          <button type="button" id="full-map-open" class="side-modal__to-map to-map-side-modal">
+            <div class="to-map-side-moda__title">На карте</div>
+                <svg class="icon icon-loc ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#loc"></use>
+                </svg>
+          </button>
+        </form>
+        <div class="side-modal__content">
+          <div class="address-list__items">
+            <div class="address-list__item">
+              <div class="address-list__img _fit">
+                <div class="billet billet--new">18 шт</div><img src="img/addresses/1.jpg" alt="alt" class="_fit-img">
+              </div>
+              <div class="address-list__content">
+                <div class="address-list__loc">ул. Северная, 320</div>
+                <div class="address-list__phones">
+                  <div class="address-list__phones-row"><a href="tel:88612128253" class="address-list__phone">8 (861) 212-8-253</a></div>
+                  <div class="address-list__phones-row"><a href="tel:89885942025" class="address-list__phone">8 (988) 594-20-25</a></div>
+                </div>
+                <div class="address-list__shedule">Пн-Вс: 8.00-20.00</div><a href="#" class="btn btn-sm btn-loc">Как добраться</a>
+              </div>
+            </div>
+            <div class="address-list__item">
+              <div class="address-list__img _fit">
+                <div class="billet billet--new">11 шт</div><img src="img/addresses/2.jpg" alt="alt" class="_fit-img">
+              </div>
+              <div class="address-list__content">
+                <div class="address-list__loc">ул. Ростовское шоссе, 14/6</div>
+                <div class="address-list__phones">
+                  <div class="address-list__phones-row"><a href="tel:88612128253" class="address-list__phone">8 (861) 212-8-253</a></div>
+                  <div class="address-list__phones-row"><a href="tel:89885942025" class="address-list__phone">8 (988) 594-20-25</a></div>
+                </div>
+                <div class="address-list__shedule">Пн-Вс: 8.00-20.00</div><a href="#" class="btn btn-sm btn-loc">Как добраться</a>
+              </div>
+            </div>
+            <div class="address-list__item">
+              <div class="address-list__img _fit">
+                <div class="billet billet--new">8 шт</div><img src="img/addresses/3.jpg" alt="alt" class="_fit-img">
+              </div>
+              <div class="address-list__content">
+                <div class="address-list__loc">ул. Ростовское шоссе, 30/3</div>
+                <div class="address-list__phones">
+                  <div class="address-list__phones-row"><a href="tel:88612128253" class="address-list__phone">8 (861) 212-8-253</a></div>
+                  <div class="address-list__phones-row"><a href="tel:89885942025" class="address-list__phone">8 (988) 594-20-25</a></div>
+                </div>
+                <div class="address-list__shedule">Пн-Вс: 8.00-20.00</div><a href="#" class="btn btn-sm btn-loc">Как добраться</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-address-single" data-visible-class="address-modal-single-visible" class="side-modal address-side-modal address-side-modal--single">
+      <button type="button" class="side-modal__back button-back">
+            <svg class="icon icon-arrow-left ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
+            </svg>
+      </button>
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Магазин <span>ул. Северная, 320</span></div>
+        <div class="side-modal__content">
+          <div class="address-list">
+            <div class="address-list__items">
+              <div class="address-list__item">
+                <div class="address-list__img _fit">
+                  <div class="billet billet--new">18 шт</div><img src="img/addresses/single.jpg" alt="alt" class="_fit-img">
+                </div>
+                <div class="address-list__content">
+                  <div class="address-list__loc">ул. Западный Обход, 34</div>
+                  <div class="address-list__phones">
+                    <div class="address-list__phones-row"><a href="tel:88612128253" class="address-list__phone">8 (861) 212-8-253</a></div>
+                    <div class="address-list__phones-row"><a href="tel:89885942025" class="address-list__phone">8 (988) 594-20-25</a></div>
+                  </div>
+                  <div class="address-list__shedule">Пн-Вс: 8.00-20.00</div><a href="#" class="btn btn-sm btn-loc">Как добраться</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup-action">
+      <button type="button" class="popup__close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="popup__title">Вы упускаете<br>много акций!</div>
+      <div class="popup__body">
+        <p class="popup__text">Подпишитесь на уведомления,<br>чтобы не пропускать их!</p>
+      </div>
+      <footer class="popup__footer"><a href="/" class="popup__button">Подписаться</a></footer>
+    </div>
+    <div class="popup popup-review">
+      <button type="button" class="popup__close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="popup__title">Как вам товар?</div>
+      <div class="popup__body">
+        <p class="popup__text">Оставьте отзыв или оцените товаре</p>
+        <div class="popup__rating"> 
+              <div class="simple-rating">
+                <input id="inp5" type="radio" name="rating" value="5">
+                <label for="inp5"></label>
+                <input id="inp4" type="radio" name="rating" value="4">
+                <label for="inp4"></label>
+                <input id="inp3" type="radio" checked name="rating" value="3">
+                <label for="inp3"></label>
+                <input id="inp2" type="radio" name="rating" value="2">
+                <label for="inp2"></label>
+                <input id="inp1" type="radio" name="rating" value="1">
+                <label for="inp1"></label>
+              </div>
+        </div>
+        <div class="product-card product-card--mini">
+          <div class="product-card__img-wrap"><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a></div>
+          <div class="product-card__chars"><a href="#" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</a></div>
+        </div>
+      </div>
+      <footer class="popup__footer"><a href="/" class="popup__button">Написать отзыв</a></footer>
+    </div>
     <script src="js/libs/service-functions/remove-class.js"></script>
     <script src="js/libs/service-functions/siblings.js"></script>
     <script src="js/libs/service-functions/mobileDetect.js"></script>
