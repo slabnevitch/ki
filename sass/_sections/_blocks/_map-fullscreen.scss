@@ -61,12 +61,17 @@
 }
 .map-fullscreen__close{
 	position: absolute;
-	top: 40px;
+	top: 24px;
 	right: 22px;
 	background: #FFFFFF;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 4px;
 	z-index: 1;
+
+	@include min-screen($md){
+		top: 40px;
+		
+	}
 }
 .map-marker{
 	position: absolute;
@@ -103,24 +108,25 @@
 		left: prc(182,768);
 		top: prc(152,660);
 	}
-	&:last-child{
-		
-	}
-	&:nth-child(2){
+	&:nth-of-type(2){
 		left: prc(353,768);
 		top: prc(255,660);
 	}
-	&:nth-child(3){
+	&:nth-of-type(3){
 		left: prc(327,768);
 		top: prc(455,660);
 	}
-	&:nth-child(4){
+	&:nth-of-type(4){
 		left: prc(532,768);
 		top: prc(116,660);
 	}
-	&:nth-child(5){
+	&:nth-of-type(5){
 		left: prc(639,768);
 		top: prc(323,660);
+	}
+	&:nth-of-type(6){
+		left: prc(182,768);
+		top: prc(152,660);
 	}
 
 	&--lg{

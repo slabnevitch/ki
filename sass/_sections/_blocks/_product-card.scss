@@ -60,206 +60,7 @@
 		z-index: 2;
 	}
 
-	// карточка горизонтальная
-	.product-cards--horisontal &,
-	&--horisontal{
-		max-width: none;
-		flex-direction: row;
-		width: 100%;
-		flex-wrap: wrap;
-
-		@include max-screen($xs){
-			padding-left: 160px;
-		}
-		@include max-screen($sm){
-			padding-left: 98px;
-		}
-
-		.ui-elems &{
-			max-width: 704px;
-		}
-		
-		.product-card__img-wrap {
-			margin-bottom: 0;
-			flex-shrink: 0;
-			margin-right: 16px;
-
-			@include max-screen($xs){
-				position: absolute;
-				left: 0;
-				top: 0;
-			}
-		}
-		
-		.billet {
-			top: 0;
-		}
-		
-		.product-card__border {
-			width: 144px;
-			height: 144px;
-			padding: 15px;
-
-			@include max-screen($xs){
-				width: 88px;
-    			height: 88px;
-    			padding: 8px;
-			}
-		}
-		.product-card__img {
-			width: 114px;
-			height: 114px;
-
-			@include max-screen($xs){
-				height: 72px;
-   				 width: 72px;
-			}
-			img{
-				// max-width: calc(100% - 15px);
-				// max-height: calc(100% - 15px);
-
-			}
-		}
-		.product-card__name{
-			flex: 0 1 27%;
-			margin-right: 37px;
-			color: $text;
-
-			@include max-screen($md){
-				flex: 0 0 40%;
-				margin-right: 16px;
-
-			}
-			
-			@include max-screen($xs){
-				flex: 0 0 100% ;
-				margin-right: 0;
-				margin-bottom: 10px;
-			}
-
-		}
-		.product-card__price {
-			height: auto;
-			flex: 1 0 125px;
-			padding-left: 8px;
-			order: 4;
-			display: block;
-			text-align: right;
-			@include max-screen($xs){
-				flex: 0 0 100%;
-				order: 0;
-				display: flex;
-				text-align: left;
-				padding-left: 0;
-			}
-		}
-		.product-bonus{
-			margin-top: 6px;
-			justify-content: flex-end;
-		}
-		.product-card__actions {
-			position: static;
-			width: 100%;
-			margin-right: 0;
-			flex-direction: row-reverse;
-			justify-content: flex-start;
-
-			@include max-screen($xs){
-				position: absolute;
-				bottom: 46px;
-				top: auto;
-				align-items: center;
-			}
-		}
-		.product-card__action {
-
-			&:not(:first-child){
-				margin-bottom: 0;
-				margin-right: 24px;
-
-				@include max-screen($xs){
-					margin-right: 6px;
-				}
-
-			}
-			&:not(:last-child){
-				@include max-screen($xs){
-					margin-bottom: 0;
-				}
-				
-			}	
-		}
-		.product-card__description {
-			display: block;
-			flex: 1 1 auto;
-			// margin-right: 8px;
-
-			@include max-screen($md){
-				display: none;
-			}
-		}
-		.product-card__bottom {
-			margin-top: 0;
-			order: 4;
-			width: 100%;
-			padding-left: 160px;
-			padding-right: 152px;
-			display: flex;
-			flex-wrap: wrap;
-			// align-items: flex-end;
-
-			@include max-screen($xs){
-				padding-left: 0;
-				padding-right: 0;
-			}
-		}
-		.product-card__rating-wrap{
-			width: 100%;
-			margin-bottom: 19px;
-
-			@include max-screen($xs){
-				margin-bottom: 0;
-			}
-		}
-		.product-card__buy{
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			margin-bottom: 0;
-			// order: 3;
-			// margin-left: auto;
-			// flex: 0 0 auto;
-
-			@include max-screen($xs){
-				position: static;
-				margin-bottom: 4px;
-			}
-			@include max-screen($xss){
-				max-width: 110px;
-			}
-		}
-		.product-card__info{
-			height: auto;
-			width: 100%;
-			flex-direction: row;
-			align-items: flex-end;
-			justify-content: space-between;
-			flex-wrap: wrap;
-
-			@include max-screen($sm){
-				flex-direction: column;
-				align-items: flex-start;
-			}
-		}
-		.info-product-card__row{
-
-			&:not(:last-child){
-				margin-right: 16px;
-				margin-bottom: 0;
-			}
-		}
-	}
-	// END карточка горизонтальная
+	
 
 	&--mini{
 		flex-direction: row;
@@ -642,4 +443,205 @@
 		}
 	}
 }
+
+// карточка горизонтальная
+	.product-cards--horisontal .product-card,
+	.product-card--horisontal{
+		max-width: none;
+		flex-direction: row;
+		width: 100%;
+		flex-wrap: wrap;
+
+		@include max-screen($xs){
+			padding-left: 160px;
+		}
+		@include max-screen($sm){
+			padding-left: 98px;
+		}
+
+		.ui-elems &{
+			max-width: 704px;
+		}
+		
+		.product-card__img-wrap {
+			margin-bottom: 0;
+			flex-shrink: 0;
+			margin-right: 16px;
+
+			@include max-screen($xs){
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+		
+		.billet {
+			top: 0;
+		}
+		
+		.product-card__border {
+			width: 144px;
+			height: 144px;
+			padding: 15px;
+
+			@include max-screen($xs){
+				width: 88px;
+    			height: 88px;
+    			padding: 8px;
+			}
+		}
+		.product-card__img {
+			width: 114px;
+			height: 114px;
+
+			@include max-screen($xs){
+				height: 72px;
+   				 width: 72px;
+			}
+			img{
+				// max-width: calc(100% - 15px);
+				// max-height: calc(100% - 15px);
+
+			}
+		}
+		.product-card__name{
+			flex: 0 1 27%;
+			margin-right: 37px;
+			color: $text;
+
+			@include max-screen($md){
+				flex: 0 0 40%;
+				margin-right: 16px;
+
+			}
+			
+			@include max-screen($xs){
+				flex: 0 0 100% ;
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
+
+		}
+		.product-card__price {
+			height: auto;
+			flex: 1 0 125px;
+			padding-left: 8px;
+			order: 4;
+			display: block;
+			text-align: right;
+			@include max-screen($xs){
+				flex: 0 0 100%;
+				order: 0;
+				display: flex;
+				text-align: left;
+				padding-left: 0;
+			}
+		}
+		.product-bonus{
+			margin-top: 6px;
+			justify-content: flex-end;
+		}
+		.product-card__actions {
+			position: static;
+			width: 100%;
+			margin-right: 0;
+			flex-direction: row-reverse;
+			justify-content: flex-start;
+
+			@include max-screen($xs){
+				position: absolute;
+				bottom: 46px;
+				top: auto;
+				align-items: center;
+			}
+		}
+		.product-card__action {
+
+			&:not(:first-child){
+				margin-bottom: 0;
+				margin-right: 24px;
+
+				@include max-screen($xs){
+					margin-right: 6px;
+				}
+
+			}
+			&:not(:last-child){
+				@include max-screen($xs){
+					margin-bottom: 0;
+				}
+				
+			}	
+		}
+		.product-card__description {
+			display: block;
+			flex: 1 1 auto;
+			// margin-right: 8px;
+
+			@include max-screen($md){
+				display: none;
+			}
+		}
+		.product-card__bottom {
+			margin-top: 0;
+			order: 4;
+			width: 100%;
+			padding-left: 160px;
+			padding-right: 152px;
+			display: flex;
+			flex-wrap: wrap;
+			// align-items: flex-end;
+
+			@include max-screen($xs){
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+		.product-card__rating-wrap{
+			width: 100%;
+			margin-bottom: 19px;
+
+			@include max-screen($xs){
+				margin-bottom: 0;
+			}
+		}
+		.product-card__buy{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			margin-bottom: 0;
+			// order: 3;
+			// margin-left: auto;
+			// flex: 0 0 auto;
+
+			@include max-screen($xs){
+				position: static;
+				margin-bottom: 4px;
+			}
+			@include max-screen($xss){
+				max-width: 110px;
+			}
+		}
+		.product-card__info{
+			height: auto;
+			width: 100%;
+			flex-direction: row;
+			align-items: flex-end;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			@include max-screen($sm){
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		}
+		.info-product-card__row{
+
+			&:not(:last-child){
+				margin-right: 16px;
+				margin-bottom: 0;
+			}
+		}
+	}
+	// END карточка горизонтальная
 /*--------------------END product-card----------------------*/ 
