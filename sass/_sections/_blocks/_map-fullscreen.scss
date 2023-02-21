@@ -22,29 +22,6 @@
 
 	}
 
-	&__select{
-		display: flex;
-		margin-top: 12px;
-		margin-left: 12px;
-		margin-right: 12px;
-		background-color: $gray-l;
-		z-index: 1;
-		position: relative;
-
-		.address-side-modal__form{
-			margin-bottom: 0;
-			flex: 1 1 auto;
-			max-width: none;
-		}
-		.address-side-modal__select{
-			max-width: none;
-			flex: 1 1 auto;
-		}
-
-		@include min-screen($md){
-			display: none;
-		}
-	}
 	&__back{
 		flex: 0 0 32px;
 		position: relative;
@@ -58,6 +35,33 @@
 			color: #A9A9A9;
 		}
 	}
+}
+.map-city-select{
+	position: fixed;
+	top: 12px;
+	left: 12px;
+	right: 12px;
+	background-color: $gray-l;
+	z-index: 14;
+	display: none;
+
+	.address-modal-single-visible &{
+		@include max-screen($md){
+			display: flex;
+		}
+	}
+
+	.address-side-modal__form{
+		margin-bottom: 0;
+		flex: 1 1 auto;
+		max-width: none;
+		position: static;
+	}
+	.address-side-modal__select{
+		max-width: none;
+		flex: 1 1 auto;
+	}
+
 }
 .map-fullscreen__close{
 	position: absolute;

@@ -33,25 +33,7 @@
 		}
 	}
 
-	.product-cards &{
-		@include col();
-		@include size(3);
-		@include size-md(4);
-		@include size-sm(6);
-
-	    word-wrap: normal;
-
-	    @include max-screen($mins){
-	    	margin-left: 5.5px;
-	    	margin-right: 5.5px;
-	    }
-
-	    @media (any-hover: hover) { //только для устройств с ховером
-	    		&:hover{
-	    			transform: translateY(-20px);
-	    		}
-	    	}
-	}
+	
 
 	.billet {
 		position: absolute;
@@ -443,19 +425,40 @@
 		}
 	}
 }
+.product-cards .product-card{
+	@include col();
+	@include size(3);
+	@include size-md(4);
+	@include size-sm(6);
+
+	word-wrap: normal;
+
+	@include max-screen($mins){
+		margin-left: 5.5px;
+		margin-right: 5.5px;
+	}
+
+	    @media (any-hover: hover) { //только для устройств с ховером
+	    	&:hover{
+	    		transform: translateY(-20px);
+	    	}
+	    }
+	}
 
 // карточка горизонтальная
 	.product-cards--horisontal .product-card,
 	.product-card--horisontal{
+		@include size-md(12);
+		@include size-sm(12);
 		max-width: none;
 		flex-direction: row;
 		width: 100%;
 		flex-wrap: wrap;
 
+		// @include max-screen($sm){
+		// 	padding-left: 160px;
+		// }
 		@include max-screen($xs){
-			padding-left: 160px;
-		}
-		@include max-screen($sm){
 			padding-left: 98px;
 		}
 
@@ -615,7 +618,8 @@
 			// flex: 0 0 auto;
 
 			@include max-screen($xs){
-				position: static;
+				position: relative;
+				z-index: 2;
 				margin-bottom: 4px;
 			}
 			@include max-screen($xss){
