@@ -480,7 +480,7 @@ h1, h2, h3, h4, h5, h6{
       }
   }
   .pagination__item{
-    flex: 0 0 auto;
+    width: 0 0 auto;
   }
   .pagination__link{
    width: auto;
@@ -626,7 +626,7 @@ h1, h2, h3, h4, h5, h6{
   padding-left: 33px;
   position: relative;
   font-size: 28px;
-  line-height: 20px;
+  line-height: 28px;
   font-family: $navm;
   text-decoration: none;
   color: $text;
@@ -640,6 +640,7 @@ h1, h2, h3, h4, h5, h6{
     } 
 
   @include max-screen($md){
+    line-height: 16px;
     font-size: 16px;
   }
 

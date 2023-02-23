@@ -2,7 +2,16 @@
 	button(type="button").map-fullscreen__close.button-close
 		+icon('ctlg-close')
 	
-	
+	.map-fullscreen__select
+		button.map-fullscreen__back
+			+icon('arrow-left')
+			
+		form(action="#" class="form").address-side-modal__form
+			.address-side-modal__select 
+				select(name="locations" data-searchdisable="true" class="fstdropdown-select")
+					- var opts = ['Краснодар','Армавир','Кропоткин','Тихорецк','Славянск-на-Кубани','Тимашевск','Белореченск'];
+					each opt, i in opts
+						option(value=i+1)= opt
 	.map-marker 11 шт
 	.map-marker 48 шт
 	.map-marker 103 шт

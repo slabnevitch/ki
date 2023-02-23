@@ -52,15 +52,16 @@
 	left: 19px;	
 	font-weight: 700;
 	font-size: 14px;
-	line-height: 16px;
-	color: 	$text-l;
+	line-height: normal;
+	color:$text;
+	font-family: $navm;
 
 	@include max-screen($xss){
 		left: 10px;
 		bottom: 12px;
 		padding-right: 12px;			
 		font-size: 10px;
-		line-height: 12px;
+		line-height: normal;
 	}	
 }
 /*--------------------END brands-logos----------------------*/ 

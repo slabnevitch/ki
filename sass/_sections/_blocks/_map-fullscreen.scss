@@ -22,6 +22,29 @@
 
 	}
 
+	&__select{
+		display: flex;
+		margin-top: 12px;
+		margin-left: 12px;
+		margin-right: 12px;
+		background-color: $gray-l;
+		z-index: 1;
+		position: relative;
+
+		.address-side-modal__form{
+			margin-bottom: 0;
+			flex: 1 1 auto;
+			max-width: none;
+		}
+		.address-side-modal__select{
+			max-width: none;
+			flex: 1 1 auto;
+		}
+
+		@include min-screen($md){
+			display: none;
+		}
+	}
 	&__back{
 		flex: 0 0 32px;
 		position: relative;
@@ -36,46 +59,14 @@
 		}
 	}
 }
-.map-city-select{
-	position: fixed;
-	top: 12px;
-	left: 12px;
-	right: 12px;
-	background-color: $gray-l;
-	z-index: 14;
-	display: none;
-
-	.address-modal-single-visible &{
-		@include max-screen($md){
-			display: flex;
-		}
-	}
-
-	.address-side-modal__form{
-		margin-bottom: 0;
-		flex: 1 1 auto;
-		max-width: none;
-		position: static;
-	}
-	.address-side-modal__select{
-		max-width: none;
-		flex: 1 1 auto;
-	}
-
-}
 .map-fullscreen__close{
 	position: absolute;
-	top: 24px;
+	top: 40px;
 	right: 22px;
 	background: #FFFFFF;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 4px;
 	z-index: 1;
-
-	@include min-screen($md){
-		top: 40px;
-		
-	}
 }
 .map-marker{
 	position: absolute;
@@ -112,25 +103,24 @@
 		left: prc(182,768);
 		top: prc(152,660);
 	}
-	&:nth-of-type(2){
+	&:last-child{
+		
+	}
+	&:nth-child(2){
 		left: prc(353,768);
 		top: prc(255,660);
 	}
-	&:nth-of-type(3){
+	&:nth-child(3){
 		left: prc(327,768);
 		top: prc(455,660);
 	}
-	&:nth-of-type(4){
+	&:nth-child(4){
 		left: prc(532,768);
 		top: prc(116,660);
 	}
-	&:nth-of-type(5){
+	&:nth-child(5){
 		left: prc(639,768);
 		top: prc(323,660);
-	}
-	&:nth-of-type(6){
-		left: prc(182,768);
-		top: prc(152,660);
 	}
 
 	&--lg{

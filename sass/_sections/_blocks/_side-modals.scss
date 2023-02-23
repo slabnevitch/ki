@@ -7,13 +7,13 @@
 	top: 0;
 	right: 0;
 	height: 100%;
-	
+	box-shadow: 0px 4px 20px rgb(0 0 0 / 10%);
 	background-color: #fff;
 	z-index: 13;
 	transition: all .4s;
 	transform: translateX(105%);
 
-	@include min-screen($md){
+	@include min-screen($xss){
 		padding-bottom: 25px;
 		padding-top: 76px;	
 		max-width: 432px;
@@ -67,7 +67,7 @@
 			}
 		}
 		.form__custom-policy{
-			margin-top: 42px;
+			margin-top: 7px;
 			margin-bottom: 55px;
 
 			@include max-screen($md){
@@ -76,7 +76,7 @@
 		}
 		.form__custom-chek{
 			border-width: 2px;
-			border-color: $text;
+			border-color:  #A9A9A9;
 			border-radius: 2px;
 
 			&:before{
@@ -86,7 +86,7 @@
 			.icon{
 				@include absolute-center;
 				display: none;
-				font-size: 20px;
+				color: #A9A9A9;
 			}	
 		}
 		.form__check:checked{
@@ -160,7 +160,7 @@
 	height: 100%;
 	overflow-y: hidden;
 
-	@include min-screen($md){
+	@include min-screen($xss){
 		max-width: 272px;
 		padding-left: 0;
 		padding-right: 0;
@@ -242,7 +242,7 @@
 		background-image: url(../img/address-list-gradient.svg);
 		background-position: 0 0;
 		background-repeat: no-repeat;
-		background-size: 100% 100%;
+		background-size: contain;
 	}
 	// .side-modal__inner {
 	// 	position: relative;
@@ -268,7 +268,7 @@
 
 	&--single{
 
-		@include max-screen($md){
+		@include max-screen($xss){
 			height: prc(355, 568);
 			top: auto;
 			bottom: 0;
@@ -289,7 +289,7 @@
 			padding-bottom: prc(170,273);
 			max-width: 280px;	
 
-			@include max-screen($md){
+			@include max-screen($xss){
 				padding-bottom: 0;
 				height: 172px;						
 			}
@@ -303,13 +303,13 @@
 			line-height: 15px;
 		}
 		.side-modal__title{
-			@include max-screen($md){
+			@include max-screen($xss){
 				display: none;	
 			}
 		}
 		.side-modal__close,
 		.side-modal__back {
-			@include max-screen($md){
+			@include max-screen($xss){
 					display: none;	
 			}
 		}

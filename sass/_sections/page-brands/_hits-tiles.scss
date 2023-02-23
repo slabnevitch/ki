@@ -92,12 +92,13 @@
 }
 .hits-tile__name {
 	overflow: hidden;
-	color: #A9A9A9;
 	left: 5px;
 	right: 5px;
 	bottom: 5px;
+	font-family: "NavigoMedium", sans-serif;
 	font-size: 10px;
-	line-height: 12px;
+	line-height: normal;
+	color: $text;
 
 		position: absolute;
 
@@ -110,8 +111,7 @@
 	}
 	@include min-screen($md){
 		font-size: 14px;
-		line-height: 14px;
-		
+	
 	}
 }
 /*--------------------END hits-tiles----------------------*/ 

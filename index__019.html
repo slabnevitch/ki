@@ -2977,6 +2977,26 @@
                   <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
                 </svg>
           </button>
+          <div class="map-fullscreen__select">
+            <button class="map-fullscreen__back">
+                  <svg class="icon icon-arrow-left ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
+                  </svg>
+            </button>
+            <form action="#" class="form address-side-modal__form">
+              <div class="address-side-modal__select"> 
+                <select name="locations" data-searchdisable="true" class="fstdropdown-select">
+                  <option value="1">Краснодар</option>
+                  <option value="2">Армавир</option>
+                  <option value="3">Кропоткин</option>
+                  <option value="4">Тихорецк</option>
+                  <option value="5">Славянск-на-Кубани</option>
+                  <option value="6">Тимашевск</option>
+                  <option value="7">Белореченск</option>
+                </select>
+              </div>
+            </form>
+          </div>
           <div class="map-marker">11 шт</div>
           <div class="map-marker">48 шт</div>
           <div class="map-marker">103 шт</div>
@@ -3666,26 +3686,7 @@
       </div>
       <footer class="popup__footer"><a href="/" class="popup__button">Написать отзыв</a></footer>
     </div>
-    <div class="map-city-select">
-      <button class="map-fullscreen__back">
-            <svg class="icon icon-arrow-left ">
-              <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
-            </svg>
-      </button>
-      <form action="#" class="form address-side-modal__form">
-        <div class="address-side-modal__select"> 
-          <select name="locations" data-searchdisable="true" class="fstdropdown-select">
-            <option value="1">Краснодар</option>
-            <option value="2">Армавир</option>
-            <option value="3">Кропоткин</option>
-            <option value="4">Тихорецк</option>
-            <option value="5">Славянск-на-Кубани</option>
-            <option value="6">Тимашевск</option>
-            <option value="7">Белореченск</option>
-          </select>
-        </div>
-      </form>
-    </div>
+    <script src="js/libs/css_browser_selector.js"></script>
     <script src="js/libs/service-functions/remove-class.js"></script>
     <script src="js/libs/service-functions/siblings.js"></script>
     <script src="js/libs/service-functions/mobileDetect.js"></script>

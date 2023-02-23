@@ -27,7 +27,7 @@
 }
 .features__item {
 	display: flex;
-	align-items: flex-start;
+	align-items: flex-star;
 
 	@include max-screen($sm){
 		flex: 0 0 calc(100% / 2 - 16px);

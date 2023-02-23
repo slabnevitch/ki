@@ -61,16 +61,29 @@
 	text-align: right;
 }	
 .popup__button {
-	@include but-null;
+	// @include but-null;
+	color: $text;
 	font-size: 12px;
 	font-weight: 700;
 	line-height: 15px;
 	text-transform: uppercase;
 	font-family: $inter;
+	text-decoration: none;
+
+	&:active, &:focus{
+		color: $text;
+	}
+	&:visited{
+		color: $accent;
+	}
+	
 
 	@media (any-hover: hover) { //только для устройств с ховером
 		cursor: pointer;
+		&:hover{
+			color: $text-l;
 		}
+	}
 }
 .popup-review{
 	.popup__title {

@@ -193,18 +193,11 @@
 		// map modals toggle
 		if(targ.classList.contains('side-modal__close') || targ.closest('.side-modal__close') !== null){
 			var visibleClass = e.target.closest('.side-modal').dataset.visibleClass;
-			console.log( visibleClass)
-			document.body.classList.remove(visibleClass, 'side-modal-visible', 'map-with-modal', 'covered');
+			console.log(visibleClass)
+			document.body.classList.remove(visibleClass, 'side-modal-visible', 'map-with-modal', 'fullscreen-map-visible', 'covered');
 		}
 		if(targ.classList.contains('map-fullscreen__close') || targ.closest('.map-fullscreen__close') !== null){
 			document.body.classList.remove('fullscreen-map-visible');
-		}
-		if(targ.getAttribute('id') === 'full-map-open' || targ.closest('#full-map-open') !== null){
-			if(screen.width > 959.98){
-				document.body.classList.add('fullscreen-map-visible', 'map-with-modal');
-			}else{
-				document.body.classList.remove('address-modal-visible');				
-			}
 		}
 		// END map modals toggle
 
