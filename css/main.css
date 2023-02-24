@@ -7064,7 +7064,7 @@ h6 {
 }
 
 .product-price-sale {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 12px;
   text-decoration: line-through;
   color: rgba(0, 0, 0, 0.4);
@@ -7559,6 +7559,7 @@ h6 {
   top: 0;
   right: 0;
   height: 100%;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   z-index: 13;
   transition: all 0.4s;
