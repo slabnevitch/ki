@@ -84,3 +84,106 @@ mixin crystalRating(rating, handler = false)
 //- rating -- значение рейтинга. Если требуется выводить в хтмл значение с запятой (3,5), то передавать 
 //- так: +crystalRating('3,5'), а если нет то +crystalRating('3,5').  
 //- handler -- включение/выключение возможности установки рйтинга пользователем
+
+mixin productCard(cards, path, start = 1)
+	each item, i in cards
+		div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : item.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Offer")
+				.product-card__img-wrap
+					if item.billet != ''
+						div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : "billet billet--markdown")
+							.billet__value= item.billet
+							
+							if item.billet == "акция" || item.billet == "скидка"
+								+icon('percents')
+							if item.billet == "уценка"
+								+icon('attention')
+							if item.billet == "Новинка"
+								+icon('flame')
+					
+					a(href="#" alt=item.tilte).product-card__border
+						span.product-card__img
+							img(src="img/"+path+(i+start)+".jpg" alt="alt")
+				
+				
+				.product-card__price
+					.product-card__actions
+						if item.iconActive === '0'
+							a(href="#").product-card__action.active
+								+icon('favourites')
+							a(href="#").product-card__action
+								+icon('compare')
+						else if item.iconActive === '1'
+							a(href="#").product-card__action
+								+icon('favourites')
+							a(href="#").product-card__action.active
+								+icon('compare')
+						else if item.iconActive == false
+							a(href="#").product-card__action
+								+icon('favourites')
+							a(href="#").product-card__action
+								+icon('compare')
+
+					a(href="#").product-price= item.price
+						if item.sale != ''
+							.product-price-sale= item.sale
+					meta(itemprop="price" content=item.price)
+					meta(itemprop="priceCurrency" content="RUB")
+					
+					if item.sbers
+						a(href="#").product-bonus
+							.product-bonus__val= item.sbers
+							+icon('bonus')
+				
+				a(href="#" itemprop="name").product-card__name= item.tilte
+				
+				a(href="#").product-card__description 
+					.product-card__description-row Напряжение акк.: 12 В
+					.product-card__description-row Крутящий момент: 30 Н·м
+					.product-card__description-row Емкость аккумулятора: 2 А·ч
+					.product-card__description-row Тип аккумулятора Li-Ion
+					.product-card__description-row Кол-во аккумуляторов: 2 шт.
+					.product-card__description-row Вес 1.2 кг
+
+				.product-card__bottom
+					.product-card__rating-wrap
+						.product-card__rating
+							+crystalRating('4,5')
+					if item.billet != ''
+						a(href="#" class=item.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy") Купить
+					else if item.order
+						a(href="#").btn.btn-sm.btn-blue.product-card__buy заказать
+					
+					else if item.analog
+						a(href="#").btn.btn-sm.btn-gray.product-card__buy аналог
+
+					else
+						a(href="#").btn.btn-sm.product-card__buy Купить
+
+					.product-card__info.info-product-card
+						if item.order && item.analog
+							.info-product-card__row Артикул: 002266
+							.info-product-card__row
+								.info-product-card__missing #[span Товар] временно отсутствует
+							.info-product-card__row
+								a(href="#").info-product-card__oneclick Подобрать аналог
+						else if item.order
+							.info-product-card__row Артикул: 002266
+							.info-product-card__row
+								.info-product-card__missing #[span Товар] временно отсутствует
+							.info-product-card__row
+								a(href="#").info-product-card__oneclick Купить в 1 клик
+						
+						else if item.analog
+							.info-product-card__row Артикул: 002266
+							.info-product-card__row Нет в наличии, товар снят с производства 
+						
+						else
+							.info-product-card__row Артикул: 002266
+							.info-product-card__row
+									.info-product-card__aval
+										.info-product-card__avalkey В наличии
+										a(href="#").info-product-card__avalvalue
+											span.info-product-card__in= "В "
+											| #{item.aval}
+							.info-product-card__row
+								a(href="#").info-product-card__oneclick Купить в 1 клик
