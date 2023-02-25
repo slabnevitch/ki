@@ -2,7 +2,6 @@ aside.multilevel-panel
 	.multilevel-panel__label Каталог
 	.multilevel-panel__back
 		button#menu-back Назад
-
 	.mob-catalog-screen
 
 	- var catalog = ['Электроинструмент','Ручной Инструмент','Хранение и транспортировка инструмента','Измерительные приборы','Пневмоинструмент','Все для сада','Строительное оборудование и инвентарь','Автотовары и оборудование','Станки','Грузоподъемное оборудование','Лестницы, стремянки и вышки','Масла и смазки','Генераторы (электростанции)','Стабилизаторы напряжения','Сварочные аппараты','Компрессоры','Клининговое оборудование','Климатическое оборудование','Крепеж','Электрика и освещение','Спецодежда и СИЗ','Расходные материалы и оснастка','Осенняя распродажа','Все категории'];
@@ -13,12 +12,15 @@ aside.multilevel-panel
 		each item in catalog
 			li.multilevel-menu__item.with-submenu
 				a(href='/' class="multilevel-menu__link")= item
+					+icon('chev-right')
 				ul.multilevel-submenu
 					each sub, i in mega
 						li(class=sub.length > 1 ? "multilevel-submenu__item with-submenu" : "multilevel-submenu__item")
 							a(href='/' class="multilevel-submenu__link")= sub[0]
+								+icon('chev-right')
 							ul.multilevel-submenu
 								each link, n in sub
 									if n > 0
 										li.multilevel-submenu__item
 											a(href='/' class="multilevel-submenu__link")= link
+												+icon('chev-right')
