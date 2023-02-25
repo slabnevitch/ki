@@ -1,14 +1,59 @@
 extends _misc/main
 
-
 block title
-	| Main__009
-	- var pageIndex = '009';
+	| Каталог
+	- var pageIndex = 'cat_007';
 
 block content
-	.page.page-main
-		include _includes/main-page-sections
+	.page.page-catalog
+		.wrapper
+			+menu('breadcrumbs', ['главная', 'Каталог', 'Электроинструменты', 'Шуруповерты'])
+
+		.wrapper
+			.back-block
+				a(href="#").back-link Шуруповерты
+					+icon('arrow-left')
 		
+		.wrapper.p-12
+			- var tags = ['аккумуляторные', 'бесщеточные', 'с битами', 'bosch', 'makita'];
+			.page-main__tagswrap
+				.tags.page-main__tags
+					each tag, i in tags
+						a(href="#" class=i<=2 ? "tag active": 'tag')= tag
+
+		.catalog-chapter
+			//- каталог-сорт с кнопками переключения вида карточек на всех разрешениях
+			include _blocks/catalog-sort--nowide
+			
+			.wrapper-smart
+				.wrapper-flex
+					.page-catalog__filter
+						include _blocks/catalog-filter
+					
+					.page-catalog__products
+						.wrapper-flex.product-cards.product-cards--catalog
+							include _includes/page-catalog-products
+
+						.pagination-wrapper
+							+pagination([1, '...', 14, 15, 16, '...', 189], '')
+
+						.page-catalog__pupular.pupular-page-catalog
+						
+						.pupular-page-catalog__title Самые популярные в этой категории
+							
+						- var perfs = [{billet: 'Новинка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'скидка', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}, {billet: '', price: '7 850 ₽', sale: '', sbers: '79', tilte: 'Шуруповерт Elitech ДШ 0110 РЭ', aval: '2 магазинах', iconActive: '0'}];
+						
+						- var gaik = [{billet: 'Новинка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Аккумуляторный гайковерт Makita TD 110 DZ', aval: '8 магазинах', iconActive: '0'}, {billet: 'скидка', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000', aval: '4 магазинах', iconActive: false}, {billet: '', price: '12 590 ₽', sale: '', sbers: '129', tilte: 'Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140', aval: '17 магазинах', iconActive: false}];
+
+						.wrapper-flex.product-cards.product-cards--catalog
+							+productCard(perfs, 'page-brands/perf/')
+							+productCard(gaik, 'page-brands/gaik/')
+
+						.pagination-wrapper
+							+pagination([1, '...', 14, 15, 16, '...', 189], '')
+		
+
+
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 
@@ -58,7 +103,7 @@ block page-scripts
 
 	//- VANILLA JS===================================
 	//- dynamic-adaptive--------------------------
-	// script(src="js/libs/dynamic-adaptive/da.min.js")
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
 		
 	//- slideout--------------------------
 	//- script(src="js/libs/slideout/slideout.js")
@@ -115,7 +160,7 @@ block page-scripts
 	//- script(src="js/libs/simplebar/simplebar.min.js")
 		
 	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
-	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+	script(src="js/libs/fstdropdown/fstdropdown.min.js")
 
 	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
 	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
@@ -124,6 +169,6 @@ block page-scripts
 	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
 
 	//- counter--------------------------
-	//- script(src="js/libs/counter/counter.js")
+	script(src="js/libs/counter/counter.js")
 
 //- end VANILLA JS===================================

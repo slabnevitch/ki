@@ -302,6 +302,7 @@ padding-bottom: 52.25%;
 		z-index: 11;	
 	}
 	.popup-action-visible &,
+	.popup-product-added-visible &,
 	.popup-review-visible &{
 		@include max-screen($md){
 			visibility: visible;

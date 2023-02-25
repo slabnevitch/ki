@@ -1,0 +1,12 @@
+.wrapper
+	.catalog-sort
+		.catalog-sort__select
+			select(name="catalog-sort" data-searchdisable="true" class="fstdropdown-select")
+				- var opts = ['Популярные','Сначала дешевле','Сначала дороже','Высокий рейтинг','Много отзывов','Новинки','Снижена цена'];
+					each opt, i in opts
+						option(value=i+1 selected=opt=="Популярные")= opt
+		.catalog-sort__actions
+			button(type="button")#cars-row-switcher.catalog-sort__action
+				+icon('cards-row')
+			button(type="button")#cars-tiles-switcher.catalog-sort__action.active
+				+icon('cards-tiles')

@@ -90,7 +90,7 @@ mixin productCard(cards, path, start = 1)
 		div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : item.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Offer")
 				.product-card__img-wrap
 					if item.billet != ''
-						div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : "billet billet--markdown")
+						div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : item.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
 							.billet__value= item.billet
 							
 							if item.billet == "акция" || item.billet == "скидка"

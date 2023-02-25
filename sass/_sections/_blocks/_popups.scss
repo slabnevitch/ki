@@ -58,13 +58,13 @@
 	margin-top: 0;
 }
 .popup__footer {
-	text-align: right;
+	display: flex;
+	align-items: flex-end;
 }	
 .popup__button {
 	// @include but-null;
 	color: $text;
 	font-size: 12px;
-	font-weight: 700;
 	line-height: 15px;
 	text-transform: uppercase;
 	font-family: $inter;
@@ -74,7 +74,7 @@
 		color: $text;
 	}
 	&:visited{
-		color: $accent;
+		color: $text;
 	}
 	
 
@@ -83,6 +83,13 @@
 		&:hover{
 			color: $text-l;
 		}
+	}
+	&:first-child{
+		margin-right: 12px;
+	}
+	&:last-child{
+		font-weight: 700;
+		margin-left: auto;
 	}
 }
 .popup-review{
@@ -105,5 +112,21 @@
 	@include simple-rating($gray-l, $yellow, 30px, 23px, '\e901');
 	// @include simple-rating(red, gold, 35px, 25px, false);
 	}
+}
+.popup-product-added{
+	.popup__title{
+		margin-bottom: 26px;
+	}
+	.product-card--mini{
+		margin-bottom: 20px;
+	}
+	.popup__footer{
+		padding-top: 20px;	
+		border-top: 1px solid $border;
+	}
+	.popup-product-added-visible & {
+		display: block;
+	}
+
 }
 /*--------------------END popups----------------------*/ 

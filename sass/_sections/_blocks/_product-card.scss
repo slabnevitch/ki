@@ -644,4 +644,22 @@
 		}
 	}
 	// END карточка горизонтальная
+
+// карточки в каталоге с фильтром 
+.product-cards--catalog{
+	padding-top: 20px;
+	.product-card{
+		// outline: 1px solid;
+		@include size(4);
+		@include size-md(6);
+		margin-bottom: 30px;
+	}
+	&.product-cards--horisontal{
+		.product-card{
+			width: 100%;
+		}
+	}
+
+}
+// END карточки в каталоге с фильтром 
 /*--------------------END product-card----------------------*/ 
