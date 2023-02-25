@@ -52,6 +52,12 @@
 	font-size: 18px;
 	line-height: 24px;
 	font-weight: 700;
+
+	br{
+		@include max-screen($xs){
+			display: none;
+		}
+	}
 }
 .popup__body {}
 .popup__text {
@@ -113,7 +119,8 @@
 	// @include simple-rating(red, gold, 35px, 25px, false);
 	}
 }
-.popup-product-added{
+.popup-product-added,
+.popup-product-favourite{
 	.popup__title{
 		margin-bottom: 26px;
 	}
@@ -124,9 +131,17 @@
 		padding-top: 20px;	
 		border-top: 1px solid $border;
 	}
+
+}
+.popup-product-added{
 	.popup-product-added-visible & {
 		display: block;
 	}
 
+}
+.popup-product-favourite{
+	.popup-product-favourite-visible & {
+		display: block;
+	}
 }
 /*--------------------END popups----------------------*/ 

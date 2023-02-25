@@ -2,7 +2,6 @@ extends _misc/main
 
 block title
 	| Каталог
-	- var pageIndex = 'cat_008';
 
 block content
 	.page.page-catalog
@@ -26,11 +25,22 @@ block content
 			include _blocks/catalog-sort--nowide
 			
 			.wrapper-smart
-				.wrapper-flex
+				.wrapper-flex.page-catalog__content
 					.page-catalog__filter
 						include _blocks/catalog-filter
 					
 					.page-catalog__products
+						.catalog-filtered-tags
+							.catalog-filtered-tags__header
+								.catalog-filtered-tags__title Используются сейчас
+								a(href="#").link.catalog-filtered-tags__clear Очистить
+							.catalog-filtered-tags__content
+								- var tags = ['Messer', 'Bosch', 'Patriot', 'Felisatti ', 'профессиональный', 'гарантия 5 лет']
+								each tag in tags
+									button(type="button").catalog-filtered-tag= tag
+										+icon('ctlg-close')
+
+
 						.wrapper-flex.product-cards.product-cards--catalog
 							include _includes/page-catalog-products
 
@@ -169,6 +179,6 @@ block page-scripts
 	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
 
 	//- counter--------------------------
-	script(src="js/libs/counter/counter.js")
+	//- script(src="js/libs/counter/counter.js")
 
 //- end VANILLA JS===================================
