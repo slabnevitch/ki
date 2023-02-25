@@ -2,7 +2,7 @@
 nav.mob-nav 
 	ul.mob-nav__list
 		each nav, i in navs
-			li(class=i > 1 && i < 4 ? "mob-nav__item active" : "mob-nav__item")
+			li(class=i > 1 && i < 4 ? "mob-nav__item active" : nav.name == 'Каталог' ? "mob-nav__item catalog-switcher": "mob-nav__item")
 				a(href="#").mob-nav__link
 					.mob-nav__icon
 						+icon(nav.icon)

@@ -33,6 +33,11 @@
 			}
 		}
 	}
+	&.header-catalog-opened{
+		@include max-screen($md){
+			z-index: 12;
+		}
+	}
 
 }
 .header__top {

@@ -115,7 +115,7 @@
 		// END location panel toggle
 
 		// header catalog toggle
-			if(targ.getAttribute('id') === 'catalog-switcher' || targ.closest('#catalog-switcher') !== null){
+			if(targ.classList.contains('catalog-switcher') || targ.closest('.catalog-switcher') !== null){
 					console.log('catalog-switcher')
 				var catMenuItems = document.querySelectorAll('.catalog-header__item'),
 					kiHeader = document.querySelector('.header');
@@ -132,6 +132,9 @@
 					});
 
 				}
+				if(screen.width <= 959.98){
+					document.documentElement.classList.toggle('lock');
+				}
 				if(kiHeader.classList.contains('header-catalog-opened')){
 					coverHide();
 				}else{
@@ -144,7 +147,7 @@
 	
 			}
 
-			if(window.innerWidth > 940 && isMobile.any()){// определяем, что клик с тач-скрина
+			if(window.innerWidth >= 959.98 && isMobile.any()){// определяем, что клик с тач-скрина
 				if(targ.classList.contains('.catalog-header__link') || targ.closest('.catalog-header__link') !== null){// убежаемся, что кликнкнули по стрелке рядом со ссылкой
 					e.preventDefault();
 					targ.closest('.catalog-header__item').classList.toggle('touch-hover');// родительскому пункту меню вешаем класс, который делает подменю открытым
