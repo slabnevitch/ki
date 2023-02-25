@@ -60,7 +60,9 @@
         item.addEventListener('click', this.linksClick);
       });
       backButton.addEventListener('click', this.backClick);
-      close.addEventListener('click', this.close);
+      if(close){
+        close.addEventListener('click', this.close);
+      }
       if(open){
         open.addEventListener('click', this.open);
       }
@@ -106,7 +108,8 @@
       _self.reset();
     },
     this.open = function() {
-      htmlDoc.classList.add('multilevel-panel-opened', 'catalog-visible');
+      console.log('this.open!')
+      htmlDoc.classList.toggle('multilevel-panel-opened');
       if(options.bodyFreeze){
         htmlDoc.classList.add('freeze');
       }
