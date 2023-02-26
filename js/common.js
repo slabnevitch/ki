@@ -83,6 +83,17 @@
 		console.log(e.target);
 		var targ = e.target;
 
+		console.log(targ.hasAttribute('data-catalogfilter-open'));
+		// page-catalog-filter toggle
+		if(targ.hasAttribute('data-catalogfilter-open')){
+			document.body.classList.add('page-catalog-filter-opened');
+			// document.querySelector('.page-catalog__filter').classList.add('opened');
+		}
+		if(targ.hasAttribute('data-catalogfilter-close') || targ.closest('[data-catalogfilter-close]') !== null){
+			document.body.classList.remove('page-catalog-filter-opened');
+		}	
+		// END page-catalog-filter toggle
+		
 		// mob-catalog filter toggle
 		if(targ.classList.contains('mob-catalog-filter__item')){
 			targ.classList.add('active');
