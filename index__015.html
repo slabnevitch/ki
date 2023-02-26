@@ -23,10 +23,22 @@
   <body class="covered">
     <aside class="multilevel-panel">
       <div class="multilevel-panel__label">Каталог</div>
+      <div class="mob-catalog-screen">
+            <div class="swiper-container swiper mob-catalog-screen__slider">
+              <div class="swiper-wrapper"><a href="#" class="swiper-slide mob-catalog-screen__slide">
+                  <div class="mob-catalog-screen__img"><img src="img/header-catalog/mob-catalog/1.png" alt="alt"></div>
+                  <div class="mob-catalog-screen__name">Бренды</div></a><a href="#" class="swiper-slide mob-catalog-screen__slide">
+                  <div class="mob-catalog-screen__img"><img src="img/header-catalog/mob-catalog/2.png" alt="alt"></div>
+                  <div class="mob-catalog-screen__name">Акции</div></a><a href="#" class="swiper-slide mob-catalog-screen__slide">
+                  <div class="mob-catalog-screen__img"><img src="img/header-catalog/mob-catalog/3.png" alt="alt"></div>
+                  <div class="mob-catalog-screen__name">Распродажа</div></a>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+      </div>
       <div class="multilevel-panel__back">
         <button id="menu-back">Назад</button>
       </div>
-      <div class="mob-catalog-screen"></div>
       <ul class="multilevel-menu">
         <li class="multilevel-menu__item with-submenu"><a href="/" class="multilevel-menu__link">Электроинструмент
                 <svg class="icon icon-chev-right ">
@@ -4925,6 +4937,10 @@
           </ul>
         </li>
       </ul>
+      <div class="mob-catalog-filter">
+        <button type="button" class="mob-catalog-filter__item active">по популярности</button>
+        <button type="button" class="mob-catalog-filter__item">по алфавиту</button>
+      </div>
     </aside>
     <main class="main">
       <header class="header search-results-opened covered">

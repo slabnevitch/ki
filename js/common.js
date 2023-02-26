@@ -83,9 +83,23 @@
 		console.log(e.target);
 		var targ = e.target;
 
+		// mob-catalog filter toggle
+		if(targ.classList.contains('mob-catalog-filter__item')){
+			targ.classList.add('active');
+			siblings(targ).forEach(function(elem) {
+				removeClass(elem, 'active');
+			});
+		}
+		// END mob-catalog filter toggle
+
 		// location panel toggle
 			if(document.querySelector('.header') !== null){
 				if(targ.classList.contains('loc-header__selected') || targ.closest('.loc-header__selected') !== null || targ.classList.contains('loc-header__panel') || targ.closest('.loc-header__panel')){
+					
+					// mob-catalog panel close and reset
+						panel.close();
+						panel.reset();
+
 					document.body.classList.toggle('loc-header-opened');
 						document.querySelector('.header').classList.remove('header-catalog-opened');
 						if(screen.width > 959.98){
@@ -280,6 +294,39 @@
 		}
 
 		//---------------Swiper
+		if(document.querySelector('.mob-catalog-screen__slider') !== null){
+			const mobCatalogScreen = new Swiper('.mob-catalog-screen__slider', {
+				observer: true,
+				observeParents: true,
+				slidesPerView: 3.25,
+				spaceBetween: 10,
+				loop: true,
+				// breakpoints: {
+   				//  // when window width is >= 320px
+				// 	320: {
+				// 		slidesPerView: 2,
+				// 		spaceBetween: 20
+				// 	},
+    			// 	// when window width is >= 480px
+				// 	480: {
+				// 		slidesPerView: 3,
+				// 		spaceBetween: 30
+				// 	},
+    			// 	// when window width is >= 640px
+				// 	640: {
+				// 		slidesPerView: 4,
+				// 		spaceBetween: 40
+				// 	}
+				// },
+
+  				// If we need pagination
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+					clickable: true
+				}
+			});
+		}
 		if(document.querySelector('.categories-tiles__slider') !== null){
 			const categoriesTilesSlider = new Swiper('.categories-tiles__slider', {			
 				observer: true,

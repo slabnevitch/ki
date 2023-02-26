@@ -1,4 +1,4 @@
-(function() {
+
   function MultilevelPanel(opts){
     var _self = this,
       htmlDoc = document.documentElement,
@@ -110,6 +110,10 @@
     this.open = function() {
       console.log('this.open!')
       htmlDoc.classList.toggle('multilevel-panel-opened');
+      // document.body.classList.toggle('covered');
+      if( htmlDoc.classList.contains('multilevel-panel-opened')){
+        _self.reset();
+      }
       if(options.bodyFreeze){
         htmlDoc.classList.add('freeze');
       }
@@ -140,5 +144,3 @@
     multicolumnClass: 'catalog-header__column',// класс для дива-обертки над эл-ми. десктопного меню
     multiLiItemClass: 'catalog-header__item' //класс для "<li>" десктопного меню, которые необходимо скопировать в моб. меню-панель
   });
-
-})();
