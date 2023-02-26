@@ -269,11 +269,7 @@
 	text-align: right;
 }
 .multilevel-panel{
-	top: 55px;
-	padding-top: 15px;
-	background-color: #fff;
-	overflow-y: visible;
-	height: calc(100% - 56px - 55px);
+	
 
 
 	&:after{
@@ -294,9 +290,13 @@
 	@include max-screen($md){
 		display: flex;
 		flex-direction: column;
-		
+		height: calc(100% - 56px - 55px);
+		top: 55px;
+		padding-top: 15px;
+		background-color: #fff;
+		overflow-y: visible;
 	}
-	@include min-screen($xsss){
+	@include min-screen($mins){
 		box-shadow: 0px 4px 20px rgba(0, 0, 0, .1);
 			
 	}
@@ -358,7 +358,9 @@
 	}
 }
 .multilevel-panel .multilevel-menu .with-submenu > a::after{
-	display: none;
+	 @include max-screen($multilevelPoint){
+		display: none;
+  }
 }
 .multilevel-panel .multilevel-menu {
 
