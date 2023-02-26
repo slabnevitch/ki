@@ -7,7 +7,7 @@
 		margin-bottom: 15px;
 
 		@include max-screen($md){
-			margin-bottom: 4px;
+			margin-bottom: 10px;
 		}
 	}
 	.catalog-sort{
@@ -16,7 +16,7 @@
 	.catalog-sort__select{
 		max-width: 230px;
 	    position: relative;
-    	top: 8px;
+    	top: 5px;
 
     	.fstdropdown > .fstlist {
     		top: calc(100% + 2px);
@@ -160,14 +160,15 @@
 .page-catalog__fitlter-toggler{
 	position: fixed;
 	bottom: 67px;
-	left: 0;
-	right: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	top: auto;
+	padding: 5px 26px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: auto;
-	width: 94px;
+	width:auto;
 	height: 36px;
 	background: $blue;
 	border: 2px solid #FFFFFF;
@@ -178,6 +179,7 @@
 	font-family: $navbl;
 	color: #FFFFFF;
 	z-index: 5;
+	white-space: nowrap;
 
 	.page-catalog-filter-opened &{
 		display: none;
@@ -191,6 +193,27 @@
 		.page-catalog-filter-opened &{
 			display: block;
 		}
+	}
+}
+.page-catalog__result{
+	margin-top: 16px;
+	margin-bottom: 12px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 18px;
+
+	@include max-screen($xsss){
+		max-width: 150px;
+	}
+}
+.page-catalog__result-text{
+	margin-bottom: 30px;
+	font-size: 12px;
+	line-height: 15px;
+	color: $text-l;
+
+	@include max-screen($xsss){
+		max-width: 150px;
 	}
 }
 /*--------------------END page-catalog----------------------*/ 

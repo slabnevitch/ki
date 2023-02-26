@@ -83,7 +83,18 @@
 		console.log(e.target);
 		var targ = e.target;
 
-		console.log(targ.hasAttribute('data-catalogfilter-open'));
+		// open/close catalog-sort__select fstdropdown
+		if(targ.classList.contains('catalog-sort__select') || targ.closest('.catalog-sort__select') !== null){
+			// console.log(targ.closest('.catalog-sort__select').querySelector('.fstdiv').classList.contains('open'));
+			// if(targ.closest('.catalog-sort__select').querySelector('.fstdiv').classList.contains('open')){
+			// 	document.body.classList.add('covered');
+			// }else{
+			// 	document.body.classList.remove('covered');
+
+			// }
+		}
+		// END open/close catalog-sort__select fstdropdown
+
 		// page-catalog-filter toggle
 		if(targ.hasAttribute('data-catalogfilter-open')){
 			document.body.classList.add('page-catalog-filter-opened');
