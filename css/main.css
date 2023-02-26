@@ -6183,14 +6183,6 @@ h6 {
   text-align: right;
 }
 
-.multilevel-panel {
-  top: 55px;
-  padding-top: 15px;
-  background-color: #fff;
-  overflow-y: visible;
-  height: calc(100% - 56px - 55px);
-}
-
 .multilevel-panel:after {
   content: "";
   display: block;
@@ -10059,11 +10051,13 @@ h6 {
 
 /*# sourceMappingURL=maps/main.css.map */
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 320px) {
   .multilevel-panel {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   }
+}
 
+@media only screen and (min-width: 375px) {
   .hits-tile:nth-child(3) .hits-tile__name br,
   .hits-tile:nth-child(4) .hits-tile__name br {
     display: none;
@@ -10534,6 +10528,11 @@ h6 {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
+    height: calc(100% - 56px - 55px);
+    top: 55px;
+    padding-top: 15px;
+    background-color: #fff;
+    overflow-y: visible;
   }
 
   .multilevel-panel .multilevel-menu {
