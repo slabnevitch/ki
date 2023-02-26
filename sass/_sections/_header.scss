@@ -7,8 +7,6 @@
 	left: 0;	
 	z-index: 11;
 	transition: all 0.3s;	
-	.covered &{
-	}
 
 	._scroll &{
 		top: -68px;
@@ -39,6 +37,13 @@
 		}
 	}
 
+}
+.breadcrumbs-mobile-visible{
+	.header{
+		@include max-screen($md){
+			z-index: 12;	
+		}
+	}
 }
 .header__top {
 	background-color: #fff;

@@ -610,6 +610,109 @@ h1, h2, h3, h4, h5, h6{
     color: $border;
 }
 
+.breadcrumbs-mobile-visible{
+  .breadcrumbs{
+    @include max-screen($md){
+      position: fixed;
+      width: 100%;
+      top: 135px;
+      left: 0;
+      padding-left: 28px;
+      z-index: 12;
+      flex-direction: column-reverse;
+      background-color: #fff;
+      border-top: 1px solid $border;
+    }
+  }
+
+  .breadcrumbs__item {
+    @include max-screen($md){
+      position: relative;
+      padding-left: 28px;
+      height: 39px;
+      display: flex; 
+      align-items: flex-end;
+      max-width: 100%;  
+      
+    }
+
+    &:before{
+      @include max-screen($md){
+        content: '';
+        display: block; 
+        position: absolute;
+        left: 6px;
+        bottom: 4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $border;
+        
+      }
+    }
+
+    &:after{
+      @include max-screen($md){
+        content: '';
+        position: absolute; 
+        display: block;
+        width: 1px;  
+        height:  100%;
+        top: 0;
+        left: 4px;
+        background-color: $border;
+        
+      }
+    } 
+    
+    &:first-child,
+    &:last-child{
+      @include max-screen($md){
+        display: none;         
+      }
+    }
+
+    &:nth-child(2){
+        &:before{
+          @include max-screen($md){
+            width: 20px;
+            height: 20px; 
+            left: 0; 
+            bottom: 0;  
+            
+          }
+        }
+
+      .breadcrumbs__link {
+        @include max-screen($md){
+          margin-bottom: 1px; 
+          
+        }
+      }
+    }
+
+    // &:not(:last-child){
+    //   &:after{
+    //     display: none;
+    //   }
+
+    // }
+  }
+
+  .breadcrumbs__link {
+    @include max-screen($md){
+      display: inline-block;  
+      max-width: 100%;  
+      padding-right: 28px;  
+     @include dots-family;
+      color: $text;
+      text-transform: capitalize;
+      font-size: 14px;  
+      line-height: normal; 
+    }
+  }
+}
+
 /*--------------------END breadcrumbs----------------------*/
 .back-block{
   margin-bottom: 26px;  
@@ -622,15 +725,31 @@ h1, h2, h3, h4, h5, h6{
     border-bottom: 1px solid $border;
   }
 }
+.breadcrumbs-mobile-visible{
+  .back-block-wrapper{
+    @include max-screen($md){
+      position: relative;
+      z-index: 12;
+      background-color: #fff;
+    }
+  }
+  .back-block{
+    @include max-screen($md){
+      border-bottom: none;
+      
+    }
+  }
+}
 .back-link{
   padding-left: 33px;
   position: relative;
   font-size: 28px;
-  line-height: 28px;
+  line-height: 30px;
   font-family: $navm;
   text-decoration: none;
   color: $text;
   transition: color .2s;
+  @include  dots-family;
 
   @media (any-hover: hover) { //только для устройств с ховером
 

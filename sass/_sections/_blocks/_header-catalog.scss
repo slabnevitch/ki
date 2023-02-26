@@ -295,6 +295,7 @@
 		padding-top: 15px;
 		background-color: #fff;
 		overflow-y: visible;
+		z-index: 13;
 	}
 	@include max-screen($mins){
 		height: calc(100% - 56px - 55px);
