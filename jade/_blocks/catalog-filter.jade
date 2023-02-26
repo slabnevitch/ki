@@ -1,5 +1,11 @@
 //- фильтр каталога
 .ctlg-filter
+	.ctlg-filter__header.header-ctlg-filter
+		.header-ctlg-filter__back Фильтры
+			.button-close
+				+icon('arrow-left')
+		button(type="button").header-ctlg-filter__clear очистить
+
 	form(action="#").accordion.ctlg-filter__list
 		.accordion__item.ctlg-filter__item
 			.accordion__link.ctlg-filter__link Шуруповерты

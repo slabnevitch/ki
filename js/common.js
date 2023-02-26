@@ -83,6 +83,15 @@
 		console.log(e.target);
 		var targ = e.target;
 
+		// page-catalog-filter toggle
+		if(targ.classList.contains('page-catalog__fitlter-toggler')){
+			document.querySelector('.page-catalog__filter').classList.add('opened');
+		}
+		if(targ.classList.contains('header-ctlg-filter__back') && targ.closest('.header-ctlg-filter__back') !== null){
+			document.querySelector('.page-catalog__filter').classList.remove('opened');
+		}	
+		// END page-catalog-filter toggle
+		
 		// mob-catalog filter toggle
 		if(targ.classList.contains('mob-catalog-filter__item')){
 			targ.classList.add('active');
