@@ -6252,10 +6252,6 @@ h6 {
   color: #C4C4C4;
 }
 
-.multilevel-panel .multilevel-menu .with-submenu > a::after {
-  display: none;
-}
-
 .multilevel-panel__label {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -10550,6 +10546,10 @@ h6 {
     padding-top: 50px;
     padding-bottom: 79px;
     background-color: #fff;
+  }
+
+  .multilevel-panel .multilevel-menu .with-submenu > a::after {
+    display: none;
   }
 
   .multilevel-panel .multilevel-menu {
