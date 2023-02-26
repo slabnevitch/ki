@@ -83,12 +83,14 @@
 		console.log(e.target);
 		var targ = e.target;
 
+		console.log(targ.hasAttribute('data-catalogfilter-open'));
 		// page-catalog-filter toggle
-		if(targ.classList.contains('page-catalog__fitlter-toggler')){
-			document.querySelector('.page-catalog__filter').classList.add('opened');
+		if(targ.hasAttribute('data-catalogfilter-open')){
+			document.body.classList.add('page-catalog-filter-opened');
+			// document.querySelector('.page-catalog__filter').classList.add('opened');
 		}
-		if(targ.classList.contains('header-ctlg-filter__back') && targ.closest('.header-ctlg-filter__back') !== null){
-			document.querySelector('.page-catalog__filter').classList.remove('opened');
+		if(targ.hasAttribute('data-catalogfilter-close') || targ.closest('[data-catalogfilter-close]') !== null){
+			document.body.classList.remove('page-catalog-filter-opened');
 		}	
 		// END page-catalog-filter toggle
 		

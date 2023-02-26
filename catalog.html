@@ -6838,7 +6838,7 @@
                 <div class="page-catalog__filter">
                   <div class="ctlg-filter">
                     <div class="ctlg-filter__header header-ctlg-filter">
-                      <div class="header-ctlg-filter__back">Фильтры
+                      <div data-catalogfilter-close class="header-ctlg-filter__back">Фильтры
                         <div class="button-close">
                               <svg class="icon icon-arrow-left ">
                                 <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
@@ -8716,7 +8716,8 @@
               </div>
             </div>
           </div>
-          <button type="button" class="page-catalog__fitlter-toggler">фильтр</button>
+          <button type="button" data-catalogfilter-open class="page-catalog__fitlter-toggler">фильтр</button>
+          <button type="button" data-catalogfilter-close class="page-catalog__fitlter-toggler page-catalog__fitlter-toggler--reset">Выбрать</button>
         </div>
       </div>
       <footer class="footer">

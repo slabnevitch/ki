@@ -1,9 +1,16 @@
 /*--------------------catalog-filter----------------------*/
-.ctlg-filter {}
+.ctlg-filter {
+	@include max-screen($md){
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+}
 .ctlg-filter__header{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex: 0 0 auto;
 
 	@include min-screen($md){
 		display: none;
@@ -45,7 +52,13 @@
 	text-transform: uppercase;
 	color: #767676;
 }
-.ctlg-filter__list {}
+.ctlg-filter__list {
+	@include max-screen($md){
+		flex: 1 1 auto;
+		overflow-y: auto;
+		padding-bottom: 79px;
+	}
+}
 .ctlg-filter__item {
 	list-style-type: none;	
 	padding-bottom: 12px;	

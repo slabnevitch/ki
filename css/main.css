@@ -5264,6 +5264,16 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------END ui-page----------------------*/
 /*--------------------END ui----------------------*/
 /*--------------------catalog-filter----------------------*/
+@media only screen and (max-width: 959.98px) {
+  .ctlg-filter {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 .ctlg-filter__header {
   display: -ms-flexbox;
   display: flex;
@@ -5271,6 +5281,8 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 @media only screen and (min-width: 959.98px) {
   .ctlg-filter__header {
@@ -5317,6 +5329,15 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 12px;
   text-transform: uppercase;
   color: #767676;
+}
+
+@media only screen and (max-width: 959.98px) {
+  .ctlg-filter__list {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding-bottom: 79px;
+  }
 }
 
 .ctlg-filter__item {
@@ -10915,13 +10936,28 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.4s;
 }
 @media only screen and (max-width: 959.98px) {
+  .page-catalog__filter:after {
+    content: "";
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 79px;
+    background-image: url(../img/header-catalog/mob-catalog/mob-catalog-bottom-cover.svg);
+    background-position: botom 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 9;
+  }
+}
+@media only screen and (max-width: 959.98px) {
   .page-catalog__filter {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    overflow-y: auto;
     max-width: none;
     margin-left: 0;
     margin-right: 0;
@@ -10932,7 +10968,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media only screen and (max-width: 959.98px) {
-  .page-catalog__filter.opened {
+  .page-catalog-filter-opened .page-catalog__filter {
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
@@ -11067,6 +11103,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "NavigoBlack", sans-serif;
   color: #FFFFFF;
   z-index: 5;
+}
+.page-catalog-filter-opened .page-catalog__fitlter-toggler {
+  display: none;
+}
+.page-catalog__fitlter-toggler--reset {
+  display: none;
+  background-color: #003D9E;
+  z-index: 14;
+}
+.page-catalog-filter-opened .page-catalog__fitlter-toggler--reset {
+  display: block;
 }
 
 /*--------------------END page-catalog----------------------*/
