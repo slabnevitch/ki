@@ -4,7 +4,7 @@ block title
 	| Каталог
 
 block content
-	.page
+	.page.page-catalog
 		.wrapper
 			+menu('breadcrumbs', ['главная', 'Каталог', 'Электроинструменты'])
 
@@ -15,11 +15,12 @@ block content
 			
 		include _sections/page-brands/brand-tiles
 		
+
 		.wrapper
 			h2.sect-title Акции	
 		include _sections/page-main/main-slider		
 
-		catalog-chapter
+		.catalog-chapter
 			//- каталог-сорт с кнопками переключения вида карточек на всех разрешениях
 			include _blocks/catalog-sort
 			

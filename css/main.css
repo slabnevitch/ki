@@ -10924,6 +10924,23 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   top: 3px;
 }
+.page-catalog .brands-tiles {
+  padding-top: 15px;
+}
+.page-catalog .brands-tiles__top {
+  display: none;
+}
+@media only screen and (max-width: 767.98px) {
+  .page-catalog .main-slider > .wrapper {
+    padding-bottom: 23px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .page-catalog .main-slider .swiper-pagination {
+    display: block;
+    margin-top: 2px;
+  }
+}
 
 .page-catalog__filter {
   box-sizing: border-box;

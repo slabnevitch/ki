@@ -25,7 +25,27 @@
 	.catalog-sort__actions{
 		 position: relative;
     	top: 3px;
-	}	
+	}
+	.brands-tiles{
+		padding-top: 15px;
+	}
+	.brands-tiles__top{
+		display: none;
+	}
+	.main-slider{
+		& > .wrapper{
+			@include max-screen($sm){
+				padding-bottom: 23px;
+			}
+
+		}
+		.swiper-pagination{
+			@include max-screen($sm){
+				display: block;
+				margin-top: 2px;
+			}
+		}
+	}		
 }
 .page-catalog__filter{
 	@include col();
