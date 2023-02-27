@@ -201,6 +201,10 @@
 	z-index: 5;
 	white-space: nowrap;
 
+	@include min-screen($md){
+		display: none;
+	}
+
 	.page-catalog-filter-opened &{
 		display: none;
 	}
@@ -212,6 +216,10 @@
 
 		.page-catalog-filter-opened &{
 			display: block;
+
+			@include min-screen($md){
+				display: none;
+			}
 		}
 	}
 }
