@@ -9,11 +9,8 @@ block content
 		.wrapper
 			+menu('breadcrumbs', ['главная', 'Каталог', 'Электроинструменты', 'Шуруповерты'])
 
-		.wrapper.back-block-wrapper
-			.back-block
-				a(href="#").back-link Шуруповерты
-					+icon('arrow-left')
-			
+		+backLink('Шуруповерты')
+				
 		include _sections/page-brands/brand-tiles
 		
 

@@ -2,16 +2,14 @@ extends _misc/main
 
 block title
 	| Каталог__006
+	- var pageIndex = 'cat_006';
 
 block content
 	.page.page-catalog
 		.wrapper
 			+menu('breadcrumbs', ['главная', 'Каталог', 'Электроинструменты'])
 
-		.wrapper
-			.back-block
-				a(href="#").back-link Электроинструменты
-					+icon('arrow-left')
+		+backLink('Электроинструменты')
 			
 		include _sections/page-brands/brand-tiles
 		

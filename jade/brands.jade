@@ -8,10 +8,7 @@ block content
 		.wrapper
 			+menu('breadcrumbs', ['главная',  'Хиты продаж', 'Популярные бренды'])
 
-		.wrapper
-			.back-block
-				a(href="#").back-link Популярные бренды
-					+icon('arrow-left') 
+		+backLink('Популярные бренды')
 		
 		include _sections/page-brands/brands-logos
 

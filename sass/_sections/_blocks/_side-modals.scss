@@ -42,6 +42,15 @@
 		}
 	}
 
+	&.availability-catalog-modal{
+		.product-card--mini{
+			margin-bottom: 28px;
+		}
+
+		.catalog-availability-modal-visible &{
+			transform: translateX(0);
+		}
+	}
 	.product-card--mini {
 		padding-bottom: 20px;
 		margin-bottom: 10px;
@@ -242,7 +251,7 @@
 		background-image: url(../img/address-list-gradient.svg);
 		background-position: 0 0;
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: 100%;
 	}
 	// .side-modal__inner {
 	// 	position: relative;

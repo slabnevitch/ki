@@ -255,3 +255,51 @@
 							.address-list__shedule Пн-Вс: 8.00-20.00
 
 							a(href="#").btn.btn-sm.btn-loc Как добраться
+
+.side-modal.availability-modal.availability-catalog-modal#modal-availability(data-visible-class="catalog-availability-modal-visible")
+	button(type="button").side-modal__close.button-close
+		+icon('ctlg-close')
+	
+	.side-modal__inner
+		.side-modal__title Есть в наличии
+		.side-modal__content
+			.product-card.product-card--mini
+				.product-card__img-wrap
+					.billet.billet--action.billet--mini
+					a(href="#").product-card__border
+						span.product-card__img
+							img(src="img/product-card/prod-sm.jpg" alt="alt")
+				
+				
+				.product-card__chars
+					.product-card__price
+						a(href="#").product-card__price-block
+							.product-price 14 729 ₽
+							.product-price-sale 18 411₽
+						
+						a(href="#").product-bonus
+							.product-bonus__val 99
+							+icon('bonus')
+				
+					a(href="#").product-card__name Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
+
+					.product-card__rating-wrap
+						.product-card__rating
+							+crystalRating('4,0')
+			- var address = [{loc: 'ул. Северная, 320', aval: 18}, {loc: 'ул. Ростовское шоссе, 14/6', aval: 11}, {loc: 'ул. Ростовское шоссе, 30/3', aval: 8}]
+			.address-list__items
+				each item, i in address
+					.address-list__item
+						.address-list__img._fit
+							.billet.billet--new= item.aval + " шт"
+							img._fit-img(src="img/addresses/"+(i+1)+".jpg" alt="alt")
+						.address-list__content
+							.address-list__loc= item.loc
+							.address-list__phones
+								.address-list__phones-row
+									a(href="tel:88612128253").address-list__phone 8 (861) 212-8-253
+								.address-list__phones-row
+									a(href="tel:89885942025").address-list__phone 8 (988) 594-20-25
+							.address-list__shedule Пн-Вс: 8.00-20.00
+
+							a(href="#").btn.btn-sm.btn-loc Как добраться

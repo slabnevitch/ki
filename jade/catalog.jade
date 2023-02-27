@@ -8,10 +8,7 @@ block content
 		.wrapper
 			+menu('breadcrumbs', ['главная', 'Каталог', 'Электроинструменты', 'Шуруповерты'])
 
-		.wrapper
-			.back-block
-				a(href="#").back-link Шуруповерты
-					+icon('arrow-left')
+		+backLink('Шуруповерты')
 		
 		.wrapper.p-12
 			- var tags = ['аккумуляторные', 'бесщеточные', 'с битами', 'bosch', 'makita'];
