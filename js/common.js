@@ -95,6 +95,27 @@
 		}
 		// END open/close catalog-sort__select fstdropdown
 
+		// catalog product availabel modal open
+		if(targ.classList.contains('info-product-card__avalvalue') || targ.closest('.info-product-card__avalvalue') !== null){
+			e.preventDefault();
+			document.body.classList.add('catalog-availability-modal-visible', 'covered');
+		}
+		
+		// END catalog product availabel modal open
+
+		// breadcrumbs mobile toggle
+		if(targ.classList.contains('back-link') || targ.closest('.back-link') !== null && screen.width <= 969.98){
+			e.preventDefault();
+			document.body.classList.toggle('breadcrumbs-mobile-visible');
+			document.documentElement.classList.toggle('lock');
+			// setTimeout(function() {
+				document.body.classList.toggle('covered');
+
+			// }, 500)
+		}
+		
+		// END breadcrumbs mobile toggle
+
 		// page-catalog-filter toggle
 		if(targ.hasAttribute('data-catalogfilter-open')){
 			document.body.classList.add('page-catalog-filter-opened');
