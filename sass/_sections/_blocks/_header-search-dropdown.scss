@@ -48,8 +48,11 @@
 	}
 
 	&--cards{
-		height: 532px;
 		max-height: calc(100vh - 124px);
+
+		@include max-screen($md){
+			height: 532px;
+		}
 		& > .wrapper-smart{
 			height: 100%;
 		}
@@ -132,7 +135,15 @@
 		max-width: 100%;	
 	}
 
+
 	.product-card--mini{
+		@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				.product-card__name{
+					font-weight: 700;
+				}
+			}
+		}
 		&:not(:last-child){
 			margin-bottom: 9px;
 		}
@@ -140,6 +151,7 @@
 }
 .result-row-value {
 	position: relative;
+
 	&:not(:last-child){
 		@include max-screen($md){
 			margin-bottom: 21px;	
