@@ -11,8 +11,12 @@ block content
 		+backLink('Шуруповерты')
 
 		.wrapper
-			.page-catalog__result По вашему запросу товары не найдены
-			.page-catalog__result-text Измените или сбросьте значения фильтров.
+			.page-catalog__result.result-page-catalog
+				.result-page-catalog__title По вашему запросу товары не найдены
+				.result-page-catalog__text Измените или сбросьте значения фильтров.
+				.result-page-catalog__footer
+					a(href="#").btn.btn-sm в каталог
+					a(href="#").btn.btn-sm.btn-gray на главную
 	
 		
 		button(type="button" data-catalogfilter-open).page-catalog__fitlter-toggler фильтр (4)

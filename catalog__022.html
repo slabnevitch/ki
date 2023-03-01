@@ -6802,8 +6802,11 @@
                 </div>
               </div>
           <div class="wrapper">
-            <div class="page-catalog__result">По вашему запросу товары не найдены</div>
-            <div class="page-catalog__result-text">Измените или сбросьте значения фильтров.</div>
+            <div class="page-catalog__result result-page-catalog">
+              <div class="result-page-catalog__title">По вашему запросу товары не найдены</div>
+              <div class="result-page-catalog__text">Измените или сбросьте значения фильтров.</div>
+              <div class="result-page-catalog__footer"><a href="#" class="btn btn-sm">в каталог</a><a href="#" class="btn btn-sm btn-gray">на главную</a></div>
+            </div>
           </div>
           <button type="button" data-catalogfilter-open class="page-catalog__fitlter-toggler">фильтр (4)</button>
         </div>
@@ -7606,7 +7609,11 @@
       <div class="popup__body">
         <div class="product-card product-card--mini">
           <div class="product-card__img-wrap">
-            <div class="billet billet--action billet--mini"></div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
+            <div class="billet billet--action billet--mini">
+                  <svg class="icon icon-percents ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#percents"></use>
+                  </svg>
+            </div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
           </div>
           <div class="product-card__chars">
             <div class="product-card__price"><a href="#" class="product-card__price-block">
@@ -7634,24 +7641,7 @@
               </div>
             </div>
             <div class="product-card__footer">
-              <div data-min="0" data-max="100" class="counter">
-                <button class="counter__button counter-minus">
-                      <svg class="icon icon-minus ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#minus"></use>
-                      </svg>
-                </button>
-                <div class="counter__block">
-                  <input autocomplete="off" type="hidden" name="name" value="1">
-                  <div class="counter__count">1</div>
-                  <div class="counter__measures">шт</div>
-                </div>
-                <button class="counter__button counter-plus">
-                      <svg class="icon icon-plus ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#plus"></use>
-                      </svg>
-                </button>
-              </div>
-              <div class="product-card__actions"><a href="#" class="product-card__action">
+              <div class="product-card__actions"><a href="#" class="product-card__action active">
                       <svg class="icon icon-favourites ">
                         <use xlink:href="img/icons-svg/symbol/sprite.svg#favourites"></use>
                       </svg></a><a href="#" class="product-card__action">
@@ -7674,7 +7664,11 @@
       <div class="popup__body">
         <div class="product-card product-card--mini">
           <div class="product-card__img-wrap">
-            <div class="billet billet--action billet--mini"></div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
+            <div class="billet billet--action billet--mini">
+                  <svg class="icon icon-percents ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#percents"></use>
+                  </svg>
+            </div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
           </div>
           <div class="product-card__chars">
             <div class="product-card__price"><a href="#" class="product-card__price-block">
@@ -7702,30 +7696,6 @@
               </div>
             </div>
             <div class="product-card__footer">
-              <div data-min="0" data-max="100" class="counter">
-                <button class="counter__button counter-minus">
-                      <svg class="icon icon-minus ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#minus"></use>
-                      </svg>
-                </button>
-                <div class="counter__block">
-                  <input autocomplete="off" type="hidden" name="name" value="1">
-                  <div class="counter__count">1</div>
-                  <div class="counter__measures">шт</div>
-                </div>
-                <button class="counter__button counter-plus">
-                      <svg class="icon icon-plus ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#plus"></use>
-                      </svg>
-                </button>
-              </div>
-              <div class="product-card__actions"><a href="#" class="product-card__action">
-                      <svg class="icon icon-favourites ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#favourites"></use>
-                      </svg></a><a href="#" class="product-card__action">
-                      <svg class="icon icon-compare ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
-                      </svg></a></div>
             </div>
           </div>
         </div>

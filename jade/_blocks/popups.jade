@@ -41,6 +41,7 @@
 		.product-card.product-card--mini
 			.product-card__img-wrap
 				.billet.billet--action.billet--mini
+					+icon('percents')
 				a(href="#").product-card__border
 					span.product-card__img
 						img(src="img/product-card/prod-sm.jpg" alt="alt")
@@ -62,7 +63,7 @@
 						+crystalRating('4,0')
 
 				.product-card__footer
-					.counter(data-min="0" data-max="100")
+					//- .counter(data-min="0" data-max="100")
 						button.counter__button.counter-minus
 							+icon('minus')
 						.counter__block
@@ -73,7 +74,7 @@
 							+icon('plus')
 
 					.product-card__actions
-						a(href="#").product-card__action
+						a(href="#").product-card__action.active
 							+icon('favourites')
 						a(href="#").product-card__action
 							+icon('compare')
@@ -92,6 +93,7 @@
 		.product-card.product-card--mini
 			.product-card__img-wrap
 				.billet.billet--action.billet--mini
+					+icon('percents')
 				a(href="#").product-card__border
 					span.product-card__img
 						img(src="img/product-card/prod-sm.jpg" alt="alt")
@@ -113,7 +115,7 @@
 						+crystalRating('4,0')
 
 				.product-card__footer
-					.counter(data-min="0" data-max="100")
+					//- .counter(data-min="0" data-max="100")
 						button.counter__button.counter-minus
 							+icon('minus')
 						.counter__block
@@ -123,7 +125,7 @@
 						button.counter__button.counter-plus
 							+icon('plus')
 
-					.product-card__actions
+					//- .product-card__actions
 						a(href="#").product-card__action
 							+icon('favourites')
 						a(href="#").product-card__action
