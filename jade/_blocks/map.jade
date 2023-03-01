@@ -3,7 +3,7 @@
 		+icon('ctlg-close')
 	
 	.map-fullscreen__select
-		button.map-fullscreen__back
+		button(type="button").map-fullscreen__back(data-modal=pageIndex === '022' ? "catalog-availability-modal-visible" : pageIndex === '019' ? "address-modal-visible" : "")
 			+icon('arrow-left')
 			
 		form(action="#" class="form").address-side-modal__form

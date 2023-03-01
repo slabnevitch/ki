@@ -1,4 +1,6 @@
-ymaps.ready(fullMapInit);
+  ymaps.ready(fullMapInit);
+if (screen.width > 959.98){
+}
 function fullMapInit(){     
 	var myMap = new ymaps.Map("map", {
 		center: [45.047920, 38.974579],
