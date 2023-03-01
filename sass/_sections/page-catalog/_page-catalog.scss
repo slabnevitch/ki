@@ -223,25 +223,31 @@
 		}
 	}
 }
-.page-catalog__result{
+.result-page-catalog{
 	margin-top: 16px;
-	margin-bottom: 12px;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 18px;
-
-	@include max-screen($xsss){
-		max-width: 150px;
-	}
+	margin-bottom: 60px;
 }
-.page-catalog__result-text{
-	margin-bottom: 30px;
-	font-size: 12px;
-	line-height: 15px;
-	color: $text-l;
+.result-page-catalog__title{
+	max-width: 300px;
+	margin-bottom: 16px;
+	font-size: 28px;
+	line-height: 30px;
+	font-family: $navm;
+}
+.result-page-catalog__text{
+	margin-bottom: 22px;
+	max-height: 410px;
+	font-size: 14px;
+	line-height: 17px;
+}
+.result-page-catalog__footer{
+	display: flex;
+	align-items: center;
 
-	@include max-screen($xsss){
-		max-width: 150px;
+	.btn{
+		&:not(:last-child){
+			margin-right: 10px;
+		}
 	}
 }
 /*--------------------END page-catalog----------------------*/ 

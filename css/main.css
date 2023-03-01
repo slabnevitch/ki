@@ -8210,6 +8210,19 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
+.side-modal.availability-modal:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 79px;
+  bottom: 0;
+  left: 0;
+  background-image: url(../img/address-list-gradient.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 @media only screen and (max-width: 959.98px) {
   .side-modal.availability-modal .side-modal__title {
     padding-right: 60px;
@@ -9471,6 +9484,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .catalog-toggle__burger {
   width: 20px;
+  height: 15px;
   margin-right: 9px;
   text-align: center;
 }
@@ -9484,7 +9498,7 @@ h1, h2, h3, h4, h5, h6 {
 .catalog-toggle__burger .icon-ctlg-close {
   display: none;
   color: #003D9E;
-  font-size: 12px;
+  font-size: 14px;
 }
 .header-catalog-opened .catalog-toggle__burger .icon-ctlg-close {
   display: inline-block;
@@ -9500,6 +9514,9 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(1px);
 }
 
+.catalog-toggle__type {
+  margin-top: 2px;
+}
 .catalog-toggle__type svg {
   fill: #fff;
 }
@@ -11337,29 +11354,34 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.page-catalog__result {
+.result-page-catalog {
   margin-top: 16px;
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
-}
-@media only screen and (max-width: 375px) {
-  .page-catalog__result {
-    max-width: 150px;
-  }
+  margin-bottom: 60px;
 }
 
-.page-catalog__result-text {
-  margin-bottom: 30px;
-  font-size: 12px;
-  line-height: 15px;
-  color: rgba(0, 0, 0, 0.6);
+.result-page-catalog__title {
+  max-width: 300px;
+  margin-bottom: 16px;
+  font-size: 28px;
+  line-height: 30px;
+  font-family: "NavigoMedium", sans-serif;
 }
-@media only screen and (max-width: 375px) {
-  .page-catalog__result-text {
-    max-width: 150px;
-  }
+
+.result-page-catalog__text {
+  margin-bottom: 22px;
+  max-height: 410px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.result-page-catalog__footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.result-page-catalog__footer .btn:not(:last-child) {
+  margin-right: 10px;
 }
 
 /*--------------------END page-catalog----------------------*/

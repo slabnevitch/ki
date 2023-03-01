@@ -453,6 +453,7 @@
 }
 .catalog-toggle__burger{
 		width: 20px;
+		height: 15px;
 		margin-right: 9px;
 		text-align: center;
 
@@ -467,7 +468,7 @@
 		.icon-ctlg-close	{
 			display: none;
 			color: $accent;
-			font-size: 12px;
+			font-size: 14px;
 
 			.header-catalog-opened &{
 				display: inline-block;
@@ -484,6 +485,7 @@
 	transform: translateY(1px);
 }
 .catalog-toggle__type {
+	margin-top: 2px;
 	svg{
 		fill: #fff;
 	}
