@@ -8377,7 +8377,11 @@
         <div class="side-modal__title">Под заказ</div>
         <div class="product-card product-card--mini">
           <div class="product-card__img-wrap">
-            <div class="billet billet--action billet--mini"></div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
+            <div class="billet billet--action billet--mini">
+                  <svg class="icon icon-percents ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#percents"></use>
+                  </svg>
+            </div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
           </div>
           <div class="product-card__chars">
             <div class="product-card__price"><a href="#" class="product-card__price-block">
@@ -8784,10 +8788,33 @@
       </button>
       <div class="side-modal__inner">
         <div class="side-modal__title">Есть в наличии</div>
+        <form action="#" class="form address-side-modal__form">
+          <div class="address-side-modal__select"> 
+            <select name="locations" data-searchdisable="true" class="fstdropdown-select">
+              <option value="1">Краснодар</option>
+              <option value="2">Армавир</option>
+              <option value="3">Кропоткин</option>
+              <option value="4">Тихорецк</option>
+              <option value="5">Славянск-на-Кубани</option>
+              <option value="6">Тимашевск</option>
+              <option value="7">Белореченск</option>
+            </select>
+          </div>
+          <button type="button" id="full-map-open" class="side-modal__to-map to-map-side-modal">
+            <div class="to-map-side-moda__title">На карте</div>
+                <svg class="icon icon-loc ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#loc"></use>
+                </svg>
+          </button>
+        </form>
         <div class="side-modal__content">
           <div class="product-card product-card--mini">
             <div class="product-card__img-wrap">
-              <div class="billet billet--action billet--mini"></div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
+              <div class="billet billet--action billet--mini">
+                    <svg class="icon icon-percents ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#percents"></use>
+                    </svg>
+              </div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
             </div>
             <div class="product-card__chars">
               <div class="product-card__price"><a href="#" class="product-card__price-block">
@@ -8912,7 +8939,11 @@
       <div class="popup__body">
         <div class="product-card product-card--mini">
           <div class="product-card__img-wrap">
-            <div class="billet billet--action billet--mini"></div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
+            <div class="billet billet--action billet--mini">
+                  <svg class="icon icon-percents ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#percents"></use>
+                  </svg>
+            </div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
           </div>
           <div class="product-card__chars">
             <div class="product-card__price"><a href="#" class="product-card__price-block">
@@ -8940,24 +8971,7 @@
               </div>
             </div>
             <div class="product-card__footer">
-              <div data-min="0" data-max="100" class="counter">
-                <button class="counter__button counter-minus">
-                      <svg class="icon icon-minus ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#minus"></use>
-                      </svg>
-                </button>
-                <div class="counter__block">
-                  <input autocomplete="off" type="hidden" name="name" value="1">
-                  <div class="counter__count">1</div>
-                  <div class="counter__measures">шт</div>
-                </div>
-                <button class="counter__button counter-plus">
-                      <svg class="icon icon-plus ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#plus"></use>
-                      </svg>
-                </button>
-              </div>
-              <div class="product-card__actions"><a href="#" class="product-card__action">
+              <div class="product-card__actions"><a href="#" class="product-card__action active">
                       <svg class="icon icon-favourites ">
                         <use xlink:href="img/icons-svg/symbol/sprite.svg#favourites"></use>
                       </svg></a><a href="#" class="product-card__action">
@@ -8980,7 +8994,11 @@
       <div class="popup__body">
         <div class="product-card product-card--mini">
           <div class="product-card__img-wrap">
-            <div class="billet billet--action billet--mini"></div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
+            <div class="billet billet--action billet--mini">
+                  <svg class="icon icon-percents ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#percents"></use>
+                  </svg>
+            </div><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a>
           </div>
           <div class="product-card__chars">
             <div class="product-card__price"><a href="#" class="product-card__price-block">
@@ -9008,35 +9026,44 @@
               </div>
             </div>
             <div class="product-card__footer">
-              <div data-min="0" data-max="100" class="counter">
-                <button class="counter__button counter-minus">
-                      <svg class="icon icon-minus ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#minus"></use>
-                      </svg>
-                </button>
-                <div class="counter__block">
-                  <input autocomplete="off" type="hidden" name="name" value="1">
-                  <div class="counter__count">1</div>
-                  <div class="counter__measures">шт</div>
-                </div>
-                <button class="counter__button counter-plus">
-                      <svg class="icon icon-plus ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#plus"></use>
-                      </svg>
-                </button>
-              </div>
-              <div class="product-card__actions"><a href="#" class="product-card__action">
-                      <svg class="icon icon-favourites ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#favourites"></use>
-                      </svg></a><a href="#" class="product-card__action">
-                      <svg class="icon icon-compare ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
-                      </svg></a></div>
             </div>
           </div>
         </div>
       </div>
       <footer class="popup__footer"><a href="/" class="popup__button">Продолжить покупки</a><a href="/" class="popup__button">В избранное</a></footer>
+    </div>
+    <div class="map-fullscreen">
+      <button type="button" class="map-fullscreen__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="map-fullscreen__select">
+        <button type="button" data-modal="" class="map-fullscreen__back">
+              <svg class="icon icon-arrow-left ">
+                <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
+              </svg>
+        </button>
+        <form action="#" class="form address-side-modal__form">
+          <div class="address-side-modal__select"> 
+            <select name="locations" data-searchdisable="true" class="fstdropdown-select">
+              <option value="1">Краснодар</option>
+              <option value="2">Армавир</option>
+              <option value="3">Кропоткин</option>
+              <option value="4">Тихорецк</option>
+              <option value="5">Славянск-на-Кубани</option>
+              <option value="6">Тимашевск</option>
+              <option value="7">Белореченск</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="map-marker">11 шт</div>
+      <div class="map-marker">48 шт</div>
+      <div class="map-marker">103 шт</div>
+      <div class="map-marker map-marker--lg">18 шт</div>
+      <div class="map-marker">4 шт</div>
+      <div id="map" class="map-fullscreen__map"></div>
     </div>
     <script src="js/libs/css_browser_selector.js"></script>
     <script src="js/libs/service-functions/remove-class.js"></script>

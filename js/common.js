@@ -251,9 +251,25 @@
 		if(targ.classList.contains('side-modal__close') || targ.closest('.side-modal__close') !== null){
 			var visibleClass = e.target.closest('.side-modal').dataset.visibleClass;
 			console.log(visibleClass)
-			document.body.classList.remove(visibleClass, 'side-modal-visible', 'map-with-modal', 'fullscreen-map-visible', 'covered');
+			if(screen.width >= 959.98){
+				document.body.classList.remove(visibleClass, 'side-modal-visible', 'map-with-modal', 'fullscreen-map-visible', 'covered');
+			}else{
+				document.body.classList.remove(visibleClass, 'side-modal-visible', 'map-with-modal');
+			}
 		}
 		if(targ.classList.contains('map-fullscreen__close') || targ.closest('.map-fullscreen__close') !== null){
+			document.body.classList.remove('fullscreen-map-visible');
+		}
+		if(targ.classList.contains('side-modal__to-map') || targ.closest('.side-modal__to-map') !== null){
+			if(screen.width >= 959.98){
+				document.body.classList.add('fullscreen-map-visible', 'map-with-modal');
+			}else{
+				document.body.classList.remove(targ.closest('.side-modal').dataset.visibleClass, 'side-modal-visible', 'map-with-modal');
+				document.body.classList.add('fullscreen-map-visible', 'map-with-modal');
+			}
+		}
+		if(targ.classList.contains('map-fullscreen__back') || targ.closest('.map-fullscreen__back') !== null){
+			document.body.classList.add(targ.closest('.map-fullscreen__back').dataset.modal, 'map-with-modal');
 			document.body.classList.remove('fullscreen-map-visible');
 		}
 		// END map modals toggle
