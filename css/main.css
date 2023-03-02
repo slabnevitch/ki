@@ -4908,10 +4908,15 @@ h1, h2, h3, h4, h5, h6 {
   padding: 5px 9px 5px 6px;
   border-radius: 0 20px 20px 0;
   font-size: 10px;
-  line-height: 14px;
+  line-height: 1.4;
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+@media only screen and (min-width: 1440px) {
+  .billet {
+    font-size: 12px;
+  }
 }
 @media only screen and (max-width: 576px) {
   .billet__value {
@@ -5015,6 +5020,12 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
   transition: background-color 0.3s;
 }
+@media only screen and (min-width: 1440px) {
+  .socials__link {
+    width: 40px;
+    height: 40px;
+  }
+}
 .socials__link .icon {
   display: block;
   max-width: 100%;
@@ -5026,6 +5037,11 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(-50%, -50%);
   font-size: 11.88px;
 }
+@media only screen and (min-width: 1440px) {
+  .socials__link .icon {
+    font-size: 14px;
+  }
+}
 @media (any-hover: hover) {
   .socials__link--soc-vk:hover {
     background-color: #4D7DF7;
@@ -5034,6 +5050,11 @@ h1, h2, h3, h4, h5, h6 {
 .socials__link--soc-twi .icon {
   font-size: 13.24px;
 }
+@media only screen and (min-width: 1440px) {
+  .socials__link--soc-twi .icon {
+    font-size: 16px;
+  }
+}
 @media (any-hover: hover) {
   .socials__link--soc-youtb:hover {
     background-color: #FC0000;
@@ -5041,6 +5062,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .socials__link--soc-youtb .icon {
   font-size: 12.73px;
+}
+@media only screen and (min-width: 1440px) {
+  .socials__link--soc-youtb .icon {
+    font-size: 15px;
+  }
 }
 @media (any-hover: hover) {
   .socials__link--soc-ok {
@@ -5054,6 +5080,11 @@ h1, h2, h3, h4, h5, h6 {
 .socials__link--soc-ok .icon {
   font-size: 19.02px;
 }
+@media only screen and (min-width: 1440px) {
+  .socials__link--soc-ok .icon {
+    font-size: 21px;
+  }
+}
 @media (any-hover: hover) {
   .socials__link--soc-tg:hover {
     background-color: #00C0FC;
@@ -5062,6 +5093,11 @@ h1, h2, h3, h4, h5, h6 {
 .socials__link--soc-tg .icon {
   font-size: 14.42px;
 }
+@media only screen and (min-width: 1440px) {
+  .socials__link--soc-tg .icon {
+    font-size: 16px;
+  }
+}
 @media (any-hover: hover) {
   .socials__link--soc-pint:hover {
     background-color: #E72A00;
@@ -5069,6 +5105,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .socials__link--soc-pint .icon {
   font-size: 18.51px;
+}
+@media only screen and (min-width: 1440px) {
+  .socials__link--soc-pint .icon {
+    font-size: 21px;
+  }
 }
 
 .pagination-wrapper {
@@ -11507,11 +11548,134 @@ h1, h2, h3, h4, h5, h6 {
   .location-search__close .icon {
     font-size: 14px;
   }
+  .catalog-header__card {
+    min-height: 244px;
+  }
+  .card-catalog-header__title {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .card-catalog-header__img {
+    max-height: 128px;
+  }
+  .catalog-header__tag {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 30px;
+    font-size: 12px;
+    line-height: 14px;
+  }
   .page-main__tagswrap {
     height: 30px;
   }
   .slider-nav .icon {
     font-size: 16px;
+  }
+  .product-card__action .icon-favourites {
+    font-size: 28px;
+  }
+  .product-card__action .icon-compare {
+    font-size: 24px;
+  }
+  .product-price {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .product-bonus__val {
+    font-size: 14px;
+    line-height: 10px;
+  }
+  .product-bonus .icon-bonus {
+    margin-left: 3px;
+    color: #A9A9A9;
+    font-size: 12px;
+  }
+  .product-price-sale {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .product-card__price {
+    height: 36px;
+  }
+  .product-card__info {
+    font-size: 14px;
+    line-height: 17px;
+    height: 58px;
+  }
+  .cards-more__link {
+    font-size: 16px;
+  }
+  .features__content {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .features__item:nth-child(2) .features__content {
+    max-width: 157px;
+  }
+  .features__item:nth-child(3) .features__content {
+    max-width: 134px;
+  }
+  .features__icon {
+    width: 90px;
+    height: 90px;
+  }
+  .features__icon img {
+    width: 100%;
+  }
+  .cooperation__title {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .item-news__date {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .banner-card__name {
+    min-height: 35px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .subscribe-footer__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .subscribe-footer__caption {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .accordion-footer__link {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .menu-footer__link {
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+    text-decoration: none;
+  }
+  .footer-contacts__phone {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .footer-contacts__caption {
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .footer__pay {
+    -ms-flex: 0 0 40px;
+    flex: 0 0 40px;
+  }
+  .footer__pay img {
+    width: 100%;
+  }
+  .footer-policy, .footer-copyright {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

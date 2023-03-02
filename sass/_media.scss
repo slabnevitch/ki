@@ -1,14 +1,138 @@
 @media only screen and (min-width: $scale){
+	
 	.location-search__close .icon{
 		font-size: 14px;
 	}
-
+	.catalog-header__card{
+		min-height: 244px;
+	}
+	.card-catalog-header__title {
+       font-size: 12px;
+	    line-height: 14px;
+	}
+	.card-catalog-header__img {
+		max-height: 128px;
+	}
+	.catalog-header__tag{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 30px;
+		font-size: 12px;
+   		line-height: 14px;
+	}
 	.page-main__tagswrap{
 		height: 30px;
 	}
 
 	.slider-nav .icon{
 		font-size: 16px;
+	}
+	.product-card__action .icon-favourites{
+		font-size: 28px;
+	}
+	.product-card__action .icon-compare{
+		font-size: 24px;
+	}
+	.product-price {
+	    font-size: 20px;
+	    line-height: 24px;
+	}
+	.product-bonus__val {
+	    font-size: 14px;
+	    line-height: 10px;
+	}
+	.product-bonus .icon-bonus {
+	    margin-left: 3px;
+	    color: #A9A9A9;
+	    font-size: 12px;
+	}
+	.product-price-sale {
+	    font-size: 14px;
+	    line-height: 14px;
+	}
+	.product-card__price {
+		height: 36px;
+	}
+	.product-card__info {
+	    font-size: 14px;
+	    line-height: 17px;
+    	height: 58px;
+	}
+	.cards-more__link{
+		font-size: 16px;
+	}
+	.features__content {
+	    font-size: 16px;
+	    line-height: 22px;
+	}
+	.features__item:nth-child(2) .features__content {
+	    max-width: 157px;
+	}
+	.features__item:nth-child(3) .features__content {
+	    max-width: 134px;
+	}
+	.features__icon{
+		width: 90px;
+		height: 90px;
+
+		img{
+			width: 100%;
+		}
+	}
+	.cooperation__title{
+		font-size: 16px;
+		line-height: 16px;
+	}
+	.item-news__date {
+	    font-size: 14px;
+	    line-height: 17px;
+	}
+
+	.banner-card__name{
+		min-height: 35px;
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.subscribe-footer__title {
+	    font-size: 18px;
+	    line-height: 22px;
+	}
+	.subscribe-footer__caption {
+	    font-size: 12px;
+	    line-height: 16px;
+	}
+	.accordion-footer__link{
+		font-size: 12px;
+		line-height: 14px;
+	}
+	.menu-footer__link {
+	    font-size: 14px;
+	    line-height: 16px;
+	    color: #000;
+	    text-decoration: none;
+	}
+	.footer-contacts__phone {
+	    font-size: 18px;
+	    line-height: 21px;
+	}
+	.footer-contacts__caption {
+	    font-size: 12px;
+	    line-height: 14px;
+	    color: rgba(0, 0, 0, 0.6);
+	}
+	.footer__pay {
+	    flex: 0 0 40px;
+
+	    img{
+	    	width: 100%;
+	    }
+	}
+
+	.footer-policy, .footer-copyright {
+	    font-size: 12px;
+	    line-height: 14px;
 	}
 }
 

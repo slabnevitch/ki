@@ -329,10 +329,14 @@ h1, h2, h3, h4, h5, h6{
 	padding: 5px 9px 5px 6px;
 	border-radius: 0 20px 20px 0;
 	font-size: 10px;
-	line-height: 14px;
+	line-height: calc(14/10);
 	text-align: center;
 	text-transform: uppercase;
 	color: #FFFFFF;
+
+  @include min-screen($scale){
+    font-size: 12px;
+  }
 
   &__value{
     @include max-screen($xs){
@@ -446,10 +450,20 @@ h1, h2, h3, h4, h5, h6{
   background-color: $yellow;
   border-radius: 4px;
   transition: background-color .3s;
+
+  @include min-screen($scale){
+    width: 40px;
+    height: 40px;
+  }
   
   .icon{
     @include absolute-center;
     font-size: 11.88px;
+
+     @include min-screen($scale){
+      font-size: 14px;
+    }
+  
   }
 
   &--soc-vk{
@@ -463,6 +477,10 @@ h1, h2, h3, h4, h5, h6{
   &--soc-twi{
     .icon{
       font-size: 13.24px;
+
+      @include min-screen($scale){
+        font-size: 16px;
+      }
     }  
   }
   &--soc-youtb{
@@ -473,6 +491,10 @@ h1, h2, h3, h4, h5, h6{
     }
     .icon{
       font-size: 12.73px;
+
+       @include min-screen($scale){
+        font-size: 15px;
+      }
     }  
   }
   &--soc-ok{
@@ -484,6 +506,10 @@ h1, h2, h3, h4, h5, h6{
     }
     .icon{
       font-size: 19.02px;
+
+       @include min-screen($scale){
+        font-size: 21px;
+      }
     }  
   }
   &--soc-tg{
@@ -494,6 +520,10 @@ h1, h2, h3, h4, h5, h6{
    }
     .icon{
       font-size: 14.42px;
+
+       @include min-screen($scale){
+        font-size: 16px;
+      }
     }  
   }
   &--soc-pint{
@@ -504,6 +534,10 @@ h1, h2, h3, h4, h5, h6{
    } 
     .icon{
       font-size: 18.51px;
+
+      @include min-screen($scale){
+        font-size: 21px;
+      }
     }  
   }
 }
