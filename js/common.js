@@ -269,12 +269,12 @@
 			}
 		}
 		if(targ.classList.contains('map-fullscreen__back') || targ.closest('.map-fullscreen__back') !== null){
-			document.body.classList.add(targ.closest('.map-fullscreen__back').dataset.modal, 'map-with-modal');
+			document.body.classList.remove(targ.closest('.map-fullscreen__back').dataset.modal, 'side-modal-visible', 'map-with-modal', 'covered');
 			document.body.classList.remove('fullscreen-map-visible');
 		}
 		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null){
 			document.body.classList.remove('catalog-availability-modal-visible');
-			document.body.classList.add('address-modal-single-visible');
+			document.body.classList.add('address-modal-single-visible', 'map-with-modal', 'fullscreen-map-visible');
 		}
 		if(targ.classList.contains('side-modal__back') || targ.closest('.side-modal__back') !== null){
 			console.log('click')
