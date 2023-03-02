@@ -133,6 +133,9 @@
 	@include max-screen($md){
 		display: none;
 	}
+	@include min-screen($scale){
+		flex: 0 0 164px;
+	}
 }
 .result-row-values {
 	flex: 1 1 calc(100% - 144px - 32px);
@@ -141,6 +144,10 @@
 	@include max-screen($md){
 		flex-basis: 100%;
 		max-width: 100%;	
+	}
+
+	@include min-screen($scale){
+		flex: 1 1 calc(100% - 164px - 32px);
 	}
 
 

@@ -9303,6 +9303,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .result-row-chapter {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 164px;
+    -ms-flex: 0 0 164px;
+    flex: 0 0 164px;
+  }
+}
+
 .result-row-values {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 -webkit-calc(100% - 144px - 32px);
@@ -9322,6 +9331,15 @@ h1, h2, h3, h4, h5, h6 {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .result-row-values {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 -webkit-calc(100% - 164px - 32px);
+    -ms-flex: 1 1 calc(100% - 164px - 32px);
+    flex: 1 1 calc(100% - 164px - 32px);
   }
 }
 
