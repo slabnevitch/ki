@@ -201,6 +201,7 @@
 .side-modal__content{
 	flex: 1 1 auto;
 	overflow-y: auto;
+	padding-bottom: 79px;
 }
 .side-modal__title {
 	padding-bottom: 5px;
@@ -280,13 +281,7 @@
 		background-repeat: no-repeat;
 		background-size: 100%;
 	}
-	// .side-modal__inner {
-	// 	position: relative;
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	max-height: 100%;
-	// 	overflow-y: hidden;
-	// }
+	
 	.side-modal__close,
 	.side-modal__back {
 		.icon{
@@ -304,6 +299,12 @@
 
 	&--single{
 
+		&:after{
+			@include max-screen($xss){
+				display: none;
+			}		
+		}
+
 		@include max-screen($xss){
 			height: prc(355, 568);
 			top: auto;
@@ -313,6 +314,11 @@
 		}
 		.address-modal-single-visible &{
 			transform: translateX(0);
+		}
+		.side-modal__content{
+			@include max-screen($xss){
+				padding-bottom: 0;
+			}
 		}
 		.address-list__item {
 			display: block;
