@@ -19,7 +19,8 @@
 		max-width: none;
 		top: auto;
 	}
-	@include max-screen($xsss){
+	@include min-screen($scale){
+		max-width: 364px;
 	}
 }
 .popup-action {
@@ -43,6 +44,10 @@
 	.icon{
 		font-size: 12px;
 		color: #A9A9A9;
+
+		@include min-screen($scale){
+			font-size: 14px;
+		}
 	}
 }
 .icon {}
@@ -52,6 +57,11 @@
 	font-size: 18px;
 	line-height: 24px;
 	font-weight: 700;
+
+	@include min-screen($scale){
+		font-size: 20px;
+		line-height: 26px;
+	}
 
 	br{
 		@include max-screen($xs){
@@ -75,6 +85,11 @@
 	text-transform: uppercase;
 	font-family: $inter;
 	text-decoration: none;
+
+	@include min-screen($scale){
+		font-size: 14px;
+		line-height: 17px;
+	}
 
 	&:active, &:focus{
 		color: $text;

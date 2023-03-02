@@ -1,5 +1,5 @@
+if (document.getElementById('map') !== null){
   ymaps.ready(fullMapInit);
-if (screen.width > 959.98){
 }
 function fullMapInit(){     
 	var myMap = new ymaps.Map("map", {

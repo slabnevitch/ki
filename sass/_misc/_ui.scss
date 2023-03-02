@@ -214,6 +214,9 @@ h1, h2, h3, h4, h5, h6{
   &-loc{
     font-size: 10px;
     // line-height: 25px;
+    @include min-screen($scale){
+      font-size: 12px;
+    }
   }
   &-buy{
     &.clicked{

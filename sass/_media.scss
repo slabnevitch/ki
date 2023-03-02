@@ -1,5 +1,7 @@
 @media only screen and (min-width: $scale){
-	
+	.menu-header__item .single-dropdown {
+	  width: 224px;
+	}
 	.location-search__close .icon{
 		font-size: 14px;
 	}
@@ -87,8 +89,82 @@
 	    font-size: 24px;
 	    line-height: 22px;
 	}
+	.catalog-filtered-tags__title{
+		font-size: 16px;
+	}
+	.catalog-filtered-tag {
+	  height: 29px;
+	  font-size: 12px;
+	  line-height: 11px;
+	}
+	.catalog-filtered-tag .icon {
+	  font-size: 10px;
+	}
+	.result-page-catalog {
+	  margin-top: 21px;
+	}
+	.result-page-catalog__title {
+		max-width: none;
+	  font-size: 30px;
+	  line-height: 32px;
+	}
+	.result-page-catalog__text {
+	  font-size: 16px;
+	  line-height: 19px;
+	}
+	.button-close .icon, .button-back .icon{
+		font-size: 14px;
+	}
+	.address-side-modal__form{
+		height: 45px;
+	}
+	.side-modal .form .form__note {
+	  font-size: 12px;
+	  line-height: 14px;
+	}
+	.side-modal .form .form__policy {
+	  font-size: 14px;
+	  line-height: 17px;
+	}
+	.form__row-title {
+	  font-size: 16px;
+	  line-height: 22px;
+	}
+	.address-side-modal__form .fstdropdown > .fstselected {
+	  font-size: 18px;
+	}
+	.fstdropdown > .fstselected::after {
+	  width: 13px;
+	  height: 9px;
+	}
+	.to-map-side-modal{
+		font-size: 15px;
+	}
+	.to-map-side-modal .icon {
+	  font-size: 22px;
+	}
+	.address-list__content {
+	  font-size: 14px;
+	  line-height: 16px;
+	}
+	.address-list__shedule {
+	  font-size: 12px;
+	  line-height: 14px;
+	}
 	.product-card__action .icon-favourites{
 		font-size: 28px;
+	}
+	.map-marker{
+		height: 29px;
+		font-size: 12px;
+		line-height: 14px;
+	}
+	.map-marker--lg{
+		height: 59px;
+		min-width: 59px;
+	}
+	.billet .icon {
+	  font-size: 21px;
 	}
 	.product-card__action .icon-compare{
 		font-size: 24px;

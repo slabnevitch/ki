@@ -134,6 +134,8 @@
 	&--lg{
 		min-width: 54px;
 		height: 54px;
+		left: prc(500,768);
+		top: prc(200,660);
 
 		background-color: $blue;
 		border-radius: 50%;
@@ -141,6 +143,7 @@
 		&:after{
 			display: none;
 		}
+
 	}
 
 }

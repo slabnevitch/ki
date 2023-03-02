@@ -329,6 +329,10 @@
 		vertical-align: middle;	
 		font-size: 5px;
 		color: #A6A6A6;
+
+		@include min-screen($scale){
+			font-size: 7px;
+		}
 	}
 }
 .single-dropdown__item {
