@@ -59,13 +59,17 @@
 	display: flex;
 	align-items: flex-end;
 	font-size: 12px;
-	line-height: 15px;
+	line-height: calc(15/12);
 
 	@include max-screen($md){
 		height: auto;
 		padding-top: 18px;
 		padding-bottom: 14px;
 		justify-content: space-between;
+	}
+
+	@include min-screen($scale){
+		font-size: 16px;
 	}
 
 }
@@ -81,10 +85,18 @@
 		max-width: 67px;
 		flex-basis: 67px;	
 	}
+	@include min-screen($scale){
+		max-width: 164px;
+		flex: 0 0 164px;
+	}
 
 	img{
 		display: block;
 		max-width: 100%;
+
+		@include min-screen($scale){
+			width: 154px;
+		}
 	}
 }
 .header__contacts{
@@ -103,10 +115,14 @@
 .loc-header__selected {
 	@include but-null;
 	font-size: 12px;
-	line-height: 15px;
+	line-height: calc(15/12);
 	color: $text-l;
 	font-family: $inter;
 	cursor: pointer;
+
+	@include min-screen($scale){
+		font-size: 17px;
+	}
 
 	.icon-loc{
 		color: $accent-l;
@@ -176,8 +192,8 @@
 	display: flex;
 	align-items: center;
 	font-weight: 700;
-	font-size: 14px;
-	line-height: 17px;
+	// font-size: 14px;
+	// line-height: 17px;
 	color: rgba(#C4C4C4, .8);
 
 	@include max-screen($md){
@@ -215,6 +231,13 @@
 		position: absolute;
 		bottom: 18px;
 		right: 22px;
+	}
+
+	button{
+		@include min-screen($scale){
+			font-size: 16px;
+			line-height: 19px;
+		}
 	}
 }
 .loc-header__yes,
@@ -413,6 +436,11 @@
 	transition: all .3s;
 	cursor: pointer;
 
+	@include min-screen($scale){
+		flex: 0 0 164px;
+		min-width: 164px;
+	}
+
 	.header-catalog-opened &{
 		background-color: #fff;
 		color: $accent;
@@ -569,6 +597,10 @@
 	.icon{
 		color: #A9A9A9;
 		font-size: 20px;
+
+		@include min-screen($scale){
+			font-size: 22px;
+		}
 	}
 }
 
@@ -618,7 +650,11 @@
 	height: 22px;
 
 	.icon{
-		font-size: 22px;;
+		font-size: 22px;
+
+		@include min-screen($scale){
+			font-size: 24px;
+		}
 	}
 	&:not(:last-child){
 		margin-right: 35px;
@@ -638,6 +674,10 @@
 	font-size: 12px;
 	color: #A9A9A9;
 
+	@include min-screen($scale){
+		font-size: 14px;
+	}
+
 	.header__action.active &{
 		display: block;
 	}
@@ -655,6 +695,10 @@
 		font-size: 22px;
 		color: $accent-l;
 		vertical-align: bottom;
+
+		@include min-screen($scale){
+			font-size: 24px;
+		}
 	}
 }
 .header__header__basket{
@@ -813,8 +857,6 @@
 	}
 }
 .location-search__link {
-	font-size: 14px;
-	line-height: 17px;
 	text-decoration: none;
 	color: #000;
 }

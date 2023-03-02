@@ -25,19 +25,26 @@ h1, h2, h3, h4, h5, h6{
 .sect-title{
   margin-bottom: 20px;
   font-size: 22px;
-  line-height: 20px;
+  line-height: calc(20/22);
   
   @include max-screen($sm){
     margin-bottom: 7px;
     font-size: 16px;
   }
+  @include min-screen($scale){
+    font-size: 24px;
+  }
+
 
   .catalog-block &{
     font-size: 18px;
-    line-height: 20px;
+    line-height: calc(20/18);
 
     @include max-screen($sm){
       font-size: 14px;
+    }
+     @include min-screen($scale){
+      font-size: 10px;
     }
 
   }
@@ -82,6 +89,10 @@ h1, h2, h3, h4, h5, h6{
   overflow: hidden;
   white-space: nowrap;
   transition: background-color .1s ease;
+
+  @include min-screen($scale){
+    font-size: 14px;
+  }
 	
   &:hover{
      background-color: #fff;
@@ -155,6 +166,11 @@ h1, h2, h3, h4, h5, h6{
     height: 40px;
     line-height: 40px;
 
+    @include min-screen($scale){
+       height: 45px;
+      line-height: 45px;
+    }
+
   }
   &-sm{
     // padding-bottom: 2px;
@@ -166,6 +182,12 @@ h1, h2, h3, h4, h5, h6{
    // .gecko &{
    //  padding-top: 4px;
    // }
+
+
+    @include min-screen($scale){
+       height: 30px;
+      line-height: 30px;
+    }
 
 
   }
@@ -568,11 +590,16 @@ h1, h2, h3, h4, h5, h6{
   border-radius: 20px ;
   font-family:  $navm;
   font-size: 10px;
-  line-height: 10px;
+  line-height: calc(10/10);
   text-decoration: none;
   outline: none;
   color: $text-l;
   overflow: hidden;
+
+  @include min-screen($scale){
+    font-size: 12px;
+    min-height: 30px;
+  }
 
   &:not(:last-child){
     margin-right: 5px; 

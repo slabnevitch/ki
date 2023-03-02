@@ -92,13 +92,16 @@
 	bottom: 18px;
 	color: #A9A9A9;
 	font-size: 12px;
-	line-height: 15px;
+	line-height: calc(15/12);
 	left: 50%;
 	transform: translateX(-50%);
 
 
 	@include max-screen($md){
 		display: none;
+	}
+	@include min-screen($scale){
+		font-size: 14px;
 	}
 	@media (any-hover: hover) { //только для устройств с ховером
 			&:hover{
@@ -200,13 +203,17 @@
 		display: inline-block;
 		vertical-align: middle;	
 		font-size: 13px;
-		line-height: 22px;
+		line-height: calc(22/13);
 		color: #000;
 		text-decoration: none;
 		@include dots-family;
 
 		@include max-screen($md){
 			max-width: calc(100% - 38px);		
+		}
+
+		@include min-screen($scale){
+			font-size: 15px;
 		}
 
 		@media (any-hover: hover) { //только для устройств с ховером
