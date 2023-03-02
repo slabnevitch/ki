@@ -272,6 +272,17 @@
 			document.body.classList.add(targ.closest('.map-fullscreen__back').dataset.modal, 'map-with-modal');
 			document.body.classList.remove('fullscreen-map-visible');
 		}
+		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null){
+			document.body.classList.remove('catalog-availability-modal-visible');
+			document.body.classList.add('address-modal-single-visible');
+		}
+		if(targ.classList.contains('side-modal__back') || targ.closest('.side-modal__back') !== null){
+			console.log('click')
+			if(targ.closest('.address-side-modal--single') !== null){
+				document.body.classList.remove('address-modal-single-visible');
+				document.body.classList.add('catalog-availability-modal-visible');
+			}
+		}
 		// END map modals toggle
 
 		// header search results toggle

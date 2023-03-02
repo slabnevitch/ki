@@ -9449,8 +9449,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media only screen and (min-width: 959.98px) {
   .map-with-modal .map-fullscreen {
-    width: -webkit-calc(100% - 432px);
-    width: calc(100% - 432px);
+    width: -webkit-calc(100% - 452px);
+    width: calc(100% - 452px);
   }
 }
 
@@ -12005,6 +12005,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .address-list__img .billet {
