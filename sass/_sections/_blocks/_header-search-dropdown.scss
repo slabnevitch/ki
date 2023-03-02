@@ -25,6 +25,10 @@
 		height: 300px;
 	}
 
+	@include min-screen($scale){
+		height: 366px;
+	}
+
 	._scroll &{
 		// position: fixed;
 		// top: 80px;
@@ -53,6 +57,7 @@
 		@include max-screen($md){
 			height: 532px;
 		}
+		
 		& > .wrapper-smart{
 			height: 100%;
 		}
@@ -234,6 +239,9 @@
 	@include max-screen($md){
 		display: none;
 	}
+	// @include min-screen($scale){
+	// 	max-height: 345px;
+	// }
 
 	._scroll &{
 		height: 557px;

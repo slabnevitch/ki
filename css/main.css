@@ -4482,7 +4482,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media only screen and (min-width: 1440px) {
   .catalog-block .sect-title {
-    font-size: 10px;
+    font-size: 20px;
   }
 }
 
@@ -4497,9 +4497,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .link {
   font-size: 12px;
-  line-height: 15px;
+  line-height: 1.25;
   color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
+}
+@media only screen and (min-width: 1440px) {
+  .link {
+    font-size: 14px;
+  }
 }
 .link:hover, .link:active, .link:focus {
   text-decoration: underline;
@@ -5170,6 +5175,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #A9A9A9;
   vertical-align: middle;
 }
+@media only screen and (min-width: 1440px) {
+  .pagination__arrow .icon {
+    font-size: 16px;
+  }
+}
 .pagination__arrow--prev {
   margin-right: 12px;
 }
@@ -5187,6 +5197,12 @@ h1, h2, h3, h4, h5, h6 {
 .pagination .pagination__link {
   width: auto;
   margin: 0 4px;
+}
+@media only screen and (min-width: 1440px) {
+  .pagination .pagination__link {
+    height: 34px;
+    font-size: 16px;
+  }
 }
 .pagination .pagination__link.active {
   width: 32px;
@@ -5322,8 +5338,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #C4C4C4;
   text-decoration: none;
   font-size: 10px;
-  line-height: 12px;
+  line-height: 1.2;
   color: #C4C4C4;
+}
+@media only screen and (min-width: 1440px) {
+  .breadcrumbs__link {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 959.98px) {
@@ -5448,7 +5469,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 33px;
   position: relative;
   font-size: 28px;
-  line-height: 30px;
+  line-height: 1.0714285714;
   font-family: "NavigoMedium", sans-serif;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
@@ -5461,6 +5482,11 @@ h1, h2, h3, h4, h5, h6 {
   .back-title {
     line-height: 16px;
     font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .back-title {
+    font-size: 30px;
   }
 }
 .back-title .back-link {
@@ -5483,6 +5509,11 @@ h1, h2, h3, h4, h5, h6 {
 @media only screen and (max-width: 959.98px) {
   .back-title .back-link .icon {
     font-size: 13px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .back-title .back-link .icon {
+    font-size: 16px;
   }
 }
 
@@ -6507,6 +6538,11 @@ h1, h2, h3, h4, h5, h6 {
   .search-results-header {
     padding-left: 28px;
     height: 300px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .search-results-header {
+    height: 366px;
   }
 }
 ._scroll .search-results-header {
@@ -11575,6 +11611,67 @@ h1, h2, h3, h4, h5, h6 {
   .slider-nav .icon {
     font-size: 16px;
   }
+  .categories-tile__title {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .hits-tile__name {
+    font-size: 16px;
+  }
+  .fstdropdown > .fstselected {
+    font-size: 24px;
+  }
+  .fstlist > div {
+    font-size: 16px;
+  }
+  .catalog-sort__select {
+    max-width: 374px;
+  }
+  .ctlg-filter__link .icon {
+    font-size: 8.25px;
+  }
+  .catalog-sort__action .icon {
+    font-size: 22px;
+  }
+  .page-catalog__filter {
+    -ms-flex: 0 0 300px;
+    flex: 0 0 300px;
+    max-width: 300px;
+  }
+  .page-catalog__products {
+    -ms-flex: 1 1 calc(100% - 300px - 32px);
+    flex: 1 1 calc(100% - 300px - 32px);
+  }
+  .ctlg-filter__link {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .ctlg-filter-location__value {
+    font-size: 16px;
+  }
+  .ctlg-filter__value {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .range__col .range__input {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .range__label {
+    font-size: 16px;
+  }
+  .ctlg-filter__input {
+    height: 37px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .ctlg-filter__show-all {
+    font-size: 16px;
+  }
+  .pupular-page-catalog__title {
+    font-size: 24px;
+    line-height: 22px;
+  }
   .product-card__action .icon-favourites {
     font-size: 28px;
   }
@@ -11606,8 +11703,40 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 17px;
     height: 58px;
   }
+  .product-card--mini .product-card__name {
+    height: 55px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .product-card--mini .product-price {
+    line-height: 21px;
+    font-size: 18px;
+  }
   .cards-more__link {
     font-size: 16px;
+  }
+  .brands-logo__title {
+    font-size: 16px;
+  }
+  .brands-nav__title {
+    -ms-flex: 0 0 200px;
+    flex: 0 0 200px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .brands-alpabet__link {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .brand-filtered {
+    font-size: 24px;
+    line-height: 22px;
+  }
+  .product-card__description {
+    display: none;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 17px;
   }
   .features__content {
     font-size: 16px;

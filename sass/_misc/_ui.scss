@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6{
       font-size: 14px;
     }
      @include min-screen($scale){
-      font-size: 10px;
+      font-size: 20px;
     }
 
   }
@@ -57,9 +57,13 @@ h1, h2, h3, h4, h5, h6{
 }
 .link{
   font-size: 12px;
-  line-height: 15px;
+  line-height: calc(15/12);
   color: $text-l;
   text-decoration: none;
+
+  @include min-screen($scale){
+    font-size: 14px;
+  }
 
   &:hover, &:active, &:focus{
     text-decoration: underline;
@@ -554,6 +558,10 @@ h1, h2, h3, h4, h5, h6{
       font-size: 14px;
       color: #A9A9A9;
       vertical-align: middle;
+
+      @include min-screen($scale){
+        font-size: 16px;
+      }
     }
     &--prev{
       margin-right: 12px;
@@ -569,9 +577,13 @@ h1, h2, h3, h4, h5, h6{
     width: 0 0 auto;
   }
   .pagination__link{
-   width: auto;
-   // max-width: 24px;
-      margin: 0 4px;
+     width: auto;
+    margin: 0 4px;
+
+    @include min-screen($scale){
+      height: 34px;
+      font-size: 16px;
+    }
     &.active{
       width: 32px;
       max-width: 32px;
@@ -708,8 +720,12 @@ h1, h2, h3, h4, h5, h6{
     color: $border;
     text-decoration: none;
     font-size: 10px;
-    line-height: 12px;
+    line-height: calc(12/10);
     color: $border;
+
+    @include min-screen($scale){
+      font-size: 12px;
+    }
 }
 
 .breadcrumbs-mobile-visible{
@@ -852,23 +868,21 @@ h1, h2, h3, h4, h5, h6{
   padding-left: 33px;
   position: relative;
   font-size: 28px;
-  line-height: 30px;
+  line-height: calc(30/28);
   font-family: $navm;
   text-decoration: none;
   color: $text;
   transition: color .2s;
   @include  dots-family;
-
-  // @media (any-hover: hover) { //только для устройств с ховером
-
-  //     &:hover{
-  //       color: #A9A9A9;
-  //     }
-  //   } 
+ 
 
   @include max-screen($md){
     line-height: 16px;
     font-size: 16px;
+  }
+
+  @include min-screen($scale){
+    font-size: 30px;
   }
 
   .back-link{
@@ -891,6 +905,9 @@ h1, h2, h3, h4, h5, h6{
       @include max-screen($md){
         font-size: 13px;
 
+      }
+      @include min-screen($scale){
+        font-size: 16px;
       }
     }
   }
