@@ -70,6 +70,26 @@ h1, h2, h3, h4, h5, h6{
   }
   
 }
+.page-top-block{
+  display: flex;
+  align-items: flex-end;
+  padding-right: 18px;
+}
+.page-top-block__content{
+  padding-right: 11px;
+}
+
+.page-top-block__text{
+  font-size: 12px;
+  line-height: calc(15/12);
+  text-transform: uppercase;
+  color: rgba($text, 0.8);
+  opacity: 0.4;
+
+  @include min-screen($scale){
+    font-size: 14px;
+  }
+}
 @import "../_customizations/viewerjs-custom.scss";
 @import "../_customizations/_fstdropdown.scss";
 .btn{
@@ -841,6 +861,33 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /*--------------------END breadcrumbs----------------------*/
+.back-block-inner{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    @include min-screen($md){
+      padding-bottom: 9px;
+     border-bottom: 1px solid $border;
+      
+    }
+
+    .back-block{
+      flex: 1 1 auto;
+      margin-bottom: 0;
+      @include min-screen($md){
+        border-bottom: none;
+      }
+    }
+}
+.back-block-right{
+  pading-left: 16px;
+  flex-shrink: 0;
+
+  @include max-screen($md){
+    display: none;
+  }
+}
 .back-block{
   margin-bottom: 26px;  
   display: flex;

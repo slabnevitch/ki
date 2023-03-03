@@ -1,0 +1,7 @@
+section.similar
+	.wrapper
+		.similar__title Часто покупают с вашими товарами
+	.wrapper-smart
+		- cards = [{billet: 'Новинка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'скидка', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}, {billet: '', price: '7 850 ₽', sale: '', sbers: '79', tilte: 'Шуруповерт Elitech ДШ 0110 РЭ', aval: '2 магазинах', iconActive: '0'}, {billet: '', price: '12 590 ₽', sale: '', sbers: '129', tilte: 'Аккумуляторная дрель-шуруповерт Ресанта ДА-14-2Л 75/14/3', aval: '6 магазинах', iconActive: false}];
+		.wrapper-flex.product-cards
+			+productCard(cards, 'page-brands/perf/')

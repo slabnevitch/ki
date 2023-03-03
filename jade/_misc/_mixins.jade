@@ -187,9 +187,21 @@ mixin productCard(cards, path, start = 1)
 											| #{item.aval}
 							.info-product-card__row
 								a(href="#").info-product-card__oneclick Купить в 1 клик
-mixin backLink(value = 'Назад')
-	.wrapper.back-block-wrapper
-		.back-block
-			h1.back-title= value
-				a(href="#").back-link
-					+icon('arrow-left')
+
+mixin backLink(value = 'Назад', rightBlock = false)
+	div(class="wrapper back-block-wrapper")
+		if rightBlock
+			.back-block-inner
+				.back-block
+					h1.back-title= value
+						a(href="#").back-link
+							+icon('arrow-left')
+
+				.back-block-right
+					if block
+						block
+		else
+			.back-block
+				h1.back-title= value
+					a(href="#").back-link
+						+icon('arrow-left')
