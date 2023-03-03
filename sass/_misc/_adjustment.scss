@@ -5,6 +5,13 @@
 html, body{
 	margin: 0;
 	padding: 0;
+
+}
+html{
+	
+	@include min-screen($scale){
+		font-size: 18.68px;
+	}
 }
 html{
 	scroll-behavior: smooth;

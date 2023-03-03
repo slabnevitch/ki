@@ -5,8 +5,101 @@
 			label.light-label.cart-content__action
 				input(type="checkbox" name="name" class="light-label__input")
 				span.light-label__check
+					+icon('check')
 				span.light-label__caption выбрать
 			
-			.cart-content__action
-				span.cart-content__action-label
-					+icon('remove')
+			button(type="button").cart-content__action
+				span.cart-content__action-label Удалить все
+				+icon('remove')
+	
+	.cart-content__body
+		- var cards = [{billet: 'Новинка', price: '14 729 ₽', sale: '18 411 ₽', sbers: '29', tilte: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', aval: '12 магазинах', iconActive: false, path: 'img/hits-section/1.jpg'}, {billet: '', price: '6 159 ₽', sale: '', sbers: '51', tilte: 'Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000', aval: '7 магазинах', iconActive: false, path: 'img/page-brands/gaik/2.jpg'}, {billet: 'скидка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0', inAction:true, path: 'img/page-brands/shur/1.jpg'}];
+
+			.product-cards.product-cards--horisontal.wrapper-flex
+					each item, i in cards
+						div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : item.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Offer")
+								label.light-label
+									input(type="checkbox" name="name" class="light-label__input")
+									span.light-label__check
+										+icon('check')
+								.product-card__img-wrap
+									if item.billet != ''
+										div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : item.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
+											.billet__value= item.billet
+											
+											if item.billet == "акция" || item.billet == "скидка"
+												+icon('percents')
+											if item.billet == "уценка"
+												+icon('attention')
+											if item.billet == "Новинка"
+												+icon('flame')
+									
+									a(href="#" alt=item.tilte).product-card__border
+										span.product-card__img
+											img(src=item.path alt="alt")
+								
+								
+								.product-card__price
+									.product-card__actions
+										if item.iconActive === '0'
+											a(href="#").product-card__action.active
+												+icon('favourites')
+											a(href="#").product-card__action
+												+icon('compare')
+										else if item.iconActive === '1'
+											a(href="#").product-card__action
+												+icon('favourites')
+											a(href="#").product-card__action.active
+												+icon('compare')
+										else if item.iconActive == false
+											a(href="#").product-card__action
+												+icon('favourites')
+											a(href="#").product-card__action
+												+icon('compare')
+
+									a(href="#").product-price= item.price
+										if item.sale != ''
+											.product-price-sale= item.sale
+									meta(itemprop="price" content=item.price)
+									meta(itemprop="priceCurrency" content="RUB")
+									
+									if item.sbers
+										a(href="#").product-bonus
+											.product-bonus__val= item.sbers
+											+icon('bonus')
+								
+								a(href="#" itemprop="name").product-card__name= item.tilte
+								
+								a(href="#").product-card__description 
+									.product-card__description-row Напряжение акк.: 12 В
+									.product-card__description-row Крутящий момент: 30 Н·м
+									.product-card__description-row Емкость аккумулятора: 2 А·ч
+									.product-card__description-row Тип аккумулятора Li-Ion
+									.product-card__description-row Кол-во аккумуляторов: 2 шт.
+									.product-card__description-row Вес 1.2 кг
+
+								.product-card__bottom
+									.product-card__rating-wrap
+										.product-card__rating
+											+crystalRating('4,5')						
+										
+										button(type="button").btn.btn-sm.btn-buy.clicked.product-card__buy
+											span.btn__val Купить
+											.counter(data-min="0" data-max="100")
+												span.counter__button.counter-minus
+													+icon('minus')
+												.counter__block
+													input(autocomplete="off" type="hidden" name="name" value="1" )
+													.counter__count 1
+													.counter__measures шт
+												span.counter__button.counter-plus
+													+icon('plus')
+									
+									.product-card__info.info-product-card
+											.info-product-card__row Артикул: 002266
+
+						if item.inAction == true
+							.product-announcement
+								.product-announcement__title Этот товар участвует в акции
+								a(href="#").product-announcement__link Подробнее
+								.product-announcement__text Добавьте ещё вот этот товар и получите скидку -20% на оба товара

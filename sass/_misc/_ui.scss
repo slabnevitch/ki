@@ -90,6 +90,49 @@ h1, h2, h3, h4, h5, h6{
     font-size: 14px;
   }
 }
+
+.light-label{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.light-label__input{
+  @include checkbox;
+
+  &:checked + .light-label__check{
+    border-width: 0;
+    .icon{
+      display: block;
+    }
+  }
+}
+.light-label__check{
+  width: rem(20);
+  height: rem(20);
+  margin-right: 7px;
+  position: relative;
+  border: 2px solid #858585;
+  border-radius: 2px;
+
+  // @include min-screen($scale){
+  //   width: 25px;
+  //   height: 25px;
+  // }
+
+  .icon{
+    display: none;
+    font-size: rem(20);
+    color: #858585;
+    @include absolute-center-old;
+  }
+}
+.light-label__caption{
+  font-size: rem(12);
+  line-height: rem(calc(15/12));
+  text-transform: uppercase;
+  color: #A9A9A9;
+
+}
 @import "../_customizations/viewerjs-custom.scss";
 @import "../_customizations/_fstdropdown.scss";
 .btn{
