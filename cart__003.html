@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Корзина__002</title>
+    <title>Корзина__003</title>
     <meta name="description" content="">
     <link rel="icon" href="img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
@@ -6818,12 +6818,13 @@
                   <div class="cart-content">
                     <div class="cart-content__header">
                       <div class="cart-content__title">Ваш заказ</div>
+                      <div class="cart-content__title cart-content__title--mob">К покупке 4 товара</div>
                       <div class="cart-content__actions">
                         <label class="light-label cart-content__action">
                           <input type="checkbox" name="name" class="light-label__input"><span class="light-label__check">
                                 <svg class="icon icon-check ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                                </svg></span><span class="light-label__caption">выбрать</span>
+                                </svg></span><span id="cart-select" class="light-label__caption">выбрать</span><span id="cart-abort" class="light-label__caption">Отменить выбор</span>
                         </label>
                         <button type="button" class="cart-content__action"><span class="cart-content__action-label">Удалить все</span>
                               <svg class="icon icon-remove ">
@@ -7159,13 +7160,18 @@
                             <div class="product-announcement__text">Добавьте ещё вот этот товар и получите скидку -20% на оба товара</div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card product-card--to-add">
                           <label class="light-label">
                             <input type="checkbox" name="name" class="light-label__input"><span class="light-label__check">
                                   <svg class="icon icon-check ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
                                   </svg></span>
                           </label>
+                          <button type="button" class="product-card__delete">
+                                <svg class="icon icon-remove ">
+                                  <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
+                                </svg>
+                          </button>
                           <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000" class="product-card__border"><span class="product-card__img"><img src="img/page-brands/gaik/2.jpg" alt="alt"></span></a>
                           </div>
                           <div class="product-card__price">
@@ -7183,14 +7189,8 @@
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000</a><a href="#" class="product-card__description"> 
-                            <div class="product-card__description-row">Напряжение акк.: 12 В</div>
-                            <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
-                            <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
-                            <div class="product-card__description-row">Тип аккумулятора Li-Ion</div>
-                            <div class="product-card__description-row">Кол-во аккумуляторов: 2 шт.</div>
-                            <div class="product-card__description-row">Вес 1.2 кг</div></a>
-                          <div class="product-card__bottom">
+                          </div><a href="#" itemprop="name" class="product-card__name">
+                            <div class="product-card__name-value">Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000</div>
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
                                     <div class="crystal-rating">
@@ -7207,22 +7207,16 @@
                                       <div class="crystal-rating__value">4,5</div>
                                     </div>
                               </div>
-                              <button type="button" class="btn btn-sm btn-buy clicked product-card__buy"><span class="btn__val">Купить</span>
-                                <div data-min="0" data-max="100" class="counter"><span class="counter__button counter-minus">
-                                        <svg class="icon icon-minus ">
-                                          <use xlink:href="img/icons-svg/symbol/sprite.svg#minus"></use>
-                                        </svg></span>
-                                  <div class="counter__block">
-                                    <input autocomplete="off" type="hidden" name="name" value="1">
-                                    <div class="counter__count">1</div>
-                                    <div class="counter__measures">шт</div>
-                                  </div><span class="counter__button counter-plus">
-                                        <svg class="icon icon-plus ">
-                                          <use xlink:href="img/icons-svg/symbol/sprite.svg#plus"></use>
-                                        </svg></span>
-                                </div>
-                              </button>
-                            </div>
+                            </div></a><a href="#" class="product-card__description"> 
+                            <div class="product-card__description-row">Напряжение акк.: 12 В</div>
+                            <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
+                            <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
+                            <div class="product-card__description-row">Тип аккумулятора Li-Ion</div>
+                            <div class="product-card__description-row">Кол-во аккумуляторов: 2 шт.</div>
+                            <div class="product-card__description-row">Вес 1.2 кг</div></a>
+                          <div class="product-card__bottom">
+                            <!-- button(type="button").product-card__adding +добавить товар в заказ-->
+                            <button type="button" class="btn btn-sm btn-buy product-card__buy">+добавить товар в заказ</button>
                             <div class="product-card__info info-product-card">
                               <div class="info-product-card__row">Артикул: 002266</div>
                             </div>
@@ -7259,7 +7253,7 @@
                       </button>
                     </form>
                   </div>
-                  <div class="cart-prod-count">
+                  <div class="cart-total">
                     <div class="cart-prod-count__row">
                       <div class="cart-prod-count__key">Товары, 4 шт.</div>
                       <div class="cart-prod-count__val">18 411 ₽</div>
@@ -7272,6 +7266,7 @@
                       <div class="cart-prod-count__key">Итого:</div>
                       <div class="cart-prod-count__val">14 729 ₽</div>
                     </div>
+                    <button type="submit" class="btn btn-lg btn-order-check">перейти к оформлению</button>
                   </div>
                 </aside>
               </div>
