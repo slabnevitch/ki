@@ -6,55 +6,132 @@
 				.wrapper-flex
 					each item, ind in types
 						label.form__custom.form__type
-							input.form__check(type='radio' name='type' value='chekbox1' checked=ind==0 ? true : false required='required')
+							if pageIndex == 'cart_006'
+								input.form__check(type='radio' name='type' value='chekbox1' checked=ind==1 ? true : false required='required')
+							else
+								input.form__check(type='radio' name='type' value='chekbox1' checked=ind==0 ? true : false required='required')
 							span.form__custom-chek
 							span.form__policy= item
 
 		.form__row
-			.form__row-title.form__row-title--required Покупатель*
-				a(href="#").std-link Есть учётная запись?
-			
-			label.form__label
-				input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Фамилия*')
+			if pageIndex == 'cart_006'
+				.form__row-title.form__row-title--required Покупатель*
+					a(href="#").std-link Есть учётная запись?
+				
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Название компании*')
 
-			label.form__label
-				input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Имя*')
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='ИНН')
+				
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='КПП (для юр.лиц)')						
+				
+				label.form__label
+					textarea.form__area(type='text' name='question' placeholder="Адрес доставки")
+
+				label.form__label
+						input.form__input.form__input--bg(autocomplete="off" type='text' name='email' placeholder='Email*')
+				label.form__label
+					// textarea.form__area(type='text' name='question')
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Телефон*')
+
+				.cards-more
+					a(href="#").cards-more__link + Прикрепить карточку предприятия
 			
-			label.form__label
-				input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Отчество*')						
+			else if pageIndex == 'cart_007' || pageIndex == 'cart_012'
+				.form__row-title.form__row-title--required Покупатель*
+					a(href="#").std-link Есть учётная запись?
+				
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Фамилия*' value="Лобачевский")
+
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Имя*' value="Николай")
+				
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Отчество' value="Иванович")						
+				
+				label.form__label							
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='email' placeholder='Email*' value="nik_loba4hev@gmail.com")
+				
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Телефон*' value="8 961 123-45-67")
 			
-			label.form__label
-					input.form__input.form__input--bg(autocomplete="off" type='text' name='email' placeholder='Email*')
-			label.form__label
-				// textarea.form__area(type='text' name='question')
-				input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Телефон*')
+			else
+				.form__row-title.form__row-title--required Покупатель*
+					a(href="#").std-link Есть учётная запись?
+				
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Фамилия*')
+
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Имя*')
+				
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Отчество*')						
+				
+				label.form__label
+						input.form__input.form__input--bg(autocomplete="off" type='text' name='email' placeholder='Email*')
+				label.form__label
+					// textarea.form__area(type='text' name='question')
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Телефон*')
 
 		.form__row
 			.form__row-title.form__row-title--required Способ получения*
 			.form__deliveries.deliveries-form
 				.wrapper-flex
-					- var delivs = ['Самовывоз из магазина', 'Бесплатная доставка курьером', 'Самовывоз из пункта выдачи', 'Доставка ТК / курьером'];
+					if pageIndex == 'cart_006' || pageIndex == 'cart_007' || pageIndex == 'cart_012' || pageIndex == 'cart_012-1' pageIndex == 'cart_013'
+						- var delivs = ['Самовывоз из пункта выдачи', 'Доставка курьером'];
+					else
+						- var delivs = ['Самовывоз из магазина', 'Бесплатная доставка курьером', 'Самовывоз из пункта выдачи', 'Доставка ТК / курьером'];
 					each item, ind in delivs
 						.form__custom-policy.delivery-form
 							label.form__custom
 								input.form__check(type='radio' name='delivery-type' value='value' checked=ind==1 ? true : false required='required')
 								span.delivery-form__btn= item
 									+icon('chev-down')
+			
+			if pageIndex == 'cart_012' || pageIndex == 'cart_012-1'
+				.cart-content__shop.shop-cart-content
+					.shop-cart-content__img
+						if pageIndex == 'cart_012'
+							img(src="img/page-cart/shop.jpg" alt="alt")
+						
+						if pageIndex == 'cart_012-1'
+							img(src="img/page-cart/ozon.jpg" alt="alt")
+					
+					.shop-cart-content__text
+						.shop-cart-content__title Кубань Инструмент
+						.shop-cart-content__address ул. Северная, 320
+						.shop-cart-content__shedule Пн-Вс: 8.00-20.00
+						.shop-cart-content__term
+							.shop-cart-content__term-key Срок доставки:
+							.shop-cart-content__term-val 1 день
+				
+				.cards-more
+					a(href="#").cards-more__link Выбрать другой
+		
 		.form__row
 			.form__row-title.form__row-title--required Оплата*
 			.form__row-content
-				- var kinds = ['Оплата картой на сайте', 'СберСпасибо - оплата на сайте', 'Оплата при получении', 'Выставить счет для предоплаты безналичным платежом', 'Оплата СБП (сервис быстрых платежей)', 'В кредит'];
+				if pageIndex == 'cart_006'
+					- var kinds = [{name:'Выставить счет для предоплаты безналичным платежом', options: false}];
+				else
+					- var kinds = [{name: 'Оплата картой на сайте', options: false}, {name: 'СберСпасибо - оплата на сайте', options: '<p>Оплата до 50% бонусами "Спасибо". Поле для списания бонусов "Спасибо" появится<br> после ввода номера карты. Минимальная стоимость заказа - 100 руб.</p>'}, {name: 'Оплата при получении', options: '<p>Оплата наличными или банковской картой при получении заказа.</p><p class="form__hidden-note">Обратите внимание!<br> При этом способе расчёта недоступно использование бонусов<br>"Спасибо" от Сбербанка."</p>'}, {name:'Выставить счет для предоплаты безналичным платежом', options: false}, {name:'Оплата СБП (сервис быстрых платежей)', options: '<p>Откройте камеру мобильного телефона либо мобильное приложение вашего банка,<br>намебите камеру и отсканируйте QR-код на экране. Подтвердите платеж.</p>'}, {name: 'В кредит', options: false}];
+				
 				each item, ind in kinds
 					.form__custom-policy
 						label.form__custom
-							input.form__check(type='radio' name='payment' value='chekbox1' checked=ind==0 ? true : false required='required')
+							if pageIndex == 'cart_006' || pageIndex == 'cart_007' || pageIndex == 'cart_012'
+								input.form__check(type='radio' name='payment' value='chekbox1' required='required')
+							else
+								input.form__check(type='radio' name='payment' value='chekbox1' checked=ind==0 ? true : false required='required')
 							span.form__custom-chek
-							span.form__policy= item
+							span.form__policy= item.name
 
-							span.form__hidden-text Оплата наличными или банковской картой при получении заказа.
-								span.form__hidden-note Обратите внимание ! 
-									br
-									| При этом способе расчёта недоступно использование бонусов "Спасибо" от Сбербанка.
+							if item.options
+								span.form__hidden-text!= item.options
 		.form__row
 			.form__row-title.form__row-title--required Комментарии к заказу
 			label.form__label

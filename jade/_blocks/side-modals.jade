@@ -193,6 +193,28 @@
 
 			.form__note *При входе и регистрации вы соглашаетесь с #[a(href="#") Политикой обработки персональных данных]
 
+.side-modal.registration-side-modal#modal-registration(data-visible-class="registration-modal-visible")
+	button(type="button").side-modal__close.button-close
+		+icon('ctlg-close')
+	
+	.side-modal__inner
+		.side-modal__title Войти или зарегистрироваться
+
+		.side-modal__text Мы отправим вам SMS-сообщение с кодом подтверждения.
+
+		form.form(action='#')
+			.form__row
+				.form__row-title.form__row-title--required Телефон*
+				label.form__label
+					input.form__input(type='text' name='name')
+
+			button(type="submit").btn.btn-lg.btn-order ПОЛУЧИТЬ КОД
+
+			.side-modal__enter-link
+				a(href="#").std-link Войти по e-mail и паролю
+
+			.form__note *При входе и регистрации вы соглашаетесь с #[a(href="#") Политикой обработки персональных данных]
+
 .side-modal.address-side-modal#modal-address(data-visible-class="address-modal-visible")
 	button(type="button").side-modal__close.button-close
 		+icon('ctlg-close')

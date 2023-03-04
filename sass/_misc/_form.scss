@@ -193,6 +193,15 @@
 	color: $text-l;
 	font-size: rem(12);
 	line-height: rem(15);
+
+	p{
+		margin-top: 0;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+	}
 }
 .form__hidden-note{
 	display: block;

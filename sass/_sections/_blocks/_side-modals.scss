@@ -67,6 +67,23 @@
 			transform: translateX(0);
 		}
 	}
+	&.registration-side-modal{
+		.registration-modal-visible &{
+			transform: translateX(0);
+		}
+		.form__note{
+			position: absolute;
+			width: 100%;
+			bottom: 20px;
+			max-width: 272px;
+			left: calc((100% - 272px) / 2);
+
+		}
+		.side-modal__inner{
+			position: relative;
+			overflow-y: auto;
+		}
+	}
 	.product-card--mini {
 		padding-bottom: 20px;
 		margin-bottom: 10px;
@@ -74,7 +91,7 @@
 	}
 	.form{
 		.btn-order{
-			// margin-top: 14px;
+			margin-top: 14px;
 			margin-bottom: 27px;
 
 			@include max-screen($md){
@@ -236,10 +253,9 @@
 .confirm-side-modal {
 	padding-top: 95px;
 
-	.side-modal__title{
-		margin-bottom: 39px;
-		line-height: 18px;
-	}
+	// .side-modal__title{
+	// 	margin-bottom: 39px;
+	// }
 	.side-modal__text{
 		margin-bottom: 48px;
 	}
@@ -500,5 +516,8 @@ margin-bottom: 8px;
 line-height: 12px;
 
 color: #767571;
+}
+.side-modal__enter-link{
+	text-align: center;
 }
 /*--------------------END side-modals----------------------*/ 
