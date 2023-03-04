@@ -9494,6 +9494,56 @@
         </div>
       </div>
     </div>
+    <div id="modal-courier" data-visible-class="courier-modal-visible" class="side-modal courier-side-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Доставка курьером</div>
+        <div class="side-modal__content">
+          <form action="#" class="form">
+            <div class="address-side-modal__form">
+              <div class="address-side-modal__select"> 
+                <select name="locations" data-searchdisable="true" class="fstdropdown-select">
+                  <option value="1">Краснодар</option>
+                  <option value="2">Армавир</option>
+                  <option value="3">Кропоткин</option>
+                  <option value="4">Тихорецк</option>
+                  <option value="5">Славянск-на-Кубани</option>
+                  <option value="6">Тимашевск</option>
+                  <option value="7">Белореченск</option>
+                </select>
+              </div>
+              <button type="button" id="full-map-open" class="side-modal__to-map to-map-side-modal">
+                <div class="to-map-side-moda__title">На карте</div>
+                    <svg class="icon icon-loc ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#loc"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="form__row">
+              <label class="form__label">
+                <input autocomplete="off" type="text" name="name" placeholder="Улица, дом" class="form__input form__input--bg">
+              </label>
+              <label class="form__label">
+                <input autocomplete="off" type="text" name="name" placeholder="кв/офис" class="form__input form__input--bg">
+              </label>
+              <label class="form__label">
+                <input autocomplete="off" type="text" name="phone" placeholder="этаж" class="form__input form__input--bg">
+              </label>
+              <label class="form__label">
+                <input autocomplete="off" type="text" name="email" placeholder="подъезд" class="form__input form__input--bg">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Курьер</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <div class="popup popup-action">
       <button type="button" class="popup__close">
             <svg class="icon icon-ctlg-close ">

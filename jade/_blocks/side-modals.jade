@@ -340,3 +340,40 @@
 							.address-list__shedule Пн-Вс: 8.00-20.00
 
 							a(href="#").btn.btn-sm.btn-loc Как добраться
+
+.side-modal.courier-side-modal#modal-courier(data-visible-class="courier-modal-visible")
+	button(type="button").side-modal__close.button-close
+		+icon('ctlg-close')
+	.side-modal__inner
+		.side-modal__title Доставка курьером
+
+
+
+		.side-modal__content
+			form(action="#" class="form")
+				.address-side-modal__form
+					.address-side-modal__select 
+						select(name="locations" data-searchdisable="true" class="fstdropdown-select")
+							- var opts = ['Краснодар','Армавир','Кропоткин','Тихорецк','Славянск-на-Кубани','Тимашевск','Белореченск'];
+							each opt, i in opts
+								option(value=i+1)= opt
+
+					button(type="button")#full-map-open.side-modal__to-map.to-map-side-modal
+						.to-map-side-moda__title На карте
+						+icon('loc')
+			
+				.form__row
+					label.form__label
+						input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Улица, дом')
+
+					label.form__label
+						input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='кв/офис')
+					
+					label.form__label
+						input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='этаж')						
+					
+					label.form__label
+							input.form__input.form__input--bg(autocomplete="off" type='text' name='email' placeholder='подъезд')
+
+				.form__row
+					.form__row-title.form__row-title--required Курьер

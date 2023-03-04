@@ -84,6 +84,13 @@
 			overflow-y: auto;
 		}
 	}
+
+	&.courier-side-modal{
+		.courier-modal-visible &{
+			transform: translateX(0);
+		}
+	}
+
 	.product-card--mini {
 		padding-bottom: 20px;
 		margin-bottom: 10px;
