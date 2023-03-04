@@ -1,32 +1,27 @@
 extends _misc/main
 
 block title
-	| Корзина__012-1
-	- var pageIndex = 'cart_012-1';
+	| Корзина__017
+	- var pageIndex = 'cart_017';
 	- var pagePrefix = 'cart-order';
 
 block content
-	.page.page-cart.page-order
+	.page.page-cart.page-regard
 		.wrapper
 			+menu('breadcrumbs', ['главная', 'Корзина', 'оформление заказа'])
 
 		.page-cart__top
-			+backLink('Оформление заказа', true)
+			+backLink('Спасибо за ваш заказ', true)
 		
 		.page-cart__main
-			.wrapper-smart
-				.wrapper-flex.page-cart__main-wrapper
-					.page-cart__content
-						if pagePrefix != 'cart-order'
-							include _sections/page-cart/cart-content
-						else
-							include _sections/page-cart/cart-order-content
-					aside.page-cart__sidebar
-						if pagePrefix != 'cart-order'
-							include _sections/page-cart/cart-sidebar
-						else
-							include _sections/page-cart/cart-order-sidebar
 
+			.wrapper.cart-regard
+				.cart-regard__title Ваш заказ №1565747 создан
+				.cart-regard__text Специалист интернет-магазина в ближайшее время сформирует и отправит счет на e-mail, указанный в форме заказа. Также счёт будет прикреплён в ваши документы в личном кабинете. 
+
+				.cart-regard__buttons
+					a(href="#").btn.btn-sm.btn-loc История покупок
+					a(href="#").btn.btn-sm.btn-loc.btn-gray на главную
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 

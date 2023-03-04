@@ -9,6 +9,10 @@
 		padding: 22px;
 		background-color: $inpbg;
 
+		@include max-screen($xs){
+			padding: 18px 10px 22px 14px;
+		}
+
 		.form__custom-policy{
 			&:not(:last-child){
 				margin-bottom: 22px;
@@ -290,7 +294,7 @@
 	}
 }
 .deliveries-form__text{
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-bottom: 12px;
 }
 .deliveries-form__note{

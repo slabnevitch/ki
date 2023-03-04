@@ -39,7 +39,7 @@
 				.cards-more
 					a(href="#").cards-more__link + Прикрепить карточку предприятия
 			
-			else if pageIndex == 'cart_007' || pageIndex == 'cart_012'
+			else if pageIndex == 'cart_007' || pageIndex == 'cart_012' || pageIndex == 'cart_012-1' || pageIndex == 'cart_013'
 				.form__row-title.form__row-title--required Покупатель*
 					a(href="#").std-link Есть учётная запись?
 				
@@ -81,7 +81,7 @@
 			.form__row-title.form__row-title--required Способ получения*
 			.form__deliveries.deliveries-form
 				.wrapper-flex
-					if pageIndex == 'cart_006' || pageIndex == 'cart_007' || pageIndex == 'cart_012' || pageIndex == 'cart_012-1' pageIndex == 'cart_013'
+					if pageIndex == 'cart_006' || pageIndex == 'cart_007' || pageIndex == 'cart_012' || pageIndex == 'cart_012-1' || pageIndex == 'cart_013'
 						- var delivs = ['Самовывоз из пункта выдачи', 'Доставка курьером'];
 					else
 						- var delivs = ['Самовывоз из магазина', 'Бесплатная доставка курьером', 'Самовывоз из пункта выдачи', 'Доставка ТК / курьером'];
@@ -91,6 +91,16 @@
 								input.form__check(type='radio' name='delivery-type' value='value' checked=ind==1 ? true : false required='required')
 								span.delivery-form__btn= item
 									+icon('chev-down')
+
+				if pageIndex == 'cart_013'
+					.deliveries-form__text
+						| Курьерская служба магазина с 12:00 до 18:00.
+						br
+						| Курьер уточнит удобную для вас дату доставки.
+					.deliveries-form__note Обращаем Ваше внимание, что подъем и выгрузка товара на этаж не осуществляется.
+
+					.cards-more
+						a(href="#").cards-more__link Выбрать другой
 			
 			if pageIndex == 'cart_012' || pageIndex == 'cart_012-1'
 				.cart-content__shop.shop-cart-content
@@ -101,14 +111,23 @@
 						if pageIndex == 'cart_012-1'
 							img(src="img/page-cart/ozon.jpg" alt="alt")
 					
-					.shop-cart-content__text
-						.shop-cart-content__title Кубань Инструмент
-						.shop-cart-content__address ул. Северная, 320
-						.shop-cart-content__shedule Пн-Вс: 8.00-20.00
-						.shop-cart-content__term
-							.shop-cart-content__term-key Срок доставки:
-							.shop-cart-content__term-val 1 день
-				
+					if pageIndex == 'cart_012'
+						.shop-cart-content__text
+							.shop-cart-content__title Кубань Инструмент
+							.shop-cart-content__address ул. Северная, 320
+							.shop-cart-content__shedule Пн-Вс: 8.00-20.00
+							.shop-cart-content__term
+								.shop-cart-content__term-key Срок доставки:
+								.shop-cart-content__term-val 1 день
+					
+					if pageIndex == 'cart_012-1'
+						.shop-cart-content__text
+							.shop-cart-content__title Ozon
+							.shop-cart-content__address ул. Ростовское шоссе, 14/6
+							.shop-cart-content__shedule Пн-Вс: 8.00-20.00
+							.shop-cart-content__term
+								.shop-cart-content__term-key Срок доставки:
+								.shop-cart-content__term-val 3 дня
 				.cards-more
 					a(href="#").cards-more__link Выбрать другой
 		
