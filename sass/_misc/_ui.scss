@@ -73,7 +73,6 @@ h1, h2, h3, h4, h5, h6{
 .page-top-block{
   display: flex;
   align-items: flex-end;
-  padding-right: 18px;
 }
 .page-top-block__content{
   padding-right: 11px;
@@ -105,13 +104,16 @@ h1, h2, h3, h4, h5, h6{
       display: block;
     }
   }
+  &[disabled] + .light-label__check{
+    border-color: #E5E5E5;
+  }
 }
 .light-label__check{
   width: rem(20);
   height: rem(20);
   margin-right: 7px;
   position: relative;
-  border: 2px solid #858585;
+  border: 2px solid #A9A9A9;
   border-radius: 2px;
 
   // @include min-screen($scale){
@@ -122,7 +124,7 @@ h1, h2, h3, h4, h5, h6{
   .icon{
     display: none;
     font-size: rem(20);
-    color: #858585;
+    color: #A9A9A9;
     @include absolute-center-old;
   }
 }
@@ -241,7 +243,7 @@ h1, h2, h3, h4, h5, h6{
   }
   &-sm{
     // padding-bottom: 2px;
-    max-width: 125px;
+    max-width: rem(125);
    height: 25px;
    line-height: 25px;
    // pizdyk
@@ -263,16 +265,16 @@ h1, h2, h3, h4, h5, h6{
   }
 
   &-order{
-    max-width: 270px;
+    max-width: rem(270);
   }
   &-order-check{
-    max-width: 225px;
+    max-width: rem(225);
   }
   &-bonus{
-     max-width: 540px;
+     max-width: rem(540);
   }
   &-select{
-    max-width: 144px;
+    max-width: rem(144);
   }
   &-loc{
     font-size: 10px;

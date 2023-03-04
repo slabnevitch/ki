@@ -1,0 +1,30 @@
+.cart-sidebar-block
+	.cart-sidebar-block__header
+		.cart-sidebar-block__title Будет начислено
+		a(href="#").product-bonus
+			.product-bonus__val 264
+				+icon('bonus')
+	
+.cart-sidebar-block
+	.cart-sidebar-block__header
+		.cart-sidebar-block__title У вас есть промокод?
+	form(action="#" class="form promo-form")
+		label.form__label
+			input(autocomplete="off" type="text" name="" class="form__input" placeholder="Промокод")
+		button(type="submit").promo-form__submit
+			+icon('arrow-left')
+
+.cart-total
+	.cart-prod-count__row
+		.cart-prod-count__key Товары, 4 шт.
+		.cart-prod-count__val 18 411 ₽
+
+	.cart-prod-count__row
+		.cart-prod-count__key Скидка
+		.cart-prod-count__val -3 682 ₽
+
+	.cart-prod-count__row.cart-prod-count__row--total
+		.cart-prod-count__key Итого:
+		.cart-prod-count__val 14 729 ₽
+
+	button(type="submit").btn.btn-lg.btn-order-check перейти к оформлению

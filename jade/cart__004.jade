@@ -1,8 +1,9 @@
 extends _misc/main
 
 block title
-	| Корзина__003
-	- var pageIndex = 'cart_003';
+	| Корзина__004
+	- var pageIndex = 'cart_004';
+
 block content
 	.page.page-cart
 		.wrapper
@@ -12,14 +13,14 @@ block content
 			+backLink('Корзина', true)
 				.page-top-block
 					.page-top-block__content
-						.page-cart__prodcounter 4
+						.page-cart__prodcounter 5
 					.page-top-block__text товаров
 						br
 						| в корзине
 		
 		.page-cart__main
 			.wrapper-smart
-				.wrapper-flex
+				.wrapper-flex.page-cart__main-wrapper
 					.page-cart__content
 						include _sections/page-cart/cart-content
 					aside.page-cart__sidebar

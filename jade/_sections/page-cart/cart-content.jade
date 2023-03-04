@@ -106,95 +106,215 @@
 									.product-card__info.info-product-card
 											.info-product-card__row Артикул: 002266
 
-						if item.inAction == true
-							.product-announcement
-								.product-announcement__wrap
-									// .product-announcement__title Этот товар участвует в акции
-									.product-announcement__name Этот товар участвует в акции
-									a(href="#").product-announcement__link Подробнее
+						if pageIndex == 'cart_003'
+							if item.inAction == true
+								.product-announcement
+									.product-announcement__wrap
+										// .product-announcement__title Этот товар участвует в акции
+										.product-announcement__name Этот товар участвует в акции
+										a(href="#").product-announcement__link Подробнее
 
-					- var item = {addedClass:'product-card--to-add', billet: '', price: '6 159 ₽', sale: '', sbers: '51', tilte: 'Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000', aval: '7 магазинах', iconActive: false, path: 'img/page-brands/gaik/2.jpg'};
+					
+					if pageIndex == 'cart_003'
+						- var item = {addedClass:'product-card--to-add', billet: 'скидка', price: '6 159 ₽', sale: '', sbers: '51', tilte: 'Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000', aval: '7 магазинах', iconActive: false, path: 'img/page-brands/gaik/2.jpg'};
 
-					.product-announcement.product-announcement--titled
-						.product-announcement__wrap
-							.product-announcement__title Вместе дешевле
-							a(href="#").product-announcement__link Подробнее
-							.product-announcement__text Добавьте ещё вот этот товар и получите скидку -20% на оба товара
+						.product-announcement.product-announcement--titled
+							.product-announcement__wrap
+								.product-announcement__title Вместе дешевле
+								a(href="#").product-announcement__link Подробнее
+								.product-announcement__text Добавьте ещё вот этот товар и получите скидку -20% на оба товара
 
-					div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog " + item.addedClass : item.analog ? "product-card product-card--analog " + item.addedClass : item.pullOut ? "product-card product-card--pullout " +item.addedClass : "product-card " + item.addedClass itemscope="" itemtype="http://schema.org/Offer")
-							label.light-label
-								input(type="checkbox" name="name" class="light-label__input")
-								span.light-label__check
-									+icon('check')
+						div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog " + item.addedClass : item.analog ? "product-card product-card--analog " + item.addedClass : item.pullOut ? "product-card product-card--pullout " +item.addedClass : "product-card " + item.addedClass itemscope="" itemtype="http://schema.org/Offer")
+								label.light-label
+									input(type="checkbox" name="name" class="light-label__input")
+									span.light-label__check
+										+icon('check')
 
-							button(type="button").product-card__delete
-								+icon('remove')
-							
-							.product-card__img-wrap
-								if item.billet != ''
-									div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : item.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
-										.billet__value= item.billet
-										
-										if item.billet == "акция" || item.billet == "скидка"
-											+icon('percents')
-										if item.billet == "уценка"
-											+icon('attention')
-										if item.billet == "Новинка"
-											+icon('flame')
+								button(type="button").product-card__delete
+									+icon('remove')
 								
-								a(href="#" alt=item.tilte).product-card__border
-									span.product-card__img
-										img(src=item.path alt="alt")
-							
-							
-							.product-card__price
-								.product-card__actions
-									if item.iconActive === '0'
-										a(href="#").product-card__action.active
-											+icon('favourites')
-										a(href="#").product-card__action
-											+icon('compare')
-									else if item.iconActive === '1'
-										a(href="#").product-card__action
-											+icon('favourites')
-										a(href="#").product-card__action.active
-											+icon('compare')
-									else if item.iconActive == false
-										a(href="#").product-card__action
-											+icon('favourites')
-										a(href="#").product-card__action
-											+icon('compare')
-
-								a(href="#").product-price= item.price
-									if item.sale != ''
-										.product-price-sale= item.sale
-								meta(itemprop="price" content=item.price)
-								meta(itemprop="priceCurrency" content="RUB")
+								.product-card__img-wrap
+									if item.billet != ''
+										div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : item.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
+											.billet__value= item.billet
+											
+											if item.billet == "акция" || item.billet == "скидка"
+												+icon('percents')
+											if item.billet == "уценка"
+												+icon('attention')
+											if item.billet == "Новинка"
+												+icon('flame')
+									
+									a(href="#" alt=item.tilte).product-card__border
+										span.product-card__img
+											img(src=item.path alt="alt")
 								
-								if item.sbers
-									a(href="#").product-bonus
-										.product-bonus__val= item.sbers
-										+icon('bonus')
-							
-							a(href="#" itemprop="name").product-card__name
-								.product-card__name-value= item.tilte
-							
-								.product-card__rating-wrap
-									.product-card__rating
+								
+								.product-card__price
+									.product-card__actions
+										if item.iconActive === '0'
+											a(href="#").product-card__action.active
+												+icon('favourites')
+											a(href="#").product-card__action
+												+icon('compare')
+										else if item.iconActive === '1'
+											a(href="#").product-card__action
+												+icon('favourites')
+											a(href="#").product-card__action.active
+												+icon('compare')
+										else if item.iconActive == false
+											a(href="#").product-card__action
+												+icon('favourites')
+											a(href="#").product-card__action
+												+icon('compare')
+
+									a(href="#").product-price= item.price
+										if item.sale != ''
+											.product-price-sale= item.sale
+									meta(itemprop="price" content=item.price)
+									meta(itemprop="priceCurrency" content="RUB")
+									
+									if item.sbers
+										a(href="#").product-bonus
+											.product-bonus__val= item.sbers
+											+icon('bonus')
+								
+								a(href="#" itemprop="name").product-card__name
+									.product-card__name-value= item.tilte
+								
+									.product-card__rating-wrap
+										.product-card__rating
+												+crystalRating('4,5')
+								
+								a(href="#").product-card__description 
+									.product-card__description-row Напряжение акк.: 12 В
+									.product-card__description-row Крутящий момент: 30 Н·м
+									.product-card__description-row Емкость аккумулятора: 2 А·ч
+									.product-card__description-row Тип аккумулятора Li-Ion
+									.product-card__description-row Кол-во аккумуляторов: 2 шт.
+									.product-card__description-row Вес 1.2 кг
+
+								.product-card__bottom
+									// button(type="button").product-card__adding +добавить товар в заказ
+
+									button(type="button").btn.btn-sm.btn-buy.product-card__buy +добавить товар в заказ
+									
+									.product-card__info.info-product-card
+											.info-product-card__row Артикул: 002266
+
+					if pageIndex == 'cart_004'
+						.cart-content__subtitle Недоступны для заказа
+
+						- var hiddenItem = {path: 'img/page-brands/perf/2.jpg', billet: '', price: '12 599 ₽', sale: '', sbers: '', tilte: 'Перфоратор DeWalt D25133K', aval: false, pullOut: true, analog: true, iconActive: false};
+
+						div(class=hiddenItem.analog && hiddenItem.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : hiddenItem.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Offer")
+								label.light-label
+									input(type="checkbox" name="name" class="light-label__input" disabled)
+									span.light-label__check
+										+icon('check')
+
+								button(type="button").product-card__delete
+									+icon('remove')
+								
+								.product-card__img-wrap
+									if hiddenItem.billet != ''
+										div(class=hiddenItem.billet == "акция" || hiddenItem.billet == "скидка" ? "billet billet--action" : hiddenItem.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
+											.billet__value= hiddenItem.billet
+											
+											if hiddenItem.billet == "акция" || hiddenItem.billet == "скидка"
+												+icon('percents')
+											if hiddenItem.billet == "уценка"
+												+icon('attention')
+											if hiddenItem.billet == "Новинка"
+												+icon('flame')
+									
+									a(href="#" alt=hiddenItem.tilte).product-card__border
+										span.product-card__img
+											img(src=hiddenItem.path alt="alt")
+								
+								
+								.product-card__price
+									.product-card__actions
+										if hiddenItem.iconActive === '0'
+											a(href="#").product-card__action.active
+												+icon('favourites')
+											a(href="#").product-card__action
+												+icon('compare')
+										else if hiddenItem.iconActive === '1'
+											a(href="#").product-card__action
+												+icon('favourites')
+											a(href="#").product-card__action.active
+												+icon('compare')
+										else if hiddenItem.iconActive == false
+											a(href="#").product-card__action
+												+icon('favourites')
+											a(href="#").product-card__action
+												+icon('compare')
+
+									a(href="#").product-price= hiddenItem.price
+										if hiddenItem.sale != ''
+											.product-price-sale= hiddenItem.sale
+									meta(itemprop="price" content=hiddenItem.price)
+									meta(itemprop="priceCurrency" content="RUB")
+									
+									if hiddenItem.sbers
+										a(href="#").product-bonus
+											.product-bonus__val= item.sbers
+											+icon('bonus')
+								
+								a(href="#" itemprop="name").product-card__name
+									.product-card__name-value= hiddenItem.tilte
+								
+									.product-card__rating-wrap
+										.product-card__rating
 											+crystalRating('4,5')
-							
-							a(href="#").product-card__description 
-								.product-card__description-row Напряжение акк.: 12 В
-								.product-card__description-row Крутящий момент: 30 Н·м
-								.product-card__description-row Емкость аккумулятора: 2 А·ч
-								.product-card__description-row Тип аккумулятора Li-Ion
-								.product-card__description-row Кол-во аккумуляторов: 2 шт.
-								.product-card__description-row Вес 1.2 кг
 
-							.product-card__bottom
-								// button(type="button").product-card__adding +добавить товар в заказ
+								a(href="#").product-card__description 
+									.product-card__description-row Напряжение акк.: 12 В
+									.product-card__description-row Крутящий момент: 30 Н·м
+									.product-card__description-row Емкость аккумулятора: 2 А·ч
+									.product-card__description-row Тип аккумулятора Li-Ion
+									.product-card__description-row Кол-во аккумуляторов: 2 шт.
+									.product-card__description-row Вес 1.2 кг
 
-								button(type="button").btn.btn-sm.btn-buy.product-card__buy +добавить товар в заказ
-								
-								.product-card__info.info-product-card
-										.info-product-card__row Артикул: 002266
+								.product-card__bottom
+										
+									if hiddenItem.billet != ''
+										a(href="#" class=hiddenItem.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy") Купить
+									else if hiddenItem.order
+										a(href="#").btn.btn-sm.btn-blue.product-card__buy заказать
+									
+									else if hiddenItem.analog
+										a(href="#").btn.btn-sm.btn-gray.product-card__buy аналог
+
+									else
+										a(href="#").btn.btn-sm.product-card__buy Купить
+
+									.product-card__info.info-product-card
+										if hiddenItem.order && hiddenItem.analog
+											.info-product-card__row Артикул: 002266
+											.info-product-card__row
+												.info-product-card__missing #[span Товар] временно отсутствует
+											.info-product-card__row
+												a(href="#").info-product-card__oneclick Подобрать аналог
+										else if hiddenItem.order
+											.info-product-card__row Артикул: 002266
+											.info-product-card__row
+												.info-product-card__missing #[span Товар] временно отсутствует
+											.info-product-card__row
+												a(href="#").info-product-card__oneclick Купить в 1 клик
+										
+										else if hiddenItem.analog
+											.info-product-card__row Артикул: 002266
+											.info-product-card__row Нет в наличии, товар снят с производства 
+										
+										else
+											.info-product-card__row Артикул: 002266
+											.info-product-card__row
+													.info-product-card__aval
+														.info-product-card__avalkey В наличии
+														a(href="#").info-product-card__avalvalue
+															span.info-product-card__in= "В "
+															| #{item.aval}
+											.info-product-card__row
+												a(href="#").info-product-card__oneclick Купить в 1 клик

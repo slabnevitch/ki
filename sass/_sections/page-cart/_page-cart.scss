@@ -4,6 +4,20 @@
 		@include max-screen($md){
 			margin-bottom: 16px;
 		}
+		
+	}
+}
+.page-cart__main{
+	margin-bottom: 29px;
+	@include min-screen($md){
+	}
+}
+.page-cart__main-wrapper{
+	padding-bottom: 32px;
+	border-bottom: 1px solid $border;
+
+	@include min-screen($md){
+		padding-bottom: 11px;	
 	}
 }
 .page-cart__prodcounter{
@@ -49,11 +63,11 @@
 .similar{
 	padding-bottom: 18px;
 }
-.similar__title{
-	padding-bottom: 28px;
+.similar__title,
+.cart-content__subtitle{
 	font-weight: 700;
-	font-size: 22px;
-	line-height: calc(20/22);
+	font-size: rem(22);
+	line-height: rem(22);
 
 	@include max-screen($sm){
 		font-size: 14px;
@@ -62,6 +76,12 @@
 	@include min-screen($scale){
 		font-size: 24px;
 	}
+}
+.similar__title{
+	margin-bottom: 14px;
+}
+.cart-content__subtitle{
+	margin-bottom: 24px;
 }
 .page-cart__main {}
 .page-cart__content {
@@ -92,9 +112,6 @@
 	}
 	@include max-screen($md){
 		flex: 0 0 calc(100% - 16px);
-		padding-bottom: 21px;
-		margin-bottom: 30px;
-		border-bottom: 1px solid $border;
 	}
 }
 .cart-content {
@@ -222,6 +239,20 @@
 			flex: 0 1 30%; 
 		}
 	}
+	.product-cards--horisontal .product-card .product-card__info, 
+	.product-card--horisontal .product-card__info{
+		// flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: flex-end;
+
+		@include max-screen($sm){
+			align-items: flex-start;
+		}
+	}
+	.product-cards--horisontal .product-card .info-product-card__row:not(:last-child), 
+	.product-card--horisontal .info-product-card__row:not(:last-child){
+		margin-right: 24px;
+	}
 }
 .cart-content__body {
 	.product-card{
@@ -304,11 +335,18 @@
 			top: 0;
 			left: 0;
 		}
+		.light-label__check{
+			border-color: #E5E5E5;
+		}
 		.product-card__name{
 			opacity: 0.8;
 		}
 		.product-card__description{
 			display: none;
+		}
+		.info-product-card__row{
+			flex-shrink: 0;
+			max-width: 150px;
 		}
 	}
 }
@@ -326,6 +364,9 @@
 	margin-right: 8px;
 	margin-bottom: 23px;
 
+	@include min-screen($md){
+		margin-left: rem(45);
+	}
 
 	&__wrap{
 		padding: 14px 40px 11px 40px;

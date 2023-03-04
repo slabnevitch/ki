@@ -1,29 +1,31 @@
 extends _misc/main
 
 block title
-	| Корзина__003
-	- var pageIndex = 'cart_003';
+	| Корзина__005
+	- var pageIndex = 'cart_005';
+	- var pagePrefix = 'cart-order';
+
 block content
 	.page.page-cart
 		.wrapper
-			+menu('breadcrumbs', ['главная', 'Корзина'])
+			+menu('breadcrumbs', ['главная', 'Корзина', 'оформление заказа'])
 
 		.page-cart__top
-			+backLink('Корзина', true)
-				.page-top-block
-					.page-top-block__content
-						.page-cart__prodcounter 4
-					.page-top-block__text товаров
-						br
-						| в корзине
+			+backLink('Оформление заказа')
 		
 		.page-cart__main
 			.wrapper-smart
-				.wrapper-flex
+				.wrapper-flex.page-cart__main-wrapper
 					.page-cart__content
-						include _sections/page-cart/cart-content
+						if pagePrefix != 'cart-order'
+							include _sections/page-cart/cart-content
+						else
+							include _sections/page-cart/cart-order-content
 					aside.page-cart__sidebar
-						include _sections/page-cart/cart-sidebar
+						if pagePrefix != 'cart-order'
+							include _sections/page-cart/cart-sidebar
+						else
+							include _sections/page-cart/cart-order-sidebar
 
 		include _sections/page-cart/similar
 
