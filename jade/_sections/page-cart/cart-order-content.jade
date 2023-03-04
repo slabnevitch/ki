@@ -1,1 +1,61 @@
 .cart-content
+	form.form(action='#')
+		.form__row
+			.form__row-title.form__row-title--required Тип плательщика*
+			- var types = ['Физическое лицо', 'Юридическое лицо'];
+				.wrapper-flex
+					each item, ind in types
+						label.form__custom.form__type
+							input.form__check(type='radio' name='type' value='chekbox1' checked=ind==0 ? true : false required='required')
+							span.form__custom-chek
+							span.form__policy= item
+
+		.form__row
+			.form__row-title.form__row-title--required Покупатель*
+				a(href="#").std-link Есть учётная запись?
+			
+			label.form__label
+				input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Фамилия*')
+
+			label.form__label
+				input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Имя*')
+			
+			label.form__label
+				input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Отчество*')						
+			
+			label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='email' placeholder='Email*')
+			label.form__label
+				// textarea.form__area(type='text' name='question')
+				input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Телефон*')
+
+		.form__row
+			.form__row-title.form__row-title--required Способ получения*
+			.form__deliveries.deliveries-form
+				.wrapper-flex
+					- var delivs = ['Самовывоз из магазина', 'Бесплатная доставка курьером', 'Самовывоз из пункта выдачи', 'Доставка ТК / курьером'];
+					each item, ind in delivs
+						.form__custom-policy.delivery-form
+							label.form__custom
+								input.form__check(type='radio' name='delivery-type' value='value' checked=ind==1 ? true : false required='required')
+								span.delivery-form__btn= item
+									+icon('chev-down')
+		.form__row
+			.form__row-title.form__row-title--required Оплата*
+			.form__row-content
+				- var kinds = ['Оплата картой на сайте', 'СберСпасибо - оплата на сайте', 'Оплата при получении', 'Выставить счет для предоплаты безналичным платежом', 'Оплата СБП (сервис быстрых платежей)', 'В кредит'];
+				each item, ind in kinds
+					.form__custom-policy
+						label.form__custom
+							input.form__check(type='radio' name='payment' value='chekbox1' checked=ind==0 ? true : false required='required')
+							span.form__custom-chek
+							span.form__policy= item
+
+							span.form__hidden-text Оплата наличными или банковской картой при получении заказа.
+								span.form__hidden-note Обратите внимание ! 
+									br
+									| При этом способе расчёта недоступно использование бонусов "Спасибо" от Сбербанка.
+		.form__row
+			.form__row-title.form__row-title--required Комментарии к заказу
+			label.form__label
+				textarea.form__area(type='text' name='question' placeholder="Есть что добавить?")

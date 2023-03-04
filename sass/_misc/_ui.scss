@@ -70,6 +70,18 @@ h1, h2, h3, h4, h5, h6{
   }
   
 }
+.std-link{
+  font-size: rem(12);
+  line-height: rem(15);
+  color: #767676;
+  transition: opacity .3s;
+  font-weight: 400;
+
+  &:hover, &:active{
+    opacity: 0.5;
+  }
+  
+}
 .page-top-block{
   display: flex;
   align-items: flex-end;

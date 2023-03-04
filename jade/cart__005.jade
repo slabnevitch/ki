@@ -6,12 +6,12 @@ block title
 	- var pagePrefix = 'cart-order';
 
 block content
-	.page.page-cart
+	.page.page-cart.page-order
 		.wrapper
 			+menu('breadcrumbs', ['главная', 'Корзина', 'оформление заказа'])
 
 		.page-cart__top
-			+backLink('Оформление заказа')
+			+backLink('Оформление заказа', true)
 		
 		.page-cart__main
 			.wrapper-smart
@@ -26,11 +26,6 @@ block content
 							include _sections/page-cart/cart-sidebar
 						else
 							include _sections/page-cart/cart-order-sidebar
-
-		include _sections/page-cart/similar
-
-
-
 
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
