@@ -6307,7 +6307,8 @@ input.range__input {
   .popup-action-visible .body-cover,
   .popup-product-added-visible .body-cover,
   .popup-product-favourite-visible .body-cover,
-  .popup-review-visible .body-cover {
+  .popup-review-visible .body-cover,
+  .popup-cookies-visible .body-cover {
     visibility: visible;
     opacity: 1;
   }
@@ -10244,8 +10245,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .popup__button {
   color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 0.75rem;
+  line-height: 1.0625rem;
   text-transform: uppercase;
   font-family: "Inter", sans-serif;
   text-decoration: none;
@@ -10394,6 +10395,86 @@ h1, h2, h3, h4, h5, h6 {
 
 .popup-product-favourite-visible .popup-product-favourite {
   display: block;
+}
+
+@media only screen and (min-width: 959.98px) {
+  .popup-cookies {
+    bottom: 40px;
+    top: auto;
+    right: 128px;
+    width: 512px;
+    padding-right: 70px;
+    max-width: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.popup-cookies-visible .popup-cookies {
+  display: block;
+}
+
+.popup-cookies .popup__close {
+  top: 10px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+@media only screen and (max-width: 959.98px) {
+  .popup-cookies .popup__close {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 959.98px) {
+  .popup-cookies .popup__title,
+  .popup-cookies .popup-cookies__wide,
+  .popup-cookies .popup__button {
+    display: none;
+  }
+}
+
+.popup-cookies .popup__button {
+  margin-right: 44px;
+  color: #717171;
+}
+
+.popup-cookies .popup__text {
+  color: #717171;
+}
+
+@media only screen and (min-width: 959.98px) {
+  .popup-cookies .popup__text {
+    margin-bottom: 0;
+    color: #C4C4C4;
+  }
+}
+
+.popup-cookies .popup__text a {
+  color: #C4C4C4;
+}
+
+@media only screen and (max-width: 959.98px) {
+  .popup-cookies .popup__text:not(.popup-cookies__wide) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 959.98px) {
+  .popup-cookies .popup__footer {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
 }
 
 /*--------------------END popups----------------------*/

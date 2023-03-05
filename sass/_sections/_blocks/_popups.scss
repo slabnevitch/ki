@@ -80,8 +80,8 @@
 .popup__button {
 	// @include but-null;
 	color: $text;
-	font-size: 12px;
-	line-height: 15px;
+	font-size: rem(12);
+	line-height: rem(17);
 	text-transform: uppercase;
 	font-family: $inter;
 	text-decoration: none;
@@ -158,5 +158,69 @@
 	.popup-product-favourite-visible & {
 		display: block;
 	}
+}
+.popup-cookies{
+	@include min-screen($md){
+		bottom: 40px;
+		top: auto;
+		right: 128px;
+		width: 512px;
+		padding-right: 70px;
+		max-width: none;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.popup-cookies-visible & {
+		display: block;
+	}
+
+	.popup__close{
+		top: 10px;
+		font-weight: 700;
+		font-size: rem(12);
+		text-transform: uppercase;
+		color: #000000;
+
+		@include max-screen($md){
+			position: static;
+			width: auto;
+			height: auto;
+		}
+	}
+	.popup__title,
+	.popup-cookies__wide,
+	.popup__button{
+		@include min-screen($md){
+			display: none;
+		}
+	}
+	.popup__button{
+		margin-right: 44px;
+		color: #717171;
+	}
+
+	.popup__text{
+		color: #717171;
+		@include min-screen($md){
+			margin-bottom: 0;
+			color: $border;
+		}
+		a{
+			color: $border;
+		}
+		&:not(.popup-cookies__wide){
+			@include max-screen($md){
+				display: none;
+			}
+		}
+	}
+	.popup__footer{
+		@include max-screen($md){
+			justify-content: flex-end;
+			// align-items: center;
+			align-items: flex-start;
+		}
+	}
+
 }
 /*--------------------END popups----------------------*/ 

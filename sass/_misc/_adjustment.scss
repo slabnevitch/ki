@@ -320,7 +320,8 @@ padding-bottom: 52.25%;
 	.popup-action-visible &,
 	.popup-product-added-visible &,
 	.popup-product-favourite-visible &,
-	.popup-review-visible &{
+	.popup-review-visible &,
+	.popup-cookies-visible &{
 		@include max-screen($md){
 			visibility: visible;
 			opacity: 1;

@@ -219,9 +219,9 @@
 		
 		// popups close
 			if(targ.classList.contains('popup__close') || targ.closest('.popup__close') !== null){
-				console.log(targ.closest('.popup__close').parentElement.classList[1] + '-viseble')
+				console.log(targ.closest('.popup__close').parentElement.classList[1] + '-visible')
 				console.log(document.body);
-				document.body.classList.remove(targ.closest('.popup__close').parentElement.classList[1] + '-visible');
+				document.body.classList.remove(targ.closest('.popup__close').closest('.popup').classList[1] + '-visible');
 			}		
 		// END popups close
 
