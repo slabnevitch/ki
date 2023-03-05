@@ -35,18 +35,18 @@
 	}
 	&.availability-modal{
 		&:after{
-		content: '';
-		position: absolute;
-		display: block;
-		width: 100%;
-		height: 79px;
-		bottom: 0;
-		left: 0;
-		background-image: url(../img/address-list-gradient.svg);
-		background-position: 0 0;
-		background-repeat: no-repeat;
-		background-size: 100%;
-	}
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 79px;
+			bottom: 0;
+			left: 0;
+			background-image: url(../img/address-list-gradient.svg);
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
 		.side-modal__title{
 			@include max-screen($md){
 				padding-right: 60px;
@@ -88,6 +88,95 @@
 	&.courier-side-modal{
 		.courier-modal-visible &{
 			transform: translateX(0);
+		}
+		.courier-side-modal__price{
+			position: absolute;
+			top: 19px;
+			right: 12px;
+			font-size: rem(14);
+			line-height: rem(18);
+			text-align: right;
+			opacity: 0.4
+		}
+		.address-side-modal__form{
+			@include min-screen($md){
+				margin-bottom: 6px;
+			}
+		}
+		.btn-select{
+			position: absolute;
+			bottom: 16px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1;
+		}
+		.form__row--flex{
+			overflow: hidden;
+
+			.form__label{
+				margin-left: 4px;
+				margin-right: 4px;
+				width: calc(100% / 3 - 8px);
+				
+				&:first-child{
+					width: calc(100% - 8px);
+				}
+
+			}
+		}
+		.courier-side-modal__container{
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -8px;
+			margin-right: -8px;
+		}
+		.form__row-content{
+			padding: 0;
+			background-color: transparent;
+		}
+		.form .form__custom-chek{
+			border-radius: 50%;
+		}
+		.form__check:checked + .form__custom-chek{
+			border-color: $accent;
+		}
+		.form .form__check:checked + .form__custom-chek{
+			border-width: 2px;
+		}
+		.form .form__custom-chek::before{
+			display: block;
+		}
+		.form .form__custom-policy{
+			position: relative;
+			padding: 18px 12px 14px 14px;
+			margin-top: 0;
+			margin-bottom: 8px;
+			background-color: $gray-l;
+		}
+		.form .form__policy{
+			flex: 0 0 100%;
+			margin-top: 6px;
+			margin-bottom: 12px;
+			font-size: inherit;
+			color: #000;
+		}
+		.form__hidden-text{
+			padding-left: 0;
+		}
+	}
+	&.covered-modal{
+		&:after{
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 79px;
+			bottom: 0;
+			left: 0;
+			background-image: url(../img/address-list-gradient.svg);
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			background-size: 100%;
 		}
 	}
 

@@ -8804,7 +8804,7 @@
         </div>
       </div>
     </div>
-    <div id="modal-courier" data-visible-class="courier-modal-visible" class="side-modal courier-side-modal">
+    <div id="modal-courier" data-visible-class="courier-modal-visible" class="side-modal courier-side-modal covered-modal">
       <button type="button" class="side-modal__close button-close">
             <svg class="icon icon-ctlg-close ">
               <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
@@ -8833,26 +8833,54 @@
                     </svg>
               </button>
             </div>
-            <div class="form__row">
-              <label class="form__label">
-                <input autocomplete="off" type="text" name="name" placeholder="Улица, дом" class="form__input form__input--bg">
-              </label>
-              <label class="form__label">
-                <input autocomplete="off" type="text" name="name" placeholder="кв/офис" class="form__input form__input--bg">
-              </label>
-              <label class="form__label">
-                <input autocomplete="off" type="text" name="phone" placeholder="этаж" class="form__input form__input--bg">
-              </label>
-              <label class="form__label">
-                <input autocomplete="off" type="text" name="email" placeholder="подъезд" class="form__input form__input--bg">
-              </label>
+            <div class="form__row form__row--flex">
+              <div class="courier-side-modal__container">
+                <label class="form__label">
+                  <input autocomplete="off" type="text" name="name" placeholder="Улица, дом" class="form__input form__input--bg">
+                </label>
+                <label class="form__label">
+                  <input autocomplete="off" type="text" name="name" placeholder="кв/офис" class="form__input form__input--bg">
+                </label>
+                <label class="form__label">
+                  <input autocomplete="off" type="text" name="phone" placeholder="этаж" class="form__input form__input--bg">
+                </label>
+                <label class="form__label">
+                  <input autocomplete="off" type="text" name="email" placeholder="подъезд" class="form__input form__input--bg">
+                </label>
+              </div>
             </div>
             <div class="form__row">
-              <div class="form__row-title form__row-title--required">Курьер</div>
+              <div class="form__row-content">
+                <div class="form__custom-policy">
+                  <div class="courier-side-modal__price">Бесплатно</div>
+                  <label class="form__custom">
+                    <input type="radio" name="payment" value="chekbox1" checked required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Доставка по Краснодару</span><span class="form__hidden-text"><p>Доставка осуществляется с 12:00 до 18:00. Курьер уточнит удобную для вас дату доставки.</p><p>Обращаем Ваше внимание, что подъем и выгрузка товара на этаж не осуществляется.</p><p>*<br>Доставка бесплатна по Краснодару и пригороду от 2500 руб</p></span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <div class="courier-side-modal__price">от 300 ₽</div>
+                  <label class="form__custom">
+                    <input type="radio" name="payment" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Служба доставки Ozon</span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <div class="courier-side-modal__price">от 300 ₽</div>
+                  <label class="form__custom">
+                    <input type="radio" name="payment" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">СДЭК </span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <div class="courier-side-modal__price">Бесплатно</div>
+                  <label class="form__custom">
+                    <input type="radio" name="payment" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Доставка в пригород Краснодара, Тимашевска, Белореченска, Славянска-на-Кубани</span>
+                  </label>
+                </div>
+              </div>
             </div>
           </form>
         </div>
       </div>
+      <button type="button" class="btn btn-lg btn-select">Выбрать</button>
     </div>
     <div class="popup popup-action">
       <button type="button" class="popup__close">

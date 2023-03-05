@@ -341,13 +341,11 @@
 
 							a(href="#").btn.btn-sm.btn-loc Как добраться
 
-.side-modal.courier-side-modal#modal-courier(data-visible-class="courier-modal-visible")
+.side-modal.courier-side-modal.covered-modal#modal-courier(data-visible-class="courier-modal-visible")
 	button(type="button").side-modal__close.button-close
 		+icon('ctlg-close')
 	.side-modal__inner
 		.side-modal__title Доставка курьером
-
-
 
 		.side-modal__content
 			form(action="#" class="form")
@@ -362,18 +360,33 @@
 						.to-map-side-moda__title На карте
 						+icon('loc')
 			
-				.form__row
-					label.form__label
-						input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Улица, дом')
+				.form__row.form__row--flex
+					.courier-side-modal__container
+						label.form__label
+							input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Улица, дом')
 
-					label.form__label
-						input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='кв/офис')
-					
-					label.form__label
-						input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='этаж')						
-					
-					label.form__label
-							input.form__input.form__input--bg(autocomplete="off" type='text' name='email' placeholder='подъезд')
+						label.form__label
+							input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='кв/офис')
+						
+						label.form__label
+							input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='этаж')
+						
+						label.form__label
+								input.form__input.form__input--bg(autocomplete="off" type='text' name='email' placeholder='подъезд')
 
 				.form__row
-					.form__row-title.form__row-title--required Курьер
+					.form__row-content
+						- var kinds = [{name: 'Доставка по Краснодару', options: '<p>Доставка осуществляется с 12:00 до 18:00. Курьер уточнит удобную для вас дату доставки.</p><p>Обращаем Ваше внимание, что подъем и выгрузка товара на этаж не осуществляется.</p><p>*<br>Доставка бесплатна по Краснодару и пригороду от 2500 руб</p>', price: 'Бесплатно'}, {name: 'Служба доставки Ozon', options: false, price: 'от 300 ₽'}, {name:'СДЭК ', options: false, price: 'от 300 ₽'}, {name:'Доставка в пригород Краснодара, Тимашевска, Белореченска, Славянска-на-Кубани', options: false, price: 'Бесплатно'}];
+						
+						each item, ind in kinds
+							.form__custom-policy
+								.courier-side-modal__price= item.price
+								label.form__custom
+									input.form__check(type='radio' name='payment' value='chekbox1' checked=ind==0 ? true : false required='required')
+									span.form__custom-chek
+									span.form__policy= item.name
+
+									if item.options
+										span.form__hidden-text!= item.options
+
+	button(type="button").btn.btn-lg.btn-select Выбрать
