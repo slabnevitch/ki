@@ -11,9 +11,16 @@
 .cart-sidebar-block
 	.cart-sidebar-block__header
 		.cart-sidebar-block__title У вас есть промокод?
-	form(action="#" class="form promo-form promo-form--applied")
+	form(action="#" class=pageIndex == 'cart_005' ? "form promo-form promo-form--applied" : pageIndex == 'cart_006' ? "form promo-form promo-form--error" : "form promo-form")
 		label.form__label
-			input(autocomplete="off" type="text" name="" class="form__input promo-form__input" placeholder="Промокод применен")
+			if pageIndex == 'cart_005'
+				input(autocomplete="off" type="text" name="" class="form__input promo-form__input" value="Промокод применен")
+				
+			else if pageIndex == 'cart_006'
+				input(autocomplete="off" type="text" name="" class="form__input promo-form__input" value="Промокод недействителен")
+			else
+				input(autocomplete="off" type="text" name="" class="form__input promo-form__input" placeholder="Промокод")
+		
 		button(type="submit").promo-form__submit
 			+icon('arrow-left')
 

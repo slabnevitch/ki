@@ -8810,6 +8810,11 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
+@media only screen and (max-width: 959.98px) {
+  .side-modal.availability-modal {
+    z-index: 14;
+  }
+}
 .side-modal.availability-modal:after {
   content: "";
   position: absolute;
@@ -8858,6 +8863,11 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
+@media only screen and (max-width: 959.98px) {
+  .side-modal.courier-side-modal {
+    z-index: 14;
+  }
+}
 .side-modal.courier-side-modal .courier-side-modal__price {
   position: absolute;
   top: 19px;
@@ -8867,10 +8877,8 @@ h1, h2, h3, h4, h5, h6 {
   text-align: right;
   opacity: 0.4;
 }
-@media only screen and (min-width: 959.98px) {
-  .side-modal.courier-side-modal .address-side-modal__form {
-    margin-bottom: 6px;
-  }
+.side-modal.courier-side-modal .address-side-modal__form {
+  margin-bottom: 6px;
 }
 .side-modal.courier-side-modal .form__row--flex {
   overflow: hidden;
@@ -12842,32 +12850,28 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   margin-top: 7px;
 }
-.promo-form .form__input {
-  border-radius: 0;
-  padding-right: 36px;
-  font-size: 0.875rem;
-}
 .promo-form .form__label {
   margin-bottom: 0;
 }
-.promo-form--applied .promo-form__input::-webkit-input-placeholder {
+.promo-form--applied .promo-form__input {
   color: #003D9E;
-  opacity: 1;
-}
-.promo-form--applied .promo-form__input::-moz-placeholder {
-  color: #003D9E;
-  opacity: 1;
-}
-.promo-form--applied .promo-form__input:-moz-placeholder {
-  color: #003D9E;
-  opacity: 1;
-}
-.promo-form--applied .promo-form__input:-ms-input-placeholder {
-  color: #003D9E;
-  opacity: 1;
+  font-size: 0.75rem;
 }
 .promo-form--applied .promo-form__submit {
   display: none;
+}
+.promo-form--error .promo-form__input {
+  color: #E63600;
+  font-size: 0.75rem;
+}
+.promo-form--error .promo-form__submit {
+  display: none;
+}
+
+.promo-form__input {
+  border-radius: 0;
+  padding-right: 36px;
+  font-size: 0.875rem;
 }
 
 .promo-form__submit {

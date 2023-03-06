@@ -492,21 +492,36 @@
 	position: relative;
 	margin-top: 7px;
 	.form__input {
-		border-radius: 0;
-		padding-right: 36px;
-		font-size: rem(14);
+		
 	}
 	.form__label {
 		margin-bottom: 0;
 	}
 	&--applied{
 		.promo-form__input{
-			@include placecolor($accent);
+			// @include placecolor($accent);
+			color: $accent;
+			font-size: rem(12);
 		}
 		.promo-form__submit {
 			display: none;
 		}
 	}
+	&--error{
+		.promo-form__input{
+			// @include placecolor($accent);
+			color: $red;
+			font-size: rem(12);
+		}
+		.promo-form__submit {
+			display: none;
+		}
+	}
+}
+.promo-form__input {
+	border-radius: 0;
+	padding-right: 36px;
+	font-size: rem(14);
 }
 
 

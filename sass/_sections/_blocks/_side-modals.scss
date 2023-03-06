@@ -34,6 +34,9 @@
 		}
 	}
 	&.availability-modal{
+		@include max-screen($md){
+			z-index: 14;
+		}
 		&:after{
 			content: '';
 			position: absolute;
@@ -89,6 +92,9 @@
 		.courier-modal-visible &{
 			transform: translateX(0);
 		}
+		@include max-screen($md){
+			z-index: 14;
+		}
 		.courier-side-modal__price{
 			position: absolute;
 			top: 19px;
@@ -99,9 +105,8 @@
 			opacity: 0.4
 		}
 		.address-side-modal__form{
-			@include min-screen($md){
-				margin-bottom: 6px;
-			}
+			margin-bottom: 6px;
+
 		}
 		
 		.form__row--flex{
