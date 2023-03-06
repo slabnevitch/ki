@@ -103,13 +103,7 @@
 				margin-bottom: 6px;
 			}
 		}
-		.btn-select{
-			position: absolute;
-			bottom: 16px;
-			left: 50%;
-			transform: translateX(-50%);
-			z-index: 1;
-		}
+		
 		.form__row--flex{
 			overflow: hidden;
 
@@ -164,6 +158,64 @@
 			padding-left: 0;
 		}
 	}
+
+	&.delivery-modal{
+		.delivery-modal-visible &{
+			transform: translateX(0);
+		}
+		.address-list__img{
+			background-color: #E4E4E4;
+			cursor: auto;
+			user-select: none;
+		}
+		.address-list__loc{
+			margin-bottom: 12px;
+			font-size: rem(14);
+			line-height: rem(18);
+			color: $text;
+		}
+		.address-list__shedule{
+			font-size: rem(12);
+			line-height: rem(15);
+		}
+		.light-label{
+			position: absolute;
+			top: 6px;
+			left: 6px;
+			z-index: 2;
+		}
+		.light-label__input:checked + .light-label__check .icon{
+			color: $text;
+		}
+	}
+	&.delivery-point-modal{
+		.delivery-point-modal-visible &{
+			transform: translateX(0);
+		}
+		@include max-screen($xss){
+			height: 215px;
+			top: auto;
+			bottom: 0;
+		}
+		.side-modal__close{
+			@include max-screen($xss){
+				display: none;
+			}
+		}
+		.side-modal__title{
+			@include max-screen($xss){
+				margin-bottom: 12px;
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+		}
+		.address-list__img{
+			@include max-screen($xss){
+				height: 88px;
+				width: 88px;
+			}
+		}
+	}
 	&.covered-modal{
 		&:after{
 			content: '';
@@ -177,6 +229,14 @@
 			background-position: 0 0;
 			background-repeat: no-repeat;
 			background-size: 100%;
+		}
+
+		.btn-select{
+			position: absolute;
+			bottom: 16px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1;
 		}
 	}
 

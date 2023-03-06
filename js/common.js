@@ -1,71 +1,3 @@
-// jQuery(function() {
-
-// 	// ibg class
-// 		if('objectFit' in document.documentElement.style === false){
-// 		  Array.prototype.forEach.call(document.querySelectorAll('._fit'), function(el){
-
-// 		    var image = el.querySelector('img');
-// 		    el.style.backgroundImage = 'url("'+image.src+'")';
-// 		    el.classList.add('ibg');
-// 		    el.classList.remove('_fit');
-//  		 });
-// 		}
-// 	// End ibg class
-
-// $(document).on('click', function(e) {
-	// var $target = $(e.target);
-// });// $(document).on('click')
-
-	// jQuery(document).ready(function() {
-	// 	console.log('jQuery document ready');
-	// });
-
-// 	//SVG Fallback
-// 	// if(!Modernizr.svg) {
-// 	// 	$("img[src*='svg']").attr("src", function() {
-// 	// 		return $(this).attr("src").replace(".svg", ".png");
-// 	// 	});
-// 	// };
-
-// 	//E-mail Ajax Send
-// 	//Documentation & Example: https://github.com/agragregra/uniMail
-// 	$("form").submit(function() { //Change
-// 		var th = $(this);
-// 		$.ajax({
-// 			type: "POST",
-// 			url: "mail.php", //Change
-// 			data: th.serialize()
-// 		}).done(function() {
-// 			alert("Thank you!");
-// 			setTimeout(function() {
-// 				// Done Functions
-// 				th.trigger("reset");
-// 			}, 1000);
-// 		});
-// 		return false;
-// 	});
-
-// 	//Chrome Smooth Scroll
-// 	try {
-// 		$.browserSelector();
-// 		if($("html").hasClass("chrome")) {
-// 			$.smoothScroll();
-// 		}
-// 	} catch(err) {
-
-// 	};
-
-// 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
-	
-// });
-
-// $(window).on('load', function() {
-
-// 	$(".loader_inner").fadeOut();
-// 	$(".loader").delay(400).fadeOut("slow");
-
-// });
-
 (function() {
 	// ibg class
 	if('objectFit' in document.documentElement.style === false){
@@ -254,7 +186,7 @@
 			if(screen.width >= 959.98){
 				document.body.classList.remove(visibleClass, 'side-modal-visible', 'map-with-modal', 'fullscreen-map-visible', 'covered');
 			}else{
-				document.body.classList.remove(visibleClass, 'side-modal-visible', 'map-with-modal');
+				document.body.classList.remove(visibleClass, 'side-modal-visible', 'map-with-modal', 'covered');
 			}
 		}
 		if(targ.classList.contains('map-fullscreen__close') || targ.closest('.map-fullscreen__close') !== null){
@@ -272,7 +204,20 @@
 			document.body.classList.remove(targ.closest('.map-fullscreen__back').dataset.modal, 'side-modal-visible', 'map-with-modal', 'covered');
 			document.body.classList.remove('fullscreen-map-visible');
 		}
-		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null){
+
+		// delivery-point-modal open/close
+		if(targ.getAttribute('id') === 'delivery-point-select'){
+			document.body.classList.add('delivery-point-modal-visible');
+		}
+		if(targ.getAttribute('id') === 'delivery-point-close'){
+			document.body.classList.remove('delivery-point-modal-visible', 'fullscreen-map-visible', 'map-with-modal', 'side-modal-visible', 'covered');
+		}
+		if(targ.getAttribute('id') === 'delivery-points-list-close'){
+			document.body.classList.remove('delivery-modal-visible', 'fullscreen-map-visible', 'map-with-modal', 'covered', 'side-modal-visible');
+		}
+		// END delivery-point-modal open/close
+		
+		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null && targ.closest('.availability-modal') !== null){
 			document.body.classList.remove('catalog-availability-modal-visible');
 			document.body.classList.add('address-modal-single-visible', 'map-with-modal', 'fullscreen-map-visible');
 		}
