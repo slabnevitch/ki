@@ -7441,6 +7441,28 @@
         </form>
       </div>
     </div>
+    <div id="modal-registration" data-visible-class="registration-modal-visible" class="side-modal registration-side-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Войти или зарегистрироваться</div>
+        <div class="side-modal__text">Мы отправим вам SMS-сообщение с кодом подтверждения.</div>
+        <form action="#" class="form">
+          <div class="form__row">
+            <div class="form__row-title form__row-title--required">Телефон*</div>
+            <label class="form__label">
+              <input type="text" name="name" class="form__input">
+            </label>
+          </div>
+          <button type="submit" class="btn btn-lg btn-order">ПОЛУЧИТЬ КОД</button>
+          <div class="side-modal__enter-link"><a href="#" class="std-link">Войти по e-mail и паролю</a></div>
+          <div class="form__note">*При входе и регистрации вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+        </form>
+      </div>
+    </div>
     <div id="modal-address" data-visible-class="address-modal-visible" class="side-modal address-side-modal">
       <button type="button" class="side-modal__close button-close">
             <svg class="icon icon-ctlg-close ">
@@ -7654,6 +7676,196 @@
         </div>
       </div>
     </div>
+    <div id="modal-courier" data-visible-class="courier-modal-visible" class="side-modal courier-side-modal covered-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Доставка курьером</div>
+        <div class="side-modal__content">
+          <form action="#" class="form">
+            <div class="address-side-modal__form">
+              <div class="address-side-modal__select"> 
+                <select name="locations" data-searchdisable="true" class="fstdropdown-select">
+                  <option value="1">Краснодар</option>
+                  <option value="2">Армавир</option>
+                  <option value="3">Кропоткин</option>
+                  <option value="4">Тихорецк</option>
+                  <option value="5">Славянск-на-Кубани</option>
+                  <option value="6">Тимашевск</option>
+                  <option value="7">Белореченск</option>
+                </select>
+              </div>
+              <button type="button" id="full-map-open" class="side-modal__to-map to-map-side-modal">
+                <div class="to-map-side-moda__title">На карте</div>
+                    <svg class="icon icon-loc ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#loc"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="form__row form__row--flex">
+              <div class="courier-side-modal__container">
+                <label class="form__label">
+                  <input autocomplete="off" type="text" name="name" placeholder="Улица, дом" class="form__input form__input--bg">
+                </label>
+                <label class="form__label">
+                  <input autocomplete="off" type="text" name="name" placeholder="кв/офис" class="form__input form__input--bg">
+                </label>
+                <label class="form__label">
+                  <input autocomplete="off" type="text" name="phone" placeholder="этаж" class="form__input form__input--bg">
+                </label>
+                <label class="form__label">
+                  <input autocomplete="off" type="text" name="email" placeholder="подъезд" class="form__input form__input--bg">
+                </label>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__row-content">
+                <div class="form__custom-policy">
+                  <div class="courier-side-modal__price">Бесплатно</div>
+                  <label class="form__custom">
+                    <input type="radio" name="payment" value="chekbox1" checked required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Доставка по Краснодару</span><span class="form__hidden-text"><p>Доставка осуществляется с 12:00 до 18:00. Курьер уточнит удобную для вас дату доставки.</p><p>Обращаем Ваше внимание, что подъем и выгрузка товара на этаж не осуществляется.</p><p>*<br>Доставка бесплатна по Краснодару и пригороду от 2500 руб</p></span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <div class="courier-side-modal__price">от 300 ₽</div>
+                  <label class="form__custom">
+                    <input type="radio" name="payment" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Служба доставки Ozon</span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <div class="courier-side-modal__price">от 300 ₽</div>
+                  <label class="form__custom">
+                    <input type="radio" name="payment" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">СДЭК </span>
+                  </label>
+                </div>
+                <div class="form__custom-policy">
+                  <div class="courier-side-modal__price">Бесплатно</div>
+                  <label class="form__custom">
+                    <input type="radio" name="payment" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Доставка в пригород Краснодара, Тимашевска, Белореченска, Славянска-на-Кубани</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <button type="button" class="btn btn-lg btn-select">Выбрать</button>
+    </div>
+    <div id="modal-delivery" data-visible-class="delivery-modal-visible" class="side-modal delivery-modal covered-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Самовывоз <br>из пункта выдачи</div>
+        <form action="#" class="form address-side-modal__form">
+          <div class="address-side-modal__select"> 
+            <select name="locations" data-searchdisable="true" class="fstdropdown-select">
+              <option value="1">Краснодар</option>
+              <option value="2">Армавир</option>
+              <option value="3">Кропоткин</option>
+              <option value="4">Тихорецк</option>
+              <option value="5">Славянск-на-Кубани</option>
+              <option value="6">Тимашевск</option>
+              <option value="7">Белореченск</option>
+            </select>
+          </div>
+          <button type="button" id="full-map-open" class="side-modal__to-map to-map-side-modal">
+            <div class="to-map-side-moda__title">На карте</div>
+                <svg class="icon icon-loc ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#loc"></use>
+                </svg>
+          </button>
+        </form>
+        <div class="side-modal__content">
+          <div class="address-list__items">
+            <div class="address-list__item">
+              <div class="address-list__img _fit">
+                <label class="light-label">
+                  <input type="checkbox" name="name" class="light-label__input"><span class="light-label__check">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                        </svg></span>
+                </label><img src="img/addresses/1.jpg" alt="alt" class="_fit-img">
+              </div>
+              <div class="address-list__content">
+                <div class="address-list__loc">Пункта выдачи Ozon<br>ул. Северная, 320</div>
+                <div class="address-list__shedule">Пн-Вс: 8.00-20.00</div>
+              </div>
+            </div>
+            <div class="address-list__item">
+              <div class="address-list__img _fit">
+                <label class="light-label">
+                  <input type="checkbox" name="name" class="light-label__input"><span class="light-label__check">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                        </svg></span>
+                </label><img src="img/addresses/2.jpg" alt="alt" class="_fit-img">
+              </div>
+              <div class="address-list__content">
+                <div class="address-list__loc">Магазин<br>ул. Ростовское шоссе, 14/6</div>
+                <div class="address-list__shedule">Пн-Вс: 8.00-20.00</div>
+              </div>
+            </div>
+            <div class="address-list__item">
+              <div class="address-list__img _fit">
+                <label class="light-label">
+                  <input type="checkbox" name="name" class="light-label__input"><span class="light-label__check">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                        </svg></span>
+                </label><img src="img/addresses/3.jpg" alt="alt" class="_fit-img">
+              </div>
+              <div class="address-list__content">
+                <div class="address-list__loc">Магазин<br>ул. Ростовское шоссе, 14/6</div>
+                <div class="address-list__shedule">Пн-Вс: 8.00-20.00</div>
+              </div>
+            </div>
+            <div class="address-list__item">
+              <div class="address-list__img _fit">
+                <label class="light-label">
+                  <input type="checkbox" name="name" class="light-label__input"><span class="light-label__check">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                        </svg></span>
+                </label><img src="img/addresses/4.jpg" alt="alt" class="_fit-img">
+              </div>
+              <div class="address-list__content">
+                <div class="address-list__loc">Магазин<br>ул. Октябрьская, 170</div>
+                <div class="address-list__shedule">Пн-Вс: 8.00-20.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" id="delivery-points-list-close" class="btn btn-lg btn-select">Выбрать</button>
+    </div>
+    <div id="modal-delivery-point" data-visible-class="delivery-point-modal-visible" class="side-modal delivery-point-modal covered-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Магазин Кубань инструмент</div>
+        <div class="side-modal__content">
+          <div class="address-list__items">
+            <div class="address-list__item">
+              <div class="address-list__img _fit"><img src="img/addresses/1.jpg" alt="alt" class="_fit-img"></div>
+              <div class="address-list__content">
+                <div class="address-list__loc">Магазин<br>ул. Ростовское шоссе, 14/6</div>
+                <div class="address-list__shedule">Пн-Вс: 8.00-20.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" id="delivery-point-close" class="btn btn-lg btn-select">Выбрать</button>
+    </div>
     <div class="popup popup-action">
       <button type="button" class="popup__close">
             <svg class="icon icon-ctlg-close ">
@@ -7799,38 +8011,49 @@
       </div>
       <footer class="popup__footer"><a href="/" class="popup__button">Продолжить покупки</a><a href="/" class="popup__button">В избранное</a></footer>
     </div>
+    <div class="popup popup-cookies">
+      <div class="popup__title">Файлы cookie</div>
+      <div class="popup__body">
+        <p class="popup__text popup-cookies__wide">На этом веб-сайте используются файлы cookie, которые обеспечивают работу всех функций для наиболее эффективной навигации по странице. Если вы не ...</p>
+        <p class="popup__text">Мы используем <a href="#">файлы cookie</a>, чтобы улучшить сайт для вас</p>
+      </div>
+      <footer class="popup__footer"><a href="/" class="popup__button">ЧИТАТЬ ПОЛНОСТЬЮ</a>
+        <button type="button" class="popup__close">Ok</button>
+      </footer>
+    </div>
     <div class="map-fullscreen">
       <button type="button" class="map-fullscreen__close button-close">
             <svg class="icon icon-ctlg-close ">
               <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
             </svg>
       </button>
-      <div class="map-fullscreen__select">
-        <button type="button" data-modal="address-modal-single-visible" class="map-fullscreen__back">
-              <svg class="icon icon-arrow-left ">
-                <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
-              </svg>
-        </button>
-        <form action="#" class="form address-side-modal__form">
-          <div class="address-side-modal__select"> 
-            <select name="locations" data-searchdisable="true" class="fstdropdown-select">
-              <option value="1">Краснодар</option>
-              <option value="2">Армавир</option>
-              <option value="3">Кропоткин</option>
-              <option value="4">Тихорецк</option>
-              <option value="5">Славянск-на-Кубани</option>
-              <option value="6">Тимашевск</option>
-              <option value="7">Белореченск</option>
-            </select>
-          </div>
-        </form>
-      </div>
       <div class="map-marker">11 шт</div>
       <div class="map-marker">48 шт</div>
       <div class="map-marker">103 шт</div>
       <div class="map-marker map-marker--lg">18 шт</div>
       <div class="map-marker">4 шт</div>
+      <button type="button" id="delivery-point-select" class="btn btn-lg btn-blue btn-select">Выбрать</button>
       <div id="map" class="map-fullscreen__map"></div>
+    </div>
+    <div class="map-city-select">
+      <button data-modal="address-modal-single-visible" class="map-fullscreen__back button-close">
+            <svg class="icon icon-arrow-left ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
+            </svg>
+      </button>
+      <form action="#" class="form address-side-modal__form">
+        <div class="address-side-modal__select"> 
+          <select name="locations" data-searchdisable="true" class="fstdropdown-select">
+            <option value="1">Краснодар</option>
+            <option value="2">Армавир</option>
+            <option value="3">Кропоткин</option>
+            <option value="4">Тихорецк</option>
+            <option value="5">Славянск-на-Кубани</option>
+            <option value="6">Тимашевск</option>
+            <option value="7">Белореченск</option>
+          </select>
+        </div>
+      </form>
     </div>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/yamap-fullpage.js"></script>
