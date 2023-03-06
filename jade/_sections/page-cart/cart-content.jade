@@ -3,16 +3,20 @@
 		.cart-content__title Ваш заказ
 		.cart-content__title.cart-content__title--mob К покупке 4 товара
 		.cart-content__actions
-			label.light-label.cart-content__action
-				input(type="checkbox" name="name" class="light-label__input")
-				span.light-label__check
-					+icon('check')
-				span#cart-select.light-label__caption выбрать
-				span#cart-abort.light-label__caption Отменить выбор
-			
-			button(type="button").cart-content__action
-				span.cart-content__action-label Удалить все
-				+icon('remove')
+			//- label.light-label.cart-content__action
+			//- 	input(type="checkbox" name="name" class="light-label__input")
+			//- 	span.light-label__check
+			//- 		+icon('check')
+			//- 	span#cart-select.light-label__caption выбрать
+			//- 	span#cart-abort.light-label__caption Отменить выбор
+			if pageIndex == 'cart_003' 
+				button(type="button").cart-content__action
+					span.cart-content__action-label Удалить выбранное
+					+icon('remove')
+			else
+				button(type="button").cart-content__action
+					span.cart-content__action-label Удалить все
+					+icon('remove')
 	
 	.cart-content__body
 		- var cards = [{billet: 'Новинка', price: '14 729 ₽', sale: '18 411 ₽', sbers: '29', tilte: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', aval: '12 магазинах', iconActive: false, path: 'img/hits-section/1.jpg'}, {billet: '', price: '6 159 ₽', sale: '', sbers: '51', tilte: 'Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000', aval: '7 магазинах', iconActive: false, path: 'img/page-brands/gaik/2.jpg'}, {billet: 'скидка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0', inAction:true, path: 'img/page-brands/shur/1.jpg'}, {billet: '', price: '22 899 ₽', sale: '', sbers: '229', tilte: 'Аккумуляторный шуруповерт Makita DFR 750 RFE', aval: '2 магазинах', iconActive: '0', path: 'img/page-brands/gaik/3.jpg', inTitleAction:true}];
@@ -21,7 +25,7 @@
 					each item, i in cards
 						div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : item.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Offer")
 								label.light-label
-									input(type="checkbox" name="name" class="light-label__input")
+									input(type="checkbox" name="name" class="light-label__input" checked=pageIndex == 'cart_003' ? true : false)
 									span.light-label__check
 										+icon('check')
 

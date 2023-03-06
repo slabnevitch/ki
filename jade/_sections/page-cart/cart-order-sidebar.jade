@@ -1,42 +1,43 @@
-.cart-sidebar-block.cart-sidebar-block--transp
-	.cart-sidebar-block__header
-		.cart-sidebar-block__title К покупке 7 товаров
-		a(href="#").cart-sidebar-block__link изменить
+.page-cart__sticky
+	.cart-sidebar-block.cart-sidebar-block--transp
+		.cart-sidebar-block__header
+			.cart-sidebar-block__title К покупке 7 товаров
+			a(href="#").cart-sidebar-block__link изменить
 
-	.prods-in-cart
-		- for (var i=0; i < 7 ; i++)
-			a(href="#").prods-in-cart__item
-				img(src="img/page-cart/in-cart/"+(i+1)+".jpg" alt="alt")
-	
-.cart-sidebar-block
-	.cart-sidebar-block__header
-		.cart-sidebar-block__title У вас есть промокод?
-	form(action="#" class=pageIndex == 'cart_005' ? "form promo-form promo-form--applied" : pageIndex == 'cart_006' ? "form promo-form promo-form--error" : "form promo-form")
-		label.form__label
-			if pageIndex == 'cart_005'
-				input(autocomplete="off" type="text" name="" class="form__input promo-form__input" value="Промокод применен")
-				
-			else if pageIndex == 'cart_006'
-				input(autocomplete="off" type="text" name="" class="form__input promo-form__input" value="Промокод недействителен")
-			else
-				input(autocomplete="off" type="text" name="" class="form__input promo-form__input" placeholder="Промокод")
+		.prods-in-cart
+			- for (var i=0; i < 7 ; i++)
+				a(href="#").prods-in-cart__item
+					img(src="img/page-cart/in-cart/"+(i+1)+".jpg" alt="alt")
 		
-		button(type="submit").promo-form__submit
-			+icon('arrow-left')
+	.cart-sidebar-block
+		.cart-sidebar-block__header
+			.cart-sidebar-block__title У вас есть промокод?
+		form(action="#" class=pageIndex == 'cart_005' ? "form promo-form promo-form--applied" : pageIndex == 'cart_006' ? "form promo-form promo-form--error" : "form promo-form")
+			label.form__label
+				if pageIndex == 'cart_005'
+					input(autocomplete="off" type="text" name="" class="form__input promo-form__input" value="Промокод применен")
+					
+				else if pageIndex == 'cart_006'
+					input(autocomplete="off" type="text" name="" class="form__input promo-form__input" value="Промокод недействителен")
+				else
+					input(autocomplete="off" type="text" name="" class="form__input promo-form__input" placeholder="Промокод")
+			
+			button(type="submit").promo-form__submit
+				+icon('arrow-left')
 
-.cart-total
-	.cart-prod-count__row
-		.cart-prod-count__key Товары, 4 шт.
-		.cart-prod-count__val 34 840 ₽
+	.cart-total
+		.cart-prod-count__row
+			.cart-prod-count__key Товары, 4 шт.
+			.cart-prod-count__val 34 840 ₽
 
-	.cart-prod-count__row
-		.cart-prod-count__key Скидка
-		.cart-prod-count__val -3 871 ₽
+		.cart-prod-count__row
+			.cart-prod-count__key Скидка
+			.cart-prod-count__val -3 871 ₽
 
-	.cart-prod-count__row.cart-prod-count__row--total
-		.cart-prod-count__key Итого:
-		.cart-prod-count__val 103 969 ₽
+		.cart-prod-count__row.cart-prod-count__row--total
+			.cart-prod-count__key Итого:
+			.cart-prod-count__val 103 969 ₽
 
-	button(type="submit").btn.btn-lg.btn-order-check Оформить заказ
+		button(type="submit").btn.btn-lg.btn-order-check Оформить заказ
 
-.cart-sidebar-annotation Нажимая кнопку «Оформить заказ», я соглашаюсь с Условиями заказа и доставки, на обработку персональных данных в соответствии с Условиями использования сайта, Политикой обработки персональных данных и на получение сообщений в процессе обработки заказа
+	.cart-sidebar-annotation Нажимая кнопку «Оформить заказ», я соглашаюсь с Условиями заказа и доставки, на обработку персональных данных в соответствии с Условиями использования сайта, Политикой обработки персональных данных и на получение сообщений в процессе обработки заказа

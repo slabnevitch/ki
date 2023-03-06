@@ -606,6 +606,11 @@
 	opacity: 0.3;
 	cursor: pointer;
 
+	.fullscreen-map-visible &{
+		color: $accent;
+		opacity: 1;
+	}
+
 	&:before{
 		content: '';
 		position: absolute;
@@ -622,6 +627,10 @@
 		color: $text-l;
 		font-size: 20px;
 		padding-left: 4px;
+		
+		.fullscreen-map-visible &{
+			color: $accent;
+		}
 	}
 }
 .to-map-side-modal__title{

@@ -6821,13 +6821,7 @@
                       <div class="cart-content__title">Ваш заказ</div>
                       <div class="cart-content__title cart-content__title--mob">К покупке 4 товара</div>
                       <div class="cart-content__actions">
-                        <label class="light-label cart-content__action">
-                          <input type="checkbox" name="name" class="light-label__input"><span class="light-label__check">
-                                <svg class="icon icon-check ">
-                                  <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                                </svg></span><span id="cart-select" class="light-label__caption">выбрать</span><span id="cart-abort" class="light-label__caption">Отменить выбор</span>
-                        </label>
-                        <button type="button" class="cart-content__action"><span class="cart-content__action-label">Удалить все</span>
+                        <button type="button" class="cart-content__action"><span class="cart-content__action-label">Удалить выбранное</span>
                               <svg class="icon icon-remove ">
                                 <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
                               </svg>
@@ -6838,7 +6832,7 @@
                       <div class="product-cards product-cards--horisontal wrapper-flex">
                         <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
                           <label class="light-label">
-                            <input type="checkbox" name="name" class="light-label__input"><span class="light-label__check">
+                            <input type="checkbox" name="name" checked class="light-label__input"><span class="light-label__check">
                                   <svg class="icon icon-check ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
                                   </svg></span>
@@ -6920,7 +6914,7 @@
                         </div>
                         <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
                           <label class="light-label">
-                            <input type="checkbox" name="name" class="light-label__input"><span class="light-label__check">
+                            <input type="checkbox" name="name" checked class="light-label__input"><span class="light-label__check">
                                   <svg class="icon icon-check ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
                                   </svg></span>
@@ -6995,7 +6989,7 @@
                         </div>
                         <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
                           <label class="light-label">
-                            <input type="checkbox" name="name" class="light-label__input"><span class="light-label__check">
+                            <input type="checkbox" name="name" checked class="light-label__input"><span class="light-label__check">
                                   <svg class="icon icon-check ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
                                   </svg></span>
@@ -7082,7 +7076,7 @@
                         </div>
                         <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
                           <label class="light-label">
-                            <input type="checkbox" name="name" class="light-label__input"><span class="light-label__check">
+                            <input type="checkbox" name="name" checked class="light-label__input"><span class="light-label__check">
                                   <svg class="icon icon-check ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
                                   </svg></span>
@@ -7234,46 +7228,48 @@
                   </div>
                 </div>
                 <aside class="page-cart__sidebar">
-                  <div class="cart-sidebar-block">
-                    <div class="cart-sidebar-block__header">
-                      <div class="cart-sidebar-block__title">Будет начислено</div><a href="#" class="product-bonus">
-                        <div class="product-bonus__val">264
-                              <svg class="icon icon-bonus ">
-                                <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
+                  <div class="page-cart__sticky">
+                    <div class="cart-sidebar-block">
+                      <div class="cart-sidebar-block__header">
+                        <div class="cart-sidebar-block__title">Будет начислено</div><a href="#" class="product-bonus">
+                          <div class="product-bonus__val">264
+                                <svg class="icon icon-bonus ">
+                                  <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
+                                </svg>
+                          </div></a>
+                      </div>
+                      <div class="cart-sidebar-block__text">264 баллов сберспасибо для применения в следующих заказах</div>
+                    </div>
+                    <div class="cart-sidebar-block">
+                      <div class="cart-sidebar-block__header">
+                        <div class="cart-sidebar-block__title">У вас есть промокод?</div>
+                      </div>
+                      <form action="#" class="form promo-form">
+                        <label class="form__label">
+                          <input autocomplete="off" type="text" name="" placeholder="Промокод" class="form__input">
+                        </label>
+                        <button type="submit" class="promo-form__submit">
+                              <svg class="icon icon-arrow-left ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
                               </svg>
-                        </div></a>
+                        </button>
+                      </form>
                     </div>
-                    <div class="cart-sidebar-block__text">264 баллов сберспасибо для применения в следующих заказах</div>
-                  </div>
-                  <div class="cart-sidebar-block">
-                    <div class="cart-sidebar-block__header">
-                      <div class="cart-sidebar-block__title">У вас есть промокод?</div>
+                    <div class="cart-total">
+                      <div class="cart-prod-count__row">
+                        <div class="cart-prod-count__key">Товары, 4 шт.</div>
+                        <div class="cart-prod-count__val">18 411 ₽</div>
+                      </div>
+                      <div class="cart-prod-count__row">
+                        <div class="cart-prod-count__key">Скидка</div>
+                        <div class="cart-prod-count__val">-3 682 ₽</div>
+                      </div>
+                      <div class="cart-prod-count__row cart-prod-count__row--total">
+                        <div class="cart-prod-count__key">Итого:</div>
+                        <div class="cart-prod-count__val">14 729 ₽</div>
+                      </div>
+                      <button type="submit" class="btn btn-lg btn-order-check">перейти к оформлению</button>
                     </div>
-                    <form action="#" class="form promo-form">
-                      <label class="form__label">
-                        <input autocomplete="off" type="text" name="" placeholder="Промокод" class="form__input">
-                      </label>
-                      <button type="submit" class="promo-form__submit">
-                            <svg class="icon icon-arrow-left ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
-                            </svg>
-                      </button>
-                    </form>
-                  </div>
-                  <div class="cart-total">
-                    <div class="cart-prod-count__row">
-                      <div class="cart-prod-count__key">Товары, 4 шт.</div>
-                      <div class="cart-prod-count__val">18 411 ₽</div>
-                    </div>
-                    <div class="cart-prod-count__row">
-                      <div class="cart-prod-count__key">Скидка</div>
-                      <div class="cart-prod-count__val">-3 682 ₽</div>
-                    </div>
-                    <div class="cart-prod-count__row cart-prod-count__row--total">
-                      <div class="cart-prod-count__key">Итого:</div>
-                      <div class="cart-prod-count__val">14 729 ₽</div>
-                    </div>
-                    <button type="submit" class="btn btn-lg btn-order-check">перейти к оформлению</button>
                   </div>
                 </aside>
               </div>
@@ -8401,7 +8397,7 @@
             <div class="address-list__item">
               <div class="address-list__img _fit">
                 <label class="light-label">
-                  <input type="checkbox" name="name" class="light-label__input"><span class="light-label__check">
+                  <input type="radio" name="point-check" class="light-label__input"><span class="light-label__check">
                         <svg class="icon icon-check ">
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
                         </svg></span>
@@ -8415,7 +8411,7 @@
             <div class="address-list__item">
               <div class="address-list__img _fit">
                 <label class="light-label">
-                  <input type="checkbox" name="name" class="light-label__input"><span class="light-label__check">
+                  <input type="radio" name="point-check" class="light-label__input"><span class="light-label__check">
                         <svg class="icon icon-check ">
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
                         </svg></span>
@@ -8429,7 +8425,7 @@
             <div class="address-list__item">
               <div class="address-list__img _fit">
                 <label class="light-label">
-                  <input type="checkbox" name="name" class="light-label__input"><span class="light-label__check">
+                  <input type="radio" name="point-check" class="light-label__input"><span class="light-label__check">
                         <svg class="icon icon-check ">
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
                         </svg></span>
@@ -8443,7 +8439,7 @@
             <div class="address-list__item">
               <div class="address-list__img _fit">
                 <label class="light-label">
-                  <input type="checkbox" name="name" class="light-label__input"><span class="light-label__check">
+                  <input type="radio" name="point-check" class="light-label__input"><span class="light-label__check">
                         <svg class="icon icon-check ">
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
                         </svg></span>
