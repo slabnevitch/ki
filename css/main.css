@@ -10644,8 +10644,13 @@ h6 {
 
 /*--------------------page-cart----------------------*/
 
+.page-cart:not(.page-order) .page-cart__main-wrapper {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #C4C4C4;
+}
+
 .page-cart__main {
-  margin-bottom: 29px;
+  margin-bottom: 36px;
 }
 
 .page-cart__main-wrapper {
@@ -13112,6 +13117,10 @@ h6 {
 
   .page-order-total__prods .prods-in-cart {
     border-bottom: none;
+  }
+
+  .page-cart:not(.page-order) .page-cart__main-wrapper {
+    padding-bottom: 35px;
   }
 
   .page-cart .back-block-inner {
