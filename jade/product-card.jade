@@ -8,11 +8,91 @@ block content
 		.wrapper
 			+menu('breadcrumbs', ['главная', 'Каталог', 'Электроинструменты', 'Шуруповерты'])
 
-		.page-cart__top
-			+backLink('Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', true)
-				.page-top-block 45464
+		+backLink('Шуруповерты', false)
 
+		.wrapper-smart.page-product__top.top-page-product
+			.wrapper-flex
+				.page-product__represent
+					h1.product-title Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
 
+					.product-view
+						.product-info
+							.product-info__col
+								.product-info__rating
+									+crystalRating('4,5')
+
+								a(href="#").link 4 отзыва
+							
+							.product-info__col
+								.product-info__vailability
+									.product-info__aval-key В наличии
+									a(href="#").product-info__aval-val 6 магазинах
+					
+					.product-view__screen.screen-product-view
+						+swiper('screen-product-slider', true, false, true)
+							- for (var i=0; i < 4; i++)
+								.swiper-slide.screen-product-slide._fit
+									img._fit-img(src="img/page-product-card/slider/lg.jpg" alt="alt")
+					
+					.product-view__nav.screen-product-nav
+						+swiper('screen-product-nav', true, false, true)
+							- for (var i=0; i < 4; i++)
+								.swiper-slide.screen-product-slide._fit
+									img._fit-img(src="img/page-product-card/slider/sm/"+(i+1)+".jpg" alt="alt")
+
+					.product-chars
+						a(href="#").std-link.product-chars__trace Отследить цену и наличие
+						.product-chars__table.table-product-chars
+							- var keys = ['Напряжение аккумулятора', 'Максимальный крутящий момент', 'Количество скоростей работы', 'Max частота вращения шпинделя', 'Тип двигателя', 'Тип патрона', 'Диаметр зажимаемой оснастки', 'Режим сверления', 'Возможность быстрой смены патрона', 'Количество аккумуляторов', 'Емкость аккумулятора','Зарядное устройство в комплекте'];
+							- var values = ['12 в', '28 Н/м', '1', '600 об/мин', 'щеточный' , 'быстрозажимной', '0.8-10 мм', 'Да', 'Да' , '1', '1.3  а*ч', 'Да'];
+
+							each key, i in keys
+								.table-product-chars__row
+									.table-product-chars__key= key
+									.table-product-chars__value= values[i]
+				
+				aside.page-product__sidebar
+					.product-sidebar
+						.product-sku Артикул: 002266
+						.product-actions
+							button(type="button").product-action
+								+icon('compare')
+								span.product-action__name Сравнить
+
+							button(type="button").product-action
+								+icon('favourites')
+								span.product-action__name В избранное
+
+						.product-price
+							.product-price__vals
+								.product-price__std 14 729 ₽ 
+								.product-price__sale 18 411 ₽ 
+
+							.product-bonus
+								.product-bonus__val 29
+								+icon('bonus')
+
+						button(type="button").btn.btn-lg  в корзину
+						a(href="#").btn.btn-lg.product-oneclick купить в 1 клик
+
+					.product-sidebar__delivery Бесплатная доставка по Краснодару
+						br
+						| Доставка транспортными компаниями
+						br
+						| Доступен самовывоз
+					
+					.product-sidebar__offers
+						.product-sidebar__offer.offer-product-sidebar
+							- var offers = [{name: 'Оформить карту', text: 'Купить за 2 200 ₽/мес'}, {name: 'Купить в кредит', text: ''}, {name: 'Нашли дешевле', text: 'Гарантия низкой цены'}];
+								each item, i in offers
+									.offer-product-sidebar
+										.offer-product-sidebar__logo
+											img(src="img/page-product-card/offers/"+(i+1)+".svg" alt="alt")
+
+										.offer-product-sidebar__content
+											.offer-product-sidebar__name= item.name
+											if item.text !== ''
+												.offer-product-sidebar__text= item.text
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 
