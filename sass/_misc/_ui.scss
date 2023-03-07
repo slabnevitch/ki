@@ -936,6 +936,7 @@ h1, h2, h3, h4, h5, h6{
     .back-block{
       flex: 1 1 auto;
       margin-bottom: 0;
+      max-width: 100%;
       @include min-screen($md){
         border-bottom: none;
       }

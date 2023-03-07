@@ -1,5 +1,16 @@
 /*--------------------page-cart----------------------*/
 .page-cart{
+	&:not(.page-order){
+		.page-cart__main-wrapper{
+			padding-bottom: 30px;
+			border-bottom: 1px solid $border;
+
+			@include max-screen($md){
+				padding-bottom: 35px;
+			}
+		}
+
+	}
 	.back-block-inner{
 		@include max-screen($md){
 			margin-bottom: 16px;
@@ -8,7 +19,7 @@
 	}
 }
 .page-cart__main{
-	margin-bottom: 29px;
+	margin-bottom: 36px;
 	@include min-screen($md){
 	}
 }
@@ -579,6 +590,7 @@
 	&--error{
 		.promo-form__input{
 			// @include placecolor($accent);
+			padding-right: 15px;
 			color: $red;
 			font-size: rem(12);
 		}

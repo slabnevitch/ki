@@ -1,33 +1,16 @@
 extends _misc/main
 
 block title
-	| Корзина__003
-	- var pageIndex = 'cart_003';
+	| Карточка товара
+
 block content
-	.page.page-cart
+	.page.page-product
 		.wrapper
-			+menu('breadcrumbs', ['главная', 'Корзина'])
+			+menu('breadcrumbs', ['главная', 'Каталог', 'Электроинструменты', 'Шуруповерты'])
 
 		.page-cart__top
-			+backLink('Корзина', true)
-				.page-top-block
-					.page-top-block__content
-						.page-cart__prodcounter 4
-					.page-top-block__text товаров
-						br
-						| в корзине
-		
-		.page-cart__main
-			.wrapper-smart
-				.wrapper-flex.page-cart__main-wrapper
-					.page-cart__content
-						include _sections/page-cart/cart-content
-					aside.page-cart__sidebar
-						include _sections/page-cart/cart-sidebar
-
-		include _sections/page-cart/similar
-
-
+			+backLink('Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', true)
+				.page-top-block 45464
 
 
 block page-scripts
@@ -148,6 +131,6 @@ block page-scripts
 	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
 
 	//- counter--------------------------
-	script(src="js/libs/counter/counter.js")
+	//- script(src="js/libs/counter/counter.js")
 
 //- end VANILLA JS===================================
