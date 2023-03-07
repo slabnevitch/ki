@@ -102,7 +102,7 @@ mixin productCard(cards, path, start = 1)
 					
 					a(href="#" alt=item.tilte).product-card__border
 						span.product-card__img
-							img(src="img/"+path+(i+start)+".jpg" alt="alt")
+							img(itemprop="image" src="img/"+path+(i+start)+".jpg" alt="alt")
 				
 				
 				.product-card__price
@@ -126,6 +126,7 @@ mixin productCard(cards, path, start = 1)
 					a(href="#").product-price= item.price
 						if item.sale != ''
 							.product-price-sale= item.sale
+					link(itemprop='availability' href='https://schema.org/InStock')
 					meta(itemprop="price" content=item.price)
 					meta(itemprop="priceCurrency" content="RUB")
 					
@@ -135,6 +136,8 @@ mixin productCard(cards, path, start = 1)
 							+icon('bonus')
 				
 				a(href="#" itemprop="name").product-card__name= item.tilte
+					meta(itemprop='model' content=item.tilte)
+
 				
 				a(href="#").product-card__description 
 					.product-card__description-row Напряжение акк.: 12 В
@@ -147,6 +150,12 @@ mixin productCard(cards, path, start = 1)
 				.product-card__bottom
 					.product-card__rating-wrap
 						.product-card__rating
+							div(itemprop='aggregateRating' itemscope='itemscope' itemtype='https://schema.org/AggregateRating' style='display:none;')
+								meta(itemprop='ratingValue' content='4.8')
+								meta(itemprop='ratingCount' content='288')
+								meta(itemprop='reviewCount' content='288')
+								meta(itemprop='worstRating' content='0')
+								meta(itemprop='bestRating' content='5')
 							+crystalRating('4,5')
 					if item.billet != ''
 						a(href="#" class=item.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy") Купить

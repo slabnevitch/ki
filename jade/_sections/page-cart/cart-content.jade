@@ -46,7 +46,7 @@
 									
 									a(href="#" alt=item.tilte).product-card__border
 										span.product-card__img
-											img(src=item.path alt="alt")
+											img(itemprop="image" src=item.path alt="alt")
 								
 								
 								.product-card__price
@@ -70,6 +70,7 @@
 									a(href="#").product-price= item.price
 										if item.sale != ''
 											.product-price-sale= item.sale
+									link(itemprop='availability' href='https://schema.org/InStock')
 									meta(itemprop="price" content=item.price)
 									meta(itemprop="priceCurrency" content="RUB")
 									
@@ -81,9 +82,16 @@
 								.product-card__name-box
 									a(href="#" itemprop="name").product-card__name
 										.product-card__name-value= item.tilte
-									
+										meta(itemprop='model' content=item.tilte)
+										
 										.product-card__rating-wrap
 											.product-card__rating
+												div(itemprop='aggregateRating' itemscope='itemscope' itemtype='https://schema.org/AggregateRating' style='display:none;')
+													meta(itemprop='ratingValue' content='4.8')
+													meta(itemprop='ratingCount' content='288')
+													meta(itemprop='reviewCount' content='288')
+													meta(itemprop='worstRating' content='0')
+													meta(itemprop='bestRating' content='5')
 												+crystalRating('4,5')
 
 										.product-card__info.info-product-card
@@ -143,7 +151,7 @@
 									
 									a(href="#" alt=item.tilte).product-card__border
 										span.product-card__img
-											img(src=item.path alt="alt")
+											img(itemprop="image" src=item.path alt="alt")
 								
 								
 								.product-card__price
@@ -167,6 +175,7 @@
 									a(href="#").product-price= item.price
 										if item.sale != ''
 											.product-price-sale= item.sale
+									link(itemprop='availability' href='https://schema.org/InStock')
 									meta(itemprop="price" content=item.price)
 									meta(itemprop="priceCurrency" content="RUB")
 									
@@ -181,7 +190,13 @@
 									
 										.product-card__rating-wrap
 											.product-card__rating
-													+crystalRating('4,5')
+												div(itemprop='aggregateRating' itemscope='itemscope' itemtype='https://schema.org/AggregateRating' style='display:none;')
+													meta(itemprop='ratingValue' content='4.8')
+													meta(itemprop='ratingCount' content='288')
+													meta(itemprop='reviewCount' content='288')
+													meta(itemprop='worstRating' content='0')
+													meta(itemprop='bestRating' content='5')
+												+crystalRating('4,5')
 
 										.product-card__info.info-product-card
 											.info-product-card__row Артикул: 002266
