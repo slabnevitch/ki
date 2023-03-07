@@ -11026,6 +11026,7 @@ h6 {
 }
 
 .promo-form--error .promo-form__input {
+  padding-right: 15px;
   color: #E63600;
   font-size: 0.75rem;
 }
