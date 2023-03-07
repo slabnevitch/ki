@@ -19,7 +19,7 @@
 					+icon('remove')
 	
 	.cart-content__body
-		- var cards = [{billet: 'Новинка', price: '14 729 ₽', sale: '18 411 ₽', sbers: '29', tilte: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', aval: '12 магазинах', iconActive: false, path: 'img/hits-section/1.jpg'}, {billet: '', price: '6 159 ₽', sale: '', sbers: '51', tilte: 'Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000', aval: '7 магазинах', iconActive: false, path: 'img/page-brands/gaik/2.jpg'}, {billet: 'скидка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0', inAction:true, path: 'img/page-brands/shur/1.jpg'}, {billet: '', price: '22 899 ₽', sale: '', sbers: '229', tilte: 'Аккумуляторный шуруповерт Makita DFR 750 RFE', aval: '2 магазинах', iconActive: '0', path: 'img/page-brands/gaik/3.jpg', inTitleAction:true}];
+		- var cards = [{billet: 'Новинка', price: '14 729 ₽', sale: '18 411 ₽', sbers: '29', tilte: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', aval: '12 магазинах', iconActive: false, path: 'img/hits-section/1.jpg'}, {billet: '', price: '6 159 ₽', sale: '', sbers: '51', tilte: 'Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000', aval: '7 магазинах', iconActive: false, path: 'img/page-brands/gaik/2.jpg'}, {billet: 'скидка', price: '8 390 ₽', sale: '1 809 ₽', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0', inAction:true, path: 'img/page-brands/shur/1.jpg'}, {billet: '', price: '22 899 ₽', sale: '', sbers: '229', tilte: 'Аккумуляторный шуруповерт Makita DFR 750 RFE', aval: '2 магазинах', iconActive: '0', path: 'img/page-brands/gaik/3.jpg', inTitleAction:true}];
 
 			.product-cards.product-cards--horisontal.wrapper-flex
 					each item, i in cards
@@ -78,23 +78,17 @@
 											.product-bonus__val= item.sbers
 											+icon('bonus')
 								
-								a(href="#" itemprop="name").product-card__name
-									.product-card__name-value= item.tilte
-								
-									.product-card__rating-wrap
-										.product-card__rating
-											+crystalRating('4,5')
+								.product-card__name-box
+									a(href="#" itemprop="name").product-card__name
+										.product-card__name-value= item.tilte
+									
+										.product-card__rating-wrap
+											.product-card__rating
+												+crystalRating('4,5')
 
-								a(href="#").product-card__description 
-									.product-card__description-row Напряжение акк.: 12 В
-									.product-card__description-row Крутящий момент: 30 Н·м
-									.product-card__description-row Емкость аккумулятора: 2 А·ч
-									.product-card__description-row Тип аккумулятора Li-Ion
-									.product-card__description-row Кол-во аккумуляторов: 2 шт.
-									.product-card__description-row Вес 1.2 кг
+										.product-card__info.info-product-card
+												.info-product-card__row Артикул: 002266
 
-								.product-card__bottom
-										
 									button(type="button").btn.btn-sm.btn-buy.clicked.product-card__buy
 										span.btn__val Купить
 										.counter(data-min="0" data-max="100")
@@ -106,9 +100,14 @@
 												.counter__measures шт
 											span.counter__button.counter-plus
 												+icon('plus')
-									
-									.product-card__info.info-product-card
-											.info-product-card__row Артикул: 002266
+
+								a(href="#").product-card__description 
+									.product-card__description-row Напряжение акк.: 12 В
+									.product-card__description-row Крутящий момент: 30 Н·м
+									.product-card__description-row Емкость аккумулятора: 2 А·ч
+									.product-card__description-row Тип аккумулятора Li-Ion
+									.product-card__description-row Кол-во аккумуляторов: 2 шт.
+									.product-card__description-row Вес 1.2 кг
 
 						if pageIndex == 'cart_003'
 							if item.inAction == true
@@ -129,13 +128,6 @@
 								.product-announcement__text Добавьте ещё вот этот товар и получите скидку -20% на оба товара
 
 						div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog " + item.addedClass : item.analog ? "product-card product-card--analog " + item.addedClass : item.pullOut ? "product-card product-card--pullout " +item.addedClass : "product-card " + item.addedClass itemscope="" itemtype="http://schema.org/Offer")
-								label.light-label
-									input(type="checkbox" name="name" class="light-label__input")
-									span.light-label__check
-										+icon('check')
-
-								button(type="button").product-card__delete
-									+icon('remove')
 								
 								.product-card__img-wrap
 									if item.billet != ''
@@ -183,12 +175,18 @@
 											.product-bonus__val= item.sbers
 											+icon('bonus')
 								
-								a(href="#" itemprop="name").product-card__name
-									.product-card__name-value= item.tilte
-								
-									.product-card__rating-wrap
-										.product-card__rating
-												+crystalRating('4,5')
+								.product-card__name-box
+									a(href="#" itemprop="name").product-card__name
+										.product-card__name-value= item.tilte
+									
+										.product-card__rating-wrap
+											.product-card__rating
+													+crystalRating('4,5')
+
+										.product-card__info.info-product-card
+											.info-product-card__row Артикул: 002266
+
+									button(type="button").btn.btn-sm.btn-buy.product-card__buy +добавить товар в заказ
 								
 								a(href="#").product-card__description 
 									.product-card__description-row Напряжение акк.: 12 В
@@ -197,14 +195,6 @@
 									.product-card__description-row Тип аккумулятора Li-Ion
 									.product-card__description-row Кол-во аккумуляторов: 2 шт.
 									.product-card__description-row Вес 1.2 кг
-
-								.product-card__bottom
-									// button(type="button").product-card__adding +добавить товар в заказ
-
-									button(type="button").btn.btn-sm.btn-buy.product-card__buy +добавить товар в заказ
-									
-									.product-card__info.info-product-card
-											.info-product-card__row Артикул: 002266
 
 					if pageIndex == 'cart_004'
 						.cart-content__subtitle Недоступны для заказа
@@ -266,23 +256,14 @@
 											.product-bonus__val= item.sbers
 											+icon('bonus')
 								
-								a(href="#" itemprop="name").product-card__name
-									.product-card__name-value= hiddenItem.tilte
-								
-									.product-card__rating-wrap
-										.product-card__rating
-											+crystalRating('4,5')
+								.product-card__name-box
+									a(href="#" itemprop="name").product-card__name
+										.product-card__name-value= hiddenItem.tilte
+									
+										.product-card__rating-wrap
+											.product-card__rating
+												+crystalRating('4,5')
 
-								a(href="#").product-card__description 
-									.product-card__description-row Напряжение акк.: 12 В
-									.product-card__description-row Крутящий момент: 30 Н·м
-									.product-card__description-row Емкость аккумулятора: 2 А·ч
-									.product-card__description-row Тип аккумулятора Li-Ion
-									.product-card__description-row Кол-во аккумуляторов: 2 шт.
-									.product-card__description-row Вес 1.2 кг
-
-								.product-card__bottom
-										
 									if hiddenItem.billet != ''
 										a(href="#" class=hiddenItem.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy") Купить
 									else if hiddenItem.order
@@ -322,3 +303,13 @@
 															| #{item.aval}
 											.info-product-card__row
 												a(href="#").info-product-card__oneclick Купить в 1 клик
+
+								a(href="#").product-card__description 
+									.product-card__description-row Напряжение акк.: 12 В
+									.product-card__description-row Крутящий момент: 30 Н·м
+									.product-card__description-row Емкость аккумулятора: 2 А·ч
+									.product-card__description-row Тип аккумулятора Li-Ion
+									.product-card__description-row Кол-во аккумуляторов: 2 шт.
+									.product-card__description-row Вес 1.2 кг
+
+								.product-card__bottom
