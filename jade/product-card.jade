@@ -15,41 +15,44 @@ block content
 				.page-product__represent
 					h1.product-title Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
 
-					.product-view
-						.product-info
-							.product-info__col
-								.product-info__rating
-									+crystalRating('4,5')
+					.wrapper-flex.page-product__represent-container
+						.product-view
+							.product-info
+								.product-info__col
+									.product-info__rating
+										+crystalRating('4,5')
 
-								a(href="#").link 4 отзыва
+									a(href="#").std-link 4 отзыва
+								
+								.product-info__col
+									.product-info__vailability
+										.product-info__aval-key В наличии
+										a(href="#").product-info__aval-val 6 магазинах
+						
+							.product-view__screen.screen-product-view
+								+swiper('screen-product-slider', false, false, false)
+									- for (var i=0; i < 4; i++)
+										.swiper-slide.screen-product-slide._fit
+											img._fit-img(src="img/page-product-card/slider/lg.jpg" alt="alt")
 							
-							.product-info__col
-								.product-info__vailability
-									.product-info__aval-key В наличии
-									a(href="#").product-info__aval-val 6 магазинах
-					
-					.product-view__screen.screen-product-view
-						+swiper('screen-product-slider', true, false, true)
-							- for (var i=0; i < 4; i++)
-								.swiper-slide.screen-product-slide._fit
-									img._fit-img(src="img/page-product-card/slider/lg.jpg" alt="alt")
-					
-					.product-view__nav.screen-product-nav
-						+swiper('screen-product-nav', true, false, true)
-							- for (var i=0; i < 4; i++)
-								.swiper-slide.screen-product-slide._fit
-									img._fit-img(src="img/page-product-card/slider/sm/"+(i+1)+".jpg" alt="alt")
+							.product-view__nav.screen-product-nav
+								+swiper('screen-product-nav', true, false, true)
+									- for (var i=0; i < 4; i++)
+										.swiper-slide.screen-product-slide._fit
+											img._fit-img(src="img/page-product-card/slider/sm/"+(i+1)+".jpg" alt="alt")
 
-					.product-chars
-						a(href="#").std-link.product-chars__trace Отследить цену и наличие
-						.product-chars__table.table-product-chars
-							- var keys = ['Напряжение аккумулятора', 'Максимальный крутящий момент', 'Количество скоростей работы', 'Max частота вращения шпинделя', 'Тип двигателя', 'Тип патрона', 'Диаметр зажимаемой оснастки', 'Режим сверления', 'Возможность быстрой смены патрона', 'Количество аккумуляторов', 'Емкость аккумулятора','Зарядное устройство в комплекте'];
-							- var values = ['12 в', '28 Н/м', '1', '600 об/мин', 'щеточный' , 'быстрозажимной', '0.8-10 мм', 'Да', 'Да' , '1', '1.3  а*ч', 'Да'];
+						.product-chars
+							a(href="#").std-link.product-chars__trace Отследить цену и наличие
+							.product-chars__table.table-product-chars
+								- var keys = ['Напряжение аккумулятора', 'Максимальный крутящий момент', 'Количество скоростей работы', 'Max частота вращения шпинделя', 'Тип двигателя', 'Тип патрона', 'Диаметр зажимаемой оснастки', 'Режим сверления', 'Возможность быстрой смены патрона', 'Количество аккумуляторов', 'Емкость аккумулятора','Зарядное устройство в комплекте'];
+								- var values = ['12 в', '28 Н/м', '1', '600 об/мин', 'щеточный' , 'быстрозажимной', '0.8-10 мм', 'Да', 'Да' , '1', '1.3  а*ч', 'Да'];
 
-							each key, i in keys
-								.table-product-chars__row
-									.table-product-chars__key= key
-									.table-product-chars__value= values[i]
+								each key, i in keys
+									.table-product-chars__row
+										.table-product-chars__key= key
+										.table-product-chars__value= values[i]
+
+							a(href="#").std-link.product-chars__more Подробнее
 				
 				aside.page-product__sidebar
 					.product-sidebar

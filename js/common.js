@@ -479,6 +479,17 @@
 				}
 			});
 		}
+
+		//---------------product-card-screen
+		if(document.querySelector('.screen-product-slider') !== null){
+			const screenProductSwiper = new Swiper('.screen-product-slider', {
+				observer: true,
+				observeParents: true,
+				slidesPerView: 1,
+				loop: true
+			});
+		}
+//---------------END product-card-screen
 		//---------------END Swiper
 
 
