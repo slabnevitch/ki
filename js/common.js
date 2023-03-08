@@ -698,20 +698,22 @@
 
 			});
 		}
-		console.log(Viewer)
+
 		const gallery = new Viewer(document.getElementById('product-image-gallery'), {
 			title: false,
 			toolbar: {
-			    prev: 4,
-			    next: 4
+			    prev: 2,
+			    next: 2
 			},
-			// fullscreen: false,
+			fullscreen: false,
 			movable: false,
 			rotatable: false,
+			zoomable: false,
 			 filter(image) {
+			 	console.log(image);
 			 	console.log(image.parentElement.parentElement.classList.contains('swiper-slide-duplicate'));
 			    // return !image.parentElement.parentElement.classList.contains('swiper-slide-duplicate');//для свайпера
-			    return !image.parentElement.parentElement.classList.contains('swiper-slide-duplicate');
+			    return !image.parentElement.classList.contains('swiper-slide-duplicate');
 			    // return image.complete;
 			  },
 

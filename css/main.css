@@ -4714,27 +4714,46 @@ h1, h2, h3, h4, h5, h6 {
   overflow: visible;
 }
 
+.viewer-toolbar > ul > li {
+  background-color: transparent;
+}
+.viewer-toolbar > ul > li:focus, .viewer-toolbar > ul > li:hover {
+  background-color: transparent;
+}
+
 .viewer-prev,
 .viewer-next {
   position: absolute;
 }
 
 .viewer-prev {
-  left: 24px;
+  left: 12.1666666667%;
 }
-@media only screen and (min-width: 1392px) {
+@media only screen and (min-width: 1440px) {
   .viewer-prev {
-    left: calc((100% - 1392px) / 2);
+    left: calc((100% - 1440px) / 2);
   }
+}
+.viewer-prev:before {
+  content: "";
+  background-image: url("../img/icons-svg/chev-left.svg");
+  background-size: auto 16px;
+  background-position: center center;
 }
 
 .viewer-next {
-  right: 24px;
+  right: 12.1666666667%;
 }
-@media only screen and (min-width: 1392px) {
+@media only screen and (min-width: 1440px) {
   .viewer-next {
-    right: calc((100% - 1392px) / 2);
+    right: calc((100% - 1440px) / 2);
   }
+}
+.viewer-next:before {
+  content: "";
+  background-image: url("../img/icons-svg/chev-right.svg");
+  background-size: auto 16px;
+  background-position: center center;
 }
 
 .viewer-navbar {
@@ -4742,6 +4761,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   -ms-flex-pack: center;
   justify-content: center;
+  margin-bottom: 30px;
   background-color: transparent;
 }
 
@@ -4781,6 +4801,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .viewer-toolbar > ul > li:focus {
   position: absolute;
+}
+
+.viewer-button {
+  background-color: transparent;
+}
+
+.viewer-close {
+  width: 24px;
+  height: 24px;
+  top: 10px;
+  right: 12.1666666667%;
+  background-image: url(../img/icons-svg/ctlg-close-gray.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+}
+@media only screen and (min-width: 1440px) {
+  .viewer-close {
+    right: calc((100% - 1440px) / 2);
+  }
 }
 
 /*--------------------END viewerjs-custom----------------------*/
@@ -13604,6 +13644,7 @@ h1, h2, h3, h4, h5, h6 {
 .product-sidebar {
   position: -webkit-sticky;
   position: sticky;
+  top: 100px;
   font-size: 0.75rem;
   line-height: 0.9375rem;
 }

@@ -23,27 +23,52 @@
 	// justify-content: space-between;
 
 }
+.viewer-toolbar > ul > li{
+
+	background-color: transparent;
+	&:focus,
+	&:hover{
+		background-color: transparent;
+
+	 }
+
+}
 .viewer-prev,
 .viewer-next{
 	position: absolute;
 }
 .viewer-prev{
-	left: 24px;
-	@include min-screen(#{$maxWidthContainer + px}){
-		left: calc((100% - #{$maxWidthContainer + px})/2);
-		
+	left: prc(146, 1200);
+
+	@include min-screen($scale){
+		left: calc((100% - $scale) / 2);
+	}
+	&:before{
+		content: '';
+		background-image: url($img + "icons-svg/chev-left.svg");
+		background-size: auto 16px;
+		background-position: center center;
 	}
 }
 .viewer-next{
-	right: 24px;
-	@include min-screen(#{$maxWidthContainer + px}){
-		right: calc((100% - #{$maxWidthContainer + px})/2);
-		
+	right: prc(146, 1200);
+
+	@include min-screen($scale){
+		right: calc((100% - $scale) / 2);
 	}
+
+	&:before{
+		content: '';
+		background-image: url($img + "icons-svg/chev-right.svg");
+		background-size: auto 16px;
+		background-position: center center;
+	}
+
 }
 .viewer-navbar{
 	display: flex;
 	justify-content: center;
+	margin-bottom: 30px;
 	background-color: transparent;
 }
 .viewer-list{
@@ -80,5 +105,23 @@
 }
 .viewer-toolbar > ul > li:focus{
 	position: absolute;
+}
+.viewer-button{
+	background-color: transparent;
+}
+.viewer-close{
+	width: 24px;
+	height: 24px;
+	top: 10px;
+	right: prc(146, 1200);
+	background-image: url(../img/icons-svg/ctlg-close-gray.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 12px 12px;
+
+	@include min-screen($scale){
+		
+		right: calc((100% - $scale) / 2);
+	}
 }
 /*--------------------END viewerjs-custom----------------------*/ 
