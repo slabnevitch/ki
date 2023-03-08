@@ -137,7 +137,9 @@ mixin productCard(cards, path, start = 1)
 				
 				a(href="#" itemprop="name").product-card__name= item.tilte
 					meta(itemprop='model' content=item.tilte)
-
+					meta(itemprop='sku' content='trinket-12345')
+					div(itemprop='brand' itemtype='https://schema.org/Brand' itemscope='')
+						meta(itemprop='name' content='ACME')
 				
 				a(href="#").product-card__description 
 					.product-card__description-row Напряжение акк.: 12 В
