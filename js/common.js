@@ -480,16 +480,56 @@
 			});
 		}
 
+		//---------------product-card-nav
+		if(document.querySelector('.screen-product-thumbs') !== null){
+			  var screenProductNav = new Swiper('.screen-product-thumbs', {
+			 	observer: true,
+				observeParents: true,
+				slidesPerView: 5,
+				spaceBetween: 16,
+			 	// loop: true,
+			 	// breakpoints: {
+				//     // when window width is >= 320px
+			 	// 	320: {
+			 	// 		slidesPerView: 2,
+			 	// 		spaceBetween: 20
+			 	// 	},
+				//     // when window width is >= 480px
+			 	// 	480: {
+			 	// 		slidesPerView: 3,
+			 	// 		spaceBetween: 30
+			 	// 	},
+				//     // when window width is >= 640px
+			 	// 	640: {
+			 	// 		slidesPerView: 4,
+			 	// 		spaceBetween: 40
+			 	// 	}
+			 	// },
+
+			  // Navigation arrows
+			  navigation: {
+			  	nextEl: '.swiper-button-next',
+			  	prevEl: '.swiper-button-prev',
+			  }
+			});
+		}
+		//---------------END product-card-nav
+		
 		//---------------product-card-screen
 		if(document.querySelector('.screen-product-slider') !== null){
-			const screenProductSwiper = new Swiper('.screen-product-slider', {
+			var screenProductSwiper = new Swiper('.screen-product-slider', {
 				observer: true,
 				observeParents: true,
 				slidesPerView: 1,
-				loop: true
+				loop: true,
+				thumbs: {
+					swiper: screenProductNav
+				}
 			});
 		}
-//---------------END product-card-screen
+		//---------------END product-card-screen
+
+		
 		//---------------END Swiper
 
 
@@ -658,24 +698,24 @@
 
 			});
 		}
-		// console.log(Viewer)
-		// const gallery = new Viewer(document.getElementById('gallery'), {
-		// 	title: false,
-		// 	toolbar: {
-		// 	    prev: 4,
-		// 	    next: 4
-		// 	},
-		// 	// fullscreen: false,
-		// 	movable: false,
-		// 	rotatable: false,
-		// 	 filter(image) {
-		// 	 	console.log(image.parentElement.parentElement.classList.contains('tns-slide-cloned'));
-		// 	    // return !image.parentElement.parentElement.classList.contains('swiper-slide-duplicate');//для свайпера
-		// 	    return !image.parentElement.parentElement.classList.contains('tns-slide-cloned');
-		// 	    // return image.complete;
-		// 	  },
+		console.log(Viewer)
+		const gallery = new Viewer(document.getElementById('product-image-gallery'), {
+			title: false,
+			toolbar: {
+			    prev: 4,
+			    next: 4
+			},
+			// fullscreen: false,
+			movable: false,
+			rotatable: false,
+			 filter(image) {
+			 	console.log(image.parentElement.parentElement.classList.contains('swiper-slide-duplicate'));
+			    // return !image.parentElement.parentElement.classList.contains('swiper-slide-duplicate');//для свайпера
+			    return !image.parentElement.parentElement.classList.contains('swiper-slide-duplicate');
+			    // return image.complete;
+			  },
 
-		// });
+		});
 
 		
 	});//DOMContentLoaded
