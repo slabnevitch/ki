@@ -76,6 +76,7 @@
 	width: auto !important;
 	transform: none !important;
 	display: flex;
+	flex-wrap: wrap;
 	margin: 0 -7.5px;
 
 	[data-viewer-action]{

@@ -17,7 +17,7 @@ block content
 
 					.wrapper-flex.page-product__represent-container
 						.product-view
-							.product-info
+							.product-info(data-da="product-sidebar,576,last")
 								.product-info__col
 									.product-info__rating
 										+crystalRating('4,5')
@@ -28,10 +28,15 @@ block content
 									.product-info__vailability
 										.product-info__aval-key В наличии
 										a(href="#").product-info__aval-val 6 магазинах
+									
+								.product-info__col
+									a(href="#").std-link.product-info__analog Подобрать 
+										br
+										| аналог
 						
 							.product-view__screen.screen-product-view#product-image-gallery
 								.billet.billet--action Акция
-								+swiper('screen-product-slider', false, false, false)
+								+swiper('screen-product-slider', true, false, false)
 									- for (var i=0; i < 7; i++)
 										.swiper-slide.screen-product-view__slide._fit
 											img._fit-img(src="img/page-product-card/slider/sm/"+i+".jpg" alt="alt")
@@ -44,7 +49,9 @@ block content
 												img._fit-img(src="img/page-product-card/slider/sm/"+(i+1)+".jpg" alt="alt")
 
 						.product-chars
-							a(href="#").std-link.product-chars__trace Отследить цену и наличие
+							a(href="#" data-da="product-info,576,last").std-link.product-chars__trace Отследить
+								br
+								| цену и наличие
 							.product-chars__table.table-product-chars
 								- var keys = ['Напряжение аккумулятора', 'Максимальный крутящий момент', 'Количество скоростей работы', 'Max частота вращения шпинделя', 'Тип двигателя', 'Тип патрона', 'Диаметр зажимаемой оснастки', 'Режим сверления', 'Возможность быстрой смены патрона', 'Количество аккумуляторов', 'Емкость аккумулятора','Зарядное устройство в комплекте'];
 								- var values = ['12 в', '28 Н/м', '1', '600 об/мин', 'щеточный' , 'быстрозажимной', '0.8-10 мм', 'Да', 'Да' , '1', '1.3  а*ч', 'Да'];
@@ -59,7 +66,7 @@ block content
 				aside.page-product__sidebar
 					.product-sidebar
 						.product-sku Артикул: 002266
-						.product-actions
+						.product-actions(data-da="product-view,767.98,first")
 							button(type="button").product-action
 								+icon('compare')
 								span.product-action__name Сравнить
@@ -76,6 +83,7 @@ block content
 							.product-bonus
 								.product-bonus__val 29
 								+icon('bonus')
+								.product-bonus__note бонусов
 
 						.product-sidebar__possibilities
 							button(type="button").btn.btn-lg  в корзину
@@ -88,16 +96,18 @@ block content
 							| Доступен самовывоз
 						
 						.product-sidebar__offers
-								- var offers = [{name: 'Оформить карту', text: 'Купить за 2 200 ₽/мес'}, {name: 'Купить в кредит', text: ''}, {name: 'Нашли дешевле', text: 'Гарантия низкой цены'}];
+							- var offers = [{name: 'Оформить карту', text: 'Купить за 2 200 ₽/мес'}, {name: 'Купить в кредит', text: ''}, {name: 'Нашли дешевле', text: 'Гарантия низкой цены'}];
 							each item, i in offers
-								.product-sidebar__offer.offer-product-sidebar
-										.offer-product-sidebar__logo
-											img(src="img/page-product-card/offers/"+(i+1)+".svg" alt="alt")
+								a(href="#").product-sidebar__offer.offer-product-sidebar
+									.offer-product-sidebar__logo
+										img(src="img/page-product-card/offers/"+(i+1)+".svg" alt="alt")
 
-										.offer-product-sidebar__content
-											.offer-product-sidebar__name= item.name
-											if item.text !== ''
-												.offer-product-sidebar__text= item.text
+									.offer-product-sidebar__content
+										.offer-product-sidebar__name= item.name
+										if item.text !== ''
+											.offer-product-sidebar__text= item.text
+									.offer-product-sidebar__arrow
+										+icon('chev-right')
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 

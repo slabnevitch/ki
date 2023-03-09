@@ -522,9 +522,19 @@
 				observeParents: true,
 				slidesPerView: 1,
 				loop: true,
-				thumbs: {
-					swiper: screenProductNav
-				}
+				pagination: {
+				  	el: '.swiper-pagination',
+				  	type: 'bullets',
+				  	clickable: true,
+					//custom pagination
+					//type: 'custom',
+					//renderCustom: (swiper, current, total) => {
+						//return current.toString().length > 1 ? current : '0'+current;
+					//}
+				},
+		    	thumbs: {
+		    		swiper: screenProductNav
+		    	}
 			});
 		}
 		//---------------END product-card-screen
@@ -670,34 +680,34 @@
 		
 
 		// usage: http://ganlanyuan.github.io/tiny-slider/#usage
-		if(document.querySelector('.my-slider') !== null){
-			var slider = tns({
-			container: '.my-slider',
-			mode: 'carousel', //'gallery' - для фэйд-анимации отдельных слайдов
-			items: 1,
-			// slideBy: 1, // кол-во слайдов, перематывающихся за 1 клик. Не работает с mode: 'gallery'
-			// autoplay: true,
-			// controlsContainer: '.hits.carouseled .block-header__nav', // внутри .block-header__nav должны быть 2 заранее отстилизованные кнопки
-			navContainer: "#customize-thumbnails",//конткйнер для навигации миниатюрами
-			navAsThumbnails: true, //включение навигации миниатюрами
-			mouseDrag: true,
-			loop: false,
-			gutter: 30 //добавляет padding, а не margin! Нужна обертка вокруг содержимого каждого слайда!
+		// if(document.querySelector('.my-slider') !== null){
+		// 	var slider = tns({
+		// 	container: '.my-slider',
+		// 	mode: 'carousel', //'gallery' - для фэйд-анимации отдельных слайдов
+		// 	items: 1,
+		// 	// slideBy: 1, // кол-во слайдов, перематывающихся за 1 клик. Не работает с mode: 'gallery'
+		// 	// autoplay: true,
+		// 	// controlsContainer: '.hits.carouseled .block-header__nav', // внутри .block-header__nav должны быть 2 заранее отстилизованные кнопки
+		// 	navContainer: "#customize-thumbnails",//конткйнер для навигации миниатюрами
+		// 	navAsThumbnails: true, //включение навигации миниатюрами
+		// 	mouseDrag: true,
+		// 	loop: false,
+		// 	gutter: 30 //добавляет padding, а не margin! Нужна обертка вокруг содержимого каждого слайда!
 
-			});
+		// 	});
 
-			var navSlider = tns({
-			container: '#customize-thumbnails',
-			mode: 'carousel', //'gallery' - для фэйд-анимации отдельных слайдов
-			items: 1,
-			mouseDrag: true,
-			loop: false,
-			controls: false,
-			nav: false,
-			gutter: 30 //добавляет padding, а не margin! Нужна обертка вокруг содержимого каждого слайда!
+		// 	var navSlider = tns({
+		// 	container: '#customize-thumbnails',
+		// 	mode: 'carousel', //'gallery' - для фэйд-анимации отдельных слайдов
+		// 	items: 1,
+		// 	mouseDrag: true,
+		// 	loop: false,
+		// 	controls: false,
+		// 	nav: false,
+		// 	gutter: 30 //добавляет padding, а не margin! Нужна обертка вокруг содержимого каждого слайда!
 
-			});
-		}
+		// 	});
+		// }
 
 		const gallery = new Viewer(document.getElementById('product-image-gallery'), {
 			title: false,
@@ -713,7 +723,11 @@
 			 	console.log(image);
 			 	console.log(image.parentElement.parentElement.classList.contains('swiper-slide-duplicate'));
 			    // return !image.parentElement.parentElement.classList.contains('swiper-slide-duplicate');//для свайпера
-			    return !image.parentElement.classList.contains('swiper-slide-duplicate');
+			    if(screen.width >= 767.98){
+			    	return !image.parentElement.classList.contains('swiper-slide-duplicate');
+			    }else{
+			    	return false;
+			    }
 			    // return image.complete;
 			  },
 
