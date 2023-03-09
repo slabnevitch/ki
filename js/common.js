@@ -230,6 +230,16 @@
 		}
 		// END map modals toggle
 
+		// review-body expand/collapse
+		if(targ.classList.contains('review__collapse') || targ.closest('.review__collapse')){
+			targ.closest('.review').querySelector('.review__body')
+				.classList.toggle('review__body--expanded');
+			console.log(targ.textContent)
+			targ.textContent = targ.textContent.toLowerCase() ==='свернуть' ? 'Читать полностью' : 'Свернуть';
+		}
+			
+		// END review-body expand/collapse
+
 		// header search results toggle
 			// var headerSearchInputs = document.querySelectorAll('.search-header__input');
 			// for(var i=0; i < headerSearchInputs.length; i++){

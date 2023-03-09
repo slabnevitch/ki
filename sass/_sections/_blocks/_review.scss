@@ -2,7 +2,7 @@
 .review {
 	max-width: 704px;
 	padding: 40px 40px 33px 40px;
-	background: #F9F9F9;
+	background: $gray-l;
 	border-radius: 4px;
 }
 .review__header {
@@ -99,8 +99,33 @@
 	background-size: contain;
 }
 .review__body {
-	margin-bottom: 25px;	
+	margin-bottom: 25px;
+	max-height: 290px;
+	position: relative;	
+	overflow-y: hidden;
 	@include adaptive-value('padding-right', 60, 0, 1);
+
+	&:after{
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+		height: 88px;
+		width: 100%;
+		background-image: url($img + "page-product-card/review-body-cover.svg");
+		background-position: left bottom;
+		background-repeat: repeat-x;
+		background-size: contain;
+	}
+
+	&--expanded{
+		max-height: none;
+		&:after{
+			display: none;
+		}
+
+	}
 }
 .review__div {
 

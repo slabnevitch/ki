@@ -135,4 +135,11 @@
 		width: prc(102, 277);
 	}
 }
+.product-features__cards{
+	.product-card{
+		@include min-screen($md){
+			width: calc(100% / 3 - 16px);
+		}
+	}
+}
 /*--------------------END product-card-tabs----------------------*/ 

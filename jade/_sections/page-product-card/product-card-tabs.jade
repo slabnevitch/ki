@@ -71,15 +71,136 @@
 									- for (var m=0; m < 2; m++)
 										- for (var i=0; i < 2; i++)
 											.swiper-slide.review__photo._fit
+												button(type="button").photo-remove
+													+icon('remove')
 												img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
 
+						.product-reviews__articles.articles-product-reviews
+							.product-reviews__single
+								article.review
+									header.review__header
+										.person
+											.person__top
+												.person__portrait
+													img(src="img/page-product-card/worker.jpg" alt="alt")
+												.person__info
+													.person__name Иванов Иван
+													.person__date 12 декабря 2021
+											.person__rating
+												.person__rating-wrap
+														+starRating(2)
+												.person__rating-mark Плохой товар
+										
+										.review__context.context-review
+											+icon('context')
+											a(href="#").context-review__drop Пожаловаться
+
+									.review__body.review__body--expanded
+										.review__div
+											.review__title Опыт использования
+											p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+										.review__div
+											.review__title Достоинства
+											p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+
+										.review__div
+											.review__title Недостатки
+											p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+											p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+
+									footer.review__footer
+										.review__photos
+											- for (var i=0; i < 2; i++)
+												.review__photo._fit
+													img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
+
+										.review__actions
+											button(type="button").review__collapse Свернуть
+											.review__options
+												a(href="#").review__answer Ответить
+												a(href="#").review__comments.review__option
+													+icon('chat')
+													.review__comments-count 1
+												a(href="#").review__like.review__option.active
+													+icon('like')
+													.review__like-count 1
+												a(href="#").review__dislike.review__option
+													+icon('unlike')
+													.review__dislike-count 0
+
+							.cards-more
+								a(href="#").cards-more__link Показать все
+							
+							.product-reviews__others
+								- for (var i=0; i < 3; i++)
+									article.review
+										header.review__header
+											.person
+												.person__top
+													.person__portrait
+														img(src="img/page-product-card/worker.jpg" alt="alt")
+													.person__info
+														.person__name Иванов Иван
+														.person__date 12 декабря 2021
+												.person__rating
+													.person__rating-wrap
+															+starRating(2)
+													.person__rating-mark Плохой товар
+											
+											.review__context.context-review
+												+icon('context')
+												a(href="#").context-review__drop Пожаловаться
+
+										.review__body
+											.review__div
+												.review__title Опыт использования
+												p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+											.review__div
+												.review__title Достоинства
+												p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+
+											.review__div
+												.review__title Недостатки
+												p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+												p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+
+										footer.review__footer
+											.review__actions
+												button(type="button").review__collapse Читать полностью
+												.review__options
+													a(href="#").review__answer Ответить
+													a(href="#").review__comments.review__option
+														+icon('chat')
+														.review__comments-count 1
+													a(href="#").review__like.review__option.active
+														+icon('like')
+														.review__like-count 1
+													a(href="#").review__dislike.review__option
+														+icon('unlike')
+														.review__dislike-count 0
 
 					li.tab-content.hidden
-						.content
-							| Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+						- var tags = ['биты', 'наборы бит', 'защитные очки', 'сверла для металла для дрелей', 'наборы бит со сверлами', 'Сумки для инструментов', 'ящики и органайзеры'];
+						.tags
+							each item in tags
+								div(class=item == 'биты' || item == 'защитные очки' || item == 'сверла для металла для дрелей'? "tag active" : "tag")= item
+
+						- var rash = [{billet: 'Новинка', price: '378 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'скидка', price: '179 ₽', sale: '400 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}, {billet: '', price: '321 ₽', sale: '', sbers: '79', tilte: 'Шуруповерт Elitech ДШ 0110 РЭ', aval: '2 магазинах', iconActive: '0'}];
+
+						- var rash2 = [{billet: '', price: '64 ₽', sale: '', sbers: '79', tilte: 'Защитные очки закрытого типа с непрямой вентиляцией СИБРТЕХ 89160', aval: '6 магазинах', iconActive: '0'}, {billet: 'скидка', price: '959 ₽', sale: '', sbers: '51', tilte: 'Набор сверл в "стакане" (16 шт.) Sturm 1055-01-SS3', aval: '', iconActive: false}, {billet: 'уценка', price: '184 ₽', sale: '211 ₽', sbers: '20', tilte: 'Набор сверл по металлу HSS (5 шт; 4, 5, 6, 8, 10 мм) VMX 511620', aval: '6', iconActive: false}];
+						
+						.wrapper-flex.product-cards.product-features__cards
+							+productCard(rash, 'page-brands/shur/')
+							+productCard(rash2, 'page-product-card/rash/')
+
 					li.tab-content.product-features__content.hidden
-						.content
-							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem doloribus consequatur, minima aspernatur pariatur. Itaque officiis rerum ea assumenda soluta, doloribus voluptates, minus id saepe quisquam sed ducimus! Maxime, modi.
+						- var cards = [{billet: 'Новинка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'скидка', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}, {billet: '', price: '7 850 ₽', sale: '', sbers: '79', tilte: 'Шуруповерт Elitech ДШ 0110 РЭ', aval: '2 магазинах', iconActive: '0'}, {billet: '', price: '22 899 ₽', sale: '', sbers: '229', tilte: 'Аккумуляторная дрель-шуруповерт WorkMaster АШ-12М', aval: '6 магазинах', iconActive: false}, {billet: '', price: '9 990 ₽', sale: '', sbers: '100', tilte: 'Аккумуляторная дрель-шуруповерт Metabo PowerMaxx BS (кейс)', aval: '6 магазинах', iconActive: false}, {billet: 'уценка', price: '10 990 ₽', sale: '11 990 ₽', sbers: '120', tilte: 'Аккумуляторная дрель-шуруповерт DeWalt DCD996NT (без акб и зу)', aval: '6 магазинах', iconActive: false}];
+						
+						.wrapper-flex.product-cards.product-features__cards
+							+productCard(cards, 'page-brands/shur/')
+					
 					li.tab-content.product-features__content.hidden
 						.content
 							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem doloribus consequatur, minima aspernatur pariatur. Itaque officiis rerum ea assumenda soluta, doloribus voluptates, minus id saepe quisquam sed ducimus! Maxime, modi.

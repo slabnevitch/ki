@@ -55,6 +55,18 @@ h1, h2, h3, h4, h5, h6{
       margin-top: 28px;
     }
 }
+.photo-remove{
+  @include but-null;
+  width: 24px;
+  height: 24px;
+  position: relative;
+
+  .icon{
+    @include absolute-center-old;
+    color: rgba(#fff, .8);
+    font-size: rem(20);
+  }
+}
 .link{
   font-size: 12px;
   line-height: calc(15/12);
