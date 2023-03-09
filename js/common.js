@@ -720,8 +720,7 @@
 			rotatable: false,
 			zoomable: false,
 			 filter(image) {
-			 	console.log(image);
-			 	console.log(image.parentElement.parentElement.classList.contains('swiper-slide-duplicate'));
+			 	// console.log(image.parentElement.parentElement.classList.contains('swiper-slide-duplicate'));
 			    // return !image.parentElement.parentElement.classList.contains('swiper-slide-duplicate');//для свайпера
 			    if(screen.width >= 767.98){
 			    	return !image.parentElement.classList.contains('swiper-slide-duplicate');

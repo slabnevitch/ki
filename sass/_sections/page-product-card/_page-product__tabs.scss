@@ -1,0 +1,138 @@
+/*--------------------product-card-tabs----------------------*/
+.page-product__features {}
+.wrapper {}
+.product-features {
+	max-width: rem(704);
+}
+._tabs {}
+.product-features__tabs {
+
+}
+.product-features__overflow{
+	position: relative;
+	width: calc(100% + 24px);
+	overflow-y: hidden;
+	height: 33px;
+	margin-bottom: 33px;
+	// border-bottom: 1px solid $border;
+	&:after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		top: 30px;
+		left: 0;
+		background-color: $border;
+	}
+}
+.tabs__buttons {}
+.product-features__list {
+	justify-content: space-between;
+	overflow-x: auto;
+	padding-bottom: 33px;
+
+}
+.product-features__item {
+	flex: 0 0 auto;
+	&:not(:last-child){
+		margin-right: 10px;
+
+		@include max-screen($xs){
+			margin-right: 16px;
+		}
+	}
+}
+.product-features__link {
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 20px;
+	color: $text;
+
+	@include max-screen($xs){
+		font-size: 14px;
+		line-height: 17px;
+	}	
+
+	&.active{
+		position: relative;
+		background-color: transparent;
+
+		&:after{
+			content: '';
+			display: block;
+			height: 4px;
+			width: 100%;
+			background-color: $accent;
+			position: absolute;
+			left: 0;
+			bottom: -13px;
+			z-index: 2;
+		}
+	}
+}
+.tab {}
+.active {}
+.tabs__container {}
+.product-features__container {}
+.tab-content {}
+.product-features__content {}
+.content {}
+.hidden {}
+
+.product-features__table {}
+.table-product-features {
+	max-width: rem(577);
+	font-size: rem(16);
+	line-height: rem(14);
+
+	@include max-screen($sm){
+		font-size: 12px;
+		line-height: 14px;
+	}	
+}
+.table-product-features__row {
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+	margin-bottom: 12px;
+}
+.table-product-features__key {
+	padding-right: 26px;
+	display: flex;
+	width: calc(100% - 24.1477272727%);
+	color: $text-l;
+
+	@include max-screen($xs){
+		padding-right: 15px;
+		width: calc(100% - 36.8231046931%);
+		
+	}
+
+	&:after{
+		content: '';
+		flex: 1 1 auto;
+		border-bottom: 1px dashed rgba(#000, .2);
+
+		@include max-screen($xs){
+			display: none;
+		}
+	}
+}
+.table-product-features__keyname {
+	flex-shrink: 0;
+	padding-right: 20px;
+
+	@include max-screen($xs){
+		flex-shrink: 1;
+	}
+}
+.table-product-features__val {
+	width: prc(170, 704);
+	word-wrap: break-word;
+
+	@include max-screen($xs){
+		width: prc(102, 277);
+	}
+}
+/*--------------------END product-card-tabs----------------------*/ 

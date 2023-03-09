@@ -37,6 +37,9 @@
 		flex-direction: column;
 		margin-bottom: 30px;
 	}
+	@include max-screen($xs){
+		margin-bottom: 12px;
+	}
 }
 .page-product__represent-container{
 	
@@ -124,6 +127,11 @@
 		}
 		
 	}
+	&:last-child{
+		@include min-screen($sm){
+			display: none;
+		}
+	}
 }
 .product-info__rating {
 	margin-right: 14px;
@@ -176,10 +184,6 @@
 
 	@include max-screen($xs){
 		color: $text;
-	}
-
-	@include min-screen($sm){
-		display: none;
 	}
 
 	br{
@@ -332,14 +336,18 @@
 	}
 }
 .product-sidebar {
-	position: sticky;
-	top: 100px;
 	font-size: rem(12);
 	line-height: rem(15);
 
 	@include max-screen($sm){
 		display: flex;
 		flex-direction: column;	
+	}
+
+	@include min-screen($md){
+		position: sticky;
+		top: 100px;
+		
 	}
 
 }

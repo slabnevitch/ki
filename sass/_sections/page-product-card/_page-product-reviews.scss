@@ -1,0 +1,57 @@
+/*--------------------page-product-reviews----------------------*/
+.product-reviews {}
+.product-reviews__top {
+	display: flex;
+}
+.product-reviews__stats {}
+.product-reviews__rating {
+	display: flex;
+	flex-shrink: 0;
+	margin-right: 8px;
+	font-size: rem(30);
+	line-height: rem(35);
+}
+.rating-product-reviews {}
+.rating-product-reviews__current {}
+.rating-product-reviews__overal {
+	color: #E4E4E4;
+}
+.product-reviews__marks {
+	margin-top: 8px;
+	font-size: rem(10);
+	line-height: rem(12);
+}
+.product-reviews__mark {}
+.product-reviews__graphs {
+
+}
+.graphs-product-reviews {
+	flex: 1 1 auto;
+}
+.graphs-product-reviews__row {}
+.graphs-product-reviews__stars {}
+.graphs-product-reviews__star {}
+.graphs-product-reviews__bar {}
+.graphs-product-reviews__progress {}
+.product-reviews__actions {
+	flex-shrink: 0;
+}
+.actions-product-reviews {}
+.btn {}
+.btn-lg {}
+.btn-order-check {}
+.actions-product-reviews__bottom {}
+.actions-product-reviews__sort {}
+.actions-product-reviews__sorting {}
+.fstdropdown-select {}
+.light-label {}
+.light-label__input {}
+.light-label__check {}
+.icon {}
+.icon-check {}
+.light-label__text {}
+.review__photos {}
+.review__photo {}
+._fit {}
+._fit-img {}
+/*--------------------END page-product-reviews----------------------*/ 
