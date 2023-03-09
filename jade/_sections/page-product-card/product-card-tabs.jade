@@ -59,12 +59,19 @@
 											input(type="checkbox" name="name" class="light-label__input" checked)
 											span.light-label__check
 												+icon('check')
-											span.light-label__text С фото
+											span.light-label__caption С фото
 
-							.review__photos
-								- for (var i=0; i < 2; i++)
-									.review__photo._fit
-										img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
+							.product-reviews__photos
+								.slider-navs
+									.slider-nav.slider-nav--prev
+										+icon('chev-down')
+									.slider-nav.slider-nav--next
+										+icon('chev-down')
+								+swiper('review-photos-slider', false, false, false)
+									- for (var m=0; m < 2; m++)
+										- for (var i=0; i < 2; i++)
+											.swiper-slide.review__photo._fit
+												img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
 
 
 					li.tab-content.hidden

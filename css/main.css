@@ -8747,13 +8747,13 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   margin-bottom: 18px;
 }
-.review__photos .review__photo {
-  width: 100%;
+
+.review__photo {
   width: 84px;
   height: 84px;
   padding-bottom: 0;
 }
-.review__photos .review__photo:not(:last-child) {
+.review__photo:not(:last-child) {
   margin-right: 12px;
 }
 
@@ -14295,6 +14295,7 @@ h1, h2, h3, h4, h5, h6 {
 .product-reviews__top {
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 42px;
 }
 
 .product-reviews__rating {
@@ -14302,7 +14303,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  margin-right: 8px;
+  margin-right: 11px;
   font-size: 1.875rem;
   line-height: 2.1875rem;
 }
@@ -14320,11 +14321,162 @@ h1, h2, h3, h4, h5, h6 {
 .graphs-product-reviews {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  padding-right: 49px;
+}
+
+.graphs-product-reviews__row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.graphs-product-reviews__stars {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 8px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -ms-flex: 0 0 69px;
+  flex: 0 0 69px;
+  width: 69px;
+}
+
+.graphs-product-reviews__star {
+  width: 10px;
+  height: 11px;
+  color: #FCC200;
+}
+.graphs-product-reviews__star:not(:first-child) {
+  margin-right: 6px;
+}
+.graphs-product-reviews__star:before {
+  content: "\e901";
+  font-family: "rating" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.graphs-product-reviews__star:after {
+  content: "";
+}
+
+.graphs-product-reviews__bar {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  height: 5px;
+  margin-top: 5px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.graphs-product-reviews__progress {
+  position: absolute;
+  height: 100%;
+  background-color: #FCC200;
 }
 
 .product-reviews__actions {
+  -ms-flex: 0 0 267px;
+  flex: 0 0 267px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.actions-product-reviews__bottom {
+  margin-top: 14px;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.actions-product-reviews__bottom .light-label__caption, .actions-product-reviews__bottom .cart-content__action-label {
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: none;
+}
+
+.actions-product-reviews__sort {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-right: 16px;
+}
+.actions-product-reviews__sort .fstdiv {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: auto;
+}
+.actions-product-reviews__sort .fstdropdown > .fstselected {
+  font-family: "Inter", sans-serif;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  color: #000000;
+  opacity: 0.6;
+}
+.actions-product-reviews__sort .fstdropdown > .fstselected::after {
+  display: none;
+}
+.actions-product-reviews__sort .fstdropdown > .fstlist {
+  padding: 0;
+  top: 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+.actions-product-reviews__sort .fstlist > div {
+  padding: 9px;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  color: #000000;
+  opacity: 0.6;
+}
+.actions-product-reviews__sort .fstlist > div.selected {
+  font-weight: 700;
+}
+.actions-product-reviews__sort .fstlist > div.selected:after {
+  display: none;
+}
+
+.actions-product-reviews__sorting {
+  margin-right: 8px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  font-size: 0.625rem;
+  color: #000000;
+  opacity: 0.6;
+  text-decoration: underline;
+}
+
+.product-reviews__photos {
+  max-width: 270px;
+}
+
+.review-photos-slider {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+.review-photos-slider .swiper-button-next:after,
+.review-photos-slider .swiper-button-prev:after {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+.review-photos-slider .review__photo {
+  height: 132px;
 }
 
 /*--------------------END page-product-reviews----------------------*/

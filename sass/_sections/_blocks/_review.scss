@@ -121,8 +121,8 @@
 .review__photos {
 	display: flex;
 	margin-bottom: 18px;			
+}
 .review__photo {
-	width: 100%;	
 	width: 84px;	
 	height: 84px;	
 	padding-bottom: 0;	
@@ -131,7 +131,6 @@
 		margin-right: 12px;	
 	}
 
-}
 }
 .review__actions {
 	display: flex;
