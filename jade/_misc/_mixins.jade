@@ -193,7 +193,7 @@ mixin productCard(cards, path, start = 1)
 							.info-product-card__row
 									.info-product-card__aval
 										.info-product-card__avalkey В наличии
-										a(href="#").info-product-card__avalvalue
+										a(href="#" data-modal-availability).info-product-card__avalvalue
 											span.info-product-card__in= "В "
 											| #{item.aval}
 							.info-product-card__row

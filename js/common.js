@@ -28,9 +28,13 @@
 		// END open/close catalog-sort__select fstdropdown
 
 		// catalog product availabel modal open
-		if(targ.classList.contains('info-product-card__avalvalue') || targ.closest('.info-product-card__avalvalue') !== null){
+		if(targ.hasAttribute('data-modal-availability')){
 			e.preventDefault();
 			document.body.classList.add('catalog-availability-modal-visible', 'covered');
+		}
+		if(targ.hasAttribute('data-modal-address')){
+			e.preventDefault();
+			document.body.classList.add('address-modal-visible', 'covered');
 		}
 		
 		// END catalog product availabel modal open
@@ -217,7 +221,7 @@
 		}
 		// END delivery-point-modal open/close
 		
-		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null && targ.closest('.availability-modal') !== null){
+		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null /*&& targ.closest('.availability-modal') !== null*/){
 			document.body.classList.remove('catalog-availability-modal-visible');
 			document.body.classList.add('address-modal-single-visible', 'map-with-modal', 'fullscreen-map-visible');
 		}

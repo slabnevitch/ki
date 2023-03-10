@@ -126,14 +126,7 @@
 		display: block;
 	}
 }
-.popup__rating {
-	margin-top: 18px;
-	margin-bottom: 19px;
-	.simple-rating{
-	@include simple-rating($gray-l, $yellow, 30px, 23px, '\e901');
-	// @include simple-rating(red, gold, 35px, 25px, false);
-	}
-}
+
 .popup-product-added,
 .popup-product-favourite{
 	.popup__title{

@@ -114,6 +114,15 @@ h1, h2, h3, h4, h5, h6{
   }
 }
 
+.big-rating {
+  margin-top: 18px;
+  margin-bottom: 19px;
+  .simple-rating{
+    @include simple-rating($gray-l, $yellow, 30px, 23px, '\e901');
+    // @include simple-rating(red, gold, 35px, 25px, false);
+  }
+}
+
 .light-label{
   position: relative;
   display: flex;

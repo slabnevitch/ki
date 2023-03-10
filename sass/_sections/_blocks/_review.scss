@@ -1,9 +1,13 @@
 /*--------------------review----------------------*/
 .review {
-	max-width: 704px;
+	max-width: rem(704);
 	padding: 40px 40px 33px 40px;
 	background: $gray-l;
 	border-radius: 4px;
+
+	@include max-screen($xs){
+		padding: 16px;
+	}
 }
 .review__header {
 	display: flex;
@@ -85,18 +89,38 @@
 	top: 14px;
 	display: block;
 	padding: 24px 28px 16px 28px;
-	font-size: 14px;
-	line-height: 16px;
-	color: #A9A9A9;
 	visibility: hidden;
 	opacity: 0;
 	transition: all .3s;
 
-	// background-color: #fff;
 	background-image: url(../img/review/context_bg.svg);
-	background-position: right bottom;
+	background-position: right top;
 	background-repeat: no-repeat;
 	background-size: contain;
+
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 24px);
+		background-color: #fff;
+	}
+
+	a{
+		position: relative;
+		display: block;
+		font-size: rem(14);
+		line-height: rem(16);
+		color: #A9A9A9;
+
+		&:not(:last-child){
+			margin-bottom: 12px;
+			
+		}
+	}
 }
 .review__body {
 	margin-bottom: 25px;
@@ -162,23 +186,34 @@
 	justify-content: space-between;
 	align-items: flex-end;
 	font-size: 14px;
-		color: #A9A9A9;	
-		a{
-			color: #A9A9A9;	
+	color: #A9A9A9;	
 
-		}
+	@include max-screen($xss){
+		display: block;
+	}
+	a{
+		color: #A9A9A9;	
+		@include max-screen($xsss){
+			font-size: 12px;
+			line-height: 20px;
+		}		
+	}
 }
 .review__option{
 	display: flex;
 	align-items: flex-end;
 	text-decoration: none;
 
+	@include max-screen($xss){
+		margin-top: 10px;
+	}
+
 	&.active{
 		color: $accent-l;
 	}
 	.icon{
 		margin-right: 6px;
-		font-size: 13.33px;
+		font-size: rem(13.33);
 	}
 }
 .review__collapse {
@@ -186,7 +221,14 @@
 	text-decoration-line: underline;
 	color: #A9A9A9;	
 	cursor: pointer;	
-	line-height: 18px;
+	line-height: rem(18);
+	font-size: rem(14);
+	font-family: $inter;
+
+	@include max-screen($xsss){
+		font-size: 12px;
+		line-height: 20px;
+	}
 }
 .review__options {
 	display: flex;
@@ -194,7 +236,10 @@
 }
 .review__answer {
 	margin-right: 18px;
-	line-height: 14px;
+
+	@include max-screen($xss){
+		margin-right: auto;
+	}
 }
 .review__comments {
 	margin-right: 20px;
@@ -203,8 +248,8 @@
 .review__like-count,
 .review__comments-count,
 .review__dislike-count {
-	font-size: 12px;
-	line-height: 12px;
+	font-size: rem(12);
+	line-height: rem(12);
 }
 .review__like {
 	margin-right: 13px;

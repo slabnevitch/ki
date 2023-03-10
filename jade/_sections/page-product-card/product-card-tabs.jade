@@ -46,7 +46,7 @@
 													.graphs-product-reviews__progress(style=star.progress > 0 ?"width:" + star.progress + "%;" : false)
 								
 								.product-reviews__actions.actions-product-reviews
-									a(href="#").btn.btn-lg.btn-order-check оставить отзыв
+									a(href="#").btn.btn-lg.btn-order-check.actions-product-reviews__add оставить отзыв
 									.actions-product-reviews__bottom
 										.actions-product-reviews__sort
 											.actions-product-reviews__sorting Сортировка:
@@ -93,7 +93,9 @@
 										
 										.review__context.context-review
 											+icon('context')
-											a(href="#").context-review__drop Пожаловаться
+											.context-review__drop 
+												a(href="#") Пожаловаться
+												a(href="#") Удалить
 
 									.review__body.review__body--expanded
 										.review__div
@@ -202,5 +204,28 @@
 							+productCard(cards, 'page-brands/shur/')
 					
 					li.tab-content.product-features__content.hidden
-						.content
-							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem doloribus consequatur, minima aspernatur pariatur. Itaque officiis rerum ea assumenda soluta, doloribus voluptates, minus id saepe quisquam sed ducimus! Maxime, modi.
+						.product-features__details
+							.product-features__descr.descr-product-features
+								.descr-product-features__chapter Аккумуляторная безударная дрель-шуруповерт Bort BAB-12-P 98299953 относится к инструментам с хорошим крутящим моментом и функцией реверса, который незаменим для профессионалов и любителей. Она выполняет сверление, а также закручивание и выкручивание саморезов. Подобная функциональность позволяет купить инструмент для сборки мебели, выполнения монтажных работ и т.п.
+								
+								.descr-product-features__title Масса достоинств в одном инструменте
+								p.descr-product-features__text Шуруповерт от бренда Bort – специнструмент качественной сборки, который: 
+								- var list = ['не перегревается в процессе работы;','долгое время функционирует без подзарядки;','отлично держит обороты;','имеет регулировку частоты вращения;','работает вдали от источника электросети;','имеет эргономичный дизайн и малый вес, что позволяет работать в ограниченном пространстве и,исключает усталость рук.'];
+
+								ul.descr-product-features__list
+									each item in list
+										li.descr-product-features__item= item
+								
+								p.descr-product-features__text На аккумуляторную дрель с возможностями шуруповерта цена невысокая, особенно учитывая функциональность инструмента.
+							
+							.product-features__files.files-product-features
+								- var files = [{name: 'Инструкция по эксплуатации часть 1', data: 'pdf, 355 кб'}, {name: 'Инструкция по эксплуатации часть 2', data: 'pdf, 355 кб'},{name: 'Сертификат', data: 'pdf, 1,2 мб'},];
+								
+								each item in files
+									a(href="#").product-features__file.file-product-features
+										.file-product-features__icon
+											img(src="img/page-product-card/ic_file.svg" alt="alt")
+										.file-product-features__text
+											.file-product-features__name= item.name
+											.file-product-features__data= item.data
+

@@ -3,6 +3,10 @@
 .product-reviews__top {
 	display: flex;
 	margin-bottom: 42px;
+
+	@include max-screen($sm){
+		flex-wrap: wrap;
+	}
 }
 .product-reviews__stats {}
 .product-reviews__rating {
@@ -21,6 +25,7 @@
 	margin-top: 8px;
 	font-size: rem(10);
 	line-height: rem(12);
+	opacity: 0.6;
 }
 .product-reviews__mark {}
 .product-reviews__graphs {
@@ -29,6 +34,10 @@
 .graphs-product-reviews {
 	flex: 1 1 auto;
 	padding-right: 49px;
+
+	@include max-screen($xs){
+		padding-right: 0;
+	}
 }
 .graphs-product-reviews__row {
 	display: flex;
@@ -87,8 +96,18 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
+
+	@include max-screen($sm){
+		flex: 0 0 100%;
+		margin-top: 20px;
+	}
 }
 .actions-product-reviews {
+}
+.actions-product-reviews__add{
+	@include max-screen($xs){
+		max-width: none;
+	}
 }
 .btn {}
 .btn-lg {}
@@ -98,6 +117,10 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+
+	@include max-screen($xs){
+		display: none;
+	}
 	
 	.light-label__caption {
 		color: $text-l;
@@ -113,6 +136,7 @@
 	.fstdiv{
 		flex: 1 1 auto;
 		min-height: auto;
+		margin-bottom: 3px;
 	}
 
 	.fstdropdown > .fstselected {
@@ -132,7 +156,7 @@
 		border: none;
 	}
 	.fstlist > div {
-		padding: 9px;
+		padding: 4px 9px;
 	    font-size: rem(10);
 		line-height: rem(12);
 		color: #000000;
@@ -163,9 +187,11 @@
 
 	.slider-nav--prev{
 		left: -32px;
+		display: block;
 	}
 	.slider-nav--next{
 		right: -32px;
+		display: block;
 	}
 }
 .review-photos-slider{
@@ -187,6 +213,11 @@
 
 	.review__photo {
 		height: 132px;
+
+		@include max-screen($xsss){
+			height: 0;
+			padding-bottom: 50%;
+		}
 
 		.photo-remove{
 			z-index: 2;
