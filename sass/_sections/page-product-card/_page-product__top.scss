@@ -16,11 +16,112 @@
 	}
 }
 .wrapper-smart {}
-.page-product__top {}
+.page-product__top {
+	&--sale{
+		.product-sidebar__possibilities{
+			@include min-screen($sm){
+				min-height: 84px;
+			}
+		}
+		.product-sidebar__status{
+			background: rgba($yellow, .5);
+		}
+		.product-sidebar__delivery{
+			@include min-screen($sm){
+				margin-top: 17px;
+				
+			}
+		}
+	}
+	&--analog{
+		.product-sidebar__possibilities{
+			@include min-screen($sm){
+				min-height: 84px;
+			}
+		}
+		.product-title,
+		.product-price__std{
+			color: #A9A9A9;
+		}
+		.product-price__sale,
+		.product-bonus{
+			display: none;
+		}
+		.product-sidebar__status{
+			background: rgba( #E4E4E4, .5);
+		}
+		.product-sidebar__delivery{
+			@include min-screen($sm){
+				margin-top: 17px;
+				
+			}
+		}
+	}
+	&--absent{
+		.product-sidebar__possibilities{
+			@include min-screen($sm){
+				min-height: 84px;
+			}
+		}
+		.product-price__std{
+			color: #A9A9A9;
+		}
+		.product-price__sale,
+		.product-bonus{
+			display: none;
+		}
+		.product-sidebar__status{
+			background: rgba( $blue, .3);
+		}
+		.product-sidebar__delivery{
+			@include min-screen($sm){
+				margin-top: 17px;
+				
+			}
+		}
+	}
+	&--action{
+		.product-sidebar__possibilities{
+			@include min-screen($sm){
+				min-height: 84px;
+			}
+		}
+		.product-sidebar__status{
+			background: rgba( $red, .5);
+		}
+		.product-sidebar__delivery{
+			@include min-screen($sm){
+				margin-top: 17px;
+				
+			}
+		}
+	}
+}
 .top-page-product {
 	
 }
-.wrapper-flex {}
+.product-sidebar__status{
+	padding: 11px 12px 22px 12px;
+	color: #000000;
+}
+.status-product-sidebar{
+	@include max-screen($sm){
+		order: -1;
+		margin-bottom: 17px;
+	}
+}
+.status-product-sidebar__title{
+	margin-bottom: 7px;
+	font-weight: 700;
+	font-size: rem(14);
+	line-height: rem(17);
+}
+.status-product-sidebar__text{
+	font-size: rem(12);
+	line-height: rem(15);
+	letter-spacing: -.01rem;
+	opacity: 0.6;
+}
 .page-product__represent {
 	@include col();
 	flex: 0 0 calc(100% - 224px - 32px);
@@ -369,7 +470,11 @@
 		top: 100px;
 		
 	}
-
+	.product-price-block {
+		@include max-screen($sm){
+			order: -2;
+		}
+	}
 }
 .product-price-block {
 	display: flex;
@@ -515,6 +620,10 @@
 		opacity: 0.5;
 		font-weight: 400;
 		font-family: $inter;
+	}
+	@include min-screen($sm){
+		margin-bottom: 8px;
+		
 	}
 }
 .product-sidebar__delivery {

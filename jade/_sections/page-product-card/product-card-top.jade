@@ -1,4 +1,4 @@
-.wrapper-smart.page-product__top.top-page-product
+div(class=pageIndex=='product_015' ? "wrapper-smart page-product__top page-product__top--sale top-page-product" : pageIndex=='product_017' ? "wrapper-smart page-product__top page-product__top--analog top-page-product" : pageIndex=='product_018' ? "wrapper-smart page-product__top page-product__top--absent top-page-product" : pageIndex=='product_019' ? "wrapper-smart page-product__top page-product__top--action top-page-product" : "wrapper-smart page-product__top top-page-product")
 	.wrapper-flex
 		.page-product__represent
 			h1.product-title Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
@@ -23,7 +23,11 @@
 								| аналог
 				
 					.product-view__screen.screen-product-view#product-image-gallery
-						.billet.billet--action Акция
+						if pageIndex=='product_015'
+							.billet.billet--markdown уценка
+						if pageIndex=='product_019'
+							.billet.billet--action Акция
+							
 						+swiper('screen-product-slider', true, false, false)
 							- for (var i=0; i < 7; i++)
 								.swiper-slide.screen-product-view__slide._fit
@@ -75,10 +79,40 @@
 						+icon('bonus')
 						.product-bonus__note бонусов
 
-				.product-sidebar__possibilities
-					button(type="button").btn.btn-lg  в корзину
-					a(href="#").btn.btn-lg.product-oneclick купить в 1 клик
 
+				.product-sidebar__possibilities
+					if pageIndex=='product_015'
+						button(type="button").btn.btn-lg.btn-yellow в корзину
+						a(href="#").btn.btn-lg.product-oneclick Быстрый заказ
+					else if pageIndex=='product_017'
+						button(type="button").btn.btn-lg.btn-gray Подобрать аналог
+					else if pageIndex=='product_018'
+						button(type="button").btn.btn-lg.btn-blue заказать
+					else if pageIndex=='product_019'
+						button(type="button").btn.btn-lg.btn-red в корзину
+						a(href="#").btn.btn-lg.product-oneclick Быстрый заказ
+					else
+						button(type="button").btn.btn-lg в корзину
+						a(href="#").btn.btn-lg.product-oneclick купить в 1 клик
+
+				.product-sidebar__status.status-product-sidebar
+					if pageIndex=='product_015'
+						.status-product-sidebar__title Уцененный товар
+						.status-product-sidebar__text Причина уценки: на корпусе инструмента присутствуют мелкие царапины 
+					
+					else if pageIndex=='product_017' 
+						.status-product-sidebar__title Архивный товар
+						.status-product-sidebar__text К сожалению данный товар снят с производства или не поставляется по другим причинам. 
+					
+					else if pageIndex=='product_018'
+						.status-product-sidebar__title Товар временно отсутствует 
+						.status-product-sidebar__text Обратите внимание, что стоимость данного товара может измениться при заказе. 
+					
+					else if pageIndex=='product_019'
+						.status-product-sidebar__title Акционный товар 
+						.status-product-sidebar__text Этот товар участвует в акции. С подробностями акции можно ознакомиться здесь.
+					
+				
 				.product-sidebar__delivery Бесплатная доставка по Краснодару
 					br
 					| Доставка транспортными компаниями
