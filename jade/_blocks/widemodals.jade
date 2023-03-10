@@ -1,0 +1,41 @@
+.widemodal
+	button(type="button").widemodal__close.button-close
+		+icon('ctlg-close')
+	.widemodal__header
+		.wrapper.pd-12.widemodal__header-wrapper
+			a(href="index.html").header__logo
+				picture
+					source(srcset='img/ki_logo.svg' media='(max-width: 959.98px)')
+					img(src='img/logo.svg' alt='alt')
+		
+		.widemodal__top
+			.wrapper
+				.widemodal__title Отзыв о товаре
+	
+	.wrapper-smart.addreview
+		.wrapper-flex.addreview__flex
+			form(action="#" class="form").addreview__content.wrapper-flex
+				.form__row-title.form__row-title--required Оцените вашу покупку *
+				label.form__label.addreview__field
+					.big-rating 
+						+simpleRating(3)
+				
+				.form__row-title.form__row-title--required Опыт использования
+				label.form__label.addreview__field
+					textarea.form__area(type='text' name='question' placeholder="Опишите ваши впечатления")
+				
+				.form__row-title.form__row-title--required Достоинства
+				label.form__label.addreview__field
+					textarea.form__area(type='text' name='question' placeholder="Что вам понравилось в товаре?")
+
+				.form__row-title.form__row-title--required Недостатки
+				label.form__label.addreview__field
+					textarea.form__area(type='text' name='question' placeholder="Что вам не понравилось в товаре?")
+				
+				.cards-more
+					a(href="#").cards-more__link + Прикрепить файл/фото
+			
+			.addreview__product
+				- cards = [{billet: 'скидка', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000', aval: '4 магазинах', iconActive: false}];
+				
+				+productCard(cards, 'page-brands/gaik/')

@@ -47,18 +47,24 @@
 							.product-reviews__actions.actions-product-reviews
 								a(href="#").btn.btn-lg.btn-order-check.actions-product-reviews__add оставить отзыв
 								.actions-product-reviews__bottom
-									.actions-product-reviews__sort
-										.actions-product-reviews__sorting Сортировка:
-										select(name="name" id="" data-searchdisable="true" class="fstdropdown-select")
-											- var sels = ['Новые', 'Положительные ', 'Отрицательные '];
-												each item in sels
-													option(value=item)= item
-									
-									label.light-label
-										input(type="checkbox" name="name" class="light-label__input" checked)
-										span.light-label__check
-											+icon('check')
-										span.light-label__caption С фото
+									if pageIndex == 'product_026'
+										a(href="#").std-link Редактировать свой отзыв
+										a(href="#").std-link Удалить свой отзыв
+											+icon('ctlg-close')
+
+									else
+										.actions-product-reviews__sort
+											.actions-product-reviews__sorting Сортировка:
+											select(name="name" id="" data-searchdisable="true" class="fstdropdown-select")
+												- var sels = ['Новые', 'Положительные ', 'Отрицательные '];
+													each item in sels
+														option(value=item)= item
+										
+										label.light-label
+											input(type="checkbox" name="name" class="light-label__input" checked)
+											span.light-label__check
+												+icon('check')
+											span.light-label__caption С фото
 
 						.product-reviews__photos
 							.slider-navs

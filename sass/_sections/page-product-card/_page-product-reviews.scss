@@ -101,6 +101,9 @@
 		flex: 0 0 100%;
 		margin-top: 20px;
 	}
+	@include min-screen($scale){
+		flex: 0 0 300px;
+	}
 }
 .actions-product-reviews {
 }
@@ -126,6 +129,18 @@
 		color: $text-l;
 		text-transform: none;
 	}
+	.std-link{
+		font-size: rem(10);
+		line-height: rem(20);
+
+		.icon{
+			margin-left: 5px;
+			vertical-align: middle;
+			font-size: rem(6.5);
+			color: $text-l;
+		}
+	}
+
 }
 .actions-product-reviews__sort {
 	display: flex;
