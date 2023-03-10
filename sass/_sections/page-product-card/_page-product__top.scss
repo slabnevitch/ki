@@ -18,10 +18,7 @@
 .wrapper-smart {}
 .page-product__top {}
 .top-page-product {
-	margin-bottom: 58px;
-	@include max-screen($sm){
-		margin-bottom: 40px;
-	}
+	
 }
 .wrapper-flex {}
 .page-product__represent {
@@ -30,8 +27,8 @@
 	max-width: calc(100% - 224px - 32px);
 
 	@include max-screen($md){
-		flex: 0 0 calc(60% - 32px);
-		max-width: calc(60% - 32px);
+		flex: 0 0 calc(70% - 32px);
+		max-width: calc(70% - 32px);
 	}
 	@include max-screen($sm){
 		flex: 0 0 calc(100% - 16px);	
@@ -49,7 +46,13 @@
 	}
 }
 .page-product__represent-container{
-	
+	margin-bottom: 58px;
+	@include max-screen($sm){
+		margin-bottom: 40px;
+	}
+	@include max-screen($xs){
+		margin-bottom: 10px;
+	}
 }
 .product-title {
 	margin-bottom: 15px;
@@ -336,11 +339,17 @@
 
 	@include max-screen($md){
 		
-		flex: 0 0 calc(40%);
+		flex: 0 0 calc(30%);
 	}
 	@include max-screen($sm){
 		
-		flex: 0 0 calc(100% - 16px);
+		// flex: 0 0 calc(100% - 16px);
+		flex: 0 0 auto;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	@include max-screen($xs){
+		order: 3;
 	}
 	@include min-screen($scale){
 		flex: 0 0 284px;

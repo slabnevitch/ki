@@ -1,82 +1,140 @@
 .page-product__features
-	.wrapper
-		.product-features
-			- var buts = ['Характеристики','Отзывы (4)','Расходники','Аналоги','Описание и файлы'];
-			._tabs.product-features__tabs
-				.product-features__overflow
-					ul.tabs__buttons.product-features__list
-						each item, i in buts
-							li.product-features__item
-								a(class=i==0 ? "product-features__link tab active" : "product-features__link tab" href='#')= item
+	.product-features
+		- var buts = ['Характеристики','Отзывы (4)','Расходники','Аналоги','Описание и файлы'];
+		._tabs.product-features__tabs
+			.product-features__overflow
+				ul.tabs__buttons.product-features__list
+					each item, i in buts
+						li.product-features__item
+							a(class=i==0 ? "product-features__link tab active" : "product-features__link tab" href='#')= item
 
-				ul.tabs__container.product-features__container
-					li.tab-content.product-features__content.active
-						.product-features__table.table-product-features
-							- var keys =  ['Напряжение аккумулятора','Максимальный крутящий момент','Количество скоростей работы','Max частота вращения шпинделя','Тип двигателя','Тип патрона','Диаметр зажимаемой оснастки','Режим сверления','Возможность быстрой смены патрона','Количество аккумуляторов','Емкость аккумулятора','Зарядное устройство в комплекте','Упаковка инструмента','Вес','Код товара','Напряжение аккумулятора','Максимальный крутящий момент','Количество скоростей работы','Max частота вращения шпинделя','Тип двигателя','Тип патрона','Диаметр зажимаемой оснастки','Режим сверления','Возможность быстрой смены патрона','Количество аккумуляторов','Емкость аккумулятора','Зарядноеустройство в комплекте','Упаковка инструмента','Вес','Код товара'];
-							
-							- var vals = ['12 в','28 Н/м','1','600 об/мин','щеточный','быстрозажимной','0.8-10 мм','Да','Да', '1','1.3  а*ч','Да','коробка','1.3 кг','100000079185','12 в','28 Н/м','1','600 об/мин','щеточный','быстрозажимной','0.8-10 мм','Да','Да', '1','1.3  а*ч','Да','коробка','1.3 кг','100000079185'];
+			ul.tabs__container.product-features__container
+				li.tab-content.product-features__content.active
+					.product-features__table.table-product-features
+						- var keys =  ['Напряжение аккумулятора','Максимальный крутящий момент','Количество скоростей работы','Max частота вращения шпинделя','Тип двигателя','Тип патрона','Диаметр зажимаемой оснастки','Режим сверления','Возможность быстрой смены патрона','Количество аккумуляторов','Емкость аккумулятора','Зарядное устройство в комплекте','Упаковка инструмента','Вес','Код товара','Напряжение аккумулятора','Максимальный крутящий момент','Количество скоростей работы','Max частота вращения шпинделя','Тип двигателя','Тип патрона','Диаметр зажимаемой оснастки','Режим сверления','Возможность быстрой смены патрона','Количество аккумуляторов','Емкость аккумулятора','Зарядноеустройство в комплекте','Упаковка инструмента','Вес','Код товара'];
+						
+						- var vals = ['12 в','28 Н/м','1','600 об/мин','щеточный','быстрозажимной','0.8-10 мм','Да','Да', '1','1.3  а*ч','Да','коробка','1.3 кг','100000079185','12 в','28 Н/м','1','600 об/мин','щеточный','быстрозажимной','0.8-10 мм','Да','Да', '1','1.3  а*ч','Да','коробка','1.3 кг','100000079185'];
 
-								each key, i in keys
-									.table-product-features__row
-										.table-product-features__key
-											.table-product-features__keyname= key
-										.table-product-features__val= vals[i]
-					
-					li.tab-content.product-features__content.hidden
-						.product-reviews
-							.product-reviews__top
-							
-								.product-reviews__stats
-									.product-reviews__rating.rating-product-reviews
-										.rating-product-reviews__current 4,6
-										.rating-product-reviews__overal /5
-									
-									.product-reviews__marks
-										.product-reviews__mark 6 отзывов
-										.product-reviews__mark 7 оценок
-
-								.product-reviews__graphs.graphs-product-reviews
-									- var stars = [{count: 5, progress: 85}, {count: 4, progress: 0}, {count: 3, progress: 0}, {count: 2, progress: 28}, {count: 1, progress: 0}];
-										each star, i in stars
-											.graphs-product-reviews__row
-												.graphs-product-reviews__stars
-													- for (var n=0; n < star.count; n++)
-														.graphs-product-reviews__star
-												.graphs-product-reviews__bar
-													.graphs-product-reviews__progress(style=star.progress > 0 ?"width:" + star.progress + "%;" : false)
+							each key, i in keys
+								.table-product-features__row
+									.table-product-features__key
+										.table-product-features__keyname= key
+									.table-product-features__val= vals[i]
+				
+				li.tab-content.product-features__content.hidden
+					.product-reviews
+						.product-reviews__top
+						
+							.product-reviews__stats
+								.product-reviews__rating.rating-product-reviews
+									.rating-product-reviews__current 4,6
+									.rating-product-reviews__overal /5
 								
-								.product-reviews__actions.actions-product-reviews
-									a(href="#").btn.btn-lg.btn-order-check.actions-product-reviews__add оставить отзыв
-									.actions-product-reviews__bottom
-										.actions-product-reviews__sort
-											.actions-product-reviews__sorting Сортировка:
-											select(name="name" id="" data-searchdisable="true" class="fstdropdown-select")
-												- var sels = ['Новые', 'Положительные ', 'Отрицательные '];
-													each item in sels
-														option(value=item)= item
-										
-										label.light-label
-											input(type="checkbox" name="name" class="light-label__input" checked)
-											span.light-label__check
-												+icon('check')
-											span.light-label__caption С фото
+								.product-reviews__marks
+									.product-reviews__mark 6 отзывов
+									.product-reviews__mark 7 оценок
 
-							.product-reviews__photos
-								.slider-navs
-									.slider-nav.slider-nav--prev
-										+icon('chev-down')
-									.slider-nav.slider-nav--next
-										+icon('chev-down')
-								+swiper('review-photos-slider', false, false, false)
-									- for (var m=0; m < 2; m++)
+							.product-reviews__graphs.graphs-product-reviews
+								- var stars = [{count: 5, progress: 85}, {count: 4, progress: 0}, {count: 3, progress: 0}, {count: 2, progress: 28}, {count: 1, progress: 0}];
+									each star, i in stars
+										.graphs-product-reviews__row
+											.graphs-product-reviews__stars
+												- for (var n=0; n < star.count; n++)
+													.graphs-product-reviews__star
+											.graphs-product-reviews__bar
+												.graphs-product-reviews__progress(style=star.progress > 0 ?"width:" + star.progress + "%;" : false)
+							
+							.product-reviews__actions.actions-product-reviews
+								a(href="#").btn.btn-lg.btn-order-check.actions-product-reviews__add оставить отзыв
+								.actions-product-reviews__bottom
+									.actions-product-reviews__sort
+										.actions-product-reviews__sorting Сортировка:
+										select(name="name" id="" data-searchdisable="true" class="fstdropdown-select")
+											- var sels = ['Новые', 'Положительные ', 'Отрицательные '];
+												each item in sels
+													option(value=item)= item
+									
+									label.light-label
+										input(type="checkbox" name="name" class="light-label__input" checked)
+										span.light-label__check
+											+icon('check')
+										span.light-label__caption С фото
+
+						.product-reviews__photos
+							.slider-navs
+								.slider-nav.slider-nav--prev
+									+icon('chev-down')
+								.slider-nav.slider-nav--next
+									+icon('chev-down')
+							+swiper('review-photos-slider', false, false, false)
+								- for (var m=0; m < 2; m++)
+									- for (var i=0; i < 2; i++)
+										.swiper-slide.review__photo._fit
+											button(type="button").photo-remove
+												+icon('remove')
+											img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
+
+					.product-reviews__articles.articles-product-reviews
+						.product-reviews__single
+							article.review
+								header.review__header
+									.person
+										.person__top
+											.person__portrait
+												img(src="img/page-product-card/worker.jpg" alt="alt")
+											.person__info
+												.person__name Иванов Иван
+												.person__date 12 декабря 2021
+										.person__rating
+											.person__rating-wrap
+													+starRating(2)
+											.person__rating-mark Плохой товар
+									
+									.review__context.context-review
+										+icon('context')
+										.context-review__drop 
+											a(href="#") Пожаловаться
+											a(href="#") Удалить
+
+								.review__body.review__body--expanded
+									.review__div
+										.review__title Опыт использования
+										p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+									.review__div
+										.review__title Достоинства
+										p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+
+									.review__div
+										.review__title Недостатки
+										p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+										p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+
+								footer.review__footer
+									.review__photos
 										- for (var i=0; i < 2; i++)
-											.swiper-slide.review__photo._fit
-												button(type="button").photo-remove
-													+icon('remove')
+											.review__photo._fit
 												img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
 
-						.product-reviews__articles.articles-product-reviews
-							.product-reviews__single
+									.review__actions
+										button(type="button").review__collapse Свернуть
+										.review__options
+											a(href="#").review__answer Ответить
+											a(href="#").review__comments.review__option
+												+icon('chat')
+												.review__comments-count 1
+											a(href="#").review__like.review__option.active
+												+icon('like')
+												.review__like-count 1
+											a(href="#").review__dislike.review__option
+												+icon('unlike')
+												.review__dislike-count 0
+
+						.cards-more
+							a(href="#").cards-more__link Показать все
+						
+						.product-reviews__others
+							- for (var i=0; i < 3; i++)
 								article.review
 									header.review__header
 										.person
@@ -93,11 +151,9 @@
 										
 										.review__context.context-review
 											+icon('context')
-											.context-review__drop 
-												a(href="#") Пожаловаться
-												a(href="#") Удалить
+											a(href="#").context-review__drop Пожаловаться
 
-									.review__body.review__body--expanded
+									.review__body
 										.review__div
 											.review__title Опыт использования
 											p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -112,13 +168,8 @@
 											p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
 
 									footer.review__footer
-										.review__photos
-											- for (var i=0; i < 2; i++)
-												.review__photo._fit
-													img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
-
 										.review__actions
-											button(type="button").review__collapse Свернуть
+											button(type="button").review__collapse Читать полностью
 											.review__options
 												a(href="#").review__answer Ответить
 												a(href="#").review__comments.review__option
@@ -131,101 +182,49 @@
 													+icon('unlike')
 													.review__dislike-count 0
 
-							.cards-more
-								a(href="#").cards-more__link Показать все
-							
-							.product-reviews__others
-								- for (var i=0; i < 3; i++)
-									article.review
-										header.review__header
-											.person
-												.person__top
-													.person__portrait
-														img(src="img/page-product-card/worker.jpg" alt="alt")
-													.person__info
-														.person__name Иванов Иван
-														.person__date 12 декабря 2021
-												.person__rating
-													.person__rating-wrap
-															+starRating(2)
-													.person__rating-mark Плохой товар
-											
-											.review__context.context-review
-												+icon('context')
-												a(href="#").context-review__drop Пожаловаться
+				li.tab-content.hidden
+					- var tags = ['биты', 'наборы бит', 'защитные очки', 'сверла для металла для дрелей', 'наборы бит со сверлами', 'Сумки для инструментов', 'ящики и органайзеры'];
+					.tags
+						each item in tags
+							div(class=item == 'биты' || item == 'защитные очки' || item == 'сверла для металла для дрелей'? "tag active" : "tag")= item
 
-										.review__body
-											.review__div
-												.review__title Опыт использования
-												p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+					- var rash = [{billet: 'Новинка', price: '378 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'скидка', price: '179 ₽', sale: '400 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}, {billet: '', price: '321 ₽', sale: '', sbers: '79', tilte: 'Шуруповерт Elitech ДШ 0110 РЭ', aval: '2 магазинах', iconActive: '0'}];
 
-											.review__div
-												.review__title Достоинства
-												p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-
-											.review__div
-												.review__title Недостатки
-												p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
-												p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
-
-										footer.review__footer
-											.review__actions
-												button(type="button").review__collapse Читать полностью
-												.review__options
-													a(href="#").review__answer Ответить
-													a(href="#").review__comments.review__option
-														+icon('chat')
-														.review__comments-count 1
-													a(href="#").review__like.review__option.active
-														+icon('like')
-														.review__like-count 1
-													a(href="#").review__dislike.review__option
-														+icon('unlike')
-														.review__dislike-count 0
-
-					li.tab-content.hidden
-						- var tags = ['биты', 'наборы бит', 'защитные очки', 'сверла для металла для дрелей', 'наборы бит со сверлами', 'Сумки для инструментов', 'ящики и органайзеры'];
-						.tags
-							each item in tags
-								div(class=item == 'биты' || item == 'защитные очки' || item == 'сверла для металла для дрелей'? "tag active" : "tag")= item
-
-						- var rash = [{billet: 'Новинка', price: '378 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'скидка', price: '179 ₽', sale: '400 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}, {billet: '', price: '321 ₽', sale: '', sbers: '79', tilte: 'Шуруповерт Elitech ДШ 0110 РЭ', aval: '2 магазинах', iconActive: '0'}];
-
-						- var rash2 = [{billet: '', price: '64 ₽', sale: '', sbers: '79', tilte: 'Защитные очки закрытого типа с непрямой вентиляцией СИБРТЕХ 89160', aval: '6 магазинах', iconActive: '0'}, {billet: 'скидка', price: '959 ₽', sale: '', sbers: '51', tilte: 'Набор сверл в "стакане" (16 шт.) Sturm 1055-01-SS3', aval: '', iconActive: false}, {billet: 'уценка', price: '184 ₽', sale: '211 ₽', sbers: '20', tilte: 'Набор сверл по металлу HSS (5 шт; 4, 5, 6, 8, 10 мм) VMX 511620', aval: '6', iconActive: false}];
-						
-						.wrapper-flex.product-cards.product-features__cards
-							+productCard(rash, 'page-brands/shur/')
-							+productCard(rash2, 'page-product-card/rash/')
-
-					li.tab-content.product-features__content.hidden
-						- var cards = [{billet: 'Новинка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'скидка', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}, {billet: '', price: '7 850 ₽', sale: '', sbers: '79', tilte: 'Шуруповерт Elitech ДШ 0110 РЭ', aval: '2 магазинах', iconActive: '0'}, {billet: '', price: '22 899 ₽', sale: '', sbers: '229', tilte: 'Аккумуляторная дрель-шуруповерт WorkMaster АШ-12М', aval: '6 магазинах', iconActive: false}, {billet: '', price: '9 990 ₽', sale: '', sbers: '100', tilte: 'Аккумуляторная дрель-шуруповерт Metabo PowerMaxx BS (кейс)', aval: '6 магазинах', iconActive: false}, {billet: 'уценка', price: '10 990 ₽', sale: '11 990 ₽', sbers: '120', tilte: 'Аккумуляторная дрель-шуруповерт DeWalt DCD996NT (без акб и зу)', aval: '6 магазинах', iconActive: false}];
-						
-						.wrapper-flex.product-cards.product-features__cards
-							+productCard(cards, 'page-brands/shur/')
+					- var rash2 = [{billet: '', price: '64 ₽', sale: '', sbers: '79', tilte: 'Защитные очки закрытого типа с непрямой вентиляцией СИБРТЕХ 89160', aval: '6 магазинах', iconActive: '0'}, {billet: 'скидка', price: '959 ₽', sale: '', sbers: '51', tilte: 'Набор сверл в "стакане" (16 шт.) Sturm 1055-01-SS3', aval: '', iconActive: false}, {billet: 'уценка', price: '184 ₽', sale: '211 ₽', sbers: '20', tilte: 'Набор сверл по металлу HSS (5 шт; 4, 5, 6, 8, 10 мм) VMX 511620', aval: '6', iconActive: false}];
 					
-					li.tab-content.product-features__content.hidden
-						.product-features__details
-							.product-features__descr.descr-product-features
-								.descr-product-features__chapter Аккумуляторная безударная дрель-шуруповерт Bort BAB-12-P 98299953 относится к инструментам с хорошим крутящим моментом и функцией реверса, который незаменим для профессионалов и любителей. Она выполняет сверление, а также закручивание и выкручивание саморезов. Подобная функциональность позволяет купить инструмент для сборки мебели, выполнения монтажных работ и т.п.
-								
-								.descr-product-features__title Масса достоинств в одном инструменте
-								p.descr-product-features__text Шуруповерт от бренда Bort – специнструмент качественной сборки, который: 
-								- var list = ['не перегревается в процессе работы;','долгое время функционирует без подзарядки;','отлично держит обороты;','имеет регулировку частоты вращения;','работает вдали от источника электросети;','имеет эргономичный дизайн и малый вес, что позволяет работать в ограниченном пространстве и,исключает усталость рук.'];
+					.wrapper-flex.product-cards.product-features__cards
+						+productCard(rash, 'page-brands/shur/')
+						+productCard(rash2, 'page-product-card/rash/')
 
-								ul.descr-product-features__list
-									each item in list
-										li.descr-product-features__item= item
-								
-								p.descr-product-features__text На аккумуляторную дрель с возможностями шуруповерта цена невысокая, особенно учитывая функциональность инструмента.
+				li.tab-content.product-features__content.hidden
+					- var cards = [{billet: 'Новинка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'скидка', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}, {billet: '', price: '7 850 ₽', sale: '', sbers: '79', tilte: 'Шуруповерт Elitech ДШ 0110 РЭ', aval: '2 магазинах', iconActive: '0'}, {billet: '', price: '22 899 ₽', sale: '', sbers: '229', tilte: 'Аккумуляторная дрель-шуруповерт WorkMaster АШ-12М', aval: '6 магазинах', iconActive: false}, {billet: '', price: '9 990 ₽', sale: '', sbers: '100', tilte: 'Аккумуляторная дрель-шуруповерт Metabo PowerMaxx BS (кейс)', aval: '6 магазинах', iconActive: false}, {billet: 'уценка', price: '10 990 ₽', sale: '11 990 ₽', sbers: '120', tilte: 'Аккумуляторная дрель-шуруповерт DeWalt DCD996NT (без акб и зу)', aval: '6 магазинах', iconActive: false}];
+					
+					.wrapper-flex.product-cards.product-features__cards
+						+productCard(cards, 'page-brands/shur/')
+				
+				li.tab-content.product-features__content.hidden
+					.product-features__details
+						.product-features__descr.descr-product-features
+							.descr-product-features__chapter Аккумуляторная безударная дрель-шуруповерт Bort BAB-12-P 98299953 относится к инструментам с хорошим крутящим моментом и функцией реверса, который незаменим для профессионалов и любителей. Она выполняет сверление, а также закручивание и выкручивание саморезов. Подобная функциональность позволяет купить инструмент для сборки мебели, выполнения монтажных работ и т.п.
 							
-							.product-features__files.files-product-features
-								- var files = [{name: 'Инструкция по эксплуатации часть 1', data: 'pdf, 355 кб'}, {name: 'Инструкция по эксплуатации часть 2', data: 'pdf, 355 кб'},{name: 'Сертификат', data: 'pdf, 1,2 мб'},];
-								
-								each item in files
-									a(href="#").product-features__file.file-product-features
-										.file-product-features__icon
-											img(src="img/page-product-card/ic_file.svg" alt="alt")
-										.file-product-features__text
-											.file-product-features__name= item.name
-											.file-product-features__data= item.data
+							.descr-product-features__title Масса достоинств в одном инструменте
+							p.descr-product-features__text Шуруповерт от бренда Bort – специнструмент качественной сборки, который: 
+							- var list = ['не перегревается в процессе работы;','долгое время функционирует без подзарядки;','отлично держит обороты;','имеет регулировку частоты вращения;','работает вдали от источника электросети;','имеет эргономичный дизайн и малый вес, что позволяет работать в ограниченном пространстве и,исключает усталость рук.'];
+
+							ul.descr-product-features__list
+								each item in list
+									li.descr-product-features__item= item
+							
+							p.descr-product-features__text На аккумуляторную дрель с возможностями шуруповерта цена невысокая, особенно учитывая функциональность инструмента.
+						
+						.product-features__files.files-product-features
+							- var files = [{name: 'Инструкция по эксплуатации часть 1', data: 'pdf, 355 кб'}, {name: 'Инструкция по эксплуатации часть 2', data: 'pdf, 355 кб'},{name: 'Сертификат', data: 'pdf, 1,2 мб'},];
+							
+							each item in files
+								a(href="#").product-features__file.file-product-features
+									.file-product-features__icon
+										img(src="img/page-product-card/ic_file.svg" alt="alt")
+									.file-product-features__text
+										.file-product-features__name= item.name
+										.file-product-features__data= item.data
 

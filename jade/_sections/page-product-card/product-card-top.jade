@@ -50,8 +50,10 @@
 								.table-product-chars__value= values[i]
 
 					a(href="#").std-link.product-chars__more Подробнее
-		
-		aside.page-product__sidebar
+			
+			include product-card-tabs
+
+		aside.page-product__sidebar(data-da="page-product__represent,767.98,2")
 			.product-sidebar
 				.product-sku Артикул: 002266
 				.product-actions(data-da="product-view,767.98,first")

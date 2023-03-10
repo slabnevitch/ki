@@ -4,13 +4,15 @@
 	@include max-screen($md){
 		padding-bottom: 40px;
 	}
+	@include max-screen($sm){
+		margin-top: 40px;
+	}
+	@include max-screen($xs){
+		order:4;
+	}
 }
 .wrapper {}
 .product-features {
-	@include min-screen($md){
-		max-width: rem(704);
-		
-	}
 }
 ._tabs {}
 .product-features__tabs {
@@ -18,14 +20,15 @@
 }
 .product-features__overflow{
 	position: relative;
-	width: calc(100% + 24px);
-	overflow-y: hidden;
 	height: 33px;
 	margin-bottom: 33px;
+	overflow-y: hidden;
 	
-	@include max-screen($md){
+	@include max-screen($sm){
 		margin-bottom: 20px;
+		width: calc(100% + 24px);
 	}
+
 	&:after{
 		content: '';
 		display: block;
@@ -52,7 +55,7 @@
 	&:not(:last-child){
 		margin-right: 10px;
 
-		@include max-screen($xs){
+		@include max-screen($md){
 			margin-right: 16px;
 		}
 	}
@@ -155,6 +158,10 @@
 }
 .product-features__cards{
 	.product-card{
+		@include min-screen($sm){
+			width: calc(50% - 16px);
+
+		}
 		@include min-screen($md){
 			width: calc(100% / 3 - 16px);
 		}
