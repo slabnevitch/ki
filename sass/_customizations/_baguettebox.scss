@@ -1,0 +1,32 @@
+.baguetteBox-button{
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	// background-size: contain;
+
+	&[aria-label="Previous"]{
+		background-image: url($img + 'icons-svg/chev-left.svg');
+	}
+	&[aria-label="Next"]{
+		background-image: url($img + 'icons-svg/chev-right.svg');
+	}
+	&[aria-label="Close"]{
+		background-image: url($img + 'icons-svg/ctlg-close-gray.svg');
+	}
+
+	&:hover, &:active, &:focus{
+		background-color: transparent;
+		
+	}
+	
+	svg{
+		display: none;
+	}
+
+}
+.baguetteBox-button#previous-button {
+    left: prc(200, 1200);
+}
+.baguetteBox-button#next-button {
+    right: prc(200, 1200);
+}

@@ -9,6 +9,12 @@
 	width: 100%;
 	background-color: #fff;
 	z-index: 11;
+	transition: all .3s;
+
+	&.modal-hide{
+		opacity: 0;
+		visibility: hidden;
+	}
 }
 .widemodal__close {
 	position: absolute;
@@ -88,6 +94,7 @@
 	@include max-screen($sm){
 		margin-left: 0;
 		margin-right: 0;
+		width: 100%;
 	}
 	
 	.form__row-title {
@@ -130,13 +137,43 @@
 	}
 	
 	.big-rating {
-		@include min-screen($md){
-			margin-top: 0;
+		margin-top: 0;
+
+		@include max-screen($xs){
+			padding-bottom: 16px;
+			border-bottom: 1px solid $border;
+		}
+
+		@include min-screen($xs){
+			margin-top: 10px;
+		}
+		
 			
+		.simple-rating {
+			@include max-screen($xs){
+			    width: 160px;
+			    margin-left: -18.5px;
+			    font-size: 22px;
+			}
+		}
+		.simple-rating label {
+			@include max-screen($xs){
+			    margin: 0 10.5px;
+			    height: 28px;
+			}
+		}
+		.simple-rating label:before {
+			@include max-screen($xs){
+			    line-height: 28px;
+				
+			}
+
 		}
 	}
+	.product-reviews__photos{
+		margin-bottom: 0;
+	}
 }
-.simple-rating {}
 .form__area {}
 .cards-more__link {}
 .addreview__product {
@@ -155,49 +192,39 @@
 	
 	.product-card {
 		margin-bottom: 0;
+
+		@include max-screen($sm){
+			padding-bottom: 14px;
+
+		}
+		@include max-screen($xs){
+			padding-left: 100px;
+		}
+		
 		.product-card__buy,
 		.product-card__info{
 			display: none;
 		}
+		.product-card__img-wrap {
+
+    		@include max-screen($xs){
+				position: absolute;
+	    		top: -15px;
+	    		left: 0;
+    			
+    		}
+		}
+		.product-card__img {
+			@include max-screen($xs){
+				width: 88px;
+	    		height: 88px;
+	    	}
+		}
+		.product-card__actions{
+			@include max-screen($xs){
+				display: none;
+			}
+		}
 	}
 }
-.product-card__img-wrap {}
-.billet {}
-.billet--action {}
-.billet__value {}
-.icon-percents {}
-.product-card__border {}
-.product-card__img {}
-.product-card__price {}
-.product-card__actions {}
-.product-card__action {}
-.icon-favourites {}
-.icon-compare {}
-.product-price {}
-.product-price-sale {}
-.product-bonus {}
-.product-bonus__val {}
-.icon-bonus {}
-.product-card__name {}
-.product-card__description {}
-.product-card__description-row {}
-.product-card__bottom {}
-.product-card__rating-wrap {}
-.product-card__rating {}
-.crystal-rating {}
-.crystal-rating__body {}
-.crystal-rating__active {}
-.crystal-rating__items {}
-.crystal-rating__value {}
-.btn {}
-.btn-sm {}
-
-.product-card__info {}
-.info-product-card {}
-.info-product-card__row {}
-.info-product-card__aval {}
-.info-product-card__avalkey {}
-.info-product-card__avalvalue {}
-.info-product-card__in {}
-.info-product-card__oneclick {}
 /*--------------------END widemodals----------------------*/ 

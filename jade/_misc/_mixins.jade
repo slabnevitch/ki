@@ -57,15 +57,15 @@ mixin starRating(rate)
 //- звезный рейтинг с возможностью выбора пользователем по клику, только целые числа
 //- value - велиичина рейтинга, целое число
 //- каждый такой рейтинг должен быть обернут в тег form
-mixin simpleRating(value)
+mixin simpleRating(value, name = 'rating', id = 'inp')
 	.simple-rating
 		- for (var i=5; i > 0 ; i--)
 			if value === i
-				input(id="inp" + i type='radio' checked name='rating' value=i)
-				label(for="inp" + i)
+				input(id=id + i type='radio' checked name=name value=i)
+				label(for=id + i)
 			else
-				input(id="inp" + i type='radio' name='rating' value=i)
-				label(for="inp" + i)
+				input(id=id + i type='radio' name=name value=i)
+				label(for=id + i)
 
 //- звезный рейтинг с возможностью выбора пользователем по клику с демонстрацией значения рейтинга, может прнимать целые и дробные числа
 //- value - велиичина рейтинга, целое или дробное число

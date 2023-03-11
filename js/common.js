@@ -542,13 +542,26 @@
 					nextEl: '.product-reviews__photos .slider-nav--next',
 					prevEl: '.product-reviews__photos .slider-nav--prev'
 				}
+				// breakpoints: {
+				//     // when window width is >= 320px
+				//     576: {
+				//     	slidesPerView: 3,
+				//     	spaceBetween: 20
+				//     }
+				// }
 				
-		    	});
+	    	});
 		}
 		//---------------review-photos-slider
 
 		
 		//---------------END Swiper
+
+		// baguetteBox
+			if(document.querySelector('.gallery') !== null){
+				baguetteBox.run('.gallery');
+			}
+		// END baguetteBox
 
 
 		// catalog-filter address list toggle

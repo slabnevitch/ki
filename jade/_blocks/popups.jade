@@ -17,8 +17,9 @@
 	.popup__title Как вам товар?
 	.popup__body
 		p.popup__text Оставьте отзыв или оцените товаре
-		.big-rating 
-			+simpleRating(3)
+		form(action="#" class="form")
+			.big-rating 
+				+simpleRating(3, 'popup-rating', 'pop')
 
 		.product-card.product-card--mini
 			.product-card__img-wrap
