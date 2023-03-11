@@ -234,15 +234,33 @@
 		}
 		// END map modals toggle
 
+		// widemodals hide
+		if(targ.classList.contains('widemodal__close') || targ.closest('.widemodal__close') !== null){
+			targ.closest('.widemodal').classList.add('modal-hide');
+		}
+		// END widemodals hide
+
 		// review-body expand/collapse
 		if(targ.classList.contains('review__collapse') || targ.closest('.review__collapse')){
 			targ.closest('.review').querySelector('.review__body')
 				.classList.toggle('review__body--expanded');
 			console.log(targ.textContent)
 			targ.textContent = targ.textContent.toLowerCase() ==='свернуть' ? 'Читать полностью' : 'Свернуть';
-		}
-			
+		}	
 		// END review-body expand/collapse
+
+		// review context menu
+		if(targ.classList.contains('review__context') || targ.closest('.review__context ')){
+			if (isMobile.any()) {
+				targ.closest('.review').classList.add('review-context-visible');
+				if (screen.width <= 959.98){
+					document.body.classList.add('covered');
+
+				}
+			}
+		}
+		// ENDreview context menu
+
 
 		// header search results toggle
 			// var headerSearchInputs = document.querySelectorAll('.search-header__input');

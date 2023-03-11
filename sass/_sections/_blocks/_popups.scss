@@ -23,6 +23,12 @@
 		max-width: 364px;
 	}
 }
+.popup-regard {
+	.popup-regard-visible & {
+		display: block;
+	}
+
+}
 .popup-action {
 	.popup-action-visible & {
 		display: block;

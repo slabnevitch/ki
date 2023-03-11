@@ -7211,7 +7211,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="product-reviews__photos">
+                            <div class="product-reviews__photos gallery">
                               <div class="slider-navs">
                                 <div class="slider-nav slider-nav--prev">
                                       <svg class="icon icon-chev-down ">
@@ -7226,36 +7226,43 @@
                               </div>
                                   <div class="swiper-container swiper review-photos-slider">
                                     <div class="swiper-wrapper">
-                                      <div class="swiper-slide review__photo _fit">
+                                      <div class="swiper-slide review-photos-slider__slide">
                                         <button type="button" class="photo-remove">
                                               <svg class="icon icon-remove ">
                                                 <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
                                               </svg>
-                                        </button><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img">
+                                        </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img"></a>
                                       </div>
-                                      <div class="swiper-slide review__photo _fit">
+                                      <div class="swiper-slide review-photos-slider__slide">
                                         <button type="button" class="photo-remove">
                                               <svg class="icon icon-remove ">
                                                 <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
                                               </svg>
-                                        </button><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img">
+                                        </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img"></a>
                                       </div>
-                                      <div class="swiper-slide review__photo _fit">
+                                      <div class="swiper-slide review-photos-slider__slide">
                                         <button type="button" class="photo-remove">
                                               <svg class="icon icon-remove ">
                                                 <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
                                               </svg>
-                                        </button><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img">
+                                        </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img"></a>
                                       </div>
-                                      <div class="swiper-slide review__photo _fit">
+                                      <div class="swiper-slide review-photos-slider__slide">
                                         <button type="button" class="photo-remove">
                                               <svg class="icon icon-remove ">
                                                 <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
                                               </svg>
-                                        </button><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img">
+                                        </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img"></a>
                                       </div>
                                     </div>
                                   </div>
+                              <!-- +swiper('review-photos-slider', false, false, false)-->
+                              <!-- 	- for (var m=0; m < 2; m++)-->
+                              <!-- 		- for (var i=0; i < 2; i++)-->
+                              <!-- 			.swiper-slide.review__photo._fit-->
+                              <!-- 				button(type="button").photo-remove-->
+                              <!-- 					+icon('remove')-->
+                              <!-- 				img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")-->
                             </div>
                           </div>
                           <div class="product-reviews__articles articles-product-reviews">
@@ -7287,7 +7294,8 @@
                                         <svg class="icon icon-context ">
                                           <use xlink:href="img/icons-svg/symbol/sprite.svg#context"></use>
                                         </svg>
-                                    <div class="context-review__drop"> <a href="#">Пожаловаться</a><a href="#">Удалить</a></div>
+                                    <div class="context-review__drop"><a href="#">Пожаловаться</a>
+                                    </div>
                                   </div>
                                 </header>
                                 <div class="review__body review__body--expanded">
@@ -7357,7 +7365,9 @@
                                   <div class="review__context context-review">
                                         <svg class="icon icon-context ">
                                           <use xlink:href="img/icons-svg/symbol/sprite.svg#context"></use>
-                                        </svg><a href="#" class="context-review__drop">Пожаловаться</a>
+                                        </svg>
+                                    <div class="context-review__drop"> <a href="#">Пожаловаться</a>
+                                    </div>
                                   </div>
                                 </header>
                                 <div class="review__body">
@@ -7420,7 +7430,9 @@
                                   <div class="review__context context-review">
                                         <svg class="icon icon-context ">
                                           <use xlink:href="img/icons-svg/symbol/sprite.svg#context"></use>
-                                        </svg><a href="#" class="context-review__drop">Пожаловаться</a>
+                                        </svg>
+                                    <div class="context-review__drop"> <a href="#">Пожаловаться</a>
+                                    </div>
                                   </div>
                                 </header>
                                 <div class="review__body">
@@ -7483,7 +7495,9 @@
                                   <div class="review__context context-review">
                                         <svg class="icon icon-context ">
                                           <use xlink:href="img/icons-svg/symbol/sprite.svg#context"></use>
-                                        </svg><a href="#" class="context-review__drop">Пожаловаться</a>
+                                        </svg>
+                                    <div class="context-review__drop"> <a href="#">Пожаловаться</a>
+                                    </div>
                                   </div>
                                 </header>
                                 <div class="review__body">
@@ -10625,16 +10639,16 @@
             <label class="form__label addreview__field">
               <div class="big-rating"> 
                     <div class="simple-rating">
-                      <input id="inp5" type="radio" name="rating" value="5">
-                      <label for="inp5"></label>
-                      <input id="inp4" type="radio" name="rating" value="4">
-                      <label for="inp4"></label>
-                      <input id="inp3" type="radio" checked name="rating" value="3">
-                      <label for="inp3"></label>
-                      <input id="inp2" type="radio" name="rating" value="2">
-                      <label for="inp2"></label>
-                      <input id="inp1" type="radio" name="rating" value="1">
-                      <label for="inp1"></label>
+                      <input id="rw5" type="radio" name="review-rating" value="5">
+                      <label for="rw5"></label>
+                      <input id="rw4" type="radio" name="review-rating" value="4">
+                      <label for="rw4"></label>
+                      <input id="rw3" type="radio" checked name="review-rating" value="3">
+                      <label for="rw3"></label>
+                      <input id="rw2" type="radio" name="review-rating" value="2">
+                      <label for="rw2"></label>
+                      <input id="rw1" type="radio" name="review-rating" value="1">
+                      <label for="rw1"></label>
                     </div>
               </div>
             </label>
@@ -10650,7 +10664,59 @@
             <label class="form__label addreview__field">
               <textarea type="text" name="question" placeholder="Что вам не понравилось в товаре?" class="form__area"></textarea>
             </label>
-            <div class="cards-more"><a href="#" class="cards-more__link">+ Прикрепить файл/фото</a></div>
+            <div class="form__row-title form__row-title--required">Файлы (5)</div>
+            <div class="addreview__field">
+              <div class="product-reviews__photos gallery">
+                <div class="slider-navs">
+                  <div class="slider-nav slider-nav--prev">
+                        <svg class="icon icon-chev-down ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                        </svg>
+                  </div>
+                  <div class="slider-nav slider-nav--next">
+                        <svg class="icon icon-chev-down ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                        </svg>
+                  </div>
+                </div>
+                    <div class="swiper-container swiper review-photos-slider">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide review-photos-slider__slide">
+                          <button type="button" class="photo-remove">
+                                <svg class="icon icon-remove ">
+                                  <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
+                                </svg>
+                          </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img"></a>
+                        </div>
+                        <div class="swiper-slide review-photos-slider__slide">
+                          <button type="button" class="photo-remove">
+                                <svg class="icon icon-remove ">
+                                  <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
+                                </svg>
+                          </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img"></a>
+                        </div>
+                        <div class="swiper-slide review-photos-slider__slide">
+                          <button type="button" class="photo-remove">
+                                <svg class="icon icon-remove ">
+                                  <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
+                                </svg>
+                          </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img"></a>
+                        </div>
+                        <div class="swiper-slide review-photos-slider__slide">
+                          <button type="button" class="photo-remove">
+                                <svg class="icon icon-remove ">
+                                  <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
+                                </svg>
+                          </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img"></a>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+            <div class="cards-more"><a href="#" data-review-photos class="cards-more__link">+ Прикрепить файл/фото</a></div>
+            <div class="addreview__field addreview__field--bottom"><a href="#" class="btn btn-lg btn-bonus">Оставить отзыв</a>
+              <div class="form__note">Нажимая “Оставить отзыв”, я даю согласие на <a href="#">обработку персональных данных</a></div>
+            </div>
           </form>
           <div class="addreview__product">
                 <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
@@ -10746,20 +10812,22 @@
       <div class="popup__title">Как вам товар?</div>
       <div class="popup__body">
         <p class="popup__text">Оставьте отзыв или оцените товаре</p>
-        <div class="big-rating"> 
-              <div class="simple-rating">
-                <input id="inp5" type="radio" name="rating" value="5">
-                <label for="inp5"></label>
-                <input id="inp4" type="radio" name="rating" value="4">
-                <label for="inp4"></label>
-                <input id="inp3" type="radio" checked name="rating" value="3">
-                <label for="inp3"></label>
-                <input id="inp2" type="radio" name="rating" value="2">
-                <label for="inp2"></label>
-                <input id="inp1" type="radio" name="rating" value="1">
-                <label for="inp1"></label>
-              </div>
-        </div>
+        <form action="#" class="form">
+          <div class="big-rating"> 
+                <div class="simple-rating">
+                  <input id="pop5" type="radio" name="popup-rating" value="5">
+                  <label for="pop5"></label>
+                  <input id="pop4" type="radio" name="popup-rating" value="4">
+                  <label for="pop4"></label>
+                  <input id="pop3" type="radio" checked name="popup-rating" value="3">
+                  <label for="pop3"></label>
+                  <input id="pop2" type="radio" name="popup-rating" value="2">
+                  <label for="pop2"></label>
+                  <input id="pop1" type="radio" name="popup-rating" value="1">
+                  <label for="pop1"></label>
+                </div>
+          </div>
+        </form>
         <div class="product-card product-card--mini">
           <div class="product-card__img-wrap"><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a></div>
           <div class="product-card__chars"><a href="#" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</a></div>
@@ -10874,11 +10942,23 @@
       <div class="popup__title">Файлы cookie</div>
       <div class="popup__body">
         <p class="popup__text popup-cookies__wide">На этом веб-сайте используются файлы cookie, которые обеспечивают работу всех функций для наиболее эффективной навигации по странице. Если вы не ...</p>
-        <p class="popup__text">Мы используем <a href="#">файлы cookie</a>, чтобы улучшить сайт для вас</p>
+        <p class="popup__text">Мы используем <a href="#">файлы cookie</a>, чтобы улучшить сайт для вас</p>
       </div>
       <footer class="popup__footer"><a href="/" class="popup__button">ЧИТАТЬ ПОЛНОСТЬЮ</a>
         <button type="button" class="popup__close">Ok</button>
       </footer>
+    </div>
+    <div class="popup popup-regard">
+      <button type="button" class="popup__close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="popup__title">Спасибо за внимание!</div>
+      <div class="popup__body">
+        <p class="popup__text">Мы проверим отзыв, на который вы пожаловались.</p>
+      </div>
+      <footer class="popup__footer"><a href="/" class="popup__button">ОК</a></footer>
     </div>
     <div class="map-fullscreen">
       <button type="button" class="map-fullscreen__close button-close">
@@ -10927,6 +11007,7 @@
     <script src="js/libs/multilevel-panel/multilevel-panel.js"></script>
     <script src="js/libs/accordion/vanilla-accordion.js"></script>
     <script src="js/libs/fstdropdown/fstdropdown.min.js"></script>
+    <script src="js/libs/baguetteBox/dist/baguetteBox.min.js"></script>
     <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
     
     

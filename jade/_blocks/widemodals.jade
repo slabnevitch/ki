@@ -1,4 +1,4 @@
-div(class=pageIndex=='product_026' ? "widemodal" : "widemodal modal-hide")
+div(class=pageIndex=='product_022' ? "widemodal" : "widemodal modal-hide")
 	button(type="button").widemodal__close.button-close
 		+icon('ctlg-close')
 	.widemodal__header
@@ -44,10 +44,11 @@ div(class=pageIndex=='product_026' ? "widemodal" : "widemodal modal-hide")
 							+swiper('review-photos-slider', false, false, false)
 								- for (var m=0; m < 2; m++)
 									- for (var i=0; i < 2; i++)
-										a(href="img/page-product-card/baguette.jpg").swiper-slide.review__photo._fit
+										.swiper-slide.review-photos-slider__slide
 											button(type="button").photo-remove
 												+icon('remove')
-											img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
+											a(href="img/page-product-card/baguette.jpg").review__photo._fit
+												img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
 				.cards-more
 					a(href="#" data-review-photos).cards-more__link + Прикрепить файл/фото
 

@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
+  <body class="popup-regard-visible">
     <aside class="multilevel-panel">
       <div class="multilevel-panel__label">Каталог</div>
       <div class="mob-catalog-screen">
@@ -7201,7 +7201,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="product-reviews__photos">
+                            <div class="product-reviews__photos gallery">
                               <div class="slider-navs">
                                 <div class="slider-nav slider-nav--prev">
                                       <svg class="icon icon-chev-down ">
@@ -7216,41 +7216,48 @@
                               </div>
                                   <div class="swiper-container swiper review-photos-slider">
                                     <div class="swiper-wrapper">
-                                      <div class="swiper-slide review__photo _fit">
+                                      <div class="swiper-slide review-photos-slider__slide">
                                         <button type="button" class="photo-remove">
                                               <svg class="icon icon-remove ">
                                                 <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
                                               </svg>
-                                        </button><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img">
+                                        </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img"></a>
                                       </div>
-                                      <div class="swiper-slide review__photo _fit">
+                                      <div class="swiper-slide review-photos-slider__slide">
                                         <button type="button" class="photo-remove">
                                               <svg class="icon icon-remove ">
                                                 <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
                                               </svg>
-                                        </button><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img">
+                                        </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img"></a>
                                       </div>
-                                      <div class="swiper-slide review__photo _fit">
+                                      <div class="swiper-slide review-photos-slider__slide">
                                         <button type="button" class="photo-remove">
                                               <svg class="icon icon-remove ">
                                                 <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
                                               </svg>
-                                        </button><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img">
+                                        </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img"></a>
                                       </div>
-                                      <div class="swiper-slide review__photo _fit">
+                                      <div class="swiper-slide review-photos-slider__slide">
                                         <button type="button" class="photo-remove">
                                               <svg class="icon icon-remove ">
                                                 <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
                                               </svg>
-                                        </button><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img">
+                                        </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img"></a>
                                       </div>
                                     </div>
                                   </div>
+                              <!-- +swiper('review-photos-slider', false, false, false)-->
+                              <!-- 	- for (var m=0; m < 2; m++)-->
+                              <!-- 		- for (var i=0; i < 2; i++)-->
+                              <!-- 			.swiper-slide.review__photo._fit-->
+                              <!-- 				button(type="button").photo-remove-->
+                              <!-- 					+icon('remove')-->
+                              <!-- 				img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")-->
                             </div>
                           </div>
                           <div class="product-reviews__articles articles-product-reviews">
                             <div class="product-reviews__single">
-                              <article class="review">
+                              <article class="review review-context-visible">
                                 <header class="review__header">
                                   <div class="person">
                                     <div class="person__top">
@@ -7277,7 +7284,8 @@
                                         <svg class="icon icon-context ">
                                           <use xlink:href="img/icons-svg/symbol/sprite.svg#context"></use>
                                         </svg>
-                                    <div class="context-review__drop"> <a href="#">Пожаловаться</a><a href="#">Удалить</a></div>
+                                    <div class="context-review__drop"><a href="#">Редактировать</a><a href="#">Удалить</a>
+                                    </div>
                                   </div>
                                 </header>
                                 <div class="review__body review__body--expanded">
@@ -7347,7 +7355,9 @@
                                   <div class="review__context context-review">
                                         <svg class="icon icon-context ">
                                           <use xlink:href="img/icons-svg/symbol/sprite.svg#context"></use>
-                                        </svg><a href="#" class="context-review__drop">Пожаловаться</a>
+                                        </svg>
+                                    <div class="context-review__drop"> <a href="#">Редактировать</a><a href="#">Удалить</a>
+                                    </div>
                                   </div>
                                 </header>
                                 <div class="review__body">
@@ -7410,7 +7420,9 @@
                                   <div class="review__context context-review">
                                         <svg class="icon icon-context ">
                                           <use xlink:href="img/icons-svg/symbol/sprite.svg#context"></use>
-                                        </svg><a href="#" class="context-review__drop">Пожаловаться</a>
+                                        </svg>
+                                    <div class="context-review__drop"> <a href="#">Редактировать</a><a href="#">Удалить</a>
+                                    </div>
                                   </div>
                                 </header>
                                 <div class="review__body">
@@ -7473,7 +7485,9 @@
                                   <div class="review__context context-review">
                                         <svg class="icon icon-context ">
                                           <use xlink:href="img/icons-svg/symbol/sprite.svg#context"></use>
-                                        </svg><a href="#" class="context-review__drop">Пожаловаться</a>
+                                        </svg>
+                                    <div class="context-review__drop"> <a href="#">Редактировать</a><a href="#">Удалить</a>
+                                    </div>
                                   </div>
                                 </header>
                                 <div class="review__body">
@@ -10591,7 +10605,7 @@
       </div>
       <button type="button" id="delivery-point-close" class="btn btn-lg btn-select">Выбрать</button>
     </div>
-    <div class="widemodal">
+    <div class="widemodal modal-hide">
       <button type="button" class="widemodal__close button-close">
             <svg class="icon icon-ctlg-close ">
               <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
@@ -10656,27 +10670,35 @@
                   </div>
                 </div>
                     <div class="swiper-container swiper review-photos-slider">
-                      <div class="swiper-wrapper"><a href="img/page-product-card/baguette.jpg" class="swiper-slide review__photo _fit">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide review-photos-slider__slide">
                           <button type="button" class="photo-remove">
                                 <svg class="icon icon-remove ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
                                 </svg>
-                          </button><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img"></a><a href="img/page-product-card/baguette.jpg" class="swiper-slide review__photo _fit">
+                          </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img"></a>
+                        </div>
+                        <div class="swiper-slide review-photos-slider__slide">
                           <button type="button" class="photo-remove">
                                 <svg class="icon icon-remove ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
                                 </svg>
-                          </button><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img"></a><a href="img/page-product-card/baguette.jpg" class="swiper-slide review__photo _fit">
+                          </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img"></a>
+                        </div>
+                        <div class="swiper-slide review-photos-slider__slide">
                           <button type="button" class="photo-remove">
                                 <svg class="icon icon-remove ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
                                 </svg>
-                          </button><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img"></a><a href="img/page-product-card/baguette.jpg" class="swiper-slide review__photo _fit">
+                          </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img"></a>
+                        </div>
+                        <div class="swiper-slide review-photos-slider__slide">
                           <button type="button" class="photo-remove">
                                 <svg class="icon icon-remove ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
                                 </svg>
-                          </button><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img"></a>
+                          </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img"></a>
+                        </div>
                       </div>
                     </div>
               </div>
@@ -10910,11 +10932,23 @@
       <div class="popup__title">Файлы cookie</div>
       <div class="popup__body">
         <p class="popup__text popup-cookies__wide">На этом веб-сайте используются файлы cookie, которые обеспечивают работу всех функций для наиболее эффективной навигации по странице. Если вы не ...</p>
-        <p class="popup__text">Мы используем <a href="#">файлы cookie</a>, чтобы улучшить сайт для вас</p>
+        <p class="popup__text">Мы используем <a href="#">файлы cookie</a>, чтобы улучшить сайт для вас</p>
       </div>
       <footer class="popup__footer"><a href="/" class="popup__button">ЧИТАТЬ ПОЛНОСТЬЮ</a>
         <button type="button" class="popup__close">Ok</button>
       </footer>
+    </div>
+    <div class="popup popup-regard">
+      <button type="button" class="popup__close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="popup__title">Спасибо за внимание!</div>
+      <div class="popup__body">
+        <p class="popup__text">Мы проверим отзыв, на который вы пожаловались.</p>
+      </div>
+      <footer class="popup__footer"><a href="/" class="popup__button">ОК</a></footer>
     </div>
     <div class="map-fullscreen">
       <button type="button" class="map-fullscreen__close button-close">

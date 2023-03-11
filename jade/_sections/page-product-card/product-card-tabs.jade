@@ -66,23 +66,32 @@
 												+icon('check')
 											span.light-label__caption С фото
 
-						.product-reviews__photos
+						.product-reviews__photos.gallery
 							.slider-navs
 								.slider-nav.slider-nav--prev
 									+icon('chev-down')
 								.slider-nav.slider-nav--next
 									+icon('chev-down')
+
 							+swiper('review-photos-slider', false, false, false)
 								- for (var m=0; m < 2; m++)
 									- for (var i=0; i < 2; i++)
-										.swiper-slide.review__photo._fit
+										.swiper-slide.review-photos-slider__slide
 											button(type="button").photo-remove
 												+icon('remove')
-											img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
+											a(href="img/page-product-card/baguette.jpg").review__photo._fit
+												img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
+							// +swiper('review-photos-slider', false, false, false)
+							// 	- for (var m=0; m < 2; m++)
+							// 		- for (var i=0; i < 2; i++)
+							// 			.swiper-slide.review__photo._fit
+							// 				button(type="button").photo-remove
+							// 					+icon('remove')
+							// 				img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
 
 					.product-reviews__articles.articles-product-reviews
 						.product-reviews__single
-							article.review
+							article(class=pageIndex=='product_026' ? "review review-context-visible" : "review")
 								header.review__header
 									.person
 										.person__top
@@ -98,9 +107,12 @@
 									
 									.review__context.context-review
 										+icon('context')
-										.context-review__drop 
-											a(href="#") Пожаловаться
-											a(href="#") Удалить
+										.context-review__drop
+											if pageIndex == 'product_026'
+												a(href="#") Редактировать
+												a(href="#") Удалить
+											else
+												a(href="#") Пожаловаться
 
 								.review__body.review__body--expanded
 									.review__div
@@ -157,7 +169,12 @@
 										
 										.review__context.context-review
 											+icon('context')
-											a(href="#").context-review__drop Пожаловаться
+											.context-review__drop 
+												if pageIndex == 'product_026'
+													a(href="#") Редактировать
+													a(href="#") Удалить
+												else
+													a(href="#") Пожаловаться
 
 									.review__body
 										.review__div

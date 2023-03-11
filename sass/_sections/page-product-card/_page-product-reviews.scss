@@ -218,12 +218,13 @@
 	    width: 20%;
 	    position: absolute;
 	    top: 0;
-	    right: 0;
+	    right: -1px;
 	    background-image: url(../img/gradient-line.svg);
 	    background-position: 0 0;
 	    background-repeat: repeat-y;
 	    background-size: 100%;
 	    z-index: 1;
+	    pointer-events: none;
 	}
 
 	.review__photo {
@@ -233,16 +234,18 @@
 
 		@include max-screen($xsss){
 			height: 0;
-			padding-bottom: 50%;
+			padding-bottom: 100%;
 		}
 
-		.photo-remove{
-			z-index: 2;
-			right: 11px;
-			top: 10px;
-			position: absolute;
-		}
-		// padding-bottom: 100%;
+	}
+}
+.review-photos-slider__slide{
+	position: relative;
+	.photo-remove{
+		z-index: 2;
+		right: 11px;
+		top: 10px;
+		position: absolute;
 	}
 }
 .product-reviews__single{

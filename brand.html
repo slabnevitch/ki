@@ -9432,17 +9432,180 @@
       </div>
       <button type="button" id="delivery-point-close" class="btn btn-lg btn-select">Выбрать</button>
     </div>
-    <div class="widemodal">
+    <div class="widemodal modal-hide">
       <button type="button" class="widemodal__close button-close">
             <svg class="icon icon-ctlg-close ">
               <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
             </svg>
       </button>
       <div class="widemodal__header">
-        <div class="wrapper pd-12"><a href="index.html" class="header__logo">
+        <div class="wrapper pd-12 widemodal__header-wrapper"><a href="index.html" class="header__logo">
             <picture>
               <source srcset="img/ki_logo.svg" media="(max-width: 959.98px)"><img src="img/logo.svg" alt="alt">
             </picture></a></div>
+        <div class="widemodal__top">
+          <div class="wrapper">
+            <div class="widemodal__title">Отзыв о товаре</div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper-smart addreview">
+        <div class="wrapper-flex addreview__flex">
+          <form action="#" class="form addreview__content wrapper-flex">
+            <div class="form__row-title form__row-title--required">Оцените вашу покупку *</div>
+            <label class="form__label addreview__field">
+              <div class="big-rating"> 
+                    <div class="simple-rating">
+                      <input id="rw5" type="radio" name="review-rating" value="5">
+                      <label for="rw5"></label>
+                      <input id="rw4" type="radio" name="review-rating" value="4">
+                      <label for="rw4"></label>
+                      <input id="rw3" type="radio" checked name="review-rating" value="3">
+                      <label for="rw3"></label>
+                      <input id="rw2" type="radio" name="review-rating" value="2">
+                      <label for="rw2"></label>
+                      <input id="rw1" type="radio" name="review-rating" value="1">
+                      <label for="rw1"></label>
+                    </div>
+              </div>
+            </label>
+            <div class="form__row-title form__row-title--required">Опыт использования</div>
+            <label class="form__label addreview__field">
+              <textarea type="text" name="question" placeholder="Опишите ваши впечатления" class="form__area"></textarea>
+            </label>
+            <div class="form__row-title form__row-title--required">Достоинства</div>
+            <label class="form__label addreview__field">
+              <textarea type="text" name="question" placeholder="Что вам понравилось в товаре?" class="form__area"></textarea>
+            </label>
+            <div class="form__row-title form__row-title--required">Недостатки</div>
+            <label class="form__label addreview__field">
+              <textarea type="text" name="question" placeholder="Что вам не понравилось в товаре?" class="form__area"></textarea>
+            </label>
+            <div class="form__row-title form__row-title--required">Файлы (5)</div>
+            <div class="addreview__field">
+              <div class="product-reviews__photos gallery">
+                <div class="slider-navs">
+                  <div class="slider-nav slider-nav--prev">
+                        <svg class="icon icon-chev-down ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                        </svg>
+                  </div>
+                  <div class="slider-nav slider-nav--next">
+                        <svg class="icon icon-chev-down ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-down"></use>
+                        </svg>
+                  </div>
+                </div>
+                    <div class="swiper-container swiper review-photos-slider">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide review-photos-slider__slide">
+                          <button type="button" class="photo-remove">
+                                <svg class="icon icon-remove ">
+                                  <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
+                                </svg>
+                          </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img"></a>
+                        </div>
+                        <div class="swiper-slide review-photos-slider__slide">
+                          <button type="button" class="photo-remove">
+                                <svg class="icon icon-remove ">
+                                  <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
+                                </svg>
+                          </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img"></a>
+                        </div>
+                        <div class="swiper-slide review-photos-slider__slide">
+                          <button type="button" class="photo-remove">
+                                <svg class="icon icon-remove ">
+                                  <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
+                                </svg>
+                          </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img"></a>
+                        </div>
+                        <div class="swiper-slide review-photos-slider__slide">
+                          <button type="button" class="photo-remove">
+                                <svg class="icon icon-remove ">
+                                  <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
+                                </svg>
+                          </button><a href="img/page-product-card/baguette.jpg" class="review__photo _fit"><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img"></a>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+            <div class="cards-more"><a href="#" data-review-photos class="cards-more__link">+ Прикрепить файл/фото</a></div>
+            <div class="addreview__field addreview__field--bottom"><a href="#" class="btn btn-lg btn-bonus">Оставить отзыв</a>
+              <div class="form__note">Нажимая “Оставить отзыв”, я даю согласие на <a href="#">обработку персональных данных</a></div>
+            </div>
+          </form>
+          <div class="addreview__product">
+                <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                  <div class="product-card__img-wrap"><a href="#" alt="Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/hits-section/1.jpg" alt="alt"></span></a>
+                  </div>
+                  <div class="product-card__price">
+                    <div class="product-card__actions"><a href="#" class="product-card__action">
+                            <svg class="icon icon-favourites ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#favourites"></use>
+                            </svg></a><a href="#" class="product-card__action active">
+                            <svg class="icon icon-compare ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
+                            </svg></a>
+                    </div><a href="#" class="product-price">14 729 ₽
+                      <div class="product-price-sale">18 411 ₽</div></a>
+                    <link itemprop="availability" href="https://schema.org/InStock">
+                    <meta itemprop="price" content="14 729 ₽">
+                    <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                      <div class="product-bonus__val">29</div>
+                          <svg class="icon icon-bonus ">
+                            <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
+                          </svg></a>
+                  </div><a href="#" itemprop="name" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
+                    <meta itemprop="model" content="Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861">
+                    <meta itemprop="sku" content="trinket-12345">
+                    <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
+                      <meta itemprop="name" content="ACME">
+                    </div></a><a href="#" class="product-card__description"> 
+                    <div class="product-card__description-row">Напряжение акк.: 12 В</div>
+                    <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
+                    <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
+                    <div class="product-card__description-row">Тип аккумулятора Li-Ion</div>
+                    <div class="product-card__description-row">Кол-во аккумуляторов: 2 шт.</div>
+                    <div class="product-card__description-row">Вес 1.2 кг</div></a>
+                  <div class="product-card__bottom">
+                    <div class="product-card__rating-wrap">
+                      <div class="product-card__rating">
+                        <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
+                          <meta itemprop="ratingValue" content="4.8">
+                          <meta itemprop="ratingCount" content="288">
+                          <meta itemprop="reviewCount" content="288">
+                          <meta itemprop="worstRating" content="0">
+                          <meta itemprop="bestRating" content="5">
+                        </div>
+                            <div class="crystal-rating">
+                              <div class="crystal-rating__body">
+                                <div class="crystal-rating__active"></div>
+                                <div class="crystal-rating__items">
+                                  <input value="1" type="radio" name="crystal">
+                                  <input value="2" type="radio" name="crystal">
+                                  <input value="3" type="radio" name="crystal">
+                                  <input value="4" type="radio" name="crystal">
+                                  <input value="5" type="radio" name="crystal">
+                                </div>
+                              </div>
+                              <div class="crystal-rating__value">4,5</div>
+                            </div>
+                      </div>
+                    </div><a href="#" class="btn btn-sm product-card__buy">Купить</a>
+                    <div class="product-card__info info-product-card">
+                      <div class="info-product-card__row">Артикул: 002266</div>
+                      <div class="info-product-card__row">
+                        <div class="info-product-card__aval">
+                          <div class="info-product-card__avalkey">В наличии</div><a href="#" data-modal-availability class="info-product-card__avalvalue"><span class="info-product-card__in">В </span>12 магазинах</a>
+                        </div>
+                      </div>
+                      <div class="info-product-card__row"><a href="#" class="info-product-card__oneclick">Купить в 1 клик</a></div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="popup popup-action">
@@ -9466,20 +9629,22 @@
       <div class="popup__title">Как вам товар?</div>
       <div class="popup__body">
         <p class="popup__text">Оставьте отзыв или оцените товаре</p>
-        <div class="big-rating"> 
-              <div class="simple-rating">
-                <input id="inp5" type="radio" name="rating" value="5">
-                <label for="inp5"></label>
-                <input id="inp4" type="radio" name="rating" value="4">
-                <label for="inp4"></label>
-                <input id="inp3" type="radio" checked name="rating" value="3">
-                <label for="inp3"></label>
-                <input id="inp2" type="radio" name="rating" value="2">
-                <label for="inp2"></label>
-                <input id="inp1" type="radio" name="rating" value="1">
-                <label for="inp1"></label>
-              </div>
-        </div>
+        <form action="#" class="form">
+          <div class="big-rating"> 
+                <div class="simple-rating">
+                  <input id="pop5" type="radio" name="popup-rating" value="5">
+                  <label for="pop5"></label>
+                  <input id="pop4" type="radio" name="popup-rating" value="4">
+                  <label for="pop4"></label>
+                  <input id="pop3" type="radio" checked name="popup-rating" value="3">
+                  <label for="pop3"></label>
+                  <input id="pop2" type="radio" name="popup-rating" value="2">
+                  <label for="pop2"></label>
+                  <input id="pop1" type="radio" name="popup-rating" value="1">
+                  <label for="pop1"></label>
+                </div>
+          </div>
+        </form>
         <div class="product-card product-card--mini">
           <div class="product-card__img-wrap"><a href="#" class="product-card__border"><span class="product-card__img"><img src="img/product-card/prod-sm.jpg" alt="alt"></span></a></div>
           <div class="product-card__chars"><a href="#" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</a></div>
@@ -9594,11 +9759,23 @@
       <div class="popup__title">Файлы cookie</div>
       <div class="popup__body">
         <p class="popup__text popup-cookies__wide">На этом веб-сайте используются файлы cookie, которые обеспечивают работу всех функций для наиболее эффективной навигации по странице. Если вы не ...</p>
-        <p class="popup__text">Мы используем <a href="#">файлы cookie</a>, чтобы улучшить сайт для вас</p>
+        <p class="popup__text">Мы используем <a href="#">файлы cookie</a>, чтобы улучшить сайт для вас</p>
       </div>
       <footer class="popup__footer"><a href="/" class="popup__button">ЧИТАТЬ ПОЛНОСТЬЮ</a>
         <button type="button" class="popup__close">Ok</button>
       </footer>
+    </div>
+    <div class="popup popup-regard">
+      <button type="button" class="popup__close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="popup__title">Спасибо за внимание!</div>
+      <div class="popup__body">
+        <p class="popup__text">Мы проверим отзыв, на который вы пожаловались.</p>
+      </div>
+      <footer class="popup__footer"><a href="/" class="popup__button">ОК</a></footer>
     </div>
     <div class="map-fullscreen">
       <button type="button" class="map-fullscreen__close button-close">
@@ -9647,6 +9824,7 @@
     <script src="js/libs/multilevel-panel/multilevel-panel.js"></script>
     <script src="js/libs/accordion/vanilla-accordion.js"></script>
     <script src="js/libs/fstdropdown/fstdropdown.min.js"></script>
+    <script src="js/libs/baguetteBox/dist/baguetteBox.min.js"></script>
     <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
     
     

@@ -8,6 +8,44 @@
 	@include max-screen($xs){
 		padding: 16px;
 	}
+
+	&.review-context-visible{
+		.context-review__drop {
+			visibility: visible;
+			opacity: 1;
+
+			@include max-screen($md){
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				right: auto;
+				top: auto;
+				width: 100%;
+				z-index: 14;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				text-align: center;
+				background-image: none;
+				background-color: #fff;
+			}
+
+			&:before{
+				@include max-screen($md){
+					display: none;
+					
+				}
+			}
+
+			a{
+				@include max-screen($md){
+					font-weight: 700;
+					color: $text;
+					text-transform: uppercase;
+					text-decoration: none;
+				}
+			}
+		}
+	}
 }
 .review__header {
 	display: flex;
@@ -74,12 +112,14 @@
 		font-size: 22px;
 		color: #A9A9A9;
 	}
-
-	&:hover, &:active, &:focus{
-		.context-review__drop {
-			visibility: visible;
-			opacity: 1;
+	@media (any-hover: hover) { //только для устройств с ховером
+		&:hover, &:active, &:focus{
+			.context-review__drop {
+				visibility: visible;
+				opacity: 1;
+			}
 		}
+
 	}
 	
 }
@@ -118,7 +158,6 @@
 
 		&:not(:last-child){
 			margin-bottom: 12px;
-			
 		}
 	}
 }

@@ -4452,7 +4452,7 @@ input.range__input {
   z-index: 11;
 }
 @media only screen and (max-width: 959.98px) {
-  .popup-action-visible .body-cover, .popup-product-added-visible .body-cover, .popup-product-favourite-visible .body-cover, .popup-review-visible .body-cover, .popup-cookies-visible .body-cover {
+  .popup-action-visible .body-cover, .popup-product-added-visible .body-cover, .popup-product-favourite-visible .body-cover, .popup-review-visible .body-cover, .popup-regard-visible .body-cover, .popup-cookies-visible .body-cover {
     visibility: visible;
     opacity: 1;
   }
@@ -7815,6 +7815,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.popup-regard-visible .popup-regard {
+  display: block;
+}
+
 .popup-action-visible .popup-action {
   display: block;
 }
@@ -8889,6 +8893,39 @@ h1, h2, h3, h4, h5, h6 {
     padding: 16px;
   }
 }
+.review.review-context-visible .context-review__drop {
+  visibility: visible;
+  opacity: 1;
+}
+@media only screen and (max-width: 959.98px) {
+  .review.review-context-visible .context-review__drop {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    top: auto;
+    width: 100%;
+    z-index: 14;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-image: none;
+    background-color: #fff;
+  }
+}
+@media only screen and (max-width: 959.98px) {
+  .review.review-context-visible .context-review__drop:before {
+    display: none;
+  }
+}
+@media only screen and (max-width: 959.98px) {
+  .review.review-context-visible .context-review__drop a {
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
 
 .review__header {
   display: -ms-flexbox;
@@ -9003,9 +9040,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 22px;
   color: #A9A9A9;
 }
-.review__context:hover .context-review__drop, .review__context:active .context-review__drop, .review__context:focus .context-review__drop {
-  visibility: visible;
-  opacity: 1;
+@media (any-hover: hover) {
+  .review__context:hover .context-review__drop, .review__context:active .context-review__drop, .review__context:focus .context-review__drop {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .context-review__drop {
@@ -10634,6 +10673,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header__logo {
+  display: block;
   max-width: 144px;
   -ms-flex: 0 0 144px;
   flex: 0 0 144px;
@@ -15494,12 +15534,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 20%;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -1px;
   background-image: url(../img/gradient-line.svg);
   background-position: 0 0;
   background-repeat: repeat-y;
   background-size: 100%;
   z-index: 1;
+  pointer-events: none;
 }
 .review-photos-slider .review__photo {
   display: block;
@@ -15509,10 +15550,14 @@ h1, h2, h3, h4, h5, h6 {
 @media only screen and (max-width: 375px) {
   .review-photos-slider .review__photo {
     height: 0;
-    padding-bottom: 50%;
+    padding-bottom: 100%;
   }
 }
-.review-photos-slider .review__photo .photo-remove {
+
+.review-photos-slider__slide {
+  position: relative;
+}
+.review-photos-slider__slide .photo-remove {
   z-index: 2;
   right: 11px;
   top: 10px;
