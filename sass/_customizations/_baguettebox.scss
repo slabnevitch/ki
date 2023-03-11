@@ -1,5 +1,5 @@
 .baguetteBox-button{
-	background-color: transparent;
+	// background-color: transparent;
 	background-position: center;
 	background-repeat: no-repeat;
 	// background-size: contain;
@@ -15,7 +15,7 @@
 	}
 
 	&:hover, &:active, &:focus{
-		background-color: transparent;
+		// background-color: transparent;
 		
 	}
 	
@@ -29,4 +29,8 @@
 }
 .baguetteBox-button#next-button {
     right: prc(200, 1200);
+}
+#baguetteBox-overlay .full-image figcaption{
+	bottom: 50px;
+	background-color: transparent;
 }

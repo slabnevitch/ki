@@ -4093,6 +4093,15 @@ textarea.input {
   margin-bottom: 0;
 }
 
+.form__note {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  color: #A9A9A9;
+}
+.form__note a {
+  color: #A9A9A9;
+}
+
 .form__hidden-note {
   display: block;
   margin-top: 8px;
@@ -4340,7 +4349,6 @@ input.range__input {
 }
 
 .baguetteBox-button {
-  background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -4353,9 +4361,6 @@ input.range__input {
 .baguetteBox-button[aria-label=Close] {
   background-image: url("../img/icons-svg/ctlg-close-gray.svg");
 }
-.baguetteBox-button:hover, .baguetteBox-button:active, .baguetteBox-button:focus {
-  background-color: transparent;
-}
 .baguetteBox-button svg {
   display: none;
 }
@@ -4366,6 +4371,11 @@ input.range__input {
 
 .baguetteBox-button#next-button {
   right: 16.6666666667%;
+}
+
+#baguetteBox-overlay .full-image figcaption {
+  bottom: 50px;
+  background-color: transparent;
 }
 
 .counter {
@@ -9455,8 +9465,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .side-modal .form .form__note {
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
   color: #A9A9A9;
 }
 .side-modal .form .form__note a {
@@ -9925,6 +9935,9 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   visibility: hidden;
 }
+.widemodal .form__note {
+  position: static;
+}
 
 .widemodal__close {
   position: absolute;
@@ -10048,7 +10061,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 15px;
   }
 }
-.addreview__content .cards-more {
+.addreview__content .cards-more,
+.addreview__content .addreview__field--bottom {
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 8px;
@@ -10058,14 +10072,19 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px;
 }
 @media screen and (max-width: 959.98px) {
-  .addreview__content .cards-more {
+  .addreview__content .cards-more,
+  .addreview__content .addreview__field--bottom {
     width: calc(100% - 16px);
   }
 }
 @media screen and (max-width: 959.98px) {
-  .addreview__content .cards-more {
+  .addreview__content .cards-more,
+  .addreview__content .addreview__field--bottom {
     margin-left: calc(0% + 8px);
   }
+}
+.addreview__content .cards-more {
+  margin-bottom: 31px;
 }
 
 .addreview__field {
@@ -10118,7 +10137,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .addreview__field .product-reviews__photos {
-  margin-bottom: 0;
+  margin-bottom: 20px;
+}
+.addreview__field .btn-bonus {
+  margin-bottom: 17px;
 }
 
 .addreview__product {
@@ -15480,6 +15502,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 .review-photos-slider .review__photo {
+  display: block;
+  width: 100%;
   height: 132px;
 }
 @media only screen and (max-width: 375px) {

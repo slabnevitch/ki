@@ -227,6 +227,8 @@
 	}
 
 	.review__photo {
+		display: block;
+		width: 100%;
 		height: 132px;
 
 		@include max-screen($xsss){

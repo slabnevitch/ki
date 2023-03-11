@@ -532,12 +532,13 @@
 
 		//---------------review-photos-slider
 		if(document.querySelector('.review-photos-slider') !== null){
-			const screenProductSwiper = new Swiper('.review-photos-slider', {
+			var reviewPhotosSwiper = new Swiper('.review-photos-slider', {
 				observer: true,
 				observeParents: true,
 				slidesPerView: 2,
 				spaceBetween: 8,
 				loop: true,
+				watchSlidesProgress: true,//предотвращает прокрутку слайдов при клике на ссылку внутри слайда
 				navigation: {
 					nextEl: '.product-reviews__photos .slider-nav--next',
 					prevEl: '.product-reviews__photos .slider-nav--prev'
@@ -559,7 +560,16 @@
 
 		// baguetteBox
 			if(document.querySelector('.gallery') !== null){
-				baguetteBox.run('.gallery');
+				baguetteBox.run('.gallery', {
+					 captions: function(element) {
+				        return'<button type="button" class="photo-remove">'+
+                                '<svg class="icon icon-remove ">'+
+                                  '<use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>'+
+                                '</svg>'+
+                          '</button>';
+				    }
+					
+				});
 			}
 		// END baguetteBox
 

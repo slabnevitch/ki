@@ -207,6 +207,16 @@
 
 	}
 }
+.form__note {
+	font-size: rem(10);
+	line-height: rem(12);;
+	color: #A9A9A9;
+
+	a{
+
+		color: #A9A9A9;
+	}
+}
 .form__hidden-note{
 	display: block;
 	margin-top: 8px;

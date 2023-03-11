@@ -15,6 +15,9 @@
 		opacity: 0;
 		visibility: hidden;
 	}
+	.form__note{
+		position: static;
+	}
 }
 .widemodal__close {
 	position: absolute;
@@ -112,13 +115,17 @@
 		}
 		// outline: 1px solid;
 	}
-	.cards-more {
+	.cards-more,
+	.addreview__field--bottom {
 		@include col();
 		@include size(8);
 		@include size-md(12);
 		@include shift-left(4);
 		@include shift-md-left(0);
 		margin-bottom: 10px;
+	}
+	.cards-more{
+		margin-bottom: 31px;
 	}
 }
 .form__row-title--required {}
@@ -171,7 +178,10 @@
 		}
 	}
 	.product-reviews__photos{
-		margin-bottom: 0;
+		margin-bottom: 20px;
+	}
+	.btn-bonus{
+		margin-bottom: 17px;
 	}
 }
 .form__area {}
