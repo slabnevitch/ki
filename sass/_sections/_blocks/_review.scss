@@ -46,6 +46,16 @@
 			}
 		}
 	}
+	&--to-answer{
+		.review__answer{
+			&:not(.review__answer--useful){
+				display: none;
+			}
+			&--useful{
+				display: inline;
+			}
+		}
+	}
 }
 .review__header {
 	display: flex;
@@ -255,8 +265,9 @@
 		font-size: rem(13.33);
 	}
 }
-.review__collapse {
-	@include 	but-null;
+.review__collapse,
+.review__hide-comments {
+	@include but-null;
 	text-decoration-line: underline;
 	color: #A9A9A9;	
 	cursor: pointer;	
@@ -269,6 +280,10 @@
 		line-height: 20px;
 	}
 }
+.review__hide-comments {
+	font-size: rem(12);
+	line-height: rem(20);
+}
 .review__options {
 	display: flex;
 	align-items: flex-end;	
@@ -278,6 +293,10 @@
 
 	@include max-screen($xss){
 		margin-right: auto;
+	}
+
+	&--useful{
+		display: none;
 	}
 }
 .review__comments {
@@ -297,5 +316,7 @@
 .review__dislike {
 	align-items: center;
 }
-.icon-unlike {}
+.review-form{
+	margin-top: 40px;
+}
 /*--------------------END review----------------------*/ 

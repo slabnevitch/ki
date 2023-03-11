@@ -42,7 +42,7 @@
 .graphs-product-reviews__row {
 	display: flex;
 	align-items: center;
-	margin-bottom: 5px;
+	margin-bottom: 4px;
 }
 .graphs-product-reviews__stars {
 	flex-shrink: 0;
@@ -54,7 +54,7 @@
 	// outline: 1px solid;
 }
 .graphs-product-reviews__star {
-	width: 10px;
+	width: 8px;
 	height: 11px;
 
 	color: $yellow;
@@ -73,6 +73,7 @@
 	    text-transform: none;
 	    -webkit-font-smoothing: antialiased;
 	    -moz-osx-font-smoothing: grayscale;
+	    font-size: 12px;
     }
     &:after{
     	content: '';
@@ -81,7 +82,7 @@
 .graphs-product-reviews__bar {
 	flex: 1 1 auto;
 	height: 5px;
-	margin-top: 5px;
+	margin-top: 9px;
 	position: relative;
 	background-color: rgba($text, .1);
 

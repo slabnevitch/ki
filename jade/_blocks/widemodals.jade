@@ -15,25 +15,25 @@ div(class=pageIndex=='product_022' ? "widemodal" : "widemodal modal-hide")
 	.wrapper-smart.addreview
 		.wrapper-flex.addreview__flex
 			form(action="#" class="form").addreview__content.wrapper-flex
-				.form__row-title.form__row-title--required Оцените вашу покупку *
+				.addreview__label.form__row-title.form__row-title--required Оцените вашу покупку *
 				label.form__label.addreview__field
 					.big-rating 
 						+simpleRating(3, 'review-rating', 'rw')
 				
-				.form__row-title.form__row-title--required Опыт использования
+				.addreview__label.form__row-title.form__row-title--required Опыт использования
 				label.form__label.addreview__field
 					textarea.form__area(type='text' name='question' placeholder="Опишите ваши впечатления")
 				
-				.form__row-title.form__row-title--required Достоинства
+				.addreview__label.form__row-title.form__row-title--required Достоинства
 				label.form__label.addreview__field
 					textarea.form__area(type='text' name='question' placeholder="Что вам понравилось в товаре?")
 
-				.form__row-title.form__row-title--required Недостатки
+				.addreview__label.form__row-title.form__row-title--required Недостатки
 				label.form__label.addreview__field
 					textarea.form__area(type='text' name='question' placeholder="Что вам не понравилось в товаре?")
 				
 
-				.form__row-title.form__row-title--required Файлы (5)
+				.addreview__label.form__row-title.form__row-title--required Файлы (5)
 				.addreview__field
 					.product-reviews__photos.gallery
 							.slider-navs
@@ -60,3 +60,147 @@ div(class=pageIndex=='product_022' ? "widemodal" : "widemodal modal-hide")
 				- cards = [{billet: '', price: '14 729 ₽', sale: '18 411 ₽', sbers: '29', tilte: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', aval: '12 магазинах', iconActive: '1'},];
 				
 				+productCard(cards, 'hits-section/')
+
+div(class=pageIndex=='product_027' ? "widemodal widemodal-answers" : "widemodal widemodal-answers modal-hide")
+	button(type="button").widemodal__close.button-close
+		+icon('ctlg-close')
+	.widemodal__header
+		.wrapper.pd-12.widemodal__header-wrapper
+			a(href="index.html").header__logo
+				picture
+					source(srcset='img/ki_logo.svg' media='(max-width: 959.98px)')
+					img(src='img/logo.svg' alt='alt')
+		
+		.widemodal__top
+			.wrapper
+				.widemodal__title Отзыв о товаре
+
+	.wrapper-smart.addreview
+		.wrapper-flex.addreview__flex
+			.addreview__content
+				.product-reviews__single
+					article.review.review--to-answer
+						header.review__header
+							.person
+								.person__top
+									.person__portrait
+										img(src="img/page-product-card/worker.jpg" alt="alt")
+									.person__info
+										.person__name Иванов Иван
+										.person__date 12 декабря 2021
+								.person__rating
+									.person__rating-wrap
+											+starRating(2)
+									.person__rating-mark Плохой товар
+							
+							.review__context.context-review
+								+icon('context')
+								.context-review__drop
+									if pageIndex == 'product_026'
+										a(href="#") Редактировать
+										a(href="#") Удалить
+									else
+										a(href="#") Пожаловаться
+
+						.review__body
+							.review__div
+								.review__title Опыт использования
+								p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+							.review__div
+								.review__title Достоинства
+								p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+
+							.review__div
+								.review__title Недостатки
+								p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+								p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+
+						footer.review__footer
+							.review__actions
+								button(type="button").review__collapse Свернуть
+								.review__options
+									a(href="#").review__answer Ответить
+									a(href="#").review__answer.review__answer--useful Отзыв был полезен?
+									
+									a(href="#").review__comments.review__option
+										+icon('chat')
+										.review__comments-count 1
+									a(href="#").review__like.review__option.active
+										+icon('like')
+										.review__like-count 1
+									a(href="#").review__dislike.review__option
+										+icon('unlike')
+										.review__dislike-count 0
+
+						form.form.review-form(action='#')
+							.form__row
+								.form__row-title.form__row-title--required Поделитесь своим мнением
+								label.form__label
+									input.form__input(type='text' name='name' placeholder="Добавьте комментарий")
+				
+				.product-reviews__comments.comments-product-reviews
+					.comments-product-reviews__header
+						.comments-product-reviews__title Комментарии
+						.comments-product-reviews__count 5
+					
+					article.review
+						header.review__header
+							.person
+								.person__top
+									.person__portrait
+										img(src="img/page-product-card/worker.jpg" alt="alt")
+									.person__info
+										.person__name Иванов Иван
+										.person__date 12 декабря 2021
+							
+							.review__context.context-review
+								+icon('context')
+								.context-review__drop 
+									if pageIndex == 'product_026'
+										a(href="#") Редактировать
+										a(href="#") Удалить
+									else
+										a(href="#") Пожаловаться
+
+						.review__body
+							.review__div
+								p.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+
+						footer.review__footer
+							.review__actions
+								button(type="button").review__hide-comments Скрыть комментарий
+								.review__options
+									a(href="#").review__comments.review__option
+										+icon('chat')
+										.review__comments-count 1
+									a(href="#").review__like.review__option.active
+										+icon('like')
+										.review__like-count 1
+									a(href="#").review__dislike.review__option
+										+icon('unlike')
+										.review__dislike-count 0
+			.addreview__product
+					- cards = [{billet: '', price: '14 729 ₽', sale: '18 411 ₽', sbers: '29', tilte: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', aval: '12 магазинах', iconActive: '1'},];
+					
+					+productCard(cards, 'hits-section/')
+
+					.product-reviews__top
+						.product-reviews__stats
+							.product-reviews__rating.rating-product-reviews
+								.rating-product-reviews__current 4,6
+								.rating-product-reviews__overal /5
+							
+							.product-reviews__marks
+								.product-reviews__mark 6 отзывов
+								.product-reviews__mark 7 оценок
+
+						.product-reviews__graphs.graphs-product-reviews
+							- var stars = [{count: 5, progress: 85}, {count: 4, progress: 0}, {count: 3, progress: 0}, {count: 2, progress: 28}, {count: 1, progress: 0}];
+								each star, i in stars
+									.graphs-product-reviews__row
+										.graphs-product-reviews__stars
+											- for (var n=0; n < star.count; n++)
+												.graphs-product-reviews__star
+										.graphs-product-reviews__bar
+											.graphs-product-reviews__progress(style=star.progress > 0 ?"width:" + star.progress + "%;" : false)
