@@ -221,6 +221,11 @@
 			}
 		}
 	}
+	&.dime-modal{
+		.dime-modal-visible &{
+			transform: translateX(0);
+		}
+	}
 	&.covered-modal{
 		&:after{
 			content: '';
@@ -304,6 +309,10 @@
 			font-size: 12px;
 			line-height: 15px;
 			color: $text-l;
+		}
+		.form__area{
+			border: 1px solid $border;
+			background-color: transparent;
 		}
 	}
 	.form__row {

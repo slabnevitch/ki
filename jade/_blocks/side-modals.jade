@@ -453,3 +453,27 @@
 							.address-list__shedule Пн-Вс: 8.00-20.00
 
 	button(type="button")#delivery-point-close.btn.btn-lg.btn-select Выбрать
+
+.side-modal.dime-modal(data-visible-class="dime-modal-visible")
+	button(type="button").side-modal__close.button-close
+		+icon('ctlg-close')
+	
+	.side-modal__inner
+		.side-modal__title Нашли дешевле
+		
+		.side-modal__text Пришлите нам ссылку на этот товар в другом магазине с более низкой ценой, и мы сделаем вам скидку
+
+		form.form(action='#')
+			.form__row
+				.form__row-title.form__row-title--required Имя*
+				label.form__label
+					input.form__input(type='text' name='name')
+			.form__row
+				.form__row-title.form__row-title--required Контактный телефон*
+				label.form__label
+					input.form__input(type='text' name='name')
+			.form__row
+				label.form__label
+					textarea.form__area(type='text' name='question' placeholder="Опишите ваши впечатления")
+
+			button(type="submit").btn.btn-lg.btn-order Отправить

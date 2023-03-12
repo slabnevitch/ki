@@ -7773,6 +7773,37 @@
       </div>
       <button type="button" id="delivery-point-close" class="btn btn-lg btn-select">Выбрать</button>
     </div>
+    <div data-visible-class="dime-modal-visible" class="side-modal dime-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Нашли дешевле</div>
+        <div class="side-modal__text">Пришлите нам ссылку на этот товар в другом магазине с более низкой ценой, и мы сделаем вам скидку</div>
+        <form action="#" class="form">
+          <div class="form__row">
+            <div class="form__row-title form__row-title--required">Имя*</div>
+            <label class="form__label">
+              <input type="text" name="name" class="form__input">
+            </label>
+          </div>
+          <div class="form__row">
+            <div class="form__row-title form__row-title--required">Контактный телефон*</div>
+            <label class="form__label">
+              <input type="text" name="name" class="form__input">
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="form__label">
+              <textarea type="text" name="question" placeholder="Опишите ваши впечатления" class="form__area"></textarea>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-lg btn-order">Отправить</button>
+        </form>
+      </div>
+    </div>
     <div class="widemodal modal-hide">
       <button type="button" class="widemodal__close button-close">
             <svg class="icon icon-ctlg-close ">
@@ -7970,7 +8001,7 @@
         <div class="wrapper-flex addreview__flex">
           <div class="addreview__content">
             <div class="product-reviews__single">
-              <article class="review">
+              <article class="review review--to-answer">
                 <header class="review__header">
                   <div class="person">
                     <div class="person__top">
@@ -8018,8 +8049,8 @@
                 </div>
                 <footer class="review__footer">
                   <div class="review__actions">
-                    <button type="button" class="review__collapse">Свернуть</button>
-                    <div class="review__options"><a href="#" class="review__answer">Ответить</a><a href="#" class="review__comments review__option">
+                    <button type="button" class="review__collapse">Читать полностью</button>
+                    <div class="review__options"><a href="#" class="review__answer">Ответить</a><a href="#" class="review__answer review__answer--useful">Отзыв был полезен?</a><a href="#" class="review__comments review__option">
                             <svg class="icon icon-chat ">
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#chat"></use>
                             </svg>
@@ -8042,6 +8073,252 @@
                     </label>
                   </div>
                 </form>
+              </article>
+            </div>
+            <div class="product-reviews__comments comments-product-reviews">
+              <div class="comments-product-reviews__header">
+                <div class="comments-product-reviews__title">Комментарии</div>
+                <div class="comments-product-reviews__count">5</div>
+              </div>
+              <article class="review">
+                <header class="review__header">
+                  <div class="person">
+                    <div class="person__top">
+                      <div class="person__portrait"><img src="img/page-product-card/worker.jpg" alt="alt"></div>
+                      <div class="person__info">
+                        <div class="person__name">Иванов Иван</div>
+                        <div class="person__date">12 декабря 2021</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review__context context-review">
+                        <svg class="icon icon-context ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#context"></use>
+                        </svg>
+                    <div class="context-review__drop"> <a href="#">Пожаловаться</a>
+                    </div>
+                  </div>
+                </header>
+                <div class="review__body review__body--expanded">
+                  <div class="review__div">
+                    <p class="Lorem">ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                  </div>
+                </div>
+                <footer class="review__footer">
+                  <div class="review__actions">
+                    <button type="button" class="review__hide-comments">Скрыть комментарий</button>
+                    <div class="review__options"><a href="#" class="review__comments review__option">
+                            <svg class="icon icon-chat ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chat"></use>
+                            </svg>
+                        <div class="review__comments-count">1</div></a><a href="#" class="review__like review__option active">
+                            <svg class="icon icon-like ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#like"></use>
+                            </svg>
+                        <div class="review__like-count">1</div></a><a href="#" class="review__dislike review__option">
+                            <svg class="icon icon-unlike ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#unlike"></use>
+                            </svg>
+                        <div class="review__dislike-count">0</div></a></div>
+                  </div>
+                </footer>
+                <article class="review review--comment">
+                  <header class="review__header">
+                    <div class="person">
+                      <div class="person__top">
+                        <div class="person__portrait"><img src="img/page-product-card/worker.jpg" alt="alt"></div>
+                        <div class="person__info">
+                          <div class="person__name">Иванов Иван</div>
+                          <div class="person__date">12 декабря 2021</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="review__context context-review">
+                          <svg class="icon icon-context ">
+                            <use xlink:href="img/icons-svg/symbol/sprite.svg#context"></use>
+                          </svg>
+                      <div class="context-review__drop"> <a href="#">Пожаловаться</a>
+                      </div>
+                    </div>
+                  </header>
+                  <div class="review__body review__body--expanded">
+                    <div class="review__div">
+                      <p class="Lorem">ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                    </div>
+                  </div>
+                  <footer class="review__footer">
+                    <div class="review__actions">
+                      <div class="review__options"><a href="#" class="review__comments review__option">
+                              <svg class="icon icon-chat ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#chat"></use>
+                              </svg>
+                          <div class="review__comments-count">1</div></a><a href="#" class="review__like review__option active">
+                              <svg class="icon icon-like ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#like"></use>
+                              </svg>
+                          <div class="review__like-count">1</div></a><a href="#" class="review__dislike review__option">
+                              <svg class="icon icon-unlike ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#unlike"></use>
+                              </svg>
+                          <div class="review__dislike-count">0</div></a></div>
+                    </div>
+                  </footer>
+                </article>
+                <article class="review review--reply">
+                  <header class="review__header">
+                    <div class="person">
+                      <div class="person__top">
+                        <div class="person__portrait"><img src="img/page-product-card/worker.jpg" alt="alt"></div>
+                        <div class="person__info">
+                          <div class="person__name">Ник</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="review__context context-review">
+                          <svg class="icon icon-context ">
+                            <use xlink:href="img/icons-svg/symbol/sprite.svg#context"></use>
+                          </svg>
+                      <div class="context-review__drop"> <a href="#">Пожаловаться</a>
+                      </div>
+                    </div>
+                  </header>
+                  <form action="#" class="form review-form">
+                    <div class="form__row">
+                      <label class="form__label">
+                        <input type="text" name="name" placeholder="Ник" class="form__input">
+                      </label>
+                    </div>
+                  </form>
+                </article>
+              </article>
+              <article class="review">
+                <header class="review__header">
+                  <div class="person">
+                    <div class="person__top">
+                      <div class="person__portrait"><img src="img/page-product-card/worker.jpg" alt="alt"></div>
+                      <div class="person__info">
+                        <div class="person__name">Иванов Иван</div>
+                        <div class="person__date">12 декабря 2021</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review__context context-review">
+                        <svg class="icon icon-context ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#context"></use>
+                        </svg>
+                    <div class="context-review__drop"> <a href="#">Пожаловаться</a>
+                    </div>
+                  </div>
+                </header>
+                <div class="review__body review__body--expanded">
+                  <div class="review__div">
+                    <p class="Lorem">ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                  </div>
+                </div>
+                <footer class="review__footer">
+                  <div class="review__actions">
+                    <button type="button" class="review__hide-comments">1 комментарий</button>
+                    <div class="review__options"><a href="#" class="review__comments review__option">
+                            <svg class="icon icon-chat ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chat"></use>
+                            </svg>
+                        <div class="review__comments-count">1</div></a><a href="#" class="review__like review__option active">
+                            <svg class="icon icon-like ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#like"></use>
+                            </svg>
+                        <div class="review__like-count">1</div></a><a href="#" class="review__dislike review__option">
+                            <svg class="icon icon-unlike ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#unlike"></use>
+                            </svg>
+                        <div class="review__dislike-count">0</div></a></div>
+                  </div>
+                </footer>
+              </article>
+              <article class="review">
+                <header class="review__header">
+                  <div class="person">
+                    <div class="person__top">
+                      <div class="person__portrait"><img src="img/page-product-card/worker.jpg" alt="alt"></div>
+                      <div class="person__info">
+                        <div class="person__name">Иванов Иван</div>
+                        <div class="person__date">12 декабря 2021</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review__context context-review">
+                        <svg class="icon icon-context ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#context"></use>
+                        </svg>
+                    <div class="context-review__drop"> <a href="#">Пожаловаться</a>
+                    </div>
+                  </div>
+                </header>
+                <div class="review__body review__body--expanded">
+                  <div class="review__div">
+                    <p class="Lorem">ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                  </div>
+                </div>
+                <footer class="review__footer">
+                  <div class="review__actions">
+                    <button type="button" class="review__hide-comments">1 комментарий</button>
+                    <div class="review__options"><a href="#" class="review__comments review__option">
+                            <svg class="icon icon-chat ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chat"></use>
+                            </svg>
+                        <div class="review__comments-count">1</div></a><a href="#" class="review__like review__option active">
+                            <svg class="icon icon-like ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#like"></use>
+                            </svg>
+                        <div class="review__like-count">1</div></a><a href="#" class="review__dislike review__option">
+                            <svg class="icon icon-unlike ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#unlike"></use>
+                            </svg>
+                        <div class="review__dislike-count">0</div></a></div>
+                  </div>
+                </footer>
+              </article>
+              <article class="review">
+                <header class="review__header">
+                  <div class="person">
+                    <div class="person__top">
+                      <div class="person__portrait"><img src="img/page-product-card/worker.jpg" alt="alt"></div>
+                      <div class="person__info">
+                        <div class="person__name">Иванов Иван</div>
+                        <div class="person__date">12 декабря 2021</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review__context context-review">
+                        <svg class="icon icon-context ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#context"></use>
+                        </svg>
+                    <div class="context-review__drop"> <a href="#">Пожаловаться</a>
+                    </div>
+                  </div>
+                </header>
+                <div class="review__body review__body--expanded">
+                  <div class="review__div">
+                    <p class="Lorem">ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                  </div>
+                </div>
+                <footer class="review__footer">
+                  <div class="review__actions">
+                    <button type="button" class="review__hide-comments">1 комментарий</button>
+                    <div class="review__options"><a href="#" class="review__comments review__option">
+                            <svg class="icon icon-chat ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chat"></use>
+                            </svg>
+                        <div class="review__comments-count">1</div></a><a href="#" class="review__like review__option active">
+                            <svg class="icon icon-like ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#like"></use>
+                            </svg>
+                        <div class="review__like-count">1</div></a><a href="#" class="review__dislike review__option">
+                            <svg class="icon icon-unlike ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#unlike"></use>
+                            </svg>
+                        <div class="review__dislike-count">0</div></a></div>
+                  </div>
+                </footer>
               </article>
             </div>
           </div>

@@ -13,9 +13,14 @@ div(class=pageIndex=='product_015' ? "wrapper-smart page-product__top page-produ
 							a(href="#").std-link 4 отзыва
 						
 						.product-info__col
-							.product-info__vailability
-								.product-info__aval-key В наличии
-								a(href="#" data-modal-address).product-info__aval-val 6 магазинах
+							if pageIndex == 'product_017'
+								.product-info__vailability
+									.product-info__aval-key Нет в наличии, товар снят с производства
+							
+							else
+								.product-info__vailability
+									.product-info__aval-key В наличии
+									a(href="#" data-modal-address).product-info__aval-val 6 магазинах
 							
 						.product-info__col
 							a(href="#").std-link.product-info__analog Подобрать 
