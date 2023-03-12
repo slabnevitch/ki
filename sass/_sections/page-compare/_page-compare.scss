@@ -62,7 +62,7 @@
 
 		}
 
-		.cards-page-compare__check,
+		// .cards-page-compare__check,
 		.product-card__buy,
 		.product-card__info,
 		.compare-remove{
@@ -113,6 +113,7 @@
 }
 .page-compare__chars{
 	position: relative;
+	overflow: hidden;
 	&:after{
 		content: '';
 		position: absolute;

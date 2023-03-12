@@ -14282,7 +14282,6 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 3;
   }
 }
-.page-compare__cards._scroll .cards-page-compare__check,
 .page-compare__cards._scroll .product-card__buy,
 .page-compare__cards._scroll .product-card__info,
 .page-compare__cards._scroll .compare-remove {
@@ -14328,6 +14327,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-compare__chars {
   position: relative;
+  overflow: hidden;
 }
 .page-compare__chars:after {
   content: "";

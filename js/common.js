@@ -741,7 +741,7 @@
 			if(document.querySelector('.header') !== null){
 				var headerElem = document.querySelector('.header'),
 				observerCallback = function(entries, observer) {
-					console.log(entries);
+					// console.log(entries);
 					if(entries[0].isIntersecting){
 						headerElem.classList.remove('_scroll');
 					}else{
@@ -756,13 +756,13 @@
 		// compare slider fixed on doc. scroll
 					
 			if(document.querySelector('.page-compare__cards') !== null){
-				var compareSlider = document.querySelector('.page-compare__cards'),
+				var compareSlider = document.querySelector('.cards-page-compare__check'),
 				compareObserverCallback = function(entries, observer) {
 					console.log(entries);
 					if(entries[0].isIntersecting){
-						compareSlider.classList.remove('_scroll');
+						document.querySelector('.page-compare__cards').classList.remove('_scroll');
 					}else{
-						compareSlider.classList.add('_scroll');
+						document.querySelector('.page-compare__cards').classList.add('_scroll');
 					}
 				};
 				var compareObserver = new IntersectionObserver(compareObserverCallback);
