@@ -12012,11 +12012,14 @@ h6 {
   margin-bottom: 28px;
 }
 
-.page-compare__cards._scroll .cards-page-compare__check,
 .page-compare__cards._scroll .product-card__buy,
 .page-compare__cards._scroll .product-card__info,
 .page-compare__cards._scroll .compare-remove {
   display: none;
+}
+
+.page-compare__cards._scroll .cards-page-compare__check {
+  opacity: 0;
 }
 
 .cards-page-compare__check {
@@ -12057,6 +12060,7 @@ h6 {
 
 .page-compare__chars {
   position: relative;
+  overflow: hidden;
 }
 
 .page-compare__chars:after {
