@@ -6786,11 +6786,19 @@
       <div class="main-content">
         <div class="page page-brands">
           <div class="wrapper">
-                <ul class="breadcrumbs">
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">главная</a></li>
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Хиты продаж</a></li>
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Популярные бренды</a></li>
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Makita</a></li>
+                <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumbs">
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a itemprop="item" href="https://example.com/dresses" class="breadcrumbs__link"><span itemprop="name">главная</span></a>
+                    <meta itemprop="position" content="1">
+                  </li>
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a itemprop="item" href="https://example.com/dresses" class="breadcrumbs__link"><span itemprop="name">Хиты продаж</span></a>
+                    <meta itemprop="position" content="2">
+                  </li>
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a itemprop="item" href="https://example.com/dresses" class="breadcrumbs__link"><span itemprop="name">Популярные бренды</span></a>
+                    <meta itemprop="position" content="3">
+                  </li>
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a itemprop="item" href="https://example.com/dresses" class="breadcrumbs__link"><span itemprop="name">Makita</span></a>
+                    <meta itemprop="position" content="4">
+                  </li>
                 </ul>
           </div>
               <div class="wrapper back-block-wrapper">
@@ -6866,7 +6874,18 @@
               </div>
               <div class="wrapper-smart">
                 <div class="wrapper-flex product-cards">
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный гайковерт Makita TD 110 DZ</span>
+                          <meta itemprop="image" content="img/page-brands/makita/1.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="5 790">5 790</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap">
                           <div class="billet billet--new">
                             <div class="billet__value">Новинка</div>
@@ -6883,20 +6902,12 @@
                                   <svg class="icon icon-compare ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
-                          </div><a href="#" class="product-price">5 790 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="5 790 ₽">
-                          <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                          </div><a href="#" class="product-price">5 790 ₽</a><a href="#" class="product-bonus">
                             <div class="product-bonus__val">58</div>
                                 <svg class="icon icon-bonus ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                 </svg></a>
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita TD 110 DZ
-                          <meta itemprop="model" content="Аккумуляторный гайковерт Makita TD 110 DZ">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita TD 110 DZ</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -6906,13 +6917,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -6939,7 +6943,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный гайковерт Makita DTW 285 Z</span>
+                          <meta itemprop="image" content="img/page-brands/makita/2.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="20 889">20 889</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap">
                           <div class="billet billet--action">
                             <div class="billet__value">скидка</div>
@@ -6957,20 +6972,12 @@
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
                           </div><a href="#" class="product-price">20 889 ₽
-                            <div class="product-price-sale">25 889 ₽</div></a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="20 889 ₽">
-                          <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            <div class="product-price-sale">25 889 ₽</div></a><a href="#" class="product-bonus">
                             <div class="product-bonus__val">209</div>
                                 <svg class="icon icon-bonus ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                 </svg></a>
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita DTW 285 Z
-                          <meta itemprop="model" content="Аккумуляторный гайковерт Makita DTW 285 Z">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita DTW 285 Z</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -6980,13 +6987,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -7013,7 +7013,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный гайковерт Makita DTW 300 Z</span>
+                          <meta itemprop="image" content="img/page-brands/makita/3.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="7 850">7 850</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный гайковерт Makita DTW 300 Z" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/3.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -7024,20 +7035,12 @@
                                   <svg class="icon icon-compare ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
-                          </div><a href="#" class="product-price">7 850 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="7 850 ₽">
-                          <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                          </div><a href="#" class="product-price">7 850 ₽</a><a href="#" class="product-bonus">
                             <div class="product-bonus__val">253</div>
                                 <svg class="icon icon-bonus ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                 </svg></a>
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita DTW 300 Z
-                          <meta itemprop="model" content="Аккумуляторный гайковерт Makita DTW 300 Z">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita DTW 300 Z</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7047,13 +7050,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -7080,7 +7076,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card product-card--analog">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card product-card--analog">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный гайковерт Makita 6706 D</span>
+                          <meta itemprop="image" content="img/page-brands/makita/4.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="5 228">5 228</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный гайковерт Makita 6706 D" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/4.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -7092,15 +7099,7 @@
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
                           </div><a href="#" class="product-price">5 228 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="5 228 ₽">
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita 6706 D
-                          <meta itemprop="model" content="Аккумуляторный гайковерт Makita 6706 D">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita 6706 D</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7110,13 +7109,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -7141,7 +7133,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный гайковерт Makita TD 110 DZ</span>
+                          <meta itemprop="image" content="img/page-brands/makita/1.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="5 790">5 790</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap">
                           <div class="billet billet--new">
                             <div class="billet__value">Новинка</div>
@@ -7158,20 +7161,12 @@
                                   <svg class="icon icon-compare ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
-                          </div><a href="#" class="product-price">5 790 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="5 790 ₽">
-                          <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                          </div><a href="#" class="product-price">5 790 ₽</a><a href="#" class="product-bonus">
                             <div class="product-bonus__val">58</div>
                                 <svg class="icon icon-bonus ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                 </svg></a>
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita TD 110 DZ
-                          <meta itemprop="model" content="Аккумуляторный гайковерт Makita TD 110 DZ">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita TD 110 DZ</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7181,13 +7176,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -7214,7 +7202,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный гайковерт Makita DTW 285 Z</span>
+                          <meta itemprop="image" content="img/page-brands/makita/2.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="20 889">20 889</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap">
                           <div class="billet billet--action">
                             <div class="billet__value">скидка</div>
@@ -7232,20 +7231,12 @@
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
                           </div><a href="#" class="product-price">20 889 ₽
-                            <div class="product-price-sale">25 889 ₽</div></a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="20 889 ₽">
-                          <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            <div class="product-price-sale">25 889 ₽</div></a><a href="#" class="product-bonus">
                             <div class="product-bonus__val">209</div>
                                 <svg class="icon icon-bonus ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                 </svg></a>
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita DTW 285 Z
-                          <meta itemprop="model" content="Аккумуляторный гайковерт Makita DTW 285 Z">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita DTW 285 Z</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7255,13 +7246,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -7288,7 +7272,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный гайковерт Makita DTW 300 Z</span>
+                          <meta itemprop="image" content="img/page-brands/makita/3.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="7 850">7 850</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный гайковерт Makita DTW 300 Z" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/3.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -7299,20 +7294,12 @@
                                   <svg class="icon icon-compare ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
-                          </div><a href="#" class="product-price">7 850 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="7 850 ₽">
-                          <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                          </div><a href="#" class="product-price">7 850 ₽</a><a href="#" class="product-bonus">
                             <div class="product-bonus__val">253</div>
                                 <svg class="icon icon-bonus ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                 </svg></a>
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita DTW 300 Z
-                          <meta itemprop="model" content="Аккумуляторный гайковерт Makita DTW 300 Z">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita DTW 300 Z</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7322,13 +7309,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -7355,7 +7335,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card product-card--analog">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card product-card--analog">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный гайковерт Makita 6706 D</span>
+                          <meta itemprop="image" content="img/page-brands/makita/4.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="5 228">5 228</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный гайковерт Makita 6706 D" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/4.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -7367,15 +7358,7 @@
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
                           </div><a href="#" class="product-price">5 228 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="5 228 ₽">
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita 6706 D
-                          <meta itemprop="model" content="Аккумуляторный гайковерт Makita 6706 D">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita 6706 D</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7385,13 +7368,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -7425,7 +7401,18 @@
               </div>
               <div class="wrapper-smart">
                 <div class="wrapper-flex product-cards">
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный шуруповерт Makita DF 033 DZ</span>
+                          <meta itemprop="image" content="img/page-brands/makita/5.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="5 269">5 269</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный шуруповерт Makita DF 033 DZ" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/5.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -7436,20 +7423,12 @@
                                   <svg class="icon icon-compare ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
-                          </div><a href="#" class="product-price">5 269 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="5 269 ₽">
-                          <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                          </div><a href="#" class="product-price">5 269 ₽</a><a href="#" class="product-bonus">
                             <div class="product-bonus__val">99</div>
                                 <svg class="icon icon-bonus ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                 </svg></a>
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DF 033 DZ
-                          <meta itemprop="model" content="Аккумуляторный шуруповерт Makita DF 033 DZ">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DF 033 DZ</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7459,13 +7438,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -7492,7 +7464,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный шуруповерт Makita TD 111 DZ</span>
+                          <meta itemprop="image" content="img/page-brands/makita/6.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="11 190">11 190</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap">
                           <div class="billet billet--action">
                             <div class="billet__value">скидка</div>
@@ -7510,20 +7493,12 @@
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
                           </div><a href="#" class="product-price">11 190 ₽
-                            <div class="product-price-sale">6 411 ₽</div></a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="11 190 ₽">
-                          <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            <div class="product-price-sale">6 411 ₽</div></a><a href="#" class="product-bonus">
                             <div class="product-bonus__val">51</div>
                                 <svg class="icon icon-bonus ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                 </svg></a>
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita TD 111 DZ
-                          <meta itemprop="model" content="Аккумуляторный шуруповерт Makita TD 111 DZ">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita TD 111 DZ</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7533,13 +7508,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -7566,7 +7534,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный шуруповерт Makita DFR 750 Z</span>
+                          <meta itemprop="image" content="img/page-brands/makita/7.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="14 680">14 680</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный шуруповерт Makita DFR 750 Z" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/7.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -7577,20 +7556,12 @@
                                   <svg class="icon icon-compare ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
-                          </div><a href="#" class="product-price">14 680 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="14 680 ₽">
-                          <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                          </div><a href="#" class="product-price">14 680 ₽</a><a href="#" class="product-bonus">
                             <div class="product-bonus__val">79</div>
                                 <svg class="icon icon-bonus ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                 </svg></a>
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFR 750 Z
-                          <meta itemprop="model" content="Аккумуляторный шуруповерт Makita DFR 750 Z">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFR 750 Z</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7600,13 +7571,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -7633,7 +7597,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card product-card--analog">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card product-card--analog">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный шуруповерт Makita DFS 451 RFE</span>
+                          <meta itemprop="image" content="img/page-brands/makita/8.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="18 500">18 500</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный шуруповерт Makita DFS 451 RFE" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/8.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -7645,15 +7620,7 @@
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
                           </div><a href="#" class="product-price">18 500 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="18 500 ₽">
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFS 451 RFE
-                          <meta itemprop="model" content="Аккумуляторный шуруповерт Makita DFS 451 RFE">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFS 451 RFE</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7663,13 +7630,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -7694,7 +7654,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный шуруповерт Makita DFR 750 RFE</span>
+                          <meta itemprop="image" content="img/page-brands/makita/9.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="22 899">22 899</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный шуруповерт Makita DFR 750 RFE" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/9.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -7705,20 +7676,12 @@
                                   <svg class="icon icon-compare ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
-                          </div><a href="#" class="product-price">22 899 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="22 899 ₽">
-                          <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                          </div><a href="#" class="product-price">22 899 ₽</a><a href="#" class="product-bonus">
                             <div class="product-bonus__val">229</div>
                                 <svg class="icon icon-bonus ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                 </svg></a>
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFR 750 RFE
-                          <meta itemprop="model" content="Аккумуляторный шуруповерт Makita DFR 750 RFE">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFR 750 RFE</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7728,13 +7691,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -7761,7 +7717,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card product-card--analog">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card product-card--analog">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный шуруповерт Makita DTD156RFE</span>
+                          <meta itemprop="image" content="img/page-brands/makita/10.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="29 390">29 390</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный шуруповерт Makita DTD156RFE" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/10.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -7773,15 +7740,7 @@
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
                           </div><a href="#" class="product-price">29 390 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="29 390 ₽">
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DTD156RFE
-                          <meta itemprop="model" content="Аккумуляторный шуруповерт Makita DTD156RFE">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DTD156RFE</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7791,13 +7750,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -7822,7 +7774,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card product-card--pullout product-card--analog">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card product-card--pullout product-card--analog">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный шуруповерт Makita DFR 550 Z</span>
+                          <meta itemprop="image" content="img/page-brands/makita/11.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="20 349">20 349</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный шуруповерт Makita DFR 550 Z" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/11.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -7834,15 +7797,7 @@
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
                           </div><a href="#" class="product-price">20 349 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="20 349 ₽">
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFR 550 Z
-                          <meta itemprop="model" content="Аккумуляторный шуруповерт Makita DFR 550 Z">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFR 550 Z</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7852,13 +7807,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -7880,7 +7828,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card product-card--pullout product-card--analog">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card product-card--pullout product-card--analog">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный шуруповерт Makita DFR 550 Z</span>
+                          <meta itemprop="image" content="img/page-brands/makita/12.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="7 490">7 490</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный шуруповерт Makita DFR 550 Z" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/12.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -7892,15 +7851,7 @@
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
                           </div><a href="#" class="product-price">7 490 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="7 490 ₽">
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFR 550 Z
-                          <meta itemprop="model" content="Аккумуляторный шуруповерт Makita DFR 550 Z">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFR 550 Z</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7910,13 +7861,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -7947,7 +7891,18 @@
               </div>
               <div class="wrapper-smart">
                 <div class="wrapper-flex product-cards">
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный шуруповерт Makita DF 033 DZ</span>
+                          <meta itemprop="image" content="img/page-brands/makita/12.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="25 590">25 590</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный шуруповерт Makita DF 033 DZ" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/12.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -7958,20 +7913,12 @@
                                   <svg class="icon icon-compare ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
-                          </div><a href="#" class="product-price">25 590 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="25 590 ₽">
-                          <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                          </div><a href="#" class="product-price">25 590 ₽</a><a href="#" class="product-bonus">
                             <div class="product-bonus__val">276</div>
                                 <svg class="icon icon-bonus ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                 </svg></a>
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DF 033 DZ
-                          <meta itemprop="model" content="Аккумуляторный шуруповерт Makita DF 033 DZ">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DF 033 DZ</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7981,13 +7928,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -8014,7 +7954,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный шуруповерт Makita TD 111 DZ</span>
+                          <meta itemprop="image" content="img/page-brands/makita/13.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="36 419">36 419</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный шуруповерт Makita TD 111 DZ" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/13.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -8025,20 +7976,12 @@
                                   <svg class="icon icon-compare ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
-                          </div><a href="#" class="product-price">36 419 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="36 419 ₽">
-                          <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                          </div><a href="#" class="product-price">36 419 ₽</a><a href="#" class="product-bonus">
                             <div class="product-bonus__val">369</div>
                                 <svg class="icon icon-bonus ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                 </svg></a>
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita TD 111 DZ
-                          <meta itemprop="model" content="Аккумуляторный шуруповерт Makita TD 111 DZ">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita TD 111 DZ</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8048,13 +7991,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -8081,7 +8017,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный перфоратор Makita HR001GM201</span>
+                          <meta itemprop="image" content="img/page-brands/makita/14.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="71 779">71 779</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный перфоратор Makita HR001GM201" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/14.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -8092,20 +8039,12 @@
                                   <svg class="icon icon-compare ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
-                          </div><a href="#" class="product-price">71 779 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="71 779 ₽">
-                          <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                          </div><a href="#" class="product-price">71 779 ₽</a><a href="#" class="product-bonus">
                             <div class="product-bonus__val">718</div>
                                 <svg class="icon icon-bonus ">
                                   <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                 </svg></a>
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный перфоратор Makita HR001GM201
-                          <meta itemprop="model" content="Аккумуляторный перфоратор Makita HR001GM201">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный перфоратор Makita HR001GM201</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8115,13 +8054,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -8148,7 +8080,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card product-card--analog">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card product-card--analog">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный перфоратор Makita HR001GM201</span>
+                          <meta itemprop="image" content="img/page-brands/makita/15.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="23 090">23 090</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный перфоратор Makita HR001GM201" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/15.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -8160,15 +8103,7 @@
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
                           </div><a href="#" class="product-price">23 090 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="23 090 ₽">
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный перфоратор Makita HR001GM201
-                          <meta itemprop="model" content="Аккумуляторный перфоратор Makita HR001GM201">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный перфоратор Makita HR001GM201</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8178,13 +8113,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -8209,7 +8137,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card product-card--pullout product-card--analog">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card product-card--pullout product-card--analog">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный перфоратор Makita DHR 241 SYE</span>
+                          <meta itemprop="image" content="img/page-brands/makita/16.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="14 729">14 729</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный перфоратор Makita DHR 241 SYE" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/16.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -8221,15 +8160,7 @@
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
                           </div><a href="#" class="product-price">14 729 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="14 729 ₽">
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный перфоратор Makita DHR 241 SYE
-                          <meta itemprop="model" content="Аккумуляторный перфоратор Makita DHR 241 SYE">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный перфоратор Makita DHR 241 SYE</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8239,13 +8170,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -8267,7 +8191,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card product-card--pullout product-card--analog">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card product-card--pullout product-card--analog">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный перфоратор Makita DHR 264 Z</span>
+                          <meta itemprop="image" content="img/page-brands/makita/17.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="27 790">27 790</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный перфоратор Makita DHR 264 Z" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/17.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -8279,15 +8214,7 @@
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
                           </div><a href="#" class="product-price">27 790 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="27 790 ₽">
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный перфоратор Makita DHR 264 Z
-                          <meta itemprop="model" content="Аккумуляторный перфоратор Makita DHR 264 Z">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный перфоратор Makita DHR 264 Z</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8297,13 +8224,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -8325,7 +8245,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card product-card--pullout product-card--analog">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card product-card--pullout product-card--analog">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный перфоратор Makita DHR 241 SYE</span>
+                          <meta itemprop="image" content="img/page-brands/makita/18.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="14 729">14 729</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный перфоратор Makita DHR 241 SYE" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/18.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -8337,15 +8268,7 @@
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
                           </div><a href="#" class="product-price">14 729 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="14 729 ₽">
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный перфоратор Makita DHR 241 SYE
-                          <meta itemprop="model" content="Аккумуляторный перфоратор Makita DHR 241 SYE">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный перфоратор Makita DHR 241 SYE</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8355,13 +8278,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -8383,7 +8299,18 @@
                           </div>
                         </div>
                       </div>
-                      <div itemscope="" itemtype="http://schema.org/Offer" class="product-card product-card--pullout product-card--analog">
+                      <div itemscope="" itemtype="http://schema.org/Product" class="product-card product-card--pullout product-card--analog">
+                        <div style="display:none;">
+                          <meta itemprop="model" content="Makita TD 110 DZ">
+                          <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный перфоратор Makita DHR 264 Z</span>
+                          <meta itemprop="image" content="img/page-brands/makita/19.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                          <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                        </div>
+                        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="27 790">27 790</span><span itemprop="priceCurrency" content="RUB">$</span>
+                          <div style="display:none;">
+                            <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                          </div>
+                        </div>
                         <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный перфоратор Makita DHR 264 Z" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/19.jpg" alt="alt"></span></a>
                         </div>
                         <div class="product-card__price">
@@ -8395,15 +8322,7 @@
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                   </svg></a>
                           </div><a href="#" class="product-price">27 790 ₽</a>
-                          <link itemprop="availability" href="https://schema.org/InStock">
-                          <meta itemprop="price" content="27 790 ₽">
-                          <meta itemprop="priceCurrency" content="RUB">
-                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный перфоратор Makita DHR 264 Z
-                          <meta itemprop="model" content="Аккумуляторный перфоратор Makita DHR 264 Z">
-                          <meta itemprop="sku" content="trinket-12345">
-                          <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                            <meta itemprop="name" content="ACME">
-                          </div></a><a href="#" class="product-card__description"> 
+                        </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный перфоратор Makita DHR 264 Z</a><a href="#" class="product-card__description"> 
                           <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                           <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                           <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8413,13 +8332,6 @@
                         <div class="product-card__bottom">
                           <div class="product-card__rating-wrap">
                             <div class="product-card__rating">
-                              <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                <meta itemprop="ratingValue" content="4.8">
-                                <meta itemprop="ratingCount" content="288">
-                                <meta itemprop="reviewCount" content="288">
-                                <meta itemprop="worstRating" content="0">
-                                <meta itemprop="bestRating" content="5">
-                              </div>
                                   <div class="crystal-rating">
                                     <div class="crystal-rating__body">
                                       <div class="crystal-rating__active"></div>
@@ -9567,7 +9479,18 @@
             </div>
           </form>
           <div class="addreview__product">
-                <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                  <div style="display:none;">
+                    <meta itemprop="model" content="Makita TD 110 DZ">
+                    <meta itemprop="sku" content="002266"><span itemprop="name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</span>
+                    <meta itemprop="image" content="img/hits-section/1.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                    <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                  </div>
+                  <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="14 729">14 729</span><span itemprop="priceCurrency" content="RUB">$</span>
+                    <div style="display:none;">
+                      <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                    </div>
+                  </div>
                   <div class="product-card__img-wrap"><a href="#" alt="Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/hits-section/1.jpg" alt="alt"></span></a>
                   </div>
                   <div class="product-card__price">
@@ -9579,20 +9502,12 @@
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                             </svg></a>
                     </div><a href="#" class="product-price">14 729 ₽
-                      <div class="product-price-sale">18 411 ₽</div></a>
-                    <link itemprop="availability" href="https://schema.org/InStock">
-                    <meta itemprop="price" content="14 729 ₽">
-                    <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                      <div class="product-price-sale">18 411 ₽</div></a><a href="#" class="product-bonus">
                       <div class="product-bonus__val">29</div>
                           <svg class="icon icon-bonus ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                           </svg></a>
-                  </div><a href="#" itemprop="name" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
-                    <meta itemprop="model" content="Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861">
-                    <meta itemprop="sku" content="trinket-12345">
-                    <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                      <meta itemprop="name" content="ACME">
-                    </div></a><a href="#" class="product-card__description"> 
+                  </div><a href="#" itemprop="name" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</a><a href="#" class="product-card__description"> 
                     <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                     <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                     <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -9602,13 +9517,6 @@
                   <div class="product-card__bottom">
                     <div class="product-card__rating-wrap">
                       <div class="product-card__rating">
-                        <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                          <meta itemprop="ratingValue" content="4.8">
-                          <meta itemprop="ratingCount" content="288">
-                          <meta itemprop="reviewCount" content="288">
-                          <meta itemprop="worstRating" content="0">
-                          <meta itemprop="bestRating" content="5">
-                        </div>
                             <div class="crystal-rating">
                               <div class="crystal-rating__body">
                                 <div class="crystal-rating__active"></div>
@@ -9982,7 +9890,18 @@
             </div>
           </div>
           <div class="addreview__product">
-                <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                  <div style="display:none;">
+                    <meta itemprop="model" content="Makita TD 110 DZ">
+                    <meta itemprop="sku" content="002266"><span itemprop="name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</span>
+                    <meta itemprop="image" content="img/hits-section/1.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                    <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                  </div>
+                  <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="14 729">14 729</span><span itemprop="priceCurrency" content="RUB">$</span>
+                    <div style="display:none;">
+                      <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                    </div>
+                  </div>
                   <div class="product-card__img-wrap"><a href="#" alt="Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/hits-section/1.jpg" alt="alt"></span></a>
                   </div>
                   <div class="product-card__price">
@@ -9994,20 +9913,12 @@
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                             </svg></a>
                     </div><a href="#" class="product-price">14 729 ₽
-                      <div class="product-price-sale">18 411 ₽</div></a>
-                    <link itemprop="availability" href="https://schema.org/InStock">
-                    <meta itemprop="price" content="14 729 ₽">
-                    <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                      <div class="product-price-sale">18 411 ₽</div></a><a href="#" class="product-bonus">
                       <div class="product-bonus__val">29</div>
                           <svg class="icon icon-bonus ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                           </svg></a>
-                  </div><a href="#" itemprop="name" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
-                    <meta itemprop="model" content="Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861">
-                    <meta itemprop="sku" content="trinket-12345">
-                    <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                      <meta itemprop="name" content="ACME">
-                    </div></a><a href="#" class="product-card__description"> 
+                  </div><a href="#" itemprop="name" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</a><a href="#" class="product-card__description"> 
                     <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                     <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                     <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -10017,13 +9928,6 @@
                   <div class="product-card__bottom">
                     <div class="product-card__rating-wrap">
                       <div class="product-card__rating">
-                        <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                          <meta itemprop="ratingValue" content="4.8">
-                          <meta itemprop="ratingCount" content="288">
-                          <meta itemprop="reviewCount" content="288">
-                          <meta itemprop="worstRating" content="0">
-                          <meta itemprop="bestRating" content="5">
-                        </div>
                             <div class="crystal-rating">
                               <div class="crystal-rating__body">
                                 <div class="crystal-rating__active"></div>

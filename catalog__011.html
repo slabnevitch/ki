@@ -6786,11 +6786,19 @@
       <div class="main-content">
         <div class="page page-catalog">
           <div class="wrapper">
-                <ul class="breadcrumbs">
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">главная</a></li>
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог</a></li>
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Электроинструменты</a></li>
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Шуруповерты</a></li>
+                <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumbs">
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a itemprop="item" href="https://example.com/dresses" class="breadcrumbs__link"><span itemprop="name">главная</span></a>
+                    <meta itemprop="position" content="1">
+                  </li>
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a itemprop="item" href="https://example.com/dresses" class="breadcrumbs__link"><span itemprop="name">Каталог</span></a>
+                    <meta itemprop="position" content="2">
+                  </li>
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a itemprop="item" href="https://example.com/dresses" class="breadcrumbs__link"><span itemprop="name">Электроинструменты</span></a>
+                    <meta itemprop="position" content="3">
+                  </li>
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a itemprop="item" href="https://example.com/dresses" class="breadcrumbs__link"><span itemprop="name">Шуруповерты</span></a>
+                    <meta itemprop="position" content="4">
+                  </li>
                 </ul>
           </div>
               <div class="wrapper back-block-wrapper">
@@ -7349,7 +7357,18 @@
                     </div>
                   </div>
                   <div class="wrapper-flex product-cards product-cards--catalog">
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный гайковерт Makita TD 110 DZ</span>
+                            <meta itemprop="image" content="img/page-brands/gaik/1.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="8 390">8 390</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap">
                             <div class="billet billet--new">
                               <div class="billet__value">Новинка</div>
@@ -7366,20 +7385,12 @@
                                     <svg class="icon icon-compare ">
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
-                            </div><a href="#" class="product-price">8 390 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="8 390 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            </div><a href="#" class="product-price">8 390 ₽</a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">99</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita TD 110 DZ
-                            <meta itemprop="model" content="Аккумуляторный гайковерт Makita TD 110 DZ">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita TD 110 DZ</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7389,13 +7400,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -7422,7 +7426,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000</span>
+                            <meta itemprop="image" content="img/page-brands/gaik/2.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="5 070">5 070</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap">
                             <div class="billet billet--action">
                               <div class="billet__value">скидка</div>
@@ -7440,20 +7455,12 @@
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
                             </div><a href="#" class="product-price">5 070 ₽
-                              <div class="product-price-sale">6 411 ₽</div></a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="5 070 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                              <div class="product-price-sale">6 411 ₽</div></a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">51</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000
-                            <meta itemprop="model" content="Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7463,13 +7470,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -7496,7 +7496,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Гайковерт Messer IW-500 05-40-500</span>
+                            <meta itemprop="image" content="img/page-brands/gaik/3.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="7 850">7 850</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap"><a href="#" alt="Гайковерт Messer IW-500 05-40-500" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/gaik/3.jpg" alt="alt"></span></a>
                           </div>
                           <div class="product-card__price">
@@ -7507,20 +7518,12 @@
                                     <svg class="icon icon-compare ">
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
-                            </div><a href="#" class="product-price">7 850 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="7 850 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            </div><a href="#" class="product-price">7 850 ₽</a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">79</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Гайковерт Messer IW-500 05-40-500
-                            <meta itemprop="model" content="Гайковерт Messer IW-500 05-40-500">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Гайковерт Messer IW-500 05-40-500</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7530,13 +7533,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -7563,7 +7559,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140</span>
+                            <meta itemprop="image" content="img/page-brands/gaik/4.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="12 590">12 590</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/gaik/4.jpg" alt="alt"></span></a>
                           </div>
                           <div class="product-card__price">
@@ -7574,20 +7581,12 @@
                                     <svg class="icon icon-compare ">
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
-                            </div><a href="#" class="product-price">12 590 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="12 590 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            </div><a href="#" class="product-price">12 590 ₽</a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">129</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140
-                            <meta itemprop="model" content="Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7597,13 +7596,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -7630,7 +7622,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Шуруповерт Вихрь СШ-550/1 72/16/2</span>
+                            <meta itemprop="image" content="img/page-brands/shur/1.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="8 390">8 390</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap">
                             <div class="billet billet--new">
                               <div class="billet__value">Новинка</div>
@@ -7647,20 +7650,12 @@
                                     <svg class="icon icon-compare ">
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
-                            </div><a href="#" class="product-price">8 390 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="8 390 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            </div><a href="#" class="product-price">8 390 ₽</a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">99</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Шуруповерт Вихрь СШ-550/1 72/16/2
-                            <meta itemprop="model" content="Шуруповерт Вихрь СШ-550/1 72/16/2">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Шуруповерт Вихрь СШ-550/1 72/16/2</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7670,13 +7665,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -7703,7 +7691,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00</span>
+                            <meta itemprop="image" content="img/page-brands/shur/2.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="5 070">5 070</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap">
                             <div class="billet billet--action">
                               <div class="billet__value">скидка</div>
@@ -7721,20 +7720,12 @@
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
                             </div><a href="#" class="product-price">5 070 ₽
-                              <div class="product-price-sale">6 411 ₽</div></a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="5 070 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                              <div class="product-price-sale">6 411 ₽</div></a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">51</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00
-                            <meta itemprop="model" content="Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7744,13 +7735,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -7777,7 +7761,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Шуруповерт Elitech ДШ 0110 РЭ</span>
+                            <meta itemprop="image" content="img/page-brands/shur/3.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="7 850">7 850</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap"><a href="#" alt="Шуруповерт Elitech ДШ 0110 РЭ" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/shur/3.jpg" alt="alt"></span></a>
                           </div>
                           <div class="product-card__price">
@@ -7788,20 +7783,12 @@
                                     <svg class="icon icon-compare ">
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
-                            </div><a href="#" class="product-price">7 850 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="7 850 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            </div><a href="#" class="product-price">7 850 ₽</a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">79</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Шуруповерт Elitech ДШ 0110 РЭ
-                            <meta itemprop="model" content="Шуруповерт Elitech ДШ 0110 РЭ">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Шуруповерт Elitech ДШ 0110 РЭ</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7811,13 +7798,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -7844,7 +7824,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторная дрель-шуруповерт Ресанта ДА-14-2Л 75/14/3</span>
+                            <meta itemprop="image" content="img/page-brands/shur/4.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="12 590">12 590</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторная дрель-шуруповерт Ресанта ДА-14-2Л 75/14/3" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/shur/4.jpg" alt="alt"></span></a>
                           </div>
                           <div class="product-card__price">
@@ -7855,20 +7846,12 @@
                                     <svg class="icon icon-compare ">
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
-                            </div><a href="#" class="product-price">12 590 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="12 590 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            </div><a href="#" class="product-price">12 590 ₽</a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">129</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторная дрель-шуруповерт Ресанта ДА-14-2Л 75/14/3
-                            <meta itemprop="model" content="Аккумуляторная дрель-шуруповерт Ресанта ДА-14-2Л 75/14/3">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторная дрель-шуруповерт Ресанта ДА-14-2Л 75/14/3</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7878,13 +7861,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -7911,7 +7887,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторная дрель-шуруповерт WorkMaster АШ-12М</span>
+                            <meta itemprop="image" content="img/page-brands/shur/5.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="22 899">22 899</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторная дрель-шуруповерт WorkMaster АШ-12М" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/shur/5.jpg" alt="alt"></span></a>
                           </div>
                           <div class="product-card__price">
@@ -7922,20 +7909,12 @@
                                     <svg class="icon icon-compare ">
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
-                            </div><a href="#" class="product-price">22 899 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="22 899 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            </div><a href="#" class="product-price">22 899 ₽</a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">229</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторная дрель-шуруповерт WorkMaster АШ-12М
-                            <meta itemprop="model" content="Аккумуляторная дрель-шуруповерт WorkMaster АШ-12М">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторная дрель-шуруповерт WorkMaster АШ-12М</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -7945,13 +7924,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -7978,7 +7950,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторная дрель-шуруповерт Metabo PowerMaxx BS (кейс)</span>
+                            <meta itemprop="image" content="img/page-brands/shur/6.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="9 990">9 990</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторная дрель-шуруповерт Metabo PowerMaxx BS (кейс)" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/shur/6.jpg" alt="alt"></span></a>
                           </div>
                           <div class="product-card__price">
@@ -7989,20 +7972,12 @@
                                     <svg class="icon icon-compare ">
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
-                            </div><a href="#" class="product-price">9 990 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="9 990 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            </div><a href="#" class="product-price">9 990 ₽</a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">100</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторная дрель-шуруповерт Metabo PowerMaxx BS (кейс)
-                            <meta itemprop="model" content="Аккумуляторная дрель-шуруповерт Metabo PowerMaxx BS (кейс)">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторная дрель-шуруповерт Metabo PowerMaxx BS (кейс)</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8012,13 +7987,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -8045,7 +8013,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторная дрель-шуруповерт DeWalt DCD996NT (без акб и зу)</span>
+                            <meta itemprop="image" content="img/page-brands/shur/7.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="10 990">10 990</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap">
                             <div class="billet billet--markdown">
                               <div class="billet__value">уценка</div>
@@ -8063,20 +8042,12 @@
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
                             </div><a href="#" class="product-price">10 990 ₽
-                              <div class="product-price-sale">11 990 ₽</div></a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="10 990 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                              <div class="product-price-sale">11 990 ₽</div></a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">120</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторная дрель-шуруповерт DeWalt DCD996NT (без акб и зу)
-                            <meta itemprop="model" content="Аккумуляторная дрель-шуруповерт DeWalt DCD996NT (без акб и зу)">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторная дрель-шуруповерт DeWalt DCD996NT (без акб и зу)</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8086,13 +8057,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -8119,7 +8083,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторная дрель-шуруповерт Bosch GSR 12 V-15 FC 06019F6000</span>
+                            <meta itemprop="image" content="img/page-brands/shur/8.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="20 729">20 729</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap">
                             <div class="billet billet--markdown">
                               <div class="billet__value">уценка</div>
@@ -8137,20 +8112,12 @@
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
                             </div><a href="#" class="product-price">20 729 ₽
-                              <div class="product-price-sale">24 940 ₽</div></a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="20 729 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                              <div class="product-price-sale">24 940 ₽</div></a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">249</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторная дрель-шуруповерт Bosch GSR 12 V-15 FC 06019F6000
-                            <meta itemprop="model" content="Аккумуляторная дрель-шуруповерт Bosch GSR 12 V-15 FC 06019F6000">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторная дрель-шуруповерт Bosch GSR 12 V-15 FC 06019F6000</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8160,13 +8127,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -8193,7 +8153,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный шуруповерт Makita DFR 750 RFE</span>
+                            <meta itemprop="image" content="img/page-brands/makita/8.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="22 899">22 899</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный шуруповерт Makita DFR 750 RFE" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/8.jpg" alt="alt"></span></a>
                           </div>
                           <div class="product-card__price">
@@ -8204,20 +8175,12 @@
                                     <svg class="icon icon-compare ">
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
-                            </div><a href="#" class="product-price">22 899 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="22 899 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            </div><a href="#" class="product-price">22 899 ₽</a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">229</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFR 750 RFE
-                            <meta itemprop="model" content="Аккумуляторный шуруповерт Makita DFR 750 RFE">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFR 750 RFE</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8227,13 +8190,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -8260,7 +8216,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card product-card--analog">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card product-card--analog">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный шуруповерт Makita DTD156RFE</span>
+                            <meta itemprop="image" content="img/page-brands/makita/9.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="29 390">29 390</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный шуруповерт Makita DTD156RFE" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/9.jpg" alt="alt"></span></a>
                           </div>
                           <div class="product-card__price">
@@ -8272,15 +8239,7 @@
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
                             </div><a href="#" class="product-price">29 390 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="29 390 ₽">
-                            <meta itemprop="priceCurrency" content="RUB">
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DTD156RFE
-                            <meta itemprop="model" content="Аккумуляторный шуруповерт Makita DTD156RFE">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DTD156RFE</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8290,13 +8249,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -8321,7 +8273,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card product-card--pullout product-card--analog">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card product-card--pullout product-card--analog">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный шуруповерт Makita DFR 550 Z</span>
+                            <meta itemprop="image" content="img/page-brands/makita/10.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="20 349">20 349</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный шуруповерт Makita DFR 550 Z" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/10.jpg" alt="alt"></span></a>
                           </div>
                           <div class="product-card__price">
@@ -8333,15 +8296,7 @@
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
                             </div><a href="#" class="product-price">20 349 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="20 349 ₽">
-                            <meta itemprop="priceCurrency" content="RUB">
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFR 550 Z
-                            <meta itemprop="model" content="Аккумуляторный шуруповерт Makita DFR 550 Z">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFR 550 Z</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8351,13 +8306,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -8379,7 +8327,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card product-card--pullout product-card--analog">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card product-card--pullout product-card--analog">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный шуруповерт Makita DFR 550 Z</span>
+                            <meta itemprop="image" content="img/page-brands/makita/11.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="7 490">7 490</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный шуруповерт Makita DFR 550 Z" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/makita/11.jpg" alt="alt"></span></a>
                           </div>
                           <div class="product-card__price">
@@ -8391,15 +8350,7 @@
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
                             </div><a href="#" class="product-price">7 490 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="7 490 ₽">
-                            <meta itemprop="priceCurrency" content="RUB">
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFR 550 Z
-                            <meta itemprop="model" content="Аккумуляторный шуруповерт Makita DFR 550 Z">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный шуруповерт Makita DFR 550 Z</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8409,13 +8360,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -8437,7 +8381,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000</span>
+                            <meta itemprop="image" content="img/page-brands/gaik/2.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="5 070">5 070</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap">
                             <div class="billet billet--action">
                               <div class="billet__value">скидка</div>
@@ -8455,20 +8410,12 @@
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
                             </div><a href="#" class="product-price">5 070 ₽
-                              <div class="product-price-sale">6 411 ₽</div></a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="5 070 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                              <div class="product-price-sale">6 411 ₽</div></a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">51</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000
-                            <meta itemprop="model" content="Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8478,13 +8425,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -8511,7 +8451,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Гайковерт Messer IW-500 05-40-500</span>
+                            <meta itemprop="image" content="img/page-brands/gaik/3.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="7 850">7 850</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap"><a href="#" alt="Гайковерт Messer IW-500 05-40-500" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/gaik/3.jpg" alt="alt"></span></a>
                           </div>
                           <div class="product-card__price">
@@ -8522,20 +8473,12 @@
                                     <svg class="icon icon-compare ">
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
-                            </div><a href="#" class="product-price">7 850 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="7 850 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            </div><a href="#" class="product-price">7 850 ₽</a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">79</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Гайковерт Messer IW-500 05-40-500
-                            <meta itemprop="model" content="Гайковерт Messer IW-500 05-40-500">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Гайковерт Messer IW-500 05-40-500</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8545,13 +8488,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -8605,7 +8541,18 @@
                   <div class="page-catalog__pupular pupular-page-catalog"></div>
                   <div class="pupular-page-catalog__title">Самые популярные в этой категории</div>
                   <div class="wrapper-flex product-cards product-cards--catalog">
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Шуруповерт Вихрь СШ-550/1 72/16/2</span>
+                            <meta itemprop="image" content="img/page-brands/perf/1.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="8 390">8 390</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap">
                             <div class="billet billet--new">
                               <div class="billet__value">Новинка</div>
@@ -8622,20 +8569,12 @@
                                     <svg class="icon icon-compare ">
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
-                            </div><a href="#" class="product-price">8 390 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="8 390 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            </div><a href="#" class="product-price">8 390 ₽</a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">99</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Шуруповерт Вихрь СШ-550/1 72/16/2
-                            <meta itemprop="model" content="Шуруповерт Вихрь СШ-550/1 72/16/2">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Шуруповерт Вихрь СШ-550/1 72/16/2</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8645,13 +8584,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -8678,7 +8610,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00</span>
+                            <meta itemprop="image" content="img/page-brands/perf/2.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="5 070">5 070</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap">
                             <div class="billet billet--action">
                               <div class="billet__value">скидка</div>
@@ -8696,20 +8639,12 @@
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
                             </div><a href="#" class="product-price">5 070 ₽
-                              <div class="product-price-sale">6 411 ₽</div></a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="5 070 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                              <div class="product-price-sale">6 411 ₽</div></a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">51</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00
-                            <meta itemprop="model" content="Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8719,13 +8654,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -8752,7 +8680,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Шуруповерт Elitech ДШ 0110 РЭ</span>
+                            <meta itemprop="image" content="img/page-brands/perf/3.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="7 850">7 850</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap"><a href="#" alt="Шуруповерт Elitech ДШ 0110 РЭ" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/perf/3.jpg" alt="alt"></span></a>
                           </div>
                           <div class="product-card__price">
@@ -8763,20 +8702,12 @@
                                     <svg class="icon icon-compare ">
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
-                            </div><a href="#" class="product-price">7 850 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="7 850 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            </div><a href="#" class="product-price">7 850 ₽</a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">79</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Шуруповерт Elitech ДШ 0110 РЭ
-                            <meta itemprop="model" content="Шуруповерт Elitech ДШ 0110 РЭ">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Шуруповерт Elitech ДШ 0110 РЭ</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8786,13 +8717,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -8819,7 +8743,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный гайковерт Makita TD 110 DZ</span>
+                            <meta itemprop="image" content="img/page-brands/gaik/1.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="8 390">8 390</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap">
                             <div class="billet billet--new">
                               <div class="billet__value">Новинка</div>
@@ -8836,20 +8771,12 @@
                                     <svg class="icon icon-compare ">
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
-                            </div><a href="#" class="product-price">8 390 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="8 390 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            </div><a href="#" class="product-price">8 390 ₽</a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">99</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita TD 110 DZ
-                            <meta itemprop="model" content="Аккумуляторный гайковерт Makita TD 110 DZ">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Makita TD 110 DZ</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8859,13 +8786,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -8892,7 +8812,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000</span>
+                            <meta itemprop="image" content="img/page-brands/gaik/2.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="5 070">5 070</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap">
                             <div class="billet billet--action">
                               <div class="billet__value">скидка</div>
@@ -8910,20 +8841,12 @@
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
                             </div><a href="#" class="product-price">5 070 ₽
-                              <div class="product-price-sale">6 411 ₽</div></a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="5 070 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                              <div class="product-price-sale">6 411 ₽</div></a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">51</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000
-                            <meta itemprop="model" content="Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -8933,13 +8856,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -8966,7 +8882,18 @@
                             </div>
                           </div>
                         </div>
-                        <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                        <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                          <div style="display:none;">
+                            <meta itemprop="model" content="Makita TD 110 DZ">
+                            <meta itemprop="sku" content="002266"><span itemprop="name">Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140</span>
+                            <meta itemprop="image" content="img/page-brands/gaik/3.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                            <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                          </div>
+                          <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="12 590">12 590</span><span itemprop="priceCurrency" content="RUB">$</span>
+                            <div style="display:none;">
+                              <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                            </div>
+                          </div>
                           <div class="product-card__img-wrap"><a href="#" alt="Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/page-brands/gaik/3.jpg" alt="alt"></span></a>
                           </div>
                           <div class="product-card__price">
@@ -8977,20 +8904,12 @@
                                     <svg class="icon icon-compare ">
                                       <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                                     </svg></a>
-                            </div><a href="#" class="product-price">12 590 ₽</a>
-                            <link itemprop="availability" href="https://schema.org/InStock">
-                            <meta itemprop="price" content="12 590 ₽">
-                            <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                            </div><a href="#" class="product-price">12 590 ₽</a><a href="#" class="product-bonus">
                               <div class="product-bonus__val">129</div>
                                   <svg class="icon icon-bonus ">
                                     <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                                   </svg></a>
-                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140
-                            <meta itemprop="model" content="Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140">
-                            <meta itemprop="sku" content="trinket-12345">
-                            <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                              <meta itemprop="name" content="ACME">
-                            </div></a><a href="#" class="product-card__description"> 
+                          </div><a href="#" itemprop="name" class="product-card__name">Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140</a><a href="#" class="product-card__description"> 
                             <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                             <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                             <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -9000,13 +8919,6 @@
                           <div class="product-card__bottom">
                             <div class="product-card__rating-wrap">
                               <div class="product-card__rating">
-                                <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                                  <meta itemprop="ratingValue" content="4.8">
-                                  <meta itemprop="ratingCount" content="288">
-                                  <meta itemprop="reviewCount" content="288">
-                                  <meta itemprop="worstRating" content="0">
-                                  <meta itemprop="bestRating" content="5">
-                                </div>
                                     <div class="crystal-rating">
                                       <div class="crystal-rating__body">
                                         <div class="crystal-rating__active"></div>
@@ -10160,7 +10072,18 @@
             </div>
           </form>
           <div class="addreview__product">
-                <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                  <div style="display:none;">
+                    <meta itemprop="model" content="Makita TD 110 DZ">
+                    <meta itemprop="sku" content="002266"><span itemprop="name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</span>
+                    <meta itemprop="image" content="img/hits-section/1.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                    <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                  </div>
+                  <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="14 729">14 729</span><span itemprop="priceCurrency" content="RUB">$</span>
+                    <div style="display:none;">
+                      <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                    </div>
+                  </div>
                   <div class="product-card__img-wrap"><a href="#" alt="Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/hits-section/1.jpg" alt="alt"></span></a>
                   </div>
                   <div class="product-card__price">
@@ -10172,20 +10095,12 @@
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                             </svg></a>
                     </div><a href="#" class="product-price">14 729 ₽
-                      <div class="product-price-sale">18 411 ₽</div></a>
-                    <link itemprop="availability" href="https://schema.org/InStock">
-                    <meta itemprop="price" content="14 729 ₽">
-                    <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                      <div class="product-price-sale">18 411 ₽</div></a><a href="#" class="product-bonus">
                       <div class="product-bonus__val">29</div>
                           <svg class="icon icon-bonus ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                           </svg></a>
-                  </div><a href="#" itemprop="name" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
-                    <meta itemprop="model" content="Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861">
-                    <meta itemprop="sku" content="trinket-12345">
-                    <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                      <meta itemprop="name" content="ACME">
-                    </div></a><a href="#" class="product-card__description"> 
+                  </div><a href="#" itemprop="name" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</a><a href="#" class="product-card__description"> 
                     <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                     <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                     <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -10195,13 +10110,6 @@
                   <div class="product-card__bottom">
                     <div class="product-card__rating-wrap">
                       <div class="product-card__rating">
-                        <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                          <meta itemprop="ratingValue" content="4.8">
-                          <meta itemprop="ratingCount" content="288">
-                          <meta itemprop="reviewCount" content="288">
-                          <meta itemprop="worstRating" content="0">
-                          <meta itemprop="bestRating" content="5">
-                        </div>
                             <div class="crystal-rating">
                               <div class="crystal-rating__body">
                                 <div class="crystal-rating__active"></div>
@@ -10575,7 +10483,18 @@
             </div>
           </div>
           <div class="addreview__product">
-                <div itemscope="" itemtype="http://schema.org/Offer" class="product-card">
+                <div itemscope="" itemtype="http://schema.org/Product" class="product-card">
+                  <div style="display:none;">
+                    <meta itemprop="model" content="Makita TD 110 DZ">
+                    <meta itemprop="sku" content="002266"><span itemprop="name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</span>
+                    <meta itemprop="image" content="img/hits-section/1.jpg"><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Крутящий момент: 30 Н·м</span><span itemprop="description">Емкость аккумулятора: 2 А·ч</span><span itemprop="description">Тип аккумулятора Li-Ion</span><span itemprop="description">Кол-во аккумуляторов: 2 шт.</span><span itemprop="description">Вес 1.2 кг</span><span itemprop="description">Напряжение акк.: 12 В</span><span itemprop="description">Напряжение акк.: 12 В</span>
+                    <div itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"><span itemprop="ratingValue">3.5</span><span itemprop="reviewCount">11</span><span itemprop="worstRating">1</span><span itemprop="bestRating">5</span></div>
+                  </div>
+                  <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer"><span itemprop="price" content="14 729">14 729</span><span itemprop="priceCurrency" content="RUB">$</span>
+                    <div style="display:none;">
+                      <link itemprop="availability" href="https://schema.org/InStock"> In stock
+                    </div>
+                  </div>
                   <div class="product-card__img-wrap"><a href="#" alt="Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861" class="product-card__border"><span class="product-card__img"><img itemprop="image" src="img/hits-section/1.jpg" alt="alt"></span></a>
                   </div>
                   <div class="product-card__price">
@@ -10587,20 +10506,12 @@
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#compare"></use>
                             </svg></a>
                     </div><a href="#" class="product-price">14 729 ₽
-                      <div class="product-price-sale">18 411 ₽</div></a>
-                    <link itemprop="availability" href="https://schema.org/InStock">
-                    <meta itemprop="price" content="14 729 ₽">
-                    <meta itemprop="priceCurrency" content="RUB"><a href="#" class="product-bonus">
+                      <div class="product-price-sale">18 411 ₽</div></a><a href="#" class="product-bonus">
                       <div class="product-bonus__val">29</div>
                           <svg class="icon icon-bonus ">
                             <use xlink:href="img/icons-svg/symbol/sprite.svg#bonus"></use>
                           </svg></a>
-                  </div><a href="#" itemprop="name" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
-                    <meta itemprop="model" content="Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861">
-                    <meta itemprop="sku" content="trinket-12345">
-                    <div itemprop="brand" itemtype="https://schema.org/Brand" itemscope="">
-                      <meta itemprop="name" content="ACME">
-                    </div></a><a href="#" class="product-card__description"> 
+                  </div><a href="#" itemprop="name" class="product-card__name">Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861</a><a href="#" class="product-card__description"> 
                     <div class="product-card__description-row">Напряжение акк.: 12 В</div>
                     <div class="product-card__description-row">Крутящий момент: 30 Н·м</div>
                     <div class="product-card__description-row">Емкость аккумулятора: 2 А·ч</div>
@@ -10610,13 +10521,6 @@
                   <div class="product-card__bottom">
                     <div class="product-card__rating-wrap">
                       <div class="product-card__rating">
-                        <div itemprop="aggregateRating" itemscope="itemscope" itemtype="https://schema.org/AggregateRating" style="display:none;">
-                          <meta itemprop="ratingValue" content="4.8">
-                          <meta itemprop="ratingCount" content="288">
-                          <meta itemprop="reviewCount" content="288">
-                          <meta itemprop="worstRating" content="0">
-                          <meta itemprop="bestRating" content="5">
-                        </div>
                             <div class="crystal-rating">
                               <div class="crystal-rating__body">
                                 <div class="crystal-rating__active"></div>
