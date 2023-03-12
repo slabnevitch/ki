@@ -753,6 +753,23 @@
 			}
 		// END header fixed on doc. scroll
 
+		// compare slider fixed on doc. scroll
+					
+			if(document.querySelector('.page-compare__cards') !== null){
+				var compareSlider = document.querySelector('.page-compare__cards'),
+				compareObserverCallback = function(entries, observer) {
+					console.log(entries);
+					if(entries[0].isIntersecting){
+						compareSlider.classList.remove('_scroll');
+					}else{
+						compareSlider.classList.add('_scroll');
+					}
+				};
+				var compareObserver = new IntersectionObserver(compareObserverCallback);
+				compareObserver.observe(compareSlider);			
+			}
+		// END compare slider fixed on doc. scroll
+
 		
 
 		// usage: http://ganlanyuan.github.io/tiny-slider/#usage

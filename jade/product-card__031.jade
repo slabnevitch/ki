@@ -2,7 +2,7 @@ extends _misc/main
 
 block title
 	| Сравнение
-	- var pageIndex = 'product_030';
+	- var pageIndex = 'product_031';
 
 block content
 	.page.page-compare
@@ -47,6 +47,10 @@ block content
 								each col in item.cols
 									- for (var i=0; i < 2; i++)
 										.compare-table__col= col
+
+				.compare-table__fixed
+					each item in table
+						.compare-table__title= item.title
 
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
