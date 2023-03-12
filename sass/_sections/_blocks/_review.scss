@@ -56,6 +56,44 @@
 			}
 		}
 	}
+
+	&--comment{
+		margin-left: 24px;
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+
+		@include max-screen($xs){
+			margin-top: 21px;
+		}
+		.person__portrait{
+			width: 20px;
+			height: 20px;
+		}
+
+		.review__options{
+			margin-left: auto;
+		}
+	}
+	&--reply{
+		padding-left: 0;
+		padding-right: 0;
+
+		@include max-screen($xs){
+			margin-top: 21px;
+		}
+
+		.person__top{
+			align-items: center;
+		}
+		.person__portrait{
+			width: 20px;
+			height: 20px;
+		}
+		.review-form{
+			margin-top: 0;
+		}
+	}
 }
 .review__header {
 	display: flex;
@@ -142,6 +180,7 @@
 	visibility: hidden;
 	opacity: 0;
 	transition: all .3s;
+	z-index: 2;
 
 	background-image: url(../img/review/context_bg.svg);
 	background-position: right top;

@@ -1,0 +1,158 @@
+extends _misc/main
+
+block title
+	| Сравнение
+	- var pageIndex = 'product_030';
+
+block content
+	.page.page-compare
+		.wrapper
+			+menu('breadcrumbs', ['главная', 'Сравнение'])
+
+		+backLink('Сравнение', true)
+				.page-top-block
+					a(href="#").std-link Очистить
+
+		.page-compare__tags
+			- var tags = [{name: 'шуруповерты', value: '7'}, {name: 'защитные очки4', value: '4'}, {name: 'наборы бит со сверлами', value: '1'}, {name: 'Сумки для инструментов', value: '11'}, {name: 'ящики и органайзеры', value: '19'}];
+			.wrapper
+				.tags
+					each tag, i in tags
+						div(class=i==0 ? "tag active" : "tag")= tag.name
+							.tag-count= tag.value
+		
+		.page-compare__cards.cards-page-compare
+			.wrapper
+				.cards-page-compare__check
+					label.light-label
+						input(type="checkbox" name="name" class="light-label__input" checked)
+						span.light-label__check
+							+icon('check')
+						span.light-label__caption Показывать только отличия
+
+				//- .cards-page-compare__sl
+				+swiper('compare-cards', true, false, true)			
+					- var cards = [{billet: 'Новинка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'скидка', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}, {billet: '', price: '7 850 ₽', sale: '', sbers: '79', tilte: 'Шуруповерт Elitech ДШ 0110 РЭ', aval: '2 магазинах', iconActive: '0'}, {billet: '', price: '12 590 ₽', sale: '', sbers: '129', tilte: 'Аккумуляторная дрель-шуруповерт Ресанта ДА-14-2Л 75/14/3', aval: '6 магазинах', iconActive: false}, {billet: '', price: '22 899 ₽', sale: '', sbers: '229', tilte: 'Аккумуляторная дрель-шуруповерт WorkMaster АШ-12М', aval: '6 магазинах', iconActive: false}, {billet: '', price: '9 990 ₽', sale: '', sbers: '100', tilte: 'Аккумуляторная дрель-шуруповерт Metabo PowerMaxx BS (кейс)', aval: '6 магазинах', iconActive: false}, {billet: 'уценка', price: '10 990 ₽', sale: '11 990 ₽', sbers: '120', tilte: 'Аккумуляторная дрель-шуруповерт DeWalt DCD996NT (без акб и зу)', aval: '6 магазинах', iconActive: false}, {billet: 'уценка', price: '20 729 ₽', sale: '24 940 ₽', sbers: '249', tilte: 'Аккумуляторная дрель-шуруповерт Bosch GSR 12 V-15 FC 06019F6000', aval: '6 магазинах', iconActive: '0'}];
+					
+					+productCard(cards, 'page-brands/shur/', start = 1, slide = true)
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	script(src="js/libs/swiper/swiper-bundle.min.js")
+
+	//- tiny-slider--------------------------
+	//- script(src="js/libs/tiny-slider/dist/min/tiny-slider.js")
+
+	//-viewerjs --------------------------
+	script(src="js/libs/viewerjs/viewer.js")
+
+	//- wNumb--------------------------
+	script(src="js/libs/wnumb/wNumb.js")
+
+	//- noUiSlider--------------------------
+	script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	script(src="js/libs/rating/ratings.js")
+
+	//- scroll-to-sects--------------------------
+	//- script(src="js/libs/scroll-to-sects/scrolltosect.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+
+	//- counter--------------------------
+	//- script(src="js/libs/counter/counter.js")
+
+//- end VANILLA JS===================================

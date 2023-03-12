@@ -244,10 +244,29 @@
 	}
 	.product-reviews__top{
 		margin-bottom: 0;
+		@include max-screen($sm){
+			margin-bottom: 20px;
+		}
 
 	}
 	.graphs-product-reviews{
 		padding-right: 0;
+	}
+}
+.product-reviews__comments{
+	& > .review{
+		&:not(:last-child){
+			margin-bottom: 20px;
+		}
+	}
+	.person__top{
+		margin-bottom: 0;
+	}
+	.review__header{
+		margin-bottom: 5px;
+	}
+	.review__body{
+		margin-bottom: 0;
 	}
 }
 .comments-product-reviews__header{

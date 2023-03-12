@@ -85,9 +85,124 @@ mixin crystalRating(rating, handler = false)
 //- так: +crystalRating('3,5'), а если нет то +crystalRating('3,5').  
 //- handler -- включение/выключение возможности установки рйтинга пользователем
 
-mixin productCard(cards, path, start = 1)
+mixin productCard(cards, path, start = 1, slide = false)
 	each item, i in cards
-		div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : item.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Offer")
+		if slide == true
+			div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : item.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Offer").swiper-slide
+				.product-card__img-wrap
+					if item.billet != ''
+						div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : item.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
+							.billet__value= item.billet
+							
+							if item.billet == "акция" || item.billet == "скидка"
+								+icon('percents')
+							if item.billet == "уценка"
+								+icon('attention')
+							if item.billet == "Новинка"
+								+icon('flame')
+					
+					a(href="#" alt=item.tilte).product-card__border
+						span.product-card__img
+							img(itemprop="image" src="img/"+path+(i+start)+".jpg" alt="alt")
+				
+				
+				.product-card__price
+					.product-card__actions
+						if item.iconActive === '0'
+							a(href="#").product-card__action.active
+								+icon('favourites')
+							a(href="#").product-card__action
+								+icon('compare')
+						else if item.iconActive === '1'
+							a(href="#").product-card__action
+								+icon('favourites')
+							a(href="#").product-card__action.active
+								+icon('compare')
+						else if item.iconActive == false
+							a(href="#").product-card__action
+								+icon('favourites')
+							a(href="#").product-card__action
+								+icon('compare')
+
+					a(href="#").product-price= item.price
+						if item.sale != ''
+							.product-price-sale= item.sale
+					link(itemprop='availability' href='https://schema.org/InStock')
+					meta(itemprop="price" content=item.price)
+					meta(itemprop="priceCurrency" content="RUB")
+					
+					if item.sbers
+						a(href="#").product-bonus
+							.product-bonus__val= item.sbers
+							+icon('bonus')
+				
+				a(href="#" itemprop="name").product-card__name= item.tilte
+					meta(itemprop='model' content=item.tilte)
+					meta(itemprop='sku' content='trinket-12345')
+					div(itemprop='brand' itemtype='https://schema.org/Brand' itemscope='')
+						meta(itemprop='name' content='ACME')
+				
+				a(href="#").product-card__description 
+					.product-card__description-row Напряжение акк.: 12 В
+					.product-card__description-row Крутящий момент: 30 Н·м
+					.product-card__description-row Емкость аккумулятора: 2 А·ч
+					.product-card__description-row Тип аккумулятора Li-Ion
+					.product-card__description-row Кол-во аккумуляторов: 2 шт.
+					.product-card__description-row Вес 1.2 кг
+
+				.product-card__bottom
+					.product-card__rating-wrap
+						.product-card__rating
+							div(itemprop='aggregateRating' itemscope='itemscope' itemtype='https://schema.org/AggregateRating' style='display:none;')
+								meta(itemprop='ratingValue' content='4.8')
+								meta(itemprop='ratingCount' content='288')
+								meta(itemprop='reviewCount' content='288')
+								meta(itemprop='worstRating' content='0')
+								meta(itemprop='bestRating' content='5')
+							+crystalRating('4,5')
+					if item.billet != ''
+						a(href="#" class=item.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy") Купить
+					else if item.order
+						a(href="#").btn.btn-sm.btn-blue.product-card__buy заказать
+					
+					else if item.analog
+						a(href="#").btn.btn-sm.btn-gray.product-card__buy аналог
+
+					else
+						a(href="#").btn.btn-sm.product-card__buy Купить
+
+					.product-card__info.info-product-card
+						if item.order && item.analog
+							.info-product-card__row Артикул: 002266
+							.info-product-card__row
+								.info-product-card__missing #[span Товар] временно отсутствует
+							.info-product-card__row
+								a(href="#").info-product-card__oneclick Подобрать аналог
+						else if item.order
+							.info-product-card__row Артикул: 002266
+							.info-product-card__row
+								.info-product-card__missing #[span Товар] временно отсутствует
+							.info-product-card__row
+								a(href="#").info-product-card__oneclick Купить в 1 клик
+						
+						else if item.analog
+							.info-product-card__row Артикул: 002266
+							.info-product-card__row Нет в наличии, товар снят с производства 
+						
+						else
+							.info-product-card__row Артикул: 002266
+							.info-product-card__row
+									.info-product-card__aval
+										.info-product-card__avalkey В наличии
+										a(href="#" data-modal-availability).info-product-card__avalvalue
+											span.info-product-card__in= "В "
+											| #{item.aval}
+							.info-product-card__row
+								a(href="#").info-product-card__oneclick Купить в 1 клик
+				
+				a(href="#").tag.compare-remove удалить
+		else
+			div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : item.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Offer")
 				.product-card__img-wrap
 					if item.billet != ''
 						div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : item.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")

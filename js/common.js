@@ -571,9 +571,36 @@
 				
 	    	});
 		}
-		//---------------review-photos-slider
+		//---------------END review-photos-slider
 
-		
+		//--------------compare-slider
+		if(document.querySelector('.compare-cards') !== null){
+			new Swiper('.compare-cards', {
+				observer: true,
+				observeParents: true,
+				slidesPerView: 2,
+				spaceBetween: 11,
+				loop: true,
+				breakpoints: {
+				    // when window width is >= 320px
+
+				    // when window width is >= 480px
+				    480: {
+					    spaceBetween: 16
+				    },
+				    767.98: {
+					    spaceBetween: 16,
+				    	slidesPerView: 3
+				    },
+				    // when window width is >= 640px
+				    959.98: {
+				    	slidesPerView: 4,
+				    	spaceBetween: 16
+				    }
+				}
+			});
+		}
+		//---------------END compare-slider
 		//---------------END Swiper
 
 		// baguetteBox
@@ -757,29 +784,31 @@
 
 		// 	});
 		// }
+		if(document.getElementById('product-image-gallery') !== null){
+			var gallery = new Viewer(document.getElementById('product-image-gallery'), {
+				title: false,
+				toolbar: {
+				    prev: 2,
+				    next: 2
+				},
+				fullscreen: false,
+				movable: false,
+				rotatable: false,
+				zoomable: false,
+				 filter(image) {
+				 	// console.log(image.parentElement.parentElement.classList.contains('swiper-slide-duplicate'));
+				    // return !image.parentElement.parentElement.classList.contains('swiper-slide-duplicate');//для свайпера
+				    if(screen.width >= 767.98){
+				    	return !image.parentElement.classList.contains('swiper-slide-duplicate');
+				    }else{
+				    	return false;
+				    }
+				    // return image.complete;
+				  },
 
-		const gallery = new Viewer(document.getElementById('product-image-gallery'), {
-			title: false,
-			toolbar: {
-			    prev: 2,
-			    next: 2
-			},
-			fullscreen: false,
-			movable: false,
-			rotatable: false,
-			zoomable: false,
-			 filter(image) {
-			 	// console.log(image.parentElement.parentElement.classList.contains('swiper-slide-duplicate'));
-			    // return !image.parentElement.parentElement.classList.contains('swiper-slide-duplicate');//для свайпера
-			    if(screen.width >= 767.98){
-			    	return !image.parentElement.classList.contains('swiper-slide-duplicate');
-			    }else{
-			    	return false;
-			    }
-			    // return image.complete;
-			  },
+			});
 
-		});
+		}
 
 		
 	});//DOMContentLoaded

@@ -118,7 +118,7 @@ div(class=pageIndex=='product_027' ? "widemodal widemodal-answers" : "widemodal 
 
 						footer.review__footer
 							.review__actions
-								button(type="button").review__collapse Свернуть
+								button(type="button").review__collapse Читать полностью
 								.review__options
 									a(href="#").review__answer Ответить
 									a(href="#").review__answer.review__answer--useful Отзыв был полезен?
@@ -163,7 +163,7 @@ div(class=pageIndex=='product_027' ? "widemodal widemodal-answers" : "widemodal 
 									else
 										a(href="#") Пожаловаться
 
-						.review__body
+						.review__body.review__body--expanded
 							.review__div
 								p.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
 
@@ -180,6 +180,102 @@ div(class=pageIndex=='product_027' ? "widemodal widemodal-answers" : "widemodal 
 									a(href="#").review__dislike.review__option
 										+icon('unlike')
 										.review__dislike-count 0
+
+						article.review.review--comment
+							header.review__header
+								.person
+									.person__top
+										.person__portrait
+											img(src="img/page-product-card/worker.jpg" alt="alt")
+										.person__info
+											.person__name Иванов Иван
+											.person__date 12 декабря 2021
+								
+								.review__context.context-review
+									+icon('context')
+									.context-review__drop 
+										if pageIndex == 'product_026'
+											a(href="#") Редактировать
+											a(href="#") Удалить
+										else
+											a(href="#") Пожаловаться
+
+							.review__body.review__body--expanded
+								.review__div
+									p.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+
+							footer.review__footer
+								.review__actions
+									.review__options
+										a(href="#").review__comments.review__option
+											+icon('chat')
+											.review__comments-count 1
+										a(href="#").review__like.review__option.active
+											+icon('like')
+											.review__like-count 1
+										a(href="#").review__dislike.review__option
+											+icon('unlike')
+											.review__dislike-count 0
+			
+						article.review.review--reply
+							header.review__header
+								.person
+									.person__top
+										.person__portrait
+											img(src="img/page-product-card/worker.jpg" alt="alt")
+										.person__info
+											.person__name Ник
+								
+								.review__context.context-review
+									+icon('context')
+									.context-review__drop 
+										if pageIndex == 'product_026'
+											a(href="#") Редактировать
+											a(href="#") Удалить
+										else
+											a(href="#") Пожаловаться
+
+							form.form.review-form(action='#')
+								.form__row
+									label.form__label
+										input.form__input(type='text' name='name' placeholder="Ник")
+					- for (var i=0; i < 3; i++)
+						article.review
+							header.review__header
+								.person
+									.person__top
+										.person__portrait
+											img(src="img/page-product-card/worker.jpg" alt="alt")
+										.person__info
+											.person__name Иванов Иван
+											.person__date 12 декабря 2021
+								
+								.review__context.context-review
+									+icon('context')
+									.context-review__drop 
+										if pageIndex == 'product_026'
+											a(href="#") Редактировать
+											a(href="#") Удалить
+										else
+											a(href="#") Пожаловаться
+
+							.review__body.review__body--expanded
+								.review__div
+									p.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+
+							footer.review__footer
+								.review__actions
+									button(type="button").review__hide-comments 1 комментарий
+									.review__options
+										a(href="#").review__comments.review__option
+											+icon('chat')
+											.review__comments-count 1
+										a(href="#").review__like.review__option.active
+											+icon('like')
+											.review__like-count 1
+										a(href="#").review__dislike.review__option
+											+icon('unlike')
+											.review__dislike-count 0
 			.addreview__product
 					- cards = [{billet: '', price: '14 729 ₽', sale: '18 411 ₽', sbers: '29', tilte: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', aval: '12 магазинах', iconActive: '1'},];
 					

@@ -1,0 +1,96 @@
+/*--------------------page-compare----------------------*/
+.page-compare{
+	.back-block-inner{
+		margin-bottom: 0;
+
+		@include max-screen($md){
+			margin-bottom: 16px;
+			position: relative;
+		}
+
+		@include min-screen($md){
+			border-bottom: none;
+		}
+	}
+	.back-block{
+		@include max-screen($md){
+			padding-bottom: 12px;
+			
+		}
+	}
+	.back-title{
+		@include max-screen($md){
+			margin-top: 5px;
+		}
+	}
+	.back-block-right{
+		@include max-screen($md){
+			position: absolute;
+			right: 0;
+			display: block;
+		}
+
+		.std-link{
+			color: rgba(#000, 0.4);
+
+			@include max-screen($md){
+				padding: 3px 14px;
+				border: 1px solid #C4C4C4;
+				border-radius: 23px;
+				text-decoration: none;
+			}	
+		}
+	}
+}
+.page-compare__tags{
+	margin-bottom: 28px;
+
+	@include max-screen($xs){
+		display: none;
+	}
+}
+.page-compare__cards{
+
+}
+.cards-page-compare{
+
+}
+.cards-page-compare__check{
+	margin-bottom: 23px;
+}
+.compare-cards{
+	.swiper-button-prev,
+	.swiper-button-next{
+		display: none;
+	}
+
+	&:after{
+		content: '';
+		position: absolute;
+		right: -5px;
+		top: 0;
+		height: 100%;
+		width: 250px;
+		background-image: url($img + "gradient-line.svg");
+		background-position: 100% 0;
+		background-repeat: repeat-y;
+		background-size: contain;
+		z-index: 2;
+		pointer-events: none;
+
+		@include max-screen($xs){
+			width: 150px;
+		}
+	}
+}
+.compare-remove{
+	margin-top: 16px;
+	max-width: 125px;
+	transition: opacity .2s;
+
+	&:hover, &:active, &:focus{
+		opacity: 0.5;
+	}
+	
+}
+/*--------------------END page-compare----------------------*/ 
