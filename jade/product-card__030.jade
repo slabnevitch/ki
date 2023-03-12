@@ -35,6 +35,19 @@ block content
 					- var cards = [{billet: 'Новинка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'скидка', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}, {billet: '', price: '7 850 ₽', sale: '', sbers: '79', tilte: 'Шуруповерт Elitech ДШ 0110 РЭ', aval: '2 магазинах', iconActive: '0'}, {billet: '', price: '12 590 ₽', sale: '', sbers: '129', tilte: 'Аккумуляторная дрель-шуруповерт Ресанта ДА-14-2Л 75/14/3', aval: '6 магазинах', iconActive: false}, {billet: '', price: '22 899 ₽', sale: '', sbers: '229', tilte: 'Аккумуляторная дрель-шуруповерт WorkMaster АШ-12М', aval: '6 магазинах', iconActive: false}, {billet: '', price: '9 990 ₽', sale: '', sbers: '100', tilte: 'Аккумуляторная дрель-шуруповерт Metabo PowerMaxx BS (кейс)', aval: '6 магазинах', iconActive: false}, {billet: 'уценка', price: '10 990 ₽', sale: '11 990 ₽', sbers: '120', tilte: 'Аккумуляторная дрель-шуруповерт DeWalt DCD996NT (без акб и зу)', aval: '6 магазинах', iconActive: false}, {billet: 'уценка', price: '20 729 ₽', sale: '24 940 ₽', sbers: '249', tilte: 'Аккумуляторная дрель-шуруповерт Bosch GSR 12 V-15 FC 06019F6000', aval: '6 магазинах', iconActive: '0'}];
 					
 					+productCard(cards, 'page-brands/shur/', start = 1, slide = true)
+
+		.wrapper.page-compare__chars
+			.compare-table
+				- var table = [{title: 'Тип инструмента', cols: ['Дрель-шуруповерт', 'Ударная дрель-шуруповерт', 'Дрель-шуруповерт','Дрель-шуруповерт']}, {title: 'Класс товара', cols: ['Бытовой', 'Профессиональный', 'Бытовой', 'Профессиональный']}, {title: 'Габариты', cols: ['18*10*10 см', '27*12*13 см', '18*10*10 см','27*12*13 см']}, {title: 'Масса', cols: ['0,9 кг', '1,2 кг', '0,9 кг', '1,2 кг']}, {title: 'Тип питания', cols: ['от аккумулятора', 'от аккумулятора', 'от аккумулятора', 'от аккумулятора']}, {title: 'Напряжение аккамулятора', cols: ['12 в', '18 в', '12 в', '18 в']}, {title: 'Крутящий момент', cols: ['14 H*m', '14 H*m', '14 H*m', '14 H*m']}, {title: 'Число оборотов', cols: ['450 об/мин', '400 об/мин','450 об/мин', '400 об/мин']}];
+
+					each item in table
+						.compare-table__row
+							.compare-table__title= item.title
+							.compare-table__cols
+								each col in item.cols
+									- for (var i=0; i < 2; i++)
+										.compare-table__col= col
+
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 

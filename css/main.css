@@ -18711,6 +18711,70 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.5;
 }
 
+.page-compare__chars {
+  position: relative;
+}
+
+.page-compare__chars:after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-image: url("../img/gradient-line.svg");
+  background-position: 100% 0;
+  background-repeat: repeat-y;
+  background-size: contain;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .page-compare__chars:after {
+    width: 150px;
+  }
+}
+
+.compare-table {
+  overflow-x: auto;
+  margin-bottom: 30px;
+}
+
+.compare-table__row {
+  margin-bottom: 40px;
+}
+
+.compare-table__title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 1.25rem;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+@media only screen and (max-width: 959.98px) {
+  .compare-table__title {
+    font-size: 14px;
+  }
+}
+
+.compare-table__cols {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.compare-table__col {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 224px;
+  -ms-flex: 0 0 224px;
+  flex: 0 0 224px;
+  margin-right: 16px;
+}
+
 /*--------------------END page-compare----------------------*/
 /*--------------------product-card-tabs----------------------*/
 .page-product__features {

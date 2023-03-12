@@ -93,4 +93,51 @@
 	}
 	
 }
+.page-compare__chars{
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		right: -5px;
+		top: 0;
+		height: 100%;
+		width: 250px;
+		background-image: url($img + "gradient-line.svg");
+		background-position: 100% 0;
+		background-repeat: repeat-y;
+		background-size: contain;
+		z-index: 2;
+		pointer-events: none;
+
+		@include max-screen($xs){
+			width: 150px;
+		}
+	}
+}
+.compare-table{
+	overflow-x: auto;
+	margin-bottom: 30px;
+}
+.compare-table__row{
+	margin-bottom: 40px;
+}
+.compare-table__title{
+	margin-bottom: 12px;
+	font-weight: 700;
+	font-size: rem(22);
+	line-height: rem(20);
+	position: sticky;
+
+	@include max-screen($md){
+		font-size: 14px;
+	}
+}
+.compare-table__cols{
+	display: flex;
+
+}
+.compare-table__col{
+	flex: 0 0 224px;
+	margin-right: 16px;
+}
 /*--------------------END page-compare----------------------*/ 
