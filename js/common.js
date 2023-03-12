@@ -28,9 +28,13 @@
 		// END open/close catalog-sort__select fstdropdown
 
 		// catalog product availabel modal open
-		if(targ.classList.contains('info-product-card__avalvalue') || targ.closest('.info-product-card__avalvalue') !== null){
+		if(targ.hasAttribute('data-modal-availability')){
 			e.preventDefault();
 			document.body.classList.add('catalog-availability-modal-visible', 'covered');
+		}
+		if(targ.hasAttribute('data-modal-address')){
+			e.preventDefault();
+			document.body.classList.add('address-modal-visible', 'covered');
 		}
 		
 		// END catalog product availabel modal open
@@ -217,7 +221,7 @@
 		}
 		// END delivery-point-modal open/close
 		
-		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null && targ.closest('.availability-modal') !== null){
+		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null /*&& targ.closest('.availability-modal') !== null*/){
 			document.body.classList.remove('catalog-availability-modal-visible');
 			document.body.classList.add('address-modal-single-visible', 'map-with-modal', 'fullscreen-map-visible');
 		}
@@ -229,6 +233,34 @@
 			}
 		}
 		// END map modals toggle
+
+		// widemodals hide
+		if(targ.classList.contains('widemodal__close') || targ.closest('.widemodal__close') !== null){
+			targ.closest('.widemodal').classList.add('modal-hide');
+		}
+		// END widemodals hide
+
+		// review-body expand/collapse
+		if(targ.classList.contains('review__collapse') || targ.closest('.review__collapse')){
+			targ.closest('.review').querySelector('.review__body')
+				.classList.toggle('review__body--expanded');
+			console.log(targ.textContent)
+			targ.textContent = targ.textContent.toLowerCase() ==='свернуть' ? 'Читать полностью' : 'Свернуть';
+		}	
+		// END review-body expand/collapse
+
+		// review context menu
+		if(targ.classList.contains('review__context') || targ.closest('.review__context ')){
+			if (isMobile.any()) {
+				targ.closest('.review').classList.add('review-context-visible');
+				if (screen.width <= 959.98){
+					document.body.classList.add('covered');
+
+				}
+			}
+		}
+		// ENDreview context menu
+
 
 		// header search results toggle
 			// var headerSearchInputs = document.querySelectorAll('.search-header__input');
@@ -479,7 +511,112 @@
 				}
 			});
 		}
+
+		//---------------product-card-nav
+		if(document.querySelector('.screen-product-thumbs') !== null){
+			  var screenProductNav = new Swiper('.screen-product-thumbs', {
+			 	observer: true,
+				observeParents: true,
+				slidesPerView: 5,
+				spaceBetween: 16,
+
+			  // Navigation arrows
+			  navigation: {
+			  	nextEl: '.swiper-button-next',
+			  	prevEl: '.swiper-button-prev',
+			  }
+			});
+		}
+		//---------------END product-card-nav
+		
+		//---------------product-card-screen
+		if(document.querySelector('.screen-product-slider') !== null){
+			var screenProductSwiper = new Swiper('.screen-product-slider', {
+				observer: true,
+				observeParents: true,
+				slidesPerView: 1,
+				loop: true,
+				pagination: {
+				  	el: '.swiper-pagination',
+				  	type: 'bullets',
+				  	clickable: true
+				},
+		    	thumbs: {
+		    		swiper: screenProductNav
+		    	}
+			});
+		}
+		//---------------END product-card-screen
+
+		//---------------review-photos-slider
+		if(document.querySelector('.review-photos-slider') !== null){
+			var reviewPhotosSwiper = new Swiper('.review-photos-slider', {
+				observer: true,
+				observeParents: true,
+				slidesPerView: 2,
+				spaceBetween: 8,
+				loop: true,
+				watchSlidesProgress: true,//предотвращает прокрутку слайдов при клике на ссылку внутри слайда
+				navigation: {
+					nextEl: '.product-reviews__photos .slider-nav--next',
+					prevEl: '.product-reviews__photos .slider-nav--prev'
+				}
+				// breakpoints: {
+				//     // when window width is >= 320px
+				//     576: {
+				//     	slidesPerView: 3,
+				//     	spaceBetween: 20
+				//     }
+				// }
+				
+	    	});
+		}
+		//---------------END review-photos-slider
+
+		//--------------compare-slider
+		if(document.querySelector('.compare-cards') !== null){
+			new Swiper('.compare-cards', {
+				observer: true,
+				observeParents: true,
+				slidesPerView: 2,
+				spaceBetween: 11,
+				loop: true,
+				breakpoints: {
+				    // when window width is >= 320px
+
+				    // when window width is >= 480px
+				    480: {
+					    spaceBetween: 16
+				    },
+				    767.98: {
+					    spaceBetween: 16,
+				    	slidesPerView: 3
+				    },
+				    // when window width is >= 640px
+				    959.98: {
+				    	slidesPerView: 4,
+				    	spaceBetween: 16
+				    }
+				}
+			});
+		}
+		//---------------END compare-slider
 		//---------------END Swiper
+
+		// baguetteBox
+			if(document.querySelector('.gallery') !== null){
+				baguetteBox.run('.gallery', {
+					 captions: function(element) {
+				        return'<button type="button" class="photo-remove">'+
+                                '<svg class="icon icon-remove ">'+
+                                  '<use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>'+
+                                '</svg>'+
+                          '</button>';
+				    }
+					
+				});
+			}
+		// END baguetteBox
 
 
 		// catalog-filter address list toggle
@@ -616,55 +753,79 @@
 			}
 		// END header fixed on doc. scroll
 
+		// compare slider fixed on doc. scroll
+					
+			if(document.querySelector('.page-compare__cards') !== null){
+				var compareSlider = document.querySelector('.page-compare__cards'),
+				compareObserverCallback = function(entries, observer) {
+					console.log(entries);
+					if(entries[0].isIntersecting){
+						compareSlider.classList.remove('_scroll');
+					}else{
+						compareSlider.classList.add('_scroll');
+					}
+				};
+				var compareObserver = new IntersectionObserver(compareObserverCallback);
+				compareObserver.observe(compareSlider);			
+			}
+		// END compare slider fixed on doc. scroll
+
 		
 
 		// usage: http://ganlanyuan.github.io/tiny-slider/#usage
-		if(document.querySelector('.my-slider') !== null){
-			var slider = tns({
-			container: '.my-slider',
-			mode: 'carousel', //'gallery' - для фэйд-анимации отдельных слайдов
-			items: 1,
-			// slideBy: 1, // кол-во слайдов, перематывающихся за 1 клик. Не работает с mode: 'gallery'
-			// autoplay: true,
-			// controlsContainer: '.hits.carouseled .block-header__nav', // внутри .block-header__nav должны быть 2 заранее отстилизованные кнопки
-			navContainer: "#customize-thumbnails",//конткйнер для навигации миниатюрами
-			navAsThumbnails: true, //включение навигации миниатюрами
-			mouseDrag: true,
-			loop: false,
-			gutter: 30 //добавляет padding, а не margin! Нужна обертка вокруг содержимого каждого слайда!
+		// if(document.querySelector('.my-slider') !== null){
+		// 	var slider = tns({
+		// 	container: '.my-slider',
+		// 	mode: 'carousel', //'gallery' - для фэйд-анимации отдельных слайдов
+		// 	items: 1,
+		// 	// slideBy: 1, // кол-во слайдов, перематывающихся за 1 клик. Не работает с mode: 'gallery'
+		// 	// autoplay: true,
+		// 	// controlsContainer: '.hits.carouseled .block-header__nav', // внутри .block-header__nav должны быть 2 заранее отстилизованные кнопки
+		// 	navContainer: "#customize-thumbnails",//конткйнер для навигации миниатюрами
+		// 	navAsThumbnails: true, //включение навигации миниатюрами
+		// 	mouseDrag: true,
+		// 	loop: false,
+		// 	gutter: 30 //добавляет padding, а не margin! Нужна обертка вокруг содержимого каждого слайда!
+
+		// 	});
+
+		// 	var navSlider = tns({
+		// 	container: '#customize-thumbnails',
+		// 	mode: 'carousel', //'gallery' - для фэйд-анимации отдельных слайдов
+		// 	items: 1,
+		// 	mouseDrag: true,
+		// 	loop: false,
+		// 	controls: false,
+		// 	nav: false,
+		// 	gutter: 30 //добавляет padding, а не margin! Нужна обертка вокруг содержимого каждого слайда!
+
+		// 	});
+		// }
+		if(document.getElementById('product-image-gallery') !== null){
+			var gallery = new Viewer(document.getElementById('product-image-gallery'), {
+				title: false,
+				toolbar: {
+				    prev: 2,
+				    next: 2
+				},
+				fullscreen: false,
+				movable: false,
+				rotatable: false,
+				zoomable: false,
+				 filter(image) {
+				 	// console.log(image.parentElement.parentElement.classList.contains('swiper-slide-duplicate'));
+				    // return !image.parentElement.parentElement.classList.contains('swiper-slide-duplicate');//для свайпера
+				    if(screen.width >= 767.98){
+				    	return !image.parentElement.classList.contains('swiper-slide-duplicate');
+				    }else{
+				    	return false;
+				    }
+				    // return image.complete;
+				  },
 
 			});
 
-			var navSlider = tns({
-			container: '#customize-thumbnails',
-			mode: 'carousel', //'gallery' - для фэйд-анимации отдельных слайдов
-			items: 1,
-			mouseDrag: true,
-			loop: false,
-			controls: false,
-			nav: false,
-			gutter: 30 //добавляет padding, а не margin! Нужна обертка вокруг содержимого каждого слайда!
-
-			});
 		}
-		// console.log(Viewer)
-		// const gallery = new Viewer(document.getElementById('gallery'), {
-		// 	title: false,
-		// 	toolbar: {
-		// 	    prev: 4,
-		// 	    next: 4
-		// 	},
-		// 	// fullscreen: false,
-		// 	movable: false,
-		// 	rotatable: false,
-		// 	 filter(image) {
-		// 	 	console.log(image.parentElement.parentElement.classList.contains('tns-slide-cloned'));
-		// 	    // return !image.parentElement.parentElement.classList.contains('swiper-slide-duplicate');//для свайпера
-		// 	    return !image.parentElement.parentElement.classList.contains('tns-slide-cloned');
-		// 	    // return image.complete;
-		// 	  },
-
-		// });
 
 		
 	});//DOMContentLoaded
