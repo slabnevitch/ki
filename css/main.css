@@ -3626,7 +3626,7 @@ body {
     font-size: 16px;
   }
 }
-.lock body {
+.lock body, body.lock {
   overflow: hidden;
   -ms-touch-action: none;
   touch-action: none;

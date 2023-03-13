@@ -237,7 +237,7 @@
 		// widemodals hide
 		if(targ.classList.contains('widemodal__close') || targ.closest('.widemodal__close') !== null){
 			targ.closest('.widemodal').classList.add('modal-hide');
-			// document.documentElement.classList.remove('lock');
+			document.body.classList.remove('lock');
 		}
 		// END widemodals hide
 
