@@ -3889,7 +3889,8 @@ body {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.lock body {
+.lock body,
+body.lock {
   overflow: hidden;
   -ms-touch-action: none;
   touch-action: none;
@@ -12012,14 +12013,15 @@ h6 {
   margin-bottom: 28px;
 }
 
+.page-compare__cards._scroll .cards-page-compare__check,
 .page-compare__cards._scroll .product-card__buy,
 .page-compare__cards._scroll .product-card__info,
 .page-compare__cards._scroll .compare-remove {
   display: none;
 }
 
-.page-compare__cards._scroll .cards-page-compare__check {
-  opacity: 0;
+.tag-count {
+  margin-left: 7px;
 }
 
 .cards-page-compare__check {
@@ -15571,7 +15573,7 @@ h6 {
   }
 
   .page-product__represent-container {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 
   .product-view {
@@ -16919,6 +16921,14 @@ h6 {
   }
 
   .catalog-filtered-tag {
+    cursor: pointer;
+  }
+
+  .screen-product-view__slide {
+    cursor: pointer;
+  }
+
+  .screen-product-nav__slide {
     cursor: pointer;
   }
 
