@@ -103,20 +103,23 @@ div(class=pageIndex=='product_015' ? "wrapper-smart page-product__top page-produ
 						button(type="button").btn.btn-lg в корзину
 						a(href="#").btn.btn-lg.product-oneclick купить в 1 клик
 
-				.product-sidebar__status.status-product-sidebar
-					if pageIndex=='product_015'
+				if pageIndex=='product_015'
+					.product-sidebar__status.status-product-sidebar
 						.status-product-sidebar__title Уцененный товар
 						.status-product-sidebar__text Причина уценки: на корпусе инструмента присутствуют мелкие царапины 
-					
-					else if pageIndex=='product_017' 
+				
+				else if pageIndex=='product_017' 
+					.product-sidebar__status.status-product-sidebar
 						.status-product-sidebar__title Архивный товар
 						.status-product-sidebar__text К сожалению данный товар снят с производства или не поставляется по другим причинам. 
-					
-					else if pageIndex=='product_018'
+				
+				else if pageIndex=='product_018'
+					.product-sidebar__status.status-product-sidebar
 						.status-product-sidebar__title Товар временно отсутствует 
 						.status-product-sidebar__text Обратите внимание, что стоимость данного товара может измениться при заказе. 
-					
-					else if pageIndex=='product_019'
+				
+				else if pageIndex=='product_019'
+					.product-sidebar__status.status-product-sidebar
 						.status-product-sidebar__title Акционный товар 
 						.status-product-sidebar__text Этот товар участвует в акции. С подробностями акции можно ознакомиться здесь.
 					

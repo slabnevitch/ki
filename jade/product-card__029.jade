@@ -2,7 +2,7 @@ extends _misc/main
 
 block title
 	| Сравнение
-	- var pageIndex = 'product_031';
+	- var pageIndex = 'product_029';
 
 block content
 	.page.page-compare
@@ -31,12 +31,11 @@ block content
 						span.light-label__caption Показывать только отличия
 
 				//- .cards-page-compare__sl
-				+swiper('compare-cards', true, false, true)			
+				+swiper('compare-cards', true, false, true)
 					include _includes/page-compare-slider
 
 		.wrapper.page-compare__chars
-			.compare-table
-				include _includes/page-compare-table
+			include _includes/page-compare-table
 
 block page-scripts
 	//- SERVIVE FUNCTIONS==================

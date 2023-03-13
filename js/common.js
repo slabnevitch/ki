@@ -237,6 +237,7 @@
 		// widemodals hide
 		if(targ.classList.contains('widemodal__close') || targ.closest('.widemodal__close') !== null){
 			targ.closest('.widemodal').classList.add('modal-hide');
+			// document.documentElement.classList.remove('lock');
 		}
 		// END widemodals hide
 
@@ -252,9 +253,9 @@
 		// review context menu
 		if(targ.classList.contains('review__context') || targ.closest('.review__context ')){
 			if (isMobile.any()) {
-				targ.closest('.review').classList.add('review-context-visible');
+				targ.closest('.review').classList.toggle('review-context-visible');
 				if (screen.width <= 959.98){
-					document.body.classList.add('covered');
+					document.body.classList.toggle('covered');
 
 				}
 			}
@@ -580,7 +581,7 @@
 				observeParents: true,
 				slidesPerView: 2,
 				spaceBetween: 11,
-				loop: true,
+				// loop: true,
 				breakpoints: {
 				    // when window width is >= 320px
 
@@ -744,8 +745,14 @@
 					// console.log(entries);
 					if(entries[0].isIntersecting){
 						headerElem.classList.remove('_scroll');
+						if (document.querySelector('.page-compare__cards') !== null) {
+							document.querySelector('.page-compare__cards').classList.remove('_scroll');
+						}
 					}else{
 						headerElem.classList.add('_scroll');
+						if (document.querySelector('.page-compare__cards') !== null) {
+							document.querySelector('.page-compare__cards').classList.add('_scroll');
+						}
 					}
 				};
 				var headerObserver = new IntersectionObserver(observerCallback);
@@ -755,19 +762,19 @@
 
 		// compare slider fixed on doc. scroll
 					
-			if(document.querySelector('.page-compare__cards') !== null){
-				var compareSlider = document.querySelector('.cards-page-compare__check'),
-				compareObserverCallback = function(entries, observer) {
-					console.log(entries);
-					if(entries[0].isIntersecting){
-						document.querySelector('.page-compare__cards').classList.remove('_scroll');
-					}else{
-						document.querySelector('.page-compare__cards').classList.add('_scroll');
-					}
-				};
-				var compareObserver = new IntersectionObserver(compareObserverCallback);
-				compareObserver.observe(compareSlider);			
-			}
+			// if(document.querySelector('.page-compare__cards') !== null){
+			// 	var compareSlider = document.querySelector('.cards-page-compare__check'),
+			// 	compareObserverCallback = function(entries, observer) {
+			// 		console.log(entries);
+			// 		if(entries[0].isIntersecting){
+			// 			document.querySelector('.page-compare__cards').classList.remove('_scroll');
+			// 		}else{
+			// 			document.querySelector('.page-compare__cards').classList.add('_scroll');
+			// 		}
+			// 	};
+			// 	var compareObserver = new IntersectionObserver(compareObserverCallback);
+			// 	compareObserver.observe(compareSlider);			
+			// }
 		// END compare slider fixed on doc. scroll
 
 		
