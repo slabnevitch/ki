@@ -1,0 +1,35 @@
+.profile-personal
+	.profile-personal__loyalty Заполните профиль и получите карту лояльности
+	
+	.profile-user
+		.profile-user__img._fit
+			button(type="button").photo-remove
+				+icon('remove')
+			img._fit-img(src="img/page-profile/nik.jpg" alt="alt")
+		
+		.profile-user__info
+			.profile-user__miniature.miniature-profile-user
+				.miniature-profile-user__img
+					img(src="img/page-profile/nik.jpg" alt="alt")
+				.miniature-profile-user__text
+					.profile-user__name Николай
+					.profile-user__note Ваша миниатюра на сайте
+			 
+			a(href="#").profile-user__add-photo + Прикрепить фото профиля
+
+	.form__row
+		.form__row-title.form__row-title--required Персональные данные
+			label.form__label
+				input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Фамилия*' value="Лобачевский")
+
+			label.form__label
+				input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Имя*' value="Николай")
+			
+			label.form__label
+				input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Отчество' value="Иванович")						
+			
+			label.form__label							
+				input.form__input.form__input--bg(autocomplete="off" type='text' name='email' placeholder='Email*' value="nik_loba4hev@gmail.com")
+			
+			label.form__label
+				input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Телефон*' value="8 961 123-45-67")

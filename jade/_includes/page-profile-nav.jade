@@ -1,0 +1,7 @@
+- var nav = ['Личная информация', 'Мои документы', 'История покупок', 'Избранное', 'Под заказ', 'Уведомления', 'Мои отзывы', 'Мои рекомендации', 'Выйти'];
+aside.page-profile__sidebar
+	nav.page-profile__nav
+		ul.profile-menu
+			each item, i in nav
+				li.profile-menu__item
+					a(href="#" class=i==navIndex ? "profile-menu__link active" : "profile-menu__link")= item
