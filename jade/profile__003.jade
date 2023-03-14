@@ -2,7 +2,7 @@ extends _misc/main
 
 block title
 	| Профиль
-	- var pageIndex = 'profile_001';
+	- var pageIndex = 'profile_003';
 	- var navIndex = '0';
 
 block content
@@ -13,6 +13,7 @@ block content
 		//- .page-cart__top
 		if pageIndex == 'profile_001'
 			+backLink('Привет, Гость', false)
+		
 		else
 			+backLink('Привет, Николай', false)
 		

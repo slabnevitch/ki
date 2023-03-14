@@ -2,7 +2,7 @@ extends _misc/main
 
 block title
 	| Профиль
-	- var pageIndex = 'profile_001';
+	- var pageIndex = 'profile_004';
 	- var navIndex = '0';
 
 block content
@@ -10,11 +10,13 @@ block content
 		.wrapper
 			+menu('breadcrumbs', ['главная', 'Профиль', ' Личная информация'])
 
-		//- .page-cart__top
-		if pageIndex == 'profile_001'
-			+backLink('Привет, Гость', false)
-		else
-			+backLink('Привет, Николай', false)
+		+backLink('Привет, Николай', true)
+			.page-top-block
+				.page-top-block__content
+					img(src="img/page-profile/check-lg.svg" alt="alt")
+				.page-top-block__text дисконтная 
+					br
+					| карта
 		
 		.wrapper-smart
 			.wrapper-flex.page-profile__main

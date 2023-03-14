@@ -4,4 +4,4 @@ aside.page-profile__sidebar
 		ul.profile-menu
 			each item, i in nav
 				li.profile-menu__item
-					a(href="#" class=i==navIndex ? "profile-menu__link active" : "profile-menu__link")= item
+					a(href="#" class=i.toString()==navIndex ? "profile-menu__link active" : "profile-menu__link")= item

@@ -3,33 +3,116 @@
 	
 	.profile-user
 		.profile-user__img._fit
-			button(type="button").photo-remove
-				+icon('remove')
-			img._fit-img(src="img/page-profile/nik.jpg" alt="alt")
+			if pageIndex == 'profile_001' || pageIndex == 'profile_002'
+
+			else
+				button(type="button").photo-remove
+					+icon('remove')
+				img._fit-img(src="img/page-profile/nik.jpg" alt="alt")
 		
 		.profile-user__info
 			.profile-user__miniature.miniature-profile-user
 				.miniature-profile-user__img
-					img(src="img/page-profile/nik.jpg" alt="alt")
+					if pageIndex == 'profile_001' || pageIndex == 'profile_002'
+					else
+						img(src="img/page-profile/nik.jpg" alt="alt")
 				.miniature-profile-user__text
-					.profile-user__name Николай
+					if pageIndex == 'profile_001'
+						.profile-user__name Гость
+					else
+						.profile-user__name Николай
+					
 					.profile-user__note Ваша миниатюра на сайте
-			 
+			
 			a(href="#").profile-user__add-photo + Прикрепить фото профиля
 
-	.form__row
-		.form__row-title.form__row-title--required Персональные данные
-			label.form__label
-				input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Фамилия*' value="Лобачевский")
 
-			label.form__label
-				input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Имя*' value="Николай")
+	form(action="#" class="form")
+		if pageIndex == 'profile_001'
+			.form__row
+				.form__row-title.form__row-title--required Персональные данные
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Фамилия*')
+
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Имя*')
+				
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Отчество')						
+				
+				label.form__label							
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='email' placeholder='Email*')
+				
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Телефон*')
 			
-			label.form__label
-				input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Отчество' value="Иванович")						
+			.form__row.profile-personal__address
+				.form__row-title.form__row-title--required Адрес доставки
+					a(href="#").std-link Добавить адрес доставки
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='city' placeholder='Город' value="")
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='street' placeholder='Улица' value="")
+				
+				.form__row-flex
+					label.form__label
+						input.form__input.form__input--bg(autocomplete="off" type='text' name='street' placeholder='кв/офис' value="")
+					label.form__label
+						input.form__input.form__input--bg(autocomplete="off" type='text' name='street' placeholder='этаж' value="")
+					label.form__label
+						input.form__input.form__input--bg(autocomplete="off" type='text' name='street' placeholder='подъезд' value="")
+
+				label.light-label
+					input(type="checkbox" name="name" class="light-label__input" checked)
+					span.light-label__check
+						+icon('check')
+					span.light-label__caption Я даю согласие на обработку своих персональных данных в соответсвии с #[a(href="#") Политикой в отношении обработки персональных данных] и #[a(href="#") Пользовательским соглашением.]
+
+				if pageIndex == 'profile_001'
+					button(type="submit").btn.btn-lg.btn-bonus.btn-gray ОФОРМИТЬ БОНУСНУЮ КАРТУ
+				else
+					button(type="submit").btn.btn-lg.btn-bonus ОФОРМИТЬ БОНУСНУЮ КАРТУ
+		else
+			.form__row
+				.form__row-title.form__row-title--required Персональные данные
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Фамилия*' value="Лобачевский")
+
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='name' placeholder='Имя*' value="Николай")
+				
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Отчество' value="Иванович")						
 			
-			label.form__label							
-				input.form__input.form__input--bg(autocomplete="off" type='text' name='email' placeholder='Email*' value="nik_loba4hev@gmail.com")
-			
-			label.form__label
-				input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Телефон*' value="8 961 123-45-67")
+				label.form__label							
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='email' placeholder='Email*' value="nik_loba4hev@gmail.com")
+				
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Телефон*' value="8 961 123-45-67")
+		
+			.form__row.profile-personal__address
+				.form__row-title.form__row-title--required Адрес доставки
+					a(href="#").std-link Добавить адрес доставки
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='city' placeholder='' value="Краснодар")
+				label.form__label
+					input.form__input.form__input--bg(autocomplete="off" type='text' name='street' placeholder='' value="Красная 152")
+				
+				.form__row-flex
+					label.form__label
+						input.form__input.form__input--bg(autocomplete="off" type='text' name='street' placeholder='кв/офис' value="")
+					label.form__label
+						input.form__input.form__input--bg(autocomplete="off" type='text' name='street' placeholder='этаж' value="")
+					label.form__label
+						input.form__input.form__input--bg(autocomplete="off" type='text' name='street' placeholder='подъезд' value="")
+
+				label.light-label
+					input(type="checkbox" name="name" class="light-label__input" checked)
+					span.light-label__check
+						+icon('check')
+					span.light-label__caption Я даю согласие на обработку своих персональных данных в соответсвии с #[a(href="#") Политикой в отношении обработки персональных данных] и #[a(href="#") Пользовательским соглашением.]
+
+				if pageIndex == 'profile_001' || pageIndex == 'profile_002'
+					button(type="submit").btn.btn-lg.btn-bonus.btn-gray ОФОРМИТЬ БОНУСНУЮ КАРТУ
+				else
+					button(type="submit").btn.btn-lg.btn-bonus ОФОРМИТЬ БОНУСНУЮ КАРТУ
