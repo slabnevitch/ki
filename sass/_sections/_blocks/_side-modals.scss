@@ -226,6 +226,16 @@
 			transform: translateX(0);
 		}
 	}
+	&.order-abort-modal{
+		.order-abort-modal-visible &{
+			transform: translateX(0);
+		}
+	}
+	&.order-return-modal{
+		.order-return-modal-visible &{
+			transform: translateX(0);
+		}
+	}
 	&.covered-modal{
 		&:after{
 			content: '';

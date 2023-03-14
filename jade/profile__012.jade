@@ -1,0 +1,311 @@
+extends _misc/main
+
+block title
+	| Профиль
+	- var pageIndex = 'profile_012';
+	- var navIndex = '2';
+
+block content
+	.page.page-profile
+		.wrapper
+			+menu('breadcrumbs', ['главная', 'Профиль', ' Личная информация'])
+
+		include _sections/page-profile/profile-top
+		
+		.wrapper-smart
+			.wrapper-flex.page-profile__main
+				include _includes/page-profile-nav
+				
+				.page-profile__content
+					.profile-history
+						// .profile-orders
+						._tabs
+							.profile-history__tabs-wrapper
+								ul.tabs__buttons.tags.profile-history__tabs
+									- var buttons = [{name: 'Все заказы', count: '3'}, {name: 'Активные', count: '1'}, {name: 'завершенные', count: '2'}, ]
+										each item, i in buttons
+											li.profile-history__tabs-item
+												a(href='#' class=i==0 ? "tab tag active" : "tab tag")= item.name
+													.tag-count= item.count
+				
+							ul.tabs__container.profile-history__tabs-contaner
+								li.tab-content.active
+									.profile-order
+										.profile-order__header
+											.profile-order__id №210322
+											.profile-order__actions
+												a(href="#").profile-order__action Отменить заказ
+												a(href="#").profile-order__action Активный 
+	
+										.profile-order__prods
+											.profile-order__thumbs
+												- for (var i=0; i < 8 ; i++)
+													a(href="#").profile-order__thumb
+														img(src="img/page-profile/orders/"+(i+1)+".jpg" alt="alt")
+										.cart-total
+											.cart-prod-count__row
+												.cart-prod-count__key Товары, 4 шт.
+												.cart-prod-count__val 18 411 ₽
+
+											.cart-prod-count__row
+												.cart-prod-count__key Скидка
+												.cart-prod-count__val -3 682 ₽
+
+											.cart-prod-count__row.cart-prod-count__row--total
+												.cart-prod-count__key Итого:
+												.cart-prod-count__val 14 729 ₽
+
+									.profile-order
+										.profile-order__header
+											.profile-order__id №210322
+											.profile-order__actions
+												a(href="#").profile-order__action возврата заказа
+												a(href="#").profile-order__action Отменить заказ
+												a(href="#").profile-order__action Активный 
+	
+										.profile-order__prods
+											.profile-order__thumbs
+												- for (var i=0; i < 1 ; i++)
+													a(href="#").profile-order__thumb
+														img(src="img/page-profile/orders/"+(i+1)+".jpg" alt="alt")
+										.cart-total
+											.cart-prod-count__row
+												.cart-prod-count__key Товары, 4 шт.
+												.cart-prod-count__val 18 411 ₽
+
+											.cart-prod-count__row
+												.cart-prod-count__key Скидка
+												.cart-prod-count__val -3 682 ₽
+
+											.cart-prod-count__row.cart-prod-count__row--total
+												.cart-prod-count__key Итого:
+												.cart-prod-count__val 14 729 ₽
+
+									.profile-order
+										.profile-order__header
+											.profile-order__id №210322
+											.profile-order__actions
+												a(href="#").profile-order__action возврата заказа
+												a(href="#").profile-order__action Отменить заказ
+												a(href="#").profile-order__action Активный 
+	
+										.profile-order__prods
+											.profile-order__thumbs
+												- for (var i=0; i < 5 ; i++)
+													a(href="#").profile-order__thumb
+														img(src="img/page-profile/orders/"+(i+1)+".jpg" alt="alt")
+										.cart-total
+											.cart-prod-count__row
+												.cart-prod-count__key Товары, 4 шт.
+												.cart-prod-count__val 18 411 ₽
+
+											.cart-prod-count__row
+												.cart-prod-count__key Скидка
+												.cart-prod-count__val -3 682 ₽
+
+											.cart-prod-count__row.cart-prod-count__row--total
+												.cart-prod-count__key Итого:
+												.cart-prod-count__val 14 729 ₽
+								
+								li.tab-content.hidden
+									.profile-order
+										.profile-order__header
+											.profile-order__id №210322
+											.profile-order__actions
+												a(href="#").profile-order__action возврата заказа
+												a(href="#").profile-order__action Отменить заказ
+												a(href="#").profile-order__action Активный 
+	
+										.profile-order__prods
+											.profile-order__thumbs
+												- for (var i=0; i < 5 ; i++)
+													a(href="#").profile-order__thumb
+														img(src="img/page-profile/orders/"+(i+1)+".jpg" alt="alt")
+										.cart-total
+											.cart-prod-count__row
+												.cart-prod-count__key Товары, 4 шт.
+												.cart-prod-count__val 18 411 ₽
+
+											.cart-prod-count__row
+												.cart-prod-count__key Скидка
+												.cart-prod-count__val -3 682 ₽
+
+											.cart-prod-count__row.cart-prod-count__row--total
+												.cart-prod-count__key Итого:
+												.cart-prod-count__val 14 729 ₽
+								li.tab-content.hidden
+									.profile-order
+										.profile-order__header
+											.profile-order__id №210322
+											.profile-order__actions
+												a(href="#").profile-order__action возврата заказа
+												a(href="#").profile-order__action Отменить заказ
+												a(href="#").profile-order__action Активный 
+	
+										.profile-order__prods
+											.profile-order__thumbs
+												- for (var i=0; i < 1 ; i++)
+													a(href="#").profile-order__thumb
+														img(src="img/page-profile/orders/"+(i+1)+".jpg" alt="alt")
+										.cart-total
+											.cart-prod-count__row
+												.cart-prod-count__key Товары, 4 шт.
+												.cart-prod-count__val 18 411 ₽
+
+											.cart-prod-count__row
+												.cart-prod-count__key Скидка
+												.cart-prod-count__val -3 682 ₽
+
+											.cart-prod-count__row.cart-prod-count__row--total
+												.cart-prod-count__key Итого:
+												.cart-prod-count__val 14 729 ₽
+									
+									.profile-order
+										.profile-order__header
+											.profile-order__id №210322
+											.profile-order__actions
+												a(href="#").profile-order__action Отменить заказ
+												a(href="#").profile-order__action Активный 
+	
+										.profile-order__prods
+											.profile-order__thumbs
+												- for (var i=0; i < 8 ; i++)
+													a(href="#").profile-order__thumb
+														img(src="img/page-profile/orders/"+(i+1)+".jpg" alt="alt")
+										.cart-total
+											.cart-prod-count__row
+												.cart-prod-count__key Товары, 4 шт.
+												.cart-prod-count__val 18 411 ₽
+
+											.cart-prod-count__row
+												.cart-prod-count__key Скидка
+												.cart-prod-count__val -3 682 ₽
+
+											.cart-prod-count__row.cart-prod-count__row--total
+												.cart-prod-count__key Итого:
+												.cart-prod-count__val 14 729 ₽
+
+
+
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	script(src="js/libs/swiper/swiper-bundle.min.js")
+
+	//- tiny-slider--------------------------
+	//- script(src="js/libs/tiny-slider/dist/min/tiny-slider.js")
+
+	//-viewerjs --------------------------
+	//- script(src="js/libs/viewerjs/viewer.js")
+
+	//- wNumb--------------------------
+	script(src="js/libs/wnumb/wNumb.js")
+
+	//- noUiSlider--------------------------
+	script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	script(src="js/libs/rating/ratings.js")
+
+	//- scroll-to-sects--------------------------
+	//- script(src="js/libs/scroll-to-sects/scrolltosect.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+
+	//- counter--------------------------
+	//- script(src="js/libs/counter/counter.js")
+
+//- end VANILLA JS===================================

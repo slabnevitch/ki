@@ -477,3 +477,45 @@
 					textarea.form__area(type='text' name='question' placeholder="Опишите ваши впечатления")
 
 			button(type="submit").btn.btn-lg.btn-order Отправить
+
+.side-modal.order-abort-modal(data-visible-class="order-abort-modal-visible")
+	button(type="button").side-modal__close.button-close
+		+icon('ctlg-close')
+	
+	.side-modal__inner
+		.side-modal__title Отмена заказа
+		
+		.side-modal__text В ближайшее время с вами
+			br 
+			| свяжется наш менеджер
+			br 
+			| для уточнения деталей
+
+		form.form(action='#')		
+			.form__row
+				.form__row-title Причина отмены заказа
+				label.form__label
+					textarea.form__area(type='text' name='question' placeholder="Опишите ваши впечатления")
+
+			button(type="submit").btn.btn-lg.btn-order оставить заявку
+
+.side-modal.order-return-modal(data-visible-class="order-return-modal-visible")
+	button(type="button").side-modal__close.button-close
+		+icon('ctlg-close')
+	
+	.side-modal__inner
+		.side-modal__title Возврат заказа
+		
+		.side-modal__text В ближайшее время с вами
+			br 
+			| свяжется наш менеджер
+			br 
+			| для уточнения деталей
+
+		form.form(action='#')
+			.form__row
+				.form__row-title Причина возврата заказа
+				label.form__label
+					textarea.form__area(type='text' name='question' placeholder="Опишите ваши впечатления")
+
+			button(type="submit").btn.btn-lg.btn-order оставить заявку

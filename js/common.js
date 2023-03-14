@@ -579,14 +579,19 @@
 			new Swiper('.compare-cards', {
 				observer: true,
 				observeParents: true,
-				slidesPerView: 2,
+				// slidesPerView: 2,
 				spaceBetween: 11,
 				// loop: true,
 				breakpoints: {
 				    // when window width is >= 320px
+				    320: {
+				    	slidesPerView: 2,
+					    spaceBetween: 11
+				    },
 
 				    // when window width is >= 480px
 				    480: {
+				    	slidesPerView: 2,
 					    spaceBetween: 16
 				    },
 				    767.98: {

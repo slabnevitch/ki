@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body class="dime-modal-visible cover">
+  <body class="dime-modal-visible covered">
     <aside class="multilevel-panel">
       <div class="multilevel-panel__label">Каталог</div>
       <div class="mob-catalog-screen">
@@ -8413,6 +8413,46 @@
             </label>
           </div>
           <button type="submit" class="btn btn-lg btn-order">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <div data-visible-class="order-abort-modal-visible" class="side-modal order-abort-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Отмена заказа</div>
+        <div class="side-modal__text">В ближайшее время с вами<br>свяжется наш менеджер<br>для уточнения деталей</div>
+        <form action="#" class="form">		
+          <div class="form__row">
+            <div class="form__row-title">Причина отмены заказа</div>
+            <label class="form__label">
+              <textarea type="text" name="question" placeholder="Опишите ваши впечатления" class="form__area"></textarea>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-lg btn-order">оставить заявку</button>
+        </form>
+      </div>
+    </div>
+    <div data-visible-class="order-return-modal-visible" class="side-modal order-return-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Возврат заказа</div>
+        <div class="side-modal__text">В ближайшее время с вами<br>свяжется наш менеджер<br>для уточнения деталей</div>
+        <form action="#" class="form">
+          <div class="form__row">
+            <div class="form__row-title">Причина возврата заказа</div>
+            <label class="form__label">
+              <textarea type="text" name="question" placeholder="Опишите ваши впечатления" class="form__area"></textarea>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-lg btn-order">оставить заявку</button>
         </form>
       </div>
     </div>
