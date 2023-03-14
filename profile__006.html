@@ -6802,12 +6802,16 @@
               <div class="wrapper back-block-wrapper">
                 <div class="back-block-inner">
                   <div class="back-block">
-                    <h1 class="back-title">Привет, Гость<a href="#" class="back-link">
+                    <h1 class="back-title">Привет, Николай<a href="#" class="back-link">
                             <svg class="icon icon-arrow-left ">
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
                             </svg></a></h1>
                   </div>
                   <div class="back-block-right">
+                    <div class="page-top-block">
+                      <div class="page-top-block__content"><img src="img/page-profile/check-lg.svg" alt="alt"></div>
+                      <div class="page-top-block__text">дисконтная <br>карта</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -6830,68 +6834,57 @@
               </aside>
               <div class="page-profile__content">
                 <div class="profile-personal">
-                  <div class="profile-personal__loyalty">Заполните профиль и получите карту лояльности</div>
-                  <div class="profile-user">
-                    <div class="profile-user__img _fit">
-                    </div>
-                    <div class="profile-user__info">
-                      <div class="profile-user__miniature miniature-profile-user">
-                        <div class="miniature-profile-user__img">
+                  <div class="profile-personal__top">
+                    <div class="profile-personal__content">
+                      <div class="profile-user">
+                        <div class="profile-user__img _fit">
+                          <button type="button" class="photo-remove">
+                                <svg class="icon icon-remove ">
+                                  <use xlink:href="img/icons-svg/symbol/sprite.svg#remove"></use>
+                                </svg>
+                          </button><img src="img/page-profile/nik.jpg" alt="alt" class="_fit-img">
                         </div>
-                        <div class="miniature-profile-user__text">
-                          <div class="profile-user__name">Гость</div>
-                          <div class="profile-user__note">Ваша миниатюра на сайте</div>
+                        <div class="profile-user__info">
+                          <div class="profile-user__miniature miniature-profile-user">
+                            <div class="miniature-profile-user__img"><img src="img/page-profile/nik.jpg" alt="alt">
+                            </div>
+                            <div class="miniature-profile-user__text">
+                              <div class="profile-user__name">Николай</div>
+                              <div class="profile-user__note">Ваша миниатюра на сайте</div>
+                            </div>
+                          </div><a href="#" class="profile-user__add-photo">+ Прикрепить фото профиля</a>
                         </div>
-                      </div><a href="#" class="profile-user__add-photo">+ Прикрепить фото профиля</a>
+                      </div>
+                      <div class="profile-availables">
+                        <div class="profile-available">
+                          <div class="profile-available__title">Персональные данные
+                          </div>
+                          <div class="profile-available__row">Николай Иванович Лобачевский</div>
+                          <div class="profile-available__row error">nik_loba4hev@gmail.com</div>
+                          <div class="profile-available__row">8 961 123-45-67</div>
+                        </div>
+                        <div class="profile-available">
+                          <div class="profile-available__title">Адрес доставки
+                          </div>
+                          <div class="profile-available__row">Краснодар</div>
+                          <div class="profile-available__row">Красная 152</div>
+                          <div class="profile-available__row">кв. 20, этаж 3, подъезд 2</div>
+                        </div>
+                      </div>
+                    </div><a href="#" class="profile-personal__edit"><span>редактировать</span>
+                          <svg class="icon icon-edit ">
+                            <use xlink:href="img/icons-svg/symbol/sprite.svg#edit"></use>
+                          </svg></a>
+                  </div>
+                  <div class="profile-alert">
+                        <svg class="icon icon-attention ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#attention"></use>
+                        </svg>
+                    <div class="profile-alert__content">
+                      <div class="profile-alert__title">E-mail не подтвержден!</div>
+                      <div class="profile-alert__text">Мы отправили вам письмо с подтверждением<br>на nik_loba4hev@gmail.com</div>
                     </div>
                   </div>
-                  <form action="#" class="form">
-                    <div class="form__row">
-                      <div class="form__row-title form__row-title--required">Персональные данные</div>
-                      <label class="form__label">
-                        <input autocomplete="off" type="text" name="name" placeholder="Фамилия*" class="form__input form__input--bg">
-                      </label>
-                      <label class="form__label">
-                        <input autocomplete="off" type="text" name="name" placeholder="Имя*" class="form__input form__input--bg">
-                      </label>
-                      <label class="form__label">
-                        <input autocomplete="off" type="text" name="phone" placeholder="Отчество" class="form__input form__input--bg">
-                      </label>
-                      <label class="form__label">							
-                        <input autocomplete="off" type="text" name="email" placeholder="Email*" class="form__input form__input--bg">
-                      </label>
-                      <label class="form__label">
-                        <input autocomplete="off" type="text" name="phone" placeholder="Телефон*" class="form__input form__input--bg">
-                      </label>
-                    </div>
-                    <div class="form__row profile-personal__address">
-                      <div class="form__row-title form__row-title--required">Адрес доставки<a href="#" class="std-link">Добавить адрес доставки</a></div>
-                      <label class="form__label">
-                        <input autocomplete="off" type="text" name="city" placeholder="Город" value="" class="form__input form__input--bg">
-                      </label>
-                      <label class="form__label">
-                        <input autocomplete="off" type="text" name="street" placeholder="Улица" value="" class="form__input form__input--bg">
-                      </label>
-                      <div class="form__row-flex">
-                        <label class="form__label">
-                          <input autocomplete="off" type="text" name="street" placeholder="кв/офис" value="" class="form__input form__input--bg">
-                        </label>
-                        <label class="form__label">
-                          <input autocomplete="off" type="text" name="street" placeholder="этаж" value="" class="form__input form__input--bg">
-                        </label>
-                        <label class="form__label">
-                          <input autocomplete="off" type="text" name="street" placeholder="подъезд" value="" class="form__input form__input--bg">
-                        </label>
-                      </div>
-                      <label class="light-label">
-                        <input type="checkbox" name="name" checked class="light-label__input"><span class="light-label__check">
-                              <svg class="icon icon-check ">
-                                <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                              </svg></span><span class="light-label__caption">Я даю согласие на обработку своих персональных данных в соответсвии с <a href="#">Политикой в отношении обработки персональных данных</a> и <a href="#">Пользовательским соглашением.</a></span>
-                      </label>
-                      <button type="submit" class="btn btn-lg btn-bonus btn-gray">ОФОРМИТЬ БОНУСНУЮ КАРТУ</button>
-                    </div>
-                  </form>
                 </div>
               </div>
             </div>

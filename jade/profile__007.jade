@@ -2,7 +2,7 @@ extends _misc/main
 
 block title
 	| Профиль
-	- var pageIndex = 'profile_003';
+	- var pageIndex = 'profile_007';
 	- var navIndex = '0';
 
 block content
@@ -10,14 +10,14 @@ block content
 		.wrapper
 			+menu('breadcrumbs', ['главная', 'Профиль', ' Личная информация'])
 
-			include _sections/page-profile/profile-top
+		include _sections/page-profile/profile-top
 		
 		.wrapper-smart
 			.wrapper-flex.page-profile__main
 				include _includes/page-profile-nav
 				
 				.page-profile__content
-					include _sections/page-profile/personal-info/personal-1
+					include _sections/page-profile/personal-info/personal-2
 
 
 

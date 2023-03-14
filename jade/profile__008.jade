@@ -2,22 +2,29 @@ extends _misc/main
 
 block title
 	| Профиль
-	- var pageIndex = 'profile_003';
-	- var navIndex = '0';
+	- var pageIndex = 'profile_008';
+	- var navIndex = '2';
 
 block content
 	.page.page-profile
 		.wrapper
 			+menu('breadcrumbs', ['главная', 'Профиль', ' Личная информация'])
 
-			include _sections/page-profile/profile-top
+		include _sections/page-profile/profile-top
 		
 		.wrapper-smart
 			.wrapper-flex.page-profile__main
 				include _includes/page-profile-nav
 				
 				.page-profile__content
-					include _sections/page-profile/personal-info/personal-1
+					.profile-history
+						.page-cart__none.none-page-cart
+							.none-page-cart__title У вас еще нет покупок
+							.none-page-cart__text Для совершения покупок, добавьте товар
+								br 
+								| из каталога в корзину
+							a(href="#").btn.btn-sm в каталог
+
 
 
 

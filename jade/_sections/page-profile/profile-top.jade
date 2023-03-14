@@ -1,0 +1,18 @@
+if pageIndex == 'profile_001'
+	+backLink('Привет, Гость', true)
+
+
+else if pageIndex == 'profile_004' ||  pageIndex == 'profile_006' ||  pageIndex == 'profile_007'
+	+backLink('Привет, Николай', true)
+		.page-top-block
+			.page-top-block__content
+				img(src="img/page-profile/check-lg.svg" alt="alt")
+			.page-top-block__text дисконтная 
+				br
+				| карта
+
+else if pageIndex == 'profile_005'
+	+backLink('Привет, ЮгТехСтрой', true)
+
+else
+	+backLink('Привет, Николай', true)

@@ -1,0 +1,70 @@
+.profile-personal
+	.profile-personal__top
+		.profile-personal__content
+			if pageIndex == 'profile_006'
+				.profile-user
+					.profile-user__img._fit
+						if pageIndex == 'profile_001' || pageIndex == 'profile_002'
+
+						else if pageIndex == 'profile_005'
+							button(type="button").photo-remove
+								+icon('remove')
+							img._fit-img(src="img/page-profile/company.jpg" alt="alt")
+						
+						else
+							button(type="button").photo-remove
+								+icon('remove')
+							img._fit-img(src="img/page-profile/nik.jpg" alt="alt")
+					
+					.profile-user__info
+						.profile-user__miniature.miniature-profile-user
+							.miniature-profile-user__img
+								if pageIndex == 'profile_001' || pageIndex == 'profile_002'
+									//- hjhj
+								else if pageIndex == 'profile_005'
+									img(src="img/page-profile/company.jpg" alt="alt")
+								else
+									img(src="img/page-profile/nik.jpg" alt="alt")
+							
+							.miniature-profile-user__text
+								if pageIndex == 'profile_001'
+									.profile-user__name Гость
+
+								if pageIndex == 'profile_005'
+									.profile-user__name ЮгТехСтрой
+								else
+									.profile-user__name Николай
+								
+								.profile-user__note Ваша миниатюра на сайте
+						
+						a(href="#").profile-user__add-photo + Прикрепить фото профиля
+
+			.profile-availables
+				.profile-available
+					.profile-available__title Персональные данные
+						- var items = ['Николай Иванович Лобачевский', 'nik_loba4hev@gmail.com', '8 961 123-45-67'];
+					each item, i in items
+						if pageIndex == 'profile_006'
+							div(class=i==1 ? "profile-available__row error" : "profile-available__row")= item
+						else
+							.profile-available__row= item
+
+				.profile-available
+					.profile-available__title Адрес доставки
+						- var items = ['Краснодар', 'Красная 152', 'кв. 20, этаж 3, подъезд 2'];
+					each item, i in items
+						.profile-available__row= item
+		
+		a(href="#").profile-personal__edit
+			span редактировать
+			+icon('edit')
+
+
+	if pageIndex == 'profile_006'
+		.profile-alert
+			+icon('attention')
+			.profile-alert__content
+				.profile-alert__title E-mail не подтвержден!
+				.profile-alert__text Мы отправили вам письмо с подтверждением
+					br
+					| на nik_loba4hev@gmail.com
