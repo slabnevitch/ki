@@ -2,26 +2,37 @@ extends _misc/main
 
 block title
 	| Профиль
-	- var pageIndex = 'profile_013';
+	- var pageIndex = 'profile__028.jade';
+	- var navIndex = '7';
 
 block content
-	.page.page-order
-		//- .wrapper
-		//- 	+menu('breadcrumbs', ['главная', 'Профиль', ' Личная информация'])
+	.page.page-profile
+		.wrapper
+			+menu('breadcrumbs', ['главная', 'Профиль', 'Уведомления'])
 
-		.page-order__top
-			+backLink('Заказ №210322', true)
-				.back-block
-					.page-order__status Активный
-					.page-order__condition Заказ собран и передан курьеру
+		include _sections/page-profile/profile-top
 		
 		.wrapper-smart
 			.wrapper-flex.page-profile__main
 				include _includes/page-profile-nav
 				
 				.page-profile__content
-					
+					.catalog-chapter
+						.catalog-sort
+							.catalog-sort__title Подобрано для вас
+							.catalog-sort__actions
+								button(type="button")#cars-row-switcher.catalog-sort__action
+									+icon('cards-row')
+								button(type="button")#cars-tiles-switcher.catalog-sort__action.active
+									+icon('cards-tiles')
 
+						- cards = [{billet: 'Новинка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'скидка', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}, {billet: '', price: '7 850 ₽', sale: '', sbers: '79', tilte: 'Шуруповерт Elitech ДШ 0110 РЭ', aval: '2 магазинах', iconActive: '0'}, {billet: '', price: '12 590 ₽', sale: '', sbers: '129', tilte: 'Аккумуляторная дрель-шуруповерт Ресанта ДА-14-2Л 75/14/3', aval: '6 магазинах', iconActive: false}, {billet: '', price: '22 899 ₽', sale: '', sbers: '229', tilte: 'Аккумуляторная дрель-шуруповерт WorkMaster АШ-12М', aval: '6 магазинах', iconActive: false}, {billet: '', price: '9 990 ₽', sale: '', sbers: '100', tilte: 'Аккумуляторная дрель-шуруповерт Metabo PowerMaxx BS (кейс)', aval: '6 магазинах', iconActive: false}];
+						
+						.wrapper-flex.product-cards.product-cards--catalog
+							+productCard(cards, 'page-brands/shur/')
+
+
+										
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 
@@ -89,7 +100,7 @@ block page-scripts
 	//- script(src="js/libs/accordion/vanilla-accordion.js")
 		
 	//- tabs--------------------------
-	//- script(src="js/libs/tabs/tabs-pure.js")
+	script(src="js/libs/tabs/tabs-pure.js")
 		
 	//- micromodal--------------------------
 	//- script(src="js/libs/micromodal/micromodal.js")	

@@ -2,26 +2,43 @@ extends _misc/main
 
 block title
 	| Профиль
-	- var pageIndex = 'profile_013';
+	- var pageIndex = 'profile__027.jade';
+	- var navIndex = '1';
 
 block content
-	.page.page-order
-		//- .wrapper
-		//- 	+menu('breadcrumbs', ['главная', 'Профиль', ' Личная информация'])
+	.page.page-profile
+		.wrapper
+			+menu('breadcrumbs', ['главная', 'Профиль', 'Уведомления'])
 
-		.page-order__top
-			+backLink('Заказ №210322', true)
-				.back-block
-					.page-order__status Активный
-					.page-order__condition Заказ собран и передан курьеру
+		include _sections/page-profile/profile-top
 		
 		.wrapper-smart
 			.wrapper-flex.page-profile__main
 				include _includes/page-profile-nav
 				
 				.page-profile__content
-					
+					.profile-cocs
+						.profile-doc
+							.profile-doc__content
+								.profile-doc__title Счет Lorem ipsum dolor sit amet, consectetuer adipiscing elit 
+								
+								a(href="#").profile-doc__download
+									+icon('download')
+							
+							.profile-doc__date 17.03.22
 
+					- for (var i=0; i < 5; i++)
+						.profile-doc
+							.profile-doc__content
+								.profile-doc__title Акт Lorem ipsum dolor sit amet, consectetuer adipiscing elit 
+								
+								a(href="#").profile-doc__download
+									+icon('download')
+							
+							.profile-doc__date 17.03.22
+
+
+										
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 
@@ -89,7 +106,7 @@ block page-scripts
 	//- script(src="js/libs/accordion/vanilla-accordion.js")
 		
 	//- tabs--------------------------
-	//- script(src="js/libs/tabs/tabs-pure.js")
+	script(src="js/libs/tabs/tabs-pure.js")
 		
 	//- micromodal--------------------------
 	//- script(src="js/libs/micromodal/micromodal.js")	

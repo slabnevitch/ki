@@ -23,6 +23,11 @@
 		}
 	}
 }
+.catalog-sort__title{
+	font-weight: 700;
+	font-size: rem(22);
+	line-height: rem(20);
+}
 .catalog-sort__action {
 	@include but-null;
 	cursor: pointer;

@@ -126,6 +126,11 @@
   width: 1em;
 }
 
+.icon-download {
+  font-size: 2rem;
+  width: 0.8em;
+}
+
 .icon-edit {
   font-size: 2.1rem;
   width: 1em;
@@ -6592,6 +6597,12 @@ h1, h2, h3, h4, h5, h6 {
   .catalog-sort__actions--wide {
     display: none;
   }
+}
+
+.catalog-sort__title {
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 1.25rem;
 }
 
 .catalog-sort__action {
@@ -16102,6 +16113,12 @@ h1, h2, h3, h4, h5, h6 {
 .page-profile__content .none-page-cart__text {
   max-width: none;
 }
+.page-profile__content .product-cards--catalog {
+  padding-top: 0;
+}
+.page-profile__content .catalog-sort {
+  margin-bottom: 20px;
+}
 
 .profile-personal__address {
   overflow: hidden;
@@ -16457,9 +16474,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(-50%, -50%);
 }
 
-.profile-favourites .product-cards--catalog {
-  padding-top: 0;
-}
 .profile-favourites .similar {
   margin-top: 20px;
 }
@@ -16491,14 +16505,6 @@ h1, h2, h3, h4, h5, h6 {
   width: calc(100% - 16px);
   font-size: 0.75rem;
   line-height: 0.9375rem;
-}
-
-.page-profile__for-order .catalog-sort {
-  margin-bottom: 20px;
-  padding-bottom: 5px;
-}
-.page-profile__for-order .product-cards--catalog {
-  padding-top: 0;
 }
 
 .profile-notifications {
@@ -16634,6 +16640,48 @@ h1, h2, h3, h4, h5, h6 {
 
 .profile-history__tabs-contaner--reviews .profile__notifications__checkall {
   margin-left: 24px;
+}
+
+.profile-doc__:not(:last-child) {
+  margin-bottom: 21px;
+}
+
+.profile-doc__content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.profile-doc__title {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.profile-doc__download {
+  display: block;
+  margin-left: 10px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  text-decoration: none;
+  color: #000;
+}
+.profile-doc__download .icon {
+  color: rgba(0, 0, 0, 0.8);
+  opacity: 0.3;
+  font-size: 20px;
+}
+
+.profile-doc__date {
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  opacity: 0.4;
 }
 
 /*--------------------END page-profile----------------------*/
