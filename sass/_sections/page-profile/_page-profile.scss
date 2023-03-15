@@ -461,5 +461,20 @@
 		}
 	}
 }
-
+.page-profile__order-status{
+	margin-bottom: 13px;
+	@include col();
+	@include size(12);
+	font-size: rem(12);
+	line-height: rem(15);
+}
+.page-profile__for-order{
+	.catalog-sort{
+		margin-bottom: 20px;
+		padding-bottom: 5px;
+	}
+	.product-cards--catalog{
+		padding-top: 0;
+	}
+}
 /*--------------------END page-profile----------------------*/ 

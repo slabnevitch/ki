@@ -6829,7 +6829,7 @@
                 </nav>
               </aside>
               <div class="page-profile__content">
-                <div class="page-profile__for-order">
+                <div class="page-profile__for-order catalog-chapter">
                   <div class="_tabs">
                     <div class="profile-history__tabs-wrapper">
                       <ul class="tabs__buttons tags profile-history__tabs">
@@ -6842,6 +6842,31 @@
                         <li class="profile-history__tabs-item"><a href="#" class="tab tag">Ожидается
                             <div class="tag-count">1</div></a></li>
                       </ul>
+                    </div>
+                    <div class="catalog-sort">
+                      <div class="catalog-sort__select">
+                        <select name="catalog-sort" data-searchdisable="true" class="fstdropdown-select">
+                          <option value="1">Принят</option>
+                          <option value="2">Формируется</option>
+                          <option value="3">Ожидается</option>
+                          <option value="4">Доставляется</option>
+                          <option value="5">Готов к выдаче</option>
+                          <option value="6">Отменен</option>
+                          <option value="7">Выполнен</option>
+                        </select>
+                      </div>
+                      <div class="catalog-sort__actions">
+                        <button type="button" id="cars-row-switcher" class="catalog-sort__action active">
+                              <svg class="icon icon-cards-row ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#cards-row"></use>
+                              </svg>
+                        </button>
+                        <button type="button" id="cars-tiles-switcher" class="catalog-sort__action">
+                              <svg class="icon icon-cards-tiles ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#cards-tiles"></use>
+                              </svg>
+                        </button>
+                      </div>
                     </div>
                     <ul class="tabs__container profile-history__tabs-contaner">
                       <li class="tab-content active">

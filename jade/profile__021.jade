@@ -17,7 +17,8 @@ block content
 				include _includes/page-profile-nav
 				
 				.page-profile__content
-					.page-profile__for-order
+					.page-profile__for-order.catalog-chapter
+						
 						- var cards1 = [{billet: 'Новинка', price: '14 729 ₽', sale: '18 411 ₽', sbers: '29', tilte: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', aval: '12 магазинах', iconActive: '1'}];
 						- var cards2 = [{billet: '', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000', aval: '4 магазинах', iconActive: false}];
 						- var cards3 = [ {billet: '', price: '12 599 ₽', sale: '', sbers: '', tilte: 'Перфоратор DeWalt D25133K', aval: false, analog: true, iconActive: false}];
@@ -35,7 +36,18 @@ block content
 												a(href='#' class=i==0 ? "tab tag active" : "tab tag")= item.name
 													if item.count
 														.tag-count= item.count
-
+							.catalog-sort
+								.catalog-sort__select
+									select(name="catalog-sort" data-searchdisable="true" class="fstdropdown-select")
+										- var opts = ['Принят','Формируется','Ожидается','Доставляется','Готов к выдаче','Отменен', 'Выполнен'];
+											each opt, i in opts
+												option(value=i+1 selected=opt=="Популярные")= opt
+								.catalog-sort__actions
+									button(type="button")#cars-row-switcher.catalog-sort__action.active
+										+icon('cards-row')
+									button(type="button")#cars-tiles-switcher.catalog-sort__action
+										+icon('cards-tiles')
+							
 							ul.tabs__container.profile-history__tabs-contaner
 								li.tab-content.active
 									.wrapper-flex.product-cards.product-cards--catalog.product-cards--horisontal

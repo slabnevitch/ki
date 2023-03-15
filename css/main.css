@@ -16462,6 +16462,25 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
 }
 
+.page-profile__order-status {
+  margin-bottom: 13px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: calc(100% - 16px);
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+}
+
+.page-profile__for-order .catalog-sort {
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+.page-profile__for-order .product-cards--catalog {
+  padding-top: 0;
+}
+
 /*--------------------END page-profile----------------------*/
 @media only screen and (min-width: 1440px) {
   .menu-header__item .single-dropdown {
