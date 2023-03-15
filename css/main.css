@@ -16001,12 +16001,26 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex: 0 0 224px;
   flex: 0 0 224px;
 }
+@media only screen and (max-width: 767.98px) {
+  .page-profile__sidebar {
+    -ms-flex: 0 0 calc(100% - 16px);
+    flex: 0 0 calc(100% - 16px);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .page-profile__sidebar {
+    -ms-flex: 0 0 300px;
+    flex: 0 0 300px;
+  }
+}
 
-.page-profile__nav {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 100px;
-  padding-bottom: 20px;
+@media only screen and (min-width: 767.98px) {
+  .page-profile__nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+    padding-bottom: 20px;
+  }
 }
 
 .profile-menu__item {
@@ -16042,6 +16056,19 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex: 1 1 calc(100% - 224px - 32px);
   flex: 1 1 calc(100% - 224px - 32px);
   padding-bottom: 52px;
+}
+@media only screen and (max-width: 767.98px) {
+  .page-profile__content {
+    -ms-flex: 0 0 calc(100% - 16px);
+    flex: 0 0 calc(100% - 16px);
+    max-width: calc(100% - 16px);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .page-profile__content {
+    -ms-flex: 1 1 calc(100% - 300px - 32px);
+    flex: 1 1 calc(100% - 300px - 32px);
+  }
 }
 @media only screen and (min-width: 959.98px) {
   .page-profile__content .form {
@@ -16409,6 +16436,30 @@ h1, h2, h3, h4, h5, h6 {
 
 .profile-favourites .none-page-cart__text {
   max-width: none;
+}
+.profile-favourites .product-cards--catalog {
+  padding-top: 0;
+}
+.profile-favourites .similar {
+  margin-top: 20px;
+}
+.profile-favourites .page-main__tagswrap {
+  width: calc(100% + 24px);
+  position: relative;
+}
+.profile-favourites .page-main__tagswrap:after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 0;
+  height: 100%;
+  width: 30px;
+  background-image: url(../img/gradient-line.svg);
+  background-position: 100% 0;
+  background-repeat: repeat-y;
+  background-size: contain;
+  z-index: 2;
+  pointer-events: none;
 }
 
 /*--------------------END page-profile----------------------*/

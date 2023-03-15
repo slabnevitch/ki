@@ -22,11 +22,25 @@
 .page-profile__sidebar {
 	@include col();
 	flex: 0 0 224px; 
+
+	@include max-screen($sm){
+		flex: 0 0 calc(100% - 16px); 
+		
+	}
+
+	@include min-screen($scale){
+		flex: 0 0 300px; 
+		
+	}
  }
 .page-profile__nav {
-	position: sticky;
-	top: 100px;
-	padding-bottom: 20px;
+
+	@include min-screen($sm){
+		position: sticky;
+		top: 100px;
+		padding-bottom: 20px;
+		
+	}
 }
 .profile-menu {}
 .profile-menu__item {
@@ -60,6 +74,16 @@
 	@include col();
 	flex: 1 1 calc(100% - 224px - 32px);
 	padding-bottom: 52px;
+
+	@include max-screen($sm){
+		flex: 0 0 calc(100% - 16px);
+		max-width: calc(100% - 16px);
+	}
+
+	@include min-screen($scale){
+		flex: 1 1 calc(100% - 300px - 32px);
+		
+	}
 
 	.form{
 		@include min-screen($md){
@@ -403,9 +427,39 @@
 		@include absolute-center;
 	}
 }
+.profile-favourites__tags{
+
+}
 .profile-favourites{
 	.none-page-cart__text{
 		max-width: none;
 	}
+	.product-cards--catalog{
+		padding-top: 0;
+	}
+	.similar{
+		margin-top: 20px;
+	}
+	.page-main__tagswrap{
+		width: calc(100% + 24px);
+		position: relative;
+
+		&:after{
+			content: "";
+		    position: absolute;
+		    right: -1px;
+		    top: 0;
+		    height: 100%;
+		    width: 30px;
+		    background-image: url(../img/gradient-line.svg);
+		    background-position: 100% 0;
+		    background-repeat: repeat-y;
+		    background-size: contain;
+		    z-index: 2;
+		    pointer-events: none;
+
+		}
+	}
 }
+
 /*--------------------END page-profile----------------------*/ 
