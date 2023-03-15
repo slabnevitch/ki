@@ -2,13 +2,13 @@ extends _misc/main
 
 block title
 	| Профиль
-	- var pageIndex = 'profile_020';
-	- var navIndex = '4';
+	- var pageIndex = 'profile_022';
+	- var navIndex = '5';
 
 block content
 	.page.page-profile
 		.wrapper
-			+menu('breadcrumbs', ['главная', 'Профиль', 'Под заказ'])
+			+menu('breadcrumbs', ['главная', 'Профиль', 'Уведомления'])
 
 		include _sections/page-profile/profile-top
 		
@@ -18,11 +18,7 @@ block content
 				
 				.page-profile__content
 					.page-cart__none.none-page-cart
-						.none-page-cart__title У вас еще нет избранных товаров
-						.none-page-cart__text Для добавления товара в избранное
-							br
-							| перейдите в каталог
-						a(href="#").btn.btn-sm в каталог
+						.none-page-cart__title У вас еще нет уведомлений
 
 
 block page-scripts

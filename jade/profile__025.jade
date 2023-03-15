@@ -2,13 +2,13 @@ extends _misc/main
 
 block title
 	| Профиль
-	- var pageIndex = 'profile_020';
-	- var navIndex = '4';
+	- var pageIndex = 'profile_025';
+	- var navIndex = '6';
 
 block content
 	.page.page-profile
 		.wrapper
-			+menu('breadcrumbs', ['главная', 'Профиль', 'Под заказ'])
+			+menu('breadcrumbs', ['главная', 'Профиль', 'Уведомления'])
 
 		include _sections/page-profile/profile-top
 		
@@ -17,14 +17,98 @@ block content
 				include _includes/page-profile-nav
 				
 				.page-profile__content
-					.page-cart__none.none-page-cart
-						.none-page-cart__title У вас еще нет избранных товаров
-						.none-page-cart__text Для добавления товара в избранное
-							br
-							| перейдите в каталог
-						a(href="#").btn.btn-sm в каталог
+					._tabs
+						.profile-history__tabs-wrapper
+							ul.tabs__buttons.tags.profile-history__tabs
+								- var buttons = [{name: 'Все', count: '5'}, {name: 'непрочитанные', count: '2'}]
+									each item, i in buttons
+										li.profile-history__tabs-item
+											a(href='#' class=i==0 ? "tab tag active" : "tab tag")= item.name
+												if item.count
+													.tag-count= item.count
 
+						ul.tabs__container.profile-history__tabs-contaner.profile-history__tabs-contaner--reviews
+							li.tab-content.active
+								.profile-reviews
+									.profile-review.active
+										a(href="#").profile-review__card.card-profile-review
+											.card-profile-review__img
+												img(src="img/page-cart/in-cart/7.jpg" alt="alt")
+											.card-profile-review__name Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
+										
+										.profile-review__content
+											.review
+												header.review__header
+													.person
+														.person__top
+															.person__portrait
+																img(src="img/page-product-card/worker.jpg" alt="alt")
+															.person__info
+																.person__name Иванов Иван
+																.person__date 12 декабря 2021		
+												.review__div
+														p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
 
+									.profile-review
+										a(href="#").profile-review__card.card-profile-review
+											.card-profile-review__img
+												img(src="img/page-cart/in-cart/3.jpg" alt="alt")
+											.card-profile-review__name Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
+										
+										.profile-review__content
+											.review
+												header.review__header
+													.person
+														.person__top
+															.person__portrait
+																img(src="img/page-profile/nik.jpg" alt="alt")
+															.person__info
+																.person__name Ник
+																.person__date 12 декабря 2021		
+												.review__div
+														p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+
+										.profile-review__content
+											.review
+												header.review__header
+													.person
+														.person__top
+															.person__portrait
+																img(src="img/page-profile/nik.jpg" alt="alt")
+															.person__info
+																.person__name Ник
+																.person__date 12 декабря 2021		
+												.review__div
+														p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+
+									
+
+								a(href="#").link.profile__notifications__checkall Отметить все прочитанными
+							
+							li.tab-content.hidden
+								.profile-reviews
+									.profile-review.active
+										a(href="#").profile-review__card.card-profile-review
+											.card-profile-review__img
+												img(src="img/page-cart/in-cart/7.jpg" alt="alt")
+											.card-profile-review__name Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
+										
+										.profile-review__content
+											.review
+												header.review__header
+													.person
+														.person__top
+															.person__portrait
+																img(src="img/page-product-card/worker.jpg" alt="alt")
+															.person__info
+																.person__name Иванов Иван
+																.person__date 12 декабря 2021		
+												.review__div
+														p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+
+								a(href="#").link.profile__notifications__checkall Отметить все прочитанными
+
+										
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 

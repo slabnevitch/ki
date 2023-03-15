@@ -45,13 +45,16 @@
 .profile-menu {}
 .profile-menu__item {
 	list-style-type: none;
-
+	padding-right: 55px;
 
 	&:not(:last-child){
 		margin-bottom: 11px;
 	}
 }
 .profile-menu__link {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
 	font-size: rem(14);
 	line-height: rem(17);
 	color: $text;
@@ -68,7 +71,20 @@
 		font-weight: 700;
 		opacity: 1;
 		text-decoration: none;
+
+		.profile-menu__count{
+			font-weight: 400;
+		}
 	}
+
+	.icon{
+		@include min-screen($sm){
+			display: none;
+		}
+	}
+}
+.profile-menu__count{
+	margin-right: 5px;
 }
 .page-profile__content {
 	@include col();
@@ -90,6 +106,9 @@
 			max-width: rem(544);
 			
 		}
+	}
+	.none-page-cart__text{
+		max-width: none;
 	}
 }
 .profile-personal {
@@ -301,12 +320,6 @@
 	font-weight: 700;
 	color: $red;
 }
-.profile-history{
-	.none-page-cart__text{
-		max-width: none;
-	}
-
-}
 ._tabs {}
 .tabs__buttons {}
 .tags {}
@@ -431,9 +444,7 @@
 
 }
 .profile-favourites{
-	.none-page-cart__text{
-		max-width: none;
-	}
+	
 	.product-cards--catalog{
 		padding-top: 0;
 	}
@@ -475,6 +486,144 @@
 	}
 	.product-cards--catalog{
 		padding-top: 0;
+	}
+}
+.profile-notifications{
+	margin-bottom: 39px;
+}
+.profile-notification{
+
+	&:not(:last-child){
+		margin-bottom: 19px;
+	}
+	&.active{
+		.profile-notification__title{
+			position: relative;
+			&:before{
+				content: '';
+				position: absolute;
+				left: -16px;
+				top: 6px;
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background-color: $accent;
+			}
+
+		}
+
+	}
+}
+.profile-notification__title{
+	margin-bottom: 4px;
+	font-weight: 700;
+	font-size: rem(16);
+	line-height: rem(20);
+}
+.profile-notification__text{
+	margin-bottom: 8px;
+	opacity: 0.6;
+}
+.profile-notification__date{
+	font-size: rem(12);
+	line-height:rem(15);
+	opacity: 0.4;
+}
+.profile-reviews{
+	margin-bottom: 26px;
+}
+.profile-review{
+
+	&.active{
+		.review{
+			position: relative;
+			&:before{
+				content: "";
+			    position: absolute;
+			    left: -20px;
+			    top: 17px;
+			    width: 8px;
+			    height: 8px;
+			    border-radius: 50%;
+			    background-color: #003D9E;
+			}
+
+		}
+
+	}
+	
+	&:not(:last-child){
+		margin-bottom: 37px;
+	}
+
+	.review{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.review__header{
+		margin-bottom: 0;
+	}
+	.person__top{
+		margin-bottom: 0;
+	}
+	.review__text{
+		margin-top: 5px;
+	}
+	.person__portrait{
+		width: 20px;
+		height: 20px;
+	}
+}
+.profile-review__card{
+	display: flex;
+	align-items: flex-start;
+	text-decoration: none;
+
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				.card-profile-review__name{
+					opacity: 0.5;
+				}
+			}
+		}
+}
+.card-profile-review{
+	margin-bottom: 8px;
+
+}
+.card-profile-review__img{
+	width: 48px;
+	height: 48px;
+	flex-shrink: 0;
+	position: relative;
+	margin-right: 8px;
+
+	img{
+		@include absolute-center;
+	}
+}
+.card-profile-review__name{
+	max-width: 410px;
+	color: $text;
+	transition: color .2s;
+}
+.profile-review__content{
+	margin-left: 23px;
+	padding-top: 12px;
+	background-image: url(../img/bg_card-announce.svg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+
+    &:not(:last-child){
+    	margin-bottom: 8px;
+    }
+}
+.profile-history__tabs-contaner--reviews{
+	.profile__notifications__checkall{
+		margin-left: 24px;
 	}
 }
 /*--------------------END page-profile----------------------*/ 

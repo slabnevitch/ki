@@ -35,6 +35,11 @@
 	}
 
 }
+.popup-profileexit{
+	.popup-profileexit-visible & {
+		display: block;
+	}
+}
 .popup__close {
 	position: absolute;
 	top: 23px;
@@ -60,6 +65,7 @@
 .icon-ctlg-close {}
 .popup__title {
 	margin-bottom: 16px;
+    padding-right: 30px;
 	font-size: 18px;
 	line-height: 24px;
 	font-weight: 700;

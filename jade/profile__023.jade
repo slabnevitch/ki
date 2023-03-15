@@ -2,13 +2,13 @@ extends _misc/main
 
 block title
 	| Профиль
-	- var pageIndex = 'profile_020';
-	- var navIndex = '4';
+	- var pageIndex = 'profile_023';
+	- var navIndex = '5';
 
 block content
 	.page.page-profile
 		.wrapper
-			+menu('breadcrumbs', ['главная', 'Профиль', 'Под заказ'])
+			+menu('breadcrumbs', ['главная', 'Профиль', 'Уведомления'])
 
 		include _sections/page-profile/profile-top
 		
@@ -17,14 +17,34 @@ block content
 				include _includes/page-profile-nav
 				
 				.page-profile__content
-					.page-cart__none.none-page-cart
-						.none-page-cart__title У вас еще нет избранных товаров
-						.none-page-cart__text Для добавления товара в избранное
-							br
-							| перейдите в каталог
-						a(href="#").btn.btn-sm в каталог
+					._tabs
+						.profile-history__tabs-wrapper
+							ul.tabs__buttons.tags.profile-history__tabs
+								- var buttons = [{name: 'Все', count: '4'}, {name: 'Заказы', count: false}, {name: 'Отзывы и вопросы', count: '2'}]
+									each item, i in buttons
+										li.profile-history__tabs-item
+											a(href='#' class=i==0 ? "tab tag active" : "tab tag")= item.name
+												if item.count
+													.tag-count= item.count
 
+						ul.tabs__container.profile-history__tabs-contaner
+							li.tab-content.active
+								.profile-notifications
+									- var notfs = [{name: 'Заказ №210322 передан в доставку', text: 'Доставка осуществляется с 12:00 до 18:00. Курьер уточнит удобную для вас дату доставки.', date: '23.03.22'}, {name: 'Помогите другим сделать выбор', text: 'Оставьте ваш отзыв о товаре', date: '17.03.22'}, {name: 'Заказ №080322 завершен', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.', date: '23.03.22'}, {name: 'Заказ №080322 завершен', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.', date: '23.03.22'}];
+									each item, i in notfs
+										div(class=i<2 ? "profile-notification active" : "profile-notification")
+											.profile-notification__title= item.name
+											.profile-notification__text= item.text
+											.profile-notification__date= item.date
 
+								a(href="#").link.profile__notifications__checkall Отметить все прочитанными
+							
+							li.tab-content
+								| lorem
+							li.tab-content
+								| lorem
+
+										
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 
