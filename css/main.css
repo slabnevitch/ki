@@ -206,6 +206,11 @@
   width: 0.9em;
 }
 
+.icon-score {
+  font-size: 2rem;
+  width: 0.8em;
+}
+
 .icon-soc-ok {
   font-size: 2rem;
   width: 0.65em;
@@ -6040,7 +6045,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-block-right {
-  pading-left: 16px;
+  padding-left: 16px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -16683,6 +16688,109 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.75rem;
   line-height: 0.9375rem;
   opacity: 0.4;
+}
+
+.page-order__top .back-block-inner {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+@media only screen and (min-width: 959.98px) {
+  .page-order__top .back-block-inner .back-block {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+}
+.page-order__top .back-block-right {
+  padding-left: 64px;
+  margin-bottom: 6px;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.page-order__status {
+  color: #767676;
+}
+
+@media only screen and (min-width: 767.98px) {
+  .page-order__info {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+    padding-bottom: 20px;
+  }
+}
+.page-order__info .shop-cart-content {
+  margin-top: 40px;
+}
+.page-order__info .shop-cart-content__img {
+  -ms-flex: 0 0 88px;
+  flex: 0 0 88px;
+  height: 88px;
+  margin-right: 12px;
+}
+.page-order__info .shop-cart-content__text {
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+}
+.page-order__info .shop-cart-content__title {
+  margin-bottom: 3px;
+  font-weight: 400;
+}
+.page-order__info .shop-cart-content__shedule,
+.page-order__info .shop-cart-content__term,
+.page-order__info .shop-cart-content__term-key {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+}
+.page-order__info .shop-cart-content__term {
+  margin-top: 11px;
+}
+
+.info-page-order__p {
+  opacity: 0.6;
+  margin-top: 0;
+}
+.info-page-order__p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.page-order__list {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.info-page-order__files {
+  margin-top: 40px;
+}
+
+.info-page-order__file {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 16px;
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  border-top: 1px solid #C4C4C4;
+}
+.info-page-order__file:last-child {
+  border-bottom: 1px solid #C4C4C4;
+}
+.info-page-order__file .icon {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  opacity: 0.3;
+}
+
+.file-info-page-order__name {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 0 12px;
+  opacity: 0.6;
 }
 
 /*--------------------END page-profile----------------------*/

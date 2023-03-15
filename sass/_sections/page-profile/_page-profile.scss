@@ -663,4 +663,109 @@
 	line-height: rem(15);
 	opacity: 0.4;
 }
+.page-order__top{
+	.back-block-inner{
+		padding-top: 20px;
+		padding-bottom: 15px;
+		align-items: flex-end;
+		.back-block{
+
+			@include min-screen($md){
+				flex: 0 0 auto;
+				
+			}
+		}
+	} 
+	.back-block-right{
+		padding-left: 64px;
+		margin-bottom: 6px;
+		flex: 1 1 auto;
+	}
+}
+.page-order__status{
+	color: #767676;
+}
+.page-order__info{
+
+	@include min-screen($sm){
+		position: sticky;
+		top: 100px;
+		padding-bottom: 20px;
+	}
+	.shop-cart-content{
+		margin-top: 40px;
+	}
+	.shop-cart-content__img{
+		flex: 0 0 88px;
+		height: 88px;
+		margin-right: 12px;
+	}
+	.shop-cart-content__text{
+		font-size: rem(12);
+		line-height: rem(15);
+	}
+	.shop-cart-content__title{
+		margin-bottom: 3px;
+		font-weight: 400;
+	}
+	.shop-cart-content__shedule,
+	.shop-cart-content__term,
+	.shop-cart-content__term-key{
+		font-size: rem(10);
+		line-height: rem(12);
+	}
+	.shop-cart-content__term{
+		margin-top: 11px;
+	}
+
+}
+.info-page-order{
+
+}
+.info-page-order__p{
+	opacity: 0.6;
+	margin-top: 0;
+
+
+	&:not(:last-child){
+		margin-bottom: 20px;
+	}
+}
+.page-order__list{
+	padding-bottom: 20px;
+	border-bottom: 1px solid $border;
+}
+.info-page-order__files{
+	margin-top: 40px;
+}
+.info-page-order__file{
+	display: flex;
+	align-items: center;
+	padding: 10px 16px;
+	color: $text;
+	text-decoration: none;
+	border-top: 1px solid $border;
+
+	
+	&:last-child{
+		border-bottom: 1px solid $border;
+		
+	}
+
+
+	.icon{
+		flex: 0 0 auto;
+		font-size: 20px;
+		color: $text;
+		opacity: 0.3;
+	}
+}
+.file-info-page-order{
+
+}
+.file-info-page-order__name{
+	flex: 1 1 auto;
+	padding: 0 12px;
+	opacity: 0.6;
+}
 /*--------------------END page-profile----------------------*/ 

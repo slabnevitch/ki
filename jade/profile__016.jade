@@ -2,7 +2,7 @@ extends _misc/main
 
 block title
 	| Профиль
-	- var pageIndex = 'profile_013';
+	- var pageIndex = 'profile_016';
 
 block content
 	.page.page-order
@@ -13,7 +13,6 @@ block content
 			+backLink('Заказ №210322', true)
 				.back-block
 					.page-order__status Активный
-					.page-order__condition Заказ собран и передан курьеру
 		
 		.wrapper-smart
 			.wrapper-flex.page-profile__main
@@ -22,6 +21,14 @@ block content
 						p.info-page-order__p Доставка осуществляется с 12:00 до 18:00. Курьер уточнит удобную для вас дату доставки.
 					
 						p.info-page-order__p Обращаем Ваше внимание, что подъем и выгрузка товара на этаж не осуществляется.
+
+						.info-page-order__files
+							- var files = ['Счет', 'Акт'];
+							each item in files
+								a(href="#").info-page-order__file.file-info-page-order
+									+icon('score')
+									span.file-info-page-order__name= item
+									+icon('download')
 				
 				.page-profile__content
 					- var cards1 = [{billet: 'Новинка', price: '14 729 ₽', sale: '18 411 ₽', sbers: '29', tilte: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', aval: '12 магазинах', iconActive: '1'}];

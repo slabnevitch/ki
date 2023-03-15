@@ -2,7 +2,7 @@ extends _misc/main
 
 block title
 	| Профиль
-	- var pageIndex = 'profile_013';
+	- var pageIndex = 'profile_014';
 
 block content
 	.page.page-order
@@ -13,15 +13,25 @@ block content
 			+backLink('Заказ №210322', true)
 				.back-block
 					.page-order__status Активный
-					.page-order__condition Заказ собран и передан курьеру
+					// .page-order__condition Заказ собран и передан курьеру
 		
 		.wrapper-smart
 			.wrapper-flex.page-profile__main
 				aside.page-profile__sidebar.page-profile__sidebar--solid
 					.page-order__info.info-page-order
-						p.info-page-order__p Доставка осуществляется с 12:00 до 18:00. Курьер уточнит удобную для вас дату доставки.
-					
-						p.info-page-order__p Обращаем Ваше внимание, что подъем и выгрузка товара на этаж не осуществляется.
+						p.info-page-order__p Самовывоз из магазина сети
+						
+						.cart-content__shop.shop-cart-content
+							.shop-cart-content__img							
+								img(src="img/page-cart/ozon.jpg" alt="alt")
+							
+							.shop-cart-content__text
+								.shop-cart-content__title Кубань Инструмент
+								.shop-cart-content__address ул. Северная, 320
+								.shop-cart-content__shedule Пн-Вс: 8.00-20.00
+								.shop-cart-content__term
+									.shop-cart-content__term-key Срок доставки:
+									.shop-cart-content__term-val 3 дня
 				
 				.page-profile__content
 					- var cards1 = [{billet: 'Новинка', price: '14 729 ₽', sale: '18 411 ₽', sbers: '29', tilte: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', aval: '12 магазинах', iconActive: '1'}];
