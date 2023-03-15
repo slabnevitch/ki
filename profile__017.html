@@ -6817,41 +6817,23 @@
                 <nav class="page-profile__nav">
                   <ul class="profile-menu">
                     <li class="profile-menu__item"><a href="#" class="profile-menu__link">Личная информация
-                            <svg class="icon icon-chev-right ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                            </svg></a></li>
+                        <!-- +icon('chev-right')--></a></li>
                     <li class="profile-menu__item"><a href="#" class="profile-menu__link">Мои документы
-                            <svg class="icon icon-chev-right ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                            </svg></a></li>
+                        <!-- +icon('chev-right')--></a></li>
                     <li class="profile-menu__item"><a href="#" class="profile-menu__link">История покупок
-                            <svg class="icon icon-chev-right ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                            </svg></a></li>
+                        <!-- +icon('chev-right')--></a></li>
                     <li class="profile-menu__item"><a href="#" class="profile-menu__link active">Избранное
-                            <svg class="icon icon-chev-right ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                            </svg></a></li>
+                        <!-- +icon('chev-right')--></a></li>
                     <li class="profile-menu__item"><a href="#" class="profile-menu__link">Под заказ
-                            <svg class="icon icon-chev-right ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                            </svg></a></li>
+                        <!-- +icon('chev-right')--></a></li>
                     <li class="profile-menu__item"><a href="#" class="profile-menu__link">Уведомления<span class="profile-menu__count">2</span>
-                            <svg class="icon icon-chev-right ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                            </svg></a></li>
+                        <!-- +icon('chev-right')--></a></li>
                     <li class="profile-menu__item"><a href="#" class="profile-menu__link">Мои отзывы<span class="profile-menu__count">2</span>
-                            <svg class="icon icon-chev-right ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                            </svg></a></li>
+                        <!-- +icon('chev-right')--></a></li>
                     <li class="profile-menu__item"><a href="#" class="profile-menu__link">Мои рекомендации
-                            <svg class="icon icon-chev-right ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                            </svg></a></li>
+                        <!-- +icon('chev-right')--></a></li>
                     <li class="profile-menu__item"><a href="#" class="profile-menu__link">Выйти
-                            <svg class="icon icon-chev-right ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                            </svg></a></li>
+                        <!-- +icon('chev-right')--></a></li>
                   </ul>
                 </nav>
               </aside>
@@ -7027,7 +7009,7 @@
             </div>
             <div class="mob-nav__name">Корзина</div>
             <div class="mob-nav__count">10</div></a></li>
-        <li class="mob-nav__item active"><a href="#" class="mob-nav__link">
+        <li id="profile-menu-open" class="mob-nav__item active"><a href="#" class="mob-nav__link">
             <div class="mob-nav__icon">
                   <svg class="icon icon-user ">
                     <use xlink:href="img/icons-svg/symbol/sprite.svg#user"></use>
@@ -8757,6 +8739,70 @@
         </div>
       </form>
     </div>
+    <nav class="profile-nav">
+      <div class="profile-nav__top">
+        <div class="profile-nav__user">Привет, Николай</div>
+        <div class="profile-nav__card"><img src="img/page-profile/check-lg.svg" alt="alt" class="profile-nav__icon">
+          <div class="profile-nav__discount">дисконтная <br>карта</div>
+        </div>
+      </div>
+      <ul class="profile-menu">
+        <li class="profile-menu__item"><a href="#" class="profile-menu__link">Личная информация
+            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
+            <!-- 	span.profile-menu__count 2-->
+                <svg class="icon icon-chev-right ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                </svg></a></li>
+        <li class="profile-menu__item"><a href="#" class="profile-menu__link">Мои документы
+            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
+            <!-- 	span.profile-menu__count 2-->
+                <svg class="icon icon-chev-right ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                </svg></a></li>
+        <li class="profile-menu__item"><a href="#" class="profile-menu__link">История покупок
+            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
+            <!-- 	span.profile-menu__count 2-->
+                <svg class="icon icon-chev-right ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                </svg></a></li>
+        <li class="profile-menu__item"><a href="#" class="profile-menu__link">Избранное
+            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
+            <!-- 	span.profile-menu__count 2-->
+                <svg class="icon icon-chev-right ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                </svg></a></li>
+        <li class="profile-menu__item"><a href="#" class="profile-menu__link">Под заказ
+            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
+            <!-- 	span.profile-menu__count 2-->
+                <svg class="icon icon-chev-right ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                </svg></a></li>
+        <li class="profile-menu__item"><a href="#" class="profile-menu__link active">Уведомления
+            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
+            <!-- 	span.profile-menu__count 2-->
+                <svg class="icon icon-chev-right ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                </svg></a></li>
+        <li class="profile-menu__item"><a href="#" class="profile-menu__link">Мои отзывы
+            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
+            <!-- 	span.profile-menu__count 2-->
+                <svg class="icon icon-chev-right ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                </svg></a></li>
+        <li class="profile-menu__item"><a href="#" class="profile-menu__link">Мои рекомендации
+            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
+            <!-- 	span.profile-menu__count 2-->
+                <svg class="icon icon-chev-right ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                </svg></a></li>
+        <li class="profile-menu__item"><a href="#" class="profile-menu__link">Выйти
+            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
+            <!-- 	span.profile-menu__count 2-->
+                <svg class="icon icon-chev-right ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                </svg></a></li>
+      </ul>
+    </nav>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/yamap-fullpage.js"></script>
     <script src="js/libs/css_browser_selector.js"></script>

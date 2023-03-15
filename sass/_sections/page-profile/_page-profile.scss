@@ -81,7 +81,7 @@
 	}
 
 	.icon{
-		@include min-screen($sm){
+		@include min-screen($md){
 			display: none;
 		}
 	}

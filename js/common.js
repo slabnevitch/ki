@@ -262,6 +262,14 @@
 		}
 		// ENDreview context menu
 
+		// profile-menu toggle
+		if(targ.getAttribute('id') ==='profile-menu-open' || targ.closest('#profile-menu-open') !== null){
+			targ.preventDefault();
+			document.body.classList.toggle('profile-nav-visible');
+		}
+		
+		//END profile-menu toggle
+
 
 		// header search results toggle
 			// var headerSearchInputs = document.querySelectorAll('.search-header__input');

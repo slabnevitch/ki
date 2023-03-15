@@ -1,8 +1,8 @@
-- var navs = [{name:'Главная', icon:'home'}, {name:'Каталог', icon:'catalog'}, {name:'Корзина', icon:'basket'}, {name:'Профиль', icon:'user'}, {name:'Меню', icon:'m-menu'}];
+- var navs = [{name:'Главная', icon:'home'}, {name:'Каталог', icon:'catalog'}, {name:'Корзина', icon:'basket'}, {name:'Профиль', icon:'user', data: 'profile-menu-open'}, {name:'Меню', icon:'m-menu'}];
 nav.mob-nav 
 	ul.mob-nav__list
 		each nav, i in navs
-			li(id=nav.name == 'Каталог' ? "multilevel-panel-open" : false class=i > 1 && i < 4 ? "mob-nav__item active" : "mob-nav__item")
+			li(id=nav.name == 'Каталог' ? "multilevel-panel-open" : nav.icon == 'user' ? "profile-menu-open"  : false class=i > 1 && i < 4 ? "mob-nav__item active" : "mob-nav__item")
 				a(href="#").mob-nav__link
 					.mob-nav__icon
 						+icon(nav.icon)

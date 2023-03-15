@@ -1,0 +1,18 @@
+- var nav = ['Личная информация', 'Мои документы', 'История покупок', 'Избранное', 'Под заказ', 'Уведомления', 'Мои отзывы', 'Мои рекомендации', 'Выйти'];
+nav.profile-nav
+	.profile-nav__top
+		.profile-nav__user Привет, Николай
+		.profile-nav__card
+			img(src="img/page-profile/check-lg.svg" alt="alt").profile-nav__icon
+			
+			.profile-nav__discount дисконтная 
+				br
+				| карта
+	
+	ul.profile-menu
+		each item, i in nav
+			li.profile-menu__item
+				a(href="#" class=item == 'Уведомления' ? "profile-menu__link active" : "profile-menu__link")= item
+					// if item == 'Уведомления' || item == 'Мои отзывы'
+					// 	span.profile-menu__count 2
+					+icon('chev-right')
