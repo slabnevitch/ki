@@ -1,12 +1,15 @@
 /*--------------------page-profile----------------------*/
 .page-profile {
-	.back-title {
-		padding-left: 0;	
-		color: $accent;
-		.icon{
-			display: none;
-		}
-	}	
+	&-start{
+		.back-title {
+			padding-left: 0;	
+			color: $accent;
+			.icon{
+				display: none;
+			}
+		}	
+
+	}
 	.page-top-block__content{
 		img{
 			max-width: 29px;
@@ -25,7 +28,7 @@
 
 	@include max-screen($sm){
 		flex: 0 0 calc(100% - 16px); 
-		
+		display: none;
 	}
 
 	@include min-screen($scale){

@@ -1,8 +1,25 @@
+//- if pageIndex == 'profile_001' if pageIndex == 'profile_001' || pageIndex == 'profile_002'
+//- 	+backLink('Личная информация', true)
+
+//- if pageIndex == 'profile_007'
+//- 	+backLink('Личная информация', true)
+
 if pageIndex == 'profile_001'
 	+backLink('Привет, Гость', true)
 
+else if pageIndex == 'profile_005'
+	+backLink('Привет, ЮгТехСтрой', true)
 
-else if pageIndex == 'profile_004' ||  pageIndex == 'profile_006' ||  pageIndex == 'profile_007'
+else if pageIndex == 'profile_006' ||  pageIndex == 'profile_007'
+	+backLink('Личная информация', true)
+		.page-top-block
+			.page-top-block__content
+				img(src="img/page-profile/check-lg.svg" alt="alt")
+			.page-top-block__text дисконтная 
+				br
+				| карта
+
+else if pageIndex == 'profile_004'
 	+backLink('Привет, Николай', true)
 		.page-top-block
 			.page-top-block__content
@@ -11,8 +28,26 @@ else if pageIndex == 'profile_004' ||  pageIndex == 'profile_006' ||  pageIndex 
 				br
 				| карта
 
-else if pageIndex == 'profile_005'
-	+backLink('Привет, ЮгТехСтрой', true)
+else if pageIndex == 'profile_008' || pageIndex == 'profile_009' || pageIndex == 'profile_011' || pageIndex == 'profile_012'
+	+backLink('История покупок', true)
+
+else if pageIndex == 'profile_017' || pageIndex == 'profile_018'
+	+backLink('Избранное', true)
+
+else if pageIndex == 'profile_020' || pageIndex == 'profile_021'
+	+backLink('Под заказ', true)
+
+else if pageIndex == 'profile_022' || pageIndex == 'profile_023'
+	+backLink('Уведомления', true)
+
+else if pageIndex == 'profile_025'
+	+backLink('Мои отзывы', true)
+
+else if pageIndex == 'profile_027'
+	+backLink('Мои додкументы', true)
+
+else if pageIndex == 'profile_028'
+	+backLink('Мои рекомендации', true)
 
 else
 	+backLink('Привет, Николай', true)

@@ -15997,11 +15997,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------END page-product-reviews----------------------*/
 /*--------------------page-profile----------------------*/
-.page-profile .back-title {
+.page-profile-start .back-title {
   padding-left: 0;
   color: #003D9E;
 }
-.page-profile .back-title .icon {
+.page-profile-start .back-title .icon {
   display: none;
 }
 .page-profile .page-top-block__content img {
@@ -16021,6 +16021,7 @@ h1, h2, h3, h4, h5, h6 {
   .page-profile__sidebar {
     -ms-flex: 0 0 calc(100% - 16px);
     flex: 0 0 calc(100% - 16px);
+    display: none;
   }
 }
 @media only screen and (min-width: 1440px) {
