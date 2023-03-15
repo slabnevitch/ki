@@ -17,14 +17,84 @@ block content
 				include _includes/page-profile-nav
 				
 				.page-profile__content
-					.profile-favourites
-						.page-cart__none.none-page-cart
-							.none-page-cart__title У вас еще нет избранных товаров
-							.none-page-cart__text Для добавления товара в избранное
-								br
-								| перейдите в каталог
-							a(href="#").btn.btn-sm в каталог
+					.page-profile__for-order
+						- var cards1 = [{billet: 'Новинка', price: '14 729 ₽', sale: '18 411 ₽', sbers: '29', tilte: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', aval: '12 магазинах', iconActive: '1'}];
+						- var cards2 = [{billet: '', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Аккумуляторный гайковерт Bosch GDR 120-Li (без АКБ и ЗУ) 06019F0000', aval: '4 магазинах', iconActive: false}];
+						- var cards3 = [ {billet: '', price: '12 599 ₽', sale: '', sbers: '', tilte: 'Перфоратор DeWalt D25133K', aval: false, analog: true, iconActive: false}];
+						- var cards4 = [{billet: 'скидка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'скидка', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}];
 
+						- var cards5 = [{billet: 'скидка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}];
+
+						- var cards6 = [ {billet: '', price: '7 850 ₽', sale: '', sbers: '79', tilte: 'Гайковерт Messer IW-500 05-40-500', aval: '2 магазинах', iconActive: '0'}];
+						._tabs
+							.profile-history__tabs-wrapper
+								ul.tabs__buttons.tags.profile-history__tabs
+									- var buttons = [{name: 'Все', count: '11'}, {name: 'Принят', count: '1'}, {name: 'Формируется', count: '1'}, {name: 'Ожидается', count: '1'}, ]
+										each item, i in buttons
+											li.profile-history__tabs-item
+												a(href='#' class=i==0 ? "tab tag active" : "tab tag")= item.name
+													if item.count
+														.tag-count= item.count
+
+							ul.tabs__container.profile-history__tabs-contaner
+								li.tab-content.active
+									.wrapper-flex.product-cards.product-cards--catalog.product-cards--horisontal
+										
+										.page-profile__order-status Принят, ожидается оплата
+										+productCard(cards1, 'hits-section/')
+										
+										.page-profile__order-status Формируется к отправке
+										+productCard(cards2, 'page-brands/gaik/', 2)
+										
+										.page-profile__order-status Ожидается поступление товара
+										+productCard(cards3, 'page-brands/perf/', 2)
+
+										.page-profile__order-status Передан в службу доставки
+										+productCard(cards4, 'page-brands/shur/')
+
+										.page-profile__order-status Передан в службу доставки
+										+productCard(cards1, 'hits-section/')
+
+										.page-profile__order-status Готов к выдаче
+										+productCard(cards2, 'page-brands/gaik/', 2)
+										+productCard(cards3, 'page-brands/perf/', 2)
+
+										.page-profile__order-status Заказ отменен
+										+productCard(cards5, 'page-brands/shur/')
+
+										.page-profile__order-status Заказ отменен
+										+productCard(cards5, 'page-brands/shur/')
+
+										.page-profile__order-status Выполнен
+										+productCard(cards6, 'page-brands/gaik/', 3)
+
+										.page-profile__order-status Ожидается поступление товара
+										+productCard(cards1, 'hits-section/')
+
+								li.tab-content
+									.wrapper-flex.product-cards.product-cards--catalog.product-cards--horisontal
+										
+										.page-profile__order-status Принят, ожидается оплата
+										+productCard(cards1, 'hits-section/')
+
+								li.tab-content
+									.wrapper-flex.product-cards.product-cards--catalog.product-cards--horisontal
+									
+										.page-profile__order-status Формируется к отправке
+										+productCard(cards2, 'page-brands/gaik/', 2)
+
+								li.tab-content
+									.wrapper-flex.product-cards.product-cards--catalog.product-cards--horisontal
+
+										.page-profile__order-status Ожидается поступление товара
+										+productCard(cards1, 'hits-section/')
+
+					.similar
+						.similar__title Похожие товары
+						- var cards7 = [{billet: 'Новинка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Вентилятор аккумуляторный Makita DCF 102 Z', aval: '6 магазинах', iconActive: '0'}, {billet: '', price: '22 990 ₽', sale: '', sbers: '230', tilte: 'Мойка высокого давления Karcher K 4 Compact *EU 1.637-500.0', aval: '', iconActive: false, order: true}, {billet: 'уценка', price: '6 568 ₽', sale: '7 888 ₽', sbers: '79', tilte: 'Набор инструмента Арсенал (C) 82 пр. 8144600', aval: '1 магазине', iconActive: false}];
+						
+						.wrapper-flex.product-cards.product-cards--catalog
+							+productCard(cards7, 'recomended/')
 
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
