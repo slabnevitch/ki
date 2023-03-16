@@ -585,11 +585,12 @@
 
 		//--------------compare-slider
 		if(document.querySelector('.compare-cards') !== null){
-			new Swiper('.compare-cards', {
+			var compareCardsSlider = new Swiper('.compare-cards', {
 				observer: true,
 				observeParents: true,
 				// slidesPerView: 2,
 				spaceBetween: 11,
+				 grabCursor: true,
 				watchSlidesProgress: true,
 				breakpoints: {
 				    // when window width is >= 320px
@@ -614,6 +615,40 @@
 				    }
 				}
 			});
+			var compareTableSlider = new Swiper('.compare-table', {
+				observer: true,
+				observeParents: true,
+				// slidesPerView: 2,
+				spaceBetween: 11,
+				 grabCursor: true,
+				// watchSlidesProgress: true,
+				breakpoints: {
+				    // when window width is >= 320px
+				    320: {
+				    	slidesPerView: 2,
+					    spaceBetween: 11
+				    },
+
+				    // when window width is >= 480px
+				    480: {
+				    	slidesPerView: 2,
+					    spaceBetween: 16
+				    },
+				    767.98: {
+					    spaceBetween: 16,
+				    	slidesPerView: 3
+				    },
+				    // when window width is >= 640px
+				    959.98: {
+				    	slidesPerView: 4,
+				    	spaceBetween: 16
+				    }
+				}
+			});
+			compareTableSlider.controller.control = compareCardsSlider;
+			compareCardsSlider.controller.control = compareTableSlider;
+			// compareCardsSlider.on('sliderMove', function() {compareTableSlider.slideTo(compareCardsSlider.realIndex)});
+			// compareTableSlider.on('sliderMove', function() {compareCardsSlider.slideTo(compareTableSlider.realIndex)});
 		}
 		//---------------END compare-slider
 		//---------------END Swiper
