@@ -6786,6 +6786,19 @@
       </header>
       <div class="main-content">
         <div class="page page-order">
+          <div class="wrapper">
+                <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumbs">
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a itemprop="item" href="https://example.com/dresses" class="breadcrumbs__link"><span itemprop="name">главная</span></a>
+                    <meta itemprop="position" content="1">
+                  </li>
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a itemprop="item" href="https://example.com/dresses" class="breadcrumbs__link"><span itemprop="name">Профиль</span></a>
+                    <meta itemprop="position" content="2">
+                  </li>
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a itemprop="item" href="https://example.com/dresses" class="breadcrumbs__link"><span itemprop="name">Заказ №210322</span></a>
+                    <meta itemprop="position" content="3">
+                  </li>
+                </ul>
+          </div>
           <div class="page-order__top">
                 <div class="wrapper back-block-wrapper">
                   <div class="back-block-inner">
@@ -6805,7 +6818,7 @@
                 </div>
           </div>
           <div class="wrapper-smart">
-            <div class="wrapper-flex page-profile__main">
+            <div class="wrapper-flex page-profile__main page-profile__main--order">
               <aside class="page-profile__sidebar page-profile__sidebar--solid">
                 <div class="page-order__info info-page-order">
                   <p class="info-page-order__p">Доставка осуществляется с 12:00 до 18:00. Курьер уточнит удобную для вас дату доставки.</p>

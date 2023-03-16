@@ -37,7 +37,7 @@
 								
 								.profile-user__note Ваша миниатюра на сайте
 						
-						a(href="#").profile-user__add-photo + Прикрепить фото профиля
+						a(href="#").profile-user__add-photo + Прикрепить фото #[span профиля]
 
 			.profile-availables
 				.profile-available
@@ -55,16 +55,23 @@
 					each item, i in items
 						.profile-available__row= item
 		
-		a(href="#").profile-personal__edit
+		a(href="#" data-da="back-block-right,959.98,first").profile-personal__edit
 			span редактировать
 			+icon('edit')
 
 
 	if pageIndex == 'profile_006'
-		.profile-alert
-			+icon('attention')
-			.profile-alert__content
+		.profile-alert.profile-alert--error
+			.profile-alert__top
+				+icon('attention')
 				.profile-alert__title E-mail не подтвержден!
-				.profile-alert__text Мы отправили вам письмо с подтверждением
-					br
-					| на nik_loba4hev@gmail.com
+			.profile-alert__text Мы отправили вам письмо с подтверждением
+				br
+				| на nik_loba4hev@gmail.com
+	
+	if pageIndex == 'profile_007'
+		.profile-alert.profile-alert--success
+			.profile-alert__top
+				+icon('big-check')
+				.profile-alert__title Дисконтная карта оформлена
+			.profile-alert__text Карта станет активной в течение 24 часов.

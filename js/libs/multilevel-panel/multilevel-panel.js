@@ -107,8 +107,9 @@
       htmlDoc.classList.remove('multilevel-panel-opened', 'freeze', 'catalog-visible');
       _self.reset();
     },
-    this.open = function() {
+    this.open = function(e) {
       console.log('this.open!')
+      e.preventDefault();
       htmlDoc.classList.toggle('multilevel-panel-opened');
       // document.body.classList.toggle('covered');
       if( htmlDoc.classList.contains('multilevel-panel-opened')){

@@ -264,8 +264,9 @@
 
 		// profile-menu toggle
 		if(targ.getAttribute('id') ==='profile-menu-open' || targ.closest('#profile-menu-open') !== null){
-			targ.preventDefault();
+			e.preventDefault();
 			document.body.classList.toggle('profile-nav-visible');
+			document.documentElement.classList.toggle('lock');
 		}
 		
 		//END profile-menu toggle
@@ -589,7 +590,7 @@
 				observeParents: true,
 				// slidesPerView: 2,
 				spaceBetween: 11,
-				// loop: true,
+				watchSlidesProgress: true,
 				breakpoints: {
 				    // when window width is >= 320px
 				    320: {

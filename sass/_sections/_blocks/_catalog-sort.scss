@@ -27,6 +27,10 @@
 	font-weight: 700;
 	font-size: rem(22);
 	line-height: rem(20);
+
+	@include max-screen($xsss){
+		font-size: 18px;
+	}
 }
 .catalog-sort__action {
 	@include but-null;

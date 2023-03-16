@@ -6,8 +6,8 @@ block title
 
 block content
 	.page.page-order
-		//- .wrapper
-		//- 	+menu('breadcrumbs', ['главная', 'Профиль', ' Личная информация'])
+		.wrapper
+			+menu('breadcrumbs', ['главная', 'Профиль', 'Заказ №210322'])
 
 		.page-order__top
 			+backLink('Заказ №210322', true)
@@ -16,7 +16,7 @@ block content
 					.page-order__condition Заказ собран и передан курьеру
 		
 		.wrapper-smart
-			.wrapper-flex.page-profile__main
+			.wrapper-flex.page-profile__main.page-profile__main--order
 				aside.page-profile__sidebar.page-profile__sidebar--solid
 					.page-order__info.info-page-order
 						p.info-page-order__p Доставка осуществляется с 12:00 до 18:00. Курьер уточнит удобную для вас дату доставки.

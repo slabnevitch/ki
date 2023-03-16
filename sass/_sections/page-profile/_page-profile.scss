@@ -16,24 +16,77 @@
 			max-height: 22px;
 		}
 	}
+	.back-block-inner{
+		@include max-screen($md){
+			padding-top: 5px;
+			margin-bottom: 24px;
+			position: relative;
+		}
+	}
+	.back-block-right{
+		@include max-screen($md){
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -15px;
+		}
+		.page-top-block{
+			@include max-screen($md){
+				display: none;
+			}
+		}
+	}
 }
+// .page-order{
+// 	.back-block-right{
+// 		@include max-screen($md){
+// 			display: block;
+// 		}
+
+// 	}
+// }
 .wrapper {}
 .back-link {}
 .wrapper-smart {}
 .wrapper-flex {}
-.page-profile__main {}
+.page-profile__main {
+	&--order{
+		@include max-screen($sm){
+			flex-direction: column;
+			padding-bottom: 40px;
+		}
+		.page-profile__content{
+			@include max-screen($sm){
+				padding-bottom: 20px;
+			}
+		}
+	}
+}
 .page-profile__sidebar {
 	@include col();
 	flex: 0 0 224px; 
 
 	@include max-screen($sm){
 		flex: 0 0 calc(100% - 16px); 
-		display: none;
+	}
+
+	&:not(.page-profile__sidebar--solid){
+		@include max-screen($sm){
+			display: none;
+			
+		}
 	}
 
 	@include min-screen($scale){
 		flex: 0 0 300px; 
 		
+	}
+
+	&--solid{
+		@include max-screen($sm){
+			order: 2;
+		}
 	}
  }
 .page-profile__nav {
@@ -142,6 +195,13 @@
 			align-items: flex-start;
 		}
 	}
+	&__addss-add{
+		span{
+			@include max-screen($xs){
+				display: none;
+			}
+		}
+	}
 }
 .profile-personal__loyalty {
 	margin-bottom: 24px;
@@ -154,7 +214,7 @@
 	width: 132px;
 	height: 132px;
 	flex-shrink: 0;
-	margin-right: 21px;
+	margin-right: 20px;
 	padding-bottom: 0;
 	background-color: $gray-l;
 	background-image: url($img + 'page-profile/shtrih.svg');
@@ -162,6 +222,11 @@
 	background-repeat: no-repeat;
 	background-size:100% 100%;
 	border: 1px solid $border;
+
+	@include max-screen($xs){
+		width: 88px;
+		height: 88px;
+	}
 	
 	.photo-remove {
 		position: absolute;
@@ -223,6 +288,12 @@
 	color: $text;
 	opacity: 0.6;
 
+	span{
+		@include max-screen($xs){
+			display: none;
+		}
+	}
+
 	&:hover, &:active, &:focus{
 		opacity: 0.4;
 	}
@@ -239,16 +310,25 @@
 .profile-personal__add-card{
 	margin-bottom: 22px;
 	display: inline-block;
-	margin-left: 98px;
 	 font-size: rem(10);
 	line-height: rem(12);
 	color: $text;
 	opacity: 0.6;
+
+	@include min-screen($sm){
+		margin-left: 98px;
+		
+	}
 }
 .profile-personal__top{
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
+}
+.profile-personal__content{
+	@include max-screen($sm){
+		width: 100%;
+	}
 }
 .profile-personal__edit{
 	margin-left: 16px;
@@ -270,6 +350,9 @@
 		text-transform: uppercase;
 		color: #A9A9A9;
 		opacity: 0.6;
+		@include max-screen($md){
+			display: none;
+		}
 
 	}
 	.icon{
@@ -291,6 +374,10 @@
 .profile-available__row {
 	color: $text-l;
 
+	@include max-screen($md){
+		padding-right: 20px;
+	}
+
 	&:not(:last-child){
 		margin-bottom: 8px;
 	}
@@ -307,28 +394,65 @@
 			left: -14px;
 			top: 7px;
 			background-color: $red;
+
+			@include max-screen($sm){
+				left: auto;
+				right: 0;
+			}
 		}
 	}
 }
 .profile-alert {
-	display: flex;
-	align-items: flex-start;
 	padding: 20px 20px 18px 20px;
 	margin-top: 27px;
 	background-color: #F4F4F4;
-}
-.icon-attention {
-	flex-shrink: 0;
-	margin-right: 16px;
-	font-size: 20px;
-	color: $red;
+
+	&__top{
+		margin-bottom: 10px;
+		@include min-screen($xsss){
+			display: flex;
+			align-items: flex-start;		
+		}
+		.icon{
+			flex-shrink: 0;
+			margin-right: 16px;
+			
+			@include max-screen($xsss){
+				margin-bottom: 10px;
+			}
+			
+			&-attention {
+				color: $red;
+				font-size: 20px;
+			}
+			&-big-check {
+				color: $accent;
+				font-size: 15px;
+			}
+
+		}
+
+	}
+
+	&--error{
+		.profile-alert__title {
+			color: $red;
+		}
+	}
+	&--success{
+		.profile-alert__title {
+			color: $accent;
+		}
+	}
 }
 
-.profile-alert__content {}
+.profile-alert__text{
+	@include min-screen($xs){
+		padding-left: 37px;	
+	}
+}
 .profile-alert__title {
-	margin-bottom: 10px;
 	font-weight: 700;
-	color: $red;
 }
 ._tabs {}
 .tabs__buttons {}
@@ -360,6 +484,7 @@
 .tab {}
 .profile-history__tabs-item{
 	margin-right: 4px;
+	flex: 0 0 auto;
 }
 .tag-count {}
 .tabs__container {}
@@ -394,21 +519,34 @@
 	}
 }
 .profile-order__header {
-	display: flex;
-	align-items: flex-end;
 	margin-bottom: 12px;
-	justify-content: space-between;
+
+	@include min-screen($xs){
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
 }
 .profile-order__id {
 	font-weight: 700;
 	font-size: 14px;
 	line-height: rem(20);
+
+	@include max-screen($xs){
+		margin-bottom: 8px;
+	}
 }
 .profile-order__actions {
 	flex-shrink: 0;
-	margin-left: 16px;
 	display: flex;
 	align-items: flex-end;
+
+	@include max-screen($xss){
+		flex-wrap: wrap;
+	}
+	@include min-screen($xs){
+		margin-left: 16px;
+	}
 }
 .profile-order__action {
 	font-size: rem(12);
@@ -416,9 +554,17 @@
 	text-transform: uppercase;
 	color: #767676;
 	transition: opacity .2s;
+	
+	@include max-screen($xss){
+		margin-bottom: 8px;
+	}
 
 	&:not(:last-child){
-		margin-right: 37px;
+		margin-right: 16px;
+		@include min-screen($xs){
+			margin-right: 37px;
+			
+		}
 	}
 
 	&:hover, &:active, &:focus{
@@ -490,6 +636,10 @@
 }
 .profile-notifications{
 	margin-bottom: 39px;
+
+	@include max-screen($sm){
+		padding-left: 24px;
+	}
 }
 .profile-notification{
 
@@ -627,7 +777,7 @@
 	}
 }
 
-.profile-doc__{
+.profile-doc{
 	&:not(:last-child){
 		margin-bottom: 21px;
 	}
@@ -645,7 +795,7 @@
 }
 .profile-doc__download{
 	display: block;
-	margin-left: 10px;
+	margin-left: 30px;
 	flex-shrink: 0;
 	width: 24px;
 	height: 24px;
@@ -666,13 +816,26 @@
 .page-order__top{
 	.back-block-inner{
 		padding-top: 20px;
-		padding-bottom: 15px;
+		// padding-bottom: 15px;
 		align-items: flex-end;
+
+		@include max-screen($md){
+			padding-top: 5px;
+			margin-bottom:24px;
+			position: relative;
+		}
+		@include max-screen($sm){
+			padding-bottom: 40px;
+		}
+		
 		.back-block{
 
 			@include min-screen($md){
 				flex: 0 0 auto;
 				
+			}
+			@include max-screen($sm){
+				flex: 0 0 auto;
 			}
 		}
 	} 
@@ -680,12 +843,37 @@
 		padding-left: 64px;
 		margin-bottom: 6px;
 		flex: 1 1 auto;
+
+		@include max-screen($md){
+			display: block;
+			padding-left: 0;
+			margin-bottom: 0;
+		}
 	}
+}
+.page-order__condition{
+	@include max-screen($sm){
+		width: 100%;
+		padding-bottom: 12px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		border-bottom: 1px solid $border;
+	}
+
 }
 .page-order__status{
 	color: #767676;
+
+	@include max-screen($sm){
+		margin-left: 53px;
+	}
 }
 .page-order__info{
+
+	@include max-screen($sm){
+		order: 2;
+	}
 
 	@include min-screen($sm){
 		position: sticky;
