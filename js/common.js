@@ -262,6 +262,15 @@
 		}
 		// ENDreview context menu
 
+		// profile-menu toggle
+		if(targ.getAttribute('id') ==='profile-menu-open' || targ.closest('#profile-menu-open') !== null){
+			e.preventDefault();
+			document.body.classList.toggle('profile-nav-visible');
+			document.documentElement.classList.toggle('lock');
+		}
+		
+		//END profile-menu toggle
+
 
 		// header search results toggle
 			// var headerSearchInputs = document.querySelectorAll('.search-header__input');
@@ -579,14 +588,19 @@
 			new Swiper('.compare-cards', {
 				observer: true,
 				observeParents: true,
-				slidesPerView: 2,
+				// slidesPerView: 2,
 				spaceBetween: 11,
-				// loop: true,
+				watchSlidesProgress: true,
 				breakpoints: {
 				    // when window width is >= 320px
+				    320: {
+				    	slidesPerView: 2,
+					    spaceBetween: 11
+				    },
 
 				    // when window width is >= 480px
 				    480: {
+				    	slidesPerView: 2,
 					    spaceBetween: 16
 				    },
 				    767.98: {
