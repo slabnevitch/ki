@@ -10,6 +10,10 @@
 	@include max-screen($xs){
 		order:4;
 	}
+
+	@include min-screen(988px){
+		padding-right: 16px;
+	}
 }
 .wrapper {}
 .product-features {

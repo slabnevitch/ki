@@ -2,6 +2,7 @@
 .product-reviews {}
 .product-reviews__top {
 	display: flex;
+	align-items: flex-end;
 	margin-bottom: 42px;
 
 	@include max-screen($sm){
@@ -254,7 +255,9 @@
 }
 .product-reviews__articles{
 	.cards-more{
+		max-width: rem(704);
 		margin-bottom: 20px;
+		text-align: right;
 	}	
 
 }

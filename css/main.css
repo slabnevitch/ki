@@ -9272,7 +9272,7 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url(../img/review/context_bg.svg);
   background-position: right top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%;
 }
 .context-review__drop:before {
   content: "";
@@ -14654,6 +14654,11 @@ h1, h2, h3, h4, h5, h6 {
     order: 4;
   }
 }
+@media only screen and (min-width: 988px) {
+  .page-product__features {
+    padding-right: 16px;
+  }
+}
 
 .product-features__overflow {
   position: relative;
@@ -15360,7 +15365,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .product-info__aval-key {
-  margin-right: 3px;
+  margin-right: 6px;
 }
 @media only screen and (min-width: 576px) {
   .product-info__aval-key {
@@ -15850,7 +15855,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 4.0625rem;
   height: 2rem;
   position: relative;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-right: 16px;
@@ -15879,6 +15883,8 @@ h1, h2, h3, h4, h5, h6 {
 .product-reviews__top {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: end;
+  align-items: flex-end;
   margin-bottom: 42px;
 }
 @media only screen and (max-width: 767.98px) {
@@ -16151,7 +16157,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .product-reviews__articles .cards-more {
+  max-width: 44rem;
   margin-bottom: 20px;
+  text-align: right;
 }
 
 .product-reviews__others .review:not(:last-child) {
