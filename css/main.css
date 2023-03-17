@@ -8674,7 +8674,7 @@ h6 {
   background-image: url(../img/review/context_bg.svg);
   background-position: right top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%;
 }
 
 .context-review__drop:before {
@@ -12181,13 +12181,6 @@ h6 {
   margin-bottom: 28px;
 }
 
-.page-compare__cards._scroll .cards-page-compare__check,
-.page-compare__cards._scroll .product-card__buy,
-.page-compare__cards._scroll .product-card__info,
-.page-compare__cards._scroll .compare-remove {
-  display: none;
-}
-
 .tag-count {
   margin-left: 7px;
 }
@@ -12248,12 +12241,27 @@ h6 {
   pointer-events: none;
 }
 
-.compare-table {
-  overflow-x: auto;
-  margin-bottom: 30px;
+.compare-cards .swiper-slide,
+.compare-table .swiper-slide {
+  margin-bottom: 0;
+}
+
+.compare-cards .swiper-slide:after,
+.compare-table .swiper-slide:after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -8px;
+  border-right: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.compare-table .swiper-slide {
+  padding-top: 86px;
 }
 
 .compare-table__fixed {
+  padding-top: 50px;
   position: absolute;
   top: 0;
   left: 24px;
@@ -12261,12 +12269,14 @@ h6 {
 }
 
 .compare-table__fixed .compare-table__title {
-  height: 49px;
-  margin-bottom: 40px;
+  margin-bottom: 68px;
 }
 
 .compare-table__row {
-  margin-bottom: 40px;
+  margin-bottom: 72px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .compare-table__row .compare-table__title {
@@ -12748,7 +12758,7 @@ h6 {
 }
 
 .product-info__aval-key {
-  margin-right: 3px;
+  margin-right: 6px;
 }
 
 .product-info__aval-val {
@@ -13012,7 +13022,6 @@ h6 {
   width: 4.0625rem;
   height: 2rem;
   position: relative;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-right: 16px;
@@ -13044,6 +13053,8 @@ h6 {
 .product-reviews__top {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: end;
+  align-items: flex-end;
   margin-bottom: 42px;
 }
 
@@ -13293,7 +13304,9 @@ h6 {
 }
 
 .product-reviews__articles .cards-more {
+  max-width: 44rem;
   margin-bottom: 20px;
+  text-align: right;
 }
 
 .product-reviews__others .review:not(:last-child) {
@@ -14701,6 +14714,13 @@ h6 {
     z-index: 3;
   }
 
+  .page-compare__cards._scroll .cards-page-compare__check,
+  .page-compare__cards._scroll .product-card__buy,
+  .page-compare__cards._scroll .product-card__info,
+  .page-compare__cards._scroll .compare-remove {
+    display: none;
+  }
+
   .product-features__cards .product-card {
     width: calc(33.3333333333% - 16px);
   }
@@ -14736,6 +14756,12 @@ h6 {
 @media only screen and (min-width: 960.98px) {
   .search-header {
     margin-right: 45px;
+  }
+}
+
+@media only screen and (min-width: 988px) {
+  .page-product__features {
+    padding-right: 16px;
   }
 }
 
@@ -15034,10 +15060,6 @@ h6 {
 
   .product-announcement:not(.product-announcement--titled) {
     margin-top: -40px;
-  }
-
-  .compare-table__fixed .compare-table__title {
-    height: 54.7833px;
   }
 
   .page-product__represent {
@@ -16312,13 +16334,20 @@ h6 {
     text-decoration: none;
   }
 
+  .compare-table .swiper-slide {
+    padding-top: 68px;
+  }
+
+  .compare-table__fixed {
+    padding-top: 42px;
+  }
+
   .compare-table__fixed .compare-table__title {
-    height: 45px;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
   }
 
   .compare-table__row {
-    margin-bottom: 20px;
+    margin-bottom: 48px;
   }
 
   .compare-table__title {
@@ -17669,6 +17698,11 @@ h6 {
 
   .cart-content__body .product-card--pullout .product-card__actions {
     display: none;
+  }
+
+  .compare-cards .swiper-slide:after,
+  .compare-table .swiper-slide:after {
+    right: -5.5px;
   }
 
   .profile-order__actions {
