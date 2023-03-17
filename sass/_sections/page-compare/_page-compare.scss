@@ -66,7 +66,10 @@
 		.product-card__buy,
 		.product-card__info,
 		.compare-remove{
-			display: none;
+			@include min-screen($md){
+				display: none;
+				
+			}
 		}
 	}
 }
@@ -136,35 +139,65 @@
 		}
 	}
 }
+.compare-cards,
 .compare-table{
-	// overflow-x: auto;
-	margin-bottom: 30px;
+	.swiper-slide{
+		margin-bottom: 0;
+		&:after{
+			content: '';
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: -8px;
+			border-right: 1px dashed rgba(0, 0, 0, 0.2);
+
+			@include max-screen($xss){
+				right: -5.5px;
+			}
+		}
+	}
+}
+.compare-table{
+	.swiper-slide{
+		padding-top: 86px;
+
+		@include max-screen($md){
+			padding-top: 68px;
+		}
+	}
+
 }
 .compare-table__fixed{
+	padding-top: 50px;
 	position: absolute;
 	top: 0;
 	left: 24px;
 	pointer-events: none;
+
+	@include max-screen($md){
+		padding-top: 42px;
+	}
 	
 	.compare-table__title{
-		height: 49px;
-		margin-bottom: 40px;
+		// height: 49px;
+		margin-bottom: 68px;
 
 		@include max-screen($md){
-			height: 45px;
-			margin-bottom: 20px;
+			// height: 45px;
+			margin-bottom: 45px;
 		}
 
 		@include min-screen($scale){
-			height: 54.7833px;
+			// height: 54.7833px;
 		}
 	}
 }
 .compare-table__row{
-	margin-bottom: 40px;
+	margin-bottom: 72px;
+	@include dots-family;
 
 	@include max-screen($md){
-		margin-bottom: 20px;
+		margin-bottom: 48px;
 	}
 	
 	.compare-table__title{
