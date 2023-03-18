@@ -14027,9 +14027,9 @@ h6 {
 }
 
 .page-order__info .shop-cart-content__img {
-  -ms-flex: 0 0 88px;
-  flex: 0 0 88px;
-  height: 88px;
+  -ms-flex: 0 0 5.5rem;
+  flex: 0 0 5.5rem;
+  height: 5.5rem;
   margin-right: 12px;
 }
 
