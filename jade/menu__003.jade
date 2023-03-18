@@ -1,0 +1,189 @@
+extends _misc/main
+
+block title
+	| О бренде Makita
+
+block content
+	.page.page-brands
+		.wrapper
+			+menu('breadcrumbs', ['главная', 'Популярные бренды', 'Makita', 'О бренде'])
+
+		+backLink('Makita')
+
+		section.about-brand
+			.wrapper-smart
+				.wrapper-flex.about-brand__wrapper
+					.about-brand__visual._fit
+						img._fit-img(src="img/page-menu/makita.jpg" alt="alt")
+
+					.about-brand__left
+						a(href="#").popular__brand
+							img(src="img/brands/15.svg" alt="alt")
+					
+					.about-brand__right
+						p.std-par Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+
+						p.std-par Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
+
+						p.std-par Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. 
+
+						p.std-par Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+
+						p.std-par Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
+		
+		.wrapper
+			h2.sect-title Категории
+		include _sections/page-brands/brand-tiles		
+
+		.catalog-chapter
+			include _blocks/catalog-sort		
+
+			.catalog-block
+				.wrapper
+					h2.sect-title Гайковерты 6
+				.wrapper-smart
+					- var gaik = [{billet: 'Новинка', price: '5 790 ₽', sale: '', sbers: '58', tilte: 'Аккумуляторный гайковерт Makita TD 110 DZ', aval: '2 магазинах', iconActive: '0'}, {billet: 'скидка', price: '20 889 ₽', sale: '25 889 ₽', sbers: '209', tilte: 'Аккумуляторный гайковерт Makita DTW 285 Z', aval: '6 магазинах', iconActive: false}, {billet: '', price: '7 850 ₽', sale: '', sbers: '253', tilte: 'Аккумуляторный гайковерт Makita DTW 300 Z', aval: '6 магазинах', iconActive: '0'}, {billet: '', price: '5 228 ₽', sale: '', sbers: '', tilte: 'Аккумуляторный гайковерт Makita 6706 D', aval: '', iconActive: false, order: true,  analog: true}];
+					
+					.wrapper-flex.product-cards
+						- for (var i=0; i < 2; i++)
+							+productCard(gaik, 'page-brands/makita/')
+
+			.catalog-block
+				.wrapper
+					h2.sect-title Шуруповерты 8
+				.wrapper-smart
+					- var shurs = [{billet: '', price: '5 269 ₽', sale: '', sbers: '99', tilte: 'Аккумуляторный шуруповерт Makita DF 033 DZ', aval: '17 магазинах', iconActive: '0'}, {billet: 'скидка', price: '11 190 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Аккумуляторный шуруповерт Makita TD 111 DZ', aval: '15 магазинах', iconActive: false}, {billet: '', price: '14 680 ₽', sale: '', sbers: '79', tilte: 'Аккумуляторный шуруповерт Makita DFR 750 Z', aval: '6 магазинах', iconActive: '0'}, {billet: '', price: '18 500 ₽', sale: '', sbers: '', tilte: 'Аккумуляторный шуруповерт Makita DFS 451 RFE', aval: '', iconActive: false, order: true,  analog: true}, {billet: '', price: '22 899 ₽', sale: '', sbers: '229', tilte: 'Аккумуляторный шуруповерт Makita DFR 750 RFE', aval: '2 магазинах', iconActive: '0'}, {billet: '', price: '29 390 ₽', sale: '', sbers: '', tilte: 'Аккумуляторный шуруповерт Makita DTD156RFE', aval: '', iconActive: false, order: true,  analog: true}, {billet: '', price: '20 349 ₽', sale: '', sbers: '', tilte: 'Аккумуляторный шуруповерт Makita DFR 550 Z', aval: false, pullOut: true, analog: true, iconActive: false}, {billet: '', price: '7 490 ₽', sale: '', sbers: '', tilte: 'Аккумуляторный шуруповерт Makita DFR 550 Z', aval: false, pullOut: true, analog: true, iconActive: false}];
+					
+					.wrapper-flex.product-cards
+						+productCard(shurs, 'page-brands/makita/', 5)
+
+			.catalog-block
+				.wrapper
+					h2.sect-title Перфораторы 8
+				.wrapper-smart
+					- var perfs = [{billet: '', price: '25 590 ₽', sale: '', sbers: '276', tilte: 'Аккумуляторный шуруповерт Makita DF 033 DZ', aval: '17 магазинах', iconActive: '0'}, {billet: '', price: '36 419 ₽', sale: '', sbers: '369', tilte: 'Аккумуляторный шуруповерт Makita TD 111 DZ', aval: '15 магазинах', iconActive: false}, {billet: '', price: '71 779 ₽', sale: '', sbers: '718', tilte: 'Аккумуляторный перфоратор Makita HR001GM201', aval: '6 магазинах', iconActive: '0'}, {billet: '', price: '23 090 ₽', sale: '', sbers: '', tilte: 'Аккумуляторный перфоратор Makita HR001GM201', aval: '', iconActive: false, order: true,  analog: true}, {billet: '', price: '14 729 ₽', sale: '', sbers: '', tilte: 'Аккумуляторный перфоратор Makita DHR 241 SYE', aval: false, pullOut: true, analog: true, iconActive: false}, {billet: '', price: '27 790 ₽', sale: '', sbers: '', tilte: 'Аккумуляторный перфоратор Makita DHR 264 Z', aval: false, pullOut: true, analog: true, iconActive: false}, {billet: '', price: '14 729 ₽', sale: '', sbers: '', tilte: 'Аккумуляторный перфоратор Makita DHR 241 SYE', aval: false, pullOut: true, analog: true, iconActive: false}, {billet: '', price: '27 790 ₽', sale: '', sbers: '', tilte: 'Аккумуляторный перфоратор Makita DHR 264 Z', aval: false, pullOut: true, analog: true, iconActive: false}];
+					
+					.wrapper-flex.product-cards
+						+productCard(perfs, 'page-brands/makita/', 12)
+
+		.pagination-wrapper
+			+pagination([1, '...', 14, 15, 16, '...', 189], '')
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	script(src="js/libs/swiper/swiper-bundle.min.js")
+
+	//- tiny-slider--------------------------
+	//- script(src="js/libs/tiny-slider/dist/min/tiny-slider.js")
+
+	//-viewerjs --------------------------
+	script(src="js/libs/viewerjs/viewer.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	script(src="js/libs/rating/ratings.js")
+
+	//- scroll-to-sects--------------------------
+	//- script(src="js/libs/scroll-to-sects/scrolltosect.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+
+	//- counter--------------------------
+	//- script(src="js/libs/counter/counter.js")
+
+//- end VANILLA JS===================================

@@ -15,27 +15,42 @@
 	transition: all .3s;
 	transform: translateX(-105%);
 
-	.profile-nav-visible &{
-		transform: translateX(0);
-
+	&[data-profile-nav]{
+		.profile-nav-visible &{
+			transform: translateX(0);
+		}
+	}
+	&[data-menu-nav]{
+		.menu-visible &{
+			transform: translateX(0);
+		}		
 	}
 
 	@include min-screen($md){
 		display: none;
 	}
 
-	.profile-menu{
-		padding: 0 24px;
-		flex: 1 1 auto;
-		overflow-y: auto;
+	&:after {
+	    content: "";
+	    display: block;
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 79px;
+	    background-image: url(../img/header-catalog/mob-catalog/mob-catalog-bottom-cover.svg);
+	    background-position: botom 0;
+	    background-repeat: no-repeat;
+	    background-size: 100%;
+	    z-index: 9;
 	}
+
 	.profile-menu__item{
 		padding-right: 0;
 
-		&:last-child{
+		&--exit{
 			margin-top: 40px;
 		}
-			
 
 	}
 	.profile-menu__link{
@@ -67,7 +82,6 @@
 			top: 50%;
 			transform: translateY(-50%);
 			font-size: 10px;
-
 		}
 	}
 	.profile-menu__count{
@@ -100,6 +114,11 @@
 .profile-nav__card{
 	display: flex;
 	align-items: flex-end;
+
+	.std-link{
+		color: $text;
+		opacity: 0.4;
+	}
 }
 .profile-nav__icon{
 	max-width: 29px;
@@ -111,5 +130,30 @@
 	line-height: rem(12);
 	text-transform: uppercase;
 	color: $accent;
+}
+.profile-nav__over{
+	padding: 0 24px;
+	flex: 1 1 auto;
+	overflow-y: auto;
+	padding-bottom: 79px;
+	}
+.profile-nav__chapter{
+	.profile-menu__link{
+		font-weight: 400;
+	}
+
+}
+.chapter-profile-nav{
+	margin-top: 40px;
+}
+.chapter-profile-nav__title{
+	margin-bottom: 12px;
+	font-size: 10px;
+	line-height: 12px;
+	text-transform: uppercase;
+	opacity: 0.4;
+} 
+.profile-menu{
+
 }
 /*--------------------END profile-nav----------------------*/ 

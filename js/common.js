@@ -266,10 +266,25 @@
 		if(targ.getAttribute('id') ==='profile-menu-open' || targ.closest('#profile-menu-open') !== null){
 			e.preventDefault();
 			document.body.classList.toggle('profile-nav-visible');
+			document.body.classList.remove('menu-visible');
+			panel.close();
+			panel.reset();
 			document.documentElement.classList.toggle('lock');
 		}
 		
 		//END profile-menu toggle
+
+		// menu toggle
+		if(targ.getAttribute('id') ==='menu-open' || targ.closest('#menu-open') !== null){
+			e.preventDefault();
+			document.body.classList.toggle('menu-visible');
+			document.body.classList.remove('profile-nav-visible');
+			panel.close();
+			panel.reset();
+			document.documentElement.classList.toggle('lock');
+		}
+		
+		//END menu toggle
 
 
 		// header search results toggle
@@ -809,54 +824,6 @@
 			}
 		// END header fixed on doc. scroll
 
-		// compare slider fixed on doc. scroll
-					
-			// if(document.querySelector('.page-compare__cards') !== null){
-			// 	var compareSlider = document.querySelector('.cards-page-compare__check'),
-			// 	compareObserverCallback = function(entries, observer) {
-			// 		console.log(entries);
-			// 		if(entries[0].isIntersecting){
-			// 			document.querySelector('.page-compare__cards').classList.remove('_scroll');
-			// 		}else{
-			// 			document.querySelector('.page-compare__cards').classList.add('_scroll');
-			// 		}
-			// 	};
-			// 	var compareObserver = new IntersectionObserver(compareObserverCallback);
-			// 	compareObserver.observe(compareSlider);			
-			// }
-		// END compare slider fixed on doc. scroll
-
-		
-
-		// usage: http://ganlanyuan.github.io/tiny-slider/#usage
-		// if(document.querySelector('.my-slider') !== null){
-		// 	var slider = tns({
-		// 	container: '.my-slider',
-		// 	mode: 'carousel', //'gallery' - для фэйд-анимации отдельных слайдов
-		// 	items: 1,
-		// 	// slideBy: 1, // кол-во слайдов, перематывающихся за 1 клик. Не работает с mode: 'gallery'
-		// 	// autoplay: true,
-		// 	// controlsContainer: '.hits.carouseled .block-header__nav', // внутри .block-header__nav должны быть 2 заранее отстилизованные кнопки
-		// 	navContainer: "#customize-thumbnails",//конткйнер для навигации миниатюрами
-		// 	navAsThumbnails: true, //включение навигации миниатюрами
-		// 	mouseDrag: true,
-		// 	loop: false,
-		// 	gutter: 30 //добавляет padding, а не margin! Нужна обертка вокруг содержимого каждого слайда!
-
-		// 	});
-
-		// 	var navSlider = tns({
-		// 	container: '#customize-thumbnails',
-		// 	mode: 'carousel', //'gallery' - для фэйд-анимации отдельных слайдов
-		// 	items: 1,
-		// 	mouseDrag: true,
-		// 	loop: false,
-		// 	controls: false,
-		// 	nav: false,
-		// 	gutter: 30 //добавляет padding, а не margin! Нужна обертка вокруг содержимого каждого слайда!
-
-		// 	});
-		// }
 		if(document.getElementById('product-image-gallery') !== null){
 			var gallery = new Viewer(document.getElementById('product-image-gallery'), {
 				title: false,

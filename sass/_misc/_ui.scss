@@ -177,6 +177,13 @@ h1, h2, h3, h4, h5, h6{
 
   }
 }
+.std-par{
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: rem(16);
+  line-height: 140%;
+  opacity: 0.6;
+}
 @import "../_customizations/viewerjs-custom.scss";
 @import "../_customizations/_fstdropdown.scss";
 .btn{

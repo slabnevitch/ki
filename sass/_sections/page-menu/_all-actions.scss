@@ -1,0 +1,30 @@
+/*--------------------all-actions----------------------*/
+.all-actions {
+	padding-top: 59px;
+	@include max-screen($md){
+		padding-top: 30px;
+	}
+	@include max-screen($sm){
+		padding-top: 20px;
+	}
+}
+.all-actions__cards{
+	padding-bottom: 19px;
+	
+}
+.all-action {
+	@include col();
+	@include size(6);
+	margin-bottom: 21px;
+}
+.all-action__img {
+	padding-bottom: prc(224,463);
+	margin-bottom: 12px;
+}
+
+.all-action__text {
+	max-width: 60%;
+}
+.cards-more {}
+.cards-more__link {}
+/*--------------------END all-actions----------------------*/ 

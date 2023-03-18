@@ -1,0 +1,36 @@
+- var nav = ['Каталог', 'Бренды', 'Новинки', 'Акции', 'Сравнить'];
+nav.profile-nav(data-menu-nav)
+	.profile-nav__top
+		.profile-nav__user Привет, гость!
+		.profile-nav__card
+			a(href="#").std-link Вход или регистрация
+	
+	.profile-nav__over
+		ul.profile-menu
+			each item, i in nav
+				li.profile-menu__item
+					a(href="#" class="profile-menu__link")= item
+						+icon('chev-right')
+		
+		.profile-nav__chapter.chapter-profile-nav
+			.chapter-profile-nav__title Покупателям
+
+			- var list1 = ['Подарочные карты','Сотрудничество', 'Магазины', 'Доставка', 'Оплата', 'Сервис', 'Возврат и гарантия'];
+			ul.profile-menu
+				each item, i in list1
+					li.profile-menu__item
+						a(href="#" class="profile-menu__link")= item
+							+icon('chev-right')
+
+
+		.profile-nav__chapter.chapter-profile-nav
+			.chapter-profile-nav__title Покупателям
+
+			- var list2 = ['О нас','Новости','Вакансии','Сертификаты','Наши партнеры','Арендодателям','Контакты'];
+			ul.profile-menu
+				each item, i in list2
+					li.profile-menu__item
+						a(href="#" class="profile-menu__link")= item
+							+icon('chev-right')
+
+
