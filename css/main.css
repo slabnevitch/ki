@@ -5987,6 +5987,8 @@ h6 {
 }
 
 .tag {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   padding-left: 13px;
   padding-right: 13px;
   min-height: 25px;
@@ -6020,9 +6022,12 @@ h6 {
 }
 
 .chrome .tag,
-.gecko .tag,
-.android .tag {
+.gecko .tag {
   padding-top: 2px;
+}
+
+.android .tag {
+  padding-top: 3px;
 }
 
 .swiper-pagination-bullet {
