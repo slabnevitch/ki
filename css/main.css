@@ -14430,6 +14430,14 @@ h6 {
     top: 100px;
     padding-bottom: 20px;
   }
+
+  .info-page-order__p {
+    padding-right: 30px;
+  }
+
+  .info-page-order__files {
+    margin-right: 16px;
+  }
 }
 
 @media only screen and (min-width: 959.98px) {
