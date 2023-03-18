@@ -1,21 +1,46 @@
 /*--------------------all-actions----------------------*/
 .all-actions {
+	padding-bottom: 43px;
 	padding-top: 59px;
 	@include max-screen($md){
 		padding-top: 30px;
 	}
 	@include max-screen($sm){
 		padding-top: 20px;
+		padding-bottom: 52px;
+	}
+	.cards-more {
+		@include max-screen($xs){
+			display: none;
+		}
 	}
 }
 .all-actions__cards{
-	padding-bottom: 19px;
-	
+	@include min-screen($xs){
+		padding-bottom: 19px;
+		
+	}
+
 }
 .all-action {
 	@include col();
 	@include size(6);
-	margin-bottom: 21px;
+	@include size-xs(12);
+	margin-bottom: 16px;
+	text-decoration: none;
+	color: $text;
+	transition: opacity .2s;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+
+	@include min-screen($sm){
+		margin-bottom: 21px;
+	
+	}
 }
 .all-action__img {
 	padding-bottom: prc(224,463);
@@ -23,8 +48,15 @@
 }
 
 .all-action__text {
-	max-width: 60%;
+	@include max-screen($sm){
+		font-size: 12px;
+		line-height: 15px;
+	}	
+	@include min-screen($md){
+		max-width: 60%;
+		
+	}
 }
-.cards-more {}
+
 .cards-more__link {}
 /*--------------------END all-actions----------------------*/ 

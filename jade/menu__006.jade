@@ -1,40 +1,48 @@
 extends _misc/main
 
 block title
-	| Акции
+	| Акция
 
 block content
-	.page
+	.page.page-single-action
 		.wrapper
-			+menu('breadcrumbs', ['главная', 'акции'])
+			+menu('breadcrumbs', ['главная', 'акция workmaster'])
 
-		+backLink('Акции')
+		+backLink('Доверь свой газон Workmaster')
 
-		sect.main-slider
-			.wrapper
-				.slider-navs
-					.slider-nav.slider-nav--prev
-						+icon('chev-down')
-					.slider-nav.slider-nav--next
-						+icon('chev-down')
-				+swiper('main-slider__slider', true, false, true)
-					- for (var i=0; i < 3; i++)
-						a(href="#").swiper-slide.main-slider__slide._fit
-							img._fit-img(src="img/page-menu/action.jpg" alt="alt")
-		
-		section.all-actions
-			.wrapper
-				h2.sect-title Все акции
-			.wrapper-smart.all-actions__cards
+		section.single-action
+			.wrapper-smart
 				.wrapper-flex
-					- for (var i=0; i < 4; i++)
-						a(href="#").all-action
-							.all-action__img._fit
-								img._fit-img(src="img/page-menu/all-actions/"+(i+1)+".jpg" alt="alt")
-							.all-action__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+					.single-action__img._fit
+						img._fit-img(src="img/page-menu/single-action-img.jpg" alt="alt")
+					.single-action__left
+						h2.single-action__title Доверь свой газон Workmaster
+					.single-action__right
+						p.std-par Начало сезона не за горами, а это значит, что пора выбирать инструмент, которому вы доверите свой газон. Мы советуем присмотреться к надежным триммерам WorkMaster WT-1900B и WorkMaster WT-1800B, а также получить приятные подарки за покупку.
+
+						p.std-par Подарки при покупке :
+							br
+							| - К Бензокосе WorkMaster WT-1900B дарим в подарок Масло минеральное WorkMaster WM-2T 0.95л
+							br
+							| - К Триммеру электрическому WorkMaster WT-1800B дарим в подарок Леску для триммера WorkMaster ЛТ-2415АМ и Леску для триммера WorkMaster  ЛТ-3015 WT
+							br
+							| Срок проведения Акции до окончания товарных запасов. Акция действует в розничных магазинах «Кубань Инструмент» и в нашем интернет-магазине.
+
+		section.page-main-sect
 			.wrapper
-				.cards-more
-					a(href="#").cards-more__link Показать еще
+				h2.sect-title Акционные товары
+			.wrapper-smart
+				- var cards = [{billet: 'акция', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'акция', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}];
+				.wrapper-flex.product-cards
+					+productCard(cards, 'page-menu/single-action-prods/actioned/')
+
+		section.similar
+			.wrapper
+				.similar__title С этими товарами покупают
+			.wrapper-smart
+				- var similars = [{billet: '', price: '15 ₽', sale: '', sbers: '1', tilte: 'Леска Husqvarna 2,7мм/240м 5784379-01', aval: '6 магазинах', iconActive: false}, {billet: '', price: '950 ₽', sale: '', sbers: '10', tilte: 'Диск для кустореза GreenWorks 2905907', aval: '6 магазинах', iconActive: false}, {billet: '', price: '2 450 ₽', sale: '', sbers: '', tilte: 'Катушка для триммера Echo Maxi-Cut 215311', aval: false, analog: true, iconActive: false}, {billet: '', price: '15 ₽', sale: '', sbers: '1', tilte: 'Леска Husqvarna 2,7мм/240м 5784379-01', aval: '6 магазинах', aval: false, analog: true, iconActive: false}];
+				.wrapper-flex.product-cards
+					+productCard(similars, 'page-menu/single-action-prods/similar/')
 
 block page-scripts
 	//- SERVIVE FUNCTIONS==================

@@ -14774,6 +14774,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------END about-brand----------------------*/
 /*--------------------all-actions----------------------*/
 .all-actions {
+  padding-bottom: 43px;
   padding-top: 59px;
 }
 @media only screen and (max-width: 959.98px) {
@@ -14784,11 +14785,19 @@ h1, h2, h3, h4, h5, h6 {
 @media only screen and (max-width: 767.98px) {
   .all-actions {
     padding-top: 20px;
+    padding-bottom: 52px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .all-actions .cards-more {
+    display: none;
   }
 }
 
-.all-actions__cards {
-  padding-bottom: 19px;
+@media only screen and (min-width: 576px) {
+  .all-actions__cards {
+    padding-bottom: 19px;
+  }
 }
 
 .all-action {
@@ -14797,7 +14806,25 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 8px;
   margin-right: 8px;
   width: calc(50% - 16px);
-  margin-bottom: 21px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  transition: opacity 0.2s;
+}
+@media screen and (max-width: 576px) {
+  .all-action {
+    width: calc(100% - 16px);
+  }
+}
+@media (any-hover: hover) {
+  .all-action:hover {
+    opacity: 0.8;
+  }
+}
+@media only screen and (min-width: 767.98px) {
+  .all-action {
+    margin-bottom: 21px;
+  }
 }
 
 .all-action__img {
@@ -14805,11 +14832,21 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 12px;
 }
 
-.all-action__text {
-  max-width: 60%;
+@media only screen and (max-width: 767.98px) {
+  .all-action__text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@media only screen and (min-width: 959.98px) {
+  .all-action__text {
+    max-width: 60%;
+  }
 }
 
 /*--------------------END all-actions----------------------*/
+/*--------------------single-action----------------------*/
+/*--------------------END single-action----------------------*/
 /*--------------------product-card-tabs----------------------*/
 .page-product__features {
   padding-bottom: 53px;
