@@ -884,8 +884,8 @@
 		margin-top: 40px;
 	}
 	.shop-cart-content__img{
-		flex: 0 0 88px;
-		height: 88px;
+		flex: 0 0 rem(88);
+		height: rem(88);
 		margin-right: 12px;
 	}
 	.shop-cart-content__text{
@@ -913,7 +913,9 @@
 .info-page-order__p{
 	opacity: 0.6;
 	margin-top: 0;
-
+	@include min-screen($sm){
+		padding-right: 30px;
+	}
 
 	&:not(:last-child){
 		margin-bottom: 20px;
@@ -925,6 +927,10 @@
 }
 .info-page-order__files{
 	margin-top: 40px;
+
+	@include min-screen($sm){
+		margin-right: 16px;
+	}
 }
 .info-page-order__file{
 	display: flex;

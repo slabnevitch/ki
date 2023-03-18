@@ -5839,6 +5839,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tag {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   padding-left: 13px;
   padding-right: 13px;
   min-height: 25px;
@@ -5874,8 +5876,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #13B3EB;
   border-color: #13B3EB;
 }
-.chrome .tag, .gecko .tag, .android .tag {
+.chrome .tag, .gecko .tag {
   padding-top: 2px;
+}
+.android .tag {
+  padding-top: 3px;
 }
 
 .swiper-pagination-bullet {
@@ -17086,9 +17091,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 40px;
 }
 .page-order__info .shop-cart-content__img {
-  -ms-flex: 0 0 88px;
-  flex: 0 0 88px;
-  height: 88px;
+  -ms-flex: 0 0 5.5rem;
+  flex: 0 0 5.5rem;
+  height: 5.5rem;
   margin-right: 12px;
 }
 .page-order__info .shop-cart-content__text {
@@ -17113,6 +17118,11 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.6;
   margin-top: 0;
 }
+@media only screen and (min-width: 767.98px) {
+  .info-page-order__p {
+    padding-right: 30px;
+  }
+}
 .info-page-order__p:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -17124,6 +17134,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .info-page-order__files {
   margin-top: 40px;
+}
+@media only screen and (min-width: 767.98px) {
+  .info-page-order__files {
+    margin-right: 16px;
+  }
 }
 
 .info-page-order__file {

@@ -311,7 +311,7 @@
 
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
-
+		// alert(document.documentElement.classList);
 		// catalog hover
 			if(document.querySelectorAll('.catalog-header__item') !== null){
 
