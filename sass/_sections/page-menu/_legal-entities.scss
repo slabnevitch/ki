@@ -1,3 +1,82 @@
 /*--------------------legal-entities----------------------*/
+.legal-entities {
+	.text-cols-block__img {
+		padding-bottom: prc(450, 944);
 
+		@include max-screen($sm){
+			order: -1;
+		}
+	}
+	.text-cols-block {
+		@include max-screen($sm){
+			flex-direction: column;
+		}
+	}
+
+}
+.wrapper-smart {}
+.wrapper-flex {}
+.text-cols-block {
+	margin-bottom: 50px;
+
+	@include max-screen($md){
+		margin-bottom: 24px;
+	}
+	@include max-screen($sm){
+		margin-bottom: 12px;
+	}
+}
+.text-cols-block__left {
+	@include col();
+	@include size(4);
+	@include size-sm(12);
+	
+	.step__title {
+		font-family: $inter;
+	}
+}
+
+.text-cols-block__right {
+	@include col();
+	@include size(8);
+	@include size-sm(12);
+
+	&:not(:last-of-type){
+		@include max-screen($sm){
+			margin-bottom: 20px;
+			
+		}
+	}
+
+	.std-p{
+		margin-top: 0;
+	}
+}
+.text-cols-block__img {
+	margin-bottom: 40px;
+	margin-top: 25px;
+	@include col();
+	@include size(12);
+
+	@include max-screen($sm){
+		margin-bottom: 12px;
+		margin-top: 0;
+	}
+
+	&:first-child{
+		margin-top: 0;
+	}
+
+	&:not(:first-child){
+		
+	}
+}
+.std-p {}
+._fit {}
+._fit-img {}
+.steps {}
+.step {}
+.step__img {}
+.step__content {}
+.step__text {}
 /*--------------------END legal-entities----------------------*/ 

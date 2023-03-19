@@ -12,22 +12,21 @@ block content
 
 		section.legal-entities
 			.wrapper-smart
-				.wrapper-flex
-					.text-cols-block
-						.text-cols-block__left
-							h2.sect-title Юридическим лицам
-						
-						.text-cols-block__right
-							p.std-p Если вы представляете строительную компанию, производственное предприятие, коммунальную службу, бюджетную или торгующую организацию и ищете надежного и удобного для вас поставщика широкого ассортимента инструмента и оборудования, а также расходных материалов, то мы готовы предложить вам максимально удобные и взаимовыгодные условия сотрудничества.
-						
-						.text-cols-block__img._fit
-							img._fit-img(src="img/page-menu/legals-img.jpg" alt="alt")
+				.wrapper-flex.text-cols-block
+					.text-cols-block__left
+						h2.sect-title Юридическим лицам
+					
+					.text-cols-block__right
+						p.std-p Если вы представляете строительную компанию, производственное предприятие, коммунальную службу, бюджетную или торгующую организацию и ищете надежного и удобного для вас поставщика широкого ассортимента инструмента и оборудования, а также расходных материалов, то мы готовы предложить вам максимально удобные и взаимовыгодные условия сотрудничества.
+					
+					.text-cols-block__img._fit
+						img._fit-img(src="img/page-menu/legals-img.jpg" alt="alt")
 
-						.text-cols-block__left
-							h2.sect-title Преимущества
+					.text-cols-block__left
+						h2.sect-title Преимущества
 
-						.text-cols-block__right
-							p.std-p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id. Pharetra magna ac placerat vestibulum. Est lorem ipsum dolor sit. Augue mauris augue neque gravida in fermentum et sollicitudin. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Ac odio tempor orci dapibus ultrices in iaculis nunc.
+					.text-cols-block__right
+						p.std-p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id. Pharetra magna ac placerat vestibulum. Est lorem ipsum dolor sit. Augue mauris augue neque gravida in fermentum et sollicitudin. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Ac odio tempor orci dapibus ultrices in iaculis nunc.
 
 			- var steps = ['Удобно', 'Выгодно', 'Быстро'];
 			.wrapper-smart
@@ -40,6 +39,65 @@ block content
 							.step__content
 								.step__title= item
 								.step__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+		section.team
+			.wrapper
+				.team__title Наша команда
+				- var leaders = ['Руководители отделов', 'Специалисты'];
+			
+			.wrapper-smart
+				._tabs.team__tabs.wrapper-flex
+					ul.tabs__buttons.team__buttons
+						each item,i in leaders
+							li
+								a(class=i==0 ? "tab team__tab active" : "tab team__tab" href='#')= item
+
+					ul.tabs__container.team__container
+						li.tab-content.team__content.active
+							.team__subtitle Руководители отделов
+							.team__grid.wrapper-flex
+								- var bosses = ['Рафаэль Арутюнян', 'Роман Хома'];
+									each item,i in  bosses
+										.team__card.card-team.card-team--boss
+											.card-team__img._fit
+												img._fit-img(src="img/page-menu/team/bosses/"+(i+1)+".jpg" alt="alt")
+											.card-team__info
+												.card-team__name= item
+												.card-team__role Руководитель контакт-центра
+												.card-team__contact
+													a(href="tel:+78612128214") +7(861)212-8-214
+													span доб. 158
+												.card-team__contact
+													a(href="mailto:callcenter-3@kubaninstrument.ru") callcenter-3@kubaninstrument.ru
+						
+						li.tab-content.team__content.hidden
+							.team__subtitle Специалисты
+							- var managers = ['Мария Маслакова', 'Дмитрий Сорокопудов', 'Дмитрий Ильченко', 'Антон Губин', 'Василий Пасенко', 'Александр Марков', 'Виктор Шубарт', 'Алексей Левченко'];
+							.team__grid.wrapper-flex
+								each item,i in  managers
+									.team__card.card-team.card-team--manager
+										.card-team__img._fit
+											img._fit-img(src="img/page-menu/team/managers/"+(i+1)+".jpg" alt="alt")
+										.card-team__info
+											.card-team__name= item
+											.card-team__role Менеджер по работе с ключевыми клиентами
+											.card-team__contact
+												a(href="tel:+78612128214") +7(861)212-8-214
+												span.card-team__added #[span.card-team__label доб.] #[span.card-team__plus +]158
+											.card-team__contact
+												a(href="mailto:callcenter-3@ku.ru") callcenter-3@ku.ru
+			.team-order
+				.wrapper-smart
+					.wrapper-flex.text-cols-block
+						.text-cols-block__left
+							h2.sect-title Оставьте заявку
+						
+						.text-cols-block__right
+							p.std-p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id. Pharetra magna ac placerat vestibulum. Est lorem ipsum dolor sit. Augue mauris augue neque gravida in fermentum et sollicitudin. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Ac odio tempor orci dapibus ultrices in iaculis nunc.
+
+							button.btn.btn-lg.btn-order.btn-red оставить заявку
+
+
+
 					
 
 block page-scripts
@@ -109,7 +167,7 @@ block page-scripts
 	//- script(src="js/libs/accordion/vanilla-accordion.js")
 		
 	//- tabs--------------------------
-	//- script(src="js/libs/tabs/tabs-pure.js")
+	script(src="js/libs/tabs/tabs-pure.js")
 		
 	//- micromodal--------------------------
 	//- script(src="js/libs/micromodal/micromodal.js")	

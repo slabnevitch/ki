@@ -15006,6 +15006,91 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------END gif-card----------------------*/
 /*--------------------legal-entities----------------------*/
+.legal-entities .text-cols-block__img {
+  padding-bottom: 47.6694915254%;
+}
+@media only screen and (max-width: 767.98px) {
+  .legal-entities .text-cols-block__img {
+    -ms-flex-order: -1;
+    order: -1;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .legal-entities .text-cols-block {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.text-cols-block {
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 959.98px) {
+  .text-cols-block {
+    margin-bottom: 24px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .text-cols-block {
+    margin-bottom: 12px;
+  }
+}
+
+.text-cols-block__left {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: calc(33.3333333333% - 16px);
+}
+@media screen and (max-width: 767.98px) {
+  .text-cols-block__left {
+    width: calc(100% - 16px);
+  }
+}
+.text-cols-block__left .step__title {
+  font-family: "Inter", sans-serif;
+}
+
+.text-cols-block__right {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: calc(66.6666666667% - 16px);
+}
+@media screen and (max-width: 767.98px) {
+  .text-cols-block__right {
+    width: calc(100% - 16px);
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .text-cols-block__right:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}
+.text-cols-block__right .std-p {
+  margin-top: 0;
+}
+
+.text-cols-block__img {
+  margin-bottom: 40px;
+  margin-top: 25px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: calc(100% - 16px);
+}
+@media only screen and (max-width: 767.98px) {
+  .text-cols-block__img {
+    margin-bottom: 12px;
+    margin-top: 0;
+  }
+}
+.text-cols-block__img:first-child {
+  margin-top: 0;
+}
 /*--------------------END legal-entities----------------------*/
 /*--------------------single-action----------------------*/
 .page-single-action .similar {
@@ -15086,6 +15171,214 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------END single-action----------------------*/
+/*--------------------team----------------------*/
+.team__title {
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+  border-bottom: 1px solid #C4C4C4;
+}
+@media only screen and (max-width: 767.98px) {
+  .team__title {
+    display: none;
+  }
+}
+
+.team__subtitle {
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  border-bottom: 1px solid #C4C4C4;
+}
+@media only screen and (min-width: 767.98px) {
+  .team__subtitle {
+    display: none;
+  }
+}
+
+.team__tabs {
+  padding-bottom: 20px;
+}
+
+.team__buttons {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: calc(33.3333333333% - 16px);
+  display: block;
+}
+@media only screen and (max-width: 767.98px) {
+  .team__buttons {
+    display: none;
+  }
+}
+
+.team__tab {
+  margin-bottom: 5px;
+  padding: 5px 0 5px 8px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  opacity: 0.2;
+  border-left: 2px solid transparent;
+  color: rgba(0, 0, 0, 0.8);
+}
+.team__tab.active {
+  opacity: 1;
+  border-left-color: rgba(0, 0, 0, 0.8);
+  background-color: transparent;
+}
+
+.team__container {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: calc(66.6666666667% - 16px);
+}
+@media screen and (max-width: 767.98px) {
+  .team__container {
+    width: calc(100% - 16px);
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .team__content.hidden {
+    display: block;
+  }
+}
+
+.team__top {
+  margin-bottom: 39px;
+}
+
+.team__card {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.card-team {
+  margin-bottom: 19px;
+}
+
+.card-team--boss {
+  width: calc(50% - 16px);
+}
+@media screen and (max-width: 479.98px) {
+  .card-team--boss {
+    width: calc(100% - 16px);
+  }
+}
+.card-team--boss .card-team__img {
+  padding-bottom: 115.9468438538%;
+}
+
+.card-team__img {
+  margin-bottom: 8px;
+}
+
+.card-team__name {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+}
+
+.card-team__role {
+  margin-bottom: 15px;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  opacity: 0.4;
+}
+
+.card-team__contact:not(:last-child) {
+  margin-bottom: 7px;
+}
+.card-team__contact a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+@media only screen and (min-width: 479.98px) {
+  .card-team__added {
+    margin-left: 6px;
+  }
+}
+
+@media only screen and (max-width: 479.98px) {
+  .card-team__label {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 479.98px) {
+  .card-team__plus {
+    display: none;
+  }
+}
+
+.card-team--manager {
+  width: calc(33.3333333333% - 16px);
+}
+@media screen and (max-width: 959.98px) {
+  .card-team--manager {
+    width: calc(50% - 16px);
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .card-team--manager {
+    width: calc(50% - 16px);
+  }
+}
+@media only screen and (max-width: 375px) {
+  .card-team--manager {
+    margin-left: 4px;
+    margin-right: 4px;
+    width: calc(50% - 8px);
+  }
+}
+.card-team--manager .card-team__img {
+  padding-bottom: 132.6530612245%;
+}
+@media only screen and (max-width: 576px) {
+  .card-team--manager .card-team__name {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .card-team--manager .card-team__contact {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.team-order {
+  padding-top: 40px;
+  padding-bottom: 56px;
+  border-top: 1px solid #C4C4C4;
+}
+@media only screen and (max-width: 767.98px) {
+  .team-order {
+    padding-top: 0px;
+    padding-bottom: 40px;
+    border-top: none;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .team-order .text-cols-block__right .btn-order {
+    margin-top: 30px;
+  }
+}
+
+/*--------------------END team----------------------*/
 /*--------------------product-card-tabs----------------------*/
 .page-product__features {
   padding-bottom: 53px;
