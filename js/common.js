@@ -200,7 +200,9 @@
 			if(screen.width >= 959.98){
 				document.body.classList.add('fullscreen-map-visible', 'map-with-modal');
 			}else{
-				document.body.classList.remove(targ.closest('.side-modal').dataset.visibleClass, 'side-modal-visible', 'map-with-modal');
+				if(targ.closest('.side-modal') !== null){
+					document.body.classList.remove(targ.closest('.side-modal').dataset.visibleClass, 'side-modal-visible', 'map-with-modal');
+				}
 				document.body.classList.add('fullscreen-map-visible', 'map-with-modal');
 			}
 		}

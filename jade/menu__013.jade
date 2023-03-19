@@ -1,0 +1,197 @@
+extends _misc/main
+
+block title
+	| Публичная оферта
+	
+block content
+	.page
+		.wrapper
+			+menu('breadcrumbs', ['главная', 'Доставка и самовывоз'])
+
+		+backLink('Доставка и самовывоз', true)
+
+		.delivery
+			.wrapper
+				h2.delivery__title Доставка и самовывоз
+				.delivery__subtitle Кубань Инструмент предлагает несколько видов доставки заказов и самовывоз.
+
+				.delivery__subtitle Мы заботимся о здоровье покупателей и персонала. Поэтому в процессе доставки соблюдаются основные правила профилактики коронавирусной инфекции.
+
+				a(href="#").video-link._fit
+					img._fit-img(src="img/page-menu/video-cover.jpg" alt="alt")
+					.play-icon
+						img(src="img/play.svg" alt="alt")
+
+				- var accs = ['Доставка по Краснодару и городам присутствия сети магазинов Кубань Инструмент', 'Доставка в пригород и по Краснодарскому краю', 'Доставка по России', 'Самовывоз из пункта выдачи'];
+				
+				ul.accordion.std-accordion(data-accordion)
+					each item,i in accs
+						li(class=i==0? "accordion__item std-accordion__item active" : "accordion__item std-accordion__item")
+							.accordion__link.std-accordion__link= item
+								+icon('chev-right')
+							div(class=i==0 ? "accordion__content std-accordion__content" : "accordion__content std-accordion__content hidden")
+								.delivery__content-title  Цена
+								p.std-p Доставка заказов, на сумму свыше 2500 рублей — БЕСПЛАТНО!
+									br
+									| Стоимость доставки заказа, где сумма покупки НЕ превышает 2500 рублей, составит 200 рублей в пределах города.
+
+								.delivery__content-title Как оплатить?
+								.std-p Оплата возможна онлайн, так и при получении, но только при помощи наличного расчёта, при условии стоимости товара не более 50 000 ₽. Доставка товаров юридическим лицам осуществляется только после полной оплаты счета. Подробнее о способах оплаты.
+
+								.delivery__content-title Условия
+								p.std-p Курьерская доставка по Краснодару осуществляется на следующий день (в некоторых случаях необходимо 3–5 дней для подготовки к отгрузке всех позиций в заказе) после оформления заказа.
+									br
+									| Время доставки с понедельника по субботу, с 12 до 18 часов.
+									br
+									| Ожидайте предварительного звонка водителя ориентировочно за 30 минут до времени доставки.
+									br
+									| Услуга выгрузки и подъёма на этаж не предоставляется!
+									br
+									| Сотрудник, осуществляющий доставку товара, не является техническим специалистом, давать квалифицированную консультацию не может.
+
+								.delivery__content-title Как оформить?
+								p.std-p Оформить, уточнить дату, время и маршрут доставки, вы можете у менеджера, который свяжется с вами для подтверждения заказа.
+
+								.delivery__content-title Что нужно сделать при получении товара курьером «Кубань Инструмент»?
+								p.std-p Памятка покупателю.
+									br
+									| Получить товар может лицо, сделавшее заказ, или иное лицо, находящееся по указанному в заказе адресу и готовое оплатить и/или принять товар.
+
+								.delivery__content-title При получении товара:
+								p.std-p Проверьте упаковку — она не должна быть нарушена.
+									br
+									| Вскройте упаковку и внимательно осмотрите внешний вид и комплектность товара (комплектация, как правило, обозначена в инструкции по эксплуатации, также данную информацию можно найти на официальном сайте производителя товара).
+
+								.delivery__content-title Проверьте соответствие привезённого товара заказанному.
+								- var list = ['Продавец демонстрирует и передаёт товар Покупателю в оригинальной упаковке производителя, в ассортименте и количестве, указанном в заказе.', 'При отсутствии нареканий в момент приёма товара, оплатите стоимость товара и оказанных услуг. Оплата производится в рублях.', 'Подтвердите своей подписью в бланке заказа, что не имеете претензий к ассортименту, количеству, внешнему виду, комплектации товара.', 'После приёмки товара Покупателем, Продавец не принимает претензий по ассортименту, внешнему виду, количеству, соответствию полученного товара заказанному.'];
+								ul
+									each item in list
+										li= item
+
+								.delivery__content-title Какие документы принять вместе с товаром?
+								p.std-p В момент приёма товара Покупатель получает от Продавца следующие документы к товару:
+								- var list2 = ['товарный и кассовый чеки.', 'гарантийный талон с печатью Продавца, если товар является гарантийным или технически сложным., инструкцию по эксплуатации.'];
+								ul
+									each item in list2
+										li= item
+
+								p.std-p В случае оплаты на сайте или после выставления счета клиент получает от продавца УПД (универсальный передаточный документ). В случае оплаты наличными при получении клиент получает только чек! После совершения онлайн-покупки, ожидайте чек от СберБанка на электронную почту.
+	
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	script(src="js/libs/swiper/swiper-bundle.min.js")
+
+	//- tiny-slider--------------------------
+	//- script(src="js/libs/tiny-slider/dist/min/tiny-slider.js")
+
+	//-viewerjs --------------------------
+	script(src="js/libs/viewerjs/viewer.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	script(src="js/libs/rating/ratings.js")
+
+	//- scroll-to-sects--------------------------
+	//- script(src="js/libs/scroll-to-sects/scrolltosect.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+
+	//- counter--------------------------
+	//- script(src="js/libs/counter/counter.js")
+
+//- end VANILLA JS===================================

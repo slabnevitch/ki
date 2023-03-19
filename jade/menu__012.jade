@@ -1,0 +1,164 @@
+extends _misc/main
+
+block title
+	| Публичная оферта
+	
+block content
+	.page
+		.wrapper
+			+menu('breadcrumbs', ['главная', 'Публичная оферта'])
+
+		+backLink('Публичная оферта', true)
+
+		.wrapper-smart
+			.wrapper-flex.text-cols-block
+				.text-cols-block__left
+					h2.sect-title Термины и определения:
+				
+				.text-cols-block__right
+					p.std-p В настоящей оферте, если из контекста не следует иное, нижеприведённые термины имеют следующие значения и являются её составной неотъемлемой частью:
+
+					p.std-p «Продавец» — индивидуальный предприниматель Осипян Виктор Навасартович (ИНН 230801417961, ОГРНИП: 305230805500010), открытый в соответствии с законодательством РФ и осуществляющий предпринимательскую деятельность по продаже Товара дистанционным способом.
+
+					p.std-p «Оферта» — настоящий документ, являющийся публичным предложением Продавца, адресованным любому физическому лицу, о заключении договора розничной купли-продажи Товара дистанционным способом (далее - «Договор») на условиях, содержащихся в Оферте, включая все её приложения.
+
+					p.std-p «Покупатель» — любое физическое лицо имеющее намерение приобрести Товары исключительно для личных, семейных, домашних и иных нужд, несвязанных с осуществлением предпринимательской деятельности, принявшее (акцептировавшее) настоящую оферту на нижеуказанных условиях.
+
+					p.std-p «Зарегистрированный покупатель» — Покупатель, предоставивший Продавцу свои персональные данные посредством регистрации на сайте, которые могут быть использованы Продавцом для оформления Заказа Покупателя.
+
+					p.std-p «сайт» — совокупность электронных документов, доступных для просмотра Покупателями в сети Интернет в домене https://www.kubaninstrument.ru/
+
+					p.std-p «Интернет-магазин» — интернет-магазин https://www.kubaninstrument.ru/ по продаже товаров, размещённых на Сайте.
+
+					p.std-p «Товар» — объект соглашения сторон, перечень наименований ассортимента, представленный в официальном интернет-магазине. Не изъятый и не ограниченный в гражданском обороте и предложенный к продаже посредством размещения в соответствующем разделе Интернет-магазина.
+
+					p.std-p «Заказ» — оформленный Покупателем в Интернет-магазине запрос на покупку и доставку Товаров, выбранных Покупателем в Интернет-магазине, и предоставленный Продавцу посредством сети Интернет (электронная форма, размещённая на сайте) и/или оформленный Покупателем по телефону.
+
+					p.std-p «Курьерская служба» — третье лицо, определяемое Продавцом, осуществляющее Доставку Товара Покупателю, либо уполномоченное от имени и за счёт Продавца заключать Договор и производить его исполнение.
+
+					p.std-p «Акцепт» — полное и безоговорочное принятие Покупателем условий оферты, подтверждающееся принятием Покупателем и внесением Продавцу денежных средств в сумме Номинала товара.
+
+					p.std-p «Карта» — банковская карта, эмитированная кредитной организацией, позволяющая Покупателю совершать с её помощью операции с денежными средствами, находящимися у эмитировавшей Карту кредитной организации, в соответствии с законодательством Российской Федерации и договором с кредитной организацией, в том числе операции по оплате Товаров, приобретаемых у Продавца на основании Договора. 
+
+					p.std-p «Правила дистанционной продажи» - Правила продажи товаров дистанционным способом, утверждённые постановлением Правительства Российской Федерации от 27 сентября 2007 года № 612.
+
+					p.std-p Для целей настоящей оферты термины и определения в единственном числе относятся также и к терминам, и определениям во множественном числе и наоборот.
+		
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	script(src="js/libs/swiper/swiper-bundle.min.js")
+
+	//- tiny-slider--------------------------
+	//- script(src="js/libs/tiny-slider/dist/min/tiny-slider.js")
+
+	//-viewerjs --------------------------
+	script(src="js/libs/viewerjs/viewer.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	script(src="js/libs/rating/ratings.js")
+
+	//- scroll-to-sects--------------------------
+	//- script(src="js/libs/scroll-to-sects/scrolltosect.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+
+	//- counter--------------------------
+	//- script(src="js/libs/counter/counter.js")
+
+//- end VANILLA JS===================================

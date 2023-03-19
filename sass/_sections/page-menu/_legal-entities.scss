@@ -25,6 +25,10 @@
 	@include max-screen($sm){
 		margin-bottom: 12px;
 	}
+	.sect-title{
+		font-family: $inter;
+		font-weight: 700;
+	}
 }
 .text-cols-block__left {
 	@include col();
