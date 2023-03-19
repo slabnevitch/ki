@@ -236,6 +236,15 @@
 			transform: translateX(0);
 		}
 	}
+	&.legals-modal{
+		.legals-modal-visible &{
+			transform: translateX(0);
+		}
+
+		.form .btn-order {
+		    margin-bottom: 10px;
+		}
+	}
 	&.covered-modal{
 		&:after{
 			content: '';
@@ -257,6 +266,15 @@
 			left: 50%;
 			transform: translateX(-50%);
 			z-index: 1;
+		}
+	}
+
+	.cards-more{
+		margin-bottom: 25px;
+
+		&__link{
+			font-size: rem(10);
+			line-height: rem(12);
 		}
 	}
 

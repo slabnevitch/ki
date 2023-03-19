@@ -1,0 +1,60 @@
+/*--------------------shops----------------------*/
+.shops {
+	.address-side-modal__form {
+		@include min-screen($md){
+			max-width: 224px;
+			
+		}
+
+	}
+	.address-side-modal__select {
+		@include min-screen($md){
+			max-width: 100%;
+			flex: 1 1 auto;
+			
+		}
+	}
+	.side-modal__to-map {
+		@include min-screen($md){
+			display: none;
+		}
+	}
+
+}
+.wrapper {}
+.form {}
+.fstdropdown-select {}
+.to-map-side-modal {}
+.to-map-side-moda__title {}
+.icon {}
+.icon-loc {}
+.shops__content {}
+.shops__title {
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: rem(18);
+	line-height: rem(20);
+}
+.wrapper-smart {}
+.wrapper-flex {}
+.shops__tiles {
+	.address-list__item {
+		@include col();
+		@include size(3);
+		flex-direction: column;
+	}
+
+}
+.address-list__img {}
+._fit {}
+._fit-img {}
+.address-list__content {}
+.address-list__loc {}
+.address-list__phones {}
+.address-list__phones-row {}
+.address-list__phone {}
+.address-list__shedule {}
+.btn {}
+.btn-sm {}
+.btn-loc {}
+/*--------------------END shops----------------------*/ 

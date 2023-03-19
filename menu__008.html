@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
+  <body class="legals-modal-visible covered">
     <aside class="multilevel-panel">
       <div class="multilevel-panel__label">Каталог</div>
       <div class="mob-catalog-screen">
@@ -8011,7 +8011,7 @@
         </form>
       </div>
     </div>
-    <div id="modal-legal" data-visible-class="order-return-modal-visible" class="side-modal legals-modal">
+    <div id="modal-legal" data-visible-class="legals-modal-visible" class="side-modal legals-modal">
       <button type="button" class="side-modal__close button-close">
             <svg class="icon icon-ctlg-close ">
               <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
@@ -8019,40 +8019,49 @@
       </button>
       <div class="side-modal__inner">
         <div class="side-modal__title">Юр. лицам</div>
-        <form action="#" class="form">
-          <div class="form__row">
-            <div class="form__row-title form__row-title--required">Название компании*</div>
-            <label class="form__label">
-              <input type="text" name="name" class="form__input">
-            </label>
-          </div>
-          <div class="form__row">
-            <div class="form__row-title form__row-title--required">Контактное лицо*</div>
-            <label class="form__label">
-              <input type="text" name="name" class="form__input">
-            </label>
-          </div>
-          <div class="form__row">
-            <div class="form__row-title form__row-title--required">Телефон*</div>
-            <label class="form__label">
-              <input type="text" name="name" class="form__input">
-            </label>
-          </div>
-          <div class="form__row">
-            <div class="form__row-title form__row-title--required">Телефон*</div>
-            <label class="form__label">
-              <input type="text" name="name" class="form__input">
-            </label>
-          </div>
-          <div class="form__row">
-            <div class="form__row-title">E-mail</div>
-            <label class="form__label">
-              <input type="text" name="name" class="form__input">
-            </label>
-          </div>
-          <button type="submit" class="btn btn-lg btn-order">Отправить заявку</button>
-          <div class="form__note">*При входе и регистрации вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
-        </form>
+        <div class="side-modal__content">
+          <form action="#" class="form">
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Название компании*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Контактное лицо*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Телефон*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Телефон*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title">E-mail</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="cards-more"><a href="#" class="cards-more__link">+ Прикрепить карточку предприятия</a></div>
+            <div class="form__row">
+              <div class="form__row-title">Комментарии к заявке</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <button type="submit" class="btn btn-lg btn-order">Оставить заявку</button>
+            <div class="form__note">Оставляя данные вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+          </form>
+        </div>
       </div>
     </div>
     <div class="widemodal modal-hide">

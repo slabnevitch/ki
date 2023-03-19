@@ -520,35 +520,43 @@
 
 			button(type="submit").btn.btn-lg.btn-order оставить заявку
 
-.side-modal.legals-modal#modal-legal(data-visible-class="order-return-modal-visible")
+.side-modal.legals-modal#modal-legal(data-visible-class="legals-modal-visible")
 	button(type="button").side-modal__close.button-close
 		+icon('ctlg-close')
 	
 	.side-modal__inner
 		.side-modal__title Юр. лицам
 
-		form.form(action='#')
-			.form__row
-				.form__row-title.form__row-title--required Название компании*
-				label.form__label
-					input.form__input(type='text' name='name')
-			.form__row
-				.form__row-title.form__row-title--required Контактное лицо*
-				label.form__label
-					input.form__input(type='text' name='name')
-			.form__row
-				.form__row-title.form__row-title--required Телефон*
-				label.form__label
-					input.form__input(type='text' name='name')
-			.form__row
-				.form__row-title.form__row-title--required Телефон*
-				label.form__label
-					input.form__input(type='text' name='name')
-			.form__row
-				.form__row-title E-mail
-				label.form__label
-					input.form__input(type='text' name='name')
+		.side-modal__content
+			form.form(action='#')
+				.form__row
+					.form__row-title.form__row-title--required Название компании*
+					label.form__label
+						input.form__input(type='text' name='name')
+				.form__row
+					.form__row-title.form__row-title--required Контактное лицо*
+					label.form__label
+						input.form__input(type='text' name='name')
+				.form__row
+					.form__row-title.form__row-title--required Телефон*
+					label.form__label
+						input.form__input(type='text' name='name')
+				.form__row
+					.form__row-title.form__row-title--required Телефон*
+					label.form__label
+						input.form__input(type='text' name='name')
+				.form__row
+					.form__row-title E-mail
+					label.form__label
+						input.form__input(type='text' name='name')
+				.cards-more
+					a(href="#").cards-more__link + Прикрепить карточку предприятия
 
-			button(type="submit").btn.btn-lg.btn-order Отправить заявку
+				.form__row
+					.form__row-title Комментарии к заявке
+					label.form__label
+						input.form__input(type='text' name='name')
 
-			.form__note *При входе и регистрации вы соглашаетесь с #[a(href="#") Политикой обработки персональных данных]
+				button(type="submit").btn.btn-lg.btn-order Оставить заявку
+
+				.form__note Оставляя данные вы соглашаетесь с #[a(href="#") Политикой обработки персональных данных]

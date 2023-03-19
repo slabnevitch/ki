@@ -9769,6 +9769,13 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
+.legals-modal-visible .side-modal.legals-modal {
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+.side-modal.legals-modal .form .btn-order {
+  margin-bottom: 10px;
+}
 .side-modal.covered-modal:after {
   content: "";
   position: absolute;
@@ -9789,6 +9796,13 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   z-index: 1;
+}
+.side-modal .cards-more {
+  margin-bottom: 25px;
+}
+.side-modal .cards-more__link {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
 }
 .side-modal .product-card--mini {
   padding-bottom: 20px;
@@ -15092,6 +15106,43 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 /*--------------------END legal-entities----------------------*/
+/*--------------------shops----------------------*/
+@media only screen and (min-width: 959.98px) {
+  .shops .address-side-modal__form {
+    max-width: 224px;
+  }
+}
+@media only screen and (min-width: 959.98px) {
+  .shops .address-side-modal__select {
+    max-width: 100%;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+}
+@media only screen and (min-width: 959.98px) {
+  .shops .side-modal__to-map {
+    display: none;
+  }
+}
+
+.shops__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+}
+
+.shops__tiles .address-list__item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: calc(25% - 16px);
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/*--------------------END shops----------------------*/
 /*--------------------single-action----------------------*/
 .page-single-action .similar {
   padding-top: 21px;
