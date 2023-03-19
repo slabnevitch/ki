@@ -519,3 +519,36 @@
 					textarea.form__area(type='text' name='question' placeholder="Опишите ваши впечатления")
 
 			button(type="submit").btn.btn-lg.btn-order оставить заявку
+
+.side-modal.legals-modal#modal-legal(data-visible-class="order-return-modal-visible")
+	button(type="button").side-modal__close.button-close
+		+icon('ctlg-close')
+	
+	.side-modal__inner
+		.side-modal__title Юр. лицам
+
+		form.form(action='#')
+			.form__row
+				.form__row-title.form__row-title--required Название компании*
+				label.form__label
+					input.form__input(type='text' name='name')
+			.form__row
+				.form__row-title.form__row-title--required Контактное лицо*
+				label.form__label
+					input.form__input(type='text' name='name')
+			.form__row
+				.form__row-title.form__row-title--required Телефон*
+				label.form__label
+					input.form__input(type='text' name='name')
+			.form__row
+				.form__row-title.form__row-title--required Телефон*
+				label.form__label
+					input.form__input(type='text' name='name')
+			.form__row
+				.form__row-title E-mail
+				label.form__label
+					input.form__input(type='text' name='name')
+
+			button(type="submit").btn.btn-lg.btn-order Отправить заявку
+
+			.form__note *При входе и регистрации вы соглашаетесь с #[a(href="#") Политикой обработки персональных данных]
