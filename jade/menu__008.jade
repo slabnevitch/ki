@@ -1,44 +1,45 @@
 extends _misc/main
 
 block title
-	| Подарочные карты
+	| Юр. лицам
 
 block content
-	.page.page-gif-card
+	.page
 		.wrapper
-			+menu('breadcrumbs', ['главная', 'Подарочные карты'])
+			+menu('breadcrumbs', ['главная', 'Юр. лицам'])
 
-		+backLink('Подарочные карты')
+		+backLink('Юр. лицам')
 
-		.wrapper
-			.gift-cards-img._fit
-				img._fit-img(src="img/page-menu/gift-cards.jpg" alt="alt")
-		
-		section.page-main-sect
-			.wrapper
-				h2.sect-title Как это работает?
-			
-			- var steps = [{title: 'Первый шаг', txt: 'Выбирайте подарочную карту необходимого номинала'}, {title: 'Второй шаг', txt: 'Покупайте подарочную карту в любом розничном магазине Кубань Инструмент'}, {title: 'Третий шаг', txt: '3 Подарочной картой можно расплатиться во всех розничных магазинах Кубань Инструмент'}];
+		section.legal-entities
+			.wrapper-smart
+				.wrapper-flex
+					.text-cols-block
+						.text-cols-block__left
+							h2.sect-title Юридическим лицам
+						
+						.text-cols-block__right
+							p.std-p Если вы представляете строительную компанию, производственное предприятие, коммунальную службу, бюджетную или торгующую организацию и ищете надежного и удобного для вас поставщика широкого ассортимента инструмента и оборудования, а также расходных материалов, то мы готовы предложить вам максимально удобные и взаимовыгодные условия сотрудничества.
+						
+						.text-cols-block__img._fit
+							img._fit-img(src="img/page-menu/legals-img.jpg" alt="alt")
+
+						.text-cols-block__left
+							h2.sect-title Преимущества
+
+						.text-cols-block__right
+							p.std-p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id. Pharetra magna ac placerat vestibulum. Est lorem ipsum dolor sit. Augue mauris augue neque gravida in fermentum et sollicitudin. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Ac odio tempor orci dapibus ultrices in iaculis nunc.
+
+			- var steps = ['Удобно', 'Выгодно', 'Быстро'];
 			.wrapper-smart
 				.wrapper-flex.steps
 					each item,i in steps
 						.step
 							.step__img
-								img(src="img/page-menu/steps/"+(i+1)+".svg" alt="alt")
+								img(src="img/page-menu/legals-steps/"+(i+1)+".svg" alt="alt")
 							
 							.step__content
-								.step__title= item.title
-								.step__text= item.txt
-
-		- var accs = ['Что такое подарочная карта?', 'Как работает подарочная карта?', 'Где я могу приобрести подарочную карту?', 'Могу ли я использовать сразу несколько подарочных карт одновременно?', 'Могу ли я получить остаток наличными, если сумма покупки меньше номинала карты?', 'Что делать, если я не успею воспользоваться подарочной картой?', 'Могу ли я получить остаток наличными, если сумма покупки меньше номинала карты?', 'Если суммы на подарочной карте не хватает для оплаты покупки, можно ли доплатить разницу?', 'Какие номиналы у подарочных карт КУБАНЬ ИНСТРУМЕНТ?', 'Какой товар можно приобрести в магазинах с использованием подарочной карты', 'Если я потеряю подарочную карту, можно её восстановить?', 'Нужны ли какие-то документы для покупки подарочной карты?', 'Если я буду дарить карту, как её можно красиво упаковать?'];
-		.wrapper
-			ul.accordion.std-accordion(data-accordion)
-				each item,i in accs
-					li(class=i==0? "accordion__item std-accordion__item active" : "accordion__item std-accordion__item")
-						.accordion__link.std-accordion__link= item
-							+icon('chev-right')
-						div(class=i==0 ? "accordion__content std-accordion__content" :"accordion__content std-accordion__content hidden")
-							p.std-par Если карта потерялась или ее украли, ее невозможно восстановить. Все потому, что на карте нет информации о том, кто и когда купил ее и мы не сможем отследить ее по владельцу. Постарайтесь не терять наши подарочные карты и храните их в укромном месте.
+								.step__title= item
+								.step__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
 					
 
 block page-scripts

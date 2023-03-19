@@ -1,0 +1,135 @@
+/*--------------------gif-card----------------------*/
+.page-gif-card{
+	// padding-bottom: 52px;
+	// @include max-screen($sm){
+	// 	padding-bottom: 43px;
+	// }
+}
+.gift-cards-img {
+	padding-bottom: prc(400,944);
+}
+
+.main-page-sect {}
+.wrapper {}
+.sect-title {}
+.wrapper-smart {}
+.steps {
+	margin-bottom: 40px;
+
+	@include max-screen($sm){
+		margin-bottom: 28px;
+	}
+	@include max-screen($sm){
+		margin-bottom: 12px;
+	}
+}
+.wrapper-flex {}
+.step {
+	@include col();
+	@include size(4);
+	@include size-sm(6);
+	@include size-xs(12);
+
+	@include max-screen($sm){
+		margin-bottom: 12px;
+	}
+	@include max-screen($xs){
+		display: flex;
+		align-items: center;
+	}
+}
+.step__img {
+	position: relative;
+	margin-bottom: 20px;
+	padding-bottom: prc(144, 304);
+	background: #FFFFFF;
+	border: 2px solid $gray-l;
+	border-radius: 4px;
+
+	@include max-screen($xs){
+		flex: 0 0 64px;
+		height: 64px;
+		padding-bottom: 0;
+		margin-right: 24px;
+		margin-bottom: 0;
+	}
+
+	img{
+		@include absolute-center;
+		max-height: calc(100% - 36px);
+	}
+}
+.step__content {}
+.step__title {
+	font-weight: 700;
+	margin-bottom: 8px;
+
+	@include max-screen($xs){
+		margin-bottom: 4px;
+		font-size: 12px;
+		line-height: 15px
+	}	
+}
+.step__text {
+	font-size: rem(16);
+	line-height: 140%;
+	opacity: 0.6;
+
+	@include max-screen($xs){
+		font-size: 10px;
+		line-height: 12px;
+	}	
+}
+.std-accordion {
+	padding-bottom: 40px;
+}
+.std-accordion__item {
+	list-style-type: none;
+	border-top: 1px solid $border;
+
+	&:last-child{
+		border-bottom: 1px solid $border;
+		
+	}
+
+	&.active{
+
+		.std-accordion__link {
+			.icon{
+				transform: rotate(-90deg);
+			}
+		}
+	}
+}
+
+.std-accordion__link {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 16px;
+	padding-bottom: 20px;
+	font-weight: 700;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			cursor: pointer;
+		}
+
+	.icon{
+		margin-left: 24px;
+		flex-shrink: 0;
+		font-size: rem(10);
+		color: #C2C2C2;
+	}
+}
+.std-accordion__content {
+	.std-par{
+		font-size: rem(14);
+		&:last-child{
+			margin-bottom: 20px;
+			
+		}
+
+
+	}
+}
+/*--------------------END gif-card----------------------*/ 
