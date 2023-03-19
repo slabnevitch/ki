@@ -1,48 +1,44 @@
 extends _misc/main
 
 block title
-	| Акция
+	| Подарочные карты
 
 block content
-	.page.page-single-action
+	.page
 		.wrapper
-			+menu('breadcrumbs', ['главная', 'акция workmaster'])
+			+menu('breadcrumbs', ['главная', 'Подарочные карты'])
 
-		+backLink('Доверь свой газон Workmaster')
+		+backLink('Подарочные карты')
 
-		section.single-action
-			.wrapper-smart
-				.wrapper-flex.single-action__wrapper
-					.single-action__img._fit
-						img._fit-img(src="img/page-menu/single-action-img.jpg" alt="alt")
-					.single-action__left
-						h2.single-action__title Доверь свой газон Workmaster
-					.single-action__right
-						p.std-par Начало сезона не за горами, а это значит, что пора выбирать инструмент, которому вы доверите свой газон. Мы советуем присмотреться к надежным триммерам WorkMaster WT-1900B и WorkMaster WT-1800B, а также получить приятные подарки за покупку.
+		.wrapper
+			.gift-cards-img._fit
+				img._fit-img(src="img/page-menu/gift-cards.jpg" alt="alt")
+			
+			section.main-page-sect
+				.wrapper
+					h2.sect-title Как это работает?
+				
+				- var steps = [{title: 'Первый шаг', txt: 'Выбирайте подарочную карту необходимого номинала'}, {title: 'Второй шаг', txt: 'Покупайте подарочную карту в любом розничном магазине Кубань Инструмент'}, {title: 'Третий шаг', txt: '3 Подарочной картой можно расплатиться во всех розничных магазинах Кубань Инструмент'}];
+				.wrapper-smart.steps
+					.wrapper-flex
+						each item,i in steps
+							.step
+								.step__img
+									img(src="img/page-menu/steps/"+(i+1)+".svg" alt="alt")
+								
+								.step__content
+									.step__title= item.title
+									.step__text= item.txt
 
-						p.std-par Подарки при покупке :
-							br
-							| - К Бензокосе WorkMaster WT-1900B дарим в подарок Масло минеральное WorkMaster WM-2T 0.95л
-							br
-							| - К Триммеру электрическому WorkMaster WT-1800B дарим в подарок Леску для триммера WorkMaster ЛТ-2415АМ и Леску для триммера WorkMaster  ЛТ-3015 WT
-							br
-							| Срок проведения Акции до окончания товарных запасов. Акция действует в розничных магазинах «Кубань Инструмент» и в нашем интернет-магазине.
-
-		section.page-main-sect
-			.wrapper
-				h2.sect-title Акционные товары
-			.wrapper-smart
-				- var cards = [{billet: 'акция', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Шуруповерт Вихрь СШ-550/1 72/16/2', aval: '4 магазинах', iconActive: '0'}, {billet: 'акция', price: '5 070 ₽', sale: '6 411 ₽', sbers: '51', tilte: 'Дрель-шуруповерт Felisatti ДШ-10/260Э 210.5.1.00', aval: '6 магазинах', iconActive: false}];
-				.wrapper-flex.product-cards
-					+productCard(cards, 'page-menu/single-action-prods/actioned/')
-
-		section.similar
-			.wrapper
-				.similar__title С этими товарами покупают
-			.wrapper-smart
-				- var similars = [{billet: '', price: '15 ₽', sale: '', sbers: '1', tilte: 'Леска Husqvarna 2,7мм/240м 5784379-01', aval: '6 магазинах', iconActive: false}, {billet: '', price: '950 ₽', sale: '', sbers: '10', tilte: 'Диск для кустореза GreenWorks 2905907', aval: '6 магазинах', iconActive: false}, {billet: '', price: '2 450 ₽', sale: '', sbers: '', tilte: 'Катушка для триммера Echo Maxi-Cut 215311', aval: false, analog: true, iconActive: false}, {billet: '', price: '15 ₽', sale: '', sbers: '1', tilte: 'Леска Husqvarna 2,7мм/240м 5784379-01', aval: '6 магазинах', aval: false, analog: true, iconActive: false}];
-				.wrapper-flex.product-cards
-					+productCard(similars, 'page-menu/single-action-prods/similar/')
+			- var accs = ['Что такое подарочная карта?', 'Как работает подарочная карта?', 'Где я могу приобрести подарочную карту?', 'Могу ли я использовать сразу несколько подарочных карт одновременно?', 'Могу ли я получить остаток наличными, если сумма покупки меньше номинала карты?', 'Что делать, если я не успею воспользоваться подарочной картой?', 'Могу ли я получить остаток наличными, если сумма покупки меньше номинала карты?', 'Если суммы на подарочной карте не хватает для оплаты покупки, можно ли доплатить разницу?', 'Какие номиналы у подарочных карт КУБАНЬ ИНСТРУМЕНТ?', 'Какой товар можно приобрести в магазинах с использованием подарочной карты', 'Если я потеряю подарочную карту, можно её восстановить?', 'Нужны ли какие-то документы для покупки подарочной карты?', 'Если я буду дарить карту, как её можно красиво упаковать?'];
+			.wpapper
+				ul.accordion.std-accordion(data-accordion)
+					each item,i in accs
+						li.accordion__item.std-accordion__item
+							.accordion__link.std-accordion__link= item
+							.accordion__content.std-accordion__content.hidden
+								p Если карта потерялась или ее украли, ее невозможно восстановить. Все потому, что на карте нет информации о том, кто и когда купил ее и мы не сможем отследить ее по владельцу. Постарайтесь не терять наши подарочные карты и храните их в укромном месте.
+					
 
 block page-scripts
 	//- SERVIVE FUNCTIONS==================

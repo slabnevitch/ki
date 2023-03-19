@@ -5050,6 +5050,14 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 140%;
   opacity: 0.6;
 }
+.std-par:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 576px) {
+  .std-par {
+    font-size: 14px;
+  }
+}
 
 /*--------------------viewerjs-custom----------------------*/
 .viewer-backdrop {
@@ -14846,6 +14854,83 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------END all-actions----------------------*/
 /*--------------------single-action----------------------*/
+.page-single-action .similar {
+  padding-top: 21px;
+  padding-bottom: 55px;
+}
+@media only screen and (max-width: 767.98px) {
+  .page-single-action .similar {
+    padding-bottom: 28px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .single-action__wrpapper {
+    font-display: column;
+  }
+}
+
+.single-action__img {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: calc(100% - 16px);
+  padding-bottom: 42.3728813559%;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 767.98px) {
+  .single-action__img {
+    margin-bottom: 20px;
+  }
+}
+
+.single-action__left {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: calc(33.3333333333% - 16px);
+}
+@media screen and (max-width: 767.98px) {
+  .single-action__left {
+    width: calc(100% - 16px);
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .single-action__left {
+    -ms-flex-order: -1;
+    order: -1;
+    margin-bottom: 20px;
+  }
+}
+
+.single-action__title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+}
+@media only screen and (max-width: 576px) {
+  .single-action__title {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.single-action__right {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: calc(66.6666666667% - 16px);
+}
+@media screen and (max-width: 767.98px) {
+  .single-action__right {
+    width: calc(100% - 16px);
+  }
+}
+
 /*--------------------END single-action----------------------*/
 /*--------------------product-card-tabs----------------------*/
 .page-product__features {
