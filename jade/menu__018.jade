@@ -1,0 +1,186 @@
+extends _misc/main
+
+block title
+	| О нас
+	
+block content
+	.page
+		.wrapper
+			+menu('breadcrumbs', ['главная', 'О нас'])
+
+		+backLink('О нас', true)
+
+		section.about
+			.wrapper-smart
+				.wrapper-flex.text-cols-block
+					.text-cols-block__left
+						h2.sect-title О компании «Кубань Инструмент»
+					
+					.text-cols-block__right
+						p.std-par Компания «Кубань Инструмент» — это специализированная сеть из 17 розничных магазинов профессионального инструмента, садовой техники, строительного оборудования и расходных материалов, имеющая свой авторизованный сервисный центр и магазин запасных частей для инструмента.
+					
+					.text-cols-block__img._fit
+						img._fit-img(src="img/page-menu/about/1.jpg" alt="alt")
+
+					.text-cols-block__left
+
+
+					.text-cols-block__right
+						p.std-par В ассортименте продукции свыше 5 000 наименований, включая как товары для бытового, так и для профессионального использования. Ручной и электроинструмент, строительная и садовая техника, климатическое оборудование, электростанции, стабилизаторы, моечное и уборочное оборудование, комплектующие, спецодежда и инвентарь — все это и многое другое можно купить, придя в магазины, либо оформив онлайн-покупку с доставкой в любую точку страны в интернет-магазине www.kubaninstrument.ru.
+
+						.wrapper-flex
+							.text-cols-block__img._fit
+								img._fit-img(src="img/page-menu/about/2.jpg" alt="alt")
+
+				.wrapper-flex.text-cols-block
+					.text-cols-block__left
+						h2.sect-title Из истории
+
+					.text-cols-block__right
+						p.std-par Оттуда, из славного советского прошлого, из тёплого общения и тесного взаимодействия и родилась одна из основных черт компании «Кубань Инструмент» - бережное и честное отношение к покупателям и сотрудникам. В нашей компании многие работают семьями: приходят сами, а потом приводят сюда своих супругов, родственников, друзей. Не это ли и есть доверие и уважение?
+
+						p.std-par Но вернёмся к истории. Как и вся страна, компания пережила перестройку, хаос и дефицит. Зарождавшийся бизнес столкнулся со множеством проблем — и прежде всего, отсутствием предложений в сфере производства электроинструментов. Их просто нельзя было достать! Приходилось искать, протаптывать новые дороги, выходить на зарубежных поставщиков. В 90-х годах компания одной из первых начала привозить в Краснодар профессиональные электроинструменты известных мировых брендов. Тогда же было принято решение сделать профессиональную технику основным направлением работы.
+							br
+							| Первый магазин, в котором мы начали продавать инструменты — Октябрьская, 170. И если говорить о том, откуда берет своё начало компания «Кубань Инструмент», то именно с этого магазина. Затем появился магазин на Уральской,87, затем в 2008 году ещё один. И в этом же году был официально зарегистрирован бренд «Кубань Инструмент».
+
+						p.std-par В настоящее время у нас 17 магазинов, один из которых — специализированный брендовый магазин STIHL (в ТЦ «Западный», ул. Западный Обход, 34).
+							br 
+							| На протяжении двадцати с лишним лет специалисты, которые здесь работают, успешно и надёжно снабжают необходимой продукцией как производственные, так и строительные организации. Широкий ассортимент и возможность выбрать товар прямо из наличия позволяет удовлетворить потребности самых взыскательных покупателей, и делает магазины компании популярными и востребованными.
+
+						.wrapper-flex
+							.text-cols-block__img._fit
+								img._fit-img(src="img/page-menu/about/3.jpg" alt="alt")
+
+				.wrapper-flex.text-cols-block
+					.text-cols-block__left
+						h2.sect-title Повод для гордости
+
+					.text-cols-block__right
+						p.std-par Гордость компании — самая широкая в городе линейка электроинструментов Makita, DeWALT, STIHL, Bosch и др., поставляемая напрямую от производителей. «Кубань Инструмент» — официальный дилер известных брендов, не только перечисленных выше, но и таких как Milwaukee, Metabo, STANLEY, Hitachi, Wacker Neuson, Husqvarna, Интерскол, Patriot, Elitech, GreenWorks и многих других.
+
+						p.std-par По итогам работы за 2012 год компания «Кубань Инструмент» заняла первое место в краевом конкурсе «Лучшее розничное предприятие Кубани» в категории «Непродовольственные товары». В этом же году компания получила награду и от компании Husqvarna как «Лучшая розничная сеть региона Юг».
+
+						p.std-par Мы ценим и дорожим своими покупателями, стараясь предлагать самый лучший и надёжный инструмент, который потом долгие годы будет служить верой и правдой. Мы ежедневно трудимся над улучшением своего сервиса, над расширением ассортимента и эргономичностью интернет-ресурса. Добро пожаловать в «Кубань Инструмент»!
+						
+						.wrapper-flex
+							.text-cols-block__img._fit
+								img._fit-img(src="img/page-menu/about/4.jpg" alt="alt")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	script(src="js/libs/micromodal/micromodal.js")
+
+	//- swiper--------------------------
+	script(src="js/libs/swiper/swiper-bundle.min.js")
+
+	//- tiny-slider--------------------------
+	//- script(src="js/libs/tiny-slider/dist/min/tiny-slider.js")
+
+	//-viewerjs --------------------------
+	script(src="js/libs/viewerjs/viewer.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	script(src="js/libs/rating/ratings.js")
+
+	//- scroll-to-sects--------------------------
+	script(src="js/libs/scroll-to-sects/scrolltosect.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+
+	//- counter--------------------------
+	//- script(src="js/libs/counter/counter.js")
+
+//- end VANILLA JS===================================

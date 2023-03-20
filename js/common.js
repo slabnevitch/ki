@@ -27,6 +27,13 @@
 		}
 		// END open/close catalog-sort__select fstdropdown
 
+		// open modals by data-attr
+		if(targ.hasAttribute('data-modal-open')){
+			e.preventDefault();
+			document.body.classList.add(targ.dataset.modalOpen, 'covered');
+		}
+		//END open modals by data-attr
+
 		// catalog product availabel modal open
 		if(targ.hasAttribute('data-modal-availability')){
 			e.preventDefault();

@@ -1,0 +1,16 @@
+/*--------------------about----------------------*/
+.about{
+	padding-bottom: 31px;
+	@include max-screen($sm){
+		padding-bottom: 23px;
+	}
+	.text-cols-block__img{
+		padding-bottom: prc(436, 944);
+	}
+	.text-cols-block__right{
+		.text-cols-block__img{
+			padding-bottom: prc(336, 624);
+		}
+	}
+}
+/*--------------------END about----------------------*/ 

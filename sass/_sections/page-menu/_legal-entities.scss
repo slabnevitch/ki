@@ -29,6 +29,11 @@
 		font-family: $inter;
 		font-weight: 700;
 		line-height: rem(26);
+
+		@include max-screen($xs){
+			font-size: 14px;
+			line-height: 20px;
+		}
 	}
 }
 .text-cols-block__left {
@@ -60,6 +65,7 @@
 .text-cols-block__img {
 	margin-bottom: 40px;
 	margin-top: 25px;
+	padding-bottom: prc(400, 944);
 	@include col();
 	@include size(12);
 

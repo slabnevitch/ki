@@ -1,5 +1,10 @@
 /*--------------------delivery----------------------*/
-.delivery {}
+.delivery {
+	padding-bottom: 70px;
+	@include max-screen($md){
+		padding-bottom: 40px;
+	}
+}
 .wrapper {}
 .delivery__title {
 	margin-bottom: 20px;

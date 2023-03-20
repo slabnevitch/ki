@@ -8044,40 +8044,95 @@
       </button>
       <div class="side-modal__inner">
         <div class="side-modal__title">Юр. лицам</div>
-        <form action="#" class="form">
-          <div class="form__row">
-            <div class="form__row-title form__row-title--required">Название компании*</div>
-            <label class="form__label">
-              <input type="text" name="name" class="form__input">
-            </label>
-          </div>
-          <div class="form__row">
-            <div class="form__row-title form__row-title--required">Контактное лицо*</div>
-            <label class="form__label">
-              <input type="text" name="name" class="form__input">
-            </label>
-          </div>
-          <div class="form__row">
-            <div class="form__row-title form__row-title--required">Телефон*</div>
-            <label class="form__label">
-              <input type="text" name="name" class="form__input">
-            </label>
-          </div>
-          <div class="form__row">
-            <div class="form__row-title form__row-title--required">Телефон*</div>
-            <label class="form__label">
-              <input type="text" name="name" class="form__input">
-            </label>
-          </div>
-          <div class="form__row">
-            <div class="form__row-title">E-mail</div>
-            <label class="form__label">
-              <input type="text" name="name" class="form__input">
-            </label>
-          </div>
-          <button type="submit" class="btn btn-lg btn-order">Оставить заявку</button>
-          <div class="form__note">*При входе и регистрации вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
-        </form>
+        <div class="side-modal__content">
+          <form action="#" class="form">
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Название компании*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Контактное лицо*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Телефон*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Телефон*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title">E-mail</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="cards-more"><a href="#" class="cards-more__link">+ Прикрепить карточку предприятия</a></div>
+            <div class="form__row">
+              <div class="form__row-title">Комментарии к заявке</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <button type="submit" class="btn btn-lg btn-order">Оставить заявку</button>
+            <div class="form__note">Оставляя данные вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="modal-service" data-visible-class="service-modal-visible" class="side-modal service-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Сервисный центр</div>
+        <div class="side-modal__content">
+          <form action="#" class="form">
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Имя*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Телефон*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title">E-mail</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <label class="form__custom">
+                <input type="radio" name="service" value="chekbox1" checked required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Сервисное обслуживание</span>
+                <input type="radio" name="service" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Приобретение запчастей</span>
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title">Комментарии к заявке</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <button type="submit" class="btn btn-lg btn-red btn-order">Оставить заявку</button>
+            <div class="form__note">Оставляя данные вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+          </form>
+        </div>
       </div>
     </div>
     <div class="widemodal modal-hide">
