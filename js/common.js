@@ -721,6 +721,9 @@
 			if(document.querySelector('.certificates__gallery') !== null){
 				baguetteBox.run('.certificates__gallery');
 			}
+			if(document.querySelector('.certificates__list') !== null){
+				baguetteBox.run('.certificates__list');
+			}
 		// END baguetteBox
 
 
