@@ -955,6 +955,10 @@ h1, h2, h3, h4, h5, h6{
     justify-content: space-between;
     margin-bottom: 40px;
 
+    @include max-screen($md){
+      margin-bottom: 16px;
+    }
+
     @include min-screen($md){
       padding-bottom: 9px;
      border-bottom: 1px solid $border;

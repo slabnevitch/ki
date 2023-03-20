@@ -1,0 +1,51 @@
+/*--------------------service-center----------------------*/
+.service-center{
+	.text-cols-block__img{
+		padding-bottom: prc(400, 944);
+	}
+}
+.service-center__contacts{
+
+}
+.contacts-service-center{
+	@include min-screen($md){
+		margin-top: -30px;
+		
+	}
+}
+.contacts-service-center__title{
+	font-weight: 700;
+	font-size: rem(16);
+	line-height: rem(20);
+	text-transform: uppercase;
+
+	@include max-screen($sm){
+		margin-bottom: 8px;
+	}
+}
+.contacts-service-center__col{
+	@include col();
+	@include size(6);
+	@include size-xs(12);
+	margin-bottom: 12px;
+
+	@include min-screen($sm){
+		margin-bottom: 20px;
+		
+	}
+}
+.contacts-service-center__lable{
+	font-size: rem(12);
+	line-height: rem(15);
+	color: #767571;
+
+	@include min-screen($sm){
+		margin-bottom: 8px;
+		
+	}
+}
+.contacts-service-center__value{
+	color: $text;
+	text-decoration: none;
+}
+/*--------------------END service-center----------------------*/ 

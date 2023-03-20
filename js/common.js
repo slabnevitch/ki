@@ -852,6 +852,131 @@
 
 		}
 
-		
+		// video-modal
+			// micromodal
+			var getIframeSrc = (function() { //ф-ция. для обработки iframe в micromodal. Вызывается из коллбэков micromodal
+					var patterns = [
+						{
+							index: 'youtube.com',
+							id: 'v=',
+							src: '//www.youtube.com/embed/%id%?autoplay=1'
+						},
+						{
+							index: 'vimeo.com/',
+							id: '/',
+							src: '//player.vimeo.com/video/%id%?autoplay=1'
+						},
+						{
+							index: '//maps.google.',
+							src: '%id%&output=embed'
+						}
+					];
+
+					return {
+						allIframesSrc: function(trigger) {
+							// ------- Подобно magnific-popup - добавления видео с любого хостинга, а также google-map
+							// Кнопка вызова должна иметь следующие аттрибуты:
+							// data-micromodal-iframe="http://www.youtube.com/watch?v=8LPVOjjSgDE" data-autoplay(если необходим автоплей во всплывашке) data-micromodal-open="video-modal"
+							var embedSrc = trigger.getAttribute('data-micromodal-iframe');
+							
+							for (var i = patterns.length - 1; i >= 0; i--) {
+								let pattern = patterns[i];
+
+								if(embedSrc.indexOf( pattern.index ) > -1) {
+									if(pattern.id) {
+										if(typeof pattern.id === 'string') {
+											embedSrc = embedSrc.substr(embedSrc.lastIndexOf(pattern.id)+pattern.id.length, embedSrc.length);
+										} else {
+											embedSrc = pattern.id.call( pattern, embedSrc );
+										}
+									}
+									embedSrc = pattern.src.replace('%id%', embedSrc );
+									if(trigger.hasAttribute('data-autoplay') && !embedSrc.includes('https:')){
+										embedSrc = 'https:' + embedSrc;
+									}
+									// return false; // break;
+								}
+
+							}
+							// patterns.forEach(function(pattern) {
+							// });
+
+							return embedSrc;
+						}, 
+
+						youtubeSrc: function(trigger) {
+							// ------- Простой способ добавления ютуб-видео по по айдишнику
+								// в случае добавление всплывашки с youtube-video, ссылка на видео указывается в data-micromodal-iframe=""
+								// кнопки-trigger'a. Сама кнопка должна иметь такие аттрибуты: 
+								// data-micromodal-iframe="QFq6PiZ1BQ8" data-autoplay(если необходим автоплей во всплывашке) data-micromodal-open="video-modal"
+							
+							var embedSrc = trigger.getAttribute('data-micromodal-iframe'),
+								autoplay = trigger.hasAttribute('data-autoplay') ? '?autoplay=1' : '',
+								pattern = 'https://www.youtube.com/embed/%id%'+ autoplay;
+
+							return pattern.replace('%id%', embedSrc );
+						}
+					}
+				})();
+
+				if(document.querySelector('.modal') !== null){
+					MicroModal.init({
+						openTrigger: 'data-micromodal-open', 
+						closeTrigger: 'data-micromodal-close',
+						openClass: 'is-open', 
+						disableFocus: true, 
+						awaitOpenAnimation: true,
+						awaitCloseAnimation: true,
+						onShow: function(modal, trigger, event){
+
+							console.log(trigger)
+							// console.log(event)
+							// console.log(modal)	
+							
+							// Добавление во всплывашку айфрейма
+							if (trigger.hasAttribute('data-micromodal-iframe')) {
+
+								// var iframeSrc = getIframeSrc.youtubeSrc(trigger);// если айдишник youtube-видео задается отдельно
+								var iframeSrc = getIframeSrc.allIframesSrc(trigger);// если айдишник youtube-видео задается в составе url
+
+								// рендеринг айфрейма во всплывашку
+								modal.querySelector('.modal__content').insertAdjacentHTML('beforeend', '<div class="modal__video">'+
+									'<iframe src='+iframeSrc+' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'+
+								'</div>');
+							}
+							
+							// при disableScroll: true для компенсации ширины скроллбара (фикс "прыгания" страницы влево)
+							// document.querySelector('#wrapper-for-scroll-fix').classList.add('modal-open');
+
+						},
+						onClose: function(modal) {
+							// console.info(`${modal.id} is hidden`);
+
+							// удаление айфрейма при закрытии поапа
+							if(modal.querySelector('.modal__video') !== null){
+								modal.querySelector('.modal__video').remove();
+							}
+							
+							// при disableScroll: true для компенсации ширины скроллбара (фикс "прыгания" страницы влево)
+							// document.querySelector('#wrapper-for-scroll-fix').classList.remove('modal-open');
+
+						}
+					});		
+				}
+			// END micromodal
+		//END video-modal
+
+		// payement anchors scroll
+		if(document.querySelector('.payment__menu') !== null){
+			new ScrollToSects({
+			  linksContainer: '.payment__menu',//контейнер, в котором лежат кнопки навигации
+			  offset: -30,//отступ от верха экрана при прокрутке (если нужен)
+			  sectsSelector: '.payment__block',//селектор секций, если не section
+			   delay: 0//задержка перед прокруткой. Может понадобится, елсли перед прокруткой нужно время на анимацию закрытия моб. меню, например
+			});
+
+		}
+		//END payement anchors scroll
+	
 	});//DOMContentLoaded
 })();

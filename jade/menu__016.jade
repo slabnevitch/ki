@@ -1,90 +1,75 @@
 extends _misc/main
 
 block title
-	| Юр. лицам
-	- var pageIndex = 'menu_008'
+	| Сервисный центр
+	
 block content
 	.page
 		.wrapper
-			+menu('breadcrumbs', ['главная', 'Юр. лицам'])
+			+menu('breadcrumbs', ['главная', 'Сервисный центр'])
 
-		+backLink('Юр. лицам')
+		+backLink('Сервисный центр', true)
 
-		section.legal-entities
+		.service-center
 			.wrapper-smart
 				.wrapper-flex.text-cols-block
-					.text-cols-block__left
-						h2.sect-title Юридическим лицам
-					
-					.text-cols-block__right
-						p.std-p Если вы представляете строительную компанию, производственное предприятие, коммунальную службу, бюджетную или торгующую организацию и ищете надежного и удобного для вас поставщика широкого ассортимента инструмента и оборудования, а также расходных материалов, то мы готовы предложить вам максимально удобные и взаимовыгодные условия сотрудничества.
-					
 					.text-cols-block__img._fit
 						img._fit-img(src="img/page-menu/legals-img.jpg" alt="alt")
-
+				
+				.wrapper-flex.text-cols-block
 					.text-cols-block__left
-						h2.sect-title Преимущества
+						h2.sect-title Клиентский сервис — гарантия качества!
+					
+					.text-cols-block__right
+						p.std-par В лучших традициях компании «Кубань Инструмент» — сотрудничество с известными брендами. Такое сотрудничество позволяет обеспечить гарантию качества.
+					
+				.wrapper-flex.text-cols-block
+					.text-cols-block__left
+						h2.sect-title Что такое авторизованный сервисный центр?
 
 					.text-cols-block__right
-						p.std-p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id. Pharetra magna ac placerat vestibulum. Est lorem ipsum dolor sit. Augue mauris augue neque gravida in fermentum et sollicitudin. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Ac odio tempor orci dapibus ultrices in iaculis nunc.
+						p.std-par Авторизованный сервисный центр имеет право выполнять гарантийный ремонт и техническое обслуживание, имеет доступ к официальной технической документации, обеспечивается оригинальными комплектующими, специалисты сервисного центра проходят обучение у производителя.
 
-			- var steps = ['Удобно', 'Выгодно', 'Быстро'];
-			.wrapper-smart
-				.wrapper-flex.steps
-					each item,i in steps
-						.step
-							.step__img
-								img(src="img/page-menu/legals-steps/"+(i+1)+".svg" alt="alt")
-							
-							.step__content
-								.step__title= item
-								.step__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-		section.team
-			.wrapper
-				.team__title Наша команда
-				- var leaders = ['Руководители отделов', 'Специалисты'];
+						p.std-par Сервисный центр «Кубань-Инструмент» ремонтирует различный инструмент, как бытовой, так и профессиональный. Наш СЦ авторизован для проведения гарантийного и послегарантийного ремонта инструмента таких фирм-произодителей, как BOSCH, DeWalt, Husqvarna, Makita, STIHL, Viking, Partner, Gardena, HITACHI, Champion, Fubag, Elitech, Remeza, AEG, Ryobi, Milwaukee, Stanley, Black and decker, Фиолент, JET и других.
+
+						p.std-par Дипломированные специалисты с помощью современного технического оснащения произведут качественный ремонт вашего инструмента
 			
-			.wrapper-smart
-				._tabs.team__tabs.wrapper-flex
-					ul.tabs__buttons.team__buttons
-						each item,i in leaders
-							li
-								a(class=i==0 ? "tab team__tab active" : "tab team__tab" href='#')= item
-
-					ul.tabs__container.team__container
-						li.tab-content.team__content.active
-							.team__subtitle Руководители отделов
-							.team__grid.wrapper-flex
-								- var bosses = ['Рафаэль Арутюнян', 'Роман Хома'];
-									each item,i in  bosses
-										.team__card.card-team.card-team--boss
-											.card-team__img._fit
-												img._fit-img(src="img/page-menu/team/bosses/"+(i+1)+".jpg" alt="alt")
-											.card-team__info
-												.card-team__name= item
-												.card-team__role Руководитель контакт-центра
-												.card-team__contact
-													a(href="tel:+78612128214") +7(861)212-8-214
-													span доб. 158
-												.card-team__contact
-													a(href="mailto:callcenter-3@kubaninstrument.ru") callcenter-3@kubaninstrument.ru
 						
-						li.tab-content.team__content.hidden
-							.team__subtitle Специалисты
-							- var managers = ['Мария Маслакова', 'Дмитрий Сорокопудов', 'Дмитрий Ильченко', 'Антон Губин', 'Василий Пасенко', 'Александр Марков', 'Виктор Шубарт', 'Алексей Левченко'];
-							.team__grid.wrapper-flex
-								each item,i in  managers
-									.team__card.card-team.card-team--manager
-										.card-team__img._fit
-											img._fit-img(src="img/page-menu/team/managers/"+(i+1)+".jpg" alt="alt")
-										.card-team__info
-											.card-team__name= item
-											.card-team__role Менеджер по работе с ключевыми клиентами
-											.card-team__contact
-												a(href="tel:+78612128214") +7(861)212-8-214
-												span.card-team__added #[span.card-team__label доб.] #[span.card-team__plus +]158
-											.card-team__contact
-												a(href="mailto:callcenter-3@ku.ru") callcenter-3@ku.ru
+				.wrapper-flex.text-cols-block.service-center__contacts.contacts-service-center
+					.text-cols-block__left
+						.contacts-service-center__title Контакты:
+
+					.text-cols-block__right
+						- var contacts = [{label: 'Адрес:', value: 'г. Краснодар, ул. Уральская 87'}, {label: 'Режим работы:', value: 'Понедельник-пятница 8:00 - 17:00'}, {label: 'Телефон:', value: '8 (861) 212-8-121'}, {label: 'Email:', value: 'service@kubaninstrument.ru'}];
+						.wrapper-flex
+							each item, i in contacts
+								.contacts-service-center__col
+									.contacts-service-center__lable= item.label
+									if item.label == 'Телефон:'
+										a(href="tel:" + item.value).contacts-service-center__value= item.value
+									
+									else if item.label == 'Email:'
+										a(href="mailto:" + item.value).contacts-service-center__value= item.value
+									else
+										.contacts-service-center__value= item.value
+
+				.wrapper-flex.text-cols-block.service-center__contacts.contacts-service-center
+					.text-cols-block__left
+						.contacts-service-center__title Магазин запчастей
+
+					.text-cols-block__right
+						- var contacts2 = [{label: 'Телефон:', value: '8 (861) 212–8–240'}, {label: 'Email:', value: 'zip@kubaninstrument.ru'}];
+						.wrapper-flex
+							each item, i in contacts2
+								.contacts-service-center__col
+									.contacts-service-center__lable= item.label
+									if item.label == 'Телефон:'
+										a(href="tel:" + item.value).contacts-service-center__value= item.value
+									
+									else if item.label == 'Email:'
+										a(href="mailto:" + item.value).contacts-service-center__value= item.value
+									else
+										.contacts-service-center__value= item.value
 			
 			.wrapper-smart
 				.wrapper-flex.team-order.text-cols-block
@@ -95,10 +80,6 @@ block content
 						p.std-p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id. Pharetra magna ac placerat vestibulum. Est lorem ipsum dolor sit. Augue mauris augue neque gravida in fermentum et sollicitudin. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Ac odio tempor orci dapibus ultrices in iaculis nunc.
 
 						button.btn.btn-lg.btn-order.btn-red оставить заявку
-
-
-
-					
 
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
@@ -170,8 +151,8 @@ block page-scripts
 	script(src="js/libs/tabs/tabs-pure.js")
 		
 	//- micromodal--------------------------
-	//- script(src="js/libs/micromodal/micromodal.js")	
-		
+	script(src="js/libs/micromodal/micromodal.js")
+
 	//- swiper--------------------------
 	script(src="js/libs/swiper/swiper-bundle.min.js")
 
@@ -194,7 +175,7 @@ block page-scripts
 	script(src="js/libs/rating/ratings.js")
 
 	//- scroll-to-sects--------------------------
-	//- script(src="js/libs/scroll-to-sects/scrolltosect.js")
+	script(src="js/libs/scroll-to-sects/scrolltosect.js")
 
 	//- sticky-sidebar--------------------------
 	//- https://abouolia.github.io/sticky-sidebar/#usage

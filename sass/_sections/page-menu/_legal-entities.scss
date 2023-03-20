@@ -28,6 +28,7 @@
 	.sect-title{
 		font-family: $inter;
 		font-weight: 700;
+		line-height: rem(26);
 	}
 }
 .text-cols-block__left {
@@ -71,8 +72,8 @@
 		margin-top: 0;
 	}
 
-	&:not(:first-child){
-		
+	&:first-child:last-child{
+		margin-bottom: 0;
 	}
 }
 .std-p {}

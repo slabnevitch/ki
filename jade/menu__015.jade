@@ -1,0 +1,184 @@
+extends _misc/main
+
+block title
+	| Оплата
+	
+block content
+	.page
+		.wrapper
+			+menu('breadcrumbs', ['главная', 'Оплата'])
+
+		+backLink('Оплата', true)
+
+		.payment
+			.wrapper-smart
+				.wrapper-flex
+					nav.payment__nav
+						ul.payment__menu
+							- var nav = [{name:'Оплата на сайте', href: 'pay-online'}, {name:'Оплата наличными',  href: 'pay-cash'}, {name:'Оплата при получении', href: 'pay-get'}, {name:'Оплата по счету', href: 'pay-order'}, {name: 'Для юридических лиц', href: 'pay-legals'}];
+							each item, i in nav
+								li.payment__menu-item
+									a(href="#" data-anchor=item.href class=i==0 ? "payment__menu-link active" : "payment__menu-link")= item.name
+					
+					.payment__content
+						.payment__block(data-anchor="pay-online")
+							.payment__title Оплата на сайте
+							.payment__img._fit
+								img._fit-img(src="" alt="alt") 
+							- var list1 = ['Мгновенный резерв товара', 'Возможность отправки любой транспортной компанией в любой регион России', 'Для клиентов «Сбера»: возможность использовать бонусы «Спасибо» для получения скидки до 50% от цены покупки', 'Для клиентов «Сбера»: начисление 1% бонусов «Спасибо» от суммы покупки', 'После оплаты с вами свяжется менеджер нашего CALL центра'];
+
+							ol.payment__list
+								each item in list1
+									li= item
+
+						.payment__block(data-anchor="pay-cash")
+							.payment__title Оплата наличными при получении — доставка курьером-водителем «Кубань Инструмент»
+							.payment__img._fit
+								img._fit-img(src="" alt="alt") 
+							p.std-par Доставка в пределах городов присутствия сети — Краснодар, Славянск-на-Кубани, Тимашевск, Белореченск, Кропоткин, Тихорецк, Армавир (бесплатная доставка — при стоимости заказа от 2500 руб.)
+
+						.payment__block(data-anchor="pay-get")
+							.payment__title Оплата при получении в точке самовывоза «Кубань Инструмент»
+							.payment__img._fit
+								img._fit-img(src="" alt="alt") 
+
+							- var list2 = ['Возможность перед покупкой увидеть и «пощупать» товар', 'Если товар есть в наличии в магазине — максимально быстрая покупка, если вы готовы самостоятельно приехать в нужный магазин розничной сети «Кубань Инструмент»'];
+
+							ol.payment__list
+								each item in list2
+									li= item
+
+						.payment__block(data-anchor="pay-order")
+							.payment__title Оплата по счету
+							.payment__img._fit
+								img._fit-img(src="" alt="alt") 
+							p.std-par После обработки заказа на ваш email будет отправлен счёт, оплату которого можно произвести в любом банке (обратите, пожалуйста, внимание — банком взимается комиссия!)
+
+						.payment__block(data-anchor="pay-legals")
+							.payment__title Для юридических лиц
+							.payment__img._fit
+								img._fit-img(src="" alt="alt") 
+
+							- var list3 = ['При оформлении заказа на сайте в поле «Тип плательщика» необходимо указать «Юридическое лицо» или «Индивидуальный Предприниматель», далее заполнить поля реквизитов компании. Менеджер обработает заявку и отправит счёт на оплату в любой удобной для вас форме (факс, электронная почта).', 'Отправьте заявку с указанием реквизитов компании на адрес info@kubaninstrument.ru. В ответном письме вы получите счёт на оплату.'];
+
+							ol.payment__list
+								each item in list3
+									li= item
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	script(src="js/libs/micromodal/micromodal.js")
+
+	//- swiper--------------------------
+	script(src="js/libs/swiper/swiper-bundle.min.js")
+
+	//- tiny-slider--------------------------
+	//- script(src="js/libs/tiny-slider/dist/min/tiny-slider.js")
+
+	//-viewerjs --------------------------
+	script(src="js/libs/viewerjs/viewer.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	script(src="js/libs/rating/ratings.js")
+
+	//- scroll-to-sects--------------------------
+	script(src="js/libs/scroll-to-sects/scrolltosect.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+
+	//- counter--------------------------
+	//- script(src="js/libs/counter/counter.js")
+
+//- end VANILLA JS===================================
