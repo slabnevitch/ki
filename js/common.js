@@ -675,6 +675,33 @@
 			// compareTableSlider.on('sliderMove', function() {compareCardsSlider.slideTo(compareTableSlider.realIndex)});
 		}
 		//---------------END compare-slider
+
+		//---------------certificates-slider
+		if(document.querySelector('.certificates-slider') !== null){
+			  var certificatesSwiper = new Swiper('.certificates-slider', {
+			  
+					watchSlidesProgress: true,
+				  // loop: true,
+				  breakpoints: {
+				    // when window width is >= 320px
+				    320: {
+				    	slidesPerView: 2.25,
+				    	spaceBetween: 8
+				    },
+				    // when window width is >= 480px
+				    576: {
+				    	slidesPerView: 3.5,
+				    	spaceBetween: 30
+				    },
+				    // when window width is >= 640px
+				    767.98: {
+				    	slidesPerView: 4,
+				    	spaceBetween: 16
+				    }
+				}
+			});
+		}
+		//---------------END certificates-slider
 		//---------------END Swiper
 
 		// baguetteBox
@@ -689,6 +716,10 @@
 				    }
 					
 				});
+			}
+
+			if(document.querySelector('.certificates__gallery') !== null){
+				baguetteBox.run('.certificates__gallery');
 			}
 		// END baguetteBox
 

@@ -1,0 +1,185 @@
+extends _misc/main
+
+block title
+	| Сертификаты
+	
+block content
+	.page
+		.wrapper
+			+menu('breadcrumbs', ['главная', 'Сертификаты'])
+
+		+backLink('Сертификаты', true)
+
+		.certificates
+				.wrapper
+					.certificates__gallery
+						- var firms = ['Stiga', 'D.Bor', 'Pramac', 'Bosch'];
+						+swiper('certificates-slider', false, false, false)
+							each firm,i in firms
+								.swiper-slide.certificates__slide.slide-certificates
+									a(href="img/page-menu/certificates/lg/"+(i+1)+".jpg").slide-certificates__img._fit
+										img._fit-img(src="img/page-menu/certificates/lg/"+(i+1)+".jpg" alt="alt")
+									.slide-certificates__title= firm
+
+					- var tabs = ['2021', '2020', '2019', '2018', '2017', '2016', '2015'];
+					._tabs.accordion.combine.certificates__tabs(data-point='sm' data-accordion)
+						ul.tabs-buttons.certificates__buttons
+							each tab, i in tabs
+								li.accordion__item.certificates__tab-item
+									a(class=i==0 ? "tab certificates__tab active accordion__link" :  "tab certificates__tab accordion__link" href='#')= tab
+										+icon('chev-down')
+									.accordion__content.hidden
+						ul
+							each firm,n in tabs
+								//- h3 pidaras
+								div(class=n==0 ? "tab-content active" : "tab-content hidden")
+									.replaced-tab-content
+										.wrapper-flex.certificates__list
+											if n==1
+												- for (var m=0; m < 8; m++)
+													.certificate-sm
+														a(href="#").certificate-sm__img._fit
+															img._fit-img(src="img/page-menu/certificates/sm/"+(m+1)+".jpg" alt="alt")
+														.certificate-sm__name Makita
+											else if n==2
+												- for (var m=0; m < 6; m++)
+													.certificate-sm
+														a(href="#").certificate-sm__img._fit
+															img._fit-img(src="img/page-menu/certificates/sm/"+(m+1)+".jpg" alt="alt")
+														.certificate-sm__name Makita
+
+											else if n==3
+												- for (var m=0; m < 4; m++)
+													.certificate-sm
+														a(href="#").certificate-sm__img._fit
+															img._fit-img(src="img/page-menu/certificates/sm/"+(m+1)+".jpg" alt="alt")
+														.certificate-sm__name Makita
+											else
+												- for (var m=0; m < 12; m++)
+													.certificate-sm
+														a(href="#").certificate-sm__img._fit
+															img._fit-img(src="img/page-menu/certificates/sm/"+(m+1)+".jpg" alt="alt")
+														.certificate-sm__name Makita
+
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+
+	//- tabs--------------------------
+	script(src="js/libs/tabs-accordion-combine/tabs-accordion.js")
+		
+	//- micromodal--------------------------
+	script(src="js/libs/micromodal/micromodal.js")
+
+	//- swiper--------------------------
+	script(src="js/libs/swiper/swiper-bundle.min.js")
+
+	//- tiny-slider--------------------------
+	//- script(src="js/libs/tiny-slider/dist/min/tiny-slider.js")
+
+	//-viewerjs --------------------------
+	script(src="js/libs/viewerjs/viewer.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	script(src="js/libs/rating/ratings.js")
+
+	//- scroll-to-sects--------------------------
+	script(src="js/libs/scroll-to-sects/scrolltosect.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+
+	//- counter--------------------------
+	//- script(src="js/libs/counter/counter.js")
+
+//- end VANILLA JS===================================
