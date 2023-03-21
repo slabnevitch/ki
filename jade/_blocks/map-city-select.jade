@@ -1,5 +1,5 @@
 .map-city-select
-	button.map-fullscreen__back.button-close(data-modal=pageIndex == 'cart_009-1' ? "delivery-point-modal-visible" : "address-modal-single-visible")
+	button.map-fullscreen__back.button-close(data-modal=pageIndex == 'cart_009-1' ? "delivery-point-modal-visible" : pageIndex == 'menu_010' ? "shop-modal-visible" : "address-modal-single-visible")
 		+icon('arrow-left')
 		
 	form(action="#" class="form").address-side-modal__form

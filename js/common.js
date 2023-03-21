@@ -214,7 +214,7 @@
 			}
 		}
 		if(targ.classList.contains('map-fullscreen__back') || targ.closest('.map-fullscreen__back') !== null){
-			document.body.classList.remove(targ.closest('.map-fullscreen__back').dataset.modal, 'side-modal-visible', 'map-with-modal', 'covered');
+			document.body.classList.remove(targ.closest('.map-fullscreen__back').dataset.modal, 'side-modal-visible', 'map-with-modal', 'shop-map-visible', 'covered');
 			document.body.classList.remove('fullscreen-map-visible');
 		}
 
@@ -230,9 +230,13 @@
 		}
 		// END delivery-point-modal open/close
 		
-		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null /*&& targ.closest('.availability-modal') !== null*/){
+		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null && targ.closest('.address-list__item--contact') == null){
 			document.body.classList.remove('catalog-availability-modal-visible');
 			document.body.classList.add('address-modal-single-visible', 'map-with-modal', 'fullscreen-map-visible');
+		}
+		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null && targ.closest('.address-list__item--contact') !== null){
+			document.body.classList.remove('catalog-availability-modal-visible');
+			document.body.classList.add('shop-modal-visible', 'shop-map-visible');
 		}
 		if(targ.classList.contains('side-modal__back') || targ.closest('.side-modal__back') !== null){
 			console.log('click')

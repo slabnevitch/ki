@@ -82,13 +82,25 @@
 }
 .shops__map{
 	position: relative;
+	transition: all .4s;
+
 	@include max-screen($xs){
+		padding-left: 0;
+		padding-right: 0;
 		position: fixed;
 		top: 0;
 		left: 0;
 		height: 100%;
 		width: 100%;
+		z-index: 12;
+		transform: translateX(105%);
 	}
+	@media screen and (max-width: 576px){
+		.shop-map-visible &{
+			transform: translateX(0);
+		}
+	}
+
 	.address-list__item {
 		position: absolute;
 		left: prc(180, 940);
@@ -125,7 +137,12 @@
 	}
 }
 .shops__map-wrap{
-	height: 450px;
+	height: 100%;
+	@include min-screen($xs){
+		height: 450px;
+		
+	}
+
 }
 .shops__hint{
 	position:absolute;
@@ -174,5 +191,10 @@
 
 	}
 
+}
+.shops__balloon{
+	@include max-screen($xs){
+		display: none;
+	}
 }
 /*--------------------END shops----------------------*/ 

@@ -600,3 +600,26 @@
 				button(type="submit").btn.btn-lg.btn-red.btn-order Оставить заявку
 
 				.form__note Оставляя данные вы соглашаетесь с #[a(href="#") Политикой обработки персональных данных]
+
+.side-modal.shop-modal#modal-shop(data-visible-class="shop-modal-visible")
+	button(type="button").side-modal__back.button-back
+		+icon('arrow-left')
+	button(type="button").side-modal__close.button-close
+		+icon('ctlg-close')
+	.side-modal__inner
+		.side-modal__title Магазин Кубань инструмент
+	
+		.side-modal__content
+			.address-list__item
+				.address-list__img._fit
+					img._fit-img(src="img/page-menu/shops/14.jpg" alt="alt")
+				.address-list__content
+					.address-list__loc г. Краснодар, ул. Западный Обход, 34
+					.address-list__phones
+						.address-list__phones-row
+							a(href="tel:88612128253").address-list__phone 8 (861) 212-8-253
+						.address-list__phones-row
+							a(href="tel:89885942025").address-list__phone 8 (988) 594-20-25
+					.address-list__shedule Пн-Вс: 8.00-20.00
+
+				a(href="#").btn.btn-sm.btn-loc Как добраться

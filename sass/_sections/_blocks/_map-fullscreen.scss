@@ -194,6 +194,12 @@
 		}
 	}
 
+	.shop-map-visible &{
+		@include max-screen($xs){
+			display: flex;
+		}
+	}
+
 	.address-side-modal__form{
 		margin-bottom: 0;
 		flex: 1 1 auto;

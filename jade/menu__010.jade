@@ -2,6 +2,7 @@ extends _misc/main
 
 block title
 	| Магазины
+	- var pageIndex = 'menu_010'
 	
 block content
 	.page
@@ -30,7 +31,7 @@ block content
 				.wrapper-smart
 					.wrapper-flex.shops__tiles
 						each item, i in address
-							.address-list__item
+							.address-list__item.address-list__item--contact
 								.address-list__img._fit
 									img._fit-img(src="img/page-menu/shops/"+(i+1)+".jpg" alt="alt")
 								.address-list__content
