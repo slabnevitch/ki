@@ -1,5 +1,9 @@
 /*--------------------certificates----------------------*/
 .certificates {
+	padding-bottom: 60px;
+	@include max-screen($sm){
+		padding-bottom: 30px;
+	}
 	.combine .tab.active{
 		background-color: transparent;
 	}

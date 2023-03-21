@@ -19860,6 +19860,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------END all-actions----------------------*/
 /*--------------------certificates----------------------*/
+.certificates {
+  padding-bottom: 60px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .certificates {
+    padding-bottom: 30px;
+  }
+}
+
 .certificates .combine .tab.active {
   background-color: transparent;
 }
