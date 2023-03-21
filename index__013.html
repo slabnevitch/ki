@@ -8177,7 +8177,7 @@
                   </svg>
             </div>
             <div class="mob-nav__name">Профиль</div></a></li>
-        <li class="mob-nav__item"><a href="#" class="mob-nav__link">
+        <li id="menu-open" class="mob-nav__item"><a href="#" class="mob-nav__link">
             <div class="mob-nav__icon">
                   <svg class="icon icon-m-menu ">
                     <use xlink:href="img/icons-svg/symbol/sprite.svg#m-menu"></use>
@@ -9010,7 +9010,7 @@
       <div class="side-modal__inner">
         <div class="side-modal__title">Отмена заказа</div>
         <div class="side-modal__text">В ближайшее время с вами<br>свяжется наш менеджер<br>для уточнения деталей</div>
-        <form action="#" class="form">		
+        <form action="#" class="form">
           <div class="form__row">
             <div class="form__row-title">Причина отмены заказа</div>
             <label class="form__label">
@@ -9039,6 +9039,137 @@
           </div>
           <button type="submit" class="btn btn-lg btn-order">оставить заявку</button>
         </form>
+      </div>
+    </div>
+    <div id="modal-legal" data-visible-class="legals-modal-visible" class="side-modal legals-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Юр. лицам</div>
+        <div class="side-modal__content">
+          <form action="#" class="form">
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Название компании*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Контактное лицо*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Телефон*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Телефон*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title">E-mail</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="cards-more"><a href="#" class="cards-more__link">+ Прикрепить карточку предприятия</a></div>
+            <div class="form__row">
+              <div class="form__row-title">Комментарии к заявке</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <button type="submit" class="btn btn-lg btn-order">Оставить заявку</button>
+            <div class="form__note">Оставляя данные вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="modal-service" data-visible-class="service-modal-visible" class="side-modal service-modal">
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Сервисный центр</div>
+        <div class="side-modal__content">
+          <form action="#" class="form">
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Имя*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title form__row-title--required">Телефон*</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title">E-mail</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <div class="form__row-content"> 
+              <div class="form__row">
+                <label class="form__custom">
+                  <input type="radio" name="service" value="chekbox1" checked required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Сервисное обслуживание</span>
+                </label>
+                <label class="form__custom">
+                  <input type="radio" name="service" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek"></span><span class="form__policy">Приобретение запчастей</span>
+                </label>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__row-title">Комментарии к заявке</div>
+              <label class="form__label">
+                <input type="text" name="name" class="form__input">
+              </label>
+            </div>
+            <button type="submit" class="btn btn-lg btn-red btn-order">Оставить заявку</button>
+            <div class="form__note">Оставляя данные вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="modal-shop" data-visible-class="shop-modal-visible" class="side-modal shop-modal">
+      <button type="button" class="side-modal__back button-back">
+            <svg class="icon icon-arrow-left ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
+            </svg>
+      </button>
+      <button type="button" class="side-modal__close button-close">
+            <svg class="icon icon-ctlg-close ">
+              <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+            </svg>
+      </button>
+      <div class="side-modal__inner">
+        <div class="side-modal__title">Магазин Кубань инструмент</div>
+        <div class="side-modal__content">
+          <div class="address-list__item">
+            <div class="address-list__img _fit"><img src="img/page-menu/shops/14.jpg" alt="alt" class="_fit-img"></div>
+            <div class="address-list__content">
+              <div class="address-list__loc">г. Краснодар, ул. Западный Обход, 34</div>
+              <div class="address-list__phones">
+                <div class="address-list__phones-row"><a href="tel:88612128253" class="address-list__phone">8 (861) 212-8-253</a></div>
+                <div class="address-list__phones-row"><a href="tel:89885942025" class="address-list__phone">8 (988) 594-20-25</a></div>
+              </div>
+              <div class="address-list__shedule">Пн-Вс: 8.00-20.00</div>
+            </div><a href="#" class="btn btn-sm btn-loc">Как добраться</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="widemodal modal-hide">
@@ -9900,69 +10031,149 @@
         </div>
       </form>
     </div>
-    <nav class="profile-nav">
+    <nav data-profile-nav class="profile-nav">
       <div class="profile-nav__top">
         <div class="profile-nav__user">Привет, Николай</div>
         <div class="profile-nav__card"><img src="img/page-profile/check-lg.svg" alt="alt" class="profile-nav__icon">
           <div class="profile-nav__discount">дисконтная <br>карта</div>
         </div>
       </div>
-      <ul class="profile-menu">
-        <li class="profile-menu__item"><a href="#" class="profile-menu__link">Личная информация
-            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
-            <!-- 	span.profile-menu__count 2-->
-                <svg class="icon icon-chev-right ">
-                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                </svg></a></li>
-        <li class="profile-menu__item"><a href="#" class="profile-menu__link">Мои документы
-            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
-            <!-- 	span.profile-menu__count 2-->
-                <svg class="icon icon-chev-right ">
-                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                </svg></a></li>
-        <li class="profile-menu__item"><a href="#" class="profile-menu__link">История покупок
-            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
-            <!-- 	span.profile-menu__count 2-->
-                <svg class="icon icon-chev-right ">
-                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                </svg></a></li>
-        <li class="profile-menu__item"><a href="#" class="profile-menu__link">Избранное
-            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
-            <!-- 	span.profile-menu__count 2-->
-                <svg class="icon icon-chev-right ">
-                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                </svg></a></li>
-        <li class="profile-menu__item"><a href="#" class="profile-menu__link">Под заказ
-            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
-            <!-- 	span.profile-menu__count 2-->
-                <svg class="icon icon-chev-right ">
-                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                </svg></a></li>
-        <li class="profile-menu__item"><a href="#" class="profile-menu__link active">Уведомления
-            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
-            <!-- 	span.profile-menu__count 2-->
-                <svg class="icon icon-chev-right ">
-                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                </svg></a></li>
-        <li class="profile-menu__item"><a href="#" class="profile-menu__link">Мои отзывы
-            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
-            <!-- 	span.profile-menu__count 2-->
-                <svg class="icon icon-chev-right ">
-                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                </svg></a></li>
-        <li class="profile-menu__item"><a href="#" class="profile-menu__link">Мои рекомендации
-            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
-            <!-- 	span.profile-menu__count 2-->
-                <svg class="icon icon-chev-right ">
-                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                </svg></a></li>
-        <li class="profile-menu__item"><a href="#" class="profile-menu__link">Выйти
-            <!-- if item == 'Уведомления' || item == 'Мои отзывы'-->
-            <!-- 	span.profile-menu__count 2-->
-                <svg class="icon icon-chev-right ">
-                  <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                </svg></a></li>
-      </ul>
+      <div class="profile-nav__over">
+        <ul class="profile-menu">
+          <li class=" profile-menu__item"><a href="#" class="profile-menu__link">Личная информация
+                  <svg class="icon icon-chev-right ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                  </svg></a></li>
+          <li class=" profile-menu__item"><a href="#" class="profile-menu__link">Мои документы
+                  <svg class="icon icon-chev-right ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                  </svg></a></li>
+          <li class=" profile-menu__item"><a href="#" class="profile-menu__link">История покупок
+                  <svg class="icon icon-chev-right ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                  </svg></a></li>
+          <li class=" profile-menu__item"><a href="#" class="profile-menu__link">Избранное
+                  <svg class="icon icon-chev-right ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                  </svg></a></li>
+          <li class=" profile-menu__item"><a href="#" class="profile-menu__link">Под заказ
+                  <svg class="icon icon-chev-right ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                  </svg></a></li>
+          <li class=" profile-menu__item"><a href="#" class="profile-menu__link active">Уведомления
+                  <svg class="icon icon-chev-right ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                  </svg></a></li>
+          <li class=" profile-menu__item"><a href="#" class="profile-menu__link">Мои отзывы
+                  <svg class="icon icon-chev-right ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                  </svg></a></li>
+          <li class=" profile-menu__item"><a href="#" class="profile-menu__link">Мои рекомендации
+                  <svg class="icon icon-chev-right ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                  </svg></a></li>
+          <li class="profile-menu__item profile-menu__item--exit"><a href="#" class="profile-menu__link">Выйти
+                  <svg class="icon icon-chev-right ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                  </svg></a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav data-menu-nav class="profile-nav">
+      <div class="profile-nav__top">
+        <div class="profile-nav__user">Привет, гость!</div>
+        <div class="profile-nav__card"><a href="#" class="std-link">Вход или регистрация</a></div>
+      </div>
+      <div class="profile-nav__over">
+        <ul class="profile-menu">
+          <li class="profile-menu__item"><a href="#" class="profile-menu__link">Каталог
+                  <svg class="icon icon-chev-right ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                  </svg></a></li>
+          <li class="profile-menu__item"><a href="#" class="profile-menu__link">Бренды
+                  <svg class="icon icon-chev-right ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                  </svg></a></li>
+          <li class="profile-menu__item"><a href="#" class="profile-menu__link">Новинки
+                  <svg class="icon icon-chev-right ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                  </svg></a></li>
+          <li class="profile-menu__item"><a href="#" class="profile-menu__link">Акции
+                  <svg class="icon icon-chev-right ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                  </svg></a></li>
+          <li class="profile-menu__item"><a href="#" class="profile-menu__link">Сравнить
+                  <svg class="icon icon-chev-right ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                  </svg></a></li>
+        </ul>
+        <div class="profile-nav__chapter chapter-profile-nav">
+          <div class="chapter-profile-nav__title">Покупателям</div>
+          <ul class="profile-menu">
+            <li class="profile-menu__item"><a href="#" class="profile-menu__link">Подарочные карты
+                    <svg class="icon icon-chev-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                    </svg></a></li>
+            <li class="profile-menu__item"><a href="#" class="profile-menu__link">Сотрудничество
+                    <svg class="icon icon-chev-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                    </svg></a></li>
+            <li class="profile-menu__item"><a href="#" class="profile-menu__link">Магазины
+                    <svg class="icon icon-chev-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                    </svg></a></li>
+            <li class="profile-menu__item"><a href="#" class="profile-menu__link">Доставка
+                    <svg class="icon icon-chev-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                    </svg></a></li>
+            <li class="profile-menu__item"><a href="#" class="profile-menu__link">Оплата
+                    <svg class="icon icon-chev-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                    </svg></a></li>
+            <li class="profile-menu__item"><a href="#" class="profile-menu__link">Сервис
+                    <svg class="icon icon-chev-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                    </svg></a></li>
+            <li class="profile-menu__item"><a href="#" class="profile-menu__link">Возврат и гарантия
+                    <svg class="icon icon-chev-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                    </svg></a></li>
+          </ul>
+        </div>
+        <div class="profile-nav__chapter chapter-profile-nav">
+          <div class="chapter-profile-nav__title">Покупателям</div>
+          <ul class="profile-menu">
+            <li class="profile-menu__item"><a href="#" class="profile-menu__link">О нас
+                    <svg class="icon icon-chev-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                    </svg></a></li>
+            <li class="profile-menu__item"><a href="#" class="profile-menu__link">Новости
+                    <svg class="icon icon-chev-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                    </svg></a></li>
+            <li class="profile-menu__item"><a href="#" class="profile-menu__link">Вакансии
+                    <svg class="icon icon-chev-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                    </svg></a></li>
+            <li class="profile-menu__item"><a href="#" class="profile-menu__link">Сертификаты
+                    <svg class="icon icon-chev-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                    </svg></a></li>
+            <li class="profile-menu__item"><a href="#" class="profile-menu__link">Наши партнеры
+                    <svg class="icon icon-chev-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                    </svg></a></li>
+            <li class="profile-menu__item"><a href="#" class="profile-menu__link">Арендодателям
+                    <svg class="icon icon-chev-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                    </svg></a></li>
+            <li class="profile-menu__item"><a href="#" class="profile-menu__link">Контакты
+                    <svg class="icon icon-chev-right ">
+                      <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                    </svg></a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/yamap-fullpage.js"></script>
@@ -9976,16 +10187,13 @@
     <script src="js/libs/sv-hover-intent.js"></script>
     <script src="js/libs/multilevel-panel/multilevel-panel.js"></script>
     <script src="js/libs/accordion/vanilla-accordion.js"></script>
+    <script src="js/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="js/libs/rating/ratings.js"></script>
     <script src="js/libs/fstdropdown/fstdropdown.min.js"></script>
     <script src="js/libs/baguetteBox/dist/baguetteBox.min.js"></script>
     <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
     
     
-    <!-- script(src="js/libs/dynamic-adaptive/da.min.js")
-    -->
-    <script src="js/libs/swiper/swiper-bundle.min.js"></script>
-    <script src="js/libs/viewerjs/viewer.js"></script>
-    <script src="js/libs/rating/ratings.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

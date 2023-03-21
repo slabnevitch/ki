@@ -27,6 +27,13 @@
 		}
 		// END open/close catalog-sort__select fstdropdown
 
+		// open modals by data-attr
+		if(targ.hasAttribute('data-modal-open')){
+			e.preventDefault();
+			document.body.classList.add(targ.dataset.modalOpen, 'covered');
+		}
+		//END open modals by data-attr
+
 		// catalog product availabel modal open
 		if(targ.hasAttribute('data-modal-availability')){
 			e.preventDefault();
@@ -200,12 +207,14 @@
 			if(screen.width >= 959.98){
 				document.body.classList.add('fullscreen-map-visible', 'map-with-modal');
 			}else{
-				document.body.classList.remove(targ.closest('.side-modal').dataset.visibleClass, 'side-modal-visible', 'map-with-modal');
+				if(targ.closest('.side-modal') !== null){
+					document.body.classList.remove(targ.closest('.side-modal').dataset.visibleClass, 'side-modal-visible', 'map-with-modal');
+				}
 				document.body.classList.add('fullscreen-map-visible', 'map-with-modal');
 			}
 		}
 		if(targ.classList.contains('map-fullscreen__back') || targ.closest('.map-fullscreen__back') !== null){
-			document.body.classList.remove(targ.closest('.map-fullscreen__back').dataset.modal, 'side-modal-visible', 'map-with-modal', 'covered');
+			document.body.classList.remove(targ.closest('.map-fullscreen__back').dataset.modal, 'side-modal-visible', 'map-with-modal', 'shop-map-visible', 'covered');
 			document.body.classList.remove('fullscreen-map-visible');
 		}
 
@@ -221,9 +230,13 @@
 		}
 		// END delivery-point-modal open/close
 		
-		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null /*&& targ.closest('.availability-modal') !== null*/){
+		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null && targ.closest('.address-list__item--contact') == null){
 			document.body.classList.remove('catalog-availability-modal-visible');
 			document.body.classList.add('address-modal-single-visible', 'map-with-modal', 'fullscreen-map-visible');
+		}
+		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null && targ.closest('.address-list__item--contact') !== null){
+			document.body.classList.remove('catalog-availability-modal-visible');
+			document.body.classList.add('shop-modal-visible', 'shop-map-visible');
 		}
 		if(targ.classList.contains('side-modal__back') || targ.closest('.side-modal__back') !== null){
 			console.log('click')
@@ -266,10 +279,25 @@
 		if(targ.getAttribute('id') ==='profile-menu-open' || targ.closest('#profile-menu-open') !== null){
 			e.preventDefault();
 			document.body.classList.toggle('profile-nav-visible');
+			document.body.classList.remove('menu-visible');
+			panel.close();
+			panel.reset();
 			document.documentElement.classList.toggle('lock');
 		}
 		
 		//END profile-menu toggle
+
+		// menu toggle
+		if(targ.getAttribute('id') ==='menu-open' || targ.closest('#menu-open') !== null){
+			e.preventDefault();
+			document.body.classList.toggle('menu-visible');
+			document.body.classList.remove('profile-nav-visible');
+			panel.close();
+			panel.reset();
+			document.documentElement.classList.toggle('lock');
+		}
+		
+		//END menu toggle
 
 
 		// header search results toggle
@@ -651,6 +679,33 @@
 			// compareTableSlider.on('sliderMove', function() {compareCardsSlider.slideTo(compareTableSlider.realIndex)});
 		}
 		//---------------END compare-slider
+
+		//---------------certificates-slider
+		if(document.querySelector('.certificates-slider') !== null){
+			  var certificatesSwiper = new Swiper('.certificates-slider', {
+			  
+					watchSlidesProgress: true,
+				  // loop: true,
+				  breakpoints: {
+				    // when window width is >= 320px
+				    320: {
+				    	slidesPerView: 2.25,
+				    	spaceBetween: 8
+				    },
+				    // when window width is >= 480px
+				    576: {
+				    	slidesPerView: 3.5,
+				    	spaceBetween: 30
+				    },
+				    // when window width is >= 640px
+				    767.98: {
+				    	slidesPerView: 4,
+				    	spaceBetween: 16
+				    }
+				}
+			});
+		}
+		//---------------END certificates-slider
 		//---------------END Swiper
 
 		// baguetteBox
@@ -665,6 +720,13 @@
 				    }
 					
 				});
+			}
+
+			if(document.querySelector('.certificates__gallery') !== null){
+				baguetteBox.run('.certificates__gallery');
+			}
+			if(document.querySelector('.certificates__list') !== null){
+				baguetteBox.run('.certificates__list');
 			}
 		// END baguetteBox
 
@@ -809,54 +871,6 @@
 			}
 		// END header fixed on doc. scroll
 
-		// compare slider fixed on doc. scroll
-					
-			// if(document.querySelector('.page-compare__cards') !== null){
-			// 	var compareSlider = document.querySelector('.cards-page-compare__check'),
-			// 	compareObserverCallback = function(entries, observer) {
-			// 		console.log(entries);
-			// 		if(entries[0].isIntersecting){
-			// 			document.querySelector('.page-compare__cards').classList.remove('_scroll');
-			// 		}else{
-			// 			document.querySelector('.page-compare__cards').classList.add('_scroll');
-			// 		}
-			// 	};
-			// 	var compareObserver = new IntersectionObserver(compareObserverCallback);
-			// 	compareObserver.observe(compareSlider);			
-			// }
-		// END compare slider fixed on doc. scroll
-
-		
-
-		// usage: http://ganlanyuan.github.io/tiny-slider/#usage
-		// if(document.querySelector('.my-slider') !== null){
-		// 	var slider = tns({
-		// 	container: '.my-slider',
-		// 	mode: 'carousel', //'gallery' - для фэйд-анимации отдельных слайдов
-		// 	items: 1,
-		// 	// slideBy: 1, // кол-во слайдов, перематывающихся за 1 клик. Не работает с mode: 'gallery'
-		// 	// autoplay: true,
-		// 	// controlsContainer: '.hits.carouseled .block-header__nav', // внутри .block-header__nav должны быть 2 заранее отстилизованные кнопки
-		// 	navContainer: "#customize-thumbnails",//конткйнер для навигации миниатюрами
-		// 	navAsThumbnails: true, //включение навигации миниатюрами
-		// 	mouseDrag: true,
-		// 	loop: false,
-		// 	gutter: 30 //добавляет padding, а не margin! Нужна обертка вокруг содержимого каждого слайда!
-
-		// 	});
-
-		// 	var navSlider = tns({
-		// 	container: '#customize-thumbnails',
-		// 	mode: 'carousel', //'gallery' - для фэйд-анимации отдельных слайдов
-		// 	items: 1,
-		// 	mouseDrag: true,
-		// 	loop: false,
-		// 	controls: false,
-		// 	nav: false,
-		// 	gutter: 30 //добавляет padding, а не margin! Нужна обертка вокруг содержимого каждого слайда!
-
-		// 	});
-		// }
 		if(document.getElementById('product-image-gallery') !== null){
 			var gallery = new Viewer(document.getElementById('product-image-gallery'), {
 				title: false,
@@ -883,6 +897,131 @@
 
 		}
 
-		
+		// video-modal
+			// micromodal
+			var getIframeSrc = (function() { //ф-ция. для обработки iframe в micromodal. Вызывается из коллбэков micromodal
+					var patterns = [
+						{
+							index: 'youtube.com',
+							id: 'v=',
+							src: '//www.youtube.com/embed/%id%?autoplay=1'
+						},
+						{
+							index: 'vimeo.com/',
+							id: '/',
+							src: '//player.vimeo.com/video/%id%?autoplay=1'
+						},
+						{
+							index: '//maps.google.',
+							src: '%id%&output=embed'
+						}
+					];
+
+					return {
+						allIframesSrc: function(trigger) {
+							// ------- Подобно magnific-popup - добавления видео с любого хостинга, а также google-map
+							// Кнопка вызова должна иметь следующие аттрибуты:
+							// data-micromodal-iframe="http://www.youtube.com/watch?v=8LPVOjjSgDE" data-autoplay(если необходим автоплей во всплывашке) data-micromodal-open="video-modal"
+							var embedSrc = trigger.getAttribute('data-micromodal-iframe');
+							
+							for (var i = patterns.length - 1; i >= 0; i--) {
+								let pattern = patterns[i];
+
+								if(embedSrc.indexOf( pattern.index ) > -1) {
+									if(pattern.id) {
+										if(typeof pattern.id === 'string') {
+											embedSrc = embedSrc.substr(embedSrc.lastIndexOf(pattern.id)+pattern.id.length, embedSrc.length);
+										} else {
+											embedSrc = pattern.id.call( pattern, embedSrc );
+										}
+									}
+									embedSrc = pattern.src.replace('%id%', embedSrc );
+									if(trigger.hasAttribute('data-autoplay') && !embedSrc.includes('https:')){
+										embedSrc = 'https:' + embedSrc;
+									}
+									// return false; // break;
+								}
+
+							}
+							// patterns.forEach(function(pattern) {
+							// });
+
+							return embedSrc;
+						}, 
+
+						youtubeSrc: function(trigger) {
+							// ------- Простой способ добавления ютуб-видео по по айдишнику
+								// в случае добавление всплывашки с youtube-video, ссылка на видео указывается в data-micromodal-iframe=""
+								// кнопки-trigger'a. Сама кнопка должна иметь такие аттрибуты: 
+								// data-micromodal-iframe="QFq6PiZ1BQ8" data-autoplay(если необходим автоплей во всплывашке) data-micromodal-open="video-modal"
+							
+							var embedSrc = trigger.getAttribute('data-micromodal-iframe'),
+								autoplay = trigger.hasAttribute('data-autoplay') ? '?autoplay=1' : '',
+								pattern = 'https://www.youtube.com/embed/%id%'+ autoplay;
+
+							return pattern.replace('%id%', embedSrc );
+						}
+					}
+				})();
+
+				if(document.querySelector('.modal') !== null){
+					MicroModal.init({
+						openTrigger: 'data-micromodal-open', 
+						closeTrigger: 'data-micromodal-close',
+						openClass: 'is-open', 
+						disableFocus: true, 
+						awaitOpenAnimation: true,
+						awaitCloseAnimation: true,
+						onShow: function(modal, trigger, event){
+
+							console.log(trigger)
+							// console.log(event)
+							// console.log(modal)	
+							
+							// Добавление во всплывашку айфрейма
+							if (trigger.hasAttribute('data-micromodal-iframe')) {
+
+								// var iframeSrc = getIframeSrc.youtubeSrc(trigger);// если айдишник youtube-видео задается отдельно
+								var iframeSrc = getIframeSrc.allIframesSrc(trigger);// если айдишник youtube-видео задается в составе url
+
+								// рендеринг айфрейма во всплывашку
+								modal.querySelector('.modal__content').insertAdjacentHTML('beforeend', '<div class="modal__video">'+
+									'<iframe src='+iframeSrc+' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'+
+								'</div>');
+							}
+							
+							// при disableScroll: true для компенсации ширины скроллбара (фикс "прыгания" страницы влево)
+							// document.querySelector('#wrapper-for-scroll-fix').classList.add('modal-open');
+
+						},
+						onClose: function(modal) {
+							// console.info(`${modal.id} is hidden`);
+
+							// удаление айфрейма при закрытии поапа
+							if(modal.querySelector('.modal__video') !== null){
+								modal.querySelector('.modal__video').remove();
+							}
+							
+							// при disableScroll: true для компенсации ширины скроллбара (фикс "прыгания" страницы влево)
+							// document.querySelector('#wrapper-for-scroll-fix').classList.remove('modal-open');
+
+						}
+					});		
+				}
+			// END micromodal
+		//END video-modal
+
+		// payement anchors scroll
+		if(document.querySelector('.payment__menu') !== null){
+			new ScrollToSects({
+			  linksContainer: '.payment__menu',//контейнер, в котором лежат кнопки навигации
+			  offset: -30,//отступ от верха экрана при прокрутке (если нужен)
+			  sectsSelector: '.payment__block',//селектор секций, если не section
+			   delay: 0//задержка перед прокруткой. Может понадобится, елсли перед прокруткой нужно время на анимацию закрытия моб. меню, например
+			});
+
+		}
+		//END payement anchors scroll
+	
 	});//DOMContentLoaded
 })();

@@ -25,6 +25,7 @@
   }
     this.clicker = function(e){
       if(accordionList.hasAttribute('data-breakpoint') && screen.width >= +accordionList.dataset.breakpoint){
+      console.log('clicker!')
       
       	return;
       }
