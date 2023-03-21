@@ -22,13 +22,6 @@
 	}
 
 }
-.wrapper {}
-.form {}
-.fstdropdown-select {}
-.to-map-side-modal {}
-.to-map-side-moda__title {}
-.icon {}
-.icon-loc {}
 .shops__content {
 }
 .shops__title {
@@ -41,12 +34,70 @@
 .wrapper-flex {}
 .shops__tiles {
 	.address-list__item {
+		
 		@include col();
 		@include size(3);
 		@include size-md(4);
 		@include size-sm(6);
 		@include size-xss(12);
+
+		@include min-screen($md){
+			margin-bottom: 13px;
+			
+		}
+		@include min-screen($xs){
+			flex-direction: column;
+			
+		}
+	}
+
+	.address-list__img {
+
+		@include min-screen($xs){
+			
+			width: 100%;
+			height: auto;
+			padding-bottom: prc(139,223);
+			margin-right: 0;
+			margin-bottom: 9px;
+		}
+	}
+	.address-list__loc {
+		@include min-screen($xs){
+			margin-bottom: 19px;
+			
+		}
+	}
+	.address-list__phones{
+		@include min-screen($xs){
+			margin-bottom: 6px;
+			
+		}
+	}
+	.btn {
+		@include min-screen($xs){
+			display: none;
+		}
+	}
+}
+.shops__map{
+	position: relative;
+	@include max-screen($xs){
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+	.address-list__item {
+		position: absolute;
+		left: prc(180, 940);
+		top: prc(101, 450);
 		flex-direction: column;
+		width: 248px;
+		padding: 12px;
+		background-color: #fff;
+		z-index: 2;
 
 		@include min-screen($md){
 			margin-bottom: 13px;
@@ -62,7 +113,7 @@
 		margin-bottom: 9px;
 	}
 	.address-list__loc {
-		margin-bottom: 19px;
+		margin-bottom: 10px;
 	}
 	.address-list__phones{
 		margin-bottom: 6px;
@@ -75,5 +126,53 @@
 }
 .shops__map-wrap{
 	height: 450px;
+}
+.shops__hint{
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	border: 3px solid $accent;
+	border-radius: 50%;
+	z-index: 2;
+
+	&:before{
+		width: 10px;
+		height: 10px;
+		@include absolute-center;
+		border-radius: 50%;
+		background-color: #003D9E;
+		content: '';
+	}
+
+	&--empty{
+		&:before{
+			display: none;
+		}
+
+		&:first-of-type{
+			top: 10%;
+			left: 20%;
+		}
+		&:nth-of-type(2){
+			top: 5%;
+			left: 30%;
+		}
+		&:nth-of-type(3){
+			top: 80%;
+			left: 80%;
+		}
+		&:nth-of-type(4){
+			top: 25%;
+			left: 10%;
+		}
+		&:nth-of-type(5){
+			top: 75%;
+			left: 10%;
+		}
+
+	}
+
 }
 /*--------------------END shops----------------------*/ 
