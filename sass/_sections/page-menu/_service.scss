@@ -35,12 +35,13 @@
 	}
 }
 .contacts-service-center__lable{
+
 	font-size: rem(12);
 	line-height: rem(15);
+		margin-bottom: 8px;
 	color: #767571;
 
 	@include min-screen($sm){
-		margin-bottom: 8px;
 		
 	}
 }

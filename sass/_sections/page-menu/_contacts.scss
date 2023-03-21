@@ -1,0 +1,31 @@
+/*--------------------contacts----------------------*/
+.contacts{
+	.text-cols-block{
+		margin-bottom: 20px;	
+	}
+	&__map{
+		margin-top: 60px;
+		margin-bottom: 40px;
+		@include max-screen($sm){
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	.contacts-service-center__title {
+		margin-bottom: 8px;
+		text-transform: none;
+	}
+	.socials__link{
+		.icon{
+			font-size: 14px;
+		}
+	}
+}
+.contacts__description{
+	margin-bottom: 8px;
+	font-size: rem(12);
+	line-height: rem(15);
+
+	color: #767571;
+}
+/*--------------------END contacts----------------------*/ 

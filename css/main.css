@@ -259,6 +259,16 @@
   width: 0.90909em;
 }
 
+.icon-viber {
+  font-size: 1.2rem;
+  width: 1.08333em;
+}
+
+.icon-whts {
+  font-size: 1.3rem;
+  width: 1.07692em;
+}
+
 /*--micromodal--*/
 /**************************\
   Basic Modal Styles
@@ -20052,6 +20062,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------END certificates----------------------*/
+/*--------------------contacts----------------------*/
+.contacts .text-cols-block {
+  margin-bottom: 20px;
+}
+
+.contacts__map {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .contacts__map {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.contacts .contacts-service-center__title {
+  margin-bottom: 8px;
+  text-transform: none;
+}
+
+.contacts .socials__link .icon {
+  font-size: 14px;
+}
+
+.contacts__description {
+  margin-bottom: 8px;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  color: #767571;
+}
+
+/*--------------------END contacts----------------------*/
 /*--------------------delivery----------------------*/
 .delivery {
   padding-bottom: 70px;
@@ -20398,7 +20442,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-cols-block {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 @media only screen and (max-width: 959.98px) {
@@ -20877,13 +20921,8 @@ h1, h2, h3, h4, h5, h6 {
 .contacts-service-center__lable {
   font-size: 0.75rem;
   line-height: 0.9375rem;
+  margin-bottom: 8px;
   color: #767571;
-}
-
-@media only screen and (min-width: 767.98px) {
-  .contacts-service-center__lable {
-    margin-bottom: 8px;
-  }
 }
 
 .contacts-service-center__value {
@@ -21245,6 +21284,52 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------END single-action----------------------*/
+/*--------------------single-shop----------------------*/
+@media only screen and (max-width: 767.98px) {
+  .single-shop {
+    padding-bottom: 20px;
+  }
+}
+
+.single-shop .sect-title {
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .single-shop .sect-title {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.single-shop .address-list__item {
+  margin-bottom: 12px;
+}
+
+.single-shop .address-list__loc {
+  margin-bottom: 0;
+}
+
+.single-shop .text-cols-block__img {
+  padding-bottom: 44.09091%;
+}
+
+.single-shop__map-wrap {
+  position: relative;
+}
+
+.single-shop__map {
+  height: 450px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .single-shop__map {
+    height: 250px;
+  }
+}
+
+/*--------------------END single-shop----------------------*/
 /*--------------------team----------------------*/
 .team__title {
   padding-bottom: 20px;

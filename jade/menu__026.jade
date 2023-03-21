@@ -1,0 +1,248 @@
+extends _misc/main
+
+block title
+	| Контакты
+	
+block content
+	.page
+		.wrapper
+			+menu('breadcrumbs', ['главная', 'Контакты'])
+
+		+backLink('Контакты', true)
+
+		.contacts
+			.wrapper-smart
+				.wrapper-flex.text-cols-block
+					.text-cols-block__img._fit
+						img._fit-img(src="img/page-menu/contacts.jpg" alt="alt")
+								
+					//- .wrapper-flex.text-cols-block.service-center__contacts.contacts-service-center
+					.text-cols-block__left
+						.contacts-service-center__title Головной офис:
+
+					.text-cols-block__right
+						- var contacts = [{label: 'Адрес:', value: 'г. Краснодар, ул. Северная, 320 (Северная — Фрунзе).'}, {label: 'Телефон:', value: ['8 (861) 212-8-253', '8 (988) 594-2-025']}, {label: 'Режим работы:', value: 'Пн-Вс 8:00-20:00 '}, {label: 'Вопросы по актам сверки принимаются по почте:', value: '708@businessbalance.ru'}];
+						.wrapper-flex
+							each item, i in contacts
+								.contacts-service-center__col
+									.contacts-service-center__lable= item.label
+									if typeof item.value== 'object'
+										each val in item.value
+											div
+												a(href="tel:" + item.value).contacts-service-center__value= val
+									
+									else if item.label == 'Email:'
+										a(href="mailto:" + item.value).contacts-service-center__value= item.value
+									else
+										.contacts-service-center__value= item.value
+
+				.wrapper-flex.text-cols-block
+					.text-cols-block__left
+						.contacts-service-center__title Интернет-магазин ин струмента, строительной и садовой техники:
+
+					.text-cols-block__right
+						.wrapper-flex
+							.contacts-service-center__col
+								.contacts-service-center__lable Сделать заказ или уточнить наличие товара:
+								a.contacts-service-center__value(href='+ 7 (861) 211-29-54') + 7 (861) 211-29-54
+							.contacts-service-center__col
+								.contacts-service-center__lable Режим работы Call-центра:
+								.contacts-service-center__value
+									span Пн-Пт 7:00-21:00, 
+									span Сб-Вс 9:00-18:00
+
+							.contacts-service-center__col
+								.contacts-service-center__lable Ваши заявки принимаются по почте:
+								div
+									a.contacts-service-center__value(href='mailto:info@kubaninstrument.ru') info@kubaninstrument.ru
+								div
+									a.contacts-service-center__value(href='mailto:kubaninstrument@yandex.ru') kubaninstrument@yandex.ru
+
+							.contacts-service-center__col
+								.contacts-service-center__lable Оставляйте заявки в мессенджеры:
+								.contacts-service-center__value
+
+									- var socs = ['viber', 'whts', 'soc-tg'];
+									ul.socials
+										each soc in socs
+											li.socials__item
+												a(href="#" class="socials__link")
+													+icon(soc)
+
+				.wrapper-flex.text-cols-block
+					.text-cols-block__left
+						.contacts-service-center__title Наши реквизиты:
+
+					.text-cols-block__right
+						- var contacts2 = [{label: 'Наименование организации', value: 'ИП Осипян Виктор Навасартович'}, {label: 'ИНН', value: '230801417961'}, {label: 'Юридический адрес', value: '350063, г. Краснодар, 1-й пр. Севастопольский, д. 30'}, {label: 'ОГРН', value: '305230805500010'}];
+						.wrapper-flex
+							each item, i in contacts2
+								.contacts-service-center__col
+									.contacts-service-center__lable= item.label
+									if item.label == 'Телефон:'
+										a(href="tel:" + item.value).contacts-service-center__value= item.value
+									
+									else if item.label == 'Email:'
+										a(href="mailto:" + item.value).contacts-service-center__value= item.value
+									else
+										.contacts-service-center__value= item.value
+
+						.contacts__map
+							.single-shop__map-wrap
+								.shops__hint
+								#map-single-shop.single-shop__map
+
+				.wrapper-flex.text-cols-block
+					.text-cols-block__left
+						.contacts-service-center__title Отдел прямых продаж:
+
+					.text-cols-block__right
+						- var contacts2 = [{label: 'Адрес для отправки корреспонденции:', value: 'г. Краснодар, ул. Фрунзе, 188(Фрунзе — Северная)'}, {label: 'Режим работы:', value: 'Пн-Пт 8:00-17:00'}, {label: 'Телефон:', value: '+ 7 (861) 212-8-238'}];
+						.wrapper-flex
+							each item, i in contacts2
+								.contacts-service-center__col
+									.contacts-service-center__lable= item.label
+									if item.label == 'Телефон:'
+										a(href="tel:" + item.value).contacts-service-center__value= item.value
+									
+									else if item.label == 'Email:'
+										a(href="mailto:" + item.value).contacts-service-center__value= item.value
+									else
+										.contacts-service-center__value= item.value
+
+				.wrapper-flex.text-cols-block
+					.text-cols-block__left
+						.contacts-service-center__title Тендерные поставки:
+						.contacts__description По вопросам участия нашей компании в тендерных процедурах, просьба обращаться к менеджеру по тендерам
+
+					.text-cols-block__right
+						- var contacts2 = [{label: 'Контактное лицо:', value: 'Дмитрий Сергеевич Юрлов'}, {label: 'Телефон:', value: 'yurlov@kubaninstrument.ru'}, {label: 'Почта:', value: 'yurlov@kubaninstrument.ru'}, {label: 'Режим работы:', value: 'Пн-Пт 8:00-17:00'}];
+						.wrapper-flex
+							each item, i in contacts2
+								.contacts-service-center__col
+									.contacts-service-center__lable= item.label
+									if item.label == 'Телефон:'
+										a(href="tel:" + item.value).contacts-service-center__value= item.value
+									
+									else if item.label == 'Почта:'
+										a(href="mailto:" + item.value).contacts-service-center__value= item.value
+									else
+										.contacts-service-center__value= item.value
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")
+
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper-bundle.min.js")
+
+	//- tiny-slider--------------------------
+	//- script(src="js/libs/tiny-slider/dist/min/tiny-slider.js")
+
+	//-viewerjs --------------------------
+	//- script(src="js/libs/viewerjs/viewer.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- scroll-to-sects--------------------------
+	//- script(src="js/libs/scroll-to-sects/scrolltosect.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+
+	//- counter--------------------------
+	//- script(src="js/libs/counter/counter.js")
+
+//- end VANILLA JS===================================

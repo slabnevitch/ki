@@ -1,0 +1,37 @@
+/*--------------------single-shop----------------------*/
+.single-shop{
+	@include max-screen($sm){
+		padding-bottom: 20px;
+	}
+	.sect-title{
+		font-size: rem(22);
+		line-height: rem(26);
+
+		@include max-screen($sm){
+			font-size: 16px;
+			line-height: 19px;
+			
+		}
+	}
+	.address-list__item{
+		margin-bottom: 12px;
+	}
+	.address-list__loc{
+		margin-bottom: 0;		
+	}
+	.text-cols-block__img{
+		padding-bottom: prc(194, 440);
+	}
+
+}
+.single-shop__map-wrap{
+	position: relative;
+}
+.single-shop__map{
+	height: 450px;
+
+	@include max-screen($sm){
+		height: 250px;
+	}
+}
+/*--------------------END single-shop----------------------*/ 
