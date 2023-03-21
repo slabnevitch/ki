@@ -1,0 +1,197 @@
+extends _misc/main
+
+block title
+	| Возврат и гарантия
+	
+block content
+	.page
+		.wrapper
+			+menu('breadcrumbs', ['главная', 'Возврат и гарантия'])
+
+		+backLink('Возврат и гарантия', true)
+
+		.payment
+			.wrapper-smart
+				.wrapper-flex
+					nav.payment__nav
+						ul.payment__menu
+							- var nav = [{name:'Возврат товара надлежащего качества', href: 'return-true'}, {name:'Возврат товара ненадлежащего качества',  href: 'return-false'}, {name:'Гарантийный ремонт', href: 'repair'}];
+							each item, i in nav
+								li.payment__menu-item
+									a(href="#" data-anchor=item.href class=i==0 ? "payment__menu-link active" : "payment__menu-link")= item.name
+					
+					.payment__content
+						.payment__block(data-anchor="return-true")
+							.payment__title Возврат товара надлежащего качества:
+							p.std-par Покупатель вправе вернуть товар, приобретённый через интернет-магазин в течение 7 (семи) дней после передачи товара (не учитывая дня заказа), при соблюдении следующих условий: 
+								br
+								| — товар надлежащего качества (отсутствие недостатка в товаре/брака); 
+								br
+								| — товар не был в употреблении; 
+								br
+								| — сохранён товарный вид (в т.ч. пломбы, фабричные ярлыки); 
+								br
+								| — сохранена полная комплектация;
+								br
+								| Транспортные расходы по возврату качественного товара Продавцу оплачивает Покупатель.
+								br
+								| Возврат денежных средств производится в течение 10 (Десяти) календанрных дней с даты обращения, при условии наличия письменного заявления Покупателя и факта возврата товара Продавцу (Образец № 1 «Заявлениe на возврат денежных средств») направленного на электронный адрес: info@kubaninstrument.ru или заказной корреспонденцией по адресу Продавца: 350000, г. Краснодар, ул. Северная, 320)
+								br
+								| Возврат товара Покупателем производится по следующему почтовому адресу Продавца: 350000, г. Краснодар, ул. Северная, 320, тел: 8 800 250-21-23.
+								br
+								| Обмен или возврат товара бывшего в употреблении и/или потерявшего товарный вид (при наличии царапин, сколов, отсутствия ярлыков, упаковки) не производится, см. п. 1 ст. 25 Закона «О защите прав потребителей» № 2300–1. Исключение — случаи, подходящие под гарантийные обязательства
+								br
+								| Факт возврата оформляется в виде накладной или Акта о возврате товара.
+
+						.payment__block(data-anchor="return-false")
+							.payment__title Возврат товара ненадлежащего качества:
+							p.std-par Покупатель вправе вернуть товар, приобретённый через интернет-магазин при наличии недостатка (дефекта/брака) в течение 12 (двенадцати) месяцев с момента передачи товара, если соблюдены следующие условия: 
+								br
+								| — имеется в наличии Акт о неремонтопригодности товара от официального авторизированного сервисного центра; 
+								br
+								| — товар, предназначенный к возврату, полностью укомплектован.
+								br
+								| Транспортные расходы по возврату некачественного товара оплачивает Продавец.
+								br
+								| Возврат денежных средств за некачественный товар производится в течение 10 (десяти) календарных дней с даты обращения, при условии наличия письменной претензии Покупателя (Образец № 2 Претензия о наличии недостатка), направленной на электронный адрес: info@kubaninstrument.ru или заказной корреспонденцией по адресу Продавца: 350000, г. Краснодар, ул. Северная, 320 и факта возврата товара Продавцу.
+								br
+								| Возврат товара Покупателем производится по следующему почтовому адресу Продавца: 350000, г. Краснодар, ул. Северная, 320, тел: 8 800 250-21-23.
+								br
+								| Факт возврата оформляется в виде накладной или Акта о возврате товара.
+
+						.payment__block(data-anchor="repair")
+							.payment__title Гарантийный ремонт:
+							p.std-par В случае обнаружения недостатков в товаре, производится бесплатный гарантийный ремонт в течение 12 (двенадцати) месяцев с момента передачи товара, если соблюдены следующие условия: 
+								br
+								| — в регионе Покупателя отсутствует соответствующий сервисный центр; 
+								br
+								| — Покупателем предоставлен гарантийный талон; 
+								br
+								| — товар, предназначенный к возврату, полностью укомплектован.
+								br
+								| Возврат товара Покупателем производится по следующему почтовому адресу Продавца: 350000, г. Краснодар, ул. Северная, 320, тел: 8 800 250-21-23
+								br
+								| Обслуживание товара происходит в сервисном центре Продавца или официальном авторизированном сервисном центре изготовителя.
+								br
+								| Составляются накладная или Акт о возврате товара. По окончании ремонта Акт выполненных гарантийных работ.
+								br
+								| В случае отсутствия недостатка/необоснованного обращения Покупатель возмещает/компенсирует Продавцу транспортные расходы по доставке товара и стоимость диагностики.
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")
+
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper-bundle.min.js")
+
+	//- tiny-slider--------------------------
+	//- script(src="js/libs/tiny-slider/dist/min/tiny-slider.js")
+
+	//-viewerjs --------------------------
+	//- script(src="js/libs/viewerjs/viewer.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- scroll-to-sects--------------------------
+	script(src="js/libs/scroll-to-sects/scrolltosect.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+
+	//- counter--------------------------
+	//- script(src="js/libs/counter/counter.js")
+
+//- end VANILLA JS===================================

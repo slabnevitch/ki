@@ -36,10 +36,15 @@ function ScrollToSects(opts){
          
         }
       });
+      e.target.classList.add('active');
+      siblings(e.target.parentElement).forEach(function(item) {
+        item.querySelector('.payment__menu-link').classList.remove('active');
+
+      });
     
      if(opts.delay){
-       console.log(opts.delay)
-       console.log(gotoBlockValue)
+       // console.log(opts.delay)
+       // console.log(gotoBlockValue)
        setTimeout(function(){
          _self.scrollToTarget(gotoBlockValue);
           // return;
@@ -51,7 +56,7 @@ function ScrollToSects(opts){
     
   },
    this.scrollToTarget = function(scrollValue){
-    console.log(scrollValue)
+    // console.log(scrollValue)
     window.scrollTo({
       top: scrollValue,
       behavior: "smooth"
