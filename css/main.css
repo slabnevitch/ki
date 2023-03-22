@@ -6853,14 +6853,8 @@ h6 {
 /*--------------------header-catalog----------------------*/
 
 .header__catalog {
+  display: none;
   transition: all 0.3s;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.header-catalog-opened .header__catalog {
-  visibility: visible;
-  opacity: 1;
 }
 
 .catalog-header {
