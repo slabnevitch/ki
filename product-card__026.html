@@ -7265,18 +7265,18 @@
                           </div>
                           <div class="product-reviews__articles articles-product-reviews">
                             <div class="product-reviews__single">
-                              <article class="review review-context-visible">
+                              <article itemprop="review" itemscope itemtype="https://schema.org/Review" class="review review-context-visible">
                                 <header class="review__header">
                                   <div class="person">
                                     <div class="person__top">
                                       <div class="person__portrait"><img src="img/page-product-card/worker.jpg" alt="alt"></div>
                                       <div class="person__info">
-                                        <div class="person__name">Иванов Иван</div>
-                                        <div class="person__date">12 декабря 2021</div>
+                                        <div itemprop="author" class="person__name">Иванов Иван</div>
+                                        <div itemprop="datePublished" content="2021-12-12 год, месяц, день" class="person__date">12 декабря 2021</div>
                                       </div>
                                     </div>
                                     <div class="person__rating">
-                                      <div class="person__rating-wrap">
+                                      <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" class="person__rating-wrap">
                                             <div class="star-rating">
                                               <div class="star-rating__star active"> </div>
                                               <div class="star-rating__star active"> </div>
@@ -7284,6 +7284,7 @@
                                               <div class="star-rating__star"></div>
                                               <div class="star-rating__star"></div>
                                             </div>
+                                        <meta itemprop="worstRating" content="1"><span itemprop="ratingValue" style="display: none; рейтинг товара">2</span><span itemprop="bestRating" content="5"></span>
                                       </div>
                                       <div class="person__rating-mark">Плохой товар</div>
                                     </div>
@@ -7299,22 +7300,28 @@
                                 <div class="review__body review__body--expanded">
                                   <div class="review__div">
                                     <div class="review__title">Опыт использования</div>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    <div itemprop="reviewBody">
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    </div>
                                   </div>
                                   <div class="review__div">
                                     <div class="review__title">Достоинства</div>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                                    <div itemprop="positiveNotes">
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                                    </div>
                                   </div>
                                   <div class="review__div">
                                     <div class="review__title">Недостатки</div>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+                                    <div itemprop="negativeNotes">
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+                                    </div>
                                   </div>
                                 </div>
                                 <footer class="review__footer">
                                   <div class="review__photos">
-                                    <div class="review__photo _fit"><img src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img"></div>
-                                    <div class="review__photo _fit"><img src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img"></div>
+                                    <div class="review__photo _fit"><img itemprop="image" src="img/review/thumbs/1.jpg" alt="alt" class="_fit-img"></div>
+                                    <div class="review__photo _fit"><img itemprop="image" src="img/review/thumbs/2.jpg" alt="alt" class="_fit-img"></div>
                                   </div>
                                   <div class="review__actions">
                                     <button type="button" class="review__collapse">Свернуть</button>
@@ -7337,18 +7344,18 @@
                             </div>
                             <div class="cards-more"><a href="#" class="cards-more__link">Показать все</a></div>
                             <div class="product-reviews__others">
-                              <article class="review">
+                              <article itemprop="review" itemscope itemtype="https://schema.org/Review" class="review">
                                 <header class="review__header">
                                   <div class="person">
                                     <div class="person__top">
                                       <div class="person__portrait"><img src="img/page-product-card/worker.jpg" alt="alt"></div>
                                       <div class="person__info">
-                                        <div class="person__name">Иванов Иван</div>
-                                        <div class="person__date">12 декабря 2021</div>
+                                        <div itemprop="author" class="person__name">Иванов Иван</div>
+                                        <div itemprop="datePublished" content="2021-12-12 год, месяц, день" class="person__date">12 декабря 2021</div>
                                       </div>
                                     </div>
                                     <div class="person__rating">
-                                      <div class="person__rating-wrap">
+                                      <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" class="person__rating-wrap">
                                             <div class="star-rating">
                                               <div class="star-rating__star active"> </div>
                                               <div class="star-rating__star active"> </div>
@@ -7356,6 +7363,7 @@
                                               <div class="star-rating__star"></div>
                                               <div class="star-rating__star"></div>
                                             </div>
+                                        <meta itemprop="worstRating" content="1"><span itemprop="ratingValue" style="display: none; рейтинг товара">2</span><span itemprop="bestRating" content="5"></span>
                                       </div>
                                       <div class="person__rating-mark">Плохой товар</div>
                                     </div>
@@ -7371,16 +7379,22 @@
                                 <div class="review__body">
                                   <div class="review__div">
                                     <div class="review__title">Опыт использования</div>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    <div itemprop="reviewBody">
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    </div>
                                   </div>
                                   <div class="review__div">
                                     <div class="review__title">Достоинства</div>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                                    <div itemprop="positiveNotes">
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                                    </div>
                                   </div>
                                   <div class="review__div">
                                     <div class="review__title">Недостатки</div>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+                                    <div itemprop="negativeNotes">
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+                                    </div>
                                   </div>
                                 </div>
                                 <footer class="review__footer">
@@ -7402,18 +7416,18 @@
                                   </div>
                                 </footer>
                               </article>
-                              <article class="review">
+                              <article itemprop="review" itemscope itemtype="https://schema.org/Review" class="review">
                                 <header class="review__header">
                                   <div class="person">
                                     <div class="person__top">
                                       <div class="person__portrait"><img src="img/page-product-card/worker.jpg" alt="alt"></div>
                                       <div class="person__info">
-                                        <div class="person__name">Иванов Иван</div>
-                                        <div class="person__date">12 декабря 2021</div>
+                                        <div itemprop="author" class="person__name">Иванов Иван</div>
+                                        <div itemprop="datePublished" content="2021-12-12 год, месяц, день" class="person__date">12 декабря 2021</div>
                                       </div>
                                     </div>
                                     <div class="person__rating">
-                                      <div class="person__rating-wrap">
+                                      <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" class="person__rating-wrap">
                                             <div class="star-rating">
                                               <div class="star-rating__star active"> </div>
                                               <div class="star-rating__star active"> </div>
@@ -7421,6 +7435,7 @@
                                               <div class="star-rating__star"></div>
                                               <div class="star-rating__star"></div>
                                             </div>
+                                        <meta itemprop="worstRating" content="1"><span itemprop="ratingValue" style="display: none; рейтинг товара">2</span><span itemprop="bestRating" content="5"></span>
                                       </div>
                                       <div class="person__rating-mark">Плохой товар</div>
                                     </div>
@@ -7436,16 +7451,22 @@
                                 <div class="review__body">
                                   <div class="review__div">
                                     <div class="review__title">Опыт использования</div>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    <div itemprop="reviewBody">
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    </div>
                                   </div>
                                   <div class="review__div">
                                     <div class="review__title">Достоинства</div>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                                    <div itemprop="positiveNotes">
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                                    </div>
                                   </div>
                                   <div class="review__div">
                                     <div class="review__title">Недостатки</div>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+                                    <div itemprop="negativeNotes">
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+                                    </div>
                                   </div>
                                 </div>
                                 <footer class="review__footer">
@@ -7467,18 +7488,18 @@
                                   </div>
                                 </footer>
                               </article>
-                              <article class="review">
+                              <article itemprop="review" itemscope itemtype="https://schema.org/Review" class="review">
                                 <header class="review__header">
                                   <div class="person">
                                     <div class="person__top">
                                       <div class="person__portrait"><img src="img/page-product-card/worker.jpg" alt="alt"></div>
                                       <div class="person__info">
-                                        <div class="person__name">Иванов Иван</div>
-                                        <div class="person__date">12 декабря 2021</div>
+                                        <div itemprop="author" class="person__name">Иванов Иван</div>
+                                        <div itemprop="datePublished" content="2021-12-12 год, месяц, день" class="person__date">12 декабря 2021</div>
                                       </div>
                                     </div>
                                     <div class="person__rating">
-                                      <div class="person__rating-wrap">
+                                      <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" class="person__rating-wrap">
                                             <div class="star-rating">
                                               <div class="star-rating__star active"> </div>
                                               <div class="star-rating__star active"> </div>
@@ -7486,6 +7507,7 @@
                                               <div class="star-rating__star"></div>
                                               <div class="star-rating__star"></div>
                                             </div>
+                                        <meta itemprop="worstRating" content="1"><span itemprop="ratingValue" style="display: none; рейтинг товара">2</span><span itemprop="bestRating" content="5"></span>
                                       </div>
                                       <div class="person__rating-mark">Плохой товар</div>
                                     </div>
@@ -7501,16 +7523,22 @@
                                 <div class="review__body">
                                   <div class="review__div">
                                     <div class="review__title">Опыт использования</div>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    <div itemprop="reviewBody">
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    </div>
                                   </div>
                                   <div class="review__div">
                                     <div class="review__title">Достоинства</div>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                                    <div itemprop="positiveNotes">
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                                    </div>
                                   </div>
                                   <div class="review__div">
                                     <div class="review__title">Недостатки</div>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
-                                    <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+                                    <div itemprop="negativeNotes">
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+                                      <p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+                                    </div>
                                   </div>
                                 </div>
                                 <footer class="review__footer">
@@ -11711,6 +11739,7 @@
     <script src="js/libs/service-functions/siblings.js"></script>
     <script src="js/libs/service-functions/mobileDetect.js"></script>
     <script src="js/libs/service-functions/dropdown-toggle.js"></script>
+    <script src="js/libs/service-functions/fade.js"></script>
     
     <script src="js/libs/dynamic-adaptive/da.min.js"></script>
     <script src="js/libs/sv-hover-intent.js"></script>

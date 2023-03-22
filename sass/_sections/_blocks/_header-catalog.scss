@@ -1,12 +1,14 @@
 /*--------------------header-catalog----------------------*/
 .header__catalog {
+	display: none;
 	transition: all .3s;
-	visibility: hidden;
-	opacity: 0;
+	// visibility: hidden;
+	// opacity: 0;
 
 	.header-catalog-opened  &{
-		visibility: visible;
-		opacity: 1;
+		// display: block;
+		// visibility: visible;
+		// opacity: 1;
 	}
 }
 
