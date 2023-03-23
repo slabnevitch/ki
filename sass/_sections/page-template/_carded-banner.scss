@@ -1,0 +1,271 @@
+/*--------------------carded-banner----------------------*/
+.carded-banner{
+
+}
+.carded-banner__img{
+	@include col();
+	@include size(9);
+	@include size-md(12);
+	padding-bottom: 40.6%;
+	border-radius: 4px;
+
+	@include max-screen($md){
+		margin-bottom: 18px;
+		padding-bottom: prc(152, 272);
+	}
+	@include max-screen($xs){
+	}
+}
+.carded-banner__card{
+	@include col();
+	@include size(3);
+	@include size-md(12);
+
+	.product-card{
+		margin-bottom: 0;
+		height: 100%;
+
+		@include max-screen($md){
+			flex-direction: row;
+			width: 100%;
+			flex-wrap: wrap;
+			height: auto;
+		}
+
+		// @include max-screen($sm){
+		// 	padding-left: 160px;
+		// }
+		@include max-screen($xs){
+			padding-left: 98px;
+		}
+		
+		.product-card__img-wrap {
+
+			@include max-screen($md){
+				margin-bottom: 0;
+				flex-shrink: 0;
+				margin-right: 16px;
+				
+			}
+
+			@include max-screen($xs){
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+		
+		.billet {
+
+			@include max-screen($md){
+				top: 0;
+				
+			}
+		}
+		
+		.product-card__border {
+			@include max-screen($md){
+				
+				width: 144px;
+				height: 144px;
+				padding: 15px;
+			}
+
+			@include max-screen($xs){
+				width: 88px;
+				height: 88px;
+				padding: 8px;
+			}
+		}
+		.product-card__img {
+
+			@include max-screen($md){
+				width: 114px;
+				height: 114px;
+				
+			}
+
+			@include max-screen($xs){
+				height: 72px;
+				width: 72px;
+			}
+			img{
+				// max-width: calc(100% - 15px);
+				// max-height: calc(100% - 15px);
+
+			}
+		}
+		.product-card__name{
+
+			
+
+			@include max-screen($md){
+				flex: 0 0 40%;
+				margin-right: 16px;
+
+			}
+			
+			@include max-screen($xs){
+				flex: 0 0 100% ;
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
+
+		}
+		.product-card__price {
+
+			@include max-screen($md){
+				height: auto;
+				flex: 1 0 125px;
+				padding-left: 8px;
+				order: 4;
+				display: block;
+				text-align: right;
+				
+			}
+			@include max-screen($xs){
+				flex: 0 0 100%;
+				order: 0;
+				display: flex;
+				text-align: left;
+				padding-left: 0;
+			}
+		}
+		.product-bonus{
+
+			@include max-screen($md){
+				margin-top: 6px;
+				justify-content: flex-end;
+				
+			}
+		}
+		.product-card__actions {
+
+			@include max-screen($md){
+				position: static;
+				width: 100%;
+				margin-right: 0;
+				flex-direction: row-reverse;
+				justify-content: flex-start;
+				
+			}
+
+			@include max-screen($xs){
+				position: absolute;
+				bottom: 46px;
+				top: auto;
+				align-items: center;
+			}
+		}
+		.product-card__action {
+
+			&:not(:first-child){
+
+				@include max-screen($md){
+					margin-bottom: 0;
+					margin-right: 24px;
+					
+				}
+
+				@include max-screen($xs){
+					margin-right: 6px;
+				}
+
+			}
+			&:not(:last-child){
+				@include max-screen($xs){
+					margin-bottom: 0;
+				}
+				
+			}	
+		}
+		.product-card__description {
+			// margin-right: 8px;
+
+			@include max-screen($md){
+				display: block;
+				flex: 1 1 auto;
+				
+			}
+
+			@include max-screen($md){
+				display: none;
+			}
+		}
+		.product-card__bottom {
+
+			@include max-screen($md){
+				margin-top: 0;
+				order: 4;
+				width: 100%;
+				padding-left: 160px;
+				padding-right: 152px;
+				display: flex;
+				flex-wrap: wrap;
+				
+			}
+
+			@include max-screen($xs){
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+		.product-card__rating-wrap{
+
+			@include max-screen($md){
+				width: 100%;
+				margin-bottom: 19px;
+				
+			}
+
+			@include max-screen($xs){
+				margin-bottom: 0;
+			}
+		}
+		.product-card__buy{
+
+			@include max-screen($md){
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				margin-bottom: 0;
+				
+			}
+
+			@include max-screen($xs){
+				position: relative;
+				z-index: 2;
+				margin-bottom: 4px;
+			}
+			@include max-screen($xss){
+				max-width: 110px;
+			}
+		}
+		.product-card__info{
+
+			@include max-screen($md){
+				height: auto;
+				width: 100%;
+				flex-direction: row;
+				align-items: flex-end;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				
+			}
+
+			@include max-screen($sm){
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		}
+		.info-product-card__row{
+
+			&:not(:last-child){
+				margin-right: 16px;
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+}
+/*--------------------END carded-banner----------------------*/ 

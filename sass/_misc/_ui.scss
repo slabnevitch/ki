@@ -1199,6 +1199,20 @@ h1, h2, h3, h4, h5, h6{
   }
 
 }
+.simple-banner{
+  padding-bottom: prc(224, 944);
+  margin-bottom: 11px;
+  border-radius: 4px;
+
+  @include max-screen($md){
+    margin-left: -24px;
+    margin-right: -24px;
+
+  }
+  @include max-screen($xs){
+    padding-bottom: prc(156, 320);
+  }
+}
 
 /*--------------------ui-page----------------------*/
 .form__example{

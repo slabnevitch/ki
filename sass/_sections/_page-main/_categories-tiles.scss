@@ -99,7 +99,7 @@
 			top: auto;
 			bottom: 0;
 
-			@include min-screen($md){
+			@include min-screen(1000px){
 				height: 100%;
 				max-width: none;
 				left: auto;
