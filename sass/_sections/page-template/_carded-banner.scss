@@ -22,7 +22,6 @@
 	@include size-md(12);
 
 	.product-card{
-		margin-bottom: 0;
 		height: 100%;
 
 		@include max-screen($md){
@@ -37,6 +36,11 @@
 		// }
 		@include max-screen($xs){
 			padding-left: 98px;
+		}
+
+		@include min-screen($md){
+			
+			margin-bottom: 0;
 		}
 		
 		.product-card__img-wrap {

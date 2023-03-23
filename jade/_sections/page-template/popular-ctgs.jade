@@ -1,0 +1,20 @@
+section.page-main-sect
+	.wrapper
+		h2.sect-title Категории
+	.wrapper
+		.popular-ctgs
+			- var tiles = ['Шуруповерты', 'Отвертки', 'Бетоно<br>мешалки', 'Газоно<br>косилки', 'Перфораторы', 'Генераторы', 'Бензопилы', 'Шлифмашины', 'Культиваторы', 'Пассатижи', 'Мойки', 'Все<br>категории'];	
+			
+			+swiper('categories-tiles__slider', true, false, true)
+				each tile, i in tiles
+					a(href="#").hits-tile.swiper-slide
+						if i < 11
+							if tile == 'Бетоно<br>мешалки' || tile == 'Газонокосилки' ||  tile == 'Бензопилы'
+								.hits-tile__img
+									picture
+										source(srcset="img/hits-tiles/"+(i+1)+"-xs.png" media="(max-width: 480px)")
+										img._fit-img(src="img/hits-tiles/"+(i+1)+".png" alt="alt")
+							else
+								.hits-tile__img
+									img(src="img/hits-tiles/"+(i+1)+".png" alt="alt")
+						.hits-tile__name!= tile

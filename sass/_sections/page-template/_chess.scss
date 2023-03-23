@@ -1,0 +1,73 @@
+/*--------------------chess----------------------*/
+.chess{
+	margin-bottom: 20px;
+}
+.chess__item{
+	&:nth-child(even){
+		flex-direction: row-reverse;
+		.item-chess__content{
+
+			@include min-screen($xs){
+				text-align: right;
+				align-items: flex-end;
+				
+			}
+			.btn{
+				// margin-left: auto;
+			}
+		}
+	}
+}
+.item-chess{
+
+}
+.item-chess__picture{
+	@include col();
+	@include size(6);
+	@include size-xs(12);
+	padding: 20px 24px 32px 24px;
+	background: $gray-l;
+	border-radius: 4px;
+
+}
+.item-chess__img{
+	position: relative;
+	padding-bottom: 77.3%;
+
+	img{
+		@include absolute-center;
+		@include min-screen(1000px){
+			// max-width: none;
+			max-height: none;
+			height: 100%;
+		}
+	}
+}
+.item-chess__content{
+	@include col();
+	@include size(6);
+	@include size-xs(12);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 15px 24px;
+
+	@include max-screen($xs){
+		padding-bottom: 20px;
+	}
+}
+.item-chess__text{
+	margin-top: 0;
+	font-size: rem(20);
+	line-height: 140%;
+	opacity: 0.6;
+
+	@include max-screen($sm){
+		font-size: 18px;
+	}
+	@include min-screen($xs){
+		max-width: 304px;
+		
+	}
+}
+/*--------------------END chess----------------------*/ 

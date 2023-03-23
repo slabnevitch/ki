@@ -1,0 +1,11 @@
+.chess
+	.wrapper-smart
+		- for (var i=0; i < 2; i++)
+			.wrapper-flex.chess__item.item-chess
+				.item-chess__picture
+					.item-chess__img
+						img(src="img/page-template/chess/" + (i+1) + ".png" alt="alt")
+				
+				.item-chess__content
+					p.item-chess__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+					a(href="#").btn.btn-sm Кнопка

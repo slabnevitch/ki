@@ -50,9 +50,9 @@
 	@include size(6);
 	@include size-sm(12);
 	padding-top: 20px;
+	padding-bottom: 40px;
 
 	@include max-screen($sm){
-		padding-bottom: 40px;
 		padding-left: 24px;
 		padding-right: 24px;
 	}
