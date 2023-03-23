@@ -786,6 +786,7 @@
 		}
 		//---------------END certificates-slider
 
+		// products sliders
 		if(document.querySelector('.products-slider') !== null){
 		  var productsSlider = new Swiper('.products-slider', {
 			observer: true,
@@ -828,7 +829,30 @@
 			  }
 			});
 		}
-		//END day-products sliders
+		//END products sliders
+
+		// big slider
+		if(document.querySelector('.big-slider__carousel') !== null){
+		  var bigSlider = new Swiper('.big-slider__carousel', {
+			observer: true,
+			slidesPerView: 1,
+		  	loop: true,
+		  	// spaceBetween: 16
+
+			  // If we need pagination
+			  pagination: {
+			  	el: '.swiper-pagination',
+			  	type: 'bullets',
+			  	clickable: true
+			  },
+			  // Navigation arrows
+			  navigation: {
+			  	prevEl: '.product-cards-slider .slider-nav--prev',
+	     		nextEl: '.product-cards-slider .slider-nav--next'
+			  }
+			});
+		}
+		//END big slider
 		//---------------END Swiper
 
 		// baguetteBox

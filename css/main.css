@@ -19324,24 +19324,119 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------END page-profile----------------------*/
 /*--------------------big-slider----------------------*/
+.big-slider {
+  margin: 30px 0;
+}
+
 .carousel-big-slider__left {
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 8px;
   margin-right: 8px;
   width: calc(50% - 16px);
+  padding-top: 30px;
+}
+@media screen and (max-width: 767.98px) {
+  .carousel-big-slider__left {
+    width: calc(100% - 16px);
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .carousel-big-slider__left {
+    padding-left: 15.625%;
+    padding-right: 15.625%;
+  }
+}
+@media only screen and (min-width: 767.98px) {
+  .carousel-big-slider__left {
+    padding-bottom: 40px;
+    padding-left: 60px;
+  }
 }
 
 .carousel-big-slider__img {
-  padding-bottom: 40.216495%;
+  padding-bottom: 81.9587628866%;
+  position: relative;
+}
+@media only screen and (max-width: 767.98px) {
+  .carousel-big-slider__img {
+    padding-bottom: 82.1428571429%;
+  }
+}
+.carousel-big-slider__img img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.big-slider__carousel {
+  background-color: #F1F1F1;
+}
+@media only screen and (max-width: 959.98px) {
+  .big-slider__carousel {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
 }
 
 .carousel-big-slider__content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 8px;
   margin-right: 8px;
   width: calc(50% - 16px);
+  padding-top: 20px;
+}
+@media screen and (max-width: 767.98px) {
+  .carousel-big-slider__content {
+    width: calc(100% - 16px);
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .carousel-big-slider__content {
+    padding-bottom: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.carousel-big-slider__title {
+  max-width: 22rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 2rem;
+}
+@media only screen and (max-width: 576px) {
+  .carousel-big-slider__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.carousel-big-slider__text {
+  max-width: 22rem;
+  margin-top: 0;
+  font-size: 1rem;
+  line-height: 120%;
+}
+@media only screen and (max-width: 576px) {
+  .carousel-big-slider__text {
+    font-size: 12px;
+  }
 }
 
 /*--------------------END big-slider----------------------*/

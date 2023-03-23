@@ -1,11 +1,14 @@
 .big-slider
 	.wrapper
-		+swiper('big-slider__carousel carousel-big-slider', true, false, true)
-			.swiper-slide.carousel-big-slider__slide.wrapper-flex
-				.carousel-big-slider__left
-					.carousel-big-slider__img
-						img(src="img/page-template/big-slider-img.png" alt="alt")
-				
-				.carousel-big-slider__content
-					.carousel-big-slider__title Lorem ipsum dolor sit amet, consectetuer
-					p.carousel-big-slider__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+		+swiper('big-slider__carousel carousel-big-slider', true, false, false)
+			- for (var i=0; i < 3; i++)
+				.swiper-slide.carousel-big-slider__slide
+					.wrapper-flex
+						.carousel-big-slider__left
+							.carousel-big-slider__img
+								img(src="img/page-template/big-slider-img.png" alt="alt")
+						
+						.carousel-big-slider__content
+							.carousel-big-slider__title Lorem ipsum dolor sit amet, consectetuer
+							p.carousel-big-slider__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+							a(href="#").btn.btn-sm Кнопка 
