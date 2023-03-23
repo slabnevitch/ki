@@ -1,0 +1,17 @@
+/*--------------------marked-banner----------------------*/
+.marked-banner{
+	padding-bottom: prc(388,944);
+
+	@include max-screen($md){
+		margin-left: -24px;
+		margin-right: -24px;
+	}
+
+	@include max-screen($xs){
+		padding-bottom: prc(430, 320);
+	}
+	.price-tooltip{
+		z-index: 2;
+	}
+}
+/*--------------------END marked-banner----------------------*/ 

@@ -1,0 +1,14 @@
+section.page-main-sect
+	.wrapper
+		h2.sect-title Хиты продаж
+
+		.marked-banner._fit
+			+priceTooltip('270 999 ₽', true, 20.12, 17.5)
+			+priceTooltip('6 509 ₽', false, 29.32, 76.03)
+			+priceTooltip('999 ₽', false, 73.09, 30.92)
+			+priceTooltip('14 729 ₽', false, 84.74, 62.88)
+
+			picture
+				source(srcset='img/page-template/marked-banner/frame2-mob.png' media='(max-width: 576px)')
+				img._fit-img(src="img/page-template/marked-banner/frame1.png" alt="alt")
+

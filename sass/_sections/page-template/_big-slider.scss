@@ -1,0 +1,14 @@
+/*--------------------big-slider----------------------*/
+.carousel-big-slider__left{
+	@include col();
+	@include size(6);
+	
+}
+.carousel-big-slider__img{
+	padding-bottom: 40.216495%;
+}
+.carousel-big-slider__content{
+	@include col();
+	@include size(6);
+}
+/*--------------------END big-slider----------------------*/ 

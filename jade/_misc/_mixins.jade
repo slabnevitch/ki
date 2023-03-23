@@ -369,3 +369,17 @@ mixin priceTooltip(price = '14 729 ₽', crossedout = false, left = 0, top = 0)
 		.price-tooltip__inner
 			.price-tooltip__value= price
 			+icon('chev-right')
+
+		.product-tooltip(style="left:-310px; top:-42px;")
+			.product-tooltip__inner
+				a(href="#").product-card__border
+					span.product-card__img
+						img(src="img/page-template/bottle.png" alt="alt")
+				
+				.product-tooltip__content
+					a(href="#").product-card__price-block
+						.product-price 14 729 ₽
+						.product-price-sale 18 411₽
+					a(href="#").product-card__name Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861
+
+					a(href="#").btn.btn-sm.product-card__buy Купить

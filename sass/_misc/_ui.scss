@@ -202,7 +202,7 @@ h1, h2, h3, h4, h5, h6{
 }
 // красная метка на картинках
 .price-tooltip{
- display: inline-block;
+ display: block;
      position: absolute;
   padding: 7px 6.5px 12px 6.5px;
   // background-color: $red;
@@ -210,12 +210,21 @@ h1, h2, h3, h4, h5, h6{
   font-weight: 700;
   font-size: rem(12);
   line-height: rem(15);
+  white-space: nowrap;
 
   background-image: url($img + 'page-template/hits/bg_price-tooltip.svg');
   background-position: -5px bottom;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
+
+  &:hover{
+    .product-tooltip{
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  
 
   @include max-screen($sm){
     padding-top: 5px;
@@ -260,6 +269,59 @@ h1, h2, h3, h4, h5, h6{
 
 }
 // END красная метка на картинках
+
+// карточка при ховере метки на баннере
+.product-tooltip{
+  position: absolute;
+  visibility: hidden;
+  padding: 23px;
+  opacity: 0;
+  transition: all .2s;
+  // width: 100%;
+  white-space: normal;
+
+  &__inner{
+    padding: 9px 15px 9px 9px;
+    display: flex;
+    align-items: flex-start;
+    width: 270px;
+    border-radius: 4px;
+    background: #FFFFFF;
+
+  }
+
+
+  .product-card__border{
+    width: 88px;
+    height: 88px;
+    padding: 0;
+    margin-right: 11px;
+  }
+  .product-card__img{
+    width: 88px;
+    height: 88px;
+  }
+  .product-card__price-block{
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5px;
+  }
+  .product-price{
+    font-size: rem(16);
+    line-height: normal;
+  }
+  .product-price-sale{
+    line-height: normal;
+    flex-shrink: 0;
+    margin-left: 16px;
+  }
+  .product-card__name{
+    font-weight: 400;
+    height: 45px;
+  }
+}
+//END карточка при ховере метки на баннере
 @import "../_customizations/viewerjs-custom.scss";
 @import "../_customizations/_fstdropdown.scss";
 .btn{

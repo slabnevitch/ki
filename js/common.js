@@ -532,7 +532,7 @@
 				},
 				 // when window width is >= 640px
 				767.98: {
-					slidesPerView: 1.325,
+					slidesPerView: 1,
 					spaceBetween: 16
 				}
 			},
