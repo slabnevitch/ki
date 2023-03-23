@@ -91,7 +91,7 @@
 
 		@include min-screen($md){
 			height: prc(100, 220);
-			width: prc(118, 224);
+			width: prc(126, 224);
 		}
 
 		img{
@@ -101,6 +101,9 @@
 
 			@include min-screen($md){
 				height: 100%;
+				max-width: none;
+				left: auto;
+				right: 0;
 			}
 		}
 	}

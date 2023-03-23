@@ -1,0 +1,39 @@
+.day-products
+	.wrapper-smart
+		.wrapper-flex
+			.day-products__view
+				.slider-navs
+					.slider-nav.slider-nav--prev
+						+icon('chev-down')
+					.slider-nav.slider-nav--next
+						+icon('chev-down')
+				
+				+swiper('day-view-slider', true, false, false)
+					- for (var i=0; i < 3; i++)
+						.swiper-slide.day-view-slider__slide._fit
+							img._fit-img(src="img/page-template/slider/day-view.jpg" alt="alt")
+			
+			.day-products__cards
+				.slider-navs
+					.slider-nav.slider-nav--prev
+						+icon('chev-down')
+					.slider-nav.slider-nav--next
+						+icon('chev-down')
+				
+				+swiper('day-cards-slider', true, false, false)
+					- for (var i=0; i < 2; i++)
+						.swiper-slide.day-product
+							.day-product__title Товар дня
+
+							//- .day-product__center
+							a(href="#").day-product__img
+								img(src="img/page-template/slider/day-product.png" alt="alt")
+							
+							.day-product__bottom
+								a(href="#").day-product__name Аккумуляторная дрель-шуруповерт Elitech ДА ...
+								
+								.product-card__price
+									a(href="#").product-price 8 390 ₽
+									.product-price-sale 18 411₽
+
+								a(href="#").btn.btn-sm.btn-red Купить

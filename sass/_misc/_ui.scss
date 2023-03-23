@@ -200,6 +200,66 @@ h1, h2, h3, h4, h5, h6{
     line-height: 12px;
   } 
 }
+// красная метка на картинках
+.price-tooltip{
+ display: inline-block;
+     position: absolute;
+  padding: 7px 6.5px 12px 6.5px;
+  // background-color: $red;
+  color: #fff;
+  font-weight: 700;
+  font-size: rem(12);
+  line-height: rem(15);
+
+  background-image: url($img + 'page-template/hits/bg_price-tooltip.svg');
+  background-position: -5px bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+
+  @include max-screen($sm){
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-size: 6px;
+    line-height: 7px;
+  }
+
+  &:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: calc(100% - 12px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $red;
+    // z-index: -1;  
+  }
+
+  &__inner{
+    position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding-bottom: 7px;
+  }
+  &--crossedout{
+
+    text-decoration-line: line-through;
+  }
+
+  .icon{
+    margin-left: 10px;
+    flex-shrink: 0;
+    color: #fff;
+    font-size: 10px;
+
+    @include max-screen($sm){
+      font-size: 7px;
+    }
+  }
+
+}
+// END красная метка на картинках
 @import "../_customizations/viewerjs-custom.scss";
 @import "../_customizations/_fstdropdown.scss";
 .btn{

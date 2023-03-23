@@ -363,3 +363,9 @@ mixin backLink(value = 'Назад', rightBlock = false)
 				h1.back-title= value
 					a(href="#").back-link
 						+icon('arrow-left')
+
+mixin priceTooltip(price = '14 729 ₽', crossedout = false, left = 0, top = 0)
+	div(class=crossedout ? "price-tooltip price-tooltip--crossedout" : "price-tooltip" style="left:" + left + "%; top:"+ top + "%;")
+		.price-tooltip__inner
+			.price-tooltip__value= price
+			+icon('chev-right')

@@ -1,0 +1,29 @@
+/*--------------------templates-hits----------------------*/
+.template-hits{
+	position: relative;
+	margin-bottom: 15px;
+	@include max-screen($md){
+		margin-left: -24px;
+		margin-right: -24px;
+	}
+	img{
+		width: 100%;
+	}
+
+	.price-tooltip{
+
+		&:last-of-type{
+			@include max-screen($md){
+				display: none;	
+			}
+			
+		}
+
+	}
+}
+.products-slider{
+	@include max-screen($md){
+		width: calc(100% + 24px);
+	}
+}
+/*--------------------END templates-hits----------------------*/ 
