@@ -33,7 +33,7 @@ block content
 			.wrapper
 				h2.sect-title Категории
 
-			.page-main-sect.categories-tiles.categories-tiles--template
+			.categories-tiles.categories-tiles--template
 				.wrapper
 					+swiper('categories-tiles__slider', true, false, true)
 						- var content = [{title: 'Электро-инструменты', tags: ['Гайковерты', 'Шуруповерты', 'Перфораторы', 'Дрели', 'УШМ (болгарки)'], sm: 'Запчасти'}, {title: 'Ручной инструмент', tags: ['Наборы инструментов', 'Ударный и рычажный', 'Отвёртки', 'Ключи'], sm: 'Автотовары'},{title: 'Строительство и ремонт', tags: ['Пневмоинструмент', 'Малярное оборудование', 'Спецодежда'], sm: 'Стабилизаторы напряжения'},{title: 'Дом и сад', tags: ['Триммеры', 'Лестницы', 'Газонокосилки', 'Грили', 'Генераторы '], sm: 'Электро-станции'}];
@@ -60,6 +60,37 @@ block content
 										.categories-tile__img
 											img(src="img/page-brands/tiles/"+(i+1)+".svg" alt="alt")
 
+		section.page-main-sect
+			.wrapper
+				h2.sect-title Категории
+
+			.wrapper-smart
+				.wrapper-flex
+					- var tiles = ['Шуруповерты', 'Отвертки', 'Бетоно<br>мешалки', 'Газоно<br>косилки'];	
+					each tile, i in tiles
+						a(href="#").hits-tile
+							if i < 11
+								if tile == 'Бетоно<br>мешалки' || tile == 'Газонокосилки' ||  tile == 'Бензопилы'
+									.hits-tile__img
+										picture
+											source(srcset="img/hits-tiles/"+(i+1)+"-xs.png" media="(max-width: 480px)")
+											img._fit-img(src="img/hits-tiles/"+(i+1)+".png" alt="alt")
+								else
+									.hits-tile__img
+										img(src="img/hits-tiles/"+(i+1)+".png" alt="alt")
+							.hits-tile__name!= tile
+
+			- var tiles = ['Станки', 'Автотовары', 'Расходники<br>и оснастка', 'Электростанции', 'Запчасти', 'Стабилизаторы<br>напряжения', 'Измерительный<br>инструмент', 'Все категории'];
+			.brands-tiles
+				.wrapper-smart
+					.wrapper-flex
+						each item, i in tiles
+							.categories-tiles__column
+								a(href="#").categories-tile.categories-tile--sm.brands-tile
+									.categories-tile__title!= item
+									if i < 7
+										.categories-tile__img
+											img(src="img/page-brands/tiles/"+(i+1)+".svg" alt="alt")
 		.wrapper
 			.simple-banner._fit
 				img._fit-img(src="img/page-template/simple-banner.jpg" alt="alt")

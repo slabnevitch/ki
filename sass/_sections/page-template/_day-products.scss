@@ -16,14 +16,21 @@
 		margin-bottom: 12px;
 	}
 }
-.slider-navs {}
-.slider-nav {}
-.slider-nav--prev {}
-.icon {}
-.icon-chev-down {}
-.slider-nav--next {}
-.swiper-container {}
-.swiper {}
+.day-products__view,
+.day-products__cards {
+	.slider-nav--prev{
+		@include min-screen($max){
+			left: 5px;			
+		}
+	}
+	.slider-nav--next {
+		@include min-screen($max){
+			right: 5px;
+			
+		}
+	}
+
+}
 .day-view-slider,
 .day-cards-slider{
 	.swiper-pagination{

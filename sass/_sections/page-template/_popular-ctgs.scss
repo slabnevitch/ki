@@ -1,0 +1,75 @@
+/*--------------------popular-ctgs----------------------*/
+.popular-ctgs{
+	position: relative;
+	margin-bottom: 20px;
+	.hits-tile{
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		padding-bottom: 100.17%;
+		margin-bottom: 0;
+
+		@include min-screen($xss){
+			padding-bottom: 54%;
+		}
+	}
+	.hits-tile__img{
+
+	}
+	.hits-tile__img img{
+
+		@include min-screen($md){
+			width: auto;
+			// left: auto;
+			// transform: none;
+			right: 0;
+			// top: 0;
+			// bottom: 0;
+			left: auto;	
+			transform: translate(0, -50%);	
+		}
+		@include min-screen(1000px){
+			max-width: none;
+			width: 100%;
+		}
+	}
+	.hits-tile__name{
+		@include max-screen($md){
+			font-size: 14px;
+		}
+		@include max-screen($xs){
+			font-size: 10px;
+			line-height: 12px;
+			font-weight: 700;
+			opacity: 0.6;
+		}
+
+		
+	}
+
+}
+.popular-ctgs__slider{
+	@include max-screen($md){
+		width: calc(100% + 24px);
+	}
+
+	.swiper-pagination{
+		margin-top: 5px;
+		position: static;
+	}
+	&:after{
+		content: "";
+	    display: block;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    height: 100%;
+	    width: 35px;
+	    background-image: url(../img/header-catalog/mob-catalog/mob-catalog-cover.svg);
+	    background-position: 0 top;
+	    background-repeat: repeat-y;
+	    background-size: contain;
+	    z-index: 1;
+	}
+}
+/*--------------------END popular-ctgs----------------------*/ 

@@ -19854,6 +19854,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media only screen and (min-width: 1392px) {
+  .day-products__view .slider-nav--prev,
+  .day-products__cards .slider-nav--prev {
+    left: 5px;
+  }
+}
+@media only screen and (min-width: 1392px) {
+  .day-products__view .slider-nav--next,
+  .day-products__cards .slider-nav--next {
+    right: 5px;
+  }
+}
+
 .day-view-slider .swiper-pagination,
 .day-cards-slider .swiper-pagination {
   margin-top: 5px;
@@ -20087,6 +20100,77 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------END marked-banner----------------------*/
+/*--------------------popular-ctgs----------------------*/
+.popular-ctgs {
+  position: relative;
+  margin-bottom: 20px;
+}
+.popular-ctgs .hits-tile {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-bottom: 100.17%;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 479.98px) {
+  .popular-ctgs .hits-tile {
+    padding-bottom: 54%;
+  }
+}
+@media only screen and (min-width: 959.98px) {
+  .popular-ctgs .hits-tile__img img {
+    width: auto;
+    right: 0;
+    left: auto;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .popular-ctgs .hits-tile__img img {
+    max-width: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 959.98px) {
+  .popular-ctgs .hits-tile__name {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .popular-ctgs .hits-tile__name {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 700;
+    opacity: 0.6;
+  }
+}
+
+@media only screen and (max-width: 959.98px) {
+  .popular-ctgs__slider {
+    width: calc(100% + 24px);
+  }
+}
+.popular-ctgs__slider .swiper-pagination {
+  margin-top: 5px;
+  position: static;
+}
+.popular-ctgs__slider:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 35px;
+  background-image: url(../img/header-catalog/mob-catalog/mob-catalog-cover.svg);
+  background-position: 0 top;
+  background-repeat: repeat-y;
+  background-size: contain;
+  z-index: 1;
+}
+
+/*--------------------END popular-ctgs----------------------*/
 /*--------------------templates-hits----------------------*/
 .template-hits {
   position: relative;

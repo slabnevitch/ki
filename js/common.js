@@ -853,6 +853,49 @@
 			});
 		}
 		//END big slider
+
+		// popular-ctgs__slider
+		if(document.querySelector('.popular-ctgs__slider') !== null){
+		  var popularCtgsSlider = new Swiper('.popular-ctgs__slider', {
+			observer: true,
+			// slidesPerView: 1,
+		  	loop: true,
+		  	watchSlidesProgress: true,
+		  	breakpoints: {
+				// when window width is >= 320px
+				320: {
+					slidesPerView: 3.25,
+					spaceBetween: 10
+				},
+				480: {
+					slidesPerView: 3.15,
+					spaceBetween: 10
+				},
+				767.7: {
+					slidesPerView: 3.2,
+					spaceBetween: 16
+				},
+				 // when window width is >= 640px
+				959.98: {
+					slidesPerView: 4,
+					spaceBetween: 16
+				}
+			},
+
+			  // If we need pagination
+			  pagination: {
+			  	el: '.swiper-pagination',
+			  	type: 'bullets',
+			  	clickable: true
+			  },
+			  // Navigation arrows
+			  navigation: {
+			  	prevEl: '.popular-ctgs .slider-nav--prev',
+	     		nextEl: '.popular-ctgs .slider-nav--next'
+			  }
+			});
+		}
+		//END popular-ctgs__slider
 		//---------------END Swiper
 
 		// baguetteBox

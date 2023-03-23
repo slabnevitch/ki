@@ -3,18 +3,24 @@ section.page-main-sect
 		h2.sect-title Категории
 	.wrapper
 		.popular-ctgs
-			- var tiles = ['Шуруповерты', 'Отвертки', 'Бетоно<br>мешалки', 'Газоно<br>косилки', 'Перфораторы', 'Генераторы', 'Бензопилы', 'Шлифмашины', 'Культиваторы', 'Пассатижи', 'Мойки', 'Все<br>категории'];	
+			- var tiles = ['Шуруповерты', 'Отвертки', 'Бетоно<br>мешалки', 'Газоно<br>косилки', 'Перфораторы', 'Генераторы', 'Бензопилы', 'Шлифмашины', 'Культиваторы', 'Пассатижи', 'Мойки'];	
+			.slider-navs
+				.slider-nav.slider-nav--prev
+					+icon('chev-down')
+				.slider-nav.slider-nav--next
+					+icon('chev-down')
 			
-			+swiper('categories-tiles__slider', true, false, true)
+			+swiper('popular-ctgs__slider', true, false, false)
 				each tile, i in tiles
-					a(href="#").hits-tile.swiper-slide
-						if i < 11
-							if tile == 'Бетоно<br>мешалки' || tile == 'Газонокосилки' ||  tile == 'Бензопилы'
-								.hits-tile__img
-									picture
-										source(srcset="img/hits-tiles/"+(i+1)+"-xs.png" media="(max-width: 480px)")
-										img._fit-img(src="img/hits-tiles/"+(i+1)+".png" alt="alt")
-							else
-								.hits-tile__img
-									img(src="img/hits-tiles/"+(i+1)+".png" alt="alt")
-						.hits-tile__name!= tile
+					.swiper-slide
+						a(href="#").hits-tile
+							if i < 11
+								if tile == 'Бетоно<br>мешалки' || tile == 'Газонокосилки' ||  tile == 'Бензопилы'
+									.hits-tile__img
+										picture
+											source(srcset="img/hits-tiles/"+(i+1)+"-xs.png" media="(max-width: 480px)")
+											img._fit-img(src="img/hits-tiles/"+(i+1)+".png" alt="alt")
+								else
+									.hits-tile__img
+										img(src="img/hits-tiles/"+(i+1)+".png" alt="alt")
+							.hits-tile__name!= tile
