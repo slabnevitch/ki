@@ -484,6 +484,74 @@
 			});
 		}
 
+		// day-products sliders
+		if(document.querySelector('.day-view-slider') !== null){
+		  var dayViewSlider = new Swiper('.day-view-slider', {
+			observer: true,
+			slidesPerView: 1,
+			watchSlidesProgress: true,
+		  	loop: true,
+		  	spaceBetween: 16,
+		  	breakpoints: {
+				// when window width is >= 320px
+				
+				 // when window width is >= 640px
+				// 767.98: {
+				// 	slidesPerView: 1.325,
+				// 	spaceBetween: 16
+				// }
+			},
+
+			  // If we need pagination
+			  pagination: {
+			  	el: '.swiper-pagination',
+			  	type: 'bullets',
+			  	clickable: true
+			  },
+
+			  // Navigation arrows
+			  navigation: {
+			  	prevEl: '.day-products__view .slider-nav--prev',
+	     		nextEl: '.day-products__view .slider-nav--next'
+			  }
+			});
+		}
+
+		if(document.querySelector('.day-cards-slider') !== null){
+		  var dayCardsSlider = new Swiper('.day-cards-slider', {
+			observer: true,
+			slidesPerView: 1,
+		  	loop: true,
+		  	spaceBetween: 13,
+		  	watchSlidesProgress: true,
+		  	breakpoints: {
+				// when window width is >= 320px
+				320: {
+					slidesPerView: 1.15,
+					spaceBetween: 13
+				},
+				 // when window width is >= 640px
+				767.98: {
+					slidesPerView: 1,
+					spaceBetween: 16
+				}
+			},
+
+			  // If we need pagination
+			  pagination: {
+			  	el: '.swiper-pagination',
+			  	type: 'bullets',
+			  	clickable: true
+			  },
+
+			  // Navigation arrows
+			  navigation: {
+			  	prevEl: '.day-products__cards .slider-nav--prev',
+	     		nextEl: '.day-products__cards .slider-nav--next'
+			  }
+			});
+		}
+		//END day-products sliders
 
 		if(document.querySelector('.popular__slider') !== null){
 			const popularSlider = new Swiper('.popular__slider', {			
@@ -717,6 +785,117 @@
 			});
 		}
 		//---------------END certificates-slider
+
+		// products sliders
+		if(document.querySelector('.products-slider') !== null){
+		  var productsSlider = new Swiper('.products-slider', {
+			observer: true,
+			slidesPerView: 4,
+		  	loop: true,
+		  	// spaceBetween: 16,
+		  	watchSlidesProgress: true,
+		  	breakpoints: {
+				// when window width is >= 320px
+				320: {
+					slidesPerView: 2.2,
+					spaceBetween: 11
+				},
+				480: {
+					slidesPerView: 3.2,
+					spaceBetween: 11
+				},
+				767.7: {
+					slidesPerView: 3.2,
+					spaceBetween: 16
+				},
+				 // when window width is >= 640px
+				959.98: {
+					slidesPerView: 4,
+					spaceBetween: 16
+				}
+			},
+
+			  // If we need pagination
+			  pagination: {
+			  	el: '.swiper-pagination',
+			  	type: 'bullets',
+			  	clickable: true
+			  },
+
+			  // Navigation arrows
+			  navigation: {
+			  	prevEl: '.product-cards-slider .slider-nav--prev',
+	     		nextEl: '.product-cards-slider .slider-nav--next'
+			  }
+			});
+		}
+		//END products sliders
+
+		// big slider
+		if(document.querySelector('.big-slider__carousel') !== null){
+		  var bigSlider = new Swiper('.big-slider__carousel', {
+			observer: true,
+			slidesPerView: 1,
+		  	loop: true,
+		  	// spaceBetween: 16
+
+			  // If we need pagination
+			  pagination: {
+			  	el: '.swiper-pagination',
+			  	type: 'bullets',
+			  	clickable: true
+			  },
+			  // Navigation arrows
+			  navigation: {
+			  	prevEl: '.product-cards-slider .slider-nav--prev',
+	     		nextEl: '.product-cards-slider .slider-nav--next'
+			  }
+			});
+		}
+		//END big slider
+
+		// popular-ctgs__slider
+		if(document.querySelector('.popular-ctgs__slider') !== null){
+		  var popularCtgsSlider = new Swiper('.popular-ctgs__slider', {
+			observer: true,
+			// slidesPerView: 1,
+		  	loop: true,
+		  	watchSlidesProgress: true,
+		  	breakpoints: {
+				// when window width is >= 320px
+				320: {
+					slidesPerView: 3.25,
+					spaceBetween: 10
+				},
+				480: {
+					slidesPerView: 3.15,
+					spaceBetween: 10
+				},
+				767.7: {
+					slidesPerView: 3.2,
+					spaceBetween: 16
+				},
+				 // when window width is >= 640px
+				959.98: {
+					slidesPerView: 4,
+					spaceBetween: 16
+				}
+			},
+
+			  // If we need pagination
+			  pagination: {
+			  	el: '.swiper-pagination',
+			  	type: 'bullets',
+			  	clickable: true
+			  },
+			  // Navigation arrows
+			  navigation: {
+			  	prevEl: '.popular-ctgs .slider-nav--prev',
+	     		nextEl: '.popular-ctgs .slider-nav--next'
+			  }
+			});
+		}
+		//END popular-ctgs__slider
 		//---------------END Swiper
 
 		// baguetteBox
