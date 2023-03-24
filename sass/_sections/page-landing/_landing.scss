@@ -1,0 +1,148 @@
+/*--------------------landing----------------------*/
+.page-landing{
+
+}
+.ld-top{
+	margin-top: -68px;
+	padding-bottom: prc(456, 1200);
+	background-color: $yellow;
+
+	@include max-screen($md){
+		margin-top: -55px;
+	}
+	@include max-screen($xs){
+		padding-bottom: 146.3%;
+	}
+}
+.ld-top__wrapper{
+	@include absolute-center-old;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.ld-top__content{
+	padding: 20px 0;
+}
+.ld-top__title{
+	margin-bottom: 28px;
+	font-size: rem(40);
+	line-height: rem(32);
+	font-family: $navbl;
+	text-transform: uppercase;
+
+	@include max-screen($md){
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+}
+.ld-text-block{
+	padding-top: 80px;
+	padding-bottom: 60px;
+	text-align: center;
+
+	@include max-screen($md){
+		padding-top: 60px;
+	}
+}
+.ld-title{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: rem(627);
+	font-weight: 700;
+	font-size: rem(22);
+	line-height: rem(28);
+
+	@include max-screen($md){
+		font-size: 20px;
+	}
+
+	&:not(:last-child){
+		margin-bottom: 16px;
+	}
+}
+.ld-text{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: rem(624);
+	margin-top: 0;
+	font-size: rem(20);
+	line-height: 140%;
+	opacity: 0.6;
+
+	@include max-screen($md){
+		font-size: 18px;
+	}
+	@include max-screen($xs){
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	&:not(:last-child){
+		margin-bottom: 16px;
+	}
+	&:first-child:last-child{
+		margin-bottom: 0;
+	}
+}
+.ld-video{
+	.video-link{
+		margin-bottom: 0;
+	}
+}
+.ld-marked-banner{
+	padding-bottom: prc(388, 944);
+	margin-bottom: 20px;
+
+	@include max-screen($md){
+		margin-left: -24px;
+		margin-right: -24px;
+	}
+
+	@include max-screen($xs){
+		padding-bottom: 157.75%;
+	}
+
+	.price-tooltip{
+		z-index: 2;
+	}
+}
+.ld-contents{
+	margin-bottom: 40px;
+	max-width: rem(623);
+	margin-left: auto;
+	margin-right: auto;
+
+	@include max-screen($xs){
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+.ld-contents__row{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	font-size: rem(16);
+	line-height: 120%;
+	opacity: 0.6;
+
+	&:not(:last-child){
+		margin-bottom: 20px;
+	}
+
+	@include max-screen($xs){
+		font-size: 14px;
+	}
+}
+.ld-contents__key{
+	// flex: 1 1 auto;
+	width: prc(480, 623);
+
+	@include max-screen($xs){
+		width: prc(192, 240);
+	}
+}
+.ld-contents__val{
+	flex-shrink: 0;
+	padding-left: 16px;
+}
+/*--------------------END landing----------------------*/ 

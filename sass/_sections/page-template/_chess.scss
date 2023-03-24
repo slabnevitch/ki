@@ -6,11 +6,14 @@
 	&:nth-child(even){
 		flex-direction: row-reverse;
 		.item-chess__content{
-
 			@include min-screen($xs){
 				text-align: right;
 				align-items: flex-end;
 				
+			}
+			@include min-screen($md){
+				padding-left: 0;
+				padding-right: 80px;
 			}
 			.btn{
 				// margin-left: auto;
@@ -50,10 +53,14 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 15px 24px;
+	padding: 15px 0;
 
 	@include max-screen($xs){
 		padding-bottom: 20px;
+	}
+	@include min-screen($md){
+		padding-left: 80px;
+		
 	}
 }
 .item-chess__text{
