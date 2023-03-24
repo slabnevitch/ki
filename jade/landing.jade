@@ -13,7 +13,76 @@ block content
 				.ld-top__content
 					h1.ld-top__title твой инструмент здесь
 					a(href="#").btn.btn-sm.btn-red Кнопка
+
+		section.ld-text-block
+			.wrapper
+				p.ld-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus Donec quam felis, ultricies nec
+		.ld-video		
+			button(type="button" data-micromodal-iframe='http://www.youtube.com/watch?v=8LPVOjjSgDE' data-micromodal-open='video-modal').video-link._fit
+					img._fit-img(src="img/page-menu/video-cover.jpg" alt="alt")
+					span.play-icon
+						img(src="img/play.svg" alt="alt")
+		
+		section.ld-text-block
+			.wrapper
+				h2.ld-title Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+				p.ld-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus Donec quam felis, ultricies nec
 		// include _sections/page-template/template-main-slider
+
+		.wrapper
+			.ld-marked-banner._fit
+				+priceTooltip('14 729 ₽', true, 20.12, 17.5)
+				+priceTooltip('14 729 ₽', true, 29.32, 76.03)
+				+priceTooltip('14 729 ₽', true, 73.09, 30.92)
+				+priceTooltip('14 729 ₽', true, 84.74, 62.88)
+				+priceTooltip('14 729 ₽', true, 84.74, 62.88)
+				+priceTooltip('14 729 ₽', true, 84.74, 62.88)
+				picture
+					source(srcset='img/landing/ld-marked-banner-mob.jpg' media="(max-width: 576px")
+					img._fit-img(src="img/landing/ld-marked-banner.jpg" alt="alt")
+
+		.chess
+			- var chess = ['Отличный напор воды,  быстро смывает сильную грязь. Огромный плюс - это регулировка давления, можно удалять  разные степени загрязнения.', 'Иногда случаются поломки и отключение электричества. Поэтому стоит обзавестись резервным источником питания.', 'Все, что нужно для работы в гараже. Качество не подводит. Удобно работать, инструмент правильно сделан.'];
+			.wrapper-smart
+				each item, i in chess
+					.wrapper-flex.chess__item.item-chess
+						.item-chess__picture
+							.item-chess__img
+								img(src="img/landing/chess/" + (i+1) + ".png" alt="alt")
+						
+						.item-chess__content
+							p.item-chess__text= item
+							a(href="#").btn.btn-sm Купить
+
+
+		section.ld-text-block
+			.wrapper
+				h2.ld-title Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+		.ld-video		
+			button(type="button" data-micromodal-iframe='http://www.youtube.com/watch?v=8LPVOjjSgDE' data-micromodal-open='video-modal').video-link._fit
+					img._fit-img(src="img/page-menu/video-cover.jpg" alt="alt")
+					span.play-icon
+						img(src="img/play.svg" alt="alt")
+
+		section.ld-text-block
+			.wrapper
+				p.ld-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus Donec quam felis, ultricies nec
+
+		.ld-contents
+			- var keys = ['Lorem ipsum dolor sit amet, consectetuer adipiscing elit.','Aenean commodo ligula eget dolor.','Aenean massa.', 'Cum sociis natoque penatibus et magnis dis parturient montes,,nascetur ridiculus mus.', 'Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.', 'Nulla consequat massa quis enim. Donec pede justo, fringilla vel ,aliquet nec, vulputate eget, arcu.','In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.'];
+
+			- var vals = ['134', '22', '11 050', '12', '47', '13', '2'];
+			.wrapper
+				.ld-contents__row
+					.ld-contents__key
+					.ld-contents__val
+
+	#video-modal.modal.micromodal-slide.modal-video(aria-hidden='true')
+		.modal__overlay(tabindex='-1' data-micromodal-close='')
+			.modal__container(role='dialog' aria-modal='true' aria-labelledby='modal-1-title')
+				button.modal__close(aria-label='Close modal' data-micromodal-close='')
+				main.modal__content
 
 		
 block page-scripts
@@ -86,7 +155,7 @@ block page-scripts
 	//- script(src="js/libs/tabs/tabs-pure.js")
 		
 	//- micromodal--------------------------
-	//- script(src="js/libs/micromodal/micromodal.js")	
+	script(src="js/libs/micromodal/micromodal.js")
 		
 	//- swiper--------------------------
 	//- script(src="js/libs/swiper/swiper-bundle.min.js")
