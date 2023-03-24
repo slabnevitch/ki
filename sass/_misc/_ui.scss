@@ -216,15 +216,20 @@ h1, h2, h3, h4, h5, h6{
   background-position: -5px bottom;
   background-repeat: no-repeat;
   background-size: contain;
-  cursor: pointer;
 
-  &:hover{
-    .product-tooltip{
-      visibility: visible;
-      opacity: 1;
-    }
+  @media (any-hover: hover) { //только для устройств с ховером
+      cursor: pointer;
+      &:hover{
+        .product-tooltip{
+          @include min-screen($md){
+            visibility: visible;
+            opacity: 1;
+            
+          }
+        }
+
+      }
   }
-  
 
   @include max-screen($sm){
     padding-top: 5px;
