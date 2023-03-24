@@ -1,4 +1,4 @@
-header(class=pageIndex=='013'||pageIndex == '014'||pageIndex == '015'?"header search-results-opened covered" : "header")
+header(class=pageIndex=='013'|| pageIndex == '014'|| pageIndex == '015'?"header search-results-opened covered" : pageIndex == 'landing'? "header header-ld": "header")
 	.header__top
 		.wrapper.p-12
 			.header__top-inner
@@ -27,8 +27,6 @@ header(class=pageIndex=='013'||pageIndex == '014'||pageIndex == '015'?"header se
 
 				
 				.header__menu.menu-header
-					button.toggle-mnu.on
-						span
 					nav.menu-header__body
 						ul.menu-header__list
 							li.menu-header__item
@@ -55,8 +53,12 @@ header(class=pageIndex=='013'||pageIndex == '014'||pageIndex == '015'?"header se
 									each li in list2
 										li.single-dropdown__item
 											a.single-dropdown__link(href='#')= li
+				if pageIndex == 'landing'
+					button.ld-burger#ld-nav-toggler
+						+icon('ld-burger')
 		include ../_blocks/catalog
 
+	
 	.header__bottom
 		.wrapper.p-12
 			.header__bottom-wrapper

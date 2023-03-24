@@ -1,0 +1,36 @@
+/*--------------------ld-top----------------------*/
+.ld-top{
+	margin-top: -68px;
+	padding-bottom: prc(456, 1200);
+	background-color: $yellow;
+
+	@include max-screen($md){
+		margin-top: -55px;
+	}
+	@include max-screen($xs){
+		padding-bottom: 146.3%;
+	}
+}
+.ld-top__wrapper{
+	@include absolute-center-old;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.ld-top__content{
+	padding: 20px 0;
+}
+.ld-top__title{
+	margin-bottom: 28px;
+	font-size: rem(40);
+	line-height: rem(32);
+	font-family: $navbl;
+	text-transform: uppercase;
+
+	@include max-screen($md){
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+}
+/*--------------------END ld-top----------------------*/ 

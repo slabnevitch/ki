@@ -6,7 +6,18 @@
 	top: 0;
 	left: 0;	
 	z-index: 11;
-	transition: all 0.3s;	
+	transition: all 0.3s;
+
+	&-ld{
+		.header__top{
+			background-color: transparent;
+		}
+		.header__contacts{
+			@include max-screen($md){
+				display: none;
+			}
+		}
+	}	
 
 	._scroll &{
 		top: -68px;
@@ -284,7 +295,8 @@
 		display: none;		
 	}
 }
-.menu-header__body {}
+.menu-header__body {
+}
 .menu-header__list {
 	display: flex;
 	align-items: center;
@@ -357,6 +369,10 @@
 	padding-bottom: 16px;
 	transition: all 0.3s;
 	background-color: #fff;
+
+	.header-ld &{
+		display: none;
+	}
 	._scroll &{
 		position: fixed;
 		top: 0;

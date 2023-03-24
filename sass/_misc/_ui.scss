@@ -1219,6 +1219,28 @@ h1, h2, h3, h4, h5, h6{
   }
 }
 
+.ld-burger{
+  @include but-null;
+  position: absolute;
+  top: 50%;
+  margin-top: -12px; 
+  right: 0;
+  width: 24px;
+  height: 24px;
+
+  @media (any-hover: hover) { //только для устройств с ховером
+    cursor: pointer;
+  }
+  @include min-screen($md){
+    display: none;
+  }
+
+  .icon{
+    font-size: 12px;
+    color: $accent;
+  }
+}
+
 /*--------------------ui-page----------------------*/
 .form__example{
   max-width: 624px;

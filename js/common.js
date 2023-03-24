@@ -307,8 +307,18 @@
 			panel.reset();
 			document.documentElement.classList.toggle('lock');
 		}
-		
 		//END menu toggle
+
+		// landing menu toggle
+		if(targ.getAttribute('id') ==='ld-nav-toggler' || targ.closest('#ld-nav-toggler') !== null){
+			document.body.classList.toggle('ld-nav-visible');
+			document.body.classList.remove('profile-nav-visible');
+			document.body.classList.remove('menu-visible');
+			panel.close();
+			panel.reset();
+			document.documentElement.classList.toggle('lock');
+		}
+		//END landing menu toggle
 
 
 		// header search results toggle
@@ -1045,12 +1055,16 @@
 				observerCallback = function(entries, observer) {
 					// console.log(entries);
 					if(entries[0].isIntersecting){
-						headerElem.classList.remove('_scroll');
+						if(!headerElem.classList.contains('header-ld')){
+							headerElem.classList.remove('_scroll');
+						}
 						if (document.querySelector('.page-compare__cards') !== null) {
 							document.querySelector('.page-compare__cards').classList.remove('_scroll');
 						}
 					}else{
-						headerElem.classList.add('_scroll');
+						if(!headerElem.classList.contains('header-ld')){
+							headerElem.classList.add('_scroll');
+						}
 						if (document.querySelector('.page-compare__cards') !== null) {
 							document.querySelector('.page-compare__cards').classList.add('_scroll');
 						}

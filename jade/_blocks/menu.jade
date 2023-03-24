@@ -33,4 +33,34 @@ nav.profile-nav(data-menu-nav)
 						a(href="#" class="profile-menu__link")= item
 							+icon('chev-right')
 
+- var ldNav = ['Подарочные карты','Юр. лицам','Магазины'];
+nav.profile-nav(data-ld-nav)
+	.profile-nav__over
+		ul.profile-menu
+			each item, i in ldNav
+				li.profile-menu__item
+					a(href="#" class="profile-menu__link")= item
+						+icon('chev-right')
+		
+		.profile-nav__chapter.chapter-profile-nav
+			.chapter-profile-nav__title Покупателям
+
+			- var list1 = ['Подарочные карты','Сотрудничество', 'Магазины', 'Доставка', 'Оплата', 'Сервис', 'Возврат и гарантия'];
+			ul.profile-menu
+				each item, i in list1
+					li.profile-menu__item
+						a(href="#" class="profile-menu__link")= item
+							+icon('chev-right')
+
+
+		.profile-nav__chapter.chapter-profile-nav
+			.chapter-profile-nav__title Покупателям
+
+			- var list2 = ['О нас','Новости','Вакансии','Сертификаты','Наши партнеры','Арендодателям','Контакты'];
+			ul.profile-menu
+				each item, i in list2
+					li.profile-menu__item
+						a(href="#" class="profile-menu__link")= item
+							+icon('chev-right')
+
 

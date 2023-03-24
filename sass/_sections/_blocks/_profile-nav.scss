@@ -25,6 +25,11 @@
 			transform: translateX(0);
 		}		
 	}
+	&[data-ld-nav]{
+		.ld-nav-visible &{
+			transform: translateX(0);
+		}		
+	}
 
 	@include min-screen($md){
 		display: none;
