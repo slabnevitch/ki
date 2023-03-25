@@ -290,7 +290,7 @@ h1, h2, h3, h4, h5, h6{
     padding: 9px 15px 9px 9px;
     display: flex;
     align-items: flex-start;
-    width: 270px;
+    width: rem(270);
     border-radius: 4px;
     background: #FFFFFF;
 
@@ -324,7 +324,11 @@ h1, h2, h3, h4, h5, h6{
   }
   .product-card__name{
     font-weight: 400;
-    height: 45px;
+
+    @include max-screen($scale){
+      height: 45px;
+      
+    }
   }
 }
 //END карточка при ховере метки на баннере

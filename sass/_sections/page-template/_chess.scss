@@ -73,7 +73,7 @@
 		font-size: 18px;
 	}
 	@include min-screen($xs){
-		max-width: 304px;
+		max-width: prc(307, 385);
 		
 	}
 }
