@@ -1226,6 +1226,26 @@
 
 		}
 		//END payement anchors scroll
+
+		// tippy
+		if(document.querySelector('.price-tooltip') !== null){
+			tippy('.price-tooltip', {
+				theme: 'ki-tooltip', 
+				maxWidth: 'none',
+				allowHTML: true,
+				content: function(reference) {
+				    var id = reference.getAttribute('data-template');
+				    var template = document.getElementById(id);
+				    return template.innerHTML;
+				  },
+				offset: [-15, 23],
+				arrow: false,
+				// trigger: 'click',
+			    placement: 'left-start',
+			    interactive: true
+			});
+		}
+		//END tippy
 	
 	});//DOMContentLoaded
 })();
