@@ -217,18 +217,18 @@ h1, h2, h3, h4, h5, h6{
   background-repeat: no-repeat;
   background-size: contain;
 
-  @media (any-hover: hover) { //только для устройств с ховером
+  @media (any-hover: hover) {
       cursor: pointer;
-      &:hover{
-        .product-tooltip{
-          @include min-screen($md){
-            visibility: visible;
-            opacity: 1;
+      // &:hover{
+      //   .product-tooltip{
+      //     @include min-screen($md){
+      //       visibility: visible;
+      //       opacity: 1;
             
-          }
-        }
+      //     }
+      //   }
 
-      }
+      // }
   }
 
   @include max-screen($sm){
@@ -278,10 +278,11 @@ h1, h2, h3, h4, h5, h6{
 
 // карточка при ховере метки на баннере
 .product-tooltip{
-  position: absolute;
-  visibility: hidden;
+  // position: absolute;
+  // visibility: hidden;
+  display: none;
   padding: 23px;
-  opacity: 0;
+  // opacity: 0;
   transition: all .2s;
   // width: 100%;
   white-space: normal;
@@ -294,46 +295,48 @@ h1, h2, h3, h4, h5, h6{
     border-radius: 4px;
     background: #FFFFFF;
 
-  }
+    .product-card__border{
+      width: 88px;
+      height: 88px;
+      padding: 0;
+      margin-right: 11px;
+    }
+    .product-card__img{
+      width: 88px;
+      height: 88px;
+    }
+    .product-card__price-block{
+      text-decoration: none;
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 5px;
+    }
+    .product-price{
+      font-size: rem(16);
+      line-height: normal;
+    }
+    .product-price-sale{
+      line-height: normal;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    .product-card__name{
+      font-weight: 400;
+      font-size: rem(12);
 
-
-  .product-card__border{
-    width: 88px;
-    height: 88px;
-    padding: 0;
-    margin-right: 11px;
-  }
-  .product-card__img{
-    width: 88px;
-    height: 88px;
-  }
-  .product-card__price-block{
-    text-decoration: none;
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 5px;
-  }
-  .product-price{
-    font-size: rem(16);
-    line-height: normal;
-  }
-  .product-price-sale{
-    line-height: normal;
-    flex-shrink: 0;
-    margin-left: 16px;
-  }
-  .product-card__name{
-    font-weight: 400;
-
-    @include max-screen($scale){
-      height: 45px;
-      
+      @include max-screen($scale){
+        height: 45px;
+        
+      }
     }
   }
+
+
 }
 //END карточка при ховере метки на баннере
 @import "../_customizations/viewerjs-custom.scss";
 @import "../_customizations/_fstdropdown.scss";
+@import "../_customizations/_tippy.scss";
 .btn{
   display: inline-flex;
   justify-content: center;

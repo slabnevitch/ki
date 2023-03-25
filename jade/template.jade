@@ -198,6 +198,8 @@ block content
 		include _sections/page-template/carded-banner
 		include _sections/page-template/chess
 		include _sections/page-template/popular-ctgs
+
+		include _includes/product-tooltip
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 
@@ -293,6 +295,12 @@ block page-scripts
 
 	//- scroll-to-sects--------------------------
 	//- script(src="js/libs/scroll-to-sects/scrolltosect.js")
+
+	//- tippy--------------------------
+	//- https://atomiks.github.io/tippyjs/
+	//- base using:  html: <button data-tippy-content="Tooltip">Text</button>; js: tippy('[data-tippy-content]');
+	script(src="js/libs/tippy/popper.min.js")
+	script(src="js/libs/tippy/tippy-bundle.umd.js")
 
 	//- sticky-sidebar--------------------------
 	//- https://abouolia.github.io/sticky-sidebar/#usage
