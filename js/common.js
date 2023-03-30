@@ -331,6 +331,9 @@
 
 
 		// header search results toggle
+			if(targ.hasAttribute('data-mob-search-close') || targ.closest('[data-mob-search-close]') !== null){
+				document.body.classList.remove('covered', 'search-results-opened');
+			}
 			// var headerSearchInputs = document.querySelectorAll('.search-header__input');
 			// for(var i=0; i < headerSearchInputs.length; i++){
 			// 	headerSearchInputs[i].addEventListener('input', function(e) {
@@ -1064,14 +1067,14 @@
 				observerCallback = function(entries, observer) {
 					// console.log(entries);
 					if(entries[0].isIntersecting){
-						if(!headerElem.classList.contains('header-ld')){
+						if(!headerElem.classList.contains('header-ld') && !document.body.classList.contains('search-results-opened')){
 							headerElem.classList.remove('_scroll');
 						}
 						if (document.querySelector('.page-compare__cards') !== null) {
 							document.querySelector('.page-compare__cards').classList.remove('_scroll');
 						}
 					}else{
-						if(!headerElem.classList.contains('header-ld')){
+						if(!headerElem.classList.contains('header-ld') && !document.body.classList.contains('search-results-opened')){
 							headerElem.classList.add('_scroll');
 						}
 						if (document.querySelector('.page-compare__cards') !== null) {

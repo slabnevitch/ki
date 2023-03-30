@@ -1,173 +1,176 @@
 if pageIndex == '013'
 	.header__search-results.search-results-header
-		.wrapper-smart
-			.wrapper-flex.search-results-header__wrapper
-				.search-column.search-column--block
-					.search-results-header__row
-						.wrapper-flex.search-results-header__category
-							.result-row-chapter Популярные категории
-							- var vals = ['Электроинструменты', 'Ручной инструмент', 'Строительство и ремонт', 'Гайковерты'];
-							.result-row-values
-								each val, i in vals
-									.result-row-value
-										a(href="#")= val
-							
-						.wrapper-flex.search-results-header__category
-							.result-row-chapter Хиты продаж
-							.result-row-values
-								- for (var i=0; i < 4; i++)
-									.result-row-value
-										a(href="#") Гайковерт Milwaukee M18 BRAIW-0 4933447899
+		.search-results-header__container
+			.wrapper-smart
+				.wrapper-flex.search-results-header__wrapper
+					.search-column.search-column--block
+						.search-results-header__row
+							.wrapper-flex.search-results-header__category
+								.result-row-chapter Популярные категории
+								- var vals = ['Электроинструменты', 'Ручной инструмент', 'Строительство и ремонт', 'Гайковерты'];
+								.result-row-values
+									each val, i in vals
+										.result-row-value
+											a(href="#")= val
+								
+							.wrapper-flex.search-results-header__category
+								.result-row-chapter Хиты продаж
+								.result-row-values
+									- for (var i=0; i < 4; i++)
+										.result-row-value
+											a(href="#") Гайковерт Milwaukee M18 BRAIW-0 4933447899
 
-				
-				.search-column.search-column--cards
-					- var cards = [{name: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', price: '6 159 ₽'}, {name: 'Гайковерт Messer IW-500 05-40-500', price: '8 380 ₽'}, {name: 'Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140', price: '8 400 ₽'}];
-						each item, ind in cards
-							.product-card.product-card--mini
-								.product-card__img-wrap
-									a(href="#").product-card__border
-										span.product-card__img
-											img(src="img/product-card/in-search/"+(ind+1)+".jpg" alt="alt")
-								
-								
-								.product-card__chars
-									.product-card__price
-										a(href="#").product-card__price-block
-											.product-price= item.price
-											if ind == 1
-												.product-price-sale 18 411₽
-										
-										a(href="#").product-bonus
-											.product-bonus__val 29
-											+icon('bonus')
-								
-									a(href="#").product-card__name= item.name
-									.product-card__rating-wrap
-										.product-card__rating
-											+crystalRating('4,0')
-			a(href="#").search-results-header__all Посмотреть все результаты
+					
+					.search-column.search-column--cards
+						- var cards = [{name: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', price: '6 159 ₽'}, {name: 'Гайковерт Messer IW-500 05-40-500', price: '8 380 ₽'}, {name: 'Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140', price: '8 400 ₽'}];
+							each item, ind in cards
+								.product-card.product-card--mini
+									.product-card__img-wrap
+										a(href="#").product-card__border
+											span.product-card__img
+												img(src="img/product-card/in-search/"+(ind+1)+".jpg" alt="alt")
+									
+									
+									.product-card__chars
+										.product-card__price
+											a(href="#").product-card__price-block
+												.product-price= item.price
+												if ind == 1
+													.product-price-sale 18 411₽
+											
+											a(href="#").product-bonus
+												.product-bonus__val 29
+												+icon('bonus')
+									
+										a(href="#").product-card__name= item.name
+										.product-card__rating-wrap
+											.product-card__rating
+												+crystalRating('4,0')
+				a(href="#").search-results-header__all Посмотреть все результаты
 
 if pageIndex == '014'
 	.header__search-results.search-results-header
-		.wrapper-smart
-			.wrapper-flex.search-results-header__wrapper
-				.search-column.search-column--block
-					.search-results-header__row
-						.wrapper-flex.search-results-header__category
-							.result-row-chapter
-							- var vals = ['Гайковерты пневматические', 'Ударные гайковерты', 'Гайковерты пневматические BERGER', 'Гайковерты пневматические ELITECH', 'Гайковерты пневматические Patriot', 'Гайковерты пневматические Fubag', 'Гайковерты пневматические Jonnesway', 'Гайковерты пневматические Ombra'];
-							.result-row-values
-								each val in vals
-									.result-row-value 
-										a(href="#")=val
-				
-				.search-column.search-column--cards
-					- var cards = [{name: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', price: '6 159 ₽'}, {name: 'Гайковерт Messer IW-500 05-40-500', price: '8 380 ₽'}, {name: 'Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140', price: '8 400 ₽'}];
-						each item, ind in cards
-							.product-card.product-card--mini
-								.product-card__img-wrap
-									a(href="#").product-card__border
-										span.product-card__img
-											img(src="img/product-card/in-search/"+(ind+1)+".jpg" alt="alt")
-								
-								.product-card__chars
-									.product-card__price
-										a(href="#").product-card__price-block
-											.product-price= item.price
-											if ind == 1
-												.product-price-sale 18 411₽
-										
-										a(href="#").product-bonus
-											.product-bonus__val 29
-											+icon('bonus')
-								
-									a(href="#").product-card__name= item.name
-									.product-card__rating-wrap
-										.product-card__rating
-											+crystalRating('4,0')
+		.search-results-header__container
+			.wrapper-smart
+				.wrapper-flex.search-results-header__wrapper
+					.search-column.search-column--block
+						.search-results-header__row
+							.wrapper-flex.search-results-header__category
+								.result-row-chapter
+								- var vals = ['Гайковерты пневматические', 'Ударные гайковерты', 'Гайковерты пневматические BERGER', 'Гайковерты пневматические ELITECH', 'Гайковерты пневматические Patriot', 'Гайковерты пневматические Fubag', 'Гайковерты пневматические Jonnesway', 'Гайковерты пневматические Ombra'];
+								.result-row-values
+									each val in vals
+										.result-row-value 
+											a(href="#")=val
+					
+					.search-column.search-column--cards
+						- var cards = [{name: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', price: '6 159 ₽'}, {name: 'Гайковерт Messer IW-500 05-40-500', price: '8 380 ₽'}, {name: 'Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140', price: '8 400 ₽'}];
+							each item, ind in cards
+								.product-card.product-card--mini
+									.product-card__img-wrap
+										a(href="#").product-card__border
+											span.product-card__img
+												img(src="img/product-card/in-search/"+(ind+1)+".jpg" alt="alt")
+									
+									.product-card__chars
+										.product-card__price
+											a(href="#").product-card__price-block
+												.product-price= item.price
+												if ind == 1
+													.product-price-sale 18 411₽
+											
+											a(href="#").product-bonus
+												.product-bonus__val 29
+												+icon('bonus')
+									
+										a(href="#").product-card__name= item.name
+										.product-card__rating-wrap
+											.product-card__rating
+												+crystalRating('4,0')
 if pageIndex == '015'
 	.header__search-results.search-results-header.search-results-header--cards
-		.wrapper-smart
-			.wrapper-flex.search-results-header__wrapper
-				.search-column.search-column--block
-					.search-results-header__row
-						.wrapper-flex.search-results-header__category
-							.result-row-chapter
+		.search-results-header__container
+			.wrapper-smart
+				.wrapper-flex.search-results-header__wrapper
+					.search-column.search-column--block
+						.search-results-header__row
+							.wrapper-flex.search-results-header__category
+								.result-row-chapter
 
-							.result-row-values
-								- var leftCards = [{name: 'Аккумуляторный гайковерт Makita TD 110 DZ', price: '5 790 ₽'}, {name: 'Аккумуляторный гайковерт Makita 6706 D', price: '5 228 ₽'}, {name: 'Аккумуляторный гайковерт Makita DTW 190 Z', price: '6 779 ₽'}];
-									each item, ind in leftCards
-										.product-card.product-card--mini
-											.product-card__img-wrap
-												a(href="#").product-card__border
-													span.product-card__img
-														img(src="img/product-card/in-search/"+(ind+4)+".jpg" alt="alt")
+								.result-row-values
+									- var leftCards = [{name: 'Аккумуляторный гайковерт Makita TD 110 DZ', price: '5 790 ₽'}, {name: 'Аккумуляторный гайковерт Makita 6706 D', price: '5 228 ₽'}, {name: 'Аккумуляторный гайковерт Makita DTW 190 Z', price: '6 779 ₽'}];
+										each item, ind in leftCards
+											.product-card.product-card--mini
+												.product-card__img-wrap
+													a(href="#").product-card__border
+														span.product-card__img
+															img(src="img/product-card/in-search/"+(ind+4)+".jpg" alt="alt")
 
-											.product-card__chars
-												.product-card__price
-													a(href="#").product-card__price-block
-														.product-price= item.price
-														if ind == 1
-															.product-price-sale 18 411₽
-													
-													a(href="#").product-bonus
-														.product-bonus__val 29
-														+icon('bonus')
+												.product-card__chars
+													.product-card__price
+														a(href="#").product-card__price-block
+															.product-price= item.price
+															if ind == 1
+																.product-price-sale 18 411₽
+														
+														a(href="#").product-bonus
+															.product-bonus__val 29
+															+icon('bonus')
+												
+													a(href="#").product-card__name= item.name
+													.product-card__rating-wrap
+														.product-card__rating
+															+crystalRating('4,0')
+
+					a(href="#").search-results-header__all Посмотреть все результаты
+
+					.search-column.search-column--cards
+						- var cards = [{name: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', price: '6 159 ₽'}, {name: 'Гайковерт Messer IW-500 05-40-500', price: '8 380 ₽'}, {name: 'Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140', price: '8 400 ₽'}];
+							each item, ind in cards
+								.product-card.product-card--mini
+									.product-card__img-wrap
+										a(href="#").product-card__border
+											span.product-card__img
+												img(src="img/product-card/in-search/"+(ind+1)+".jpg" alt="alt")
+									
+									
+									.product-card__chars
+										.product-card__price
+											a(href="#").product-card__price-block
+												.product-price= item.price
+												if ind == 1
+													.product-price-sale 18 411₽
 											
-												a(href="#").product-card__name= item.name
-												.product-card__rating-wrap
-													.product-card__rating
-														+crystalRating('4,0')
+											a(href="#").product-bonus
+												.product-bonus__val 29
+												+icon('bonus')
+									
+										a(href="#").product-card__name= item.name
+										.product-card__rating-wrap
+											.product-card__rating
+												+crystalRating('4,0')
 
-				a(href="#").search-results-header__all Посмотреть все результаты
-
-				.search-column.search-column--cards
-					- var cards = [{name: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', price: '6 159 ₽'}, {name: 'Гайковерт Messer IW-500 05-40-500', price: '8 380 ₽'}, {name: 'Аккумуляторный гайковерт Patriot BR180Li-1/2 180301140', price: '8 400 ₽'}];
-						each item, ind in cards
-							.product-card.product-card--mini
-								.product-card__img-wrap
-									a(href="#").product-card__border
-										span.product-card__img
-											img(src="img/product-card/in-search/"+(ind+1)+".jpg" alt="alt")
-								
-								
-								.product-card__chars
-									.product-card__price
-										a(href="#").product-card__price-block
-											.product-price= item.price
-											if ind == 1
-												.product-price-sale 18 411₽
-										
-										a(href="#").product-bonus
-											.product-bonus__val 29
-											+icon('bonus')
-								
-									a(href="#").product-card__name= item.name
-									.product-card__rating-wrap
-										.product-card__rating
-											+crystalRating('4,0')
-
-					- var cards2 = [{name: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', price: '6 159 ₽'}, {name: 'Гайковерт Messer IW-500 05-40-500', price: '8 380 ₽'}];
-						each item, ind in cards2
-							.product-card.product-card--mini
-								.product-card__img-wrap
-									a(href="#").product-card__border
-										span.product-card__img
-											img(src="img/product-card/in-search/"+(ind+1)+".jpg" alt="alt")
-								
-								
-								.product-card__chars
-									.product-card__price
-										a(href="#").product-card__price-block
-											.product-price= item.price
-											if ind == 1
-												.product-price-sale 18 411₽
-										
-										a(href="#").product-bonus
-											.product-bonus__val 29
-											+icon('bonus')
-								
-									a(href="#").product-card__name= item.name
-									.product-card__rating-wrap
-										.product-card__rating
-											+crystalRating('4,0')
+						- var cards2 = [{name: 'Акк. безударная дрель-шуруповерт Bosch GSR 120 Li кейс 2x2 Ач 649861', price: '6 159 ₽'}, {name: 'Гайковерт Messer IW-500 05-40-500', price: '8 380 ₽'}];
+							each item, ind in cards2
+								.product-card.product-card--mini
+									.product-card__img-wrap
+										a(href="#").product-card__border
+											span.product-card__img
+												img(src="img/product-card/in-search/"+(ind+1)+".jpg" alt="alt")
+									
+									
+									.product-card__chars
+										.product-card__price
+											a(href="#").product-card__price-block
+												.product-price= item.price
+												if ind == 1
+													.product-price-sale 18 411₽
+											
+											a(href="#").product-bonus
+												.product-bonus__val 29
+												+icon('bonus')
+									
+										a(href="#").product-card__name= item.name
+										.product-card__rating-wrap
+											.product-card__rating
+												+crystalRating('4,0')

@@ -1,4 +1,22 @@
 /*--------------------header----------------------*/
+.search-results-opened {
+	.header{
+		position: relative;
+		z-index: 12;
+
+		@include max-screen($md){
+			top: -44px;
+
+		}
+
+	}
+	.search-header__back,
+	.search-header__close{
+		@include max-screen($md){
+			display: block;
+		}
+	}
+}
 
 .header {
 	position: relative;	
@@ -410,6 +428,11 @@
 		}
 
 	}
+	.search-results-opened &{
+		position: relative;
+		padding-top: 0;
+		padding-bottom: 16px;
+	}
 
 	// .multilevel-panel-opened &{
 	// 	display: none;
@@ -653,13 +676,17 @@
 		color: #000;
 
 	}
-	.search-results-opened &{
 
-		@include max-screen($md){
-			display: block;
-		}
-	
-	}
+}
+.search-header__close{
+	display: none;	
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -12px;
+}
+.search-results-opened{
+
 }
 .header__actions {
 	margin-left: auto;

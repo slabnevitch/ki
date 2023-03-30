@@ -1,4 +1,4 @@
-header(class=pageIndex=='013'|| pageIndex == '014'|| pageIndex == '015'?"header search-results-opened covered" : pageIndex == 'landing'? "header header-ld": "header")
+header(class= pageIndex == 'landing'? "header header-ld": "header")
 	.header__top
 		.wrapper.p-12
 			.header__top-inner
@@ -57,6 +57,7 @@ header(class=pageIndex=='013'|| pageIndex == '014'|| pageIndex == '015'?"header 
 					button.ld-burger#ld-nav-toggler
 						+icon('ld-burger')
 		include ../_blocks/catalog
+		include ../_blocks/header-search-results
 
 	
 	.header__bottom
@@ -87,7 +88,9 @@ header(class=pageIndex=='013'|| pageIndex == '014'|| pageIndex == '015'?"header 
 							+icon('magnifier')
 						button.search-header__back(type="button")
 							+icon('arrow-left')
-					
+						button.search-header__close.button-close(type='button' data-mob-search-close)
+							+icon('ctlg-close')
+											
 					a(href="#").header__account
 						+icon('user')
 
@@ -103,4 +106,3 @@ header(class=pageIndex=='013'|| pageIndex == '014'|| pageIndex == '015'?"header 
 						.header__action-count 10
 
 	
-		include ../_blocks/header-search-results
