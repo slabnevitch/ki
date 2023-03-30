@@ -787,7 +787,7 @@
 	font-size: 12px;
 line-height: 15px;
 
-	@include max-screen(px){
+	@include max-screen($xss){
 		flex: 1 1 auto;
 	}
 

@@ -18,6 +18,7 @@
 }
 .day-products__view,
 .day-products__cards {
+	
 	.slider-nav--prev{
 		@include min-screen($max){
 			left: 5px;			
@@ -29,13 +30,17 @@
 			
 		}
 	}
+	.slider-nav{
+		margin-top: -33px;
+	}
 
 }
 .day-view-slider,
 .day-cards-slider{
+	padding-bottom: 22px;
 	.swiper-pagination{
-		margin-top: 5px;
-		position: static;
+		bottom: 0;
+		// position: static;
 	}
 }
 .day-view-slider{
@@ -85,10 +90,10 @@
 		width: calc(100% + 24px);
 	}
 
-	@include min-screen($sm){
-		padding-bottom: 22px;
+	// @include min-screen($sm){
+	// 	padding-bottom: 22px;
 		
-	}
+	// }
 	.swiper-pagination{
 		@include max-screen($sm){
 			display: none;

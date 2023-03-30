@@ -6276,7 +6276,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .pagination .pagination__item {
-  width: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 .pagination .pagination__link {
   width: auto;
@@ -7474,7 +7475,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 79px;
   background-image: url(../img/header-catalog/mob-catalog/mob-catalog-bottom-cover.svg);
-  background-position: botom 0;
+  background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 100%;
   z-index: 9;
@@ -8366,8 +8367,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .assessment-page-product__descr {
-  font-size: 1pxrem;
-  line-height: 1.25pxrem;
+  font-size: 1rem;
+  line-height: 1.25rem;
   color: #000000;
   opacity: 0.6;
 }
@@ -9523,7 +9524,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 79px;
   background-image: url(../img/header-catalog/mob-catalog/mob-catalog-bottom-cover.svg);
-  background-position: botom 0;
+  background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 100%;
   z-index: 9;
@@ -10851,7 +10852,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
   line-height: 15px;
 }
-@media only screen and (max-width: px) {
+@media only screen and (max-width: 479.98px) {
   .address-list__content {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -14915,7 +14916,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 79px;
     background-image: url(../img/header-catalog/mob-catalog/mob-catalog-bottom-cover.svg);
-    background-position: botom 0;
+    background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 100%;
     z-index: 9;
@@ -20329,11 +20330,18 @@ h1, h2, h3, h4, h5, h6 {
     right: 5px;
   }
 }
+.day-products__view .slider-nav,
+.day-products__cards .slider-nav {
+  margin-top: -33px;
+}
 
+.day-view-slider,
+.day-cards-slider {
+  padding-bottom: 22px;
+}
 .day-view-slider .swiper-pagination,
 .day-cards-slider .swiper-pagination {
-  margin-top: 5px;
-  position: static;
+  bottom: 0;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -20381,11 +20389,6 @@ h1, h2, h3, h4, h5, h6 {
 @media only screen and (max-width: 767.98px) {
   .day-cards-slider {
     width: calc(100% + 24px);
-  }
-}
-@media only screen and (min-width: 767.98px) {
-  .day-cards-slider {
-    padding-bottom: 22px;
   }
 }
 @media only screen and (max-width: 767.98px) {

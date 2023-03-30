@@ -23,99 +23,118 @@
 
 			.product-cards.product-cards--horisontal.wrapper-flex
 					each item, i in cards
-						div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : item.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Offer")
-								label.light-label
-									input(type="checkbox" name="in-cart-check" class="light-label__input" checked=pageIndex == 'cart_003' ? true : false)
-									span.light-label__check
-										+icon('check')
+						div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : item.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Product")
+							div(style='display:none;')
+								meta(itemprop='model' content='Makita TD 110 DZ')
+								meta(itemprop='sku' content='002266')
+								span(itemprop='name')= item.tilte
+								meta(itemprop='image' content="img/"+path+(i+start)+".jpg")
+								span(itemprop='description') Напряжение акк.: 12 В
+								span(itemprop='description') Крутящий момент: 30 Н·м
+								span(itemprop='description') Емкость аккумулятора: 2 А·ч
+								span(itemprop='description') Тип аккумулятора Li-Ion
+								span(itemprop='description') Кол-во аккумуляторов: 2 шт.
+								span(itemprop='description') Вес 1.2 кг
+								span(itemprop='description') Напряжение акк.: 12 В
+								span(itemprop='description') Напряжение акк.: 12 В
+								div(itemprop='aggregateRating' itemscope='' itemtype='https://schema.org/AggregateRating')
+									span(itemprop='ratingValue') 3.5
+									span(itemprop='reviewCount') 11
+									span(itemprop='worstRating') 1
+									span(itemprop='bestRating') 5
 
-								button(type="button").product-card__delete
-									+icon('remove')
-								
-								.product-card__img-wrap
-									if item.billet != ''
-										div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : item.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
-											.billet__value= item.billet
-											
-											if item.billet == "акция" || item.billet == "скидка"
-												+icon('percents')
-											if item.billet == "уценка"
-												+icon('attention')
-											if item.billet == "Новинка"
-												+icon('flame')
-									
-									a(href="#" alt=item.tilte).product-card__border
-										span.product-card__img
-											img(itemprop="image" src=item.path alt="alt")
-								
-								
-								.product-card__price
-									.product-card__actions
-										if item.iconActive === '0'
-											a(href="#").product-card__action.active
-												+icon('favourites')
-											a(href="#").product-card__action
-												+icon('compare')
-										else if item.iconActive === '1'
-											a(href="#").product-card__action
-												+icon('favourites')
-											a(href="#").product-card__action.active
-												+icon('compare')
-										else if item.iconActive == false
-											a(href="#").product-card__action
-												+icon('favourites')
-											a(href="#").product-card__action
-												+icon('compare')
-
-									a(href="#").product-price= item.price
-										if item.sale != ''
-											.product-price-sale= item.sale
+							div(itemprop='offers' itemscope='' itemtype='https://schema.org/Offer')
+								span(style='display:none;' itemprop='price' content=item.price.slice(0, -2))= item.price.slice(0, -2)
+								span(style='display:none;' itemprop='priceCurrency' content='RUB') $
+								div(style='display:none;')
 									link(itemprop='availability' href='https://schema.org/InStock')
-									meta(itemprop="price" content=item.price)
-									meta(itemprop="priceCurrency" content="RUB")
-									
-									if item.sbers
-										a(href="#").product-bonus
-											.product-bonus__val= item.sbers
-											+icon('bonus')
-								
-								.product-card__name-box
-									a(href="#" itemprop="name").product-card__name
-										.product-card__name-value= item.tilte
-										meta(itemprop='model' content=item.tilte)
+									|  In stock
+							label.light-label
+								input(type="checkbox" name="in-cart-check" class="light-label__input" checked=pageIndex == 'cart_003' ? true : false)
+								span.light-label__check
+									+icon('check')
+
+							button(type="button").product-card__delete
+								+icon('remove')
+							
+							.product-card__img-wrap
+								if item.billet != ''
+									div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : item.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
+										.billet__value= item.billet
 										
-										.product-card__rating-wrap
-											.product-card__rating
-												div(itemprop='aggregateRating' itemscope='itemscope' itemtype='https://schema.org/AggregateRating' style='display:none;')
-													meta(itemprop='ratingValue' content='4.8')
-													meta(itemprop='ratingCount' content='288')
-													meta(itemprop='reviewCount' content='288')
-													meta(itemprop='worstRating' content='0')
-													meta(itemprop='bestRating' content='5')
-												+crystalRating('4,5')
+										if item.billet == "акция" || item.billet == "скидка"
+											+icon('percents')
+										if item.billet == "уценка"
+											+icon('attention')
+										if item.billet == "Новинка"
+											+icon('flame')
+								
+								a(href="#" alt=item.tilte).product-card__border
+									span.product-card__img
+										img(itemprop="image" src=item.path alt="alt")
+							
+							
+							.product-card__price
+								.product-card__actions
+									if item.iconActive === '0'
+										a(href="#").product-card__action.active
+											+icon('favourites')
+										a(href="#").product-card__action
+											+icon('compare')
+									else if item.iconActive === '1'
+										a(href="#").product-card__action
+											+icon('favourites')
+										a(href="#").product-card__action.active
+											+icon('compare')
+									else if item.iconActive == false
+										a(href="#").product-card__action
+											+icon('favourites')
+										a(href="#").product-card__action
+											+icon('compare')
 
-										.product-card__info.info-product-card
-												.info-product-card__row Артикул: 002266
+								a(href="#").product-price= item.price
+									if item.sale != ''
+										.product-price-sale= item.sale
+								
+								if item.sbers
+									a(href="#").product-bonus
+										.product-bonus__val= item.sbers
+										+icon('bonus')
+							
+							.product-card__name-box
+								a(href="#" itemprop="name").product-card__name
+									.product-card__name-value= item.tilte
+									meta(itemprop='model' content=item.tilte)
+									meta(itemprop='sku' content='trinket-12345')
+									div(itemprop='brand' itemtype='https://schema.org/Brand' itemscope='')
+										meta(itemprop='name' content='ACME')
+									
+									.product-card__rating-wrap
+										.product-card__rating
+											+crystalRating('4,5')
 
-									button(type="button").btn.btn-sm.btn-buy.clicked.product-card__buy
-										span.btn__val Купить
-										.counter(data-min="0" data-max="100")
-											span.counter__button.counter-minus
-												+icon('minus')
-											.counter__block
-												input(autocomplete="off" type="hidden" name="name" value="1" )
-												.counter__count 1
-												.counter__measures шт
-											span.counter__button.counter-plus
-												+icon('plus')
+									.product-card__info.info-product-card
+											.info-product-card__row Артикул: 002266
 
-								a(href="#").product-card__description 
-									.product-card__description-row Напряжение акк.: 12 В
-									.product-card__description-row Крутящий момент: 30 Н·м
-									.product-card__description-row Емкость аккумулятора: 2 А·ч
-									.product-card__description-row Тип аккумулятора Li-Ion
-									.product-card__description-row Кол-во аккумуляторов: 2 шт.
-									.product-card__description-row Вес 1.2 кг
+								button(type="button").btn.btn-sm.btn-buy.clicked.product-card__buy
+									span.btn__val Купить
+									.counter(data-min="0" data-max="100")
+										span.counter__button.counter-minus
+											+icon('minus')
+										.counter__block
+											input(autocomplete="off" type="hidden" name="name" value="1" )
+											.counter__count 1
+											.counter__measures шт
+										span.counter__button.counter-plus
+											+icon('plus')
+
+							a(href="#").product-card__description 
+								.product-card__description-row Напряжение акк.: 12 В
+								.product-card__description-row Крутящий момент: 30 Н·м
+								.product-card__description-row Емкость аккумулятора: 2 А·ч
+								.product-card__description-row Тип аккумулятора Li-Ion
+								.product-card__description-row Кол-во аккумуляторов: 2 шт.
+								.product-card__description-row Вес 1.2 кг
 
 						if pageIndex == 'cart_003'
 							if item.inAction == true
@@ -135,196 +154,241 @@
 								a(href="#").product-announcement__link Подробнее
 								.product-announcement__text Добавьте ещё вот этот товар и получите скидку -20% на оба товара
 
-						div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog " + item.addedClass : item.analog ? "product-card product-card--analog " + item.addedClass : item.pullOut ? "product-card product-card--pullout " +item.addedClass : "product-card " + item.addedClass itemscope="" itemtype="http://schema.org/Offer")
-								
-								.product-card__img-wrap
-									if item.billet != ''
-										div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : item.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
-											.billet__value= item.billet
-											
-											if item.billet == "акция" || item.billet == "скидка"
-												+icon('percents')
-											if item.billet == "уценка"
-												+icon('attention')
-											if item.billet == "Новинка"
-												+icon('flame')
-									
-									a(href="#" alt=item.tilte).product-card__border
-										span.product-card__img
-											img(itemprop="image" src=item.path alt="alt")
-								
-								
-								.product-card__price
-									.product-card__actions
-										if item.iconActive === '0'
-											a(href="#").product-card__action.active
-												+icon('favourites')
-											a(href="#").product-card__action
-												+icon('compare')
-										else if item.iconActive === '1'
-											a(href="#").product-card__action
-												+icon('favourites')
-											a(href="#").product-card__action.active
-												+icon('compare')
-										else if item.iconActive == false
-											a(href="#").product-card__action
-												+icon('favourites')
-											a(href="#").product-card__action
-												+icon('compare')
+						div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog " + item.addedClass : item.analog ? "product-card product-card--analog " + item.addedClass : item.pullOut ? "product-card product-card--pullout " +item.addedClass : "product-card " + item.addedClass itemscope="" itemtype="http://schema.org/Product")
+							div(style='display:none;')
+								meta(itemprop='model' content='Makita TD 110 DZ')
+								meta(itemprop='sku' content='002266')
+								span(itemprop='name')= item.tilte
+								meta(itemprop='image' content="img/"+path+(i+start)+".jpg")
+								span(itemprop='description') Напряжение акк.: 12 В
+								span(itemprop='description') Крутящий момент: 30 Н·м
+								span(itemprop='description') Емкость аккумулятора: 2 А·ч
+								span(itemprop='description') Тип аккумулятора Li-Ion
+								span(itemprop='description') Кол-во аккумуляторов: 2 шт.
+								span(itemprop='description') Вес 1.2 кг
+								span(itemprop='description') Напряжение акк.: 12 В
+								span(itemprop='description') Напряжение акк.: 12 В
+								div(itemprop='aggregateRating' itemscope='' itemtype='https://schema.org/AggregateRating')
+									span(itemprop='ratingValue') 3.5
+									span(itemprop='reviewCount') 11
+									span(itemprop='worstRating') 1
+									span(itemprop='bestRating') 5
 
-									a(href="#").product-price= item.price
-										if item.sale != ''
-											.product-price-sale= item.sale
+							div(itemprop='offers' itemscope='' itemtype='https://schema.org/Offer')
+								span(style='display:none;' itemprop='price' content=item.price.slice(0, -2))= item.price.slice(0, -2)
+								span(style='display:none;' itemprop='priceCurrency' content='RUB') $
+								div(style='display:none;')
 									link(itemprop='availability' href='https://schema.org/InStock')
-									meta(itemprop="price" content=item.price)
-									meta(itemprop="priceCurrency" content="RUB")
-									
-									if item.sbers
-										a(href="#").product-bonus
-											.product-bonus__val= item.sbers
-											+icon('bonus')
+									|  In stock
+							
+							.product-card__img-wrap
+								if item.billet != ''
+									div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : item.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
+										.billet__value= item.billet
+										
+										if item.billet == "акция" || item.billet == "скидка"
+											+icon('percents')
+										if item.billet == "уценка"
+											+icon('attention')
+										if item.billet == "Новинка"
+											+icon('flame')
 								
-								.product-card__name-box
-									a(href="#" itemprop="name").product-card__name
-										.product-card__name-value= item.tilte
-									
-										.product-card__rating-wrap
-											.product-card__rating
-												div(itemprop='aggregateRating' itemscope='itemscope' itemtype='https://schema.org/AggregateRating' style='display:none;')
-													meta(itemprop='ratingValue' content='4.8')
-													meta(itemprop='ratingCount' content='288')
-													meta(itemprop='reviewCount' content='288')
-													meta(itemprop='worstRating' content='0')
-													meta(itemprop='bestRating' content='5')
-												+crystalRating('4,5')
+								a(href="#" alt=item.tilte).product-card__border
+									span.product-card__img
+										img(itemprop="image" src=item.path alt="alt")
+							
+							
+							.product-card__price
+								.product-card__actions
+									if item.iconActive === '0'
+										a(href="#").product-card__action.active
+											+icon('favourites')
+										a(href="#").product-card__action
+											+icon('compare')
+									else if item.iconActive === '1'
+										a(href="#").product-card__action
+											+icon('favourites')
+										a(href="#").product-card__action.active
+											+icon('compare')
+									else if item.iconActive == false
+										a(href="#").product-card__action
+											+icon('favourites')
+										a(href="#").product-card__action
+											+icon('compare')
 
-										.product-card__info.info-product-card
-											.info-product-card__row Артикул: 002266
-
-									button(type="button").btn.btn-sm.btn-buy.product-card__buy +добавить товар в заказ
+								a(href="#").product-price= item.price
+									if item.sale != ''
+										.product-price-sale= item.sale
 								
-								a(href="#").product-card__description 
-									.product-card__description-row Напряжение акк.: 12 В
-									.product-card__description-row Крутящий момент: 30 Н·м
-									.product-card__description-row Емкость аккумулятора: 2 А·ч
-									.product-card__description-row Тип аккумулятора Li-Ion
-									.product-card__description-row Кол-во аккумуляторов: 2 шт.
-									.product-card__description-row Вес 1.2 кг
+								if item.sbers
+									a(href="#").product-bonus
+										.product-bonus__val= item.sbers
+										+icon('bonus')
+							
+							.product-card__name-box
+								a(href="#" itemprop="name").product-card__name
+									.product-card__name-value= item.tilte
+								
+									.product-card__rating-wrap
+										.product-card__rating
+											div(itemprop='aggregateRating' itemscope='itemscope' itemtype='https://schema.org/AggregateRating' style='display:none;')
+												meta(itemprop='ratingValue' content='4.8')
+												meta(itemprop='ratingCount' content='288')
+												meta(itemprop='reviewCount' content='288')
+												meta(itemprop='worstRating' content='0')
+												meta(itemprop='bestRating' content='5')
+											+crystalRating('4,5')
+
+									.product-card__info.info-product-card
+										.info-product-card__row Артикул: 002266
+
+								button(type="button").btn.btn-sm.btn-buy.product-card__buy +добавить товар в заказ
+							
+							a(href="#").product-card__description 
+								.product-card__description-row Напряжение акк.: 12 В
+								.product-card__description-row Крутящий момент: 30 Н·м
+								.product-card__description-row Емкость аккумулятора: 2 А·ч
+								.product-card__description-row Тип аккумулятора Li-Ion
+								.product-card__description-row Кол-во аккумуляторов: 2 шт.
+								.product-card__description-row Вес 1.2 кг
 
 					if pageIndex == 'cart_004'
 						.cart-content__subtitle Недоступны для заказа
 
 						- var hiddenItem = {path: 'img/page-brands/perf/2.jpg', billet: '', price: '12 599 ₽', sale: '', sbers: '', tilte: 'Перфоратор DeWalt D25133K', aval: false, pullOut: true, analog: true, iconActive: false};
 
-						div(class=hiddenItem.analog && hiddenItem.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : hiddenItem.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Offer")
-								label.light-label
-									input(type="checkbox" name="in-cart-check" class="light-label__input")
-									span.light-label__check
-										+icon('check')
+						div(class=hiddenItem.analog && hiddenItem.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : hiddenItem.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Product")
+							div(style='display:none;')
+								meta(itemprop='model' content='Makita TD 110 DZ')
+								meta(itemprop='sku' content='002266')
+								span(itemprop='name')= item.tilte
+								meta(itemprop='image' content="img/"+path+(i+start)+".jpg")
+								span(itemprop='description') Напряжение акк.: 12 В
+								span(itemprop='description') Крутящий момент: 30 Н·м
+								span(itemprop='description') Емкость аккумулятора: 2 А·ч
+								span(itemprop='description') Тип аккумулятора Li-Ion
+								span(itemprop='description') Кол-во аккумуляторов: 2 шт.
+								span(itemprop='description') Вес 1.2 кг
+								span(itemprop='description') Напряжение акк.: 12 В
+								span(itemprop='description') Напряжение акк.: 12 В
+								div(itemprop='aggregateRating' itemscope='' itemtype='https://schema.org/AggregateRating')
+									span(itemprop='ratingValue') 3.5
+									span(itemprop='reviewCount') 11
+									span(itemprop='worstRating') 1
+									span(itemprop='bestRating') 5
 
-								button(type="button").product-card__delete
-									+icon('remove')
-								
-								.product-card__img-wrap
-									if hiddenItem.billet != ''
-										div(class=hiddenItem.billet == "акция" || hiddenItem.billet == "скидка" ? "billet billet--action" : hiddenItem.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
-											.billet__value= hiddenItem.billet
-											
-											if hiddenItem.billet == "акция" || hiddenItem.billet == "скидка"
-												+icon('percents')
-											if hiddenItem.billet == "уценка"
-												+icon('attention')
-											if hiddenItem.billet == "Новинка"
-												+icon('flame')
-									
-									a(href="#" alt=hiddenItem.tilte).product-card__border
-										span.product-card__img
-											img(src=hiddenItem.path alt="alt")
-								
-								
-								.product-card__price
-									.product-card__actions
-										if hiddenItem.iconActive === '0'
-											a(href="#").product-card__action.active
-												+icon('favourites')
-											a(href="#").product-card__action
-												+icon('compare')
-										else if hiddenItem.iconActive === '1'
-											a(href="#").product-card__action
-												+icon('favourites')
-											a(href="#").product-card__action.active
-												+icon('compare')
-										else if hiddenItem.iconActive == false
-											a(href="#").product-card__action
-												+icon('favourites')
-											a(href="#").product-card__action
-												+icon('compare')
+							div(itemprop='offers' itemscope='' itemtype='https://schema.org/Offer')
+								span(style='display:none;' itemprop='price' content=item.price.slice(0, -2))= item.price.slice(0, -2)
+								span(style='display:none;' itemprop='priceCurrency' content='RUB') $
+								div(style='display:none;')
+									link(itemprop='availability' href='https://schema.org/InStock')
+									|  In stock
+							label.light-label
+								input(type="checkbox" name="in-cart-check" class="light-label__input")
+								span.light-label__check
+									+icon('check')
 
-									a(href="#").product-price= hiddenItem.price
-										if hiddenItem.sale != ''
-											.product-price-sale= hiddenItem.sale
-									meta(itemprop="price" content=hiddenItem.price)
-									meta(itemprop="priceCurrency" content="RUB")
-									
-									if hiddenItem.sbers
-										a(href="#").product-bonus
-											.product-bonus__val= item.sbers
-											+icon('bonus')
+							button(type="button").product-card__delete
+								+icon('remove')
+							
+							.product-card__img-wrap
+								if hiddenItem.billet != ''
+									div(class=hiddenItem.billet == "акция" || hiddenItem.billet == "скидка" ? "billet billet--action" : hiddenItem.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
+										.billet__value= hiddenItem.billet
+										
+										if hiddenItem.billet == "акция" || hiddenItem.billet == "скидка"
+											+icon('percents')
+										if hiddenItem.billet == "уценка"
+											+icon('attention')
+										if hiddenItem.billet == "Новинка"
+											+icon('flame')
 								
-								.product-card__name-box
-									a(href="#" itemprop="name").product-card__name
-										.product-card__name-value= hiddenItem.tilte
-									
-										.product-card__rating-wrap
-											.product-card__rating
-												+crystalRating('4,5')
+								a(href="#" alt=hiddenItem.tilte).product-card__border
+									span.product-card__img
+										img(src=hiddenItem.path alt="alt")
+							
+							
+							.product-card__price
+								.product-card__actions
+									if hiddenItem.iconActive === '0'
+										a(href="#").product-card__action.active
+											+icon('favourites')
+										a(href="#").product-card__action
+											+icon('compare')
+									else if hiddenItem.iconActive === '1'
+										a(href="#").product-card__action
+											+icon('favourites')
+										a(href="#").product-card__action.active
+											+icon('compare')
+									else if hiddenItem.iconActive == false
+										a(href="#").product-card__action
+											+icon('favourites')
+										a(href="#").product-card__action
+											+icon('compare')
 
-									if hiddenItem.billet != ''
-										a(href="#" class=hiddenItem.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy") Купить
+								a(href="#").product-price= hiddenItem.price
+									if hiddenItem.sale != ''
+										.product-price-sale= hiddenItem.sale
+								
+								if hiddenItem.sbers
+									a(href="#").product-bonus
+										.product-bonus__val= item.sbers
+										+icon('bonus')
+							
+							.product-card__name-box
+								a(href="#" itemprop="name").product-card__name
+									.product-card__name-value= hiddenItem.tilte
+								
+									.product-card__rating-wrap
+										.product-card__rating
+											+crystalRating('4,5')
+
+								if hiddenItem.billet != ''
+									a(href="#" class=hiddenItem.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy") Купить
+								else if hiddenItem.order
+									a(href="#").btn.btn-sm.btn-blue.product-card__buy заказать
+								
+								else if hiddenItem.analog
+									a(href="#").btn.btn-sm.btn-gray.product-card__buy аналог
+
+								else
+									a(href="#").btn.btn-sm.product-card__buy Купить
+
+								.product-card__info.info-product-card
+									if hiddenItem.order && hiddenItem.analog
+										.info-product-card__row Артикул: 002266
+										.info-product-card__row
+											.info-product-card__missing #[span Товар] временно отсутствует
+										.info-product-card__row
+											a(href="#").info-product-card__oneclick Подобрать аналог
 									else if hiddenItem.order
-										a(href="#").btn.btn-sm.btn-blue.product-card__buy заказать
+										.info-product-card__row Артикул: 002266
+										.info-product-card__row
+											.info-product-card__missing #[span Товар] временно отсутствует
+										.info-product-card__row
+											a(href="#").info-product-card__oneclick Купить в 1 клик
 									
 									else if hiddenItem.analog
-										a(href="#").btn.btn-sm.btn-gray.product-card__buy аналог
-
+										.info-product-card__row Артикул: 002266
+										.info-product-card__row Нет в наличии, товар снят с производства 
+									
 									else
-										a(href="#").btn.btn-sm.product-card__buy Купить
+										.info-product-card__row Артикул: 002266
+										.info-product-card__row
+												.info-product-card__aval
+													.info-product-card__avalkey В наличии
+													a(href="#").info-product-card__avalvalue
+														span.info-product-card__in= "В "
+														| #{item.aval}
+										.info-product-card__row
+											a(href="#").info-product-card__oneclick Купить в 1 клик
 
-									.product-card__info.info-product-card
-										if hiddenItem.order && hiddenItem.analog
-											.info-product-card__row Артикул: 002266
-											.info-product-card__row
-												.info-product-card__missing #[span Товар] временно отсутствует
-											.info-product-card__row
-												a(href="#").info-product-card__oneclick Подобрать аналог
-										else if hiddenItem.order
-											.info-product-card__row Артикул: 002266
-											.info-product-card__row
-												.info-product-card__missing #[span Товар] временно отсутствует
-											.info-product-card__row
-												a(href="#").info-product-card__oneclick Купить в 1 клик
-										
-										else if hiddenItem.analog
-											.info-product-card__row Артикул: 002266
-											.info-product-card__row Нет в наличии, товар снят с производства 
-										
-										else
-											.info-product-card__row Артикул: 002266
-											.info-product-card__row
-													.info-product-card__aval
-														.info-product-card__avalkey В наличии
-														a(href="#").info-product-card__avalvalue
-															span.info-product-card__in= "В "
-															| #{item.aval}
-											.info-product-card__row
-												a(href="#").info-product-card__oneclick Купить в 1 клик
+							a(href="#").product-card__description 
+								.product-card__description-row Напряжение акк.: 12 В
+								.product-card__description-row Крутящий момент: 30 Н·м
+								.product-card__description-row Емкость аккумулятора: 2 А·ч
+								.product-card__description-row Тип аккумулятора Li-Ion
+								.product-card__description-row Кол-во аккумуляторов: 2 шт.
+								.product-card__description-row Вес 1.2 кг
 
-								a(href="#").product-card__description 
-									.product-card__description-row Напряжение акк.: 12 В
-									.product-card__description-row Крутящий момент: 30 Н·м
-									.product-card__description-row Емкость аккумулятора: 2 А·ч
-									.product-card__description-row Тип аккумулятора Li-Ion
-									.product-card__description-row Кол-во аккумуляторов: 2 шт.
-									.product-card__description-row Вес 1.2 кг
-
-								.product-card__bottom
+							.product-card__bottom

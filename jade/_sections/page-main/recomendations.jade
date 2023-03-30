@@ -6,95 +6,96 @@ section.page-main-sect.hits.recomendations
 		- cards = [{billet: 'Новинка', price: '8 390 ₽', sale: '', sbers: '99', tilte: 'Вентилятор аккумуляторный Makita DCF 102 Z', aval: '6 магазинах', iconActive: '0'}, {billet: '', price: '22 990 ₽', sale: '', sbers: '230', tilte: 'Мойка высокого давления Karcher K 4 Compact *EU 1.637-500.0', aval: '', iconActive: false, order: true}, {billet: 'уценка', price: '6 568 ₽', sale: '7 888 ₽', sbers: '79', tilte: 'Набор инструмента Арсенал (C) 82 пр. 8144600', aval: '1 магазине', iconActive: false}, {billet: 'акция', price: '8 990 ₽', sale: '12 220 ₽', sbers: '90', tilte: 'Генератор бензиновый Elitech БЭС 1200 P', aval: '7 магазинах', iconActive: '0'}, {billet: '', price: '115 970 ₽', sale: '', sbers: '1160', tilte: 'Плиткорезный станок Wandeli QX-ZD-1200 Laser с автоматикой', aval: '', iconActive: false, order: true}, {billet: '', price: '9 990 ₽', sale: '', sbers: '230', tilte: 'Аккумуляторная дрель-шуруповерт DeWalt DCD708D2T', aval: '13 магазинах', iconActive: '1'}, {billet: '', price: '10 990 ₽', sale: '', sbers: '100', tilte: 'Нивелир оптический Condtrol Spektra 32 2-3-048', aval: '4 магазине', iconActive: false}, {billet: '', price: '2 260 ₽', sale: '', sbers: '', tilte: 'Пассатижи 180мм Felo 59001840', aval: false, analog: true, iconActive: false}];
 		
 		.wrapper-flex.product-cards
-			each item, i in cards
-				div(class=item.analog ? "product-card product-card--analog" : "product-card")
-					.product-card__img-wrap
-						if item.billet != ''
-							div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : item.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
-								.billet__value= item.billet
+			+productCard(cards, 'recomended/')
+			// each item, i in cards
+			// 	div(class=item.analog ? "product-card product-card--analog" : "product-card")
+			// 		.product-card__img-wrap
+			// 			if item.billet != ''
+			// 				div(class=item.billet == "акция" || item.billet == "скидка" ? "billet billet--action" : item.billet == "Новинка" ? "billet billet--new" : "billet billet--markdown")
+			// 					.billet__value= item.billet
 
-								if item.billet == "акция" || item.billet == "скидка"
-									+icon('percents')
-								if item.billet == "уценка"
-									+icon('attention')
-								if item.billet == "Новинка"
-									+icon('flame')
+			// 					if item.billet == "акция" || item.billet == "скидка"
+			// 						+icon('percents')
+			// 					if item.billet == "уценка"
+			// 						+icon('attention')
+			// 					if item.billet == "Новинка"
+			// 						+icon('flame')
 						
-						a(href="#").product-card__border
-							span.product-card__img
-								img(src="img/recomended/"+(i+1)+".jpg" alt="alt")
+			// 			a(href="#").product-card__border
+			// 				span.product-card__img
+			// 					img(src="img/recomended/"+(i+1)+".jpg" alt="alt")
 					
 					
-					.product-card__price
-						.product-card__actions
-							if item.iconActive === '0'
-								a(href="#").product-card__action.active
-									+icon('favourites')
-								a(href="#").product-card__action
-									+icon('compare')
-							if item.iconActive === '1'
-								a(href="#").product-card__action
-									+icon('favourites')
-								a(href="#").product-card__action.active
-									+icon('compare')
-							if item.iconActive === false
-								a(href="#").product-card__action
-									+icon('favourites')
-								a(href="#").product-card__action
-									+icon('compare')
+			// 		.product-card__price
+			// 			.product-card__actions
+			// 				if item.iconActive === '0'
+			// 					a(href="#").product-card__action.active
+			// 						+icon('favourites')
+			// 					a(href="#").product-card__action
+			// 						+icon('compare')
+			// 				if item.iconActive === '1'
+			// 					a(href="#").product-card__action
+			// 						+icon('favourites')
+			// 					a(href="#").product-card__action.active
+			// 						+icon('compare')
+			// 				if item.iconActive === false
+			// 					a(href="#").product-card__action
+			// 						+icon('favourites')
+			// 					a(href="#").product-card__action
+			// 						+icon('compare')
 
-						a(href="#").product-price= item.price
-							if item.sale != ''
-								.product-price-sale= item.sale
-						if item.sbers != ""
-							a(href="#").product-bonus
-								.product-bonus__val= item.sbers
-								+icon('bonus')
+			// 			a(href="#").product-price= item.price
+			// 				if item.sale != ''
+			// 					.product-price-sale= item.sale
+			// 			if item.sbers != ""
+			// 				a(href="#").product-bonus
+			// 					.product-bonus__val= item.sbers
+			// 					+icon('bonus')
 					
-					a(href="#").product-card__name= item.tilte
+			// 		a(href="#").product-card__name= item.tilte
 					
-					a(href="#").product-card__description 
-						.product-card__description-row Напряжение акк.: 12 В
-						.product-card__description-row Крутящий момент: 30 Н·м
-						.product-card__description-row Емкость аккумулятора: 2 А·ч
-						.product-card__description-row Тип аккумулятора Li-Ion
-						.product-card__description-row Кол-во аккумуляторов: 2 шт.
-						.product-card__description-row Вес 1.2 кг
+			// 		a(href="#").product-card__description 
+			// 			.product-card__description-row Напряжение акк.: 12 В
+			// 			.product-card__description-row Крутящий момент: 30 Н·м
+			// 			.product-card__description-row Емкость аккумулятора: 2 А·ч
+			// 			.product-card__description-row Тип аккумулятора Li-Ion
+			// 			.product-card__description-row Кол-во аккумуляторов: 2 шт.
+			// 			.product-card__description-row Вес 1.2 кг
 
-					.product-card__bottom
-						.product-card__rating-wrap
-							.product-card__rating
-								+crystalRating('4,5')
-						if item.billet != ''
-							a(href="#" class=item.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy") Купить
-						else if item.order
-							a(href="#").btn.btn-sm.btn-blue.product-card__buy заказать
+			// 		.product-card__bottom
+			// 			.product-card__rating-wrap
+			// 				.product-card__rating
+			// 					+crystalRating('4,5')
+			// 			if item.billet != ''
+			// 				a(href="#" class=item.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy") Купить
+			// 			else if item.order
+			// 				a(href="#").btn.btn-sm.btn-blue.product-card__buy заказать
 						
-						else if item.analog
-							a(href="#").btn.btn-sm.btn-gray.product-card__buy аналог
+			// 			else if item.analog
+			// 				a(href="#").btn.btn-sm.btn-gray.product-card__buy аналог
 
-						else
-							a(href="#").btn.btn-sm.product-card__buy Купить
+			// 			else
+			// 				a(href="#").btn.btn-sm.product-card__buy Купить
 
-						.product-card__info.info-product-card
-							if item.order
-								.info-product-card__row
-									.info-product-card__missing #[span Товар] временно отсутствует
-								.info-product-card__row
-									a(href="#").info-product-card__oneclick Купить в 1 клик
+			// 			.product-card__info.info-product-card
+			// 				if item.order
+			// 					.info-product-card__row
+			// 						.info-product-card__missing #[span Товар] временно отсутствует
+			// 					.info-product-card__row
+			// 						a(href="#").info-product-card__oneclick Купить в 1 клик
 							
-							else if item.analog
-								.info-product-card__row Нет в наличии, товар снят с производства 
+			// 				else if item.analog
+			// 					.info-product-card__row Нет в наличии, товар снят с производства 
 							
-							else
-								.info-product-card__row
-										.info-product-card__aval
-											.info-product-card__avalkey В наличии
-											a(href="#").info-product-card__avalvalue
-												span.info-product-card__in= "В "
-												| #{item.aval}
-								.info-product-card__row
-									a(href="#").info-product-card__oneclick Купить в 1 клик
+			// 				else
+			// 					.info-product-card__row
+			// 							.info-product-card__aval
+			// 								.info-product-card__avalkey В наличии
+			// 								a(href="#").info-product-card__avalvalue
+			// 									span.info-product-card__in= "В "
+			// 									| #{item.aval}
+			// 					.info-product-card__row
+			// 						a(href="#").info-product-card__oneclick Купить в 1 клик
 
 		.wrapper
 			.cards-more

@@ -322,7 +322,12 @@
 			document.body.classList.remove('menu-visible');
 			panel.close();
 			panel.reset();
-			document.documentElement.classList.toggle('lock');
+			if(document.body.classList.contains('profile-nav-visible')){
+				document.documentElement.classList.add('lock');
+			}else{
+				document.documentElement.classList.remove('lock');
+
+			}
 		}
 		
 		//END profile-menu toggle
@@ -334,7 +339,12 @@
 			document.body.classList.remove('profile-nav-visible');
 			panel.close();
 			panel.reset();
-			document.documentElement.classList.toggle('lock');
+
+			if(document.body.classList.contains('menu-visible')){
+				document.documentElement.classList.add('lock');
+			}else{
+				document.documentElement.classList.remove('lock');
+			}
 		}
 		//END menu toggle
 
@@ -392,6 +402,8 @@
 
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
+
+
 		
 		// in cart products checkboxes
 		if(document.querySelector('.cart-content__body') !== null){
@@ -1103,12 +1115,12 @@
 							}
 
 							inputMax.addEventListener('change', function() {
-								slider.noUiSlider.set([null, +inputMax.value]);
+								slider.noUiSlider.set([null, +inputMax.value.replace(' ', '')]);
 								// this.style.width = ((this.value.length + 1) * widthKeff) + 'px';//для динамической ширины инпутов
 							});
 							inputMin.addEventListener('change', function() {
 								console.log('min change!')
-								slider.noUiSlider.set([+inputMin.value, null]);
+								slider.noUiSlider.set([+inputMin.value.replace(' ', ''), null]);
 								// this.style.width = ((this.value.length + 1) * widthKeff) + 'px';//для динамической ширины инпутов
 							});
 							readySlidersArr.push(noUi);
