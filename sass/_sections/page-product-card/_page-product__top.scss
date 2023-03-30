@@ -587,7 +587,16 @@
 		}
 	}
 	
+	&:hover{
+		.product-action__name {
+			opacity: 1;
+		}	
+		.icon {
+			color: $text;
+		}
+	}
 	.icon {
+		transition: color .2s;
 		font-size: rem(22);
 		color: #A9A9A9;
 	}
@@ -595,7 +604,8 @@
 .product-action__name {
 	margin-left: 5px;
 	opacity: .4;
-
+	transition: opacity .2s;
+	
 	@include max-screen($sm){
 		display: none;
 	}

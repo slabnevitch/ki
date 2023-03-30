@@ -64,6 +64,12 @@
 				display: block;
 			}
 		}
+		&--file{
+			margin: 20px 0;
+			width: 100%;
+			text-align: center;
+			cursor: pointer;
+		}
 	}
 }
 .form__input {

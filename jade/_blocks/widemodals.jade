@@ -50,7 +50,9 @@ div(class=pageIndex=='product_022' ? "widemodal" : "widemodal modal-hide")
 											a(href="img/page-product-card/baguette.jpg").review__photo._fit
 												img._fit-img(src="img/review/thumbs/"+(i+1)+".jpg" alt="alt")
 				.cards-more
-					a(href="#" data-review-photos).cards-more__link + Прикрепить файл/фото
+					label.form__label.form__label--file
+						input(type="file" name="" class="form__check")
+						span.form__policy + Прикрепить файл/фото
 
 				.addreview__field.addreview__field--bottom
 					a(href="#").btn.btn-lg.btn-bonus Оставить отзыв

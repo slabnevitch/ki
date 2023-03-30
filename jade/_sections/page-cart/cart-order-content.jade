@@ -36,8 +36,9 @@
 					// textarea.form__area(type='text' name='question')
 					input.form__input.form__input--bg(autocomplete="off" type='text' name='phone' placeholder='Телефон*')
 
-				.cards-more
-					a(href="#").cards-more__link + Прикрепить карточку предприятия
+				label.form__label.form__label--file
+					input(type="file" name="" class="form__check")
+					span.form__policy + Прикрепить карточку предприятия
 			
 			else if pageIndex == 'cart_007' || pageIndex == 'cart_012' || pageIndex == 'cart_012-1' || pageIndex == 'cart_013'
 				.form__row-title.form__row-title--required Покупатель*

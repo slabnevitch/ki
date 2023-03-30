@@ -36,7 +36,12 @@
 					
 					.profile-user__note Ваша миниатюра на сайте
 			
-			a(href="#").profile-user__add-photo + Прикрепить фото #[span профиля]
+			//- a(href="#").profile-user__add-photo + Прикрепить фото #[span профиля]
+			.profile-user__add-photo
+				label.form__label.form__label--file
+					input.form__check(type='file' name='')
+					span.form__policy + Прикрепить фото #[span профиля]
+
 
 
 	form(action="#" class="form")

@@ -25,7 +25,7 @@
 					each item, i in cards
 						div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : item.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Offer")
 								label.light-label
-									input(type="checkbox" name="name" class="light-label__input" checked=pageIndex == 'cart_003' ? true : false)
+									input(type="checkbox" name="in-cart-check" class="light-label__input" checked=pageIndex == 'cart_003' ? true : false)
 									span.light-label__check
 										+icon('check')
 
@@ -218,7 +218,7 @@
 
 						div(class=hiddenItem.analog && hiddenItem.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : hiddenItem.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Offer")
 								label.light-label
-									input(type="checkbox" name="name" class="light-label__input" disabled)
+									input(type="checkbox" name="in-cart-check" class="light-label__input")
 									span.light-label__check
 										+icon('check')
 

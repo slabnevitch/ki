@@ -6761,6 +6761,11 @@
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
                         </svg>
                   </button>
+                  <button type="button" data-mob-search-close class="search-header__close button-close">
+                        <svg class="icon icon-ctlg-close ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+                        </svg>
+                  </button>
                 </form><a href="#" class="header__account">
                       <svg class="icon icon-user ">
                         <use xlink:href="img/icons-svg/symbol/sprite.svg#user"></use>
@@ -7067,6 +7072,48 @@
                             </button>
                           </label>
                           <div class="ctlg-filter__labels ctlg-filter__labels--brands">
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="brand" checked class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">AEG<span class="ctlg-filter__count">12</span></span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="brand" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">AL-KO<span class="ctlg-filter__count">5</span></span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="brand" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">BLACK+DECKER<span class="ctlg-filter__count">30</span></span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="brand" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">Bosch<span class="ctlg-filter__count">6</span></span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="brand" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">Bosch Professional<span class="ctlg-filter__count">11</span></span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="brand" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">Champion<span class="ctlg-filter__count">2</span></span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="brand" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">DeWALT<span class="ctlg-filter__count">28</span></span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="brand" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">Elitech<span class="ctlg-filter__count">41</span></span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="brand" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">FIT<span class="ctlg-filter__count"></span></span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="brand" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">Gardena<span class="ctlg-filter__count">5</span></span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="brand" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">Gesipa<span class="ctlg-filter__count">8</span></span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="brand" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">GreenWorks<span class="ctlg-filter__count">8</span></span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="brand" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">HIKOKI<span class="ctlg-filter__count">7</span></span>
+                            </label>
+                            <label class="ctlg-filter__label">
+                              <input type="checkbox" name="brand" class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">Hitachi<span class="ctlg-filter__count">13</span></span>
+                            </label>
                             <label class="ctlg-filter__label">
                               <input type="checkbox" name="brand" checked class="ctlg-filter__checkbox"><span class="ctlg-filter__false-checkbox"></span><span class="ctlg-filter__value">AEG<span class="ctlg-filter__count">12</span></span>
                             </label>
@@ -7453,7 +7500,22 @@
                                       <div class="crystal-rating__value">4,5</div>
                                     </div>
                               </div>
-                            </div><a href="#" class="btn btn-sm product-card__buy">Купить</a>
+                            </div>
+                            <button class="product-card__buy btn btn-sm btn-sm btn-buy clicked"><span class="btn__val">Купить</span>
+                              <div data-min="0" data-max="100" class="counter"><span class="counter__button counter-minus">
+                                      <svg class="icon icon-minus ">
+                                        <use xlink:href="img/icons-svg/symbol/sprite.svg#minus"></use>
+                                      </svg></span>
+                                <div class="counter__block">
+                                  <input autocomplete="off" type="hidden" name="name" value="1">
+                                  <div class="counter__count">1</div>
+                                  <div class="counter__measures">шт</div>
+                                </div><span class="counter__button counter-plus">
+                                      <svg class="icon icon-plus ">
+                                        <use xlink:href="img/icons-svg/symbol/sprite.svg#plus"></use>
+                                      </svg></span>
+                              </div>
+                            </button>
                             <div class="product-card__info info-product-card">
                               <div class="info-product-card__row">Артикул: 002266</div>
                               <div class="info-product-card__row">
@@ -9930,7 +9992,7 @@
           </div>
           <div class="form__row">
             <label class="form__label">
-              <textarea type="text" name="question" placeholder="Опишите ваши впечатления" class="form__area"></textarea>
+              <textarea type="text" name="question" placeholder="Укажите ссылку на товар" class="form__area"></textarea>
             </label>
           </div>
           <button type="submit" class="btn btn-lg btn-order">Отправить</button>
@@ -9945,7 +10007,7 @@
       </button>
       <div class="side-modal__inner">
         <div class="side-modal__title">Отмена заказа</div>
-        <div class="side-modal__text">В ближайшее время с вами<br>свяжется наш менеджер<br>для уточнения деталей</div>
+        <div class="side-modal__text">В ближайшее время с вами свяжется наш менеджер для уточнения деталей</div>
         <form action="#" class="form">
           <div class="form__row">
             <div class="form__row-title">Причина отмены заказа</div>
@@ -9965,7 +10027,7 @@
       </button>
       <div class="side-modal__inner">
         <div class="side-modal__title">Возврат заказа</div>
-        <div class="side-modal__text">В ближайшее время с вами<br>свяжется наш менеджер<br>для уточнения деталей</div>
+        <div class="side-modal__text">В ближайшее время с вами свяжется наш менеджер для уточнения деталей</div>
         <form action="#" class="form">
           <div class="form__row">
             <div class="form__row-title">Причина возврата заказа</div>
@@ -10208,7 +10270,6 @@
             </div>
             <div class="cards-more"><a href="#" data-review-photos class="cards-more__link">+ Прикрепить файл/фото</a></div>
             <div class="addreview__field addreview__field--bottom"><a href="#" class="btn btn-lg btn-bonus">Оставить отзыв</a>
-              <div class="form__note">Нажимая “Оставить отзыв”, я даю согласие на <a href="#">обработку персональных данных</a></div>
             </div>
           </form>
           <div class="addreview__product">

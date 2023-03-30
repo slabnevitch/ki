@@ -37,7 +37,10 @@
 								
 								.profile-user__note Ваша миниатюра на сайте
 						
-						a(href="#").profile-user__add-photo + Прикрепить фото #[span профиля]
+						.profile-user__add-photo
+							label.form__label.form__label--file
+								input.form__check(type='file' name='')
+								span.form__policy + Прикрепить фото #[span профиля]
 
 			.profile-availables
 				.profile-available
@@ -68,6 +71,9 @@
 			.profile-alert__text Мы отправили вам письмо с подтверждением
 				br
 				| на nik_loba4hev@gmail.com
+			
+				.profile-alert__footer
+					a(href="#").btn.btn-order.btn-lg.btn-red отправить повторно
 	
 	if pageIndex == 'profile_007'
 		.profile-alert.profile-alert--success

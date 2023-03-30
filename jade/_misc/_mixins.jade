@@ -306,7 +306,21 @@ mixin productCard(cards, path, start = 1, slide = false)
 					.product-card__rating-wrap
 						.product-card__rating
 							+crystalRating('4,5')
-					if item.billet != ''
+
+					if item.counter == true
+						button.product-card__buy.btn.btn-sm.btn-sm.btn-buy.clicked
+							span.btn__val Купить
+							.counter(data-min="0" data-max="100")
+								span.counter__button.counter-minus
+									+icon('minus')
+								.counter__block
+									input(autocomplete="off" type="hidden" name="name" value="1" )
+									.counter__count 1
+									.counter__measures шт
+								span.counter__button.counter-plus
+									+icon('plus')
+					
+					else if item.billet != ''
 						a(href="#" class=item.billet=="уценка"? "btn btn-sm btn-yellow product-card__buy" : "btn btn-sm product-card__buy") Купить
 					else if item.order
 						a(href="#").btn.btn-sm.btn-blue.product-card__buy заказать

@@ -28,6 +28,10 @@
 				document.body.classList.remove('search-results-opened');
 				document.body.classList.remove('covered');
 			}
+			if(document.body.classList.contains('catalog-availability-modal-visible')){
+				document.body.classList.remove('catalog-availability-modal-visible');
+				document.body.classList.remove('covered');
+			}
 
 		}
 		// ENDclick on cover
@@ -388,7 +392,45 @@
 
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
-		// alert(document.documentElement.classList);
+		
+		// in cart products checkboxes
+		if(document.querySelector('.cart-content__body') !== null){
+			var cartCheckboxes = document.querySelectorAll('input[name="in-cart-check"]'),
+				chekeArr = [],
+				cartContentActionLabel = document.querySelector('.cart-content__action-label');
+			
+			if(cartCheckboxes.length > 0){
+				for (var i = 0; i < cartCheckboxes.length; i++) {
+					if(cartCheckboxes[i].checked){
+						chekeArr.push(cartCheckboxes[i]);
+					}
+					cartCheckboxes[i].addEventListener('change', cartCheckboxesObservation);
+				}
+				labelTextRender(chekeArr.length);
+
+			}
+			function cartCheckboxesObservation(e) {
+				if(e.target.checked){
+					chekeArr.push(e.target);
+
+				}else{
+					chekeArr.pop();
+
+				}
+				labelTextRender(chekeArr.length);
+			}
+
+			function labelTextRender(arrLength) {
+				console.log(arrLength)
+				if(arrLength){
+					cartContentActionLabel.textContent = 'Удалить выбранное';
+				}else{
+					cartContentActionLabel.textContent = 'Удалить все';
+				}
+			}
+		}
+		//END in cart products checkboxes
+		
 		// catalog hover
 			if(document.querySelectorAll('.catalog-header__item') !== null){
 

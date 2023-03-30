@@ -4278,6 +4278,12 @@ textarea.input {
 .form__label--error .icon-attention {
   display: block;
 }
+.form__label--file {
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
 
 .form__input {
   box-sizing: border-box;
@@ -5963,6 +5969,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #003D9E;
 }
 .btn-buy .counter__block {
+  margin-top: 2px;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   display: -ms-flexbox;
@@ -15236,9 +15243,9 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2;
   pointer-events: none;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 959.98px) {
   .compare-cards:after {
-    width: 150px;
+    width: 50px;
   }
 }
 
@@ -18257,7 +18264,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 16px;
   }
 }
+.product-action:hover .product-action__name {
+  opacity: 1;
+}
+.product-action:hover .icon {
+  color: rgba(0, 0, 0, 0.8);
+}
 .product-action .icon {
+  transition: color 0.2s;
   font-size: 1.375rem;
   color: #A9A9A9;
 }
@@ -18265,6 +18279,7 @@ h1, h2, h3, h4, h5, h6 {
 .product-action__name {
   margin-left: 5px;
   opacity: 0.4;
+  transition: opacity 0.2s;
 }
 @media only screen and (max-width: 767.98px) {
   .product-action__name {
@@ -19027,15 +19042,18 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.75rem;
   line-height: 0.9375rem;
   color: rgba(0, 0, 0, 0.8);
-  opacity: 0.6;
+}
+.profile-user__add-photo:hover {
+  opacity: 0.4;
+}
+.profile-user__add-photo .form__label--file {
+  margin: 0;
+  text-align: left;
 }
 @media only screen and (max-width: 576px) {
-  .profile-user__add-photo span {
+  .profile-user__add-photo .form__label--file .form__policy span {
     display: none;
   }
-}
-.profile-user__add-photo:hover, .profile-user__add-photo:active, .profile-user__add-photo:focus {
-  opacity: 0.4;
 }
 
 .form__row-title .std-link {
@@ -19180,6 +19198,14 @@ h1, h2, h3, h4, h5, h6 {
 .profile-alert__top .icon-big-check {
   color: #003D9E;
   font-size: 15px;
+}
+.profile-alert__footer {
+  padding-top: 18px;
+}
+@media only screen and (max-width: 767.98px) {
+  .profile-alert__footer {
+    padding-top: 12px;
+  }
 }
 .profile-alert--error .profile-alert__title {
   color: #E63600;
