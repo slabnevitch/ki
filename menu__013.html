@@ -6760,6 +6760,11 @@
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-left"></use>
                         </svg>
                   </button>
+                  <button type="button" data-mob-search-close class="search-header__close button-close">
+                        <svg class="icon icon-ctlg-close ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#ctlg-close"></use>
+                        </svg>
+                  </button>
                 </form><a href="#" class="header__account">
                       <svg class="icon icon-user ">
                         <use xlink:href="img/icons-svg/symbol/sprite.svg#user"></use>
@@ -7957,7 +7962,7 @@
           </div>
           <div class="form__row">
             <label class="form__label">
-              <textarea type="text" name="question" placeholder="Опишите ваши впечатления" class="form__area"></textarea>
+              <textarea type="text" name="question" placeholder="Укажите ссылку на товар" class="form__area"></textarea>
             </label>
           </div>
           <button type="submit" class="btn btn-lg btn-order">Отправить</button>
@@ -7972,7 +7977,7 @@
       </button>
       <div class="side-modal__inner">
         <div class="side-modal__title">Отмена заказа</div>
-        <div class="side-modal__text">В ближайшее время с вами<br>свяжется наш менеджер<br>для уточнения деталей</div>
+        <div class="side-modal__text">В ближайшее время с вами свяжется наш менеджер для уточнения деталей</div>
         <form action="#" class="form">
           <div class="form__row">
             <div class="form__row-title">Причина отмены заказа</div>
@@ -7992,7 +7997,7 @@
       </button>
       <div class="side-modal__inner">
         <div class="side-modal__title">Возврат заказа</div>
-        <div class="side-modal__text">В ближайшее время с вами<br>свяжется наш менеджер<br>для уточнения деталей</div>
+        <div class="side-modal__text">В ближайшее время с вами свяжется наш менеджер для уточнения деталей</div>
         <form action="#" class="form">
           <div class="form__row">
             <div class="form__row-title">Причина возврата заказа</div>
@@ -8233,9 +8238,12 @@
                     </div>
               </div>
             </div>
-            <div class="cards-more"><a href="#" data-review-photos class="cards-more__link">+ Прикрепить файл/фото</a></div>
+            <div class="cards-more">
+              <label class="form__label form__label--file">
+                <input type="file" name="" class="form__check"><span class="form__policy">+ Прикрепить файл/фото</span>
+              </label>
+            </div>
             <div class="addreview__field addreview__field--bottom"><a href="#" class="btn btn-lg btn-bonus">Оставить отзыв</a>
-              <div class="form__note">Нажимая “Оставить отзыв”, я даю согласие на <a href="#">обработку персональных данных</a></div>
             </div>
           </form>
           <div class="addreview__product">
