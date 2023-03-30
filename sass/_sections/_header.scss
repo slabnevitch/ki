@@ -212,6 +212,7 @@
 		flex-direction: column;
 		width: 100%;
 		align-items: flex-start;
+		font-size: rem(16);
 	}
 }
 .loc-header__city-value {
@@ -223,12 +224,18 @@
 	@include max-screen($md){
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		width: 100%;
 	}
 
 	.icon{
 		color: $text;
 		font-size: 7px;
+
+		@include max-screen($md){
+			font-size: 9px;
+			
+		}
 		@include min-screen($md){
 			display: none;
 		}
@@ -246,6 +253,10 @@
 	}
 
 	button{
+		@include max-screen($md){
+			font-size: rem(16);
+			
+		}
 		@include min-screen($scale){
 			font-size: 16px;
 			line-height: 19px;

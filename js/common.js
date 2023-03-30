@@ -81,7 +81,7 @@
 
 		// location panel toggle
 			if(document.querySelector('.header') !== null){
-				if(targ.classList.contains('loc-header__selected') || targ.closest('.loc-header__selected') !== null || targ.classList.contains('loc-header__panel') || targ.closest('.loc-header__panel')){
+				if(targ.classList.contains('loc-header__selected') || targ.closest('.loc-header__selected') !== null){
 					
 					// mob-catalog panel close and reset
 						panel.close();
@@ -89,6 +89,9 @@
 
 					document.body.classList.toggle('loc-header-opened');
 					document.querySelector('.header').classList.remove('header-catalog-opened');//закрытие большого каталога 
+					fadeOut(document.querySelector('.header__catalog'), 900);
+					catalogFadeFlag = false;
+						
 						if(screen.width > 959.98){
 							coverHide();			
 						}else{
@@ -98,7 +101,6 @@
 					document.getElementById('header-location').classList.remove('opened');
 				}
 				if(targ.getAttribute('id') == 'city-list-opener'){
-					console.log('city-list-opener')
 					document.body.classList.add('cities-opened');
 					document.body.classList.remove('loc-header-opened');
 					coverShow();
@@ -112,6 +114,13 @@
 					document.body.classList.remove('cities-opened');
 					coverHide();			
 				}
+			}
+
+			if(targ.classList.contains('loc-header__yes') || targ.closest('.loc-header__yes')){
+				if(!document.querySelector('.header').classList.contains('header-catalog-opened')){
+					coverHide();
+				}
+				document.body.classList.remove('loc-header-opened');
 			}
 		// END location panel toggle
 
@@ -1241,7 +1250,7 @@
 				offset: [-15, 23],
 				arrow: false,
 				// trigger: 'click',
-			    placement: 'left-start',
+			    // placement: 'left-start',
 			    interactive: true
 			});
 		}
