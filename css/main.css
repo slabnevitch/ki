@@ -15665,6 +15665,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------END about----------------------*/
 /*--------------------all-actions----------------------*/
+@media only screen and (max-width: 767.98px) {
+  .main-slider--actions .swiper-pagination {
+    display: block;
+    position: absolute;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .main-slider--actions .swiper-pagination-bullet {
+    opacity: 1;
+    background-color: #fff;
+  }
+}
+.main-slider--actions .swiper-pagination-bullet-active {
+  background-color: #003D9E;
+}
+
 .all-actions {
   padding-bottom: 43px;
   padding-top: 59px;

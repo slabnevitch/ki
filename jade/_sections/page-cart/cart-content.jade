@@ -257,11 +257,11 @@
 
 						- var hiddenItem = {path: 'img/page-brands/perf/2.jpg', billet: '', price: '12 599 ₽', sale: '', sbers: '', tilte: 'Перфоратор DeWalt D25133K', aval: false, pullOut: true, analog: true, iconActive: false};
 
-						div(class=hiddenItem.analog && hiddenItem.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : hiddenItem.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Product")
+						div(class=hiddenItem.analog && hiddenItem.pullOut ? "product-card product-card--pullout product-card--analog" : hiddenItemhiddenItem.analog ? "product-card product-card--analog" : hiddenItem.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Product")
 							div(style='display:none;')
 								meta(itemprop='model' content='Makita TD 110 DZ')
 								meta(itemprop='sku' content='002266')
-								span(itemprop='name')= item.tilte
+								span(itemprop='name')= hiddenItem.tilte
 								meta(itemprop='image' content="img/"+path+(i+start)+".jpg")
 								span(itemprop='description') Напряжение акк.: 12 В
 								span(itemprop='description') Крутящий момент: 30 Н·м
@@ -278,7 +278,7 @@
 									span(itemprop='bestRating') 5
 
 							div(itemprop='offers' itemscope='' itemtype='https://schema.org/Offer')
-								span(style='display:none;' itemprop='price' content=item.price.slice(0, -2))= item.price.slice(0, -2)
+								span(style='display:none;' itemprop='price' content=hiddenItem.price.slice(0, -2))= hiddenItem.price.slice(0, -2)
 								span(style='display:none;' itemprop='priceCurrency' content='RUB') $
 								div(style='display:none;')
 									link(itemprop='availability' href='https://schema.org/InStock')

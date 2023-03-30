@@ -90,7 +90,7 @@ mixin crystalRating(rating, handler = false)
 mixin productCard(cards, path, start = 1, slide = false)
 	each item, i in cards
 		if slide == true
-			div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : item.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Offer").swiper-slide
+			div(class=item.analog && item.pullOut ? "product-card product-card--pullout product-card--analog" : item.analog ? "product-card product-card--analog" : item.pullOut ? "product-card product-card--pullout" : "product-card" itemscope="" itemtype="http://schema.org/Product").swiper-slide
 				
 				div(style='display:none;')
 					meta(itemprop='model' content='Makita TD 110 DZ')
@@ -163,10 +163,6 @@ mixin productCard(cards, path, start = 1, slide = false)
 							+icon('bonus')
 				
 				a(href="#" itemprop="name").product-card__name= item.tilte
-					meta(itemprop='model' content=item.tilte)
-					meta(itemprop='sku' content='trinket-12345')
-					div(itemprop='brand' itemtype='https://schema.org/Brand' itemscope='')
-						meta(itemprop='name' content='ACME')
 				
 				a(href="#").product-card__description 
 					.product-card__description-row Напряжение акк.: 12 В
