@@ -590,7 +590,7 @@
 		}
 
 		@include max-screen($xss){
-			height: prc(355, 568);
+			height: auto;
 			top: auto;
 			bottom: 0;
 			padding-top: 20px;	
@@ -613,11 +613,11 @@
 			margin-right: 0;
 			margin-bottom: 20px;
 			padding-bottom: prc(170,273);
-			max-width: 280px;	
+
 
 			@include max-screen($xss){
 				padding-bottom: 0;
-				height: 172px;						
+				// height: 172px;						
 			}
 		}
 		.address-list__content {
@@ -754,6 +754,17 @@
 	align-items: flex-start;
 	margin-bottom: 23px;
 }
+.address-list__items{
+	.address-list__img {
+		@include max-screen($xss){
+			width: auto;
+			height: 0;
+			flex: 0 0 50%;
+			padding-bottom: 50%;
+		}
+	}
+
+}
 .address-list__img {
 	height: 96px;
 	width: 96px;
@@ -771,10 +782,14 @@
 		z-index: 2;
 	}
 }
-._fit-img {}
+
 .address-list__content {
 	font-size: 12px;
 line-height: 15px;
+
+	@include max-screen(px){
+		flex: 1 1 auto;
+	}
 
 }
 .address-list__loc {

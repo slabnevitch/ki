@@ -203,6 +203,21 @@
 		}
 	}
 }
+.profile-personal__save{
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	max-width: none;
+	width: auto;
+	font-family: $inter;
+	background-color: transparent;
+	color: #A9A9A9;
+
+	&:hover, &:active{
+		border-color: transparent;
+	}
+	
+}
 .profile-personal__loyalty {
 	margin-bottom: 24px;
 }

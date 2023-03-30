@@ -5,5 +5,12 @@ section.brands-nav
 		.brands-nav__block
 			.brands-nav__title Навигация по брендам
 			nav.brands-nav__navigo
-				+menu('brands-alpabet', arr_en)
-				+menu('brands-alpabet', arr_ru)
+				ul.brands-alpabet
+					each item in arr_en
+						li(class=item == 'd' ? "brands-alpabet__item active" :  "brands-alpabet__item")
+							a(href="#").brands-alpabet__link= item
+				
+				ul.brands-alpabet
+					each item in arr_ru
+						li.brands-alpabet__item
+							a(href="#").brands-alpabet__link= item

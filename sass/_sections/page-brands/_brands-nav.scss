@@ -47,6 +47,13 @@
 	&:not(:last-child){
 		margin-right: 12px;
 	}
+
+	&.active{
+		.brands-alpabet__link {
+			font-weight: 700;
+			color: $text;
+		}
+	}
 }
 .brands-alpabet__link {
 	font-weight: 500;

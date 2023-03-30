@@ -108,6 +108,9 @@
 	@include max-screen($md){
 		flex: 0 0 100%;
 	}
+	@include min-screen($md){
+		padding-left: 16px;
+	}
 }
 .pupular-page-catalog__title{
 	margin-bottom: 15px;
@@ -124,6 +127,10 @@
 	padding: 9px 23px 10px 26px;
 	background: rgba($gray-l, .3);
 	border-radius: 4px;
+
+	@include max-screen($md){
+		display: none;
+	}
 }
 .catalog-filtered-tags__header {
 	margin-bottom: 8px;

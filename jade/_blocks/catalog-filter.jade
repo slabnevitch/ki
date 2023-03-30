@@ -106,13 +106,13 @@
 				
 				.ctlg-filter__labels.ctlg-filter__labels--brands
 					- var labels = [{name:'AEG', count: '12'},{name:'AL-KO', count: '5'},{name:'BLACK+DECKER', count: '30'},{name:'Bosch', count: '6'},{name:'Bosch Professional', count: '11'},{name:'Champion', count: '2'},{name:'DeWALT', count: '28'},{name:'Elitech', count: '41'},{name:'FIT', count: ''},{name:'Gardena', count: '5'},{name:'Gesipa', count: '8'},{name:'GreenWorks', count: '8'}, {name:'HIKOKI', count: '7'},{name:'Hitachi', count: '13'}];
-
-					each lab, ind in labels
-						label.ctlg-filter__label
-							input(type="checkbox" name="brand" checked=ind==0 ? true: false class="ctlg-filter__checkbox")
-							span.ctlg-filter__false-checkbox
-							span.ctlg-filter__value= lab.name
-								span.ctlg-filter__count= lab.count 
+					- for (var i=0; i < 2; i++)
+						each lab, ind in labels
+							label.ctlg-filter__label
+								input(type="checkbox" name="brand" checked=ind==0 ? true: false class="ctlg-filter__checkbox")
+								span.ctlg-filter__false-checkbox
+								span.ctlg-filter__value= lab.name
+									span.ctlg-filter__count= lab.count 
 
 				button.ctlg-filter__show-all Показать все
 

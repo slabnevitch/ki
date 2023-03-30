@@ -16,6 +16,22 @@
 		console.log(e.target);
 		var targ = e.target;
 
+		// click on cover
+		if(targ.classList.contains('body-cover')){
+			if(document.querySelector('.review-context-visible') !== null){
+				document.querySelector('.review-context-visible')
+					.classList.remove('review-context-visible');
+
+				document.body.classList.remove('covered');
+			}
+			if(document.body.classList.contains('search-results-opened')){
+				document.body.classList.remove('search-results-opened');
+				document.body.classList.remove('covered');
+			}
+
+		}
+		// ENDclick on cover
+
 		// open/close catalog-sort__select fstdropdown
 		if(targ.classList.contains('catalog-sort__select') || targ.closest('.catalog-sort__select') !== null){
 			// console.log(targ.closest('.catalog-sort__select').querySelector('.fstdiv').classList.contains('open'));
@@ -250,10 +266,10 @@
 		}
 		// END delivery-point-modal open/close
 		
-		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null && targ.closest('.address-list__item--contact') == null){
-			document.body.classList.remove('catalog-availability-modal-visible');
-			document.body.classList.add('address-modal-single-visible', 'map-with-modal', 'fullscreen-map-visible');
-		}
+		// if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null && targ.closest('.address-list__item--contact') == null){
+		// 	document.body.classList.remove('catalog-availability-modal-visible');
+		// 	document.body.classList.add('address-modal-single-visible', 'map-with-modal', 'fullscreen-map-visible');
+		// }
 		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null && targ.closest('.address-list__item--contact') !== null){
 			document.body.classList.remove('catalog-availability-modal-visible');
 			document.body.classList.add('shop-modal-visible', 'shop-map-visible');
