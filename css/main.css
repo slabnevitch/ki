@@ -12340,11 +12340,16 @@ h6 {
   bottom: 0;
   left: 0;
   right: auto;
-  height: 215px;
+  height: auto;
   max-width: none;
 }
 
-.side-modal.shop-modal .side-modal__close {
+.side-modal.shop-modal .side-modal__inner {
+  max-width: none;
+}
+
+.side-modal.shop-modal .side-modal__close,
+.side-modal.shop-modal .side-modal__back {
   display: none;
 }
 
@@ -12371,9 +12376,9 @@ h6 {
 
 .side-modal.shop-modal .address-list__content {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -webkit-flex: 1 1 -webkit-calc(100% - 88px - 14px);
+  -ms-flex: 1 1 calc(100% - 88px - 14px);
+  flex: 1 1 calc(100% - 88px - 14px);
 }
 
 .side-modal.shop-modal .btn {
@@ -19865,6 +19870,12 @@ h6 {
     max-width: 432px;
   }
 
+  .side-modal.shop-modal {
+    padding-top: 23px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   .side-modal__inner {
     max-width: 272px;
     padding-left: 0;
@@ -20004,6 +20015,22 @@ h6 {
 
   .all-actions__cards {
     padding-bottom: 19px;
+  }
+
+  .shops .address-side-modal__form {
+    max-width: 224px;
+  }
+
+  .shops .address-side-modal__select {
+    max-width: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+  .shops .side-modal__to-map {
+    display: none;
   }
 
   .shops__tiles .address-list__item {
@@ -20626,22 +20653,6 @@ h6 {
 
   .contacts-service-center {
     margin-top: -30px;
-  }
-
-  .shops .address-side-modal__form {
-    max-width: 224px;
-  }
-
-  .shops .address-side-modal__select {
-    max-width: 100%;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-  }
-
-  .shops .side-modal__to-map {
-    display: none;
   }
 
   .shops__tiles .address-list__item {
@@ -21975,6 +21986,15 @@ h6 {
     display: flex;
   }
 
+  .address-modal-single-visible .map-city-select {
+    max-width: -webkit-calc(432px - 48px);
+    max-width: calc(432px - 48px);
+    z-index: 15;
+    right: 24px;
+    left: auto;
+    width: 100%;
+  }
+
   .popup {
     bottom: 0;
     right: 0;
@@ -22047,16 +22067,16 @@ h6 {
     padding-right: 40px;
   }
 
-  .side-modal.availability-modal {
-    z-index: 14;
-  }
-
   .side-modal.availability-modal .side-modal__title {
     padding-right: 60px;
   }
 
   .side-modal.courier-side-modal {
     z-index: 14;
+  }
+
+  .side-modal.delivery-point-modal {
+    z-index: 15;
   }
 
   .side-modal .form .btn-order {
@@ -22070,6 +22090,10 @@ h6 {
   .side-modal__title {
     font-size: 16px;
     line-height: 19px;
+  }
+
+  .address-side-modal--single {
+    z-index: 15;
   }
 
   .widemodal__close {
@@ -24875,6 +24899,14 @@ h6 {
 
   .delivery-form__btn .icon {
     margin-bottom: 10px;
+  }
+
+  .address-modal-single-visible .map-city-select {
+    max-width: none;
+    z-index: 13;
+    right: 12px;
+    left: 12px;
+    width: auto;
   }
 
   .product-price {
