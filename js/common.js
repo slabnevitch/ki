@@ -12,6 +12,8 @@
 	// End ibg class
 
 	var catalogFadeFlag = false;
+	var mobCatalogState = false;
+
 	document.addEventListener('click', function(e){
 		console.log(e.target);
 		var targ = e.target;
@@ -350,6 +352,21 @@
 		}
 		//END menu toggle
 
+		// mob-catalog toggle
+		
+		if(targ.getAttribute('id') ==='mob-catalog-open' || targ.closest('#mob-catalog-open') !== null){
+			console.log(mobCatalogState)
+			if(!mobCatalogState){
+				panel.open();
+				mobCatalogState = true;
+			}else{
+				mobCatalogState = false;
+				panel.close();
+			}
+			console.log(mobCatalogState)
+		}
+		//END mob-catalog  toggle
+
 		// landing menu toggle
 		if(targ.getAttribute('id') ==='ld-nav-toggler' || targ.closest('#ld-nav-toggler') !== null){
 			document.body.classList.toggle('ld-nav-visible');
@@ -405,7 +422,7 @@
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
 		
-		alert(document.getElementById('multilevel-panel-open').outerHTML);
+		// alert(document.getElementById('multilevel-panel-open').outerHTML);
 
 
 		
