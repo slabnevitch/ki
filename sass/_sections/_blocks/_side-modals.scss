@@ -217,11 +217,14 @@
 				padding-bottom: 0;
 			}
 		}
-		.address-list__img{
+		.address-list__items .address-list__img{
 			@include max-screen($xss){
 				height: 88px;
 				width: 88px;
+				flex: 0 0 auto;
+				padding-bottom: 0;
 			}
+	
 		}
 	}
 	&.dime-modal{
@@ -595,9 +598,9 @@
 
 	&--single{
 
-		@include max-screen($md){
+		// @include max-screen($md){
 			z-index: 15;
-		}
+		// }
 
 		&:after{
 			@include max-screen($xss){

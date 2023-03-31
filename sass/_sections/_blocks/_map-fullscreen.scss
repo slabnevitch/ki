@@ -214,7 +214,8 @@
 		display: none;
 	}
 }
-.address-modal-single-visible{
+.address-modal-single-visible,
+.delivery-point-modal-visible{
 	.map-city-select{
 		@include max-screen($md){
 			max-width: calc(432px - 48px);
