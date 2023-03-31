@@ -2,21 +2,21 @@
 .shops {
 	padding-bottom: 68px;
 	.address-side-modal__form {
-		@include min-screen($md){
+		@include min-screen($xs){
 			max-width: 224px;
 			
 		}
 
 	}
 	.address-side-modal__select {
-		@include min-screen($md){
+		@include min-screen($xs){
 			max-width: 100%;
 			flex: 1 1 auto;
 			
 		}
 	}
 	.side-modal__to-map {
-		@include min-screen($md){
+		@include min-screen($xs){
 			display: none;
 		}
 	}

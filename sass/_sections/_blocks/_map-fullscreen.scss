@@ -5,7 +5,7 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
-	z-index: 12;
+	z-index: 13;
 	transition: all .5s;
 	transform: translateX(calc(-110% - 432px));
 
@@ -212,6 +212,24 @@
 
 	@include min-screen($md){
 		display: none;
+	}
+}
+.address-modal-single-visible{
+	.map-city-select{
+		@include max-screen($md){
+			max-width: calc(432px - 48px);
+			z-index: 15;
+			right: 24px;
+			left: auto;
+			width: 100%;
+		}
+		@include max-screen($xss){
+			max-width: none;
+			z-index: 13;
+			right: 12px;
+			left: 12px;
+			width: auto;
+		}
 	}
 }
 /*--------------------END map-fullscreen----------------------*/ 

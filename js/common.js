@@ -250,13 +250,13 @@
 				document.body.classList.add('fullscreen-map-visible', 'map-with-modal');
 			}else{
 				if(targ.closest('.side-modal') !== null){
-					document.body.classList.remove(targ.closest('.side-modal').dataset.visibleClass, 'side-modal-visible', 'map-with-modal');
+					// document.body.classList.remove(targ.closest('.side-modal').dataset.visibleClass, 'side-modal-visible', 'map-with-modal');
 				}
 				document.body.classList.add('fullscreen-map-visible', 'map-with-modal');
 			}
 		}
 		if(targ.classList.contains('map-fullscreen__back') || targ.closest('.map-fullscreen__back') !== null){
-			document.body.classList.remove(targ.closest('.map-fullscreen__back').dataset.modal, 'side-modal-visible', 'map-with-modal', 'shop-map-visible', 'covered');
+			document.body.classList.remove(targ.closest('.map-fullscreen__back').dataset.modal, 'side-modal-visible', 'map-with-modal', 'shop-map-visible');
 			document.body.classList.remove('fullscreen-map-visible');
 		}
 
@@ -272,10 +272,11 @@
 		}
 		// END delivery-point-modal open/close
 		
-		// if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null && targ.closest('.address-list__item--contact') == null){
-		// 	document.body.classList.remove('catalog-availability-modal-visible');
-		// 	document.body.classList.add('address-modal-single-visible', 'map-with-modal', 'fullscreen-map-visible');
-		// }
+		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null && targ.closest('.address-list__item--contact') == null && targ.closest('.delivery-modal') == null){
+			console.log('click!')
+			document.body.classList.remove('catalog-availability-modal-visible');
+			document.body.classList.add('address-modal-single-visible', 'map-with-modal', 'fullscreen-map-visible');
+		}
 		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null && targ.closest('.address-list__item--contact') !== null){
 			document.body.classList.remove('catalog-availability-modal-visible');
 			document.body.classList.add('shop-modal-visible', 'shop-map-visible');

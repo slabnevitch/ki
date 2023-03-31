@@ -34,9 +34,9 @@
 		}
 	}
 	&.availability-modal{
-		@include max-screen($md){
-			z-index: 14;
-		}
+		// @include max-screen($md){
+		// 	z-index: 14;
+		// }
 		&:after{
 			content: '';
 			position: absolute;
@@ -197,6 +197,9 @@
 		.delivery-point-modal-visible &{
 			transform: translateX(0);
 		}
+		@include max-screen($md){
+			z-index: 15;
+		}
 		@include max-screen($xss){
 			height: 215px;
 			top: auto;
@@ -255,7 +258,7 @@
 		bottom: 0;
 		left: 0;
 		right: auto;
-		height: 215px;
+		height: auto;
 		max-width: none;
 
 		@media screen and (max-width: 576px) {
@@ -264,7 +267,16 @@
 			}
 			
 		}
-		.side-modal__close{
+		@include min-screen($xss){
+			padding-top: 23px;
+			padding-left: 24px;
+			padding-right: 24px;	
+		}	
+		.side-modal__inner{
+			max-width: none;
+		}
+		.side-modal__close,
+		.side-modal__back{
 			display: none;
 		}
 		.side-modal__content{
@@ -284,7 +296,7 @@
 			height: 88px;
 		}
 		.address-list__content{
-			flex: 1 1 auto;
+			flex: 1 1 calc(100% - 88px - 14px);
 		}
 		.btn{
 			margin-top: 20px;
@@ -582,6 +594,10 @@
 	}
 
 	&--single{
+
+		@include max-screen($md){
+			z-index: 15;
+		}
 
 		&:after{
 			@include max-screen($xss){

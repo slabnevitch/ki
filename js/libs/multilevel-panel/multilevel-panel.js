@@ -111,7 +111,7 @@
       console.log('this.open!')
       e.preventDefault();
       htmlDoc.classList.toggle('multilevel-panel-opened');
-      // document.body.classList.toggle('covered');
+
       if( htmlDoc.classList.contains('multilevel-panel-opened')){
         _self.reset();
       }
