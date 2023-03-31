@@ -13158,6 +13158,10 @@ h6 {
 
 /*--------------------all-actions----------------------*/
 
+.main-slider--actions .swiper-pagination-bullet-active {
+  background-color: #003D9E;
+}
+
 .all-actions {
   padding-bottom: 43px;
   padding-top: 59px;
@@ -19485,6 +19489,16 @@ h6 {
 
   .about {
     padding-bottom: 23px;
+  }
+
+  .main-slider--actions .swiper-pagination {
+    display: block;
+    position: absolute;
+  }
+
+  .main-slider--actions .swiper-pagination-bullet {
+    opacity: 1;
+    background-color: #fff;
   }
 
   .all-actions {
