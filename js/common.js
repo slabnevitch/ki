@@ -69,13 +69,15 @@
 
 		// breadcrumbs mobile toggle
 		if(targ.classList.contains('back-link') || targ.closest('.back-link') !== null && screen.width <= 969.98){
-			e.preventDefault();
-			document.body.classList.toggle('breadcrumbs-mobile-visible');
-			document.documentElement.classList.toggle('lock');
-			// setTimeout(function() {
-				document.body.classList.toggle('covered');
+			if(document.querySelectorAll('.breadcrumbs__item').length > 2){
+				e.preventDefault();
+				document.body.classList.toggle('breadcrumbs-mobile-visible');
+				document.documentElement.classList.toggle('lock');
+				// setTimeout(function() {
+					document.body.classList.toggle('covered');
 
-			// }, 500)
+				// }, 500)
+			}
 		}
 		
 		// END breadcrumbs mobile toggle

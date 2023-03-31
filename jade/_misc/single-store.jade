@@ -1,0 +1,82 @@
+doctype html
+html(lang='ru' class=pageIndex=='cat_009' ? "lock" : "")
+	head
+		meta(charset='utf-8')
+		title
+			block title
+		meta(name="description" content="")
+		link(rel="icon" href="img/favicon.png")
+		//- meta(name="viewport" content="width=device-width")
+		//- meta(name="viewport" content="width=device-width" initial-scale=1)
+		
+		//- убрать "зуммирование" на safari ios:
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no")
+		
+		div(style='display:none' itemscope='' itemtype='http://schema.org/Store')
+			span(itemprop='name') Кубань Инструмент
+			span(itemprop='description') Интернет-магазин инструмента, строительной и садовой техники
+			span(itemprop='priceRange') от 3 руб до 1 000 000 руб
+			img(src='/assets/img/og_image.png' itemprop='image' alt='www.kubaninstrument.ru')
+			span(itemprop='address' itemscope='' itemtype='http://schema.org/PostalAddress')
+				span(itemprop='streetAddress') г. Краснодар, ул. Западный Обход, 34
+				span(itemprop='postalCode') 350000
+				span(itemprop='addressCountry') Россия
+				span(itemprop='telephone') 8 (800) 511-47-24
+			p
+				| Open: 
+				span(itemprop='openingHours' content='Mo,Tu,We,Th 09:00-12:00') Monday-Thursday 9am-noon
+
+			div(itemprop='paymentAccepted' style='display: none') Оплата наличными, картой, безналичная
+			meta(itemprop='openingHours' style='display: none' datetime='Mo,Tu,We,Th,Fr,Sa,Su 08:00-20:00')
+			div(itemtype='http://schema.org/GeoCoordinates' itemscope='' itemprop='geo')
+				meta(itemprop='latitude' content='45° 2′ 27″ N')
+				meta(itemprop='longitude' content='38° 58′ 7″ E')
+
+
+		
+		link(rel="preconnect" href="https://fonts.googleapis.com")
+		link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+		link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet")
+		//- фикс подсветки телефонов на safari ios:
+		//- meta(content="telephone=no" name="format-detection")
+
+		link(rel="stylesheet" href="css/main.css")
+	
+	body(class=pageIndex=='002' ? "popup-cookies-visible" : pageIndex=='013'||pageIndex == '014'||pageIndex == '015'?"covered search-results-opened" : pageIndex=='008'? "popup-action-visible" : pageIndex=='009' ? "popup-review-visible" : pageIndex=='cat_006' ? "catalog-availability-modal-visible covered" : pageIndex=='cat_007' ? "popup-product-added-visible" : pageIndex=='cat_008' ? "popup-product-favourite-visible" : pageIndex=='019' ? "address-modal-visible" : pageIndex=='020' ? "fullscreen-map-visible map-with-modal address-modal-single-visible" : pageIndex=='021' ? "side-modal-visible sale-modal-visible" : pageIndex=='022' ? "side-modal-visible catalog-availability-modal-visible" : pageIndex=='cart_008' ? "side-modal-visible registration-modal-visible covered" : pageIndex=='cart_009-1' ? "side-modal-visible delivery-point-modal-visible fullscreen-map-visible map-with-modal covered" : pageIndex=='cart_009' ? "side-modal-visible delivery-modal-visible covered" : longModal ? "side-modal-visible courier-modal-visible covered" : pageIndex=='product_026' ? "popup-regard-visible" : pageIndex=='product_033' ? "dime-modal-visible covered" : pageIndex=='product_022' || pageIndex=='product_027' ? "lock" : pageIndex=='profile_011' ? "order-abort-modal-visible covered" : pageIndex=='profile_012' ? "order-return-modal-visible covered" : pageIndex=='profile_023' ? "popup-profileexit-visible" : pageIndex=='menu_008' ? "legals-modal-visible covered" : pageIndex=='menu_016' ? "service-modal-visible covered" : "")
+		include _mixins
+		include _vars
+
+		include ../_blocks/_mob-catalog
+
+		//- html for use slideOut.js--------------------
+		//- include _body-html-for-slideout 
+
+		//- footer-to-bottom--------------------
+		include _footer-to-bottom
+		
+		//- при использовании _body-html-for-slideout или _footer-to-bottom  -- закомментировать:
+		//- include ../_sections/header
+		//- block content
+		//- include ../_sections/footer
+
+		include ../_blocks/mob-menu
+		.body-cover
+		.chat-round-icon.animated.tada.infinite
+			+icon('chats')
+		
+		include ../_blocks/loc-header-panel
+		include ../_blocks/location-search
+		include ../_blocks/side-modals
+		include ../_blocks/widemodals
+		include ../_blocks/popups
+		include ../_blocks/map
+		include ../_blocks/map-city-select
+		include ../_blocks/profile-nav
+		include ../_blocks/menu
+
+		include _scripts
+
+		block page-scripts
+		
+		script(src='js/common.js')
+		//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_NAmCu9dm16a9i0oeX0T6rBQFgObeiZA&amp;callback=initMap" async defer>)
