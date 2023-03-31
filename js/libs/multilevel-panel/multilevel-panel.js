@@ -112,9 +112,9 @@
       // e.preventDefault();
       htmlDoc.classList.add('multilevel-panel-opened');
 
-      if( htmlDoc.classList.contains('multilevel-panel-opened')){
-        _self.reset();
-      }
+      // if( htmlDoc.classList.contains('multilevel-panel-opened')){
+      //   _self.reset();
+      // }
       if(options.bodyFreeze){
         htmlDoc.classList.add('freeze');
       }
