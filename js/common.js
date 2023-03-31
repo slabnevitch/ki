@@ -282,10 +282,9 @@
 			document.body.classList.add('shop-modal-visible', 'shop-map-visible');
 		}
 		if(targ.classList.contains('side-modal__back') || targ.closest('.side-modal__back') !== null){
-			console.log('click')
 			if(targ.closest('.address-side-modal--single') !== null){
 				document.body.classList.remove('address-modal-single-visible');
-				document.body.classList.add('catalog-availability-modal-visible');
+				// document.body.classList.add('catalog-availability-modal-visible');
 			}
 		}
 		// END map modals toggle
@@ -405,6 +404,8 @@
 
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
+		
+		alert(document.getElementById('multilevel-panel-open').outerHTML);
 
 
 		
