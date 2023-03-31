@@ -10438,6 +10438,7 @@ h6 {
   height: 100%;
   text-decoration: none;
   text-align: center;
+  cursor: pointer;
 }
 
 .mob-nav__link .icon {
