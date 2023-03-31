@@ -19,7 +19,7 @@
     mobileLink = document.getElementById('mob-catalog-open'); // Добавить этот класс всем ссылкам, которые должны нажиматься
 
 	touchMenuEvent = agentID ? "touchstart" : "click";
-		alert(touchMenuEvent)
+		// alert(touchMenuEvent)
 	mobileLink.addEventListener(touchMenuEvent, function(e) {
 
 	    // this.click();
@@ -43,20 +43,41 @@
 
 		// click on cover
 		if(targ.classList.contains('body-cover')){
+
+			// remove all modals if click on .body-cover
+			var bodyClasses = document.body.classList,
+				modalsVisibleClasses = [];
+			
+			bodyClasses.forEach(function(item){
+				if(item.indexOf('modal-visible') !== -1) {
+					modalsVisibleClasses.push(item);
+				}
+
+			});
+			if(modalsVisibleClasses.length){
+				modalsVisibleClasses.forEach(function(item) {
+					document.body.classList.remove(item);
+				});
+				document.body.classList.remove('covered');
+			}
+
+			//ENDclick remove all modals if click on .body-cover
+			
+			// remove .review context menu
 			if(document.querySelector('.review-context-visible') !== null){
 				document.querySelector('.review-context-visible')
 					.classList.remove('review-context-visible');
 
 				document.body.classList.remove('covered');
 			}
+			//END remove .review context menu
+			
+			// remove header search results if click on .body-cover
 			if(document.body.classList.contains('search-results-opened')){
 				document.body.classList.remove('search-results-opened');
 				document.body.classList.remove('covered');
 			}
-			if(document.body.classList.contains('catalog-availability-modal-visible')){
-				document.body.classList.remove('catalog-availability-modal-visible');
-				document.body.classList.remove('covered');
-			}
+			//END remove header search results if click on .body-cover
 
 		}
 		// ENDclick on cover
@@ -298,12 +319,11 @@
 		// END delivery-point-modal open/close
 		
 		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null && targ.closest('.address-list__item--contact') == null && targ.closest('.delivery-modal') == null){
-			console.log('click!')
-			document.body.classList.remove('catalog-availability-modal-visible');
+			// document.body.classList.remove('catalog-availability-modal-visible');
 			document.body.classList.add('address-modal-single-visible', 'map-with-modal', 'fullscreen-map-visible');
 		}
 		if(targ.classList.contains('address-list__img') || targ.closest('.address-list__img') !== null && targ.closest('.address-list__item--contact') !== null){
-			document.body.classList.remove('catalog-availability-modal-visible');
+			// document.body.classList.remove('catalog-availability-modal-visible');
 			document.body.classList.add('shop-modal-visible', 'shop-map-visible');
 		}
 		if(targ.classList.contains('side-modal__back') || targ.closest('.side-modal__back') !== null){
