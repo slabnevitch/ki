@@ -109,12 +109,12 @@
     },
     this.open = function(e) {
       console.log('this.open!')
-      e.preventDefault();
-      htmlDoc.classList.toggle('multilevel-panel-opened');
+      // e.preventDefault();
+      htmlDoc.classList.add('multilevel-panel-opened');
 
-      if( htmlDoc.classList.contains('multilevel-panel-opened')){
-        _self.reset();
-      }
+      // if( htmlDoc.classList.contains('multilevel-panel-opened')){
+      //   _self.reset();
+      // }
       if(options.bodyFreeze){
         htmlDoc.classList.add('freeze');
       }
@@ -140,7 +140,7 @@
     // setDynamicBreakpoint: 1100, //nubmer |ширина экрана, при которой da.js переносит десктопное меню в левую панель
                                   // применять только если структура десктопного меню соответствует мобильному
                                // работает только при da.init() в common.js либо при добавлении атрибута data-da к десктопному меню заранее
-    bodyFreeze: true, // boolean ,
+    // bodyFreeze: true, // boolean ,
     multicolumn: false, //true только в случае различия хтмл в десктопном и мобильном меню (например, при наличии доп. дивов-колонок, в которые завернуты эл-ты. десктопного меню)
     multicolumnClass: 'catalog-header__column',// класс для дива-обертки над эл-ми. десктопного меню
     multiLiItemClass: 'catalog-header__item' //класс для "<li>" десктопного меню, которые необходимо скопировать в моб. меню-панель

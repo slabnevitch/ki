@@ -4,7 +4,7 @@ nav.mob-nav
 		each nav, i in navs
 			li(id=nav.icon == 'user' ? "profile-menu-open" : nav.icon == 'm-menu' ? "menu-open"  : false class=i > 1 && i < 4 ? "mob-nav__item active" : "mob-nav__item")
 				if nav.name == 'Каталог'
-					div(id="multilevel-panel-open").mob-nav__link
+					.mob-nav__link(id="mob-catalog-open")
 						.mob-nav__icon
 							+icon(nav.icon)
 						.mob-nav__name= nav.name
