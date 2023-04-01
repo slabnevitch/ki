@@ -14,24 +14,26 @@
 	var catalogFadeFlag = false;
 	var mobCatalogState = false;
 
-	var deviceAgent = navigator.userAgent.toLowerCase(),
-    agentID = deviceAgent.match(/(iphone|ipod|ipad)/),
-    mobileLink = document.getElementById('mob-catalog-open'); // Добавить этот класс всем ссылкам, которые должны нажиматься
+	// var deviceAgent = navigator.userAgent.toLowerCase(),
+    // agentID = deviceAgent.match(/(iphone|ipod|ipad)/),
+    // mobileLink = document.getElementById('mob-catalog-open'); // Добавить этот класс всем ссылкам, которые должны нажиматься
 
-	touchMenuEvent = agentID ? "touchstart" : "click";
-		// alert(touchMenuEvent)
-	mobileLink.addEventListener(touchMenuEvent, function(e) {
+	// touchMenuEvent = agentID ? "touchstart" : "click";
 
-	    // this.click();
-		if(!mobCatalogState){
-			panel.open();
-			mobCatalogState = true;
-		}else{
-			mobCatalogState = false;
-			panel.close();
-		}
-		console.log(mobCatalogState)
-	});
+	// mobileLink.addEventListener(touchMenuEvent, function(e) {
+	// 	console.log(touchMenuEvent)
+	// 	if(touchMenuEvent === "touchstart"){
+	//     	this.click();
+	// 	}
+	// 	if(!mobCatalogState){
+	// 		panel.open();
+	// 		mobCatalogState = true;
+	// 	}else{
+	// 		mobCatalogState = false;
+	// 		panel.close();
+	// 	}
+	// 	console.log(mobCatalogState)
+	// });
 
 	// if(targ.getAttribute('id') ==='mob-catalog-open' || targ.closest('#mob-catalog-open') !== null){
 	// 		console.log(mobCatalogState)
@@ -397,18 +399,20 @@
 
 		// mob-catalog toggle
 		
-		// if(targ.getAttribute('id') ==='mob-catalog-open' || targ.closest('#mob-catalog-open') !== null){
-		// 	console.log(mobCatalogState)
-		// 	if(!mobCatalogState){
-		// 		panel.open();
-		// 		mobCatalogState = true;
-		// 	}else{
-		// 		mobCatalogState = false;
-		// 		panel.close();
-		// 	}
-		// 	console.log(mobCatalogState)
-		// }
-		//END mob-catalog  toggle
+		if(targ.getAttribute('id') ==='mob-catalog-open' || targ.closest('#mob-catalog-open') !== null){
+			console.log(mobCatalogState)
+			e.preventDefault();
+			if(!mobCatalogState){
+				// panel.open();
+				document.documentElement.classList.add('multilevel-panel-opened');
+				mobCatalogState = true;
+			}else{
+				mobCatalogState = false;
+				panel.close();
+			}
+			console.log(mobCatalogState)
+		}
+		// END mob-catalog  toggle
 
 		// landing menu toggle
 		if(targ.getAttribute('id') ==='ld-nav-toggler' || targ.closest('#ld-nav-toggler') !== null){

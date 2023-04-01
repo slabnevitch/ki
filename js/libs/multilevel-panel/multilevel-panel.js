@@ -104,6 +104,7 @@
       }
     },
     this.close = function() {
+      console.log('panel close!')
       htmlDoc.classList.remove('multilevel-panel-opened', 'freeze', 'catalog-visible');
       _self.reset();
     },
