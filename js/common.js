@@ -1380,6 +1380,9 @@
 		// tippy
 		if(document.querySelector('.price-tooltip') !== null){
 			tippy('.price-tooltip', {
+				appendTo: function() {
+					return document.body;	
+				}, 
 				theme: 'ki-tooltip', 
 				maxWidth: 'none',
 				allowHTML: true,
