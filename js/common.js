@@ -22,7 +22,9 @@
 		// alert(touchMenuEvent)
 	mobileLink.addEventListener(touchMenuEvent, function(e) {
 		console.log(touchMenuEvent)
-	    this.click();
+		if(touchMenuEvent === "touchstart"){
+	    	this.click();
+		}
 		if(!mobCatalogState){
 			panel.open();
 			mobCatalogState = true;
