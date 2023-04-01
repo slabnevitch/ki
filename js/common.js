@@ -18,11 +18,11 @@
     agentID = deviceAgent.match(/(iphone|ipod|ipad)/),
     mobileLink = document.getElementById('mob-catalog-open'); // Добавить этот класс всем ссылкам, которые должны нажиматься
 
-	touchMenuEvent = agentID ? "tap" : "click";
+	touchMenuEvent = agentID ? "touchstart" : "click";
 		// alert(touchMenuEvent)
 	mobileLink.addEventListener(touchMenuEvent, function(e) {
-
-	    // this.click();
+		console.log(touchMenuEvent)
+	    this.click();
 		if(!mobCatalogState){
 			panel.open();
 			mobCatalogState = true;
