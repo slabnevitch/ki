@@ -550,39 +550,22 @@
 		}
 
 		//---------------Swiper
-		if(document.querySelector('.mob-catalog-screen__slider') !== null){
-			const mobCatalogScreen = new Swiper('.mob-catalog-screen__slider', {
-				observer: true,
-				observeParents: true,
-				slidesPerView: 3.25,
-				spaceBetween: 10,
-				loop: true,
-				// breakpoints: {
-   				//  // when window width is >= 320px
-				// 	320: {
-				// 		slidesPerView: 2,
-				// 		spaceBetween: 20
-				// 	},
-    			// 	// when window width is >= 480px
-				// 	480: {
-				// 		slidesPerView: 3,
-				// 		spaceBetween: 30
-				// 	},
-    			// 	// when window width is >= 640px
-				// 	640: {
-				// 		slidesPerView: 4,
-				// 		spaceBetween: 40
-				// 	}
-				// },
+		// if(document.querySelector('.mob-catalog-screen__slider') !== null){
+		// 	var mobCatalogScreen = new Swiper('.mob-catalog-screen__slider', {
+		// 		observer: true,
+		// 		observeParents: true,
+		// 		slidesPerView: 3.25,
+		// 		spaceBetween: 10,
+		// 		loop: true,
 
-  				// If we need pagination
-				pagination: {
-					el: '.swiper-pagination',
-					type: 'bullets',
-					clickable: true
-				}
-			});
-		}
+  // 				// If we need pagination
+		// 		pagination: {
+		// 			el: '.swiper-pagination',
+		// 			type: 'bullets',
+		// 			clickable: true
+		// 		}
+		// 	});
+		// }
 		if(document.querySelector('.categories-tiles__slider') !== null){
 			const categoriesTilesSlider = new Swiper('.categories-tiles__slider', {			
 				observer: true,
