@@ -1,14 +1,14 @@
 aside.multilevel-panel
 	.multilevel-panel__label Каталог
 	
-	.mob-catalog-screen
-		- var slides = ['Бренды', 'Акции', 'Распродажа'];
-		+swiper('mob-catalog-screen__slider', true, false, false)
-			each slide, i in slides
-				a(href="#").swiper-slide.mob-catalog-screen__slide
-					.mob-catalog-screen__img
-						img(src="img/header-catalog/mob-catalog/"+(i+1)+".png" alt="alt")
-					.mob-catalog-screen__name= slide
+	//- .mob-catalog-screen
+	//- 	- var slides = ['Бренды', 'Акции', 'Распродажа'];
+	//- 	+swiper('mob-catalog-screen__slider', true, false, false)
+	//- 		each slide, i in slides
+	//- 			a(href="#").swiper-slide.mob-catalog-screen__slide
+	//- 				.mob-catalog-screen__img
+	//- 					img(src="img/header-catalog/mob-catalog/"+(i+1)+".png" alt="alt")
+	//- 				.mob-catalog-screen__name= slide
 	
 	.multilevel-panel__back
 		button#menu-back Назад

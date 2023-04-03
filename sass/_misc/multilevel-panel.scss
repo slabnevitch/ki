@@ -1,8 +1,8 @@
 .multilevel-panel {
   display: none;
   @include max-screen($multilevelPoint){
-    transition: all 0.3s;
-    transform: translate3D(-100%, 0, 0);
+    // transition: all 0.3s;
+    // transform: translate3D(-100%, 0, 0);
     position: fixed;
     left: 0;
     top: 0;
@@ -31,7 +31,8 @@
   overflow: hidden;
 }
 .multilevel-panel-opened .multilevel-panel{
-  transform: translate3D(0, 0, 0); 
+  // transform: translate3D(0, 0, 0); 
+  left: 0;
 }
 
 .multilevel-panel.freeze {

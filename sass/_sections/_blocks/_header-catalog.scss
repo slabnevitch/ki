@@ -294,7 +294,7 @@
 	}
 
 	@include max-screen($md){
-		display: flex;
+		display: none;
 		flex-direction: column;
 		height: calc(100% - 56px);
 		top: 0;

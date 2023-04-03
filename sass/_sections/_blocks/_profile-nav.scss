@@ -1,7 +1,7 @@
 /*--------------------profile-nav----------------------*/
 .profile-nav{
 	position: fixed;
-	display: flex;
+	// display: flex;
 	flex-direction: column;
 	left: 0;
 	width: 100%;
@@ -11,23 +11,28 @@
 	background-color: #fff;
 	z-index: 12;
 	top: 55px;
+	display: none;
 
-	transition: all .3s;
-	transform: translateX(-105%);
+	// transition: all .3s;
+	// transform: translateX(-105%);
+	// left: -105%;
 
 	&[data-profile-nav]{
 		.profile-nav-visible &{
-			transform: translateX(0);
+			// transform: translateX(0);
+			left: 0;
 		}
 	}
 	&[data-menu-nav]{
 		.menu-visible &{
-			transform: translateX(0);
+			// transform: translateX(0);
+			left: 0;
 		}		
 	}
 	&[data-ld-nav]{
 		.ld-nav-visible &{
-			transform: translateX(0);
+			// transform: translateX(0);
+			left: 0;
 		}		
 	}
 
