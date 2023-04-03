@@ -11,8 +11,10 @@
 	}
 	// End ibg class
 
-	var catalogFadeFlag = false;
-	var mobCatalogState = false;
+	var catalogFadeFlag = false,
+		mobCatalogState = false,
+		profileNavFlag = false,
+		profileMenuFlag = false;
 
 	// var deviceAgent = navigator.userAgent.toLowerCase(),
     // agentID = deviceAgent.match(/(iphone|ipod|ipad)/),
@@ -364,13 +366,22 @@
 		}
 		// ENDreview context menu
 
+		profileNavFlag
+
 		// profile-menu toggle
 		if(targ.getAttribute('id') ==='profile-menu-open' || targ.closest('#profile-menu-open') !== null){
 			e.preventDefault();
-			document.body.classList.toggle('profile-nav-visible');
-			document.body.classList.remove('menu-visible');
-			panel.close();
-			panel.reset();
+			if(!profileMenuFlag){
+				fadeIn(document.querySelector('[data-profile-nav]'), 900, 'flex');
+				profileMenuFlag = true;
+			}else{
+			// document.body.classList.toggle('profile-nav-visible');
+			// document.body.classList.remove('menu-visible');
+			// panel.close();
+				fadeOut(document.querySelector('[data-profile-nav]'), 900);
+				profileMenuFlag = false;
+			}	
+			// panel.reset();
 			if(document.body.classList.contains('profile-nav-visible')){
 				document.documentElement.classList.add('lock');
 			}else{
@@ -384,10 +395,17 @@
 		// menu toggle
 		if(targ.getAttribute('id') ==='menu-open' || targ.closest('#menu-open') !== null){
 			e.preventDefault();
-			document.body.classList.toggle('menu-visible');
-			document.body.classList.remove('profile-nav-visible');
-			panel.close();
-			panel.reset();
+			if(!profileNavFlag){
+				fadeIn(document.querySelector('[data-menu-nav]'), 900, 'flex');
+				profileNavFlag = true;
+			}else{
+				fadeOut(document.querySelector('[data-menu-nav]'), 900);
+				profileNavFlag = false;
+			}
+			// document.body.classList.toggle('menu-visible');
+			// document.body.classList.remove('profile-nav-visible');
+			// panel.close();
+			// panel.reset();
 
 			if(document.body.classList.contains('menu-visible')){
 				document.documentElement.classList.add('lock');
@@ -404,10 +422,12 @@
 			e.preventDefault();
 			if(!mobCatalogState){
 				// panel.open();
-				document.documentElement.classList.add('multilevel-panel-opened');
+				fadeIn(document.querySelector('.multilevel-panel'), 900, 'flex');
+				// document.documentElement.classList.add('multilevel-panel-opened');
 				mobCatalogState = true;
 			}else{
 				mobCatalogState = false;
+				fadeOut(document.querySelector('.multilevel-panel'), 900);
 				panel.close();
 			}
 			console.log(mobCatalogState)
