@@ -6,14 +6,12 @@
       for(var i=0; i<ratings.length; i++){
         getValues(ratings[i]);
         if(ratings[i].hasAttribute('data-handler')){
-          console.log('ratings.js')
           bindEvents(ratings[i]);  
         }
       }
     }
     
     getValues = function(rating){
-        console.log(rating.querySelector('.crystal-rating__value').innerText)
       var ratingStr = rating.querySelector('.crystal-rating__value').innerText,  
           value = '';
       

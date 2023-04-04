@@ -333,10 +333,10 @@
 		if(targ.getAttribute('id') ==='profile-menu-open' || targ.closest('#profile-menu-open') !== null){
 			e.preventDefault();
 			if(!profileMenuFlag){
-				fadeIn(document.querySelector('[data-profile-nav]'), 900, 'flex');
-				fadeOut(document.querySelector('[data-menu-nav]'), 900);
-				fadeOut(document.querySelector('[data-ld-nav]'), 900);
-				fadeOut(document.querySelector('.multilevel-panel'), 900);
+				fadeIn(document.querySelector('[data-profile-nav]'), 500, 'flex');
+				fadeOut(document.querySelector('[data-menu-nav]'), 500);
+				fadeOut(document.querySelector('[data-ld-nav]'), 500);
+				fadeOut(document.querySelector('.multilevel-panel'), 500);
 				document.documentElement.classList.add('lock');
 				profileMenuFlag = true;
 				mobCatalogState = profileNavFlag = ldMenuFlag = false;
@@ -344,7 +344,7 @@
 			// document.body.classList.toggle('profile-nav-visible');
 			// document.body.classList.remove('menu-visible');
 			// panel.close();
-				fadeOut(document.querySelector('[data-profile-nav]'), 900);
+				fadeOut(document.querySelector('[data-profile-nav]'), 500);
 				document.documentElement.classList.remove('lock');
 				profileMenuFlag = false;
 			}	
@@ -361,15 +361,15 @@
 		if(targ.getAttribute('id') ==='menu-open' || targ.closest('#menu-open') !== null){
 			e.preventDefault();
 			if(!profileNavFlag){
-				fadeIn(document.querySelector('[data-menu-nav]'), 900, 'flex');
-				fadeOut(document.querySelector('[data-profile-nav]'), 900);
-				fadeOut(document.querySelector('[data-ld-nav]'), 900);				
-				fadeOut(document.querySelector('.multilevel-panel'), 900);				
+				fadeIn(document.querySelector('[data-menu-nav]'), 500, 'flex');
+				fadeOut(document.querySelector('[data-profile-nav]'), 500);
+				fadeOut(document.querySelector('[data-ld-nav]'), 500);				
+				fadeOut(document.querySelector('.multilevel-panel'), 500);				
 				document.documentElement.classList.add('lock');
 				profileNavFlag = true;
 				mobCatalogState = profileMenuFlag = ldMenuFlag = false;
 			}else{
-				fadeOut(document.querySelector('[data-menu-nav]'), 900);
+				fadeOut(document.querySelector('[data-menu-nav]'), 500);
 				document.documentElement.classList.remove('lock');
 				profileNavFlag = false;
 			}
@@ -390,16 +390,16 @@
 			e.preventDefault();
 			if(!mobCatalogState){
 				// panel.open();
-				fadeIn(document.querySelector('.multilevel-panel'), 900, 'flex');
-				fadeOut(document.querySelector('[data-menu-nav]'), 900);
-				fadeOut(document.querySelector('[data-profile-nav]'), 900);
-				fadeOut(document.querySelector('[data-ld-nav]'), 900);
+				fadeIn(document.querySelector('.multilevel-panel'), 500, 'flex');
+				fadeOut(document.querySelector('[data-menu-nav]'), 500);
+				fadeOut(document.querySelector('[data-profile-nav]'), 500);
+				fadeOut(document.querySelector('[data-ld-nav]'), 500);
 				// document.documentElement.classList.add('multilevel-panel-opened');
 				mobCatalogState = true;
 				profileNavFlag = profileMenuFlag = ldMenuFlag = false;
 			}else{
 				mobCatalogState = false;
-				fadeOut(document.querySelector('.multilevel-panel'), 900);
+				fadeOut(document.querySelector('.multilevel-panel'), 500);
 				panel.close();
 			}
 		}
@@ -408,17 +408,17 @@
 		// landing menu toggle
 		if(targ.getAttribute('id') ==='ld-nav-toggler' || targ.closest('#ld-nav-toggler') !== null){
 			if(!ldMenuFlag){
-				fadeIn(document.querySelector('[data-ld-nav]'), 900, 'flex');
+				fadeIn(document.querySelector('[data-ld-nav]'), 500, 'flex');
 
-				fadeOut(document.querySelector('.multilevel-panel'), 900, 'flex');
-				fadeOut(document.querySelector('[data-menu-nav]'), 900);
-				fadeOut(document.querySelector('[data-profile-nav]'), 900);
+				fadeOut(document.querySelector('.multilevel-panel'), 500, 'flex');
+				fadeOut(document.querySelector('[data-menu-nav]'), 500);
+				fadeOut(document.querySelector('[data-profile-nav]'), 500);
 
 				ldMenuFlag = true;
 				profileNavFlag = profileMenuFlag = mobCatalogState = false;
 				document.documentElement.classList.add('lock');
 			}else{
-				fadeOut(document.querySelector('[data-ld-nav]'), 900);
+				fadeOut(document.querySelector('[data-ld-nav]'), 500);
 				ldMenuFlag = false;
 				document.documentElement.classList.remove('lock');
 			}
@@ -1328,7 +1328,7 @@
 		}
 		//END payement anchors scroll
 
-		// tippy
+		// product tooltips
 		if(document.querySelector('.price-tooltip') !== null){
 			tippy('.price-tooltip', {
 				appendTo: function() {
@@ -1349,7 +1349,7 @@
 			    interactive: true
 			});
 		}
-		//END tippy
+		//END product tooltips
 	
 	});//DOMContentLoaded
 })();
