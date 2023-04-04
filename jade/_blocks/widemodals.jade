@@ -81,18 +81,21 @@ div(class=pageIndex=='product_027' ? "widemodal widemodal-answers" : "widemodal 
 		.wrapper-flex.addreview__flex
 			.addreview__content
 				.product-reviews__single
-					article.review.review--to-answer
+					article.review.review--to-answer(itemprop="review" itemscope itemtype="https://schema.org/Review")
 						header.review__header
 							.person
 								.person__top
 									.person__portrait
 										img(src="img/page-product-card/worker.jpg" alt="alt")
 									.person__info
-										.person__name Иванов Иван
-										.person__date 12 декабря 2021
+										.person__name(itemprop="author") Иванов Иван
+										.person__date( itemprop="datePublished" content="2021-12-12 год, месяц, день" ) 12 декабря 2021
 								.person__rating
-									.person__rating-wrap
+									.person__rating-wrap(itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating")
 											+starRating(2)
+											meta(itemprop='worstRating' content='1')
+											span(itemprop='ratingValue' style='display: none; рейтинг товара') 2
+											span(itemprop='bestRating' content='5')
 									.person__rating-mark Плохой товар
 							
 							.review__context.context-review
@@ -105,18 +108,20 @@ div(class=pageIndex=='product_027' ? "widemodal widemodal-answers" : "widemodal 
 										a(href="#") Пожаловаться
 
 						.review__body
-							.review__div
+							.review__div(itemprop='reviewBody')
 								.review__title Опыт использования
 								p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 
 							.review__div
 								.review__title Достоинства
-								p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+								div(itemprop='positiveNotes')
+									p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
 
 							.review__div
 								.review__title Недостатки
-								p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
-								p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+								div(itemprop='negativeNotes')
+									p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+									p.review__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
 
 						footer.review__footer
 							.review__actions
@@ -146,15 +151,15 @@ div(class=pageIndex=='product_027' ? "widemodal widemodal-answers" : "widemodal 
 						.comments-product-reviews__title Комментарии
 						.comments-product-reviews__count 5
 					
-					article.review
+					article.review(itemprop="review" itemscope itemtype="https://schema.org/Review")
 						header.review__header
 							.person
 								.person__top
 									.person__portrait
 										img(src="img/page-product-card/worker.jpg" alt="alt")
 									.person__info
-										.person__name Иванов Иван
-										.person__date 12 декабря 2021
+										.person__name(itemprop="author") Иванов Иван
+										.person__date( itemprop="datePublished" content="2021-12-12 год, месяц, день" ) 12 декабря 2021
 							
 							.review__context.context-review
 								+icon('context')
@@ -166,7 +171,7 @@ div(class=pageIndex=='product_027' ? "widemodal widemodal-answers" : "widemodal 
 										a(href="#") Пожаловаться
 
 						.review__body.review__body--expanded
-							.review__div
+							.review__div(itemprop='reviewBody')
 								p(itemprop="comment") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
 
 						footer.review__footer
@@ -183,15 +188,15 @@ div(class=pageIndex=='product_027' ? "widemodal widemodal-answers" : "widemodal 
 										+icon('unlike')
 										.review__dislike-count 0
 
-						article.review.review--comment
+						article.review.review--comment(itemprop="review" itemscope itemtype="https://schema.org/Review")
 							header.review__header
 								.person
 									.person__top
 										.person__portrait
 											img(src="img/page-product-card/worker.jpg" alt="alt")
 										.person__info
-											.person__name Иванов Иван
-											.person__date 12 декабря 2021
+											.person__name(itemprop="author") Иванов Иван
+											.person__date( itemprop="datePublished" content="2021-12-12 год, месяц, день" ) 12 декабря 2021
 								
 								.review__context.context-review
 									+icon('context')
@@ -203,7 +208,7 @@ div(class=pageIndex=='product_027' ? "widemodal widemodal-answers" : "widemodal 
 											a(href="#") Пожаловаться
 
 							.review__body.review__body--expanded
-								.review__div
+								.review__div(itemprop='reviewBody')
 									p(itemprop="comment") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
 
 							footer.review__footer
@@ -219,14 +224,14 @@ div(class=pageIndex=='product_027' ? "widemodal widemodal-answers" : "widemodal 
 											+icon('unlike')
 											.review__dislike-count 0
 			
-						article.review.review--reply
+						article.review.review--reply(itemprop="review" itemscope itemtype="https://schema.org/Review")
 							header.review__header
 								.person
 									.person__top
 										.person__portrait
 											img(src="img/page-product-card/worker.jpg" alt="alt")
 										.person__info
-											.person__name Ник
+											.person__name(itemprop="author") Ник
 								
 								.review__context.context-review
 									+icon('context')
@@ -242,15 +247,15 @@ div(class=pageIndex=='product_027' ? "widemodal widemodal-answers" : "widemodal 
 									label.form__label
 										input.form__input(type='text' name='name' placeholder="Ник")
 					- for (var i=0; i < 3; i++)
-						article.review
+						article.review(itemprop="review" itemscope itemtype="https://schema.org/Review")
 							header.review__header
 								.person
 									.person__top
 										.person__portrait
 											img(src="img/page-product-card/worker.jpg" alt="alt")
 										.person__info
-											.person__name Иванов Иван
-											.person__date 12 декабря 2021
+											.person__name(itemprop="author") Иванов Иван
+											.person__date( itemprop="datePublished" content="2021-12-12 год, месяц, день" ) 12 декабря 2021
 								
 								.review__context.context-review
 									+icon('context')
@@ -262,7 +267,7 @@ div(class=pageIndex=='product_027' ? "widemodal widemodal-answers" : "widemodal 
 											a(href="#") Пожаловаться
 
 							.review__body.review__body--expanded
-								.review__div
+								.review__div(itemprop='reviewBody')
 									p(itemprop="comment") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
 
 							footer.review__footer

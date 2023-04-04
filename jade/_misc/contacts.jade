@@ -25,7 +25,11 @@ html(lang='ru' class=pageIndex=='cat_009' ? "lock" : "")
 				span(itemprop='telephone') 8 800 250-21-23
 				span(itemprop='telephone') 8 861 212-8-214
 			div(itemprop='paymentAccepted' style='display: none') Оплата наличными, картой, безналичная
-			meta(itemprop='openingHours' style='display: none' datetime='Mo,Tu,We,Th,Fr,Sa,Su 08:00-20:00')
+			//- meta(itemprop='openingHours' style='display: none' datetime='Mo,Tu,We,Th,Fr,Sa,Su 08:00-20:00')
+			p
+			| Open: 
+			span(itemprop='openingHours' content='Mo,Tu,We,Th 09:00-12:00') Monday-Thursday 9am-noon
+
 			div(itemtype='http://schema.org/GeoCoordinates' itemscope='' itemprop='geo')
 				meta(itemprop='latitude' content='45° 2′ 27″ N')
 				meta(itemprop='longitude' content='38° 58′ 7″ E')

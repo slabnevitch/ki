@@ -11,38 +11,15 @@
 	}
 	// End ibg class
 
+	// mobile panels open flags
 	var catalogFadeFlag = false,
 		mobCatalogState = false,
 		profileNavFlag = false,
-		profileMenuFlag = false;
-
-	// var deviceAgent = navigator.userAgent.toLowerCase(),
-    // agentID = deviceAgent.match(/(iphone|ipod|ipad)/),
-    // mobileLink = document.getElementById('mob-catalog-open'); // Добавить этот класс всем ссылкам, которые должны нажиматься
-
-	// touchMenuEvent = agentID ? "touchstart" : "click";
-
-	// mobileLink.addEventListener(touchMenuEvent, function(e) {
-	// 	console.log(touchMenuEvent)
-	// 	if(touchMenuEvent === "touchstart"){
-	//     	this.click();
-	// 	}
-	// 	if(!mobCatalogState){
-	// 		panel.open();
-	// 		mobCatalogState = true;
-	// 	}else{
-	// 		mobCatalogState = false;
-	// 		panel.close();
-	// 	}
-	// 	console.log(mobCatalogState)
-	// });
-
-	// if(targ.getAttribute('id') ==='mob-catalog-open' || targ.closest('#mob-catalog-open') !== null){
-	// 		console.log(mobCatalogState)
-	// 	}
+		profileMenuFlag = false,
+		ldMenuFlag = false;
+	//END mobile panels open flags
 
 	document.addEventListener('click', function(e){
-		console.log(e.target);
 		var targ = e.target;
 
 		// click on cover
@@ -84,19 +61,8 @@
 			//END remove header search results if click on .body-cover
 
 		}
-		// ENDclick on cover
+		// END click on cover
 
-		// open/close catalog-sort__select fstdropdown
-		if(targ.classList.contains('catalog-sort__select') || targ.closest('.catalog-sort__select') !== null){
-			// console.log(targ.closest('.catalog-sort__select').querySelector('.fstdiv').classList.contains('open'));
-			// if(targ.closest('.catalog-sort__select').querySelector('.fstdiv').classList.contains('open')){
-			// 	document.body.classList.add('covered');
-			// }else{
-			// 	document.body.classList.remove('covered');
-
-			// }
-		}
-		// END open/close catalog-sort__select fstdropdown
 
 		// open modals by data-attr
 		if(targ.hasAttribute('data-modal-open')){
@@ -198,7 +164,7 @@
 
 		// header catalog toggle
 			if(targ.getAttribute('id') === 'catalog-switcher' || targ.closest('#catalog-switcher') !== null){
-					console.log('catalog-switcher')
+
 				var catMenuItems = document.querySelectorAll('.catalog-header__item'),
 					kiHeader = document.querySelector('.header'),
 					headerCatalog = document.querySelector('.header__catalog');
@@ -254,8 +220,6 @@
 		
 		// popups close
 			if(targ.classList.contains('popup__close') || targ.closest('.popup__close') !== null){
-				console.log(targ.closest('.popup__close').parentElement.classList[1] + '-visible')
-				console.log(document.body);
 				document.body.classList.remove(targ.closest('.popup__close').closest('.popup').classList[1] + '-visible');
 			}		
 		// END popups close
@@ -285,7 +249,6 @@
 		// map modals toggle
 		if(targ.classList.contains('side-modal__close') || targ.closest('.side-modal__close') !== null){
 			var visibleClass = e.target.closest('.side-modal').dataset.visibleClass;
-			console.log(visibleClass)
 			if(screen.width >= 959.98){
 				document.body.classList.remove(visibleClass, 'side-modal-visible', 'map-with-modal', 'fullscreen-map-visible', 'covered');
 			}else{
@@ -349,7 +312,6 @@
 		if(targ.classList.contains('review__collapse') || targ.closest('.review__collapse')){
 			targ.closest('.review').querySelector('.review__body')
 				.classList.toggle('review__body--expanded');
-			console.log(targ.textContent)
 			targ.textContent = targ.textContent.toLowerCase() ==='свернуть' ? 'Читать полностью' : 'Свернуть';
 		}	
 		// END review-body expand/collapse
@@ -366,28 +328,31 @@
 		}
 		// ENDreview context menu
 
-		profileNavFlag
 
 		// profile-menu toggle
 		if(targ.getAttribute('id') ==='profile-menu-open' || targ.closest('#profile-menu-open') !== null){
 			e.preventDefault();
 			if(!profileMenuFlag){
 				fadeIn(document.querySelector('[data-profile-nav]'), 900, 'flex');
+				fadeOut(document.querySelector('[data-menu-nav]'), 900);
+				fadeOut(document.querySelector('[data-ld-nav]'), 900);
+				fadeOut(document.querySelector('.multilevel-panel'), 900);
+				document.documentElement.classList.add('lock');
 				profileMenuFlag = true;
+				mobCatalogState = profileNavFlag = ldMenuFlag = false;
 			}else{
 			// document.body.classList.toggle('profile-nav-visible');
 			// document.body.classList.remove('menu-visible');
 			// panel.close();
 				fadeOut(document.querySelector('[data-profile-nav]'), 900);
+				document.documentElement.classList.remove('lock');
 				profileMenuFlag = false;
 			}	
 			// panel.reset();
-			if(document.body.classList.contains('profile-nav-visible')){
-				document.documentElement.classList.add('lock');
-			}else{
-				document.documentElement.classList.remove('lock');
+			// if(document.body.classList.contains('profile-nav-visible')){
+			// }else{
 
-			}
+			// }
 		}
 		
 		//END profile-menu toggle
@@ -397,9 +362,15 @@
 			e.preventDefault();
 			if(!profileNavFlag){
 				fadeIn(document.querySelector('[data-menu-nav]'), 900, 'flex');
+				fadeOut(document.querySelector('[data-profile-nav]'), 900);
+				fadeOut(document.querySelector('[data-ld-nav]'), 900);				
+				fadeOut(document.querySelector('.multilevel-panel'), 900);				
+				document.documentElement.classList.add('lock');
 				profileNavFlag = true;
+				mobCatalogState = profileMenuFlag = ldMenuFlag = false;
 			}else{
 				fadeOut(document.querySelector('[data-menu-nav]'), 900);
+				document.documentElement.classList.remove('lock');
 				profileNavFlag = false;
 			}
 			// document.body.classList.toggle('menu-visible');
@@ -407,41 +378,55 @@
 			// panel.close();
 			// panel.reset();
 
-			if(document.body.classList.contains('menu-visible')){
-				document.documentElement.classList.add('lock');
-			}else{
-				document.documentElement.classList.remove('lock');
-			}
+			// if(document.body.classList.contains('menu-visible')){
+			// }else{
+			// }
 		}
 		//END menu toggle
 
 		// mob-catalog toggle
 		
 		if(targ.getAttribute('id') ==='mob-catalog-open' || targ.closest('#mob-catalog-open') !== null){
-			console.log(mobCatalogState)
 			e.preventDefault();
 			if(!mobCatalogState){
 				// panel.open();
 				fadeIn(document.querySelector('.multilevel-panel'), 900, 'flex');
+				fadeOut(document.querySelector('[data-menu-nav]'), 900);
+				fadeOut(document.querySelector('[data-profile-nav]'), 900);
+				fadeOut(document.querySelector('[data-ld-nav]'), 900);
 				// document.documentElement.classList.add('multilevel-panel-opened');
 				mobCatalogState = true;
+				profileNavFlag = profileMenuFlag = ldMenuFlag = false;
 			}else{
 				mobCatalogState = false;
 				fadeOut(document.querySelector('.multilevel-panel'), 900);
 				panel.close();
 			}
-			console.log(mobCatalogState)
 		}
 		// END mob-catalog  toggle
 
 		// landing menu toggle
 		if(targ.getAttribute('id') ==='ld-nav-toggler' || targ.closest('#ld-nav-toggler') !== null){
-			document.body.classList.toggle('ld-nav-visible');
-			document.body.classList.remove('profile-nav-visible');
-			document.body.classList.remove('menu-visible');
-			panel.close();
-			panel.reset();
-			document.documentElement.classList.toggle('lock');
+			if(!ldMenuFlag){
+				fadeIn(document.querySelector('[data-ld-nav]'), 900, 'flex');
+
+				fadeOut(document.querySelector('.multilevel-panel'), 900, 'flex');
+				fadeOut(document.querySelector('[data-menu-nav]'), 900);
+				fadeOut(document.querySelector('[data-profile-nav]'), 900);
+
+				ldMenuFlag = true;
+				profileNavFlag = profileMenuFlag = mobCatalogState = false;
+				document.documentElement.classList.add('lock');
+			}else{
+				fadeOut(document.querySelector('[data-ld-nav]'), 900);
+				ldMenuFlag = false;
+				document.documentElement.classList.remove('lock');
+			}
+			// document.body.classList.toggle('ld-nav-visible');
+			// document.body.classList.remove('profile-nav-visible');
+			// document.body.classList.remove('menu-visible');
+			// panel.close();
+			// panel.reset();
 		}
 		//END landing menu toggle
 
@@ -450,19 +435,6 @@
 			if(targ.hasAttribute('data-mob-search-close') || targ.closest('[data-mob-search-close]') !== null){
 				document.body.classList.remove('covered', 'search-results-opened');
 			}
-			// var headerSearchInputs = document.querySelectorAll('.search-header__input');
-			// for(var i=0; i < headerSearchInputs.length; i++){
-			// 	headerSearchInputs[i].addEventListener('input', function(e) {
-			// 		console.log('FOCUS')
-			// 		document.querySelector('.header').classList.add('search-results-opened');
-			// 		coverShow();
-			// 	});
-			// 	headerSearchInputs[i].addEventListener('blur', function(e) {
-			// 		console.log('BLUR')
-			// 		document.querySelector('.header').classList.remove('search-results-opened');
-			// 		coverHide();
-			// 	});
-			// }
 		// END header search results toggle
 
 		
@@ -471,7 +443,6 @@
 	// body cover show/hide
 		var body = document.body || document.getElementsByTagName('body')[0];
 		function coverShow() {
-					console.log('coverShow')
 			body.classList.add('covered');
 			// document.documentElement.classList.add('lock');
 		}
@@ -487,12 +458,7 @@
 	// END body cover show/hide
 
 	document.addEventListener('DOMContentLoaded', function() {
-		console.log('DOMContentLoaded!');
-		
-		// alert(document.getElementById('multilevel-panel-open').outerHTML);
 
-
-		
 		// in cart products checkboxes
 		if(document.querySelector('.cart-content__body') !== null){
 			var cartCheckboxes = document.querySelectorAll('input[name="in-cart-check"]'),
@@ -521,7 +487,6 @@
 			}
 
 			function labelTextRender(arrLength) {
-				console.log(arrLength)
 				if(arrLength){
 					cartContentActionLabel.textContent = 'Удалить выбранное';
 				}else{
@@ -539,24 +504,18 @@
 				var hi = new SV.HoverIntent(catalogLinks, {
 					// required parameters
 					onEnter: function(targetItem, related) {
-						// console.log(targetItem)
-						// console.log(related)
 						targetItem.classList.add('visible');
 						siblings(targetItem).forEach(function(sible) {
 							sible.classList.remove('visible');
 						}); 
 					},
 					onExit: function(targetItem, related) {
-						// console.log(targetItem)
-						// console.log(related)
 						if(related){
 							return;
 						}
 						targetItem.classList.remove('visible');
 						// related.closest('.catalog-header__item').classList.remove('visible');
 					},
-
-					// default options'target ' + 
 					exitDelay: 400,
 					interval: 100,
 					sensitivity: 7,
@@ -570,24 +529,27 @@
 		}
 
 		//---------------Swiper
-		// if(document.querySelector('.mob-catalog-screen__slider') !== null){
-		// 	var mobCatalogScreen = new Swiper('.mob-catalog-screen__slider', {
-		// 		observer: true,
-		// 		observeParents: true,
-		// 		slidesPerView: 3.25,
-		// 		spaceBetween: 10,
-		// 		loop: true,
+		// slider in mobile catalog menu
+		if(document.querySelector('.mob-catalog-screen__slider') !== null){
+			var mobCatalogScreen = new Swiper('.mob-catalog-screen__slider', {
+				observer: true,
+				observeParents: true,
+				slidesPerView: 3.25,
+				spaceBetween: 10,
+				loop: true,
 
-  // 				// If we need pagination
-		// 		pagination: {
-		// 			el: '.swiper-pagination',
-		// 			type: 'bullets',
-		// 			clickable: true
-		// 		}
-		// 	});
-		// }
+  				// If we need pagination
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+					clickable: true
+				}
+			});
+		}
+		//END slider in mobile catalog menu
+
 		if(document.querySelector('.categories-tiles__slider') !== null){
-			const categoriesTilesSlider = new Swiper('.categories-tiles__slider', {			
+			var categoriesTilesSlider = new Swiper('.categories-tiles__slider', {			
 				observer: true,
 				observeParents: true,
 				pagination: false,
@@ -617,7 +579,7 @@
 		}
 
 		if(document.querySelector('.main-slider__slider') !== null){
-		  const mainSlider = new Swiper('.main-slider__slider', {
+		  var mainSlider = new Swiper('.main-slider__slider', {
 			observer: true,
 			slidesPerView: 1,
 		  	loop: true,
@@ -717,7 +679,7 @@
 		//END day-products sliders
 
 		if(document.querySelector('.popular__slider') !== null){
-			const popularSlider = new Swiper('.popular__slider', {			
+			var popularSlider = new Swiper('.popular__slider', {			
 				observer: true,
 				observeParents: true,
 				pagination: {
@@ -755,7 +717,7 @@
 		}
 
 		if(document.querySelector('.news__slider') !== null){
-			const newsSlider = new Swiper('.news__slider', {			
+			var newsSlider = new Swiper('.news__slider', {			
 				observer: true,
 				observeParents: true,
 				pagination: {
@@ -1099,9 +1061,7 @@
 					}
 					checkedDetect = function() {
 						for (var i = addressInputs.length - 1; i >= 0; i--) {
-								console.log(addressInputs[i].checked)
 							if(addressInputs[i].checked){
-								console.log(addressInputs[i].closest('.ctlg-filter__label').querySelector('.ctlg-filter__value').textContent)
 								checkedInputs.push(addressInputs[i].closest('.ctlg-filter__label').querySelector('.ctlg-filter__value').textContent);
 							}
 						}
@@ -1158,7 +1118,7 @@
 				inputMin = rangeBlock.querySelector('[data-minval]'),
 				inputMax = rangeBlock.querySelector('[data-maxval]');
 								//var widthKeff = 10; //если нужно динамически менять ширину инпутов 
-				console.log(inputMax.value)
+
 				var noUi = noUiSlider.create(slider, {
 					connect: true,
 					behaviour: 'tap',
@@ -1178,7 +1138,6 @@
 				slider.noUiSlider.on('set', getValues);
 
 				function getValues() {
-					console.log(slider.noUiSlider.get()[0])
 					inputMin.value = (slider.noUiSlider.get()[0]);
 					inputMax.value = (slider.noUiSlider.get()[1]);			
 								// inputMin.style.width = ((inputMin.value.length + 1) * widthKeff) + 'px';//для динамической ширины инпутов
@@ -1190,7 +1149,6 @@
 								// this.style.width = ((this.value.length + 1) * widthKeff) + 'px';//для динамической ширины инпутов
 							});
 							inputMin.addEventListener('change', function() {
-								console.log('min change!')
 								slider.noUiSlider.set([+inputMin.value.replace(' ', ''), null]);
 								// this.style.width = ((this.value.length + 1) * widthKeff) + 'px';//для динамической ширины инпутов
 							});
@@ -1200,13 +1158,10 @@
 		}
 		// END noUiSlider
 
-		// new SimpleBar(document.querySelector('.catalog-header__nav'), { autoHide: false });
-
 		// header fixed on doc. scroll
 			if(document.querySelector('.header') !== null){
 				var headerElem = document.querySelector('.header'),
 				observerCallback = function(entries, observer) {
-					// console.log(entries);
 					if(entries[0].isIntersecting){
 						if(!headerElem.classList.contains('header-ld') && !document.body.classList.contains('search-results-opened')){
 							headerElem.classList.remove('_scroll');
@@ -1240,7 +1195,6 @@
 				rotatable: false,
 				zoomable: false,
 				 filter(image) {
-				 	// console.log(image.parentElement.parentElement.classList.contains('swiper-slide-duplicate'));
 				    // return !image.parentElement.parentElement.classList.contains('swiper-slide-duplicate');//для свайпера
 				    if(screen.width >= 767.98){
 				    	return !image.parentElement.classList.contains('swiper-slide-duplicate');
@@ -1330,10 +1284,6 @@
 						awaitOpenAnimation: true,
 						awaitCloseAnimation: true,
 						onShow: function(modal, trigger, event){
-
-							console.log(trigger)
-							// console.log(event)
-							// console.log(modal)	
 							
 							// Добавление во всплывашку айфрейма
 							if (trigger.hasAttribute('data-micromodal-iframe')) {
@@ -1352,8 +1302,6 @@
 
 						},
 						onClose: function(modal) {
-							// console.info(`${modal.id} is hidden`);
-
 							// удаление айфрейма при закрытии поапа
 							if(modal.querySelector('.modal__video') !== null){
 								modal.querySelector('.modal__video').remove();

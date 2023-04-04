@@ -3,15 +3,6 @@ nav.mob-nav
 	ul.mob-nav__list
 		each nav, i in navs
 			li(class=i > 1 && i < 4 ? "mob-nav__item active" : "mob-nav__item")
-				// if nav.name == 'Каталог'
-				// 	.mob-nav__link
-				// 		.mob-nav__icon
-				// 			+icon(nav.icon)
-				// 		.mob-nav__name= nav.name
-
-				// 		if i == 2
-				// 			.mob-nav__count 10
-				// else
 				a(href="#" id=nav.name == 'Каталог'? "mob-catalog-open" : nav.icon == 'user' ? "profile-menu-open" : nav.icon == 'm-menu' ? "menu-open"  : false).mob-nav__link
 					.mob-nav__icon
 						+icon(nav.icon)

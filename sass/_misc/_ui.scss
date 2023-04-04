@@ -917,6 +917,9 @@ h1, h2, h3, h4, h5, h6{
    .android &{
     padding-top: 3px;
    }
+   .webkit.chrome.mac &{
+    padding-top: 0;
+   }
 }
 // END Tags
 // swiper bullet custom
@@ -1212,6 +1215,19 @@ h1, h2, h3, h4, h5, h6{
     }
   }
 
+}
+.webkit.safari.mobile{
+  .back-title{
+     @include max-screen($md){
+      line-height: normal;
+    }
+  }
+   .back-link{
+       @include max-screen($md){
+        top: 5px;
+        // margin-top: -13px;
+      }
+   }
 }
 .simple-banner{
   padding-bottom: prc(224, 944);
