@@ -44,7 +44,8 @@
 	// 		console.log(mobCatalogState)
 	// 	}
 
-	alert(document.documentElement.classList)
+	// alert(document.documentElement.classList)
+	// alert(window.getComputedStyle(document.querySelector('.categories-tile__tag')).paddingTop);
 
 
 	document.addEventListener('click', function(e){
@@ -521,7 +522,7 @@
 		console.log('DOMContentLoaded!');
 		
 		// alert(document.getElementById('multilevel-panel-open').outerHTML);
-
+		alert(window.getComputedStyle(document.querySelector('.categories-tile__tag')).paddingTop);
 
 		
 		// in cart products checkboxes
