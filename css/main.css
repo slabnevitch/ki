@@ -18172,6 +18172,10 @@ h6 {
     font-size: 13px;
   }
 
+  .webkit.safari.mobile .back-title {
+    line-height: normal;
+  }
+
   .simple-banner {
     margin-left: -24px;
     margin-right: -24px;
