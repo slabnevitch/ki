@@ -6515,6 +6515,10 @@ h6 {
   padding-top: 3px;
 }
 
+.webkit.chrome.mac .tag {
+  padding-top: 0;
+}
+
 .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
