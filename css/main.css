@@ -18177,8 +18177,7 @@ h6 {
   }
 
   .webkit.safari.mobile .back-link {
-    top: 50%;
-    margin-top: -13px;
+    top: 10px;
   }
 
   .simple-banner {
