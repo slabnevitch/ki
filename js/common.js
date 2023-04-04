@@ -44,6 +44,9 @@
 	// 		console.log(mobCatalogState)
 	// 	}
 
+	alert(document.documentElement.classList)
+
+
 	document.addEventListener('click', function(e){
 		console.log(e.target);
 		var targ = e.target;
@@ -616,7 +619,7 @@
 			});
 		}
 		//END slider in mobile catalog menu
-		
+
 		if(document.querySelector('.categories-tiles__slider') !== null){
 			const categoriesTilesSlider = new Swiper('.categories-tiles__slider', {			
 				observer: true,
