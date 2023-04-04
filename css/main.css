@@ -18176,6 +18176,11 @@ h6 {
     line-height: normal;
   }
 
+  .webkit.safari.mobile .back-link {
+    top: 50%;
+    margin-top: -13px;
+  }
+
   .simple-banner {
     margin-left: -24px;
     margin-right: -24px;
